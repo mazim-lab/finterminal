@@ -211,7 +211,24 @@
     "fee": "$599",
     "interest_rate": "20.99%",
     "welcome_bonus": "up to 100,000 bonus Scene+ points: Earn 30,000 bonus Scene+ points by making at least $3,000 in everyday eligible purchases in your first",
-    "earn_rates": [],
+    "earn_rates": [
+      {
+        "rate": "6X",
+        "category": "Travel booked through Scene+ Travel"
+      },
+      {
+        "rate": "3X",
+        "category": "All other eligible travel purchases"
+      },
+      {
+        "rate": "2X",
+        "category": "Dining and entertainment"
+      },
+      {
+        "rate": "1X",
+        "category": "All other eligible purchases"
+      }
+    ],
     "benefits": [
       "Travel Emergency Medical Insurance 20 If you’re travelling outside of the province or territory where you live and you, your spouse, or your dependent children are suddenly sick or",
       "Purchase Security and Extended Warranty 20 Under Purchase Security coverage, most of the new items you buy with your card are insured against theft, loss, or damage for 180 days fr",
