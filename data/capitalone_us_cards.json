@@ -727,5 +727,506 @@
       "Virtual Card",
       "No Foreign Transaction"
     ]
+  },
+  {
+    "name": "BJ's Wholesale Club Credit Card",
+    "slug": "bjs-wholesale",
+    "url": "https://www.capitalone.com/credit-cards/bjs-wholesale-club/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "3%",
+        "category": "and BJ’s One+® Credit Card cardholders"
+      },
+      {
+        "rate": "5%",
+        "category": "in rewards on eligible purchases of goods and services in-club at BJ’s front-end registers, on BJs"
+      },
+      {
+        "rate": "2%",
+        "category": "in rewards on purchases made outside of BJ’s with their BJ’s One® or BJ’s One+® Mastercard®, minus a"
+      }
+    ],
+    "benefits": [
+      "CreditWise",
+      "Virtual Card"
+    ]
+  },
+  {
+    "name": "CLUB Business Credit Card",
+    "slug": "club-business",
+    "url": "https://www.capitalone.com/credit-cards/club-business/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "5%",
+        "category": "in CLUB Points $525 $0 $3,000 What's your monthly spending? All other purchases:"
+      }
+    ],
+    "benefits": [
+      "CreditWise",
+      "Virtual Card"
+    ]
+  },
+  {
+    "name": "Kohl’s Card",
+    "slug": "kohls",
+    "url": "https://www.capitalone.com/credit-cards/kohls/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      }
+    ],
+    "benefits": [
+      "CreditWise",
+      "Virtual Card"
+    ]
+  },
+  {
+    "name": "Quicksilver for Good Credit: Earn Cash Back",
+    "slug": "quicksilver-good-credit",
+    "url": "https://www.capitalone.com/credit-cards/quicksilver-good-credit/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "1.5%",
+        "category": "every purchase, every day"
+      }
+    ],
+    "benefits": [
+      "CreditWise",
+      "Travel Credit"
+    ]
+  },
+  {
+    "name": "Build Credit with a Secured Credit Card",
+    "slug": "quicksilver-secured",
+    "url": "https://www.capitalone.com/credit-cards/quicksilver-secured/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "1.5%",
+        "category": "every purchase with a refundable $200 minimum deposit"
+      }
+    ],
+    "benefits": [
+      "CreditWise"
+    ],
+    "fee": "No Annual Fee"
+  },
+  {
+    "name": "Savor Rewards for Good Credit: Earn Cash Back",
+    "slug": "savor-good-credit",
+    "url": "https://www.capitalone.com/credit-cards/savor-good-credit/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "3%",
+        "category": "grocery stores, on dining, entertainment and popular streaming 1 See if I’m Pre-Approved Apply Now V"
+      },
+      {
+        "rate": "1.5%",
+        "category": "every purchase, every day"
+      },
+      {
+        "rate": "3%",
+        "category": "grocery stores (excluding superstores like Walmart® and Target®), on dining, entertainment and popul"
+      }
+    ],
+    "benefits": [
+      "CreditWise",
+      "Travel Credit"
+    ],
+    "fee": "No Annual Fee"
+  },
+  {
+    "name": "Savor Student Credit Card",
+    "slug": "savor-student",
+    "url": "https://www.capitalone.com/credit-cards/savor-student/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "3%",
+        "category": "grocery stores and on dining"
+      }
+    ],
+    "welcome_bonus": "earn a $50 cash bonus",
+    "benefits": [
+      "CreditWise",
+      "Travel Credit"
+    ]
+  },
+  {
+    "name": "Savor Rewards: Cash Back on Dining &amp; Grocery Stores",
+    "slug": "savor",
+    "url": "https://www.capitalone.com/credit-cards/savor/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "3%",
+        "category": "food and fun,"
+      },
+      {
+        "rate": "5%",
+        "category": "hotels, vacation rentals and rental cars booked through Capital One Travel"
+      },
+      {
+        "rate": "3%",
+        "category": "grocery stores, on dining, entertainment and popular streaming services"
+      },
+      {
+        "rate": "1%",
+        "category": "all other purchases and rewards don’t expire for the life of the account"
+      },
+      {
+        "rate": "1.5%",
+        "category": "every purchase, every day"
+      },
+      {
+        "rate": "3%",
+        "category": "grocery stores (excluding superstores like Walmart® and Target®), on dining, entertainment and popul"
+      }
+    ],
+    "welcome_bonus": "$200 cash bonus",
+    "benefits": [
+      "CreditWise",
+      "No Foreign Transaction",
+      "Travel Credit"
+    ]
+  },
+  {
+    "name": "SavorOne Rewards: Cash Back on Dining &amp; Grocery Stores",
+    "slug": "savorone",
+    "url": "https://www.capitalone.com/credit-cards/savorone/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "3%",
+        "category": "grocery stores, on dining, entertainment and popular streaming services with a $39 annual fee"
+      },
+      {
+        "rate": "3%",
+        "category": "Monthly Spending $200 Entertainment &amp; Popular Streaming Services"
+      },
+      {
+        "rate": "3%",
+        "category": "$100 All Other Purchases"
+      },
+      {
+        "rate": "1%",
+        "category": "$200 You could"
+      },
+      {
+        "rate": "3%",
+        "category": "grocery stores (excluding superstores like Walmart® and Target®), on dining, entertainment and popul"
+      }
+    ],
+    "benefits": [
+      "CreditWise"
+    ],
+    "fee": "No Annual Fee"
+  },
+  {
+    "name": "The Key Rewards Visa",
+    "slug": "thekeyrewards",
+    "url": "https://www.capitalone.com/credit-cards/thekeyrewards/",
+    "issuer": "Capital One",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "10%",
+        "category": "in rewards for your first 30 days,"
+      },
+      {
+        "rate": "10%",
+        "category": "Feel right at home with a welcome bonus of"
+      },
+      {
+        "rate": "5%",
+        "category": "$200 $0 $5,000 What's your monthly spending? Grocery stores and restaurants:"
+      },
+      {
+        "rate": "4%",
+        "category": "$1,300 $0 $5,000 What's your monthly spending? Everywhere else:"
+      },
+      {
+        "rate": "1%",
+        "category": "$750 $0 $5,000 You could bring home $834 in rewards this year!"
+      },
+      {
+        "rate": "10%",
+        "category": "in rewards on participating brands for your first 30 days"
+      },
+      {
+        "rate": "10%",
+        "category": "for your first 30 days at Pottery Barn, Williams Sonoma, West Elm &amp; more"
+      }
+    ],
+    "benefits": [
+      "CreditWise",
+      "Virtual Card"
+    ]
+  },
+  {
+    "name": "VentureOne for Good Credit: Miles Rewards",
+    "slug": "ventureone-good-credit",
+    "url": "https://www.capitalone.com/credit-cards/ventureone-good-credit/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2X miles",
+        "category": "? Compare Travel Cards Customer Reviews 5 Star 70% 4 Star 19% 3 Star 5% 2 Star 2% 1 Star 3% 4"
+      },
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      }
+    ],
+    "benefits": [
+      "CreditWise",
+      "Travel Credit"
+    ]
+  },
+  {
+    "name": "West Elm Key Rewards Visa",
+    "slug": "westelm",
+    "url": "https://www.capitalone.com/credit-cards/westelm/",
+    "issuer": "Capital One",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "10%",
+        "category": "in rewards for your first 30 days,"
+      },
+      {
+        "rate": "10%",
+        "category": "Feel right at home with a welcome bonus of"
+      },
+      {
+        "rate": "5%",
+        "category": "$200 $0 $5,000 What's your monthly spending? Grocery stores and restaurants:"
+      },
+      {
+        "rate": "4%",
+        "category": "$1,300 $0 $5,000 What's your monthly spending? Everywhere else:"
+      },
+      {
+        "rate": "1%",
+        "category": "$750 $0 $5,000 You could bring home $834 in rewards this year!"
+      },
+      {
+        "rate": "10%",
+        "category": "in rewards on participating brands for your first 30 days"
+      },
+      {
+        "rate": "10%",
+        "category": "for your first 30 days at Pottery Barn, Williams Sonoma, West Elm &amp; more"
+      }
+    ],
+    "benefits": [
+      "CreditWise",
+      "Virtual Card"
+    ]
+  },
+  {
+    "name": "Williams Sonoma Key Rewards Visa",
+    "slug": "williams-sonoma",
+    "url": "https://www.capitalone.com/credit-cards/williams-sonoma/",
+    "issuer": "Capital One",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      },
+      {
+        "rate": "10%",
+        "category": "in rewards for your first 30 days,"
+      },
+      {
+        "rate": "10%",
+        "category": "Feel right at home with a welcome bonus of"
+      },
+      {
+        "rate": "5%",
+        "category": "$200 $0 $5,000 What's your monthly spending? Grocery stores and restaurants:"
+      },
+      {
+        "rate": "4%",
+        "category": "$1,300 $0 $5,000 What's your monthly spending? Everywhere else:"
+      },
+      {
+        "rate": "1%",
+        "category": "$750 $0 $5,000 You could bring home $834 in rewards this year!"
+      },
+      {
+        "rate": "10%",
+        "category": "in rewards on participating brands for your first 30 days"
+      },
+      {
+        "rate": "10%",
+        "category": "for your first 30 days at Pottery Barn, Williams Sonoma, West Elm &amp; more"
+      }
+    ],
+    "benefits": [
+      "CreditWise",
+      "Virtual Card"
+    ]
+  },
+  {
+    "name": "Venture X Business Card - Earn 2X Travel Miles",
+    "slug": "venture-x-business",
+    "url": "https://www.capitalone.com/small-business/credit-cards/venture-x-business/",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "earn_rates": [
+      {
+        "rate": "2X miles",
+        "category": "every purchase 150K bonus miles No preset spending limit Find out if you’re pre-approved with no imp"
+      },
+      {
+        "rate": "2X miles",
+        "category": "every purchase"
+      },
+      {
+        "rate": "2X miles",
+        "category": "every purchase"
+      },
+      {
+        "rate": "10X miles",
+        "category": "hotels and rental cars, and"
+      },
+      {
+        "rate": "5X miles",
+        "category": "flights and vacation rentals"
+      },
+      {
+        "rate": "10X miles",
+        "category": "hotels and rental cars, and"
+      },
+      {
+        "rate": "2X miles",
+        "category": "card to either complete the Global Entry application and the TSA PreCheck® application"
+      },
+      {
+        "rate": "2%",
+        "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow"
+      }
+    ],
+    "welcome_bonus": "Earn 150,000 bonus miles",
+    "benefits": [
+      "CreditWise",
+      "Virtual Card",
+      "No Foreign Transaction",
+      "Travel Credit",
+      "Capital One Lounge",
+      "Global Entry",
+      "Priority Pass",
+      "TSA PreCheck"
+    ],
+    "fee": "$395"
   }
 ]
