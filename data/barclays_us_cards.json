@@ -1,0 +1,435 @@
+[
+  {
+    "name": "JetBlue Plus Card",
+    "slug": "jetblue-plus",
+    "url": "https://cards.barclaycardus.com/banking/cards/jetblue-plus-card/",
+    "issuer": "Barclays",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$99",
+    "earn_rates": [
+      {
+        "rate": "6X",
+        "category": "eligible JetBlue purchases"
+      },
+      {
+        "rate": "2X",
+        "category": "restaurants and eligible grocery stores"
+      },
+      {
+        "rate": "1X",
+        "category": "all other purchases Welcome bonus"
+      }
+    ],
+    "welcome_bonus": "Earn 70,000 bonus points after qualifying",
+    "benefits": [
+      "No Foreign Transaction",
+      "Free Checked Bag",
+      "Companion"
+    ]
+  },
+  {
+    "name": "Apply for the JetBlue Premier Card",
+    "slug": "jetblue-premier",
+    "url": "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/",
+    "issuer": "Barclays",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$499",
+    "earn_rates": [
+      {
+        "rate": "6X",
+        "category": "eligible JetBlue purchases"
+      },
+      {
+        "rate": "2X",
+        "category": "restaurants and eligible grocery stores"
+      },
+      {
+        "rate": "1X",
+        "category": "all other purchases Welcome bonus"
+      }
+    ],
+    "welcome_bonus": "Earn 80,000 bonus points + 5 tiles after qualifying",
+    "benefits": [
+      "No Foreign Transaction",
+      "Free Checked Bag",
+      "Companion",
+      "Lounge",
+      "Global Entry",
+      "TSA PreCheck"
+    ]
+  },
+  {
+    "name": "JetBlue Card",
+    "slug": "jetblue",
+    "url": "https://cards.barclaycardus.com/banking/cards/jetblue-card/",
+    "issuer": "Barclays",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "3X",
+        "category": "eligible JetBlue purchases"
+      },
+      {
+        "rate": "2X",
+        "category": "restaurants and eligible grocery stores"
+      },
+      {
+        "rate": "1X",
+        "category": "all other purchases Welcome bonus"
+      }
+    ],
+    "welcome_bonus": "Earn 10,000 bonus points after qualifying",
+    "benefits": [
+      "No Foreign Transaction"
+    ]
+  },
+  {
+    "name": "Apply for the JetBlue Business Card",
+    "slug": "jetblue-business",
+    "url": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/",
+    "issuer": "Barclays",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$99",
+    "earn_rates": [
+      {
+        "rate": "6X",
+        "category": "eligible JetBlue purchases"
+      },
+      {
+        "rate": "2X",
+        "category": "restaurants and office supply stores"
+      },
+      {
+        "rate": "1X",
+        "category": "all other purchases Welcome bonus"
+      }
+    ],
+    "welcome_bonus": "Earn 60,000 bonus points after qualifying",
+    "benefits": [
+      "No Foreign Transaction",
+      "Free Checked Bag",
+      "Companion"
+    ]
+  },
+  {
+    "name": "AARP® ESSENTIAL REWARDS MASTERCARD® FROM BARCLAYS",
+    "slug": "aarp-essential",
+    "url": "https://cards.barclaycardus.com/banking/cards/aarp-essential-rewards-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "3%",
+        "category": "Gas &amp; eligible Drug Store purchases"
+      },
+      {
+        "rate": "2%",
+        "category": "eligible Medical expenses"
+      },
+      {
+        "rate": "1%",
+        "category": "all other purchases"
+      },
+      {
+        "rate": "3%",
+        "category": "Gas and eligible Drug Store purchases 2"
+      },
+      {
+        "rate": "3%",
+        "category": "Gas and Drug Store purchases (excluding Target and Walmart)"
+      }
+    ]
+  },
+  {
+    "name": "AARP® TRAVEL REWARDS MASTERCARD® FROM BARCLAYS",
+    "slug": "aarp-travel",
+    "url": "https://cards.barclaycardus.com/banking/cards/aarp-travel-rewards-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "3%",
+        "category": "Airfare, Hotel Stays and Car Rentals"
+      },
+      {
+        "rate": "2%",
+        "category": "eligible Restaurant purchases"
+      },
+      {
+        "rate": "1%",
+        "category": "all other purchases"
+      }
+    ],
+    "benefits": [
+      "No Foreign Transaction"
+    ]
+  },
+  {
+    "name": "Wyndham Rewards Earner® Business Card",
+    "slug": "wyndham-earner-business",
+    "url": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-business-card/",
+    "issuer": "Barclays",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$95",
+    "welcome_bonus": "Earn 8 points per $1 spent on eligible purchases made at Hotels by Wyndham as well as on qualifying",
+    "benefits": [
+      "No Foreign Transaction"
+    ]
+  },
+  {
+    "name": "Emirates Skywards Premium World Elite Mastercard - Apply Today!",
+    "slug": "emirates-premium",
+    "url": "https://cards.barclaycardus.com/banking/cards/emirates-skywards-premium-world-elite-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$499",
+    "benefits": [
+      "No Foreign Transaction",
+      "Lounge",
+      "Global Entry",
+      "TSA PreCheck"
+    ]
+  },
+  {
+    "name": "Emirates Skywards Rewards World Elite Mastercard - Apply Today!",
+    "slug": "emirates-rewards",
+    "url": "https://cards.barclaycardus.com/banking/cards/emirates-skywards-rewards-world-elite-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$99",
+    "benefits": [
+      "No Foreign Transaction"
+    ]
+  },
+  {
+    "name": "FRONTIER Airlines World Mastercard - Apply Today!",
+    "slug": "frontier",
+    "url": "https://cards.barclaycardus.com/banking/cards/frontier-airlines-world-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "welcome_bonus": "15 miles (10 miles for being a Frontier Miles member and 5 miles for using a Frontier Airlines World Mastercard) for every one dollar spent on eligible purchases, less credits, returns and adjustments (“Net Purchases”) through Frontier Airlines channels (flyfrontier.com, Frontier Airlines reservatio",
+    "benefits": [
+      "No Foreign Transaction",
+      "Free Checked Bag",
+      "Priority Boarding",
+      "Companion",
+      "Elite Status"
+    ]
+  },
+  {
+    "name": "Apply for the Miles &amp; More® World Elite Mastercard®",
+    "slug": "lufthansa",
+    "url": "https://cards.barclaycardus.com/banking/cards/lufthansa-miles-more-world-elite-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$89",
+    "welcome_bonus": "Earn 2 miles per $1 spent on Miles &amp; More partner airline tickets. Earn 1 mile per $1 spent on all other purchases. Welcome bonus Earn 60,000 miles after you spend",
+    "benefits": [
+      "No Foreign Transaction",
+      "Companion",
+      "Lounge"
+    ]
+  },
+  {
+    "name": "Carnival® World Mastercard®",
+    "slug": "carnival",
+    "url": "https://cards.barclaycardus.com/banking/cards/carnival-world-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "benefits": [
+      "No Foreign Transaction"
+    ]
+  },
+  {
+    "name": "Breeze Easy® Visa® Credit Card",
+    "slug": "breeze",
+    "url": "https://cards.barclaycardus.com/banking/cards/breeze-airways/",
+    "issuer": "Barclays",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$89",
+    "earn_rates": [
+      {
+        "rate": "2X",
+        "category": "eligible grocery store &amp; restaurants, including Breeze Airways inflight food and beverages made "
+      },
+      {
+        "rate": "1X",
+        "category": "all other purchases -"
+      }
+    ],
+    "benefits": [
+      "No Foreign Transaction",
+      "Priority Boarding",
+      "Companion"
+    ]
+  },
+  {
+    "name": "Capital Vacations® World Mastercard®",
+    "slug": "capital-vacations",
+    "url": "https://cards.barclaycardus.com/banking/cards/capital-vacations/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "benefits": [
+      "No Foreign Transaction"
+    ]
+  },
+  {
+    "name": "Gap Encore Mastercard®",
+    "slug": "gap",
+    "url": "https://cards.barclaycardus.com/banking/cards/gap-encore-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "500 Points = $1 Reward redeemable in the Encore Market with exclusive products, offers, and experiences or on purchases at the Gap Inc. family of brands Free shipping on all online orders $35 or more Welcome bonus Receive 20% off your first purchase with your new card at Gap Benefit details No Annua"
+  },
+  {
+    "name": "Banana Republic Encore Mastercard®",
+    "slug": "banana-republic",
+    "url": "https://cards.barclaycardus.com/banking/cards/banana-republic-encore-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "500 Points = $1 Reward redeemable in the Encore Market with exclusive products, offers, and experiences or on purchases at the Gap Inc. family of brands Free shipping on all online orders $35 or more Welcome bonus Receive 20% off your first purchase with your new card at Banana Republic Benefit deta"
+  },
+  {
+    "name": "Old Navy",
+    "slug": "old-navy",
+    "url": "https://cards.barclaycardus.com/banking/cards/old-navy-encore-mastercard/",
+    "issuer": "Barclays",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "500 Points = $1 Reward redeemable in the Encore Market with exclusive products, offers, and experiences or on purchases at the Gap Inc. family of brands Free shipping on all online orders $35 or more Welcome bonus Receive 30% off your first purchase with your new card at Old Navy Benefit details No "
+  },
+  {
+    "name": "Athleta Encore Mastercard®",
+    "slug": "athleta",
+    "url": "https://cards.barclaycardus.com/banking/cards/athleta-encore-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "500 Points = $1 Reward redeemable in the Encore Market with exclusive products, offers, and experiences or on purchases at the Gap Inc. family of brands Free shipping on all online orders $35 or more Welcome bonus Receive 20% off your first purchase with your new card at Athleta Benefit details No A"
+  },
+  {
+    "name": "The Barnes &amp; Noble Mastercard®",
+    "slug": "barnes-noble",
+    "url": "https://cards.barclaycardus.com/banking/cards/barnes-noble-mastercard/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2X",
+        "category": "restaurants (excluding Barnes &amp; Noble Café purchases) 2"
+      },
+      {
+        "rate": "1X",
+        "category": "all other purchases (excluding Barnes &amp; Noble purchases) 2 Rewards"
+      },
+      {
+        "rate": "5%",
+        "category": "when you use your card at any Barnes &amp; Noble and Paper Source stores"
+      },
+      {
+        "rate": "5%",
+        "category": "Get"
+      },
+      {
+        "rate": "5%",
+        "category": "all B&amp;N and Paper Source purchases 2"
+      }
+    ],
+    "welcome_bonus": "earn 2,500 points 2 Earn 12 months of Barnes &amp; Noble Premium Membership if you spend"
+  },
+  {
+    "name": "GM Rewards™ Mastercard®",
+    "slug": "gm",
+    "url": "https://cards.barclaycardus.com/banking/cards/general-motors/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "7X",
+        "category": "every $1 spent on eligible GM purchases when you use your GM Rewards ™ Mastercard ® ,"
+      }
+    ],
+    "welcome_bonus": "Earn 30,000 bonus points after spend"
+  },
+  {
+    "name": "GM Business™ Mastercard®",
+    "slug": "gm-business",
+    "url": "https://cards.barclaycardus.com/banking/cards/general-motors-business/",
+    "issuer": "Barclays",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "Earn 100,000 bonus points after spend"
+  }
+]
