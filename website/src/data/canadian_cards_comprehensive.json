@@ -4953,7 +4953,7 @@
     "issuer": "Neo Financial",
     "network": "Mastercard",
     "card_type": "rewards",
-    "annual_fee": 0.0,
+    "annual_fee": 0,
     "first_year_fee": null,
     "welcome_bonus": "",
     "welcome_bonus_value_cad": null,
@@ -4962,28 +4962,32 @@
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {},
+    "earn_rates": {
+      "At Neo partner stores": "Up to 5%",
+      "Everywhere else": "0.5%"
+    },
     "rewards_program": null,
     "foreign_transaction_fee": null,
     "foreign_transaction_fee_pct": null,
     "key_perks": [
-      "Guaranteed approval",
-      "1% grocery",
-      "1% gas",
-      "Build credit history"
+      "Zero Liability Help protect your card from purchases that you didn’t make⁷",
+      "credit score? Can I have more than one credit score? What makes the Secured Neo Mastercard different from traditional credit cards? How much is the cr",
+      "Virtual cards Credit score monitoring Balance protection Learn Blog Youth knowledge hub For youth For partners Company About Trust and security News C"
     ],
     "insurance": {},
     "minimum_income": null,
     "minimum_credit_score": null,
     "country": "CA",
-    "sources": [],
-    "last_updated": "2026-02-23",
+    "sources": [
+      "neo_website"
+    ],
+    "last_updated": "2026-03-16",
     "card_image_url": null,
     "pot_first_year_value": null,
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": null,
+    "apply_url": "https://www.neofinancial.com/credit-cards/neo-mastercard",
     "is_business": false
   },
   {
@@ -4992,7 +4996,7 @@
     "issuer": "Neo Financial",
     "network": "Mastercard",
     "card_type": "rewards",
-    "annual_fee": 0.0,
+    "annual_fee": 0,
     "first_year_fee": null,
     "welcome_bonus": "",
     "welcome_bonus_value_cad": null,
@@ -5001,30 +5005,33 @@
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {},
+    "earn_rates": {
+      "groceries, gas, and recurring payments": "2%",
+      "everything else Collect cashback no matter where you shop": "0.5%"
+    },
     "rewards_program": null,
     "foreign_transaction_fee": null,
     "foreign_transaction_fee_pct": null,
     "key_perks": [
-      "2% grocery",
-      "2% gas",
-      "2% recurring payments",
-      "0.5% everything else",
-      "Purchase protection",
-      "Min income $50K"
+      "Purchase protection Extend the manufacturer’s warranty and get coverage for theft or damage⁵",
+      "Zero Liability Help protect your card from purchases that you didn’t make⁴",
+      "credit score",
+      "Virtual cards Credit score monitoring Balance protection Learn Blog Youth knowledge hub For youth For partners Company About Trust and security News C"
     ],
     "insurance": {},
     "minimum_income": null,
     "minimum_credit_score": null,
     "country": "CA",
-    "sources": [],
-    "last_updated": "2026-02-23",
+    "sources": [
+      "neo_website"
+    ],
+    "last_updated": "2026-03-16",
     "card_image_url": null,
     "pot_first_year_value": null,
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": null,
+    "apply_url": "https://www.neofinancial.com/credit-cards/neo-world-mastercard",
     "is_business": false
   },
   {
@@ -5042,31 +5049,36 @@
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {},
+    "earn_rates": {
+      "groceries": "5%",
+      "recurring payments": "4%",
+      "gas": "3%",
+      "everything else Collect cashback no matter where you shop": "1%"
+    },
     "rewards_program": null,
     "foreign_transaction_fee": null,
     "foreign_transaction_fee_pct": null,
     "key_perks": [
-      "5% grocery",
-      "3% gas",
-      "4% recurring payments",
-      "1% everything else",
-      "Purchase protection",
-      "Travel benefits",
-      "Min income $80K"
+      "Purchase protection Extend the manufacturer’s warranty and get coverage for theft or damage¹",
+      "Zero Liability Help protect your card from purchases that you didn’t make⁴",
+      "Premium insurances Protect your purchases and travel¹",
+      "Credit score monitoring Balance protection Learn Blog Youth knowledge hub For youth For partners Company About Trust and security News Careers Mall ki",
+      "Virtual cards Credit score monitoring Balance protection Learn Blog Youth knowledge hub For youth For partners Company About Trust and security News C"
     ],
     "insurance": {},
     "minimum_income": null,
     "minimum_credit_score": null,
     "country": "CA",
-    "sources": [],
-    "last_updated": "2026-02-23",
+    "sources": [
+      "neo_website"
+    ],
+    "last_updated": "2026-03-16",
     "card_image_url": null,
     "pot_first_year_value": null,
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": null,
+    "apply_url": "https://www.neofinancial.com/credit-cards/neo-world-elite-mastercard",
     "is_business": false
   },
   {

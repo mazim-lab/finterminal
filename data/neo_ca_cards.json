@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Neo Mastercard",
+    "slug": "neo-mastercard",
+    "url": "https://www.neofinancial.com/credit-cards/neo-mastercard",
+    "issuer": "Neo Financial",
+    "network": "Mastercard",
+    "country": "CA",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "benefits": [
+      "Zero Liability Help protect your card from purchases that you didn’t make⁷",
+      "credit score? Can I have more than one credit score? What makes the Secured Neo Mastercard different from traditional credit cards? How much is the cr",
+      "Virtual cards Credit score monitoring Balance protection Learn Blog Youth knowledge hub For youth For partners Company About Trust and security News C"
+    ],
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "Up to 5%",
+        "category": "At Neo partner stores"
+      },
+      {
+        "rate": "0.5%",
+        "category": "Everywhere else"
+      }
+    ]
+  },
+  {
+    "name": "Neo World Mastercard®",
+    "slug": "neo-world-mastercard",
+    "url": "https://www.neofinancial.com/credit-cards/neo-world-mastercard",
+    "issuer": "Neo Financial",
+    "network": "Mastercard",
+    "country": "CA",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "groceries, gas, and recurring payments"
+      },
+      {
+        "rate": "0.5%",
+        "category": "everything else Collect cashback no matter where you shop"
+      }
+    ],
+    "benefits": [
+      "Purchase protection Extend the manufacturer’s warranty and get coverage for theft or damage⁵",
+      "Zero Liability Help protect your card from purchases that you didn’t make⁴",
+      "credit score",
+      "Virtual cards Credit score monitoring Balance protection Learn Blog Youth knowledge hub For youth For partners Company About Trust and security News C"
+    ]
+  },
+  {
+    "name": "Neo World Elite® Mastercard",
+    "slug": "neo-world-elite-mastercard",
+    "url": "https://www.neofinancial.com/credit-cards/neo-world-elite-mastercard",
+    "issuer": "Neo Financial",
+    "network": "Mastercard",
+    "country": "CA",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$125",
+    "earn_rates": [
+      {
+        "rate": "5%",
+        "category": "groceries"
+      },
+      {
+        "rate": "4%",
+        "category": "recurring payments"
+      },
+      {
+        "rate": "3%",
+        "category": "gas"
+      },
+      {
+        "rate": "1%",
+        "category": "everything else Collect cashback no matter where you shop"
+      }
+    ],
+    "benefits": [
+      "Purchase protection Extend the manufacturer’s warranty and get coverage for theft or damage¹",
+      "Zero Liability Help protect your card from purchases that you didn’t make⁴",
+      "Premium insurances Protect your purchases and travel¹",
+      "Credit score monitoring Balance protection Learn Blog Youth knowledge hub For youth For partners Company About Trust and security News Careers Mall ki",
+      "Virtual cards Credit score monitoring Balance protection Learn Blog Youth knowledge hub For youth For partners Company About Trust and security News C"
+    ]
+  }
+]
