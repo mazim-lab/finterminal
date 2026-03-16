@@ -80,7 +80,9 @@
       "Priority Pass™ Lounges Venture X primary cardholders can enjoy access to 1,300+ participating lounges worldwide from Priority Pass",
       "travel credit for the difference",
       "Hertz® Gold+™ status upgrade through the unique Benefits Tab link found within the Capital One website or mobile app after logging in"
-    ]
+    ],
+    "fee": "$395",
+    "welcome_bonus": "earn 5 miles"
   },
   {
     "name": "VentureOne - Miles Rewards with No Annual Fee",
@@ -127,7 +129,9 @@
     ],
     "benefits": [
       "travel credit for the difference"
-    ]
+    ],
+    "fee": "No Annual Fee",
+    "welcome_bonus": "earn a $200 cash bonus"
   },
   {
     "name": "QuicksilverOne - Unlimited Cash Back Credit Card",
@@ -147,6 +151,10 @@
         "rate": "1.5%",
         "category": "every purchase"
       }
+    ],
+    "fee": "$39",
+    "benefits": [
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with"
     ]
   },
   {
@@ -193,7 +201,8 @@
     "benefits": [
       "no foreign transaction fees on purchases made outside of the United States",
       "travel credit for the difference"
-    ]
+    ],
+    "welcome_bonus": "$200 cash bonus"
   },
   {
     "name": "Savor Student Credit Card",
@@ -217,7 +226,8 @@
     ],
     "benefits": [
       "travel credit for the difference"
-    ]
+    ],
+    "fee": "No Annual Fee"
   },
   {
     "name": "Platinum Credit Card",
@@ -234,6 +244,9 @@
         "rate": "2%",
         "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p"
       }
+    ],
+    "benefits": [
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with"
     ]
   },
   {
@@ -250,6 +263,10 @@
         "rate": "2%",
         "category": "Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p"
       }
+    ],
+    "fee": "No Annual Fee",
+    "benefits": [
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with"
     ]
   },
   {
@@ -348,6 +365,11 @@
         "rate": "5%",
         "category": "those purchases"
       }
+    ],
+    "fee": "No Annual Fee",
+    "benefits": [
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with",
+      "Autopay Schedule automatic payments so you never miss a payment"
     ]
   },
   {
@@ -372,6 +394,11 @@
         "rate": "5%",
         "category": "those purchases"
       }
+    ],
+    "fee": "No Annual Fee",
+    "benefits": [
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with",
+      "AutoPay Schedule automatic payments so you never miss a payment"
     ]
   },
   {
@@ -413,6 +440,10 @@
         "rate": "5%",
         "category": "in T-Mobile Rewards on net Qualifying Purchases (purchases minus any credits or returns) made online at T-Mobile"
       }
+    ],
+    "benefits": [
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with",
+      "AutoPay (eligible plans only, up to 8 lines)"
     ]
   },
   {
@@ -424,7 +455,7 @@
     "country": "US",
     "category": "Business",
     "card_type": "Credit Card",
-    "fee": "No Annual Fee",
+    "fee": "$150",
     "welcome_bonus": "$2,000 bonus for every $500,000 spent in the first year. You can truly earn unlimited cash bonuses your first year. 1 REWARDS YOUR WAY Get cash back rewards for any amount at any time with no expiration date for the life of the account. 2 TRAVEL REWARDS Earn unlimited 5% cash back on hotels and rental cars booked through Capital One Business Travel. 3 BUSINESS-GRADE CAPABILITIES Empower your team ",
     "earn_rates": [
       {
@@ -459,7 +490,7 @@
     "country": "US",
     "category": "Business",
     "card_type": "Credit Card",
-    "fee": "No Annual Fee",
+    "fee": "$95",
     "welcome_bonus": "50,000 miles bonus when you spend $4,500 in the first 3 months",
     "earn_rates": [
       {

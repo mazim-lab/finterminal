@@ -2018,8 +2018,9 @@
       "2X miles Get unlimited",
       "2X miles every purchase, every day",
       "5X miles hotels, vacation rentals, and rental cars booked through Capital One Travel",
-      "5X miles hotels and rental cars booked through Capital One Travel",
-      "2X miles 7 Monthly card spend $2,200 You could"
+      "extended warranty 9 You’ll get additional warranty protection at no charge on eligible items that are purchased with your credit card",
+      "No foreign transaction fees and no blackout dates EXPLORE VENTURE BENEFITS Flexible redemption Redeem your way—miles don’t expire for the life of the",
+      "Global Entry or TSA PreCheck®"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2033,16 +2034,19 @@
     "issuer": "Capital One",
     "network": "Mastercard",
     "card_type": "personal",
-    "annual_fee": 0,
+    "annual_fee": 395.0,
     "signup_bonus": null,
-    "signup_bonus_formatted": null,
+    "signup_bonus_formatted": "earn 5 miles",
     "signup_bonus_value_usd": null,
     "signup_bonus_currency": "miles",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": "5X miles Capital One Entertainment purchases; 2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
     "key_perks": [
       "5X miles Capital One Entertainment purchases",
-      "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p"
+      "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
+      "Airport Lounges Lodging Cars A MODERN AIRPORT OASIS Capital One Lounges Venture X primary cardholders can enjoy access to Capital One Lounge and Landi",
+      "Capital One Lounges Venture X primary cardholders can enjoy access to Capital One Lounge and Landing locations",
+      "Priority Pass™ Lounges Venture X primary cardholders can enjoy access to 1,300+ participating lounges worldwide from Priority Pass"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2065,7 +2069,8 @@
     "earn_rates_summary": "2X miles ? Compare Travel Cards Customer Reviews 5 Star 70% 4 Star 19% 3 Star 5% 2 Star 2% 1 Star 3% 4; 2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
     "key_perks": [
       "2X miles ? Compare Travel Cards Customer Reviews 5 Star 70% 4 Star 19% 3 Star 5% 2 Star 2% 1 Star 3% 4",
-      "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p"
+      "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
+      "travel credit for the difference"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2081,14 +2086,15 @@
     "card_type": "personal",
     "annual_fee": 0,
     "signup_bonus": null,
-    "signup_bonus_formatted": null,
+    "signup_bonus_formatted": "earn a $200 cash bonus",
     "signup_bonus_value_usd": null,
     "signup_bonus_currency": "miles",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p; 1.5% every purchase",
     "key_perks": [
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
-      "1.5% every purchase"
+      "1.5% every purchase",
+      "travel credit for the difference"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2102,7 +2108,7 @@
     "issuer": "Capital One",
     "network": "Mastercard",
     "card_type": "personal",
-    "annual_fee": 0,
+    "annual_fee": 39.0,
     "signup_bonus": null,
     "signup_bonus_formatted": null,
     "signup_bonus_value_usd": null,
@@ -2111,7 +2117,8 @@
     "earn_rates_summary": "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p; 1.5% every purchase",
     "key_perks": [
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
-      "1.5% every purchase"
+      "1.5% every purchase",
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2127,7 +2134,7 @@
     "card_type": "personal",
     "annual_fee": 0,
     "signup_bonus": null,
-    "signup_bonus_formatted": null,
+    "signup_bonus_formatted": "$200 cash bonus",
     "signup_bonus_value_usd": null,
     "signup_bonus_currency": "miles",
     "welcome_bonus_conditions": null,
@@ -2136,8 +2143,8 @@
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
       "3% food and fun,",
       "5% hotels, vacation rentals and rental cars booked through Capital One Travel",
-      "3% grocery stores, on dining, entertainment and popular streaming services",
-      "1% all other purchases and rewards don’t expire for the life of the account"
+      "no foreign transaction fees on purchases made outside of the United States",
+      "travel credit for the difference"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2160,7 +2167,8 @@
     "earn_rates_summary": "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p; 3% grocery stores and on dining",
     "key_perks": [
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
-      "3% grocery stores and on dining"
+      "3% grocery stores and on dining",
+      "travel credit for the difference"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2182,7 +2190,8 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
     "key_perks": [
-      "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p"
+      "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2204,7 +2213,8 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
     "key_perks": [
-      "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p"
+      "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2227,7 +2237,8 @@
     "earn_rates_summary": "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p; 1.5% every purchase, every day",
     "key_perks": [
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
-      "1.5% every purchase, every day"
+      "1.5% every purchase, every day",
+      "travel credit for the difference"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2252,8 +2263,7 @@
       "2X miles every purchase Enjoy a $250 Capital One Travel credit &amp;",
       "2X miles every purchase",
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
-      "3% grocery stores, on dining &amp; entertainment 6 and",
-      "7.5% in Kohl's rewards 11 Take"
+      "Travel credit &amp; earn 75,000 bonus miles"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2277,7 +2287,9 @@
     "key_perks": [
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
       "3% in CLUB Points at Bass Pro Shops &amp; Cabela’s and CLUB Members in our black tier",
-      "5% those purchases"
+      "5% those purchases",
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with",
+      "Autopay Schedule automatic payments so you never miss a payment"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2301,7 +2313,9 @@
     "key_perks": [
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
       "3% in CLUB Points at Bass Pro Shops &amp; Cabela’s and CLUB Members in our black tier",
-      "5% those purchases"
+      "5% those purchases",
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with",
+      "AutoPay Schedule automatic payments so you never miss a payment"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2323,7 +2337,8 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
     "key_perks": [
-      "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p"
+      "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
+      "No foreign transaction fees Avoid additional charges or fees while abroad or with foreign currency"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2346,7 +2361,9 @@
     "earn_rates_summary": "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p; 5% in T-Mobile Rewards on net Qualifying Purchases (purchases minus any credits or returns) made online at T-Mobile",
     "key_perks": [
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
-      "5% in T-Mobile Rewards on net Qualifying Purchases (purchases minus any credits or returns) made online at T-Mobile"
+      "5% in T-Mobile Rewards on net Qualifying Purchases (purchases minus any credits or returns) made online at T-Mobile",
+      "CreditWise® Credit Card FAQs Common Account Tasks Pay Credit Card Bill Activate Credit Card Track your credit score with",
+      "AutoPay (eligible plans only, up to 8 lines)"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2360,7 +2377,7 @@
     "issuer": "Capital One",
     "network": "Mastercard",
     "card_type": "business",
-    "annual_fee": 0,
+    "annual_fee": 150.0,
     "signup_bonus": null,
     "signup_bonus_formatted": "$2,000 bonus for every $500,000 spent in the first year. You can truly earn unlimited cash bonuses your first year. 1 REWARDS YOUR WAY Get cash back rewards for any amount at any time with no expiration date for the life of the account. 2 TRAVEL REWARDS Earn unlimited 5% cash back on hotels and rental cars booked through Capital One Business Travel. 3 BUSINESS-GRADE CAPABILITIES Empower your team ",
     "signup_bonus_value_usd": null,
@@ -2371,7 +2388,9 @@
       "2% Business Card | Capital One Skip to main content Sign In Credit Cards Checking &amp; Savings Auto Business Commercial Be",
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
       "2% for your business on every purchase, everywhere, no limits or category restrictions",
-      "5% hotels and rental cars booked through Capital One Business Travel"
+      "Extended warranty Get free additional warranty and protection on eligible items that you purchase with your card",
+      "No foreign transaction fees Pay zero foreign transaction fees on purchases made outside of the United States",
+      "Roadside assistance Our business cards offer services to help you during auto-related emergencies, such as jump-starting, tire changing and towing"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2385,7 +2404,7 @@
     "issuer": "Capital One",
     "network": "Mastercard",
     "card_type": "business",
-    "annual_fee": 0,
+    "annual_fee": 95.0,
     "signup_bonus": null,
     "signup_bonus_formatted": "50,000 miles bonus when you spend $4,500 in the first 3 months",
     "signup_bonus_value_usd": null,
@@ -2396,8 +2415,9 @@
       "2X miles Credit Level: Excellent",
       "2X miles every purchase",
       "2X miles Venture X Business Spark 1",
-      "5X miles Select Card Details Rewards Calculator Benefits Reviews Rates &amp; Fees Rates &amp; Fees Information Apply Now Apply No",
-      "2X miles every purchase for your business,"
+      "Extended warranty Get free additional warranty and protection on eligible items that you purchase with your card",
+      "No Foreign Transaction Fees Pay zero foreign transaction fees on purchases made outside of the United States",
+      "Global Entry or TSA PreCheck®"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2421,7 +2441,10 @@
     "key_perks": [
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
       "2% for your business on every purchase, everywhere, no limits or category restrictions",
-      "5% hotels and rental cars booked through Capital One Business Travel"
+      "5% hotels and rental cars booked through Capital One Business Travel",
+      "Extended warranty Get free additional warranty and protection on eligible items that you purchase with your card",
+      "No foreign transaction fees Pay zero foreign transaction fees on purchases made outside of the United States",
+      "Roadside assistance Our business cards offer services to help you during auto-related emergencies, such as jump-starting, tire changing and towing"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
@@ -2446,8 +2469,9 @@
       "1% Business Credit Card | Capital One Skip to main content Sign In Credit Cards Checking &amp; Savings Auto Business Commer",
       "2% Business Banking Accounts Business Checking Accounts for any stage of business Business Savings Grow your money with a p",
       "1% and no annual fee",
-      "1% for your business on every purchase, everywhere, no limits or category restrictions",
-      "5% hotels and rental cars booked through Capital One Business Travel"
+      "Extended warranty Get free additional warranty and protection on eligible items that you purchase with your card",
+      "No foreign transaction fees Pay zero foreign transaction fees on purchases made outside of the United States",
+      "Roadside assistance Our business cards offer services to help you during auto-related emergencies, such as jump-starting, tire changing and towing"
     ],
     "foreign_transaction_fee": null,
     "country": "US",
