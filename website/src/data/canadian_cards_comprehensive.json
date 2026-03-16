@@ -3711,7 +3711,7 @@
     "issuer": "BMO",
     "network": "Visa",
     "card_type": "rewards",
-    "annual_fee": 0.0,
+    "annual_fee": 0,
     "first_year_fee": null,
     "welcome_bonus": "Get 2,500 bonus points for paying your full credit card balance on time for 12 consecutive months",
     "welcome_bonus_value_cad": null,
@@ -3731,9 +3731,7 @@
       "car rentals, cruises and vacation packages with any travel provider Save for the future by redeeming points for a contribution to a BMO savings or investment account Pay with point",
       "Mobile Device Insurance Provides up to $1,000 of protection against loss, theft or accidental damage of your smartphone, cellular phone or tablet, anywhere in the world if the devi",
       "trip cancellations, baggage loss and more",
-      "baggage loss and more",
-      "emergency medical expenses, trip cancellations, baggage loss and more",
-      "Balance Protection Enhanced Travel Insurance Travel Insurance Overview Travel Insurance Plans Resources Guide me tool Mortgage insurance calculator Get a travel insurance quote Mak"
+      "baggage loss and more"
     ],
     "insurance": {},
     "minimum_income": null,
@@ -3759,7 +3757,7 @@
     "card_type": "rewards",
     "annual_fee": 120.0,
     "first_year_fee": null,
-    "welcome_bonus": "earn 1 point for every $1 spent on everything else 56 – you deserve it. Apply Now Minimum $150,000 (individual) or $200,000 (household) annual income required. Your Visa Infinite Privilege benefits Enjoy a Visa Airport Companion membership and 6 complimentary airport lounge visits per year – valued at more than $250 USD. Enrollment is required. Enroll at visaairportcompanion.ca or through the Visa",
+    "welcome_bonus": "Get 5 points for every $1 you spend on everyday essentials like groceries, gas, and transit. 67 $50 annual lifestyle credit Get a $50 statement credit every year",
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
@@ -3767,13 +3765,7 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "every $1 spent on groceries, dining in and out, drugstore purchases, gas, and travel": "5X",
-      "groceries": "5X",
-      "fine dining, Friday night drinks and takeout": "5X",
-      "gas": "5X",
-      "healthcare, beauty and other drugstore purchases": "5X",
-      "travel": "5X",
-      "every $1 spent): Slider increases or decreases the dollar amount based on the direction it is moved in $500 Minimum $0 $": "5X"
+      "the must-haves Get 5 points for every $1 you spend on everyday essentials like groceries, gas, and transit": "5X"
     },
     "rewards_program": null,
     "foreign_transaction_fee": null,
@@ -3781,13 +3773,8 @@
     "key_perks": [
       "Extended Warranty Insurance Doubles the original manufacturer’s warranty period on items purchased up to a maximum of one year when you charge the full purchase price to your card",
       "Car rental – collision/loss damage insurance",
-      "Concierge - it’s like having a personal assistant on call! 60 Enjoy unique dining and wine events with Visa Infinite Dining Series 61 and Visa Infinite Wine Country",
+      "Concierge - it’s like having a personal assistant on call! 71 Get the Visa Infinite Troon Golf Benefit and enjoy discounts at 95 resorts and courses around the world",
       "Mobile Device Insurance Provides up to $1,000 of protection against loss, theft or accidental damage of your smartphone, cellular phone or tablet, anywhere in the world if the devi",
-      "Trip cancellation/trip interruption insurance",
-      "Baggage insurance",
-      "Flight delay insurance up to $1,000 per trip for all insured persons",
-      "Companion Program membership and 6 Complimentary Lounge Passes 52 Earn 25% more points when you add another cardholder 52 Your everyday just got more rewarding 5x the points For ev",
-      "emergency medical insurance up to $5 million per insured person, per trip - up to 22 consecutive days",
       "Common carrier insurance"
     ],
     "insurance": {},
@@ -3803,7 +3790,7 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-eclipse-visa-infinite-privilege/",
+    "apply_url": "https://www.bmo.com/main/personal/credit-cards/bmo-eclipse-visa-infinite/",
     "is_business": false
   },
   {
@@ -3838,7 +3825,7 @@
       "Baggage insurance",
       "Flight delay insurance up to $500 per trip for all insured persons",
       "companions",
-      "emergency medical insurance up to $5 million per insured person, per trip - up to 21 consecutive days",
+      "Zero Liability Safeguard yourself from any monetary loss resulting from fraudulent card use",
       "Common carrier insurance"
     ],
     "insurance": {},
@@ -3897,7 +3884,7 @@
     "issuer": "BMO",
     "network": "Mastercard",
     "card_type": "cashback",
-    "annual_fee": 0.0,
+    "annual_fee": 0,
     "first_year_fee": null,
     "welcome_bonus": "Get up to 5% cash back in first 3 months",
     "welcome_bonus_value_cad": null,
@@ -3922,10 +3909,8 @@
       "Car Rental Discount Save up to 20% on National Car Rental ®†† and Alamo Rent A Car ®†† and up to 5% on Enterprise Rent-A-Car ®†† at locations worldwide using the Car Rental Booking",
       "trip cancellations, baggage loss and more",
       "baggage loss and more",
-      "emergency medical expenses, trip cancellations, baggage loss and more",
-      "Balance Protection Enhanced Travel Insurance Travel Insurance Overview Travel Insurance Plans Resources Guide me tool Mortgage insurance calculator Get a travel insurance quote Mak",
-      "Roadside assistance Zero Liability Safeguard yourself from any monetary loss resulting from fraudulent card use",
-      "Zero Liability Safeguard yourself from any monetary loss resulting from fraudulent card use"
+      "Zero Liability Safeguard yourself from any monetary loss resulting from fraudulent card use",
+      "Roadside assistance Zero Liability Safeguard yourself from any monetary loss resulting from fraudulent card use"
     ],
     "insurance": {},
     "minimum_income": null,
@@ -3962,19 +3947,28 @@
     "rewards_program": null,
     "foreign_transaction_fee": null,
     "foreign_transaction_fee_pct": null,
-    "key_perks": [],
+    "key_perks": [
+      "Purchase Protection and Extended Warranty This guide outlines the terms and conditions governing the insurance that comes with your card",
+      "Extended Warranty Insurance Doubles the original manufacturer’s warranty period on items purchased up to a maximum of one year when you charge the full purchase price to your card",
+      "trip cancellations, baggage loss and more",
+      "baggage loss and more",
+      "Zero Liability Safeguard yourself from any monetary loss resulting from fraudulent card use",
+      "Roadside assistance BMO PaySmart™ Installment Plans Live now, pay smarter with a BMO PaySmart plan by turning your credit card purchases into smaller, monthly payments at a low cos"
+    ],
     "insurance": {},
     "minimum_income": null,
     "minimum_credit_score": null,
     "country": "CA",
-    "sources": [],
-    "last_updated": "2026-02-23",
+    "sources": [
+      "bmo_website"
+    ],
+    "last_updated": "2026-03-16",
     "card_image_url": null,
     "pot_first_year_value": null,
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": null,
+    "apply_url": "https://www.bmo.com/main/personal/credit-cards/preferred-rate-mastercard/",
     "is_business": false
   },
   {
@@ -3985,7 +3979,7 @@
     "card_type": "cashback",
     "annual_fee": 120.0,
     "first_year_fee": null,
-    "welcome_bonus": "Get up to $650 in value and annual fees waived first year",
+    "welcome_bonus": "get 1% cash back on all other purchases 2B with no limit on how much cash back you can earn! Get some sweet perks on top of your cash back Get your cash back ASAP! No waiting! Redeem your cash back any time you want for as little as $1. Roadside assistance Including battery boosts, flat-tire change, lockout service and towing – a $69/year value. 19 Travel and medical protection With 8-day out-of-p",
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
@@ -4011,10 +4005,8 @@
       "lounge access for a fee of just US$32 per person, per visit",
       "trip cancellations, baggage loss and more",
       "baggage loss and more",
-      "emergency medical benefits – up to $5 million in coverage, and more",
-      "Balance Protection Enhanced Travel Insurance Travel Insurance Overview Travel Insurance Plans Resources Guide me tool Mortgage insurance calculator Get a travel insurance quote Mak",
-      "Roadside Assistance ** Every day feels like pay day when you earn unlimited cash back on your everyday purchases 5% on groceries 2B, 75 The highest cash back earn rate on food and ",
-      "Zero Liability Safeguard yourself from any monetary loss resulting from fraudulent card use"
+      "Zero Liability Safeguard yourself from any monetary loss resulting from fraudulent card use",
+      "Roadside Assistance ** Every day feels like pay day when you earn unlimited cash back on your everyday purchases 5% on groceries 2B, 75 The highest cash back earn rate on food and "
     ],
     "insurance": {},
     "minimum_income": null,
@@ -4047,23 +4039,33 @@
     "purchase_interest_rate": 0.0,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {},
+    "earn_rates": {
+      "National Car Rental ®†† and Alamo Rent A Car ®†† and up to": "20%",
+      "Enterprise Rent-A-Car ®†† at locations worldwide using the Car Rental Booking tool": "5%"
+    },
     "rewards_program": null,
     "foreign_transaction_fee": null,
     "foreign_transaction_fee_pct": null,
-    "key_perks": [],
+    "key_perks": [
+      "purchase protection",
+      "extended warranty and purchase protection",
+      "Car Rental ®†† and Alamo Rent A Car ®†† and up to 5% on Enterprise Rent-A-Car ®†† at locations worldwide using the Car Rental Booking tool",
+      "Zero Liability safeguards you if there is any monetary loss resulting from fraudulent card use"
+    ],
     "insurance": {},
     "minimum_income": null,
     "minimum_credit_score": null,
     "country": "CA",
-    "sources": [],
-    "last_updated": "2026-02-23",
+    "sources": [
+      "bmo_website"
+    ],
+    "last_updated": "2026-03-16",
     "card_image_url": null,
     "pot_first_year_value": null,
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": null,
+    "apply_url": "https://www.bmo.com/main/personal/credit-cards/prepaid-credit-cards/",
     "is_business": false
   },
   {
@@ -4163,9 +4165,7 @@
       "Baggage insurance Hotel burglary insurance Shop confidently with an extended warranty and purchase protection",
       "flight delays ∗ ∆∆ , 109 Dedicated check-in ∗ ∆∆ , 108 Early boarding ∗ ∆∆ , 108 No VIPorter points expiry ∆∆ , 111 Earn $1 of Qualifying Spend for every $25 spent ∆∆ , 110 Primary",
       "companions traveling in the same booking as the authorized user or primary cardholder",
-      "emergency medical insurance Car rental-collision/loss damage insurance Common carrier insurance Flight delay insurance Baggage insurance Hotel burglary insurance Shop confidently w",
-      "Common carrier insurance Flight delay insurance Baggage insurance Hotel burglary insurance Shop confidently with an extended warranty and purchase protection",
-      "Balance Protection Enhanced Travel Insurance Travel Insurance Overview Travel Insurance Plans Resources Guide me tool Mortgage insurance calculator Get a travel insurance quote Mak"
+      "Common carrier insurance Flight delay insurance Baggage insurance Hotel burglary insurance Shop confidently with an extended warranty and purchase protection"
     ],
     "insurance": {},
     "minimum_income": null,
@@ -4214,7 +4214,6 @@
       "Baggage insurance Hotel burglary insurance Complimentary membership in Mastercard Travel Pass provided by DragonPass",
       "flight delays* ∆∆ , 109 Dedicated check-in* ∆∆ , 108 Early boarding* ∆∆ , 108 No VIPorter points expiry ∆∆ , 111 Earn $1 of qualifying spend for every $25 spent ∆∆ , 110 Primary ca",
       "companion pass per year ∆∆ , 114 1 complimentary checked bag* ∆∆ , 115 1 complimentary carry-on bag on all Porter fare types* ∆∆ , 116 Free PorterClassic seat selection* ∆∆ , 117 P",
-      "emergency medical insurance Trip cancellation/interruption/delay insurance Car rental-collision/loss damage insurance Common carrier insurance Flight delay insurance Baggage insura",
       "Common carrier insurance Flight delay insurance Baggage insurance Hotel burglary insurance Complimentary membership in Mastercard Travel Pass provided by DragonPass"
     ],
     "insurance": {},
