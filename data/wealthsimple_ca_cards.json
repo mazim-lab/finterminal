@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Wealthsimple Cash Back Visa",
+    "slug": "wealthsimple-cash-back-visa",
+    "url": "https://www.wealthsimple.com/en-ca/credit-card",
+    "issuer": "Wealthsimple",
+    "network": "Visa",
+    "country": "CA",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "All purchases (for qualifying clients)"
+      },
+      {
+        "rate": "1%",
+        "category": "All purchases (standard)"
+      }
+    ],
+    "benefits": [
+      "Visa Zero Liability Protection",
+      "Visa Infinite Luxury Hotel Collection (900+ locations)",
+      "Earned interest on cash back balance",
+      "No foreign transaction fees (for Generation clients)",
+      "Fraud protection"
+    ]
+  }
+]

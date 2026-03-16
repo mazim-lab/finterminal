@@ -4927,7 +4927,7 @@
     "issuer": "Wealthsimple",
     "network": "Visa",
     "card_type": "cashback",
-    "annual_fee": 0.0,
+    "annual_fee": 0,
     "first_year_fee": null,
     "welcome_bonus": "",
     "welcome_bonus_value_cad": null,
@@ -4936,30 +4936,34 @@
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {},
+    "earn_rates": {
+      "All purchases (for qualifying clients)": "2%",
+      "All purchases (standard)": "1%"
+    },
     "rewards_program": null,
     "foreign_transaction_fee": null,
     "foreign_transaction_fee_pct": null,
     "key_perks": [
-      "2% cash back on everything",
-      "No FX fees",
-      "Metal card for $100K+ clients",
-      "Purchase protection 90 days",
-      "Phone insurance up to $1,000",
-      "Extended warranty"
+      "Visa Zero Liability Protection",
+      "Visa Infinite Luxury Hotel Collection (900+ locations)",
+      "Earned interest on cash back balance",
+      "No foreign transaction fees (for Generation clients)",
+      "Fraud protection"
     ],
     "insurance": {},
     "minimum_income": null,
     "minimum_credit_score": null,
     "country": "CA",
-    "sources": [],
-    "last_updated": "2026-02-23",
+    "sources": [
+      "wealthsimple_website"
+    ],
+    "last_updated": "2026-03-16",
     "card_image_url": null,
     "pot_first_year_value": null,
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": null,
+    "apply_url": "https://www.wealthsimple.com/en-ca/credit-card",
     "is_business": false
   },
   {
