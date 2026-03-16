@@ -1,0 +1,581 @@
+[
+  {
+    "name": "American Express Cobalt® Card",
+    "slug": "cobalt-card",
+    "url": "https://www.americanexpress.com/ca/en/credit-cards/cobalt-card/",
+    "description": "Learn More About The American Express Cobalt Card And Earn Membership Rewards® Points With Qualified Purchases.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/American_Express_Cobalt_Card.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Credit Card",
+    "category": "Personal",
+    "fee": "$15.99/month (Equals $191.88 annually) for non-Quebec residents. $191.88/year for Quebec residents.",
+    "interest_rate": "21.99% on purchases and",
+    "welcome_bonus": "Earn up to 15,000 Membership Rewards® points1\\*",
+    "earn_rates": [
+      {
+        "rate": "5x",
+        "category": "eats & drinks"
+      },
+      {
+        "rate": "3x",
+        "category": "streaming subscriptions"
+      },
+      {
+        "rate": "2x",
+        "category": "gas, transit & ride share"
+      },
+      {
+        "rate": "1x",
+        "category": "everything else"
+      },
+      {
+        "rate": "1",
+        "category": "Amex Travel Online"
+      }
+    ],
+    "points_value": "1,000 points = $10",
+    "benefits": [
+      "Front Of The Line®",
+      "The Hotel Collection",
+      "Up to $60 in statement credits with Instacart",
+      "Every point counts with Amex",
+      "Get more out of life and earn rewards along the way with the Membership Rewards® program.",
+      "Perks just for you",
+      "Do more of what you love with the Cobalt Perks program.13",
+      "The Hotel Collection14",
+      "Stay at hotels that have their own persona.",
+      "Mobile coverage",
+      "Enjoy your new mobile device with more confidence.",
+      "Travel coverage",
+      "Road trip or flight, you may be protected when you book travel with your Card.",
+      "Welcome to Amex ExperiencesTM",
+      "Stay connected with all that Amex ExperiencesTM has to offer!"
+    ]
+  },
+  {
+    "name": "American Express® Gold Rewards Card",
+    "slug": "gold-rewards-card",
+    "url": "https://www.americanexpress.com/ca/en/credit-cards/gold-rewards-card/",
+    "description": "Check Out The American Express Gold Rewards Card And Earn Membership Rewards® Points When You Spend on Qualified Purchases.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/layout/shop_3/gold_rosegold.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Credit Card",
+    "category": "Personal",
+    "fee": "$250 Annual Fee",
+    "interest_rate": "21.99% on purchases and 21.99% on funds advances\\*",
+    "welcome_bonus": "Get an instant decision with no impact to your credit score - Here’s how it works [Apply Now](http://www.americanexpress.com/en-ca/credit-cards/apply/personal/gold-rewards-card/?sourcecode=A0000H3FVU&intlink=ca-en-amex-cardshop-details-apply-americanExpressGoldRewardsCard-siderail) Note: Once you click Apply Now you will not be able to change the colour of the Card you selected once you submit your application. - Footnotes Card Type Credit Card Annual Fee $250 Annual Fee Additional Cards 1 Free ",
+    "earn_rates": [
+      {
+        "rate": "2x",
+        "category": "travel"
+      },
+      {
+        "rate": "2x",
+        "category": "everyday purchases"
+      },
+      {
+        "rate": "1x",
+        "category": "everything else"
+      },
+      {
+        "rate": "1",
+        "category": "Amex Travel Online"
+      }
+    ],
+    "points_value": "1,000 points = $10",
+    "benefits": [
+      "Item 1 of 6",
+      "Every point counts with Amex",
+      "Get more out of life and earn rewards along the way with the Membership Rewards® program.",
+      "Book travel with special benefits and offers",
+      "Travel coverage",
+      "Road trip or flight, you may be protected when you book travel with your Card.",
+      "Welcome to Amex ExperiencesTM",
+      "Stay connected with all that Amex ExperiencesTM Experiences has to offer!",
+      "Shopping coverage",
+      "World-class service",
+      "Customer service that always has your back – anytime, anywhere.",
+      "Exclusive offers with American Express",
+      "Explore offers for shopping, dining, travel and more − from brands you love.",
+      "Borrowing Options",
+      "Discover an American Express® Borrowing solution that fits your needs."
+    ]
+  },
+  {
+    "name": "Aeroplan® Reserve Credit Card",
+    "slug": "aeroplan-reserve",
+    "url": "https://www.americanexpress.com/ca/en/credit-cards/aeroplan-reserve/",
+    "description": "Travel in Style and Elevate Every Step of Your Journey When You Earn Aeroplan Points with the American Express® Aeroplan<sup>®*</sup> Reserve Card.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/aeroplan-reserve-card.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Credit Card",
+    "category": "Personal",
+    "fee": "$599\\*",
+    "interest_rate": "21.99% on purchases and",
+    "welcome_bonus": "Get an instant decision with no impact to your credit score - Here’s how it works [Apply Now](https://www.americanexpress.com/en-ca/credit-cards/apply/personal/aeroplan-reserve/?sourcecode=A0000HC93V&intlink=ca-en-amex-cardshop-details-apply-AmericanExpressAeroplanReserveCard-siderail) - Footnotes",
+    "benefits": [
+      "Earn points you can use on your next trip",
+      "Find out how you can earn points faster and reward yourself sooner with accelerated earn rates.",
+      "You could earn up to $4,400 in value within your first 13 months35",
+      "Get on board with incredible Air Canada travel benefits",
+      "Enhance every travel experience when you book directly with Air Canada using your Card.",
+      "Travel in style with airport benefits and more",
+      "Do even more with your points",
+      "Travel coverage",
+      "Road trip or flight, you may be protected when you book travel with your Card.",
+      "Welcome to Amex ExperiencesTM",
+      "Stay connected with all that Amex ExperiencesTM has to offer!",
+      "Shopping coverage",
+      "World-class service",
+      "Customer service that always has your back – anytime, anywhere.",
+      "Exclusive offers with American Express"
+    ]
+  },
+  {
+    "name": "Marriott Bonvoy® American Express®* Card",
+    "slug": "marriott-bonvoy-card",
+    "url": "https://www.americanexpress.com/ca/en/credit-cards/marriott-bonvoy-card/",
+    "description": "Unforgettable Adventure Awaits Whenever You Are Ready With The Marriott Bonvoy American Express Card!",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/marriott-bonvoy-card.png ",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Credit Card",
+    "category": "Personal",
+    "fee": "$120\\*",
+    "interest_rate": "21.99% on purchases and 21.99% on funds advances\\*",
+    "welcome_bonus": "Get an instant decision with no impact to your credit score - Here’s how it works [Apply Now](https://www.americanexpress.com/en-ca/credit-cards/apply/personal/marriott-bonvoy/?sourcecode=A0000HUEPW&intlink=ca-en-amex-cardshop-details-apply-marriottBonvoyAmericanExpressCard-siderail) - Footnotes",
+    "earn_rates": [
+      {
+        "rate": "5x",
+        "category": "Per $1 on Marriott Purchases"
+      },
+      {
+        "rate": "2x",
+        "category": "per $1 on everything else"
+      }
+    ],
+    "benefits": [
+      "Receive one free night each year",
+      "Receive 15 Elite Night Credits",
+      "All Benefits",
+      "Earn Marriott Bonvoy Points on all purchases",
+      "Reward yourself with free nights10, unforgettable getaways11 and more.",
+      "Explore the Marriott Bonvoy program",
+      "Travel coverage",
+      "Road trip or flight, you may be protected when you book travel with your Card.",
+      "Welcome to Amex ExperiencesTM",
+      "Stay connected with all that Amex ExperiencesTM has to offer!",
+      "Shopping coverage",
+      "World-class service",
+      "Customer service that always has your back – anytime, anywhere.",
+      "Exclusive offers with American Express",
+      "Explore Amex Offers for shopping, dining, travel and more − from brands you love."
+    ]
+  },
+  {
+    "name": "SimplyCash® Preferred Card from American Express",
+    "slug": "simply-cash-preferred",
+    "url": "https://www.americanexpress.com/ca/en/credit-cards/simply-cash-preferred/",
+    "description": "Discover Why The SimplyCash Preferred Card From American Express Is The Simple Way To Get It All®.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/SimplyCash_Preferred_Card.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Credit Card",
+    "category": "Personal",
+    "fee": "For non-Quebec residents, $9.99/month (Equals $119.88 annually). For Quebec residents, $119/year.",
+    "interest_rate": "21.99% on purchases and 21.99% on funds advances\\*",
+    "welcome_bonus": "Get an instant decision with no impact to your credit score - Here’s how it works [Apply Now](https://www.americanexpress.com/en-ca/credit-cards/apply/personal/simplycash-preferred?sourcecode=A0000HHJRV&intlink=ca-en-amex-cardshop-details-apply-simplyCashPreferredCard-siderail) - Footnotes UP TO $250 IN BONUS VALUE **Earn up to $200 in bonus cash back1\\*** by earning a bonus 10% cash back on all purchases (up to $2,000 in purchases) in your first 3 months as a new SimplyCash® Preferred Card from",
+    "earn_rates": [
+      {
+        "rate": "10%",
+        "category": "all purchases (up to $2,000 in purchases) in your first 3 months as a new SimplyCash® Preferred Card from American Express Cardmember.1\\*"
+      },
+      {
+        "rate": "4%",
+        "category": "gas"
+      },
+      {
+        "rate": "4%",
+        "category": "grocery"
+      },
+      {
+        "rate": "2%",
+        "category": "everything else"
+      }
+    ],
+    "benefits": [
+      "Item 1 of 4",
+      "Slide 1 of 4Currently Selected SlideSlide 2 of 4Slide 3 of 4Slide 4 of 4",
+      "All Benefits",
+      "Earn cash back",
+      "The more you buy with the Card, the more cash back you’ll earn.3",
+      "Travel coverage",
+      "Road trip or flight, you may be protected when you book travel with your Card.",
+      "Mobile coverage",
+      "Enjoy your new mobile device with more confidence.",
+      "Welcome to Amex ExperiencesTM",
+      "Stay connected with all that Amex ExperiencesTM has to offer!",
+      "Shopping coverage",
+      "World-class service",
+      "Customer service that always has your back – anytime, anywhere.",
+      "Exclusive offers with American Express"
+    ]
+  },
+  {
+    "name": "SimplyCash® Card from American Express",
+    "slug": "simply-cash",
+    "url": "https://www.americanexpress.com/ca/en/credit-cards/simply-cash/",
+    "description": "Learn How The SimplyCash Card From American Express Is The Simple Way to Get You There ®.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/SimplyCash_Card.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Credit Card",
+    "category": "Personal",
+    "fee": "No annual fee",
+    "interest_rate": "21.99% on purchases and",
+    "welcome_bonus": "Get an instant decision with no impact to your credit score - Here’s how it works [Apply Now](https://www.americanexpress.com/en-ca/credit-cards/apply/personal/simplycash?sourcecode=A0000HHERY&intlink=ca-en-amex-cardshop-details-apply-simplyCashCard-siderail) - Footnotes Earn up to $100 in bonus cash back1\\* by earning a bonus 5% cash back on all purchases (up to $2,000 in purchases) in your first 3 months as a new SimplyCash® Card from American Express Cardmember. That’s on top of your everyday",
+    "earn_rates": [
+      {
+        "rate": "5%",
+        "category": "all purchases (up to $2,000 in purchases) in your first 3 months as a new SimplyCash® Card from American Express Cardmember. That’s on top of your eve"
+      },
+      {
+        "rate": "2%",
+        "category": "gas"
+      },
+      {
+        "rate": "2%",
+        "category": "grocery"
+      },
+      {
+        "rate": "1.25%",
+        "category": "everything else"
+      }
+    ],
+    "benefits": [
+      "Item 1 of 2",
+      "Slide 1 of 2Currently Selected SlideSlide 2 of 2",
+      "All Benefits",
+      "Earn cash back",
+      "The more you buy with the Card, the more cash back you’ll earn3.",
+      "Travel coverage",
+      "Road trip or flight, you may be protected when you book travel with your Card.",
+      "Welcome to Amex ExperiencesTM",
+      "Stay connected with all that Amex ExperiencesTM has to offer!",
+      "Shopping coverage",
+      "World-class service",
+      "Customer service that always has your back – anytime, anywhere.",
+      "Exclusive offers with American Express",
+      "Explore offers for shopping, dining, travel and more − from brands you love.",
+      "**Borrowing** Options"
+    ]
+  },
+  {
+    "name": "American Express® Green Card",
+    "slug": "green-card",
+    "url": "https://www.americanexpress.com/ca/en/credit-cards/green-card/",
+    "description": "Take A Look At The American Express Green Card Where You Can Earn Membership Rewards® Points On Qualified Purchases.",
+    "card_image": null,
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Credit Card",
+    "category": "Personal",
+    "fee": "No annual fee",
+    "interest_rate": "21.99% on purchases and 21.99% on funds advances\\*",
+    "welcome_bonus": "Earn 10,000 Membership Rewards® points1\\*",
+    "earn_rates": [
+      {
+        "rate": "1x",
+        "category": "everyday purchases"
+      },
+      {
+        "rate": "1",
+        "category": "Amex Travel Online"
+      }
+    ],
+    "points_value": "1,000 points = $10",
+    "benefits": [
+      "Item 1 of 3",
+      "Slide 1 of 3Currently Selected SlideSlide 2 of 3Slide 3 of 3",
+      "Every point counts with Amex",
+      "Get more out of life and earn rewards along the way with the Membership Rewards® program.",
+      "Welcome to Amex ExperiencesTM",
+      "Stay connected with all that Amex ExperiencesTM has to offer!",
+      "Shopping Coverage",
+      "World-class service",
+      "Customer service that always has your back – anytime, anywhere.",
+      "Exclusive offers with American Express",
+      "Explore offers for shopping, dining, travel and more − from brands you love.",
+      "Borrowing Options",
+      "Discover an American Express® Borrowing solution that fits your needs."
+    ]
+  },
+  {
+    "name": "American Express Essential™ Credit Card",
+    "slug": "essential-credit-card",
+    "url": "https://www.americanexpress.com/ca/en/credit-cards/essential-credit-card/",
+    "description": "With Low Interest & A Low Annual Fee Learn How The American Express Essential Credit Card Can Help You Carry The Weight Through Life's Big Moments.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/Essential_Credit_Card_new.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Credit Card",
+    "category": "Personal",
+    "fee": "$25",
+    "interest_rate": "12.99% on purchases and funds advances\\*",
+    "benefits": [
+      "Item 1 of 3",
+      "Slide 1 of 3Currently Selected SlideSlide 2 of 3Slide 3 of 3",
+      "All Benefits",
+      "Travel coverage",
+      "Road trip or flight, you may be protected when you book travel with your Card.",
+      "Welcome to Amex ExperiencesTM",
+      "Stay connected with all that Amex ExperiencesTM has to offer!",
+      "Shopping coverage",
+      "World-class service",
+      "Customer service that always has your back – anytime, anywhere.",
+      "Exclusive offers with American Express",
+      "Explore offers for shopping, dining, travel and more − from brands you love.",
+      "**Borrowing** Options",
+      "Discover an American Express® Borrowing solution that fits your needs."
+    ]
+  },
+  {
+    "name": "The Platinum Card®",
+    "slug": "the-platinum-card",
+    "url": "https://www.americanexpress.com/ca/en/charge-cards/the-platinum-card/",
+    "description": "Learn About The Platinum Card From American Express. New Platinum Cardmembers Can Earn Welcome Bonus Points.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/The_Platinum_Card.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Charge Card",
+    "category": "Personal",
+    "fee": "$799",
+    "earn_rates": [
+      {
+        "rate": "2x",
+        "category": "dining & food delivery purchases in Canada"
+      },
+      {
+        "rate": "2x",
+        "category": "travel"
+      },
+      {
+        "rate": "1x",
+        "category": "everything else"
+      },
+      {
+        "rate": "1",
+        "category": "Amex Travel Online"
+      }
+    ],
+    "points_value": "1,000 points = $10",
+    "benefits": [
+      "Go ahead and upgrade your getaway using the $200 Annual Travel Credit.6",
+      "Up to $240 in statement credits with Instacart",
+      "Redefine travel possibilities with Platinum",
+      "See how Platinum can change the way you travel.",
+      "Elevate your everyday experiences",
+      "With Platinum, turn your everyday experiences into something special.",
+      "Every point counts with Amex",
+      "Get more out of life and earn rewards along the way with the Membership Rewards® program.",
+      "Financial flexibility that lets you stay in control",
+      "Travel coverage",
+      "Road trip or flight, you may be protected when you book travel with your Card.",
+      "Welcome to Amex ExperiencesTM",
+      "Stay connected with all that Amex ExperiencesTM has to offer!",
+      "Shopping coverage",
+      "World-class service"
+    ]
+  },
+  {
+    "name": "American Express® Aeroplan®* Card",
+    "slug": "aeroplan-card",
+    "url": "https://www.americanexpress.com/ca/en/charge-cards/aeroplan-card/",
+    "description": "Learn About The American Express Aeroplan Card That Allows New Cardmembers To Earn Aeroplan Welcome Bonus Points.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/aeroplan-card.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Charge Card",
+    "category": "Personal",
+    "fee": "$120\\*",
+    "welcome_bonus": "Get an instant decision with no impact to your credit score - Here’s how it works [Apply Now](https://www.americanexpress.com/en-ca/charge-cards/apply/personal/aeroplan?sourcecode=A0000HE3HC&intlink=ca-en-amex-cardshop-details-apply-americanExpressAeroplanCard-siderail) - Footnotes UP TO 40,000 POINTS **Earn 30,000 Aeroplan®\\* points1\\*** after spending $3,000 on your Card within the first 3 months as a new American Express® Aeroplan®\\* Cardmember.1\\* **Earn 10,000 Aeroplan®\\* points1\\*** when y",
+    "benefits": [
+      "You could earn up to $1,450 in value within your first 13 months.",
+      "Save on baggage fees",
+      "All Benefits",
+      "Eligibility",
+      "Important Information",
+      "Apply today with confidence",
+      "Compare American Express® Aeroplan®\\* Card to other Cards",
+      "Earn points you can use on your next trip",
+      "Find out how you can earn points faster and reward yourself sooner with accelerated earn rates.",
+      "You could earn up to **$1,450** in value within your first 13 months25",
+      "Get on board with incredible Air Canada travel benefits",
+      "Do even more with your points",
+      "Travel coverage",
+      "Road trip or flight, you may be protected when you book travel with your Card.",
+      "Welcome to Amex ExperiencesTM"
+    ]
+  },
+  {
+    "name": "Business Platinum Card® From American Express",
+    "slug": "small-business-platinum-card",
+    "url": "https://www.americanexpress.com/ca/en/charge-cards/small-business-platinum-card/",
+    "description": "Get To Know The Business Platinum Card from American Express And How It Can Help You Grow Your Small Business Today. Apply Online & Get Started.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/Business_Platinum_Card.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Charge Card",
+    "category": "Business",
+    "welcome_bonus": "Earn 80,000 Membership Rewards® points1\\*** after you spend $15,000 on your Card within your first 3 months as a new Business Platinum® Cardmember.1\\* **Earn 40,000 Membership Rewards® points1\\*** when you make a purchase between 15 and 17 months of Cardmembership.1§\\* That’s up to $1,200 in statement credits to reinvest in your business.10 \\*Current or former Cardmembers with this Card are not eligible. Other terms apply.",
+    "earn_rates": [
+      {
+        "rate": "25x",
+        "category": "everything"
+      }
+    ],
+    "benefits": [
+      "Item 1 of 5",
+      "All Benefits",
+      "Rewards that work as hard as you do",
+      "Cash flow management",
+      "Bolster your business with up to $820 in annual statement credits",
+      "Discover a full suite of business solutions",
+      "Business coverage",
+      "Your Card can help keep your business protected, so you can focus on what matters most.",
+      "Travel coverage",
+      "Road trip or flight, you could be protected when you book travel with your Card.",
+      "Purchase coverage",
+      "Get to know how your Card can help protect your business purchases.",
+      "Book business travel with more benefits",
+      "Say hello to Amex ExperiencesTM",
+      "Open the door to memorable experiences we think you’ll love."
+    ]
+  },
+  {
+    "name": "American Express® Business Gold Rewards Card",
+    "slug": "small-business-gold-card",
+    "url": "https://www.americanexpress.com/ca/en/charge-cards/small-business-gold-card/",
+    "description": "Learn More About The American Express Business Gold Rewards Card. Get Rewards And Grow Your Business With American Express.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/Business_Gold_Rewards_Card.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Charge Card",
+    "category": "Business",
+    "welcome_bonus": "Earn 10,000 bonus Membership Rewards points for each calendar quarter in which you spend $20,000 in purchases on your Card. That could add up to $400 in value every year.5 - Enjoy financial flexibility that offers you more control",
+    "earn_rates": [
+      {
+        "rate": "1x",
+        "category": "everything"
+      }
+    ],
+    "benefits": [
+      "Item 1 of 7",
+      "All Benefits",
+      "Rewards that work as hard as you do",
+      "Cash flow management",
+      "Discover a full suite of business solutions",
+      "Business coverage",
+      "Your Card can help keep your business protected, so you can focus on what matters most.",
+      "Travel coverage",
+      "Road trip or flight, you could be protected when you book travel with your Card.",
+      "Purchase coverage",
+      "Get to know how your Card can help protect your business purchases.",
+      "Book business travel with more benefit",
+      "Say hello to Amex ExperiencesTM",
+      "Open the door to memorable experiences we think you’ll love.",
+      "World-class service"
+    ]
+  },
+  {
+    "name": "American Express® Aeroplan®* Business Reserve Card",
+    "slug": "aeroplan-business-reserve-card",
+    "url": "https://www.americanexpress.com/ca/en/credit-cards/aeroplan-business-reserve-card/",
+    "description": "Get A Credit Card That Gives You Business Travel And Lifestyle Benefits At Home And Abroad. Apply For The American Express Aeroplan Business Reserve Card.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/American_Express_Aeroplan_Business_Reserve_Card_prem_sbs.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Credit Card",
+    "category": "Business",
+    "fee": "$199 for Aeroplan®\\* Business Reserve Cards",
+    "welcome_bonus": "Get 1,000 Status Qualifying Credits (SQC) for every $5,000 in eligible net purchases charged to your Card, up to 25,000 SQC.4‡ - Receive one Annual Worldwide Companion Pass",
+    "benefits": [
+      "Item 1 of 7",
+      "All Benefits",
+      "Rewards that work as hard as you do",
+      "You could earn up to $5,600 in value within your first 13 months26",
+      "Discover a full suite of business solutions",
+      "Business coverage",
+      "Your Card can help keep your business protected, so you can focus on what matters most.",
+      "Travel coverage",
+      "Road trip or flight, you could be protected when you book travel with your Card.",
+      "Purchase coverage",
+      "Get to know how your Card can help protect your business purchases.",
+      "Book business travel with more benefits",
+      "Say hello to Amex ExperiencesTM",
+      "Open the door to memorable experiences we think you’ll love.",
+      "World-class service"
+    ]
+  },
+  {
+    "name": "Marriott Bonvoy® Business American Express®* Card",
+    "slug": "marriott-bonvoy-business-card",
+    "url": "https://www.americanexpress.com/ca/en/credit-cards/marriott-bonvoy-business-card/",
+    "description": "Get To Know the Marriott Bonvoy Business American Express Card And Earn Benefits & Rewards on Qualified Purchases.",
+    "card_image": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/marriott-bonvoy-Business_Credit_Card.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "CA",
+    "card_type": "Credit Card",
+    "category": "Business",
+    "fee": "$50 annual fee2",
+    "welcome_bonus": "Earn 5 points for every $1 in eligible Card purchases at hotels participating in Marriott Bonvoy®.6 Slide 1 of 4Currently Selected SlideSlide 2 of 4Slide 3 of 4Slide 4 of 4 All Benefits - Earn Marriott Bonvoy points on everything",
+    "earn_rates": [
+      {
+        "rate": "5x",
+        "category": "Per $1 on Marriott Purchases"
+      },
+      {
+        "rate": "3x",
+        "category": "Per $1 in Card purchases"
+      },
+      {
+        "rate": "2x",
+        "category": "per $1 on everything else"
+      }
+    ],
+    "benefits": [
+      "Item 1 of 4",
+      "Slide 1 of 4Currently Selected SlideSlide 2 of 4Slide 3 of 4Slide 4 of 4",
+      "All Benefits",
+      "Earn Marriott Bonvoy points on everything",
+      "Discover a full suite of business solutions",
+      "Business coverage",
+      "Your Card can help keep your business protected, so you can focus on what matters most.",
+      "Travel coverage",
+      "Road trip or flight, you could be protected when you book travel with your Card.",
+      "Purchase coverage",
+      "Get to know how your Card can help protect your business purchases.",
+      "Say hello to Amex ExperiencesTM",
+      "Open the door to memorable experiences we think you’ll love.",
+      "World-class service",
+      "Customer service that always has your back – anytime, anywhere."
+    ]
+  }
+]

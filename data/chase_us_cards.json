@@ -1,0 +1,1434 @@
+[
+  {
+    "name": "Chase Sapphire Preferred Credit Card",
+    "slug": "sapphire-preferred",
+    "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$95",
+    "interest_rate": "19.24% - 27.49% variable APR",
+    "welcome_bonus": "Earn 75,000 bonus points after you spend $5,000 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "5X",
+        "category": "Chase Travel"
+      },
+      {
+        "rate": "3X",
+        "category": "dining"
+      },
+      {
+        "rate": "5X",
+        "category": "travel purchased through Chase Travel SM , excluding hotel purchases that qualify for the $50 Annual Chase Travel Hotel Credit."
+      },
+      {
+        "rate": "3X",
+        "category": "dining, including eligible delivery services, takeout and dining out."
+      },
+      {
+        "rate": "2X",
+        "category": "other travel purchases."
+      },
+      {
+        "rate": "3X",
+        "category": "online grocery purchases (excluding Target,"
+      },
+      {
+        "rate": "3X",
+        "category": "select streaming services."
+      },
+      {
+        "rate": "5X",
+        "category": "Lyft rides Earn 5x total points on Lyft rides with your Chase Sapphire Preferred card through September 30, 2027."
+      },
+      {
+        "rate": "5X",
+        "category": "Peloton equipment Earn 5x total points on eligible Peloton equipment and accessory purchases"
+      }
+    ],
+    "benefits": [
+      "DashPass benefits Get a complimentary DashPass membership, a $120 value for 12 months",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Trip Cancellation and Interruption Insurance If your trip is cancel",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 5 days for essential purcha",
+      "Trip Delay Reimbursement If your common carrier travel is delayed more than 12 hours or re",
+      "Auto Rental Coverage Decline the rental company's collision insurance and charge the entir",
+      "Travel and Emergency Assistance If you run into a problem while traveling away from home, this benefit provides legal and medical referrals and access to other travel and emergency assistance services",
+      "No foreign transaction fees † Opens drawer that reveals additional conte",
+      "$5,000 on purchases in the first 3 months from account opening. * At A Glance Premium dining &amp; travel rewards Earn 5x total points on travel purchased through Chase Travel SM , excluding hotel pur"
+    ]
+  },
+  {
+    "name": "Chase Sapphire Reserve Credit Card",
+    "slug": "sapphire-reserve",
+    "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$795",
+    "interest_rate": "19.49% - 27.99% variable APR",
+    "welcome_bonus": "Earn 125,000 points after you spend $6,000 in purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "8X",
+        "category": "all purchases through Chase Travel, including The Edit SM"
+      },
+      {
+        "rate": "4X",
+        "category": "flights booked direct"
+      },
+      {
+        "rate": "4X",
+        "category": "hotels booked direct"
+      },
+      {
+        "rate": "3X",
+        "category": "dining worldwide"
+      },
+      {
+        "rate": "1X",
+        "category": "all other purchases"
+      },
+      {
+        "rate": "5X",
+        "category": "Lyft rides through 9/30/2027."
+      },
+      {
+        "rate": "10X",
+        "category": "eligible Peloton equipment and accessory purchases"
+      }
+    ],
+    "benefits": [
+      "DashPass Membership Complimentary DashPass membership, a $120 value for 12 months",
+      "Zero liability protection You won't be held responsible for unauthorized c",
+      "Purchase Protection: These benefits are available when you use your card",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Trip Cancellation and Interruption Insurance If your trip is cancel",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 5 days for essential purcha",
+      "Trip Delay Reimbursement If your common carrier travel is delayed more than 6 hours or req",
+      "Auto Rental Coverage Decline the rental company's collision insurance and charge the entire",
+      "Travel and Emergency Assistance If you run into a problem while traveling away from home, this benefit provides legal and medical referrals and access to other travel and emergency assistance services",
+      "Global Entry, TSA PreCheck ® , or NEXUS fee credit Receive one statement credit of up to $12",
+      "Priority Pass TM airport lounges worldwide with up to two guests - valued at over $850 whe",
+      "No foreign transaction fees † Spend anywhere in the world with no foreig",
+      "$300 annual travel credit Get the most flexible travel credit compared to any other card, with up to $3",
+      "Platinum Elite Status Get complimentary IHG One Rewards Platinum Elite Status with your Sapphire Rese",
+      "$6,000 in purchases in the first 3 months from account opening * $2,500 value of 125,000 points for select flights and hotels through Chase Travel SM * + $3,000 in annual value through travel and life"
+    ]
+  },
+  {
+    "name": "Chase Freedom Unlimited Credit Card",
+    "slug": "freedom-unlimited",
+    "url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "0% intro for 15 months, then 18.24% - 27.74% variable",
+    "welcome_bonus": "Earn a $200 bonus after you spend $500 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "1.5%",
+        "category": "is just the beginning Earn unlimited 1.5% cash back or more on all purchases"
+      },
+      {
+        "rate": "3%",
+        "category": "dining and drugstores"
+      },
+      {
+        "rate": "5%",
+        "category": "travel purchased through Chase Travel SM"
+      }
+    ],
+    "benefits": [
+      "DashPass– a membership for both DoorDash and Caviar – which unlocks $0 delivery fees and lower service fees on eligible orders",
+      "2% Cash Back on Lyft Rides Earn 2% total cash back on Lyft rides with your Freedom Unlimited card through September 30, 2027",
+      "Zero Liability Protection Means you won't be held responsible for unauthor",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Trip Cancellation and Interruption Insurance You can be reimbursed",
+      "Auto Rental Coverage Decline the rental company's collision insurance and charge the entire",
+      "Travel and Emergency Assistance If you run into a problem while traveling away from home, this benefit provides legal and medical referrals and access to other travel and emergency assistance services",
+      "No Foreign Transaction Fees Opens Category Page in the same window 0% In"
+    ]
+  },
+  {
+    "name": "Chase Freedom Flex Credit Card",
+    "slug": "freedom-flex",
+    "url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "Earn a $200 bonus after you spend $500 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "5%",
+        "category": "up to $1,500 on combined purchases in bonus categories each quarter you activate. Plus, earn 5% cash back on travel purchased through Chase Travel SM "
+      },
+      {
+        "rate": "3%",
+        "category": "dining including takeout and drug stores,"
+      },
+      {
+        "rate": "1%",
+        "category": "all other purchases"
+      },
+      {
+        "rate": "5%",
+        "category": "up to $1"
+      },
+      {
+        "rate": "5%",
+        "category": "travel purchased through Chase Travel SM"
+      },
+      {
+        "rate": "5%",
+        "category": "different categories like gas stations, grocery stores (excluding Target ® and Walmart ® )"
+      }
+    ],
+    "benefits": [
+      "DashPass: When the membership is activated for the first time between 02/01/2025 and 12/31/2027, your Chase Freedom Flex accoun",
+      "2% Cash Back Offer on Lyft Purchases: You’ll earn 2% cash back total on qualifying Lyft products and services purchased through the Lyft mobile application through 09/30/2027",
+      "Zero Liability: Zero Liability Protection does not apply to use of an acc",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "car rentals, vehicle service centers, miscellaneous fees, and other Lyft products and serv",
+      "Travel and Emergency Assistance If you run into a problem while traveling away from home, this benefit provides legal and medical referrals and access to other travel and emergency assistance services",
+      "No Foreign Transaction Fees Opens Category Page in the same window",
+      "5% cash back on up to $1,500 on combined purchases in bonus categories each quarter you activate"
+    ]
+  },
+  {
+    "name": "Chase Freedom Rise Credit Card",
+    "slug": "freedom-rise",
+    "url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "1.5%",
+        "category": "all purchases. Cash Back rewards do not expire as long as your account is open."
+      },
+      {
+        "rate": "2%",
+        "category": "Lyft Rides Earn 2% total cash back on Lyft rides with your Freedom Rise card through September 30, 2027. That's .5% cash back in addition to the 1.5% "
+      },
+      {
+        "rate": "1.5%",
+        "category": "Chase Freedom Rise, you can establish credit and earn 1.5% cash back on all purchases. Cash Back rewards do not expire as long as your account is open"
+      }
+    ],
+    "benefits": [
+      "DashPass: When the membership is activated for the first time between 02/01/2025 and 12/31/2027, your Chase Freedom Rise accoun",
+      "2% Cash Back Offer on Lyft Purchases: You’ll earn 2% cash back total on qualifying Lyft products and services purchased through the Lyft mobile application through 09/30/2027",
+      "Zero Liability: Zero Liability Protection does not apply to use of an acc",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Trip Cancellation and Interruption Insurance You can be reimbursed",
+      "car rentals, vehicle service centers, miscellaneous fees, and other Lyft products and serv",
+      "No Foreign Transaction Fees Opens Category Page in the same window",
+      "$25 Statement Credit After You Set Up Automatic Payments In The First 3 Months From Account Opening:"
+    ]
+  },
+  {
+    "name": "Chase Slate Credit Card",
+    "slug": "slate-edge",
+    "url": "https://creditcards.chase.com/balance-transfer-credit-cards/slate?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "0% intro for 21 months, then 18.24% - 28.24% variable",
+    "benefits": [
+      "DashPass – a membership for both DoorDash and Caviar – which unlocks $0 delivery fees and lower service fees on eligible orders",
+      "Zero Liability Protection * $0 annual fee † New Cardmember Offer Enjoy 0",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Auto Rental Coverage Decline the rental company's collision insurance and charge the entire",
+      "No Foreign Transaction Fees Opens Category Page in the same window 0% In"
+    ]
+  },
+  {
+    "name": "The New United Club Card",
+    "slug": "united-club-infinite",
+    "url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$695",
+    "welcome_bonus": "Earn 90,000 bonus miles after you spend $5,000 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "9X miles",
+        "category": "all purchases"
+      },
+      {
+        "rate": "9X miles",
+        "category": "United flights -"
+      },
+      {
+        "rate": "5X miles",
+        "category": "fare from United as a MileagePlus member, plus"
+      },
+      {
+        "rate": "4X miles",
+        "category": "entire United purchase with the United Club Card. Premier ® members earn even more."
+      },
+      {
+        "rate": "4X miles",
+        "category": "all other eligible United purchases."
+      },
+      {
+        "rate": "5X miles",
+        "category": "hotel stays when you prepay directly through Renowned Hotels and Resorts for United ® Cardmembers."
+      },
+      {
+        "rate": "2X miles",
+        "category": "all other travel including airfare, trains, local transit, cruise lines, hotels, car rentals, taxicabs, resorts, ride share services and tolls."
+      },
+      {
+        "rate": "2X miles",
+        "category": "dining including eligible delivery services."
+      },
+      {
+        "rate": "1X miles",
+        "category": "all other purchases."
+      },
+      {
+        "rate": "1 mile/$1",
+        "category": "each purchase) in the following rewards categories: dining at restaurants including takeout and eligible delivery services; travel (excluding United p"
+      }
+    ],
+    "benefits": [
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Trip Cancellation and Interruption Insurance If your trip is cancel",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "Trip Delay Reimbursement If your common carrier travel is delayed more than 12 hours or re",
+      "car rentals, taxicabs, resorts, ride share services and tolls",
+      "Global Entry or TSA PreCheck ® or NEXUS Application Fee Statement Credit: You will receive",
+      "free checked bags, Premier Access travel services, and over $875 in annual partner credits",
+      "priority boarding and priority baggage handling",
+      "free nights and elite points that never expire)",
+      "No foreign transaction fees Purchases made with your Club Card outside t",
+      "Premier status with 1,500 Card Bonus Premier qualifying points (PQP) each year",
+      "United Club access if they accompany the primary Cardmember and qualify as an eligible guest per t"
+    ]
+  },
+  {
+    "name": "Southwest Rapid Rewards Plus Credit Card",
+    "slug": "southwest-rapid-rewards-plus",
+    "url": "https://creditcards.chase.com/travel-credit-cards/southwest/plus?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$99",
+    "interest_rate": "19.24% - 27.74% variable APR",
+    "welcome_bonus": "20,000 bonus points after you spend $3,000 in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "2X",
+        "category": "Southwest Airlines purchases and on first $5,000 in combined purchases at gas stations and grocery stores per year"
+      },
+      {
+        "rate": "1X",
+        "category": "all other purchases"
+      },
+      {
+        "rate": "2X",
+        "category": "Southwest Airlines ® purchases."
+      },
+      {
+        "rate": "25%",
+        "category": "inflight purchases"
+      }
+    ],
+    "benefits": [
+      "DashPass, membership for both DoorDash and Caviar, that provides unlimited deliveries with $0 delivery fees and lower service fe",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Baggage Delay Insurance​​​​‌ Reimburses you up to $100 a day for up to 3 days for essential p",
+      "car rentals, gift cards, access to exclusive events, and merchandise",
+      "First checked bag free",
+      "Companion Pass ® through 2/28/27 * 2X points on Southwest Airlines purchases and on first $",
+      "3,000 anniversary points each year",
+      "No foreign transaction fees",
+      "$5,000 in combined purchases at gas stations and grocery stores per year * 1X points on all other purchases * New Cardmember Offer Earn Companion Pass ® through 2/28/27 and 20,000 bonus points after y"
+    ]
+  },
+  {
+    "name": "Southwest Rapid Rewards Priority Credit Card",
+    "slug": "southwest-rapid-rewards-priority",
+    "url": "https://creditcards.chase.com/travel-credit-cards/southwest/priority?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$229",
+    "welcome_bonus": "40,000 bonus points after you spend $5,000 in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "4X",
+        "category": "Southwest Airlines purchases"
+      },
+      {
+        "rate": "2X",
+        "category": "gas stations and restaurants"
+      },
+      {
+        "rate": "4X",
+        "category": "Southwest Airlines ® purchases"
+      },
+      {
+        "rate": "25%",
+        "category": "inflight purchases"
+      }
+    ],
+    "benefits": [
+      "DashPass: When the membership is activated for the first time with a Southwest Rapid Rewards ® Priority Credit Card between 02",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "First checked bag free",
+      "Companion Pass ® through 2/28/27 * 4X points on Southwest Airlines p",
+      "7,500 anniversary points each year",
+      "No foreign transaction fees",
+      "$5,000 in the first 3 months from account opening. * AT A GLANCE First checked bag free. * 7,500 anniversary points each year. * Plus, earn 4X points on Southwest Airlines ® purchases and 2X points at"
+    ]
+  },
+  {
+    "name": "Southwest Rapid Rewards Premier Credit Card",
+    "slug": "southwest-rapid-rewards-premier",
+    "url": "https://creditcards.chase.com/travel-credit-cards/southwest/premier?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$149",
+    "interest_rate": "19.24% - 27.74% variable APR",
+    "welcome_bonus": "30,000 bonus points after you spend $4,000 in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "3X",
+        "category": "Southwest Airlines purchases"
+      },
+      {
+        "rate": "2X",
+        "category": "first $8,000 in combined purchases at grocery stores and restaurants per year"
+      },
+      {
+        "rate": "3X",
+        "category": "Southwest Airlines ® purchases."
+      },
+      {
+        "rate": "25%",
+        "category": "inflight purchases"
+      }
+    ],
+    "benefits": [
+      "DashPass, membership for both DoorDash and Caviar, that provides unlimited deliveries with $0 delivery fees and lower service fe",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "First checked bag free",
+      "Companion Pass ® through 2/28/27 * 3X points on Southwest Airlines purchases * 2X points",
+      "6,000 anniversary points each year",
+      "No foreign transaction fees",
+      "$8,000 in combined purchases at grocery stores and restaurants per year * New Cardmember Offer Earn Companion Pass ® through 2/28/27 and 30,000 bonus points strikethrough after you spend $4,000 in the"
+    ]
+  },
+  {
+    "name": "IHG One Rewards Premier Credit Card",
+    "slug": "ihg-premier",
+    "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$99",
+    "welcome_bonus": "Earn 175,000 Bonus Points after you spend $5,000 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "26X",
+        "category": "IHG"
+      },
+      {
+        "rate": "5X",
+        "category": "gas and dining"
+      },
+      {
+        "rate": "26X",
+        "category": "IHG ® Hotels and Resorts That's 10X points with this card."
+      },
+      {
+        "rate": "5X",
+        "category": "travel, dining, and at gas stations."
+      },
+      {
+        "rate": "3X",
+        "category": "all other purchases."
+      }
+    ],
+    "benefits": [
+      "DashPass, membership for both DoorDash and Caviar, that provides unlimited deliveries with $0 delivery fees and lower service fe",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "Global Entry, TSA PreCheck ® or NEXUS Statement Credit Receive a statement credit of up to",
+      "FREE NIGHT Anniversary Free Night Earned each account anniversary year with a curren",
+      "No foreign transaction fees † Opens drawer that reveals additional co",
+      "$100 STATEMENT CREDIT Earn $100 &amp; 10,000 bonus points Earn a $100 statement credit and 10,0",
+      "Platinum Elite Status, a benefit of this card"
+    ]
+  },
+  {
+    "name": "IHG One Rewards Traveler Credit Card",
+    "slug": "ihg-traveler",
+    "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/traveler?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "19.24% - 27.74% variable APR",
+    "earn_rates": [
+      {
+        "rate": "17X",
+        "category": "IHG"
+      },
+      {
+        "rate": "3X",
+        "category": "gas and dining"
+      },
+      {
+        "rate": "3X",
+        "category": "purchases, except at IHG Hotels &amp; Resorts, in the first 6 months from account opening on up to $10,000 spent."
+      },
+      {
+        "rate": "17X",
+        "category": "IHG ® Hotels and Resorts That's 5X points with this card."
+      },
+      {
+        "rate": "3X",
+        "category": "eligible purchases Earn 3X total points on dining, utilities, select streaming services, and at gas stations."
+      },
+      {
+        "rate": "2X",
+        "category": "all other purchases."
+      }
+    ],
+    "benefits": [
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Trip Cancellation and Interruption Insurance If your trip is cancel",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "FREE NIGHTS Redeem 3 nights, get 4th night free when you redeem points for a consecutive f",
+      "No foreign transaction fees † Opens drawer that reveals additional conte",
+      "Silver Elite Status, a benefit of this card"
+    ],
+    "welcome_bonus": "Earn 10,000 bonus points after you spend $10,000 each calendar year. * FREE NIGHTS Redeem 3 nights, get 4th night free when you redeem points for a consecutive four-night IHG ® hotel stay, you can receive a fourth Reward Night free redeemable at that same hotel during that same stay. * Explore Additional Benefits IHG One Rewards Program Exclusives Opens drawer that reveals additional content Gold Elite Status Each calendar year you make purchases totaling $20,000 or more, you, as the primary car"
+  },
+  {
+    "name": "Marriott Bonvoy Bold",
+    "slug": "marriott-bonvoy-bold",
+    "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "19.24% - 27.74% variable APR",
+    "earn_rates": [
+      {
+        "rate": "14X",
+        "category": "hotels participating in Marriott Bonvoy ®"
+      },
+      {
+        "rate": "2X",
+        "category": "select categories"
+      },
+      {
+        "rate": "14X",
+        "category": "Marriott Earn 3X points for every $1 spent at over 7,000 hotels participating in Marriott Bonvoy ® with the Marriott Bonvoy Bold ® Credit Card."
+      }
+    ],
+    "benefits": [
+      "DashPass, membership for both DoorDash and Caviar, that provides unlimited deliveries with $0 delivery fees and lower service fe",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 5 days for essential purcha",
+      "Trip Delay Reimbursement If your common carrier travel is delayed more than 12 hours or re",
+      "No foreign transaction fees † Opens drawer that reveals additional conte",
+      "Silver Elite Status and 5 Elite Night Credits towards the next level of Marriott Bonvoy ® Elite St"
+    ],
+    "welcome_bonus": "30,000 Bonus Points after spending $1,000 on eligible purchases within 3 months"
+  },
+  {
+    "name": "Marriott Bonvoy Boundless",
+    "slug": "marriott-bonvoy-boundless",
+    "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$95",
+    "interest_rate": "19.24% - 27.74% variable APR",
+    "earn_rates": [
+      {
+        "rate": "17X",
+        "category": "hotels participating in Marriott Bonvoy ®"
+      },
+      {
+        "rate": "17X",
+        "category": "Marriott Earn 6X points for every $1 spent at over 7,000 hotels participating in Marriott Bonvoy ® with the Marriott Bonvoy Boundless ® credit card."
+      }
+    ],
+    "benefits": [
+      "DashPass, membership for both DoorDash and Caviar, that provides unlimited deliveries with $0 delivery fees and lower service fe",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 5 days for essential purcha",
+      "Trip Delay Reimbursement If your common carrier travel is delayed more than 12 hours or re",
+      "Free Night Awards * $100 in airline credits * up to 17X total points at hotels participa",
+      "No foreign transaction fees † Opens drawer that reveals additional conte",
+      "$50 statement credit after spending $250 or more between July 1 and Dec",
+      "Silver Elite Status, * and 15 Elite Night Credits towards the next level of Marriott Bonvoy ® Eli"
+    ],
+    "welcome_bonus": "Earn 3 Free Night Awards after spending $3,000 on eligible purchases within 3 months"
+  },
+  {
+    "name": "Amazon Credit Card - Retail and Store Credit Cards",
+    "slug": "amazon-prime-rewards",
+    "url": "https://creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "18.74% - 27.49% variable APR",
+    "earn_rates": [
+      {
+        "rate": "5%",
+        "category": "Amazon.com and on Chase Travel purchases"
+      },
+      {
+        "rate": "2%",
+        "category": "gas stations, restaurants, and on local transit"
+      },
+      {
+        "rate": "1%",
+        "category": "all other purchases"
+      },
+      {
+        "rate": "5%",
+        "category": "Amazon.com, Amazon Fresh, Whole Foods Market, and on Chase Travel purchases with an eligible Prime membership, unlimited 2% back at gas stations, rest"
+      }
+    ],
+    "benefits": [
+      "Zero Liability Protection Zero Liability means you won't be held responsib",
+      "Purchase Protection Opens drawer that reveals additional content You're covered with built-in benefits Guide to Benefit",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "Auto Rental Coverage Decline the rental company's collision insurance and charge the entire",
+      "No foreign transaction fees † Opens drawer that reveals additional conte"
+    ]
+  },
+  {
+    "name": "Amazon Credit Card - Retail and Store Credit Cards",
+    "slug": "amazon-rewards",
+    "url": "https://creditcards.chase.com/cash-back-credit-cards/amazon-rewards?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "18.74% - 27.49% variable APR",
+    "earn_rates": [
+      {
+        "rate": "3%",
+        "category": "Amazon.com and on Chase Travel purchases"
+      },
+      {
+        "rate": "2%",
+        "category": "gas stations, restaurants, and on local transit"
+      },
+      {
+        "rate": "1%",
+        "category": "all other purchases"
+      },
+      {
+        "rate": "3%",
+        "category": "Amazon.com, Amazon Fresh, Whole Foods Market, and on Chase Travel purchases, unlimited 2% back at gas stations, restaurants, and on local transit and "
+      }
+    ],
+    "benefits": [
+      "Zero Liability Protection Zero Liability means you won't be held responsib",
+      "Purchase Protection Opens drawer that reveals additional content You're covered with built-in benefits Guide to Benefit",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "Auto Rental Coverage Decline the rental company's collision insurance and charge the entire",
+      "No foreign transaction fees † Opens drawer that reveals additional conte"
+    ]
+  },
+  {
+    "name": "Disney Premier Card from Chase",
+    "slug": "disney-premier",
+    "url": "https://creditcards.chase.com/rewards-credit-cards/disney/premier?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$49",
+    "earn_rates": [
+      {
+        "rate": "5%",
+        "category": "card purchases made directly at DisneyPlus.com, Hulu.com or Plus.ESPN.com."
+      },
+      {
+        "rate": "4%",
+        "category": "top of the standard"
+      },
+      {
+        "rate": "1%",
+        "category": "top of the standard"
+      }
+    ],
+    "benefits": [
+      "DashPass: When the membership is activated for the first time with a Disney ® Premier Visa ® Card between 02/01/2025 and 12/3",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "No Foreign Transaction Fees Opens Category Page in the same window",
+      "$100 Statement Credit * 5% in Disney Rewards Dollars * NEW CAR"
+    ],
+    "welcome_bonus": "Get a $200 Disney Gift Card eGift to use today upon approval + earn a $100 statement credit after you spend $500 on purchases in the first 3 months"
+  },
+  {
+    "name": "Disney Card from Chase",
+    "slug": "disney-rewards",
+    "url": "https://creditcards.chase.com/rewards-credit-cards/disney/rewards?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "18.24% - 27.74% variable APR",
+    "benefits": [
+      "DashPass, membership for both DoorDash and Caviar, that provides unlimited deliveries with $0 delivery fees and lower service fe",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "No Foreign Transaction Fees Opens Category Page in the same window 0% In",
+      "$50 Statement Credit * 1% in Disney Rewards Dollars * New Cardmember Offer $150 Offer Get a $100 D"
+    ],
+    "welcome_bonus": "Get a $100 Disney Gift Card eGift to use today upon approval + earn a $50 statement credit after you spend $500 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "1%",
+        "category": "all your card purchases."
+      },
+      {
+        "rate": "1%",
+        "category": "all card purchases with no limits to the amount you can earn."
+      }
+    ]
+  },
+  {
+    "name": "Disney Inspire Card from Chase",
+    "slug": "disney-inspire",
+    "url": "https://creditcards.chase.com/rewards-credit-cards/disney/inspire?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$149",
+    "interest_rate": "18.24% - 27.74% variable APR",
+    "benefits": [
+      "DashPass, membership for both DoorDash and Caviar, that provides unlimited deliveries with $0 delivery fees and lower service fe",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "no foreign transaction fees for any transactions made in a currency othe",
+      "$300 Statement Credit * 10% in Disney Rewards Dollars * New Cardmember Offer $600 Offer Get a $300"
+    ],
+    "welcome_bonus": "Get a $300 Disney Gift Card eGift to use today upon approval + earn a $300 statement credit after you spend $1,000 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "10%",
+        "category": "purchases made directly at DisneyPlus.com, Hulu.com or Plus.ESPN.com. They also earn"
+      }
+    ]
+  },
+  {
+    "name": "Credit Cards - Compare Credit Card Offers and Apply Online",
+    "slug": "aarp",
+    "url": "https://creditcards.chase.com/cash-back-credit-cards/aarp?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$95",
+    "earn_rates": [
+      {
+        "rate": "3X",
+        "category": "dining"
+      },
+      {
+        "rate": "2X",
+        "category": "travel $95 Annual Fee Apply Now Opens Chase Sapphire Preferred(Registered Trademark) credit card application in new window See details Opens Chase Sap"
+      },
+      {
+        "rate": "1.5%",
+        "category": "or more on all purchases No Annual Fee Apply Now Opens Chase Freedom Unlimited (Registered Trademark) credit card application in new window See detail"
+      },
+      {
+        "rate": "5%",
+        "category": "quarterly bonus categories (spend limits apply, must activate quarterly) No Annual Fee Apply Now Opens Chase Freedom Flex(R) Credit Card application i"
+      }
+    ],
+    "benefits": [
+      "First checked bag free $99 Annual Fee Apply Now Opens Southwest Rapid Rewards(R) Plus Credit Card",
+      "Companion Pass​​​​‌ ® and 20,000 bonus points First checked bag free $99 Annual Fee Apply Now",
+      "Free Night Awards Earn up to 17X total points at 7,000+ hotels worldwide $95 Annual Fee Ap",
+      "No Foreign Transaction Fee Opens Category Page in the same window 0% Int",
+      "$95 Annual Fee Apply Now Opens Chase Sapphire Preferred(Registered Trademark) credit card application in new window See details Opens Chase Sapphire Preferred(Registered Trademark) credit card product"
+    ]
+  },
+  {
+    "name": "Chase Ink Business Preferred Credit Card",
+    "slug": "ink-business-preferred",
+    "url": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$95",
+    "interest_rate": "19.49% - 25.49% variable APR",
+    "welcome_bonus": "100,000 bonus points after you spend $8,000 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "3X",
+        "category": "select business categories."
+      },
+      {
+        "rate": "5X",
+        "category": "Lyft Rides Earn a total of 5x points on Lyft rides through September 30, 2027 with your Chase Ink Preferred card."
+      }
+    ],
+    "benefits": [
+      "DashPass Whether you're in need of a team lunch or office supplies, get complimentary access to DashPass with your Chase Ink Bus",
+      "No foreign transaction fees † Opens overlay 1:1 point transfer Opens ove"
+    ]
+  },
+  {
+    "name": "Ink Business Cash Credit Card",
+    "slug": "ink-business-cash",
+    "url": "https://creditcards.chase.com/business-credit-cards/ink/cash?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "5%",
+        "category": "the first $25,000 spent in combined purchases at office supply stores and on internet, cable and phone services each account anniversary year."
+      },
+      {
+        "rate": "1%",
+        "category": "all other purchases–with no limit to the amount you can earn."
+      },
+      {
+        "rate": "5%",
+        "category": "Lyft rides Earn a total of 5% cash back on Lyft rides through September 30, 2027 with your Chase Ink Cash card."
+      },
+      {
+        "rate": "5%",
+        "category": "office supply stores and on internet, cable and phone services each account anniversary year"
+      },
+      {
+        "rate": "2%",
+        "category": "gas stations and restaurants each account anniversary year"
+      }
+    ],
+    "benefits": [
+      "5% cash back on Lyft rides Earn a total of 5% cash back on Lyft rides through September 30, 2027 with your Chase Ink Cash card",
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "car rentals, vehicle service centers, miscellaneous fees and other Lyft products and servi",
+      "Travel and Emergency Assistance If you run into a problem while traveling away from home, this benefit provides legal and medical referrals and access to other travel and emergency assistance services",
+      "No Foreign Transaction Fees Opens Category Page in the same window"
+    ],
+    "welcome_bonus": "$750 Cash Back After You Spend $6,000 On Purchases In The First 3 Months"
+  },
+  {
+    "name": "Ink Business Unlimited Credit Card",
+    "slug": "ink-business-unlimited",
+    "url": "https://creditcards.chase.com/business-credit-cards/ink/unlimited?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "0% intro for 12 months, then 16.74% - 24.74% variable",
+    "earn_rates": [
+      {
+        "rate": "1.5%",
+        "category": "rewards on every purchase made for your business"
+      },
+      {
+        "rate": "5%",
+        "category": "Lyft rides Earn a total of 5% cash back on Lyft rides through September 30"
+      }
+    ],
+    "benefits": [
+      "5% cash back on Lyft rides Earn a total of 5% cash back on Lyft rides through September 30, 2027 with your Chase Ink Unlimited card",
+      "No Foreign Transaction Fees Opens Category Page in the same window 0% In"
+    ],
+    "welcome_bonus": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months"
+  },
+  {
+    "name": "Ink Business Premier(R) Credit Card",
+    "slug": "ink-premier",
+    "url": "https://creditcards.chase.com/business-credit-cards/ink/premier?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$195",
+    "earn_rates": [
+      {
+        "rate": "2.5%",
+        "category": "every purchase of $5,000 or more and 2% cash back on all other business purchases."
+      },
+      {
+        "rate": "2%",
+        "category": "all other business purchases."
+      },
+      {
+        "rate": "2.5%",
+        "category": "large purchases Earn a total of 2.5% cash back on every purchase of $5"
+      }
+    ],
+    "benefits": [
+      "Purchase Protection, * personalized Account Alerts, * and more",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Auto Rental Coverage Decline the rental company's collision insurance and charge the entir",
+      "Travel and Emergency Assistance If you run into a problem while traveling away from home, this benefit provides legal and medical referrals and access to other travel and emergency assistance services",
+      "No Foreign Transaction Fees Opens Category Page in the same window"
+    ],
+    "welcome_bonus": "$1,000 Cash Back After You Spend $10,000 On Purchases In The First 3 Months"
+  },
+  {
+    "name": "United Business Credit Card",
+    "slug": "united-business",
+    "url": "https://creditcards.chase.com/business-credit-cards/united/united-business-card?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$150",
+    "earn_rates": [
+      {
+        "rate": "7X miles",
+        "category": "United flights -"
+      },
+      {
+        "rate": "5X miles",
+        "category": "fare from United as a MileagePlus member, plus"
+      },
+      {
+        "rate": "2X miles",
+        "category": "entire United purchase with the United Business Card."
+      },
+      {
+        "rate": "2X miles",
+        "category": "all other eligible United purchases."
+      },
+      {
+        "rate": "2X miles",
+        "category": "dining including eligible delivery services."
+      },
+      {
+        "rate": "2X miles",
+        "category": "local transit including ride share services, taxicabs, train tickets, tolls and mass transit."
+      },
+      {
+        "rate": "1X miles",
+        "category": "all other purchases"
+      },
+      {
+        "rate": "1 mile/$1",
+        "category": "each purchase) on airline tickets purchased from United, and on the following purchases made from United: seat upgrades; Economy Plus ® ; inflight foo"
+      },
+      {
+        "rate": "25%",
+        "category": "United inflight and Club premium drink purchases"
+      },
+      {
+        "rate": "25%",
+        "category": "food, beverage and Wi-Fi purchases on board United and United Express-operated flights and United Club premium drink purchases: You will receive 25% b"
+      }
+    ],
+    "benefits": [
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Trip Cancellation and Interruption Insurance You can be reimbursed",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "Trip Delay Reimbursement If your common carrier travel is delayed more than 12 hours or re",
+      "car rental directly through cars",
+      "first checked bag, and over $600 in annual partner credits",
+      "Priority boarding - the primary Cardmember and companions on the same reserv",
+      "No foreign transaction fees Purchases made with your United Business Car",
+      "$25 Statement Credit for FareLock Purchases: Earn up to a $25 statement credit when your card is us",
+      "Premier status"
+    ],
+    "welcome_bonus": "100,000 Bonus Miles After You Spend $5,000 On Purchases In The First 3 Months"
+  },
+  {
+    "name": "United Club Business Credit Card",
+    "slug": "united-club-business",
+    "url": "https://creditcards.chase.com/business-credit-cards/united/united-club-business?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$695",
+    "interest_rate": "19.74% - 28.24% variable APR",
+    "benefits": [
+      "car rentals directly through cars",
+      "No Foreign Transaction Fees Opens Category Page in the same window 0% In"
+    ],
+    "welcome_bonus": "Earn 100,000 bonus miles + 2,000 Premier qualifying points (PQP) after qualifying purchases. * At A Glance United Club SM card membership, Premier Access travel services, and over $925 in annual partner credits. * APR 19.74%–28.24% variable APR. † Annual Fee $695 † Business Card Rewards &amp; Benefits Earn 100,000 bonus miles + 2,000 Premier qualifying points (PQP) after you spend $5,000 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "7X miles",
+        "category": "United flights -"
+      },
+      {
+        "rate": "5X miles",
+        "category": "fare from United as a MileagePlus member, plus"
+      },
+      {
+        "rate": "2X miles",
+        "category": "entire United purchase with the United Club Business Card."
+      },
+      {
+        "rate": "2X miles",
+        "category": "all other eligible United purchases."
+      },
+      {
+        "rate": "5X miles",
+        "category": "hotel stays when you prepay directly through Renowned Hotels and Resorts for United ® Cardmembers."
+      },
+      {
+        "rate": "5X miles",
+        "category": "all other purchases"
+      }
+    ]
+  },
+  {
+    "name": "Southwest Rapid Rewards Performance Business Credit Card",
+    "slug": "southwest-performance-business",
+    "url": "https://creditcards.chase.com/business-credit-cards/southwest/performance-business?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$299",
+    "welcome_bonus": "Earn 80,000 points after you spend $5,000 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "25%",
+        "category": "inflight purchases."
+      }
+    ],
+    "benefits": [
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "Global Entry, TSA PreCheck ® or NEXUS fee credit up to $120 every 4 years Receive one sta",
+      "first checked bag",
+      "Companion Pass qualifying points boost each year",
+      "9,000 anniversary points each year Receive 9,000 bonus points each year aft",
+      "No foreign transaction fees † Opens overlay Travel &amp; purc",
+      "$5,000 on purchases in the first 3 months from account opening. * AT A GLANCE Complimentary Preferred seat selection at booking * and Extra Legroom seat upgrades 48 hs. prior to departure, when availa"
+    ]
+  },
+  {
+    "name": "Southwest Rapid Rewards Premier Business Credit Card",
+    "slug": "southwest-premier-business",
+    "url": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$149",
+    "welcome_bonus": "Earn 60,000 points after you spend $3,000 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "25%",
+        "category": "inflight purchases."
+      }
+    ],
+    "benefits": [
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "first checked bag, * select a Standard or Preferred seat within 48 hours prior to departure, whe",
+      "Companion Pass Qualifying Points: Companion Pass ® qualifying points are earned from revenue",
+      "6,000 anniversary points each year",
+      "No foreign transaction fees † Opens overlay Travel &amp; purc",
+      "$3,000 on purchases in the first 3 months from account opening. * AT A GLANCE Free first checked bag, * select a Standard or Preferred seat within 48 hours prior to departure, when available, * and a "
+    ]
+  },
+  {
+    "name": "IHG One Rewards Premier Business Credit Card",
+    "slug": "ihg-business-premier",
+    "url": "https://creditcards.chase.com/business-credit-cards/IHG/business-premier?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$99",
+    "welcome_bonus": "10,000 bonus points after you spend $20,000 each calendar year. * Begins Offer Details Overlay. CLOSE Opens new credit card offers and promotions in the same window Begin Offer Details Content. IHG One Rewards Premier Business Credit Card Offer Details Offers may vary depending on where you apply, for example online or in a branch, and can change over time. To take advantage of this particular offer now, apply through the method provided in this advertisement. Review offer details before you app",
+    "earn_rates": [
+      {
+        "rate": "26X",
+        "category": "IHG ® Hotels and Resorts That's 10X points with this card"
+      },
+      {
+        "rate": "5X",
+        "category": "travel, dining, select business purchases, and at gas stations."
+      },
+      {
+        "rate": "3X",
+        "category": "all other purchases."
+      }
+    ],
+    "benefits": [
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Trip Cancellation and Interruption Insurance If your trip is cancel",
+      "Global Entry or TSA PreCheck ® or NEXUS Application Fee Statement Credit: You will receive",
+      "Free Night Earned each account anniversary year with a current point redemption cap of 4",
+      "No foreign transaction fees † Opens overlay Travel benefits O",
+      "$100 statement credit and 10,000 bonus points after you spend $20,000 each calendar year",
+      "Platinum Elite Status, a benefit of this card * 5X points per dollar Earn 5X"
+    ]
+  },
+  {
+    "name": "Sapphire Reserve for Business Credit Card",
+    "slug": "sapphire-reserve-business",
+    "url": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$795",
+    "welcome_bonus": "Earn 150,000 bonus points after you spend $20,000 on purchases in your first 3 months",
+    "earn_rates": [
+      {
+        "rate": "8X",
+        "category": "all purchases through Chase Travel SM , including The Edit SM"
+      },
+      {
+        "rate": "5X",
+        "category": "Lyft rides through 9/30/27"
+      },
+      {
+        "rate": "4X",
+        "category": "flights &amp; hotels booked direct"
+      },
+      {
+        "rate": "3X",
+        "category": "social media &amp; search engine advertising"
+      },
+      {
+        "rate": "1X",
+        "category": "all other purchases"
+      }
+    ],
+    "benefits": [
+      "DashPass membership Get complimentary DashPass membership, a $120 value for 12 months",
+      "Zero liability protection You won’t be held responsible for unauthorized c",
+      "Purchase Protection: These benefits are available when you use your card",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Trip Cancellation and Interruption Insurance If your trip is cancel",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 5 days for essential purcha",
+      "Trip Delay Reimbursement If your common carrier travel is delayed more than 6 hours or req",
+      "Auto Rental Coverage Decline the rental company’s collision insurance and charge the entire",
+      "emergency, you can call for a tow, battery assistance, tire change, locksmith or gas",
+      "$120 Global Entry or TSA PreCheck ® or NEXUS fee credit Receive one statement credit of up to $",
+      "Priority Pass TM airport lounges worldwide with up to two guests - valued at over $850 whe",
+      "No Foreign Transaction Fees You will pay no foreign transaction fees whe",
+      "$300 annual travel credit You have the freedom to take your business anywhere with the most flexible tra",
+      "Platinum Elite status Get complimentary IHG One Rewards Platinum Elite status with your Sapphire Rese",
+      "$20,000 on purchases in your first 3 months from account opening. * Sapphire Reserve is now even more rewarding with the Sapphire Reserve for Business SM card. $3,000 value of 150,000 points for selec"
+    ]
+  },
+  {
+    "name": "United Explorer Credit Card",
+    "slug": "united-explorer",
+    "url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "Earn 70,000 bonus miles after you spend $3,000 on purchases in the first 3 months",
+    "benefits": [
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Trip Cancellation and Interruption Insurance You can be reimbursed",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "Trip Delay Reimbursement If your common carrier travel is delayed more than 12 hours or re",
+      "car rentals directly through cars",
+      "statement credit for Global Entry, TSA Precheck ® or NEXUS every 4 years as reimbursement for the application f",
+      "first checked bag, 2 United Club SM one-time passes per year, priority boarding and over $500 in",
+      "priority boarding and over $500 in annual partner credits",
+      "No foreign transaction fees Purchases made with your Explorer Card outsi",
+      "Premier status"
+    ],
+    "earn_rates": [
+      {
+        "rate": "2X miles",
+        "category": "United Airlines purchases, dining, and hotel stays"
+      },
+      {
+        "rate": "1X miles",
+        "category": "all other purchases"
+      },
+      {
+        "rate": "7X miles",
+        "category": "United purchases"
+      },
+      {
+        "rate": "7X miles",
+        "category": "United flights -"
+      },
+      {
+        "rate": "5X miles",
+        "category": "fare from United as a MileagePlus member, plus"
+      },
+      {
+        "rate": "2X miles",
+        "category": "entire United purchase with the United Explorer Card. Premier ® members earn even more."
+      },
+      {
+        "rate": "2X miles",
+        "category": "all other eligible United purchases"
+      },
+      {
+        "rate": "2X miles",
+        "category": "hotel stays when booked with the hotel."
+      },
+      {
+        "rate": "2X miles",
+        "category": "dining including eligible delivery services."
+      },
+      {
+        "rate": "1X miles",
+        "category": "all other purchases ."
+      }
+    ]
+  },
+  {
+    "name": "United Quest Card",
+    "slug": "united-quest",
+    "url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$350",
+    "interest_rate": "19.74% - 28.24% variable APR",
+    "benefits": [
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Trip Cancellation and Interruption Insurance You can be reimbursed",
+      "Baggage Delay Insurance Reimburses you up to $100 a day for up to 3 days for essential purcha",
+      "Trip Delay Reimbursement If your common carrier travel is delayed more than 12 hours or re",
+      "car rentals, taxicabs, resorts, ride share services and tolls",
+      "$120 Global Entry, TSA PreCheck ® or NEXUS fee credit Receive a statement credit of up to $120 e",
+      "free checked bags, and priority boarding",
+      "priority boarding",
+      "No foreign transaction fees Purchases made with your Quest Card outside",
+      "Premier status with 1,000 Card Bonus Premier qualifying points (PQP) each year"
+    ],
+    "welcome_bonus": "Earn 80,000 bonus miles * 3x miles on United purchases * 2x all other travel * New Cardmember Offer Earn 80,000 bonus miles + 3,000 Premier qualifying points (PQP) after qualifying purchases. * At A Glance $200 United travel credit, annual 10,000-mile award flight discount, 2 free checked bags, and priority boarding. * APR 19.74%–28.24% variable APR. † Annual Fee $350 † Sign in to apply faster Opens in a new window Apply as a guest Opens in a new window * Offer details Opens offer details overla",
+    "earn_rates": [
+      {
+        "rate": "3X miles",
+        "category": "United purchases"
+      },
+      {
+        "rate": "8X miles",
+        "category": "United purchases"
+      },
+      {
+        "rate": "8X miles",
+        "category": "United flights -"
+      },
+      {
+        "rate": "5X miles",
+        "category": "fare from United as a MileagePlus member, plus"
+      },
+      {
+        "rate": "3X miles",
+        "category": "entire United purchase with the United Quest Card. Premier ® members earn even more."
+      },
+      {
+        "rate": "3X miles",
+        "category": "all other eligible United purchases"
+      },
+      {
+        "rate": "5X miles",
+        "category": "hotel stays when you prepay directly through Renowned Hotels and Resorts for United ® Cardmembers."
+      },
+      {
+        "rate": "2X miles",
+        "category": "all other travel including airfare, trains, local transit, cruise lines, hotels, car rentals, taxicabs, resorts, ride share services and tolls."
+      },
+      {
+        "rate": "2X miles",
+        "category": "dining including eligible delivery services."
+      },
+      {
+        "rate": "2X miles",
+        "category": "select streaming services."
+      }
+    ]
+  },
+  {
+    "name": "United Gateway Card",
+    "slug": "united-gateway",
+    "url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway?iCELL=61FY",
+    "card_image": "",
+    "issuer": "Chase",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "0% intro for 12 months, then 19.74% - 28.24% variable",
+    "welcome_bonus": "Earn 30,000 bonus miles after you spend $1,000 on purchases in the first 3 months",
+    "earn_rates": [
+      {
+        "rate": "2X miles",
+        "category": "United purchases"
+      },
+      {
+        "rate": "7X miles",
+        "category": "United purchases"
+      },
+      {
+        "rate": "7X miles",
+        "category": "United flights -"
+      },
+      {
+        "rate": "5X miles",
+        "category": "fare from United as a MileagePlus member, plus"
+      },
+      {
+        "rate": "2X miles",
+        "category": "entire United purchase with the United Gateway Card. Premier ® members earn even more."
+      },
+      {
+        "rate": "2X miles",
+        "category": "all other eligible United purchases."
+      },
+      {
+        "rate": "2X miles",
+        "category": "local transit and commuting including ride share services, taxicabs, train tickets, tolls, and mass transit."
+      },
+      {
+        "rate": "1X miles",
+        "category": "all other purchases."
+      },
+      {
+        "rate": "25%",
+        "category": "United inflight and Club premium drink purchases,"
+      }
+    ],
+    "benefits": [
+      "Purchase Protection Covers your eligible new purchases for 120 days from the date of purchase against damage or theft u",
+      "Extended Warranty Protection Extends the time period of the manufacturer's U",
+      "Trip Cancellation and Interruption Insurance You can be reimbursed",
+      "car rentals, online shopping, eGift card purchases and by using the MileagePlus X app to p",
+      "no foreign transaction fees on purchases made with your Gateway Card ou"
+    ]
+  }
+]

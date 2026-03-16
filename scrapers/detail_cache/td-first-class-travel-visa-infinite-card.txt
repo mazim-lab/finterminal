@@ -1,259 +1,311 @@
-.cmp-primary-header .td-icon {
+Home / Canadian Credit Cards / TD Travel Credit Cards in Canada / TD First Class Travel® Visa Infinite* Card
 
-position: inherit
+Your region is currently set to
 
-}
+ Ontario. Change province
+TD First Class Travel® Visa Infinite* Card
+Quick Compare
+Special Offer
+Earn up to $1,400 in value18, including up to 165,000 TD Rewards Points1 and receive an annual fee rebate for the first year1. Conditions Apply.
+See product details below
+Annual Fee
+$139
+Interest: Purchases
+21.99%
+Interest: Cash Advances
+22.99%
+Additional Cardholder2
+$50
 
-.aem-body .refine-dialog fieldset label {
-    margin-bottom: 16px !important;
-}
-    
+$50 for the first Additional Cardholder; $0 for subsequent Additional Cardholders.
 
+Get an annual fee rebate every year with a TD All-Inclusive Banking Plan
 
+Secure
+ Apply now
+Eligibility Requirements:
+$60,000 personal or $100,000 household annual income.
+You are a Canadian resident and are of the age of majority in your province/territory of residence
+Don't meet the income requirement? Choose the TD Platinum Travel Visa* Card instead.
+Special Offer
 
+Earn up to $1,400 in value18, including up to 165,000 TD Rewards Points, receive an annual fee rebate for the first year1 and additional travel benefits. Conditions Apply.
 
+Earn a welcome Bonus of 20,000 TD Rewards Points when you make your first Purchase with your Card1.
+Earn 145,000 TD Rewards Points when you spend $7,500 within 180 days of Account opening1.
+Earn a Birthday Bonus of up to 10,000 TD Rewards Points22.
+Get an annual TD Travel Credit23 of $100 when you book at Expedia® For TD.
+Get an annual fee rebate for the first year1.
+Enjoy your time at the airport with global airport lounge access and 4 complimentary lounge visits with Visa Airport Companion Program (a value of up to $285)18.
 
+To receive the first-year annual fee rebate for the Primary Cardholder, you must activate your Card and make your first Purchase on the Account within the first 3 months after Account opening. To receive the Additional Cardholder(s) first-year annual fee rebate, you must add your Additional Cardholder(s) while the offer is in effect.
 
+Offer may be changed, withdrawn, or extended at any time and cannot be combined with any other offer unless otherwise indicated.
 
+At a glance
 
+Earn TD Reward Points on all the things you normally do, whether you use your Card for groceries, dining, paying bills, public transit, streaming services or booking travel. The rewards will add up quickly so you can enhance your travel experience or enjoy a wide variety of rewards.
 
+Your Card also allows you to enjoy:
 
+An annual TD Travel Credit23 of $100 when you book at Expedia® For TD6.
+Take a break at the airport and relax in one of the 1,200+ global lounges before you take off – enjoy your 4 complimentary visits by enrolling now for the Visa Airport Companion Program30.
+TD Rewards Birthday bonus22 to celebrate your special day.
+An extensive suite of travel insurance coverages which helps you travel prepared.
+No travel blackouts5, no seat restrictions5 and no expiry25 for your TD Rewards Points as long as your account is open and in good standing.
+Award winning TD Credit Card
+slide 1 of 2
 
+Chosen as Best Travel Rewards Card by Milesopedia in 2025 #1
 
+Chosen as Best Credit Card for Travel Insurance by Prince of Travel in 2023 #2
 
+Every Purchase Counts
+slide 1 of 4
+Earn 8 TD Rewards Points
 
+for every $1 you spend when you book travel through Expedia® For TD6,19,29
 
+ 
 
+Earn 6 TD Rewards Points
 
+for every $1 you spend on Groceries, Dining, and Public Transit20,29
 
-var site_prefix='https://appointments.td.com/';
-var standal_domain='appointments.td.com';
-var redirect_url='https://www.td.com/ca/en/business-banking/book-appointment/#/appointment-type?type=sbb';
-var integrated_url='https://www.td.com'
+Earn 4 TD Rewards Points
 
+for every $1 you spend on Recurring Bill Payments and Streaming, Digital Gaming & Media28,29
 
+Earn 2 TD Rewards Points
 
+for every $1 you spend on other Purchases made using your Card21,29 plus earn an annual Birthday Bonus22 of up to 10,000 TD Rewards Points
 
+How many TD Rewards Points could I get in the first year?
 
-var isPersonal_URL =true;
-var isMAB_URL = true;
+Move the sliders or use the fields to input the approximate amount of credit Card purchases you currently make each month.
 
+Recurring Bill Payments, Streaming, Digital Gaming & Media, Groceries, Dining and Public Transit (Yearly spend cap of $25,000 each)
+Recurring Bill Payments and Streaming, Digital Gaming & Media (per month)
+1500
+$1
+$25,000
+Groceries, Dining, and Public Transit (per month)
+1500
+$1
+$25,000
+All other purchases (No spend cap)
+Expedia for TD Purchases (per month)
+500
+$1
+$25,000
+Other monthly purchases
+1500
+$1
+$25,000
+ 
 
+You could earn
 
-var isUS_Flow = false;
-var url_language='en_CA';
+429,000
 
+TD Rewards Points in your first year (includes bonus points of 20,000 TD Rewards Points when you make your first Purchase with your Card1 and assumes that you have earned the 145,000 TD Rewards Points when you spend $7,500 within 180 days of Account opening1)†.
 
 
-var timeZoneAPI = '//maps.googleapis.com/maps/api/timezone/json?key=AIzaSyAP_tLv74d3wl_nWjMYum4MQLuupMObA8Q';
+A travel value†† of up to
+$2,145.00
 
+† This calculator is for illustration purposes only and rewards (points or Cash Back Dollars) displayed are only estimates. The actual rewards earned may differ from customer to customer. All reward programs, offers and benefits are subject to terms and conditions and may be modified, canceled, or withdrawn at any time.
 
+†† Total TD Rewards Points and corresponding dollar value equivalent assumes no redemption of TD Rewards Points towards any travel purchases made during the year. Maximum dollar value of TD Rewards Points shown, only applies to TD Rewards Points redeemed for travel purchases charged to your Card and booked through Expedia For TD.
 
-var PartyNameType ='BusinessName';
-var WACustomerCD = 'ALT_CIF 1234';
-var WAOmnitureVisitorCD = 'Omni_Visitor_1235';
-var RequestedUser = 'TDBFG\\OABUser';
-var ENV_VAR = "PROD";
-var ABTestJson = '';
-var extSbbOpenAcctLink = "https://td.com/businessaccountappointment";
-adobe_tag = {};
-    adobe_tag.language = 'ca-en';
-    adobeDataLayer = window.adobeDataLayer || [];
+You could redeem††† your TD Rewards Points towards:
+
+A weeklong luxury car rental
+
+††† TD Rewards Points must be redeemed in minimum 200-point increments for travel purchases charged to your Card that are booked online or by phone through Expedia For TD. You may redeem TD Rewards Points in any other manner that we may allow from time to time (including for Travel Purchases made through a travel agency, supplier or provider that is not Expedia For TD). For more information about how to redeem TD Rewards Points visit td.com/tdrewardspoints.
+
+Redeem your TD Rewards Points how you want, for what you want 
+
+Every Purchase you make with your TD Rewards Credit Card earns you TD Rewards Points. With the flexibility to choose how to redeem your TD Rewards Points for the rewards you want, you can use your TD Rewards Points on travel, everyday perks, cash credits and more. Learn more.
+
+Credit Card Reward Perks
+slide 1 of 3
+
+Use TD Rewards Points at Expedia For TD
+
+Redeem3 your TD Rewards Points for your next trip at ExpediaForTD.com and get access to exclusive deals. Conditions apply.
+
+Earn more at Starbucks
+
+Link your eligible Card to earn 50% more TD Rewards Points and Stars. Redeem points for even more Stars. Conditions apply.
+
+Use TD Rewards Points at Amazon.ca
+
+Redeem3 your TD Rewards Points towards purchases at Amazon.ca with Amazon Shop with Points. Conditions apply.
+
+Enjoy your perks and offers
+ 
+
+Enjoy special offers selected just for you from TD and merchants with your Eligible TD Card.
+
+Learn more
+More Card Benefits and Features
+TD Rewards Program Benefits
 
+TD First Class Travel Credit Card helps you earn big while you do all the things you normally do. And since you never slow down, the rewards can add up quickly. This lets you redeem for how and what you want with the flexibility to treat yourself with a wide variety of rewards options.
 
+Your Points are worth more when you redeem through Expedia® For TD: Search over a million flights, hotels, packages and more! When you’re ready to book, you can redeem3 your TD Rewards Points towards your travel Purchase right away.
+Pay off Purchases: Redeem your points for any of your eligible past purchases on your TD Credit Card in just three clicks. It’s a quick, easy way to get the rewards you want most. Learn More 
+Pay Down Balance: Redeem TD Rewards Points to help pay down your credit card balance.
 
+ 
 
-  let waitForElmToExist = selector => {
+Travel Benefits
 
-    return new Promise(resolve => {
+Explore the travel benefits and insurance coverages included with your Card:
 
-      if (document.querySelector(selector)) {
+$100 TD Travel Credit23
+Each year, you will receive one $100.00 TD Travel Credit on your first Eligible Travel Credit Purchase of $500.00 or more made with Expedia For TD and posted to the Account in a calendar year.
+Enjoy your time at the airport with global lounge access30
+Need a place to relax and recharge before you get on your flight? Your TD First Class Travel Visa Infinite Card lets you access 1,200+ airport lounges worldwide with the Visa Airport Companion Program30. Plus, pre-book your visit at participating airport lounges for extra peace of mind. Enjoy 4 complimentary lounge visits per membership year, as well as airport dining and retail discounts and offers.
+Travel Medical Insurance7
+Up to $2 million of coverage for the first 21 days. If you or your spouse is aged 65 or older, you are covered for the first 4 days of your trip. Additional top-up coverage is available.
+Flight/Trip Delay Insurance8
+Up to $500 in coverage per insured person if your flight/trip is delayed for over 4 hours.
+Trip Cancellation/Trip Interruption Insurance9
+For Trip Cancellation, up to $1,500 of coverage per insured person, with a maximum of $5,000 for all insured persons, and for Trip Interruption, up to $5,000 of coverage per insured person, with a maximum of $25,000 for all insured persons on the same covered trip.
+Common Carrier Travel Accident Insurance10
+Up to $500,000 of coverage for covered losses while travelling on a common carrier (for example, a bus, ferry, plane, train, or auto rental)
+Emergency Travel Assistance Services11
+Help is just a call away. Toll-free access to help in the event of a personal emergency while travelling.
+Delayed and Lost Baggage Insurance8
+Up to $1,000 overall coverage per insured person toward the Purchase of essentials such as clothes and toiletries if your baggage is delayed more than 6 hours or lost.
+Auto Rental Collision/Loss Damage Insurance12
+Coverage up to 48 consecutive days
+Check your TD credit card travel insurance benefits
+Learn about what travel insurance benefits are available on your TD credit card with our Credit Card Travel Insurance Verification Tool.
+Hotel/Motel Burglary Insurance24
+Up to $2,500 of coverage per occurrence for eligible personal items stolen from your hotel or motel room that belong to the Cardholder on the Account and eligible family members travelling with the Cardholder.
+Top-up or Extension of coverage32
+You can purchase extra days of travel medical coverage for a specific trip if you will be away for a longer period of time than what your TD Credit Card covers. Or add an additional coverage amount to your trip cancellation and trip interruption insurance if your trip cost is higher than the coverage offered on your card. Learn more and get a quote.
 
-        return resolve(document.querySelector(selector));
+Review the Benefit Coverages Guide for more details.
 
-      }
+Additional Benefits & Features
+TD Payment Plans
+Easily turn purchases of $100 or more into manageable 6, 12 or 18 month Payment Plans. Conditions apply. Learn more.
+Save with Avis Rent A Car and Budget Rent A Car
+Use your Canadian TD Credit Card to save a minimum of 10% off the lowest available base rates13,14 in Canada and the U.S., and a minimum of 5% off the lowest available base rates13,14 internationally, on qualifying car rentals at participating Avis and Budget locations.
+Use Apple Pay, Google Pay or Samsung Pay wherever contactless payments are accepted - These Digital Wallets are accepted in a growing number of shops, restaurants, and other retailers, making it convenient and easy to use for everyday business payments with just a tap of your device31.
+Visa Infinite Benefits
+Complimentary Visa Infinite Concierge26:
+On-call 24 hours a day, seven days a week, the Visa Infinite Concierge can help with any Cardholder request — big or small, to help you get the most out of life whenever you travel, shop and use your Card. Call toll-free from Canada and the U.S.:
+1-888-853-4458
+From outside Canada and the U.S.:
+1-630-350-4545
+Visa Infinite Luxury Hotel Collection27:
+Receive seven exclusive benefits when you book your stay through the Visa Infinite Luxury Hotel Collection featuring over 900 of the world’s most intriguing properties.
+Visa Infinite Dining Series27:
+As a Visa Infinite Cardholder, you have access to exclusive gourmet events that cater to your astute tastes. The Visa Infinite Dining Series serves up culinary explorations with prized chefs and acclaimed wines.
+Visa Infinite Wine Country Program27:
+Show your Visa Infinite card onsite and you can experience exclusive benefits at over 95 participating wineries in British Columbia, Ontario and Sonoma Valley including discounts on wine purchases, complimentary tastings, private vineyard tours and much more.
+Visa Infinite Entertainment Access27:
+Get exclusive access to tickets to curated events across Canada throughout the year. Visa Infinite Cardholders can also enjoy exclusive benefits, access and offers for the Toronto International Film Festival®
+Visa Infinite Troon Golf27:
+Receive elevated Troon Rewards® Silver Status at over 95 courses and 10% off on green fees, merchandise and lessons at participating Troon Rewards golf courses.
+Security
+Mobile Device Insurance24
+Up to $1,000 of coverage in the event of loss, theft, accidental damage, or mechanical breakdown for eligible mobile devices.
+Chip & PIN technology:
+TD Visa* Cards with Chip and PIN technology provide an added level of security through the use of a Personal Identification Number (PIN). A required PIN makes it much more difficult for unauthorized users to copy or access the information on your TD Credit Card.
+Purchase Security and Extended Warranty Protection15:
+You automatically have access to Purchase Security and Extended Warranty Protection, covering most eligible new items you’ve purchased with your Canadian Credit Card, should they be stolen or damaged within 90 days of Purchase. If the item comes with a manufacturer's warranty valid in Canada, you may be entitled to double the warranty period for up to 12 additional months.
+Visa Secure*
+Visa Secure provides you with increased security and convenience when you shop online through In-app Authentication. Learn more.
+Instant Alerts. Added convenience, with TD Fraud Alerts:
+You can now automatically receive TD Fraud Alerts to your mobile phone any time we suspect suspicious activity on your TD First Class Travel® Visa Infinite* Card, or on any Additional Cardholder's card on your Account. Simply ensure that we have your current mobile phone number listed in your TD Customer Profile. Learn more.
+Manage your credit card in the TD app
+Set transaction limits, block international purchases or lock your credit card. Learn more.
+Click to Pay
+Paying online with your TD Visa card is easy, smart and secure. Just click to pay with your TD Visa when you see this icon (  ) where Visa is accepted.
 
-      let observer = new MutationObserver(() => {
+ 
 
-        if (document.querySelector(selector)) {
+Optional Benefits
+Optional TD Credit Card Payment Protection Plan17:
+Optional TD Credit Card Payment Protection Plan insurance products are designed to help you make your TD Credit Card payments in the event of a covered Job Loss, Total Disability or Loss of Life. To learn more about optional Payment Protection Plan or to enroll, call 1-800-294-8602 or visit td.com/BP.
+Option to Purchase TD Auto Club Membership16 and be covered 24 hours a day for emergency roadside assistance services in case something goes wrong when you are out on the road.
+Frequently asked questions
+Why should you get a travel rewards credit card?
 
-          resolve(document.querySelector(selector));
+Do you love to travel? Then a travel rewards card may be perfect for you. These credit cards offer cardholders great value with travel Reward Points earned on eligible purchases that can later be redeemed to pay for flights and other travel related expenses. But, that’s just the start. The TD First Class Travel Visa Infinite* Card also lets you redeem TD Rewards Points on Amazon.ca with Shop with Points.
 
-          observer.disconnect();
+How do you earn TD Rewards Points?
 
-        }
+Earn Points on your TD First Class Travel Visa Infinite Card with travel bookings, a meal at a restaurant, shopping and on everyday purchases. You can get started with welcome bonus TD Rewards Points if approved for this Card. In addition to earning 2 TD Rewards Points21,29 on every Purchase, you can use this travel rewards Card to make travel purchases through Expedia® for TD6 to earn 8 TD Rewards Points19,29 for each dollar spent. You can also earn 6 TD Rewards Points20,29 each for every dollar you spend on Groceries, Dining and Public Transit purchases and earn 4 TD Rewards Points28,29 for every dollar spent in Recurring Bill Payments and Streaming, Digital Gaming & Media. Your TD Rewards Points don’t expire as long as you are a TD First Class Travel Visa Infinite* Cardholder25.
 
-      });
+How do you redeem TD Rewards Points?
 
-      observer.observe(document.body, { childList: true, subtree: true });
+Redeem your TD Rewards Points to book your next trip, for shopping and more.
 
-    });
+Expedia® For TD: You can redeem3 your TD Rewards Points when you book travel online through Expedia for TD6. This can help to make your travel more affordable.
 
-  };
+Amazon: For shopping, you can redeem your TD Rewards Points for eligible products on Amazon.ca with Amazon Shop with Points.
 
-  const params = new Proxy(new URLSearchParams(window.location.search), {
+Pay Off Purchases: You can also use your TD First Class Travel Visa Infinite Card to book travel with other travel providers or for everyday Purchases. Once the transaction has posted to your account, use the TD Mobile App or TD EasyWeb to redeem in just three clicks. Learn More
 
-    get: (searchParams, prop) => searchParams.get(prop)
+Pay Down Balance: You can also redeem TD Rewards Points to pay your credit card’s Account balance through the TD Mobile app or TD EasyWeb.
 
-  });
+Find out more about our credit cards in Canada
+slide 1 of 3
+Get started with my credit card
 
-  if (params && params.mobileEntry === "true") {
+Everything you need to know to start using your Canadian credit card.
 
-    waitForElmToExist("header").then(header =>
+Get started with my credit card
+Learn more
+Use my credit card features
 
-      header ? (header.style.display = "none") : waitForElmToExist("header")
+Get to know the features that come with your Canadian TD Credit Card.
 
-    );
+Use my credit card features
+Learn more
+Get the most out of my Canadian credit card
 
-    waitForElmToExist("footer").then(footer =>
+From paying bills to credit limit, take advantage of all your card's benefits.
 
-      footer ? (footer.style.display = "none") : waitForElmToExist("footer")
+Get the most out of my Canadian credit card
+Learn more
 
-    );
+Legal
 
-    waitForElmToExist("#main").then(main =>
+How to Apply
+slide 1 of 4
+Apply online
 
-      main ? (main.style.paddingTop = 0) : waitForElmToExist("main")
+Complete an online application and receive an instant response
 
-    );
+ 
+Apply online Secure
+Apply now
+Call us
 
-  }
+Our banking specialists are ready to answer any questions you may have
 
+1-855-315-4325
+Book an appointment
 
- Book an appointment  Are you an Existing TD customer?  Yes  No  Manage my appointments View existing bookings 
+Meet with a banking specialist in person at the branch closest to you
 
+Book an appointment
+Book now
+Locate a branch
 
+Speak with a banking specialist at the branch closest to you
 
-var oabBaseUrl = 'https://appointments.td.com/';
-
-function injectLink(src, head) {
-
-        var link = document.createElement('link');
-        link.type = 'text/css';
-        link.rel = 'stylesheet';
-        link.href = src;
-
-    
-    try {
-        if(head === true) {
-           document.head.appendChild(link);
-        } else {
-           document.body.appendChild(link);
-        }
-    }catch (err) {
-        console.log('??? insert link(CSS) error!, script = ', script);
-   }
-  
-}
-
-function injectScript(src, head) {
-        const script = document.createElement('script');
-        script.setAttribute("type", "text/javascript");
-        script.src = src;
-        script.setAttribute("defer", "defer");
-        
-    try {
-        if(head === true) {
-           document.head.appendChild(script);
-        } else {
-           document.body.appendChild(script);
-        }
-    }catch (err) {
-        console.log('??? insert script error!, script = ', script);
-   }
-}
-
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-     
-     if ( this.readyState == 4 && this.status == 200 && this.responseText && this.responseText !== '') { // this.readyState == 4 && this.status == 200
-        if (this.responseText && this.responseText.length && this.responseText.length > 10) {
-          var hashedFileNames = JSON.parse(this.responseText);
-          var assetsByChunkName = hashedFileNames.assetsByChunkName
-
-
-              injectLink( oabBaseUrl + assetsByChunkName['framework-styles'], true);
-              injectLink( oabBaseUrl + assetsByChunkName['styles'], true);
-
-              injectScript( oabBaseUrl + assetsByChunkName.runtime, false);
-              injectScript( oabBaseUrl + assetsByChunkName.polyfills, false);
-              injectScript( oabBaseUrl + assetsByChunkName.scripts, false);
-              injectScript( oabBaseUrl + assetsByChunkName.main, false);
-
-              
-        }
-     }
-    
-  };
-  xhttp.open("GET", oabBaseUrl + "stats.json", true);
-
-    // Disable Browser Cache: 
-    xhttp.setRequestHeader("Cache-Control", "no-cache, no-store, max-age=0");
-    // xhttp.setRequestHeader("Expires", "Tue, 01 Jan 1980 1:00:00 GMT"); // fallbacks for IE and older browsers:
-    xhttp.setRequestHeader("Pragma", "no-cache"); // this is required for Chrome some time ago
-
-  xhttp.send();
-}
-
-loadDoc();
-
-
-
-    
-    
-    
-
-
-
-
-
-
-
-    
-
-
-    
-
-    
-
-
-
-    
-
-
-
-
-	
-    
-    
-
-
-const outageActive=false;
-
-const outageGenerator = function() {
-        
-
-                    if (outageActive) {
-                        document.getElementsByClassName('td-contentarea')[0].innerHTML='<div class="td-row"><h1 class="td-header" style="outline: none; text-align: center;margin-top:30px;">Book an Appointment</h1><div class="td-mab-alert bg-yellow" style="background: rgb(255,248,215); padding: 20.0px; margin-top: 20.0px;"><h2 class="td-mab-notice-title td-margin-bottom-5" style="text-align: center;"><div class="td-icon-wrapper td-information-icon" style="left: 5.0px; top: 6.0px;"><span class="td-margin-right-10 td-icon icon-regular td-icon-mab td-icon-mab-alert-warning messages-yellow" style="font-size: 35.0px; margin-right: 10.0px; color: rgb(238,181,82);">&nbsp;</span></div><span>Appointment Booking Temporarily Unavailable</span></h2><p class="td-mab-notice-text td-padding-bottom-15" style="text-align: center;">Appointment Booking is temporarily unavailable due to scheduled maintenance. Please try again after 7 am.</p></div></div>';
-                        const targetNode = document.querySelector('dab-app-root');
-     const config = {        
- attributes: false,        
- childList: true,        
- subtree: false    };    
- const callback = function(mutationsList, observer) {        
- for (const mutation of mutationsList) {            
- if (mutation.type === 'childList') {               
- //self executing function     
- (function() 
- {document.querySelector('.td-mab-app.td-mab-landing').remove();
-                 })();
-             };
-         }; 
-    }; 
-    const observer = new MutationObserver(callback); 
-    observer.observe(targetNode, config);
-                    }
-
-}
-document.addEventListener("DOMContentLoaded", outageGenerator());
+Locate a branch
+Locate a branch
+Have a question? Find answers here
+What's your question?
+Ask Us
+Popular questions 

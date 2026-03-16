@@ -1,0 +1,879 @@
+[
+  {
+    "name": "Platinum Card®",
+    "slug": "platinum",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+    "description": "Learn how to unlock $3,500+ in annual value with benefits and eligible purchases across travel, dining, entertainment and more. Terms apply.",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$895",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "AS HIGH AS 175,000 Membership Rewards® points after you spend $12,000 in purchases on your new Card within the first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "5X",
+        "category": "Flights & Hotels"
+      },
+      {
+        "rate": "5X",
+        "category": "FlightsBooked directly with airlines or through American Express Travel®, on up to $500,000 on these purchases per calendar year."
+      },
+      {
+        "rate": "5X",
+        "category": "Prepaid HotelsBooked on American Express Travel®."
+      }
+    ],
+    "benefits": [
+      "$600 Hotel CreditWith over 3,000 hotels – and more hotels than any other credit card company1 where you can access a suite of special benefits – get up to $300 back in statement credits semi-annually ",
+      "$200 Uber CashAdd your Platinum Card® to your Uber account to start receiving $15 in Uber Cash each month, plus a bonus $20 in December, to use on rides and orders in the U",
+      "$120 Uber One CreditAs a Platinum Card® Member, you can get up to $120 in statement credits each calendar year after you purchase an auto-renewing Uber One membership with your Card",
+      "$200 Airline Fee CreditEarn up to $200 per calendar year in statement credits after incidental fees are charged by your one selected qualifying airline to your Card",
+      "$209 CLEAR+ CreditYou can receive up to $209 in statement credits per calendar year after you sign up and pay for a CLEAR+ Membership (subject to auto-renewal) with your eligible American Express Card",
+      "Global Lounge CollectionWith over 1,550 airport lounges – more than any other credit card company on the market* – enjoy the benefits of the Global Lounge Collection, over $850 of annual value, with a",
+      "Centurion Lounges, 10 complimentary Delta Sky Club visits when flying on an eligible Delta flight, Priority Pass Select membership (enrollment required), and other select partner lounges"
+    ]
+  },
+  {
+    "name": "The American Express® Gold Card",
+    "slug": "gold-card",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+    "description": "Earn 4X Membership Rewards® points on Restaurants Worldwide on up to $50K in purchases per calendar year. Explore rewards on hotels, dining, U.S. supermarkets, and more with the Gold Card. Terms Apply.",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$325",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "AS HIGH AS 100,000 Membership Rewards® points after you spend $6,000 in purchases on your new Card within the first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "4X",
+        "category": "Groceries. At U.S. supermarkets, on up to $25K in purchases per calendar year."
+      },
+      {
+        "rate": "4X",
+        "category": "Restaurants. Worldwide, on up to $50K in purchases per calendar year."
+      },
+      {
+        "rate": "3X",
+        "category": "Flights. Booked directly with airlines or on Amex. Travel.com."
+      },
+      {
+        "rate": "2X",
+        "category": "Prepaid Hotels: and other eligible travel purchases, booked through Amex. Travel.com."
+      }
+    ],
+    "benefits": [
+      "$120 Uber Cash on Gold: Get $10 in Uber Cash each month to use on orders and rides in the U.S.",
+      "$84 Dunkin' Credit: Earn up to $7 in monthly statement credits after you pay with the American Express® Gold Card at U.S.",
+      "$100 Resy Credit: Get up to $100 in statement credits each calendar year after you pay with the American Express® Gold Card to dine at U.S.",
+      "$120 Dining Credit: Earn up to a total of $10 in statement credits monthly when you pay with the Gold Card at participating partners."
+    ]
+  },
+  {
+    "name": "Blue Cash Preferred® Card",
+    "slug": "blue-cash-preferred",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/",
+    "description": "Earn 6% cash back at U.S. Supermarkets on up to $6K per year in purchases. Enjoy cash back on everyday spending such as streaming, gas, transit, and more. Terms Apply.\n",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$0 intro, then $95",
+    "interest_rate": "0% intro for 12 months, then 19.49% to 28.49% variable",
+    "welcome_bonus": "$300 Cash Back1after you spend $3,000 in purchases on your new Card within the first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "6%",
+        "category": "Groceries. Up to $6,000 per year in purchases at U.S. supermarkets."
+      },
+      {
+        "rate": "6%",
+        "category": "Select Streaming Subscriptions"
+      },
+      {
+        "rate": "3%",
+        "category": "Transit. Transit includes taxis, rideshare, parking, tolls, trains, buses, and more."
+      },
+      {
+        "rate": "3%",
+        "category": "Gas. At U.S. gas stations."
+      },
+      {
+        "rate": "1%",
+        "category": "Other Purchases"
+      }
+    ],
+    "benefits": [
+      "$120 Disney Streaming Credit: Get up to a $10 monthly statement credit, up to $120 annual value, after using your enrolled Blue Cash Preferred® Card for a subscription1 purchase, including a bundle su"
+    ]
+  },
+  {
+    "name": "Blue Cash Everyday® Card",
+    "slug": "blue-cash-everyday",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-everyday/",
+    "description": "Earn 3% cash back at U.S. Supermarkets, U.S. Gas Stations, and on U.S. Online Retail purchases, on up to $6K in purchases in each category per year. See why the American Express Blue Cash Everyday® Card is the cash back card for you. Terms Apply.",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "0% intro for 15 months, then 19.49% to 28.49% variable",
+    "welcome_bonus": "$200 Cash Back1after you spend $2,000 in purchases on your new Card within the first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "3%",
+        "category": "Groceries. At U.S. supermarkets, on up to $6,000 per year in purchases (then 1%)."
+      },
+      {
+        "rate": "3%",
+        "category": "Gas. At U.S. gas stations, on up to $6,000 per year in purchases (then 1%)"
+      },
+      {
+        "rate": "3%",
+        "category": "U.S. Online Retail Purchases"
+      },
+      {
+        "rate": "1%",
+        "category": "Other Purchases"
+      }
+    ],
+    "benefits": [
+      "$84 Disney Streaming Credit: Get up to a $7 monthly statement credit after using your enrolled Blue Cash Everyday® Card for a subscription1 purchase, including a bundle subscription purchase, at Disne"
+    ]
+  },
+  {
+    "name": "American Express Green Card®",
+    "slug": "green",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/green/",
+    "description": "Earn 3X Membership Rewards® points on eligible Travel, Transit, and Restaurants Worldwide with the American Express Green Card®. Earn 1X points on other eligible purchases. Terms Apply. ",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$150",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "Earn 40,000 Membership Rewards® Points after you spend $3,000 on eligible purchases on your American Express Green Card® within the first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "3X",
+        "category": "Travel. Including airfare, hotels, tours, campgrounds, car rentals, cruises, vacation rentals, and more."
+      },
+      {
+        "rate": "3X",
+        "category": "Transit. Including trains, buses, ferries, subways, and more."
+      },
+      {
+        "rate": "1X",
+        "category": "Other Purchases"
+      }
+    ],
+    "benefits": [
+      "$209 CLEAR+ CreditCLEAR+ helps get you to your gate faster by using your face to verify you are you at 55+ airports nationwide: You can cover the cost of a CLEAR+ Membership* with up to $209 in statem",
+      "No Foreign Transaction FeesEnjoy every trip abroad with no foreign transaction fees from American Express with the American Express Green Card®",
+      "No Foreign Transaction FeesNo matter where you"
+    ]
+  },
+  {
+    "name": "Delta SkyMiles® Gold American Express Card",
+    "slug": "delta-skymiles-gold",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-gold-american-express-card/",
+    "description": "Earn 2X miles on eligible Delta purchases, Restaurants, and U.S. Supermarkets. Enjoy perks that make travel rewarding with the Delta SkyMiles® Gold Card. Terms Apply. ",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$0 intro, then $150.",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "Earn Up To 90,000 Bonus Mileswith the Delta SkyMiles® Gold American Express Card. Earn 70,000 Bonus Miles after you spend $3,000 or more in purchases with your new Card within the first 6 months of Card Membership and an additional 20,000 bonus miles after you make an additional $2,000 in purchases within your first 6 months, starting from the date that your account is opened.",
+    "earn_rates": [
+      {
+        "rate": "2X",
+        "category": "Dining. At restaurants, including takeout and delivery in the U.S."
+      },
+      {
+        "rate": "2X",
+        "category": "Groceries. At U.S. supermarkets."
+      },
+      {
+        "rate": "2X",
+        "category": "Delta Purchases"
+      }
+    ],
+    "benefits": [
+      "$200 Delta Flight Credit: Get a head start on your next adventure, compliments of your Card.",
+      "$200 Delta Flight Credit to use toward future travel: TakeOff 15Save 15% anytime you book Award Travel with miles on Delta flights when using delta.com and the Fly Delta app.",
+      "$100 Delta Stays CreditElevate your travel experience with an annual statement credit of up to $100 after using your Delta SkyMiles® Gold American Express Card to book prepaid hotels or vacation renta",
+      "TakeOff 15Save",
+      "First Checked Bag FreeAs a benefit of Card Membership"
+    ]
+  },
+  {
+    "name": "Delta SkyMiles® Platinum American Express Card",
+    "slug": "delta-skymiles-platinum",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-platinum-american-express-card/",
+    "description": "Earn 3X miles on eligible Delta and Hotel purchases, and 2X miles at Restaurants and U.S. Supermarkets. Earn 1X miles on other eligible purchases. Elevate your travel with Delta rewards. Terms Apply.",
+    "card_image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-delta-skymiles.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$350",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "Earn Up To 100,000 Bonus Mileswith your Delta SkyMiles® Platinum American Express Card. Earn 80,000 bonus miles after you spend $4,000 or more in purchases with your new Card within the first 6 months of Card Membership and an additional 20,000 bonus miles after you make an additional $2,000 in purchases within your first 6 months, starting from the date that your account is opened.",
+    "earn_rates": [
+      {
+        "rate": "3X",
+        "category": "Hotels. Purchases made directly with hotels."
+      },
+      {
+        "rate": "3X",
+        "category": "Delta Purchases"
+      },
+      {
+        "rate": "2X",
+        "category": "Groceries. At U.S. supermarkets.1X MILES Per Dollar On Other Purchases.1XMILESPer Dollar On Other Purchases."
+      },
+      {
+        "rate": "2X",
+        "category": "Dining. At restaurants, including takeout and delivery in the U.S."
+      }
+    ],
+    "benefits": [
+      "$2,500 Medallion® Qualification Dollars each Medallion Qualification Year and get closer to Status with MQD Headstart: MQD BoostEarn",
+      "$1 Medallion® Qualification Dollar for each $20 in purchases made on your Delta SkyMiles® Platinum American Express Card and get a boost toward achieving elevated Medallion Status for next Medallion Y",
+      "$120 Rideshare Credit: Get rewarded to and from the airport.",
+      "$150 Delta Stays CreditElevate your travel experience with an annual statement credit of up to $150 after using your Delta SkyMiles® Platinum American Express Card to book prepaid hotels or vacation r",
+      "MQD HeadstartReceive",
+      "MQD Headstart",
+      "MQD BoostEarn",
+      "TakeOff 15Save"
+    ]
+  },
+  {
+    "name": "Delta SkyMiles® Reserve American Express Card",
+    "slug": "delta-skymiles-reserve",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-reserve-american-express-card/",
+    "description": "Earn 3X miles on eligible Delta purchases. Earn 1X miles on other eligible purchases. Unlock premium travel benefits and elite experiences with the Delta SkyMiles® Reserve Card. Terms Apply.",
+    "card_image": "https://icm.aexp-static.com/acquisition/card-art/NUS000000270_480x304_straight_withname.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$650",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "Earn Up To 125,000 Bonus Mileswith your Delta SkyMiles® Reserve American Express Card. Earn 100,000 bonus miles after you spend $6,000 or more in purchases with your new Card within the first 6 months of Card Membership and an additional 25,000 bonus miles after you make an additional $3,000 in purchases within your first 6 months, starting from the date that your account is opened.",
+    "earn_rates": [
+      {
+        "rate": "3X",
+        "category": "Delta Purchases"
+      },
+      {
+        "rate": "1X",
+        "category": "Other Purchases."
+      }
+    ],
+    "benefits": [
+      "$2,500 Medallion® Qualification Dollars each Medallion Qualification Year and get closer to Status with MQD Headstart: MQD BoostEarn",
+      "$1 Medallion® Qualification Dollar for each $10 in purchases made on your Card and get a boost toward achieving elevated Medallion Status for next Medallion Year: Delta Sky Club® AccessDelta SkyMiles®",
+      "$240 Resy CreditDiscover and book restaurants to love with Resy: Get up to $20 in statement credits each month after you pay with your enrolled Delta SkyMiles® Reserve American Express Card to dine at",
+      "$200 Delta Stays CreditElevate your travel experience with an annual statement credit of up to $200 after using your Delta SkyMiles® Reserve American Express Card to book prepaid hotels or vacation re",
+      "MQD HeadstartReceive",
+      "MQD Headstart",
+      "MQD BoostEarn",
+      "Sky Club Access after spending"
+    ]
+  },
+  {
+    "name": "Delta SkyMiles® Blue American Express Card",
+    "slug": "delta-skymiles-blue",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-blue-american-express-card/",
+    "description": "Earn 2X miles on eligible Delta purchases and at Restaurants. Earn 1X miles on all other eligible purchases with the Delta SkyMiles® Blue Card. Terms Apply.",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "Earn 10,000 Bonus Miles after you spend $1,000 on eligible purchases on your new Card within your first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "2X",
+        "category": "Dining. At restaurants, including takeout and delivery in the U.S."
+      },
+      {
+        "rate": "2X",
+        "category": "Delta Purchases"
+      },
+      {
+        "rate": "1X",
+        "category": "Other Purchases."
+      }
+    ],
+    "benefits": [
+      "No Foreign Transaction FeesEnjoy every trip abroad with no foreign transaction fees from American Express with the Delta SkyMiles® Blue American Express Card"
+    ]
+  },
+  {
+    "name": "Marriott Bonvoy Bevy® American Express® Card",
+    "slug": "marriott-bonvoy-bevy",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-bevy/",
+    "description": "Earn 6X Marriott Bonvoy points at Hotels participating in Marriott Bonvoy®. Elevate everyday spending. Terms Apply.",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$250",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "Earn 175,000 Marriott Bonvoy® Bonus Points after you use your new Card to make $5,000 in purchases within the first 6 months Of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "6X",
+        "category": "Hotels. For eligible purchases at hotels participating in Marriott Bonvoy®."
+      },
+      {
+        "rate": "4X",
+        "category": "Restaurants and U.S. Supermarkets"
+      },
+      {
+        "rate": "2X",
+        "category": "Each Dollar. Spent on other eligible purchases."
+      }
+    ],
+    "benefits": [
+      "Gold Elite StatusWith complimentary Marriott Bonvoy® Gold Elite status",
+      "No Foreign Transaction FeesEnjoy every trip abroad with no foreign transaction fees from American Express with the Marriott Bonvoy Bevy® American Express Card"
+    ]
+  },
+  {
+    "name": "Marriott Bonvoy Brilliant® American Express® Card",
+    "slug": "marriott-bonvoy-brilliant",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-brilliant/",
+    "description": "Earn 6X Marriott Bonvoy points at Hotels participating in Marriott Bonvoy® and 3X points at Restaurants Worldwide. Enjoy luxury stays and travel perks. Terms Apply.",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$650",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "Earn 200,000 Marriott Bonvoy® Bonus Points after you use your new Card to make $6,000 in purchases within the first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "6X",
+        "category": "Hotels. For eligible purchases at hotels participating in Marriott Bonvoy®."
+      },
+      {
+        "rate": "3X",
+        "category": "Flights. Booked directly with airlines."
+      },
+      {
+        "rate": "3X",
+        "category": "Restaurants. At restaurants worldwide."
+      },
+      {
+        "rate": "2X",
+        "category": "Each Dollar. Spent on other eligible purchases."
+      }
+    ],
+    "benefits": [
+      "$300 Brilliant Dining CreditEach calendar year, get up to $300 (up to $25 per month) in statement credits for eligible purchases made on the Marriott Bonvoy Brilliant® Card at restaurants worldwide: M",
+      "Free Night AwardReceive",
+      "Free Night Award every year after your Card renewal month",
+      "Platinum Elite Status",
+      "No Foreign Transaction FeesEnjoy every trip abroad with no foreign transaction fees from American Express with the Marriott Bonvoy Brilliant® American Express Card"
+    ]
+  },
+  {
+    "name": "Hilton Honors American Express Card",
+    "slug": "hilton-honors",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors/",
+    "description": "Earn 7X Hilton Honors Bonus Points on eligible purchases made directly with Hotels and Resorts within the Hilton portfolio. Make travel purchases more rewarding. Terms Apply.",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "Earn 70,000 Hilton Honors Bonus Points + A Free Night Rewardafter you spend $2,000 in purchases on the Hilton Honors American Express Card in the first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "7X",
+        "category": "Hotels & Resorts"
+      },
+      {
+        "rate": "5X",
+        "category": "Dining. At U.S. restaurants, including takeout and delivery."
+      },
+      {
+        "rate": "5X",
+        "category": "Groceries. At U.S. supermarkets."
+      },
+      {
+        "rate": "5X",
+        "category": "Gas. At U.S. gas stations."
+      },
+      {
+        "rate": "3X",
+        "category": "Each Dollar"
+      }
+    ],
+    "benefits": [
+      "Silver StatusEnjoy even more perks as a Hilton Honors Silver member",
+      "No Foreign Transaction FeesEnjoy every trip abroad with no foreign transaction fees from American Express with the American Express Hilton Honors Card"
+    ]
+  },
+  {
+    "name": "Hilton Honors American Express Surpass® Card",
+    "slug": "hilton-honors-surpass",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-surpass/",
+    "description": "Earn 12X Hilton Honors Bonus Points on purchases made directly with Hotels and Resorts within the Hilton portfolio. Enjoy enhanced rewards on travel purchases. Terms Apply.",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$150",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "Earn 130,000 Hilton Honors Bonus Points + A Free Night Rewardafter you spend $3,000 in purchases on the Hilton Honors American Express Surpass® Card in the first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "2X",
+        "category": "Hotels & Resorts"
+      },
+      {
+        "rate": "6X",
+        "category": "Dining. At U.S. restaurants, including takeout and delivery."
+      },
+      {
+        "rate": "6X",
+        "category": "Groceries. At U.S. supermarkets."
+      },
+      {
+        "rate": "6X",
+        "category": "Gas. At U.S. gas stations."
+      },
+      {
+        "rate": "4X",
+        "category": "U.S. Online"
+      }
+    ],
+    "benefits": [
+      "$200 Hilton Credit: Get up to $50 in statement credits each quarter for purchases made directly with a property in the Hilton portfolio on your Hilton Honors American Express Surpass® Card.",
+      "Gold StatusEnjoy complimentary Hilton Honors™ Gold status with your Hilton Honors Surpass® Card",
+      "Free Night RewardEarn a Free Night Reward from Hilton Honors after you spend",
+      "Emerald Club Executive® StatusHilton Honors American Express Surpass® Card Members can enjoy complimentary National Car Rental® Emerald Club Executive® status",
+      "Emerald Club Executive status through their American Express online account using their Card",
+      "Diamond StatusSpend"
+    ]
+  },
+  {
+    "name": "Hilton Honors American Express Aspire Card",
+    "slug": "hilton-honors-aspire",
+    "url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
+    "description": "Earn 14X Hilton Honors Bonus Points on purchases made directly with Hotels and Resorts within the Hilton portfolio while enjoying complimentary Diamond Status. Terms Apply.",
+    "card_image": "",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$550",
+    "interest_rate": "19.49% to 28.49% variable APR",
+    "welcome_bonus": "Earn 175,000 Hilton Honors Bonus Pointswith the Hilton Honors American Express Aspire Card after you spend $6,000 in purchases on the Card within your first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "4X",
+        "category": "Hotels & Resorts"
+      },
+      {
+        "rate": "7X",
+        "category": "Select Travel. Including flights booked directly with airlines or Amex. Travel.com and car rentals booked directly with select car rental companies."
+      },
+      {
+        "rate": "7X",
+        "category": "Dining. At U.S. restaurants, including takeout and delivery."
+      },
+      {
+        "rate": "3X",
+        "category": "Each Dollar. Spent on other eligible purchases."
+      }
+    ],
+    "benefits": [
+      "$400 Hilton Resort Credit: Enjoy up to $200 in statement credits semi-annually on eligible purchases made directly with participating Hilton Resorts using your Hilton Honors Aspire Card.",
+      "$200 Flight Credit: Get up to $50 in statement credits each quarter, for a total of up to $200 back each year, on flight purchases made directly with an airline, through AmexTravel.",
+      "$209 CLEAR+ CreditCLEAR+ helps you get to your gate faster by using your face to verify you are you at 55+ airports nationwide: Use the dedicated CLEAR Lane to confirm your identity without taking out",
+      "Diamond StatusEnjoy complimentary Diamond status with your Card",
+      "Free Night RewardEnjoy an Annual Free Night Reward from Hilton Honors in your first year of Card Membership and every year upon Card renewal"
+    ]
+  },
+  {
+    "name": "The Business Platinum Card from American Express",
+    "slug": "biz-platinum",
+    "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+    "description": "With the Business Platinum Card from American Express, you can earn 5X Membership Rewards® points on flights and prepaid hotels on amextravel.com. Terms Apply.",
+    "card_image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/business-platinum.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$895",
+    "welcome_bonus": "AS HIGH AS 300,000 Membership Rewards® Points after you spend $20,000 in purchases on your new Card within the first 3 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "5X",
+        "category": "Flights and prepaid hotels booked on AmexTravel.com"
+      },
+      {
+        "rate": "1.5X",
+        "category": "Purchases in select business categories and $5,000+ purchases (up to $2M/yr)"
+      },
+      {
+        "rate": "1X",
+        "category": "All other eligible purchases"
+      }
+    ],
+    "benefits": [
+      "Up to $600 Hotel CreditStatement credits up to $300 semi-annually on prepaid bookings through Amex Travel with Fine Hotels + Resorts",
+      "Up to $200 Hilton CreditHilton for Business members can get statement credits of up to $50 quarterly on eligible purchases made dire",
+      "Up to $200 Airline Fee CreditStatement credits up to $200 per calendar year for incidental fees charged by your one selected qualify",
+      "Up to $209 CLEAR® Plus CreditStatement credits up to $209 per calendar year for an auto-renewing CLEAR® Plus Membership, excluding t",
+      "Up to $1,150 Dell Technologies CreditStatement credits up to $150 on U",
+      "Up to $360 Indeed CreditStatement credits up to $90 per quarter for U",
+      "Up to $120 Wireless CreditStatement credits up to $10 per month for wireless phone service purchases made directly with a U",
+      "Global Entry or TSA PreCheck®Receive either a statement credit every 4 years after you apply for Global Entry ($120) or a statement credit every 4",
+      "Centurion Lounges, 10 complimentary Delta Sky Club visits when flying on an eligible Delta flight, Priority Pass Select membership (enrollment required), and other select partner lounges",
+      "Delta Sky Club visits when flying on an eligible Delta flight, Priority Pass Select membership (enrollment required), and other select partner lounges",
+      "Priority Pass Select membership (enrollment required), and other select partner lounges",
+      "Dell Technologies CreditStatement credits up to $150 on U",
+      "Adobe CreditA $250 statement credit per calendar year after you spend $600 or more on U",
+      "CLEAR® Plus CreditStatement credits up to $209 per calendar year for an auto-renewing CLEAR® Plus Membership, excluding taxes and fees",
+      "Hilton CreditHilton for Business members can get statement credits of up to $50 quarterly on eligible purchases made directly with Hilton"
+    ]
+  },
+  {
+    "name": "American Express Business Gold Card",
+    "slug": "biz-gold",
+    "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/",
+    "description": "Elevate your business spending and earn 4X points on the top 2 business categories. Know more about American Express Business Gold Card and apply now! Terms apply.",
+    "card_image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/business-gold.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$375",
+    "welcome_bonus": "AS HIGH AS 200,000 Membership Rewards® Points after you spend $15,000 in purchases on your new Card within the first 3 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "4X",
+        "category": "Your Top 2 Eligible Categories"
+      },
+      {
+        "rate": "3X",
+        "category": "Flights & Pre-Paid Hotels"
+      },
+      {
+        "rate": "1X",
+        "category": "All Other Eligible Purchases"
+      }
+    ],
+    "benefits": [
+      "Pay Over Time Feature The Pay Over Time feature lets you carry a balance with interest on eligible charges",
+      "No Preset Spending Limit No Preset Spending Limit means your spending limit is flexible",
+      "Employee Cards Earn Membership Rewards® points",
+      "Year-End Summary Organizing your expenses can be a time-consuming task",
+      "Connect to QuickBooks® Connect to QuickBooks can help you manage your employee Business Card expenses easily"
+    ]
+  },
+  {
+    "name": "Business Green Rewards Card from American Express",
+    "slug": "biz-green",
+    "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
+    "description": "With the Business Green Rewards Card, you can earn 2X points for each dollar you spend at amextravel.com, plus 1X points on all other eligible purchases.",
+    "card_image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/business-green-rewards.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$95",
+    "welcome_bonus": "Earn 15,000 Membership Rewards® points after you spend $3,000 on eligible purchases on the Card within your first 3 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "2X",
+        "category": "Flights & Prepaid Hotels"
+      },
+      {
+        "rate": "1X",
+        "category": "Other Eligible Purchases"
+      }
+    ],
+    "benefits": [
+      "Purchase Protection",
+      "Extended Warranty♦︎ With Extended Warranty♦︎ you can shop with less worry knowing the terms of the Original Manufacturer's Warranty can be extended up to one additional year",
+      "Car Rental Loss",
+      "Baggage Insurance Plan♦︎ Travel more comfortably knowing you can be covered for lost, damaged, or stolen Baggage when you purchase the Entire Fare for a Common Carrier Vehicle ticket (e",
+      "Global Assist",
+      "Year-End Summary At the start of each year, we provide access to a Year-End Summary of charges so you can review your annual spending",
+      "Connect to QuickBooks® Save time with auto-expense categorization in QuickBooks— Once enrolled, your Business Card transactions are automatically tagged with your QuickBooks categories",
+      "Dispute Resolution If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue"
+    ]
+  },
+  {
+    "name": "Blue Business Plus Credit Card from American Express",
+    "slug": "biz-blue-plus",
+    "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/",
+    "description": "Apply for the Blue Business Plus Card from American Express and earn 2x Membership Rewards® points on business purchases up to $50K with no category restrictions.",
+    "card_image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/blue-business-plus.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "Earn 15,000 Membership Rewards® Points after you spend $3,000 in purchases on your Card in your first 3 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "2X",
+        "category": "Purchasesup to $50,000 per calendar year"
+      },
+      {
+        "rate": "1X",
+        "category": "Purchases Thereafter"
+      }
+    ],
+    "benefits": [
+      "Employee Cards There is no annual fee for additional Employee Blue Business® Plus Credit Cards",
+      "Purchase Protection",
+      "Extended Warranty♦ With Extended Warranty♦ you can shop with less worry knowing the terms of the Original Manufacturer's Warranty can be extended up to one additional year",
+      "Car Rental Loss",
+      "Global Assist",
+      "Year-End Summary At the start of each year, we provide access to a Year-End Summary of charges so you can review your annual spending",
+      "Connect to QuickBooks® Save time with auto-expense categorization in Intuit QuickBooks - Once enrolled, your Business Card transactions are automatically tagged with your QuickBook categories",
+      "Dispute Resolution If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue"
+    ]
+  },
+  {
+    "name": "The Plum Card from American Express",
+    "slug": "biz-plum",
+    "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-plum-card-amex/",
+    "description": "Apply for the Plum Card from American Express and earn unlimited 1.5% back on the portion of your balance that you pay within 10 days of your statement closing date.",
+    "card_image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/plum.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$250",
+    "welcome_bonus": "Early Pay Discount: 1.5% cash back when paying within 10 days.",
+    "earn_rates": [
+      {
+        "rate": "1.5%",
+        "category": "Cash back when paying within 10 days of statement closing"
+      }
+    ],
+    "benefits": [
+      "Employee Cards Get additional flexibility with up to 99 Employee Plum Cards at no additional annual fee",
+      "Purchase Protection",
+      "Extended Warranty♦︎ With Extended Warranty♦ you can shop with less worry knowing the terms of the Original Manufacturer's Warranty can be extended up to one additional year",
+      "Car Rental Loss",
+      "Global Assist",
+      "Year-End Summary Organizing your expenses can be a time-consuming task",
+      "Connect to QuickBooks® Save time with auto-expense categorization in Intuit QuickBooks- Once enrolled, your Business Card transactions are automatically tagged with your QuickBooks categories",
+      "No Foreign Transaction Fees With no foreign transaction fees, you can buy for your business anywhere in the world",
+      "Dispute Resolution If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue"
+    ]
+  },
+  {
+    "name": "Amazon Business American Express Card",
+    "slug": "biz-amazon",
+    "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amazon-business-card/",
+    "description": "Apply for the Amazon Business Card from American Express and take advantage of 3% back at Amazon.com, Amazon Business, and AWS or a 60 day interest free period.",
+    "card_image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/amazon-business-angled.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "$100 Amazon Gift Cardupon approval for the Amazon Business American Express Card.",
+    "earn_rates": [
+      {
+        "rate": "3%",
+        "category": "U.S. Purchases"
+      },
+      {
+        "rate": "2%",
+        "category": "U.S. Purchases"
+      },
+      {
+        "rate": "1%",
+        "category": "other purchases. Amazon Business Enhanced Data Views Gain deeper insights on purchases and simplify expense reconciliation. With enhanced data views, yo"
+      },
+      {
+        "rate": "1%",
+        "category": "Other Purchases"
+      }
+    ],
+    "benefits": [
+      "Employee Cards Add Employee Amazon Business Cards and opt to earn 3% Back or get Payment Terms on employee U",
+      "Purchase Protection",
+      "Extended Warranty♦︎ With Extended Warranty♦︎ you can shop with less worry knowing the terms of the Original Manufacturer's Warranty can be extended up to one additional year",
+      "Car Rental Loss",
+      "Baggage Insurance Plan♦︎ Travel more comfortably knowing you can be covered for lost, damaged, or stolen Baggage when you purchase the Entire Fare for a Common Carrier Vehicle ticket (e",
+      "Global Assist",
+      "Year-End Summary At the start of each year, we provide access to a Year-End Summary of charges so you can review your annual spending",
+      "Connect to QuickBooks® Streamline expenses from your enrolled Business Card when your transactions from Amazon Business Card are sent to your Intuit QuickBooks",
+      "Dispute Resolution If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue"
+    ]
+  },
+  {
+    "name": "Amazon Business Prime American Express Card",
+    "slug": "biz-amazon-prime",
+    "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amazon-business-prime-card/",
+    "description": "Apply for Amazon Business Prime Card from American Express to get 5% back at Amazon and AWS or a 90-day interest-free period with eligible prime membership.",
+    "card_image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/amazon-business-prime-angled.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "$125 Amazon Gift Cardupon approval for the Amazon Business Prime American Express Card.",
+    "earn_rates": [
+      {
+        "rate": "5%",
+        "category": "the first $120,000 in purchases each calendar year,"
+      },
+      {
+        "rate": "5%",
+        "category": "U.S. Purchases"
+      },
+      {
+        "rate": "2%",
+        "category": "U.S. Purchases"
+      },
+      {
+        "rate": "1%",
+        "category": "Other Purchases"
+      }
+    ],
+    "benefits": [
+      "Employee Cards Add Employee Amazon Business Prime Cards for no annual fee and opt to earn 5% Back or get 90 Day Payment Terms with an eligible Prime membership on employee U",
+      "Purchase Protection",
+      "Extended Warranty♦︎ With Extended Warranty︎♦︎ you can shop with less worry knowing the terms of the Original Manufacturer's Warranty can be extended up to one additional year",
+      "Car Rental Loss",
+      "Baggage Insurance Plan♦︎ Travel more comfortably knowing you can be covered for lost, damaged, or stolen Baggage when you purchase the Entire Fare for a Common Carrier Vehicle ticket (e",
+      "Year-End Summary At the start of each year, we provide access to a Year-End Summary of charges so you can review your annual spending",
+      "Connect to QuickBooks® Save time with auto-expense categorization in Intuit QuickBooks— Once enrolled, your Business Card transactions are automatically tagged with your QuickBooks categories",
+      "Dispute Resolution If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue"
+    ]
+  },
+  {
+    "name": "Marriott Bonvoy Business Credit Card",
+    "slug": "biz-marriott",
+    "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amex-marriott-bonvoy-business-credit-card/",
+    "description": "With the Marriott Bonvoy Business American Express Card, you can earn 6X points for each dollar of eligible purchases at participating Marriott Bonvoy hotels.",
+    "card_image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/amex-marriott-bonvoy-business.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$125",
+    "welcome_bonus": "Earn up to 5 Free Night AwardsEarn 3 Free Night Awards after you spend $6,000 in purchases and an extra 2 Free Night Awards after you spend an additional $3,000 in purchases on the Card within the first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "6X",
+        "category": "MARRIOTT BONVOY POINTS At Hotels"
+      },
+      {
+        "rate": "4X",
+        "category": "MARRIOTT BONVOY POINTS On Purchases"
+      },
+      {
+        "rate": "2X",
+        "category": "MARRIOTT BONVOY POINTS On Other Purchases"
+      }
+    ],
+    "benefits": [
+      "Employee Cards Think of Employee Marriott Bonvoy Business Cards as another tool you can use to stay on top of your expenses",
+      "Purchase Protection",
+      "Extended Warranty♦ With Extended Warranty♦ ︎you can shop with less worry knowing the terms of the Original Manufacturer's Warranty can be extended up to one additional year",
+      "Car Rental Loss",
+      "Baggage Insurance Plan♦︎ Travel more comfortably knowing you can be covered for lost, damaged, or stolen Baggage when you purchase the Entire Fare for a Common Carrier Vehicle ticket (e",
+      "Global Assist",
+      "Year-End Summary At the start of each year, we provide access to a Year-End Summary of charges so you can review your annual spending",
+      "Connect to QuickBooks® Streamline expenses from your enrolled Business Card when your transactions from the Marriott Bonvoy Business® American Express® Card are sent to your Intuit QuickBooks",
+      "Marriott Bonvoy Business® American Express® Card Member Make business purchases even more rewarding by earning Marriott Bonvoy® points",
+      "Dispute Resolution We will work with you to help resolve the issue if there is a fraudulent or incorrect charge on your statement"
+    ]
+  },
+  {
+    "name": "Hilton Honors American Express Business Credit Card",
+    "slug": "biz-hilton",
+    "url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors/",
+    "description": "Apply for the Hilton Honors American Express Business Card and earn 12X points per dollar on purchases made directly with hotels and resorts in the portfolio.",
+    "card_image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/hilton-honors.png",
+    "issuer": "American Express",
+    "network": "American Express",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "$195",
+    "welcome_bonus": "Earn 175,000 Hilton Honors Bonus Points + a Free Night Rewardafter you spend $8,000 in purchases on the Hilton Honors American Express Business Card in the first 6 months of Card Membership.",
+    "earn_rates": [
+      {
+        "rate": "12X",
+        "category": "HILTON HONORS BONUS POINTS At Hilton"
+      },
+      {
+        "rate": "5X",
+        "category": "HILTON HONORS BONUS POINTS On Other Eligible Purchases"
+      },
+      {
+        "rate": "3X",
+        "category": "Points thereafter.APRAPR on purchases will be a variable rate, 19.49% - 28.49%, based on your creditworthiness and other factors as determined at the"
+      }
+    ],
+    "benefits": [
+      "Employee Cards Add up to 99 Employee Hilton Honors Business Cards for no annual fee",
+      "Purchase Protection",
+      "Extended Warranty♦︎ With Extended Warranty♦︎ you can shop with less worry knowing the terms of the Original Manufacturer's Warranty can be extended up to one additional year",
+      "Car Rental Loss",
+      "Baggage Insurance Plan♦︎ Travel more comfortably knowing you can be covered for lost, damaged, or stolen Baggage when you purchase the Entire Fare for a Common Carrier Vehicle ticket (e",
+      "Global Assist",
+      "Year-End Summary At the start of each year, we provide access to a Year-End Summary of charges so you can review your annual spending",
+      "Connect to QuickBooks® Save time with auto-expense categorization in Intuit QuickBooks- Once enrolled, your Business Card transactions are automatically tagged with your QuickBooks categories",
+      "Hilton Honors",
+      "Marriott Bonvoy",
+      "Dispute Resolution If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue"
+    ]
+  }
+]
