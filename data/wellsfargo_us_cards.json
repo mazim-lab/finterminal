@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Cash Back Credit Card",
+    "slug": "active-cash",
+    "url": "https://creditcards.wellsfargo.com/active-cash-credit-card",
+    "issuer": "Wells Fargo",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "Earn a $200 cash rewards bonus when you spend",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "purchases 2 $0 Annual Fee Important Credit Terms Apply now Offers may differ from time to time and d"
+      },
+      {
+        "rate": "2%",
+        "category": "purchases with no categories to track or quarterly activations 2"
+      }
+    ],
+    "benefits": [
+      "Zero Liability",
+      "Cell Phone Protection",
+      "Auto Rental",
+      "Roadside"
+    ]
+  },
+  {
+    "name": "Our Best Rewards Credit Card",
+    "slug": "autograph",
+    "url": "https://creditcards.wellsfargo.com/autograph-visa-credit-card",
+    "issuer": "Wells Fargo",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "welcome_bonus": "Earn 20,000 bonus points when you spend",
+    "earn_rates": [
+      {
+        "rate": "1X",
+        "category": "other purchases 2 Low intro APR for 12 months 0% intro APR for 12 months from account opening on pur"
+      },
+      {
+        "rate": "3X",
+        "category": "2 : Restaurants Travel Gas Stations Transit Popular Streaming Services Phone Plans"
+      }
+    ],
+    "benefits": [
+      "No Foreign Transaction",
+      "Zero Liability",
+      "Cell Phone Protection",
+      "Auto Rental",
+      "Roadside"
+    ]
+  },
+  {
+    "name": "Our Best Travel Credit Card",
+    "slug": "autograph-journey",
+    "url": "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card",
+    "issuer": "Wells Fargo",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "$95",
+    "welcome_bonus": "Earn 60,000 bonus points when you spend",
+    "earn_rates": [
+      {
+        "rate": "3X",
+        "category": "restaurants and other travel 2"
+      },
+      {
+        "rate": "1X",
+        "category": "other purchases 2"
+      }
+    ],
+    "benefits": [
+      "No Foreign Transaction",
+      "Zero Liability",
+      "Cell Phone Protection",
+      "Auto Rental",
+      "Roadside",
+      "Trip Cancellation",
+      "Baggage"
+    ]
+  },
+  {
+    "name": "Reflect Visa® Credit Card With 0% Intro APR",
+    "slug": "reflect",
+    "url": "https://creditcards.wellsfargo.com/reflect-visa-credit-card",
+    "issuer": "Wells Fargo",
+    "network": "Visa",
+    "country": "US",
+    "category": "Personal",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "benefits": [
+      "Zero Liability",
+      "Cell Phone Protection",
+      "Roadside"
+    ],
+    "earn_rates": []
+  },
+  {
+    "name": "Wells Fargo Signify Business Cash Card",
+    "slug": "signify-business",
+    "url": "https://www.wellsfargo.com/biz/business-credit/credit-cards/",
+    "issuer": "Wells Fargo",
+    "network": "Mastercard",
+    "country": "US",
+    "category": "Business",
+    "card_type": "Credit Card",
+    "fee": "No Annual Fee",
+    "earn_rates": [
+      {
+        "rate": "2%",
+        "category": "All purchases"
+      }
+    ],
+    "welcome_bonus": "$500 cash back after spending $5,000 in first 3 months",
+    "benefits": [
+      "No Foreign Transaction",
+      "Cell Phone Protection",
+      "Zero Liability"
+    ]
+  }
+]
