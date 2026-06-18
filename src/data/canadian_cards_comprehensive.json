@@ -4138,7 +4138,19 @@
     "historical_offers": [],
     "apply_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/compare-cards.html",
     "is_business": true,
-    "cpp_cad": 1.0
+    "cpp_cad": 1.0,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "scotiabank-passport-visa-infinite-business-card",
@@ -4182,7 +4194,19 @@
     "is_business": true,
     "cpp_cad": 1.0,
     "welcome_bonus_points": 40000,
-    "first_year_value_cad": 201
+    "first_year_value_cad": 201,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "scotialine-for-business-visa-credit-card",
@@ -4224,7 +4248,19 @@
     "historical_offers": [],
     "apply_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/compare-cards.html",
     "is_business": true,
-    "cpp_cad": 1.0
+    "cpp_cad": 1.0,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "scotia-home-hardware-pro-visa-business-card",
@@ -4268,7 +4304,19 @@
     "is_business": true,
     "cpp_cad": 1.0,
     "welcome_bonus_points": 7500,
-    "first_year_value_cad": 75
+    "first_year_value_cad": 75,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-aventura-visa-infinite-card",
