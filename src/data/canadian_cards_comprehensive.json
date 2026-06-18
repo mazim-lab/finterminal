@@ -6260,7 +6260,19 @@
     "historical_offers": [],
     "apply_url": "https://www.nbc.ca/business/credit-cards/mastercard-business.html",
     "is_business": true,
-    "cpp_cad": 0.95
+    "cpp_cad": 0.95,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "national-bank-platinum-business-mastercard",
@@ -6302,6 +6314,18 @@
     "cpp_cad": 0.95,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
