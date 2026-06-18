@@ -4440,7 +4440,19 @@
     "is_business": false,
     "cpp_cad": 1.1,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 1261
+    "first_year_value_cad": 1261,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-aventura-visa-card",
@@ -7310,7 +7322,19 @@
     "historical_offers": [],
     "apply_url": "https://www.desjardins.com/qc/en/credit-cards.html",
     "is_business": false,
-    "cpp_cad": 1.0
+    "cpp_cad": 1.0,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "desjardins-cash-back-visa",
@@ -7352,6 +7376,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 10.9
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -7395,7 +7431,19 @@
     "historical_offers": [],
     "apply_url": "https://www.desjardins.com/qc/en/credit-cards.html",
     "is_business": false,
-    "cpp_cad": 1.0
+    "cpp_cad": 1.0,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "desjardins-bonus-visa",
@@ -7440,6 +7488,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 20.9
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -7482,6 +7542,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 10.9
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -7525,6 +7597,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 10.9
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -7569,6 +7653,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 10.9
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -7614,6 +7710,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 10.9
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   }
 ]
