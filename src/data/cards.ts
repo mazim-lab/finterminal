@@ -241,27 +241,32 @@ interface RawUS {
   [key: string]: unknown;
 }
 
-// Default cents-per-point valuations for US rewards programs
-const US_CPP: Record<string, number> = {
-  'points': 1.5,       // Chase Ultimate Rewards, Amex MR (conservative)
-  'miles': 1.3,        // Airline miles
-  'avios': 1.3,        // British Airways / Iberia
-  'skymiles': 1.2,     // Delta
-  'cash back': 100,    // Already dollars (in cents)
-};
+// US rewards valuations — baseline cents-per-point (USD), by program keyword.
+// Source: Frequent Miler / The Points Guy baseline valuations (cross-checked), 2026-06.
+const USD_TO_CAD = 1.37;
+const US_PROGRAM_CPP: [string, number][] = [
+  ['ihg', 0.5], ['hilton', 0.5], ['bonvoy', 0.8], ['marriott', 0.8], ['hyatt', 1.7],
+  ['delta', 1.2], ['skymiles', 1.2], ['united', 1.3], ['southwest', 1.4], ['avios', 1.3],
+  ['membership rewards', 1.5], ['ultimate rewards', 1.5], ['thankyou', 1.3], ['capital one', 1.3],
+  ['cash', 100], ['miles', 1.3], ['points', 1.3],
+];
+function usCpp(text: string): number {
+  const t = text.toLowerCase();
+  for (const [k, v] of US_PROGRAM_CPP) if (t.includes(k)) return v;
+  return 1.3;
+}
 
 function normalizeUS(raw: RawUS): Card {
-  let bonusValue = raw.signup_bonus_value_usd || 0;
-  // If value > 1000 it's raw points, not USD — convert using cpp
-  if (bonusValue > 1000) {
-    const currency = (raw.signup_bonus_currency || 'points').toLowerCase();
-    const cpp = US_CPP[currency] || 1.5;
-    bonusValue = Math.round(bonusValue * cpp / 100);
-  }
+  // Value the signup bonus with a program-specific baseline cpp, then convert USD→CAD.
+  const cppUsd = usCpp(`${raw.name} ${raw.signup_bonus_currency || ''}`);
+  let bonusValueUsd = raw.signup_bonus_value_usd || 0;
+  if (bonusValueUsd > 1000) bonusValueUsd = bonusValueUsd * cppUsd / 100; // raw points → dollars
+  const bonusValue = Math.round(bonusValueUsd * USD_TO_CAD); // CAD
   const fee = raw.annual_fee || 0;
-  const bonusText = raw.signup_bonus_formatted
-    ? `${raw.signup_bonus_formatted} ${raw.signup_bonus_currency || 'points'}`
-    : '';
+  // Prefer the refreshed welcome_bonus text if present, else build from signup fields.
+  const bonusText = (typeof raw.welcome_bonus === 'string' && raw.welcome_bonus.trim())
+    ? String(raw.welcome_bonus)
+    : (raw.signup_bonus_formatted ? `${raw.signup_bonus_formatted} ${raw.signup_bonus_currency || 'points'}` : '');
 
   const card: Card = {
     slug: raw.slug,
@@ -307,7 +312,7 @@ function normalizeUS(raw: RawUS): Card {
   if (allBenefitsFalseUS && fee >= 150) {
     card.benefits_incomplete = true;
   }
-  card.first_year_value = bonusValue - fee;
+  card.first_year_value = Math.round(bonusValue - fee * USD_TO_CAD); // both in CAD
   card.first_year_value_formula = null;
   card.cpp_cad = null;
   card.welcome_bonus_points = null;
