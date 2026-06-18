@@ -5648,7 +5648,19 @@
     "historical_offers": [],
     "apply_url": "https://www.bmo.com/main/personal/credit-cards/all-cards/",
     "is_business": false,
-    "cpp_cad": 0.67
+    "cpp_cad": 0.67,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "bmo-u-s-dollar-mastercard",
