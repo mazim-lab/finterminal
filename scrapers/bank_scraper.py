@@ -413,7 +413,7 @@ def main():
             # Save raw text for debugging
             raw_dir = DATA_DIR / "raw"
             raw_dir.mkdir(parents=True, exist_ok=True)
-            with open(raw_dir / f"{bank_key}_raw.txt", "w") as f:
+            with open(raw_dir / f"{bank_key}_raw.txt", "w", encoding="utf-8") as f:
                 f.write(text)
 
         except Exception as e:
