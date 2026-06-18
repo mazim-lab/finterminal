@@ -8,6 +8,10 @@ out/
 # data
 data/raw/
 
+# python
+__pycache__/
+*.pyc
+
 # misc
 .DS_Store
 *.pem
