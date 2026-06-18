@@ -129,6 +129,18 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -276,6 +288,18 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
     }
   },
   {
@@ -317,6 +341,18 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
     }
   },
   {
@@ -554,6 +590,18 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
     }
   },
   {
@@ -695,7 +743,19 @@
       "All purchases": "10%"
     },
     "welcome_bonus": "Earn 10,000 Bonus Miles",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "business-platinum-card",
