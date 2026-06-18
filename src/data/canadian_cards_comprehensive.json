@@ -1095,7 +1095,19 @@
       "purchases": 21.99,
       "cash_advance": 22.99
     },
-    "min_income": 60000
+    "min_income": 60000,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "td-aeroplan-visa-platinum-credit-card",
@@ -1145,6 +1157,18 @@
     "first_year_value_cad": 410,
     "interest_rates": {
       "purchases": 21.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -1202,7 +1226,19 @@
     "interest_rates": {
       "purchases": 21.99
     },
-    "min_income": 150000
+    "min_income": 150000,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "td-first-class-travel-visa-infinite-card",
@@ -1382,7 +1418,19 @@
       "purchases": 21.99
     },
     "welcome_bonus_points": null,
-    "first_year_value_cad": 100
+    "first_year_value_cad": 100,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "td-low-rate-visa-card",
