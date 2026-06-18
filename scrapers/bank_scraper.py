@@ -29,7 +29,9 @@ import urllib.request
 import ssl
 
 DATA_DIR = Path(__file__).parent.parent / "data"
-WEBSITE_DATA_DIR = Path(__file__).parent.parent / "src" / "data"  # Vercel builds from repo root
+# The live Next.js app (Vercel Root Directory = repo root) imports its card data
+# from src/data/. This is the ONLY directory the deployed site reads.
+WEBSITE_DATA_DIR = Path(__file__).parent.parent / "src" / "data"
 
 # ============================================================
 # Bank scraper configurations
@@ -361,15 +363,15 @@ def build_comprehensive_databases():
 
 
 def save_databases(ca_cards, us_cards):
-    """Save comprehensive databases to both data/ and website/src/data/."""
-    # Save to data/
+    """Save comprehensive databases to data/ (intermediate) and src/data/ (live app)."""
+    # Save to data/ (intermediate build artifact)
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     with open(DATA_DIR / "canadian_cards_comprehensive.json", "w") as f:
         json.dump(ca_cards, f, indent=2)
     with open(DATA_DIR / "us_cards_comprehensive.json", "w") as f:
         json.dump(us_cards, f, indent=2)
 
-    # Save to website/src/data/
+    # Save to src/data/ (the directory the deployed app actually reads)
     WEBSITE_DATA_DIR.mkdir(parents=True, exist_ok=True)
     with open(WEBSITE_DATA_DIR / "canadian_cards_comprehensive.json", "w") as f:
         json.dump(ca_cards, f, indent=2)
