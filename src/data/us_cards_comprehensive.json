@@ -322,7 +322,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn Up To 135,000 Marriott Bonvoy\u00ae Bonus Points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "marriott-bonvoy-brilliant-american-express-card",
@@ -363,7 +365,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn Up To 150,000 Marriott Bonvoy\u00ae Bonus Points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "hilton-honors-american-express-card",
@@ -404,7 +408,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 100,000 Hilton Honors Bonus Points and a $100 Statement Credit",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "hilton-honors-american-express-surpass-card",
@@ -445,7 +451,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 130,000 Hilton Honors Bonus Points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "delta-skymiles-reserve-american-express-card",
@@ -527,7 +535,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 40,000 Membership Rewards\u00ae Points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "hilton-honors-american-express-aspire-card",
@@ -568,7 +578,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 175,000 Hilton Honors Bonus Points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "delta-skymiles-blue-american-express-card",
@@ -609,7 +621,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 10,000 Bonus Miles",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "business-platinum-card",
@@ -735,7 +749,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn a $250 Statement Credit",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "blue-business-plus-credit-card",
@@ -776,7 +792,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 15,000 Membership Rewards\u00ae Points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "delta-skymiles-reserve-business-card",
@@ -817,7 +835,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 125,000 Bonus Miles",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "plum-card",
@@ -899,7 +919,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 15,000 Membership Rewards\u00ae points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "delta-skymiles-platinum-business-card",
@@ -939,7 +961,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 100,000 Bonus Miles",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "marriott-bonvoy-business-card",
@@ -980,7 +1004,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 150,000 Marriott Bonvoy\u00ae Bonus Points and a $125 Statement Credit",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "hilton-honors-business-card",
@@ -1021,7 +1047,9 @@
       "purchases": "21.99%",
       "Card purchases at hotels participating in Marriott Bonvoy": "5x",
       "All purchases": "10%"
-    }
+    },
+    "welcome_bonus": "Earn 130,000 Hilton Honors Bonus Points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "amazon-business-prime-card",
@@ -1151,7 +1179,9 @@
       "purchase_protection": "120",
       "mobile_insurance": "Yes",
       "trip_cancellation": ""
-    }
+    },
+    "welcome_bonus": "Earn 100,000 points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "chase-sapphire-preferred-credit-card",
@@ -1199,7 +1229,9 @@
       "purchase_protection": "",
       "mobile_insurance": "Yes",
       "trip_cancellation": ""
-    }
+    },
+    "welcome_bonus": "Earn 100,000 points (limited-time offer)",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "chase-freedom-unlimited-credit-card",
@@ -1238,7 +1270,9 @@
     "insurance": {
       "purchase_protection": "120",
       "trip_cancellation": "1500"
-    }
+    },
+    "welcome_bonus": "Earn a $200 bonus",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "chase-freedom-flex-credit-card",
@@ -1279,7 +1313,9 @@
       "purchase_protection": "120",
       "mobile_insurance": "Yes",
       "trip_cancellation": "1500"
-    }
+    },
+    "welcome_bonus": "Earn a $200 bonus",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "chase-freedom-rise-credit-card",
@@ -1316,7 +1352,9 @@
     "insurance": {
       "purchase_protection": "120",
       "trip_cancellation": "1500"
-    }
+    },
+    "welcome_bonus": "Establish credit and earn 3% cash back on dining offer (limited-time offer)",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "slate-credit-card",
@@ -1394,7 +1432,9 @@
       "food, beverage and Wi-Fi purchases on board United and United": "25%",
       "food, beverage and Wi-Fi purchases made on board, on Wi-Fi su": "25%",
       "United inflight and Club premium drink purchases You'll get": "25%"
-    }
+    },
+    "welcome_bonus": "Earn up to 60,000 bonus miles",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "united-questsm-card",
@@ -1441,7 +1481,9 @@
       "select streaming services": "2x",
       "other purchases.*TRAVEL PERKSTravel with UnitedStarting w": "1x",
       "United inflight and Club premium drink purchasesYou'll get": "25%"
-    }
+    },
+    "welcome_bonus": "Earn up to 70,000 bonus miles + 500 Premier qualifying points (PQP)",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "united-gatewaysm-card",
@@ -1484,7 +1526,9 @@
       "United inflight andClub premium drinkpurchases*New Cardmember": "25%",
       "United inflight and Club premium drink purchases, * and earn": "25%",
       "United inflight and Club premium drink purchasesYou'll get": "25%"
-    }
+    },
+    "welcome_bonus": "Earn up to 40,000 bonus miles",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "united-clubsm-card",
@@ -1570,7 +1614,9 @@
       "Southwest Airlines purchases and on first $": "2x",
       "other purchases*New Cardmember OfferEarn Compan": "1x",
       "other purchases*New Cardmember OfferEarn Companion Pass\u00ae": "1x"
-    }
+    },
+    "welcome_bonus": "Earn 80,000 bonus points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "southwest-rapid-rewards-priority-credit-card",
@@ -1604,7 +1650,9 @@
     "earn_rates": {
       "Southwest Airlines purchases": "4x",
       "Southwest Airlines\u00ae purchases and": "4x"
-    }
+    },
+    "welcome_bonus": "Earn 90,000 bonus points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "southwest-rapid-rewards-premier-credit-card",
@@ -1642,7 +1690,9 @@
       "inflight purchases on Southwest Airlines\u00ae flights: You will r": "25%",
       "Southwest Airlines inflight purchases": "25%",
       "inflight purchases made by authorized users on your account": "25%"
-    }
+    },
+    "welcome_bonus": "Earn 85,000 bonus points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "marriott-bonvoy-boundless-credit-card",
@@ -1676,7 +1726,9 @@
     },
     "earn_rates": {
       "every $": "6x"
-    }
+    },
+    "welcome_bonus": "Earn 125,000 Bonus Points + 1 Free Night Award",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "marriott-bonvoy-bountiful-credit-card",
@@ -1747,7 +1799,9 @@
       "select categories*New Cardmember OfferEarn": "2x",
       "every $": "3x",
       "MarriottEarn": "14x"
-    }
+    },
+    "welcome_bonus": "Earn 60,000 Bonus Points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "ihg-one-rewards-premier-credit-card",
@@ -1784,7 +1838,9 @@
       "gas and dining*New Cardmember OfferEarn": "5x",
       "travel, dining, and at gas stations.*Earn": "5x",
       "Reward Points PurchasesSave": "20%"
-    }
+    },
+    "welcome_bonus": "Earn up to 185,000 bonus points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "ihg-one-rewards-traveler-credit-card",
@@ -1819,7 +1875,9 @@
       "baggage_delay": "100",
       "purchase_protection": "100",
       "trip_cancellation": ""
-    }
+    },
+    "welcome_bonus": "Earn up to 125,000 Bonus Points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "disney-inspire-visa-card",
@@ -1859,7 +1917,9 @@
     "insurance": {
       "baggage_delay": "100",
       "purchase_protection": "120"
-    }
+    },
+    "welcome_bonus": "$500 Offer: $300 Disney Gift Card eGift upon approval + $200 statement credit",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "disney-premier-visa-card",
@@ -1970,7 +2030,9 @@
       "restaurants, on airline tickets purchased": "2x",
       "other purchases.* Points don't expire as long as your World of Hyatt Credit C": "1x",
       "other purchases.* Points don't expire as long as your Wor": "1x"
-    }
+    },
+    "welcome_bonus": "Earn up to 60,000 Bonus Points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "aeroplan-card",
@@ -2185,7 +2247,9 @@
       "Amazon.com, Amazon Fresh, Whole Foods Market, and on Chase Tr": "5%",
       "gas stations, restaurants, and on local transit and commuting": "2%",
       "Amazon.com, Amazon Fresh, and Whole Foods MarketGet a $": "3%"
-    }
+    },
+    "welcome_bonus": "$200 Amazon Gift Card",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "amazon-visa",
@@ -2265,7 +2329,9 @@
       "purchase_protection": "120",
       "mobile_insurance": "Yes",
       "trip_cancellation": "1500"
-    }
+    },
+    "welcome_bonus": "Free year of DashPass upon approval ($96 value)",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "instacart-mastercard",
@@ -2301,7 +2367,9 @@
       "Chase Travel purchases, including flights, hotels and more.*E": "5%",
       "restaurants, including orders on Instacart powered by Uber Ea": "2%",
       "All purchases": "5%"
-    }
+    },
+    "welcome_bonus": "Get a $50 Instacart credit automatically upon approval",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "sapphire-reserve-for-businesssm-credit-card",
@@ -2350,7 +2418,9 @@
       "purchase_protection": "",
       "mobile_insurance": "Yes",
       "trip_cancellation": ""
-    }
+    },
+    "welcome_bonus": "Earn 200,000 bonus points",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "ink-business-unlimited-credit-card",
@@ -2382,7 +2452,9 @@
     },
     "insurance": {
       "purchase_protection": "120"
-    }
+    },
+    "welcome_bonus": "Earn $1,000 cash back",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "ink-business-preferred-credit-card",
@@ -2450,7 +2522,9 @@
     },
     "insurance": {
       "purchase_protection": "120"
-    }
+    },
+    "welcome_bonus": "Earn $1,000 cash back",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "ink-business-premier-credit-card",
@@ -2485,7 +2559,9 @@
       "every purchaseTurn all your business expenses into rewards with unlimited": "2%",
       "other business purchases.* Redeem your rewards for cash back, gift cards, tra": "2%",
       "All purchases": "2.5%"
-    }
+    },
+    "welcome_bonus": "Earn $1,000 bonus cash back",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "unitedsm-business-card",
@@ -2532,7 +2608,9 @@
       "food, beverage and Wi-Fi purchases on board United and United": "25%",
       "food, beverage and Wi-Fi purchases made on board, on Wi-Fi su": "25%",
       "United inflight and Club premium drink purchases You'll get": "25%"
-    }
+    },
+    "welcome_bonus": "Earn up to 110,000 bonus miles + 2,000 Premier qualifying points (PQP)",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "united-clubsm-business-card",
@@ -2568,7 +2646,9 @@
       "other eligible United purchases": "2x",
       "hotel stays when you prepay": "5x",
       "other purchases*Also, you'll receive a": "1.5x"
-    }
+    },
+    "welcome_bonus": "Earn up to 110,000 bonus miles + 2,000 Premier qualifying points (PQP)",
+    "last_updated": "2026-06-18"
   },
   {
     "slug": "southwest-rapid-rewards-performance-business-credit-card",
@@ -2716,6 +2796,8 @@
       "other purchases.* Explore Additional Business Card Rewards & Benefits Elevate": "1x",
       "Hyatt Hotels": "9x",
       "other purchases.* Explore Additional Business Card Reward": "1x"
-    }
+    },
+    "welcome_bonus": "Earn 60,000 Bonus Points",
+    "last_updated": "2026-06-18"
   }
 ]
