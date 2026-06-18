@@ -20,11 +20,11 @@ const display = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "MoneyAtlas — Cards, Points & Personal Finance for Canadians",
-  description: `Navigate your money. Compare ${allCards.length}+ credit cards, maximize travel points, and master personal finance — built for Canadians.`,
+  title: "Charted — Cards, Points & Personal Finance for Canadians",
+  description: `Chart your money. Compare ${allCards.length}+ credit cards, maximize travel points, and master personal finance — built for Canadians.`,
   openGraph: {
-    title: "MoneyAtlas",
-    description: "Navigate your money — cards, points, and personal finance for Canadians.",
+    title: "Charted",
+    description: "Chart your money — cards, points, and personal finance for Canadians.",
     type: "website",
   },
 };
@@ -61,8 +61,8 @@ function Wordmark({ className = "" }: { className?: string }) {
   return (
     <a href="/" className={`flex items-center gap-2 font-[family-name:var(--font-display)] ${className}`}>
       <span aria-hidden className="text-xl leading-none">🧭</span>
-      <span className="text-2xl leading-none tracking-tight">
-        <span className="text-foreground">Money</span><span className="text-gold-text dark:text-gold">Atlas</span>
+      <span className="text-2xl leading-none tracking-tight text-foreground">
+        Chart<span className="text-gold-text dark:text-gold">ed</span>
       </span>
     </a>
   );
@@ -127,11 +127,11 @@ function Footer() {
             </div>
             <div>
               <h3 className="font-semibold text-sm uppercase tracking-wider mb-4 text-foreground/70">About</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">MoneyAtlas helps Canadians navigate credit cards, travel rewards, and personal finance.</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">Charted helps Canadians navigate credit cards, travel rewards, and personal finance.</p>
             </div>
           </div>
           <div className="mt-10 pt-8 border-t border-border/60 text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} MoneyAtlas. Information only — not financial advice.
+            © {new Date().getFullYear()} Charted. Information only — not financial advice.
           </div>
         </div>
       </div>

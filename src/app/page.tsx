@@ -165,7 +165,7 @@ export default function HomePage() {
       <FadeIn delay={200}>
         <section className="border-t border-border/60 bg-muted/40">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 py-20 text-center">
-            <p className="text-xs uppercase tracking-[0.2em] text-gold-text dark:text-gold font-semibold mb-3">From the Atlas</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-gold-text dark:text-gold font-semibold mb-3">From Charted</p>
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3 font-[family-name:var(--font-display)]">Money, decoded for Canadians</h2>
             <p className="text-muted-foreground mb-7 leading-relaxed">
               Guides on getting US cards as a Canadian, turning points into travel, and making everyday spending work harder.

@@ -42,7 +42,7 @@ export function MobileMenu() {
         <div className="flex items-center justify-between p-4 border-b border-border/50">
           <a href="/" className="text-lg font-[family-name:var(--font-display)]">
             <span aria-hidden className="mr-1">🧭</span>
-            <span className="text-foreground">Money</span><span className="text-gold-text dark:text-gold">Atlas</span>
+            <span className="text-foreground">Chart</span><span className="text-gold-text dark:text-gold">ed</span>
           </a>
           <button onClick={() => setOpen(false)} className="p-2 text-muted-foreground hover:text-foreground" aria-label="Close menu">
             <X className="w-5 h-5" />
