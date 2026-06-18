@@ -1,6 +1,7 @@
 'use client';
 import { useState, createContext, useContext } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Logo } from '@/components/Logo';
 
 const MobileMenuContext = createContext<{ open: boolean; setOpen: (v: boolean) => void }>({ open: false, setOpen: () => {} });
 
@@ -40,8 +41,8 @@ export function MobileMenu() {
       <div className="absolute inset-0 bg-black/50" onClick={() => setOpen(false)} />
       <div className="absolute top-0 left-0 h-full w-72 bg-card shadow-2xl border-r border-border">
         <div className="flex items-center justify-between p-4 border-b border-border/50">
-          <a href="/" className="text-lg font-[family-name:var(--font-display)]">
-            <span aria-hidden className="mr-1">🧭</span>
+          <a href="/" className="flex items-center gap-2 text-lg font-[family-name:var(--font-display)]">
+            <Logo className="w-5 h-5 shrink-0 text-gold-text dark:text-gold" />
             <span className="text-foreground">Chart</span><span className="text-gold-text dark:text-gold">ed</span>
           </a>
           <button onClick={() => setOpen(false)} className="p-2 text-muted-foreground hover:text-foreground" aria-label="Close menu">

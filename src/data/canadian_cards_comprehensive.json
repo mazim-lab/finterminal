@@ -749,53 +749,6 @@
     "cpp_cad": 1.95
   },
   {
-    "slug": "the-platinum-card",
-    "name": "The Platinum Card\u00ae",
-    "issuer": "American Express",
-    "network": "Unknown",
-    "card_type": "rewards",
-    "annual_fee": 799.0,
-    "first_year_fee": null,
-    "welcome_bonus": "Earn up to 170,000 Membership Rewards\u00ae points",
-    "welcome_bonus_value_cad": 3315,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
-    "purchase_interest_rate": null,
-    "cash_advance_rate": null,
-    "balance_transfer_rate": null,
-    "earn_rates": {
-      "dining & food delivery purchases in Canada": "2x",
-      "travel": "2x",
-      "everything else": "1x"
-    },
-    "rewards_program": "membership rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
-    "key_perks": [
-      "Statement credits",
-      "Access to a $200 Annual Travel Credit6",
-      "Unlock access to more than 1,400 airport lounges worldwide with the Global Lounge Collection.7 Terms and Conditions apply.",
-      "Food delivery credits",
-      "Enjoy a $200 Annual Dining Credit at some of Canada\u2019s best restaurants39"
-    ],
-    "insurance": {},
-    "minimum_income": null,
-    "minimum_credit_score": null,
-    "country": "CA",
-    "sources": [],
-    "last_updated": "2026-06-18",
-    "card_image_url": null,
-    "pot_first_year_value": null,
-    "pot_rewards_valuation_cpp": null,
-    "pot_url": null,
-    "historical_offers": [],
-    "apply_url": "https://www.americanexpress.com/en-ca/charge-cards/the-platinum-card",
-    "is_business": false,
-    "cpp_cad": 1.95,
-    "welcome_bonus_points": 170000,
-    "first_year_value_cad": 2516
-  },
-  {
     "slug": "td-cash-back-visa-infinite-card",
     "name": "TD Cash Back Visa Infinite* Card",
     "issuer": "TD",
@@ -1754,7 +1707,7 @@
     "cpp_cad": 1.8
   },
   {
-    "slug": "rbc-ion-visa",
+    "slug": "rbc-ion-visa-2",
     "name": "RBC ION Visa",
     "issuer": "RBC",
     "network": "Visa",

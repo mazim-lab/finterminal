@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { MobileMenu, MobileMenuButton, MobileMenuProvider } from "@/components/MobileMenu";
+import { Logo } from "@/components/Logo";
 import { allCards } from "@/data/cards";
 import "./globals.css";
 
@@ -60,7 +61,7 @@ export default function RootLayout({
 function Wordmark({ className = "" }: { className?: string }) {
   return (
     <a href="/" className={`flex items-center gap-2 font-[family-name:var(--font-display)] ${className}`}>
-      <span aria-hidden className="text-xl leading-none">🧭</span>
+      <Logo className="w-6 h-6 shrink-0 text-gold-text dark:text-gold" />
       <span className="text-2xl leading-none tracking-tight text-foreground">
         Chart<span className="text-gold-text dark:text-gold">ed</span>
       </span>
@@ -122,7 +123,8 @@ function Footer() {
               <h3 className="font-semibold text-sm uppercase tracking-wider mb-4 text-foreground/70">Money</h3>
               <ul className="space-y-2.5 text-sm text-muted-foreground">
                 <li><a href="/blog" className="hover:text-foreground transition-colors">Guides &amp; Articles</a></li>
-                <li><a href="/guides/us-cards-for-canadians" className="hover:text-foreground transition-colors">Guides</a></li>
+                <li><a href="/guides/us-cards-for-canadians" className="hover:text-foreground transition-colors">US Cards for Canadians</a></li>
+                <li><a href="/how-we-value-points" className="hover:text-foreground transition-colors">How we value points</a></li>
               </ul>
             </div>
             <div>

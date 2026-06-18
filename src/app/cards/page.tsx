@@ -212,8 +212,8 @@ function CardsContent() {
       {/* Top bar */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Card Explorer</h1>
-          <p className="text-muted-foreground text-sm">{filtered.length} cards found</p>
+          <h1 className="text-2xl md:text-3xl font-semibold tracking-tight font-[family-name:var(--font-display)]">Card Explorer</h1>
+          <p className="text-muted-foreground text-sm">{filtered.length} cards found · <a href="/how-we-value-points" className="text-gold-text dark:text-gold hover:underline">how we value points</a></p>
         </div>
         <div className="flex items-center gap-3 w-full sm:w-auto">
           <div className="relative flex-1 sm:w-64">
