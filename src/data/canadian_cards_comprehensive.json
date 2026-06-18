@@ -210,7 +210,19 @@
     "is_business": false,
     "cpp_cad": 2.05,
     "welcome_bonus_points": 150000,
-    "first_year_value_cad": 2476
+    "first_year_value_cad": 2476,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "business-platinum-card-from-americanexpress",
@@ -547,7 +559,19 @@
     "is_business": false,
     "cpp_cad": 1.95,
     "welcome_bonus_points": 15000,
-    "first_year_value_cad": 276
+    "first_year_value_cad": 276,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "americanexpressgreen-card",
@@ -591,7 +615,19 @@
     "is_business": false,
     "cpp_cad": 1.95,
     "welcome_bonus_points": 10000,
-    "first_year_value_cad": 195
+    "first_year_value_cad": 195,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "simplycash-preferred-card-from-americanexpress",
@@ -649,7 +685,19 @@
     "historical_offers": [],
     "apply_url": "https://www.americanexpress.com/en-ca/credit-cards/simply-cash-preferred",
     "is_business": false,
-    "cpp_cad": 1.95
+    "cpp_cad": 1.95,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "simplycash-card-from-american-express",
@@ -800,7 +848,19 @@
       "purchases": 21.99
     },
     "welcome_bonus_points": null,
-    "first_year_value_cad": 600
+    "first_year_value_cad": 600,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "td-cash-back-visa-card",
@@ -847,7 +907,19 @@
       "purchases": 21.99
     },
     "welcome_bonus_points": null,
-    "first_year_value_cad": 100
+    "first_year_value_cad": 100,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "td-aeroplan-visa-infinite-card",
@@ -1065,6 +1137,18 @@
     "first_year_value_cad": 730,
     "interest_rates": {
       "purchases": 21.99
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -1117,6 +1201,18 @@
     "first_year_value_cad": 250,
     "interest_rates": {
       "purchases": 21.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -1207,6 +1303,18 @@
     "cpp_cad": 0.5,
     "interest_rates": {
       "purchases": 12.9
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -1242,7 +1350,19 @@
     "historical_offers": [],
     "apply_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/us-dollar/us-dollar-visa-card",
     "is_business": false,
-    "cpp_cad": 0.5
+    "cpp_cad": 0.5,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "td-business-travel-visa-card",
@@ -1293,6 +1413,18 @@
     "first_year_value_cad": 1000,
     "interest_rates": {
       "purchases": 19.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -1349,6 +1481,18 @@
     "first_year_value_cad": 1081,
     "interest_rates": {
       "purchases": 14.99
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
     }
   },
   {
@@ -1397,6 +1541,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 19.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -1432,7 +1588,19 @@
     "historical_offers": [],
     "apply_url": "https://www.td.com/ca/en/business-banking/small-business/credit-cards/business-select-rate-visa-card",
     "is_business": true,
-    "cpp_cad": 0.5
+    "cpp_cad": 0.5,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "rbc-avion-visa-infinite",
@@ -1480,7 +1648,19 @@
     "is_business": false,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 70000,
-    "first_year_value_cad": 1140
+    "first_year_value_cad": 1140,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "rbc-ion-visa",
@@ -1524,7 +1704,19 @@
     "is_business": false,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 28000,
-    "first_year_value_cad": 456
+    "first_year_value_cad": 456,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "westjet-rbc-world-elite-mastercard",
@@ -1571,7 +1763,19 @@
     "is_business": false,
     "cpp_cad": 1.0,
     "welcome_bonus_points": 70000,
-    "first_year_value_cad": 561
+    "first_year_value_cad": 561,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "rbc-cash-back-mastercard",
@@ -1667,6 +1871,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 1.5
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -1704,7 +1920,19 @@
     "historical_offers": [],
     "apply_url": "https://www.rbcroyalbank.com/credit-cards/low-interest/rbc-visa-classic-low-rate.html",
     "is_business": false,
-    "cpp_cad": 1.8
+    "cpp_cad": 1.8,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "rbc-ion-visa-2",
@@ -1748,7 +1976,19 @@
     "is_business": false,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 14000,
-    "first_year_value_cad": 252
+    "first_year_value_cad": 252,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "more-rewards-rbc-visa",
@@ -1794,7 +2034,19 @@
     "is_business": false,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 20000,
-    "first_year_value_cad": 360
+    "first_year_value_cad": 360,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "moi-rbc-visa",
@@ -1837,7 +2089,19 @@
     "is_business": false,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 5000,
-    "first_year_value_cad": 90
+    "first_year_value_cad": 90,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "rbc-avion-visa-platinum",
@@ -2024,7 +2288,19 @@
     "is_business": false,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 60000,
-    "first_year_value_cad": 915
+    "first_year_value_cad": 915,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "rbc-visa-platinum",
@@ -2066,7 +2342,19 @@
     "historical_offers": [],
     "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel/rbc-visa-platinum-avion.html",
     "is_business": false,
-    "cpp_cad": 1.8
+    "cpp_cad": 1.8,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "rbc-u-s-dollar-visa-gold",
@@ -2186,7 +2474,19 @@
     "is_business": false,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 20000,
-    "first_year_value_cad": 360
+    "first_year_value_cad": 360,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "westjet-rbc-world-elite-mastercard-for-business",
@@ -2235,7 +2535,19 @@
     "is_business": true,
     "cpp_cad": 1.0,
     "welcome_bonus_points": 35000,
-    "first_year_value_cad": 175
+    "first_year_value_cad": 175,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "rbc-avion-visa-infinite-business",
@@ -2290,7 +2602,19 @@
     "is_business": true,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 35000,
-    "first_year_value_cad": 455
+    "first_year_value_cad": 455,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "rbc-avion-visa-business",
@@ -2384,7 +2708,19 @@
     "historical_offers": [],
     "apply_url": "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/business-cash-back-mastercard.html",
     "is_business": true,
-    "cpp_cad": 1.0
+    "cpp_cad": 1.0,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "rbc-visa-business-card",
@@ -2427,7 +2763,19 @@
     "historical_offers": [],
     "apply_url": "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/visa-business.html",
     "is_business": true,
-    "cpp_cad": 1.8
+    "cpp_cad": 1.8,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "rbc-visa-creditline-for-small-business",
@@ -2472,7 +2820,19 @@
     "is_business": true,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 1.0,
-    "first_year_value_cad": 0.02
+    "first_year_value_cad": 0.02,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "scotiabank-passport-visa-infinite-card",
@@ -2529,6 +2889,18 @@
     "first_year_value_cad": 450,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2591,6 +2963,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2648,6 +3032,18 @@
     "first_year_value_cad": 450,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2691,6 +3087,18 @@
     "first_year_value_cad": 100,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -2744,6 +3152,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2799,6 +3219,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -2848,6 +3280,18 @@
     "first_year_value_cad": 100,
     "interest_rates": {
       "purchases": 19.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2904,6 +3348,18 @@
     "first_year_value_cad": 401,
     "interest_rates": {
       "purchases": 9.99
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2953,7 +3409,19 @@
     "is_business": false,
     "cpp_cad": 1.0,
     "welcome_bonus_points": 80000,
-    "first_year_value_cad": 201
+    "first_year_value_cad": 201,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "scotia-momentum-mastercard-credit-card",
@@ -2998,6 +3466,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -3038,6 +3518,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 19.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -3080,6 +3572,18 @@
     "first_year_value_cad": 71,
     "interest_rates": {
       "purchases": 13.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -3123,6 +3627,18 @@
     "first_year_value_cad": 100,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -3163,6 +3679,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 13.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -3216,6 +3744,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -3304,6 +3844,18 @@
     "first_year_value_cad": 100,
     "interest_rates": {
       "purchases": 19.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -3524,7 +4076,19 @@
     "is_business": false,
     "cpp_cad": 1.1,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 1261
+    "first_year_value_cad": 1261,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-aeroplan-visa-infinite-card",
@@ -3572,7 +4136,19 @@
     "is_business": false,
     "cpp_cad": 2.05,
     "welcome_bonus_points": 50000,
-    "first_year_value_cad": 886
+    "first_year_value_cad": 886,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "cibc-aventura-visa-infinite-privilege-card",
@@ -3622,7 +4198,19 @@
     "is_business": false,
     "cpp_cad": 1.1,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 2001
+    "first_year_value_cad": 2001,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-aeroplan-visa-infinite-privilege-card",
@@ -3672,7 +4260,19 @@
     "is_business": false,
     "cpp_cad": 2.05,
     "welcome_bonus_points": 100000,
-    "first_year_value_cad": 1451
+    "first_year_value_cad": 1451,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "cibc-aventura-gold-visa-card",
@@ -3763,7 +4363,19 @@
     "is_business": false,
     "cpp_cad": 1.1,
     "welcome_bonus_points": 12500,
-    "first_year_value_cad": 138
+    "first_year_value_cad": 138,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-aeroplan-visa-card",
@@ -3805,7 +4417,19 @@
     "is_business": false,
     "cpp_cad": 2.05,
     "welcome_bonus_points": 10000,
-    "first_year_value_cad": 205
+    "first_year_value_cad": 205,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-adapta-mastercard",
@@ -3844,7 +4468,19 @@
     "is_business": false,
     "cpp_cad": 1.1,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 100
+    "first_year_value_cad": 100,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-dividend-visa-infinite-card",
@@ -3892,7 +4528,19 @@
     "is_business": false,
     "cpp_cad": 1.0,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 350
+    "first_year_value_cad": 350,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-dividend-platinum-visa-card",
@@ -3937,7 +4585,19 @@
     "is_business": false,
     "cpp_cad": 1.0,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 300
+    "first_year_value_cad": 300,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-dividend-visa-card",
@@ -3981,7 +4641,19 @@
     "historical_offers": [],
     "apply_url": "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/dividend-visa-card.html",
     "is_business": false,
-    "cpp_cad": 1.0
+    "cpp_cad": 1.0,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-costco-mastercard",
@@ -4028,7 +4700,19 @@
     "historical_offers": [],
     "apply_url": "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/costco-mastercard.html",
     "is_business": false,
-    "cpp_cad": 1.1
+    "cpp_cad": 1.1,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-adapta-mastercard-for-students",
@@ -4067,7 +4751,19 @@
     "is_business": false,
     "cpp_cad": 1.1,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 150
+    "first_year_value_cad": 150,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-dividend-visa-card-for-students",
@@ -4115,7 +4811,19 @@
     "is_business": false,
     "cpp_cad": 1.0,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 125
+    "first_year_value_cad": 125,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-aventura-visa-card-for-students",
@@ -4158,7 +4866,19 @@
     "is_business": false,
     "cpp_cad": 1.1,
     "welcome_bonus_points": 12500,
-    "first_year_value_cad": 138
+    "first_year_value_cad": 138,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cibc-aeroplan-visa-card-for-students",
@@ -4200,7 +4920,19 @@
     "is_business": false,
     "cpp_cad": 2.05,
     "welcome_bonus_points": 10000,
-    "first_year_value_cad": 205
+    "first_year_value_cad": 205,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "bmo-eclipse-rise-visa-card",
@@ -4246,7 +4978,19 @@
     "is_business": false,
     "cpp_cad": 0.67,
     "welcome_bonus_points": 20000,
-    "first_year_value_cad": 134
+    "first_year_value_cad": 134,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "bmo-eclipse-visa-infinite-card",
@@ -4296,7 +5040,19 @@
     "is_business": false,
     "cpp_cad": 0.67,
     "welcome_bonus_points": 70000,
-    "first_year_value_cad": 469
+    "first_year_value_cad": 469,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "bmo-ascend-world-elite-mastercard",
@@ -4343,7 +5099,19 @@
     "is_business": false,
     "cpp_cad": 0.67,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 1600
+    "first_year_value_cad": 1600,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "bmo-eclipse-visa-infinite-privilege-card",
@@ -4392,7 +5160,19 @@
     "is_business": false,
     "cpp_cad": 0.67,
     "welcome_bonus_points": 200000,
-    "first_year_value_cad": 741
+    "first_year_value_cad": 741,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "bmo-cashback-mastercard",
@@ -4439,7 +5219,19 @@
     "historical_offers": [],
     "apply_url": "https://www.bmo.com/main/personal/credit-cards/bmo-cashback-mastercard/",
     "is_business": false,
-    "cpp_cad": 0.67
+    "cpp_cad": 0.67,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "bmo-preferred-rate-mastercard",
@@ -4532,7 +5324,19 @@
     "is_business": false,
     "cpp_cad": 0.67,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 650
+    "first_year_value_cad": 650,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "bmo-prepaid-mastercard",
@@ -4710,7 +5514,19 @@
     "is_business": false,
     "cpp_cad": 0.67,
     "welcome_bonus_points": 40000,
-    "first_year_value_cad": 179
+    "first_year_value_cad": 179,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "bmo-viporter-world-elite-mastercard",
@@ -4763,7 +5579,19 @@
     "is_business": false,
     "cpp_cad": 0.67,
     "welcome_bonus_points": 70000,
-    "first_year_value_cad": 270
+    "first_year_value_cad": 270,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "bmo-ascend-world-elite-business-mastercard",
@@ -4893,7 +5721,19 @@
     "is_business": false,
     "cpp_cad": 0.95,
     "welcome_bonus_points": 35000,
-    "first_year_value_cad": 182
+    "first_year_value_cad": 182,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "national-bank-syncro-mastercard",
@@ -4986,6 +5826,18 @@
     "cpp_cad": 0.95,
     "interest_rates": {
       "purchases": 20.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -5023,7 +5875,19 @@
     "historical_offers": [],
     "apply_url": "https://www.nbc.ca/business/credit-cards/mastercard-business.html",
     "is_business": true,
-    "cpp_cad": 0.95
+    "cpp_cad": 0.95,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "national-bank-business-line-mastercard",
@@ -5141,7 +6005,19 @@
     "historical_offers": [],
     "apply_url": "https://www.nbc.ca/business/credit-cards/mastercard-corporate.html",
     "is_business": true,
-    "cpp_cad": 0.95
+    "cpp_cad": 0.95,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "mbna-true-line-mastercard",
@@ -5179,6 +6055,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 12.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -5217,6 +6105,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 10.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -5264,6 +6164,18 @@
     "first_year_value_cad": 100,
     "interest_rates": {
       "purchases": 21.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -5311,6 +6223,18 @@
     "first_year_value_cad": 180,
     "interest_rates": {
       "purchases": 21.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -5455,6 +6379,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 10.9
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -5505,7 +6441,19 @@
     "historical_offers": [],
     "apply_url": "https://www.rogersbank.com/en/compare_cards",
     "is_business": false,
-    "cpp_cad": 1.0
+    "cpp_cad": 1.0,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "wealthsimple-cash-back-visa",
@@ -5559,7 +6507,19 @@
     "historical_offers": [],
     "apply_url": "https://www.wealthsimple.com/en-ca/credit-card",
     "is_business": false,
-    "cpp_cad": 1.0
+    "cpp_cad": 1.0,
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "neo-mastercard",
@@ -5603,7 +6563,19 @@
     "historical_offers": [],
     "apply_url": "https://www.neofinancial.com/credit-cards/neo-mastercard",
     "is_business": false,
-    "cpp_cad": 1.0
+    "cpp_cad": 1.0,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "neo-world-mastercard",
@@ -5651,6 +6623,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 10.99
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -5706,6 +6690,18 @@
     "cpp_cad": 1.0,
     "interest_rates": {
       "purchases": 21.99
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -5755,7 +6751,19 @@
     "is_business": false,
     "cpp_cad": 1.0,
     "welcome_bonus_points": null,
-    "first_year_value_cad": 100
+    "first_year_value_cad": 100,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "pc-mastercard",
@@ -5801,7 +6809,19 @@
     "is_business": false,
     "cpp_cad": 0.7,
     "welcome_bonus_points": 50000,
-    "first_year_value_cad": 350
+    "first_year_value_cad": 350,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "pc-world-mastercard",
@@ -5846,7 +6866,19 @@
     "is_business": false,
     "cpp_cad": 0.7,
     "welcome_bonus_points": 50000,
-    "first_year_value_cad": 350
+    "first_year_value_cad": 350,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "pc-world-elite-mastercard",
@@ -5897,7 +6929,19 @@
     "is_business": false,
     "cpp_cad": 0.7,
     "welcome_bonus_points": 50000,
-    "first_year_value_cad": 350
+    "first_year_value_cad": 350,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "pc-insiders-world-elite-mastercard",
@@ -5945,7 +6989,19 @@
     "is_business": false,
     "cpp_cad": 0.7,
     "welcome_bonus_points": 50000,
-    "first_year_value_cad": 350
+    "first_year_value_cad": 350,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "cash-advantage-mastercard",
@@ -6035,7 +7091,19 @@
     "historical_offers": [],
     "apply_url": "https://www.ctfs.com/content/ctfs3/en/homepage.html",
     "is_business": false,
-    "cpp_cad": 0.5
+    "cpp_cad": 0.5,
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "triangle-world-elite-mastercard",

@@ -1181,7 +1181,19 @@
       "trip_cancellation": ""
     },
     "welcome_bonus": "Earn 100,000 points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "chase-sapphire-preferred-credit-card",
@@ -1231,7 +1243,19 @@
       "trip_cancellation": ""
     },
     "welcome_bonus": "Earn 100,000 points (limited-time offer)",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "chase-freedom-unlimited-credit-card",
@@ -1272,7 +1296,19 @@
       "trip_cancellation": "1500"
     },
     "welcome_bonus": "Earn a $200 bonus",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "chase-freedom-flex-credit-card",
@@ -1315,7 +1351,19 @@
       "trip_cancellation": "1500"
     },
     "welcome_bonus": "Earn a $200 bonus",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "chase-freedom-rise-credit-card",
@@ -1354,7 +1402,19 @@
       "trip_cancellation": "1500"
     },
     "welcome_bonus": "Establish credit and earn 3% cash back on dining offer (limited-time offer)",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "slate-credit-card",
@@ -1383,6 +1443,18 @@
     "apply_url": "https://creditcards.chase.com/balance-transfer-credit-cards/slate",
     "insurance": {
       "purchase_protection": "120"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -1434,7 +1506,19 @@
       "United inflight and Club premium drink purchases You'll get": "25%"
     },
     "welcome_bonus": "Earn up to 60,000 bonus miles",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "united-questsm-card",
@@ -1483,7 +1567,19 @@
       "United inflight and Club premium drink purchasesYou'll get": "25%"
     },
     "welcome_bonus": "Earn up to 70,000 bonus miles + 500 Premier qualifying points (PQP)",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "united-gatewaysm-card",
@@ -1528,7 +1624,19 @@
       "United inflight and Club premium drink purchasesYou'll get": "25%"
     },
     "welcome_bonus": "Earn up to 40,000 bonus miles",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "united-clubsm-card",
@@ -1579,6 +1687,18 @@
       "purchase_protection": "",
       "mobile_insurance": "Yes",
       "trip_cancellation": ""
+    },
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
     }
   },
   {
@@ -1616,7 +1736,19 @@
       "other purchases*New Cardmember OfferEarn Companion Pass\u00ae": "1x"
     },
     "welcome_bonus": "Earn 80,000 bonus points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "southwest-rapid-rewards-priority-credit-card",
@@ -1652,7 +1784,19 @@
       "Southwest Airlines\u00ae purchases and": "4x"
     },
     "welcome_bonus": "Earn 90,000 bonus points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "southwest-rapid-rewards-premier-credit-card",
@@ -1692,7 +1836,19 @@
       "inflight purchases made by authorized users on your account": "25%"
     },
     "welcome_bonus": "Earn 85,000 bonus points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "marriott-bonvoy-boundless-credit-card",
@@ -1728,7 +1884,19 @@
       "every $": "6x"
     },
     "welcome_bonus": "Earn 125,000 Bonus Points + 1 Free Night Award",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "marriott-bonvoy-bountiful-credit-card",
@@ -1763,6 +1931,18 @@
     "insurance": {
       "baggage_delay": "100",
       "purchase_protection": ""
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -1801,7 +1981,19 @@
       "MarriottEarn": "14x"
     },
     "welcome_bonus": "Earn 60,000 Bonus Points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "ihg-one-rewards-premier-credit-card",
@@ -1840,7 +2032,19 @@
       "Reward Points PurchasesSave": "20%"
     },
     "welcome_bonus": "Earn up to 185,000 bonus points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "ihg-one-rewards-traveler-credit-card",
@@ -1877,7 +2081,19 @@
       "trip_cancellation": ""
     },
     "welcome_bonus": "Earn up to 125,000 Bonus Points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "disney-inspire-visa-card",
@@ -1919,7 +2135,19 @@
       "purchase_protection": "120"
     },
     "welcome_bonus": "$500 Offer: $300 Disney Gift Card eGift upon approval + $200 statement credit",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "disney-premier-visa-card",
@@ -1961,6 +2189,18 @@
     "insurance": {
       "baggage_delay": "100",
       "purchase_protection": "120"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -1994,6 +2234,18 @@
     },
     "earn_rates": {
       "select purchases at DisneyStore.com when you use your Disney": "10%"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2032,7 +2284,19 @@
       "other purchases.* Points don't expire as long as your Wor": "1x"
     },
     "welcome_bonus": "Earn up to 60,000 Bonus Points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "aeroplan-card",
@@ -2135,6 +2399,18 @@
       "hotel accommodations booked": "2x",
       "other purchases.* EXCLUSIVE OFFER": "1x",
       "other purchases": "1x"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2173,6 +2449,18 @@
     "insurance": {
       "baggage_delay": "100",
       "purchase_protection": ""
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2211,6 +2499,18 @@
       "other purchases.* TRAVEL TOGETHER $": "1x",
       "other purchases": "1x",
       "Iberia, British Airways, and Aer Lingus flight purchases": "3x"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2249,7 +2549,19 @@
       "Amazon.com, Amazon Fresh, and Whole Foods MarketGet a $": "3%"
     },
     "welcome_bonus": "$200 Amazon Gift Card",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "amazon-visa",
@@ -2289,6 +2601,18 @@
       "Amazon.com, Amazon Fresh, and Whole Foods Market with an elig": "5%",
       "Amazon.com, Whole Foods Markets and the participating Amazon": "3%",
       "each $": "2%"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
     }
   },
   {
@@ -2331,7 +2655,19 @@
       "trip_cancellation": "1500"
     },
     "welcome_bonus": "Free year of DashPass upon approval ($96 value)",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "instacart-mastercard",
@@ -2369,7 +2705,19 @@
       "All purchases": "5%"
     },
     "welcome_bonus": "Get a $50 Instacart credit automatically upon approval",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "sapphire-reserve-for-businesssm-credit-card",
@@ -2420,7 +2768,19 @@
       "trip_cancellation": ""
     },
     "welcome_bonus": "Earn 200,000 bonus points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "ink-business-unlimited-credit-card",
@@ -2561,7 +2921,19 @@
       "All purchases": "2.5%"
     },
     "welcome_bonus": "Earn $1,000 bonus cash back",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": true,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "unitedsm-business-card",
@@ -2610,7 +2982,19 @@
       "United inflight and Club premium drink purchases You'll get": "25%"
     },
     "welcome_bonus": "Earn up to 110,000 bonus miles + 2,000 Premier qualifying points (PQP)",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "united-clubsm-business-card",
@@ -2648,7 +3032,19 @@
       "other purchases*Also, you'll receive a": "1.5x"
     },
     "welcome_bonus": "Earn up to 110,000 bonus miles + 2,000 Premier qualifying points (PQP)",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
+    }
   },
   {
     "slug": "southwest-rapid-rewards-performance-business-credit-card",
@@ -2683,6 +3079,18 @@
       "other purchases": "1x",
       "inflight purchases.*Turn your buys into Southwest flysEarn": "25%",
       "All purchases": "4x"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
     }
   },
   {
@@ -2722,6 +3130,18 @@
       "Southwest Airlines inflight purchases": "25%",
       "inflight purchases made by employees on your account": "25%",
       "All purchases": "3x"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
+      "free_checked_bags": true
     }
   },
   {
@@ -2759,6 +3179,18 @@
       "points purchases when you pay for those points with your IHG": "20%",
       "reward points purchases Save": "20%",
       "All purchases": "10x"
+    },
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": true,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": true,
+      "extended_warranty": false,
+      "free_checked_bags": false
     }
   },
   {
@@ -2798,6 +3230,18 @@
       "other purchases.* Explore Additional Business Card Reward": "1x"
     },
     "welcome_bonus": "Earn 60,000 Bonus Points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   }
 ]
