@@ -358,7 +358,19 @@
       "All purchases": "10%"
     },
     "welcome_bonus": "Earn Up To 135,000 Marriott Bonvoy\u00ae Bonus Points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "marriott-bonvoy-brilliant-american-express-card",
@@ -401,7 +413,19 @@
       "All purchases": "10%"
     },
     "welcome_bonus": "Earn Up To 150,000 Marriott Bonvoy\u00ae Bonus Points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": true,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "hilton-honors-american-express-card",
@@ -662,7 +686,19 @@
       "All purchases": "10%"
     },
     "welcome_bonus": "Earn 175,000 Hilton Honors Bonus Points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
+      "travel_medical": true,
+      "trip_cancellation": true,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "delta-skymiles-blue-american-express-card",
@@ -912,7 +948,19 @@
       "All purchases": "10%"
     },
     "welcome_bonus": "Earn 15,000 Membership Rewards\u00ae Points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": false,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": false,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "delta-skymiles-reserve-business-card",
@@ -1010,7 +1058,19 @@
       "All purchases": "10%"
     },
     "welcome_bonus": "Earn 15,000 Membership Rewards\u00ae points",
-    "last_updated": "2026-06-18"
+    "last_updated": "2026-06-18",
+    "benefits": {
+      "lounge_access": false,
+      "no_fx_fee": false,
+      "car_rental_insurance": true,
+      "travel_medical": false,
+      "trip_cancellation": false,
+      "flight_delay": true,
+      "mobile_insurance": false,
+      "purchase_protection": false,
+      "extended_warranty": false,
+      "free_checked_bags": false
+    }
   },
   {
     "slug": "delta-skymiles-platinum-business-card",
