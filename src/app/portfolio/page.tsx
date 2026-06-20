@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
-import { POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, TOTAL_RETURN_PCT } from "@/data/portfolio";
+import { POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, TOTAL_RETURN_PCT, PORTFOLIO_HISTORY } from "@/data/portfolio";
+import { ReturnChart } from "@/components/ReturnChart";
 
 export const metadata: Metadata = {
   title: "Current Portfolio — FinTerminal",
@@ -56,6 +57,18 @@ export default function PortfolioPage() {
             Positions are mostly long-dated options, which public price feeds don&apos;t quote, so values come
             straight from my brokerage twice a week. The convictions and theses below are live now.
           </div>
+        )}
+
+        <div className="cd-sec">Performance</div>
+        {PORTFOLIO_HISTORY.length >= 2 ? (
+          <div className="tablewrap" style={{ padding: "16px 18px 8px", marginBottom: 6 }}>
+            <ReturnChart points={PORTFOLIO_HISTORY} />
+            <div className="foot" style={{ borderTop: "none", paddingTop: 4 }}>
+              <span>portfolio return % over time · marked from brokerage snapshots</span>
+            </div>
+          </div>
+        ) : (
+          <div className="cd-empty">The return chart builds as snapshots come in (twice weekly). It will plot portfolio return % by date here.</div>
         )}
 
         <div className="tablewrap">

@@ -32,6 +32,14 @@ export const SNAPSHOT_PENDING = true;
 /** Whole-portfolio unrealized return %, computed privately from dollars (no $ exposed). */
 export const TOTAL_RETURN_PCT: number | null = null;
 
+/** One point per snapshot (or month-end statement). y-axis is portfolio return %. */
+export interface HistoryPoint {
+  date: string;       // "2026-06-20" or "2026-06"
+  returnPct: number;  // total portfolio return % at that date
+}
+// Each twice-weekly snapshot appends a point here; backfill from month-end statements.
+export const PORTFOLIO_HISTORY: HistoryPoint[] = [];
+
 // Combined TFSA + RRSP. Mostly long-dated LEAPS calls plus two share positions.
 export const POSITIONS: Position[] = [
   { ticker: "AMD", name: "Advanced Micro Devices", theme: "AI & semis", tags: ["compute"], position: "2027 LEAPS calls", thesis: "The credible second source in AI accelerators and data-center CPUs, with room to take share." },
