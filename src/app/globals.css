@@ -56,14 +56,6 @@ input[type="checkbox"]:checked {
 
 .atlas-rule { height: 1px; background: linear-gradient(to right, transparent, color-mix(in srgb, var(--color-primary) 55%, transparent), transparent); }
 
-/* Blog gradient placeholders — green board tones */
-.blog-gradient-1 { background: linear-gradient(135deg, #11201a 0%, #1c3a2c 50%, #46b36c 100%); }
-.blog-gradient-2 { background: linear-gradient(135deg, #1c3a2c 0%, #0e1110 50%, #6fc98a 100%); }
-.blog-gradient-3 { background: linear-gradient(135deg, #0e1110 0%, #11201a 50%, #2f8a50 100%); }
-.blog-gradient-4 { background: linear-gradient(135deg, #14130f 0%, #11201a 50%, #46b36c 100%); }
-.blog-gradient-5 { background: linear-gradient(135deg, #1a201c 0%, #1c3a2c 50%, #6fc98a 100%); }
-.blog-gradient-6 { background: linear-gradient(135deg, #242b27 0%, #11201a 50%, #46b36c 100%); }
-
 /* Guide prose (secondary pages) */
 .prose-guide p { color: var(--color-muted-foreground); margin-bottom: 1rem; line-height: 1.75; }
 .prose-guide ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--color-muted-foreground); }
