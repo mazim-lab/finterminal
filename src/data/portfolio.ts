@@ -30,17 +30,17 @@ export const LAST_UPDATED: string | null = "2026-06-20";
 /** True until the first market-value snapshot is applied. */
 export const SNAPSHOT_PENDING = false;
 /**
- * All-time return, anchored to Wealthsimple's reported money-weighted figures:
- * RRSP 360.43% and TFSA 140.71%, blended by net deposits (~59/41) = +270%.
+ * All-time return from Wealthsimple's reported money-weighted figures (combined accounts):
+ * figures redacted (TFSA +140.71% / RRSP +360.43%) = +268.0%.
  */
-export const ALLTIME_RETURN_PCT: number | null = 270.1;
+export const ALLTIME_RETURN_PCT: number | null = 268.0;
 /** Unrealized return on the current open book only (vs book cost). */
 export const OPEN_BOOK_RETURN_PCT: number | null = -24.0;
 
 /**
- * Approximate cumulative-return build-up by month. Shape is computed from the activity
- * log (when gains were realized); the level is scaled to Wealthsimple's all-time figure,
- * since exact month-end portfolio values aren't in the export.
+ * Cumulative return % by month, read from Wealthsimple's per-account performance graphs
+ * (ALL range, Returns view) and blended by net deposits (RRSP ~58% / TFSA ~42%). Approximate
+ * monthly reads off the charts; the endpoint matches the exact combined all-time figure.
  */
 export interface HistoryPoint {
   date: string;       // "2024-12"
@@ -48,24 +48,24 @@ export interface HistoryPoint {
 }
 export const PORTFOLIO_HISTORY: HistoryPoint[] = [
   { date: "2024-12", returnPct: 0.0 },
-  { date: "2025-01", returnPct: -1.3 },
-  { date: "2025-02", returnPct: 10.5 },
-  { date: "2025-03", returnPct: 36.4 },
-  { date: "2025-04", returnPct: 57.2 },
-  { date: "2025-05", returnPct: 54.9 },
-  { date: "2025-06", returnPct: 54.9 },
-  { date: "2025-07", returnPct: 68.8 },
-  { date: "2025-08", returnPct: 62.4 },
-  { date: "2025-09", returnPct: 62.5 },
-  { date: "2025-10", returnPct: 67.6 },
-  { date: "2025-11", returnPct: 87.1 },
-  { date: "2025-12", returnPct: 86.4 },
-  { date: "2026-01", returnPct: 108.2 },
-  { date: "2026-02", returnPct: 163.1 },
-  { date: "2026-03", returnPct: 156.5 },
-  { date: "2026-04", returnPct: 221.3 },
-  { date: "2026-05", returnPct: 251.8 },
-  { date: "2026-06", returnPct: 270.1 },
+  { date: "2025-01", returnPct: -6.7 },
+  { date: "2025-02", returnPct: -1.2 },
+  { date: "2025-03", returnPct: 23.9 },
+  { date: "2025-04", returnPct: 31.0 },
+  { date: "2025-05", returnPct: 38.9 },
+  { date: "2025-06", returnPct: 49.7 },
+  { date: "2025-07", returnPct: 67.6 },
+  { date: "2025-08", returnPct: 74.2 },
+  { date: "2025-09", returnPct: 90.0 },
+  { date: "2025-10", returnPct: 105.8 },
+  { date: "2025-11", returnPct: 133.2 },
+  { date: "2025-12", returnPct: 141.4 },
+  { date: "2026-01", returnPct: 125.1 },
+  { date: "2026-02", returnPct: 147.4 },
+  { date: "2026-03", returnPct: 169.0 },
+  { date: "2026-04", returnPct: 206.4 },
+  { date: "2026-05", returnPct: 248.0 },
+  { date: "2026-06", returnPct: 268.0 },
 ];
 
 // Combined TFSA + RRSP. Mostly long-dated LEAPS calls plus two share positions.
