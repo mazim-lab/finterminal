@@ -29,37 +29,38 @@ export interface Position {
 export const LAST_UPDATED: string | null = "2026-06-20";
 /** True until the first market-value snapshot is applied. */
 export const SNAPSHOT_PENDING = false;
-/** Lifetime realized (banked) return since Jan 2025, as % of capital contributed. */
-export const REALIZED_RETURN_PCT: number | null = 132.9;
+/** Lifetime realized (banked) return since inception, as % of capital contributed. */
+export const REALIZED_RETURN_PCT: number | null = 340.0;
 /** All-in lifetime return (realized + current open-position unrealized), % of contributions. */
-export const LIFETIME_RETURN_PCT: number | null = 115.2;
+export const LIFETIME_RETURN_PCT: number | null = 304.3;
 /** Unrealized return on the current open book only (vs book cost). */
 export const OPEN_BOOK_RETURN_PCT: number | null = -24.0;
 
 /** One point per month. y-axis is cumulative realized return %, computed from the activity log. */
 export interface HistoryPoint {
-  date: string;       // "2025-01"
+  date: string;       // "2024-12"
   returnPct: number;  // cumulative realized return % at that date
 }
 export const PORTFOLIO_HISTORY: HistoryPoint[] = [
-  { date: "2025-01", returnPct: 0.0 },
-  { date: "2025-02", returnPct: -0.8 },
-  { date: "2025-03", returnPct: -2.0 },
-  { date: "2025-04", returnPct: -2.0 },
-  { date: "2025-05", returnPct: -0.9 },
-  { date: "2025-06", returnPct: -0.7 },
-  { date: "2025-07", returnPct: 5.7 },
-  { date: "2025-08", returnPct: 1.4 },
-  { date: "2025-09", returnPct: 1.4 },
-  { date: "2025-10", returnPct: 4.6 },
-  { date: "2025-11", returnPct: 16.8 },
-  { date: "2025-12", returnPct: 16.4 },
-  { date: "2026-01", returnPct: 29.7 },
-  { date: "2026-02", returnPct: 63.2 },
-  { date: "2026-03", returnPct: 62.0 },
-  { date: "2026-04", returnPct: 102.4 },
-  { date: "2026-05", returnPct: 121.5 },
-  { date: "2026-06", returnPct: 132.9 },
+  { date: "2024-12", returnPct: 0.0 },
+  { date: "2025-01", returnPct: -1.6 },
+  { date: "2025-02", returnPct: 13.2 },
+  { date: "2025-03", returnPct: 45.8 },
+  { date: "2025-04", returnPct: 72.0 },
+  { date: "2025-05", returnPct: 69.1 },
+  { date: "2025-06", returnPct: 69.1 },
+  { date: "2025-07", returnPct: 86.6 },
+  { date: "2025-08", returnPct: 78.6 },
+  { date: "2025-09", returnPct: 78.7 },
+  { date: "2025-10", returnPct: 85.1 },
+  { date: "2025-11", returnPct: 109.7 },
+  { date: "2025-12", returnPct: 108.8 },
+  { date: "2026-01", returnPct: 136.3 },
+  { date: "2026-02", returnPct: 205.4 },
+  { date: "2026-03", returnPct: 197.1 },
+  { date: "2026-04", returnPct: 278.6 },
+  { date: "2026-05", returnPct: 317.1 },
+  { date: "2026-06", returnPct: 340.0 },
 ];
 
 // Combined TFSA + RRSP. Mostly long-dated LEAPS calls plus two share positions.

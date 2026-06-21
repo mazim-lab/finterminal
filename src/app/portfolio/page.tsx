@@ -42,7 +42,7 @@ export default function PortfolioPage() {
           <div className="stat">
             <div className="l">Realized return</div>
             <div className="v gd">{typeof REALIZED_RETURN_PCT === "number" ? pct(REALIZED_RETURN_PCT) : "—"}</div>
-            <div className="d">banked, since Jan 2025</div>
+            <div className="d">banked, since inception</div>
           </div>
           <div className="stat">
             <div className="l">Holdings</div>
@@ -64,7 +64,7 @@ export default function PortfolioPage() {
           <div className="tablewrap" style={{ padding: "16px 18px 8px", marginBottom: 6 }}>
             <ReturnChart points={PORTFOLIO_HISTORY} />
             <div className="foot" style={{ borderTop: "none", paddingTop: 4 }}>
-              <span>cumulative realized return since Jan 2025</span>
+              <span>cumulative realized return since inception (Dec 2024)</span>
               <span>
                 all-in {typeof LIFETIME_RETURN_PCT === "number" ? pct(LIFETIME_RETURN_PCT) : "—"} ·
                 open book {typeof OPEN_BOOK_RETURN_PCT === "number" ? pct(OPEN_BOOK_RETURN_PCT) : "—"} unrealized
