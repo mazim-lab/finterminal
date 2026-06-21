@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
-import { POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, ALLTIME_RETURN_PCT, OPEN_BOOK_RETURN_PCT, PORTFOLIO_HISTORY } from "@/data/portfolio";
+import { POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, ALLTIME_RETURN_PCT, OPEN_BOOK_RETURN_PCT, PORTFOLIO_HISTORY, TOP_PROFIT, TOP_LOSS } from "@/data/portfolio";
 import { ReturnChart } from "@/components/ReturnChart";
 
 export const metadata: Metadata = {
@@ -13,8 +13,6 @@ const pct = (n: number) => (n < 0 ? "−" : "+") + Math.abs(n).toFixed(1) + "%";
 export default function PortfolioPage() {
   const withNums = POSITIONS.filter((p) => typeof p.returnPct === "number");
   const ranked = [...withNums].sort((a, b) => (b.weightPct ?? 0) - (a.weightPct ?? 0));
-  const best = withNums.length ? withNums.reduce((a, b) => ((b.returnPct ?? 0) > (a.returnPct ?? 0) ? b : a)) : null;
-  const worst = withNums.length ? withNums.reduce((a, b) => ((b.returnPct ?? 0) < (a.returnPct ?? 0) ? b : a)) : null;
   const maxWeight = Math.max(1, ...withNums.map((p) => p.weightPct ?? 0));
 
   // Until the first snapshot, show positions in a stable, readable order.
@@ -31,13 +29,13 @@ export default function PortfolioPage() {
         <div className="stats">
           <div className="stat">
             <div className="l">Highest profit</div>
-            <div className="v em">{best ? pct(best.returnPct as number) : "—"}</div>
-            <div className="d">{best ? best.ticker : "pending snapshot"}</div>
+            <div className="v em">{TOP_PROFIT.ticker}</div>
+            <div className="d">{TOP_PROFIT.label}</div>
           </div>
           <div className="stat">
             <div className="l">Highest loss</div>
-            <div className="v" style={{ color: "var(--red)" }}>{worst ? pct(worst.returnPct as number) : "—"}</div>
-            <div className="d">{worst ? worst.ticker : "pending snapshot"}</div>
+            <div className="v" style={{ color: "var(--red)" }}>{TOP_LOSS.ticker}</div>
+            <div className="d">{TOP_LOSS.label}</div>
           </div>
           <div className="stat">
             <div className="l">Total return</div>

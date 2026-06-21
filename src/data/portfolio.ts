@@ -38,6 +38,15 @@ export const ALLTIME_RETURN_PCT: number | null = 268.0;
 export const OPEN_BOOK_RETURN_PCT: number | null = -24.0;
 
 /**
+ * Biggest winner / loser by total profit per underlying (all realized buys/sells across the
+ * full history + current unrealized), computed in private/by_ticker.py. We show the ticker,
+ * not a %, because per-ticker cost basis (the % denominator) is distorted by account-merge
+ * transfers. Ranking by total profit is reliable.
+ */
+export const TOP_PROFIT = { ticker: "INTC", label: "biggest gain · realized + open" };
+export const TOP_LOSS = { ticker: "FXI", label: "biggest loss · mostly open" };
+
+/**
  * Cumulative return % by month, read from Wealthsimple's per-account performance graphs
  * (ALL range, Returns view) and blended by net deposits (RRSP ~58% / TFSA ~42%). Approximate
  * monthly reads off the charts; the endpoint matches the exact combined all-time figure.
