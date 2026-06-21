@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
-import { POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, ALLTIME_RETURN_PCT, OPEN_BOOK_RETURN_PCT, PORTFOLIO_HISTORY, TOP_PROFIT, TOP_LOSS } from "@/data/portfolio";
+import { POSITIONS, CLOSED_POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, ALLTIME_RETURN_PCT, OPEN_BOOK_RETURN_PCT, PORTFOLIO_HISTORY, TOP_PROFIT, TOP_LOSS } from "@/data/portfolio";
 import { ReturnChart } from "@/components/ReturnChart";
 
 export const metadata: Metadata = {
@@ -59,7 +59,7 @@ export default function PortfolioPage() {
 
         <div className="cd-sec">Performance</div>
         {PORTFOLIO_HISTORY.length >= 2 ? (
-          <div className="tablewrap" style={{ padding: "14px 16px 6px", marginBottom: 6, maxWidth: 600 }}>
+          <div className="tablewrap" style={{ padding: "16px 20px 8px", marginBottom: 6, maxWidth: 1100 }}>
             <ReturnChart points={PORTFOLIO_HISTORY} />
             <div className="foot" style={{ borderTop: "none", paddingTop: 4 }}>
               <span>cumulative return since Dec 2024</span>
@@ -70,44 +70,74 @@ export default function PortfolioPage() {
           <div className="cd-empty">The return chart builds as snapshots come in. It will plot portfolio return % by date here.</div>
         )}
 
-        <div className="cd-sec">Current Positions</div>
-        <div className="tablewrap">
-          <div className="tablescroll">
-            <table>
-              <thead><tr>
-                <th>Position</th><th>Theme</th><th>Type</th>
-                <th className="r">Return</th><th className="r">Weight</th>
-              </tr></thead>
-              <tbody>
-                {rows.map((p) => (
-                  <tr key={p.ticker}>
-                    <td>
-                      <div className="cn">{p.ticker} · {p.name}</div>
-                      <div className="ci" style={{ textTransform: "none", whiteSpace: "normal", maxWidth: 520 }}>{p.thesis}</div>
-                    </td>
-                    <td>
-                      <span className="tag em">{p.theme}</span>
-                      {p.tags.map((t) => <span key={t} className="tag">{t}</span>)}
-                    </td>
-                    <td className="mono" style={{ color: "var(--ink-soft)", fontSize: 12, whiteSpace: "nowrap" }}>{p.position}</td>
-                    <td className={`r mono ${typeof p.returnPct === "number" ? (p.returnPct < 0 ? "negv" : "pos") : ""}`}>
-                      {typeof p.returnPct === "number" ? pct(p.returnPct) : "—"}
-                    </td>
-                    <td className="r">
-                      {typeof p.weightPct === "number"
-                        ? <span className="vbar" style={{ "--w": `${((p.weightPct ?? 0) / maxWeight) * 100}%` } as CSSProperties} />
-                        : <span className="mono" style={{ color: "var(--ink-dim)" }}>—</span>}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <details className="coll" open>
+          <summary className="cd-sec">Current Positions</summary>
+          <div className="tablewrap">
+            <div className="tablescroll">
+              <table>
+                <thead><tr>
+                  <th>Position</th><th>Theme</th><th>Type</th>
+                  <th className="r">Return</th><th className="r">Weight</th>
+                </tr></thead>
+                <tbody>
+                  {rows.map((p) => (
+                    <tr key={p.ticker}>
+                      <td>
+                        <div className="cn">{p.ticker} · {p.name}</div>
+                        <div className="ci" style={{ textTransform: "none", whiteSpace: "normal", maxWidth: 520 }}>{p.thesis}</div>
+                      </td>
+                      <td>
+                        <span className="tag em">{p.theme}</span>
+                        {p.tags.map((t) => <span key={t} className="tag">{t}</span>)}
+                      </td>
+                      <td className="mono" style={{ color: "var(--ink-soft)", fontSize: 12, whiteSpace: "nowrap" }}>{p.position}</td>
+                      <td className={`r mono ${typeof p.returnPct === "number" ? (p.returnPct < 0 ? "negv" : "pos") : ""}`}>
+                        {typeof p.returnPct === "number" ? pct(p.returnPct) : "—"}
+                      </td>
+                      <td className="r">
+                        {typeof p.weightPct === "number"
+                          ? <span className="vbar" style={{ "--w": `${((p.weightPct ?? 0) / maxWeight) * 100}%` } as CSSProperties} />
+                          : <span className="mono" style={{ color: "var(--ink-dim)" }}>—</span>}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="foot">
+              <span>combined registered accounts · percentages only, no dollar figures shown</span>
+              <span>thesis articles coming soon</span>
+            </div>
           </div>
-          <div className="foot">
-            <span>combined registered accounts · percentages only, no dollar figures shown</span>
-            <span>thesis articles coming soon</span>
+        </details>
+
+        <details className="coll" style={{ marginTop: 8 }}>
+          <summary className="cd-sec">Closed Positions</summary>
+          <div className="tablewrap">
+            <div className="tablescroll">
+              <table>
+                <thead><tr>
+                  <th>Position</th><th>Theme</th><th className="r">Realized return</th>
+                </tr></thead>
+                <tbody>
+                  {CLOSED_POSITIONS.map((c) => (
+                    <tr key={c.ticker}>
+                      <td><div className="cn">{c.ticker} · {c.name}</div></td>
+                      <td>
+                        <span className="tag em">{c.theme}</span>
+                        {c.tags.map((t) => <span key={t} className="tag">{t}</span>)}
+                      </td>
+                      <td className={`r mono big ${c.returnPct < 0 ? "negv" : "pos"}`}>{pct(c.returnPct)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="foot">
+              <span>realized return on cost basis · notable closed names · combined accounts</span>
+            </div>
           </div>
-        </div>
+        </details>
       </main>
     </div>
   );

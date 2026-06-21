@@ -77,6 +77,40 @@ export const PORTFOLIO_HISTORY: HistoryPoint[] = [
   { date: "2026-06", returnPct: 268.0 },
 ];
 
+/** Notable fully-closed positions, realized return % computed from the activity log. */
+export interface ClosedPosition {
+  ticker: string;
+  name: string;
+  theme: string;
+  tags: string[];
+  returnPct: number; // realized return on cost basis
+}
+export const CLOSED_POSITIONS: ClosedPosition[] = [
+  { ticker: "INTC", name: "Intel", theme: "AI & semis", tags: ["turnaround"], returnPct: 277 },
+  { ticker: "AA", name: "Alcoa", theme: "Metals", tags: ["aluminum"], returnPct: 312 },
+  { ticker: "AMZN", name: "Amazon", theme: "Internet", tags: ["cloud"], returnPct: 176 },
+  { ticker: "AAPL", name: "Apple", theme: "Tech", tags: ["hardware"], returnPct: 171 },
+  { ticker: "CSCO", name: "Cisco", theme: "AI & semis", tags: ["networking"], returnPct: 169 },
+  { ticker: "NBIS", name: "Nebius", theme: "AI & semis", tags: ["infra"], returnPct: 111 },
+  { ticker: "QCOM", name: "Qualcomm", theme: "AI & semis", tags: ["mobile"], returnPct: 108 },
+  { ticker: "CROX", name: "Crocs", theme: "Consumer", tags: ["retail"], returnPct: 106 },
+  { ticker: "AMKR", name: "Amkor", theme: "AI & semis", tags: ["packaging"], returnPct: 105 },
+  { ticker: "HOOD", name: "Robinhood", theme: "Fintech", tags: ["brokerage"], returnPct: 78 },
+  { ticker: "TSLA", name: "Tesla", theme: "EV", tags: ["autos"], returnPct: 29 },
+  { ticker: "UBER", name: "Uber", theme: "Internet", tags: ["mobility"], returnPct: 24 },
+  { ticker: "SPY", name: "S&P 500", theme: "Hedge", tags: ["index"], returnPct: 10 },
+  { ticker: "CCO", name: "Cameco", theme: "Metals", tags: ["uranium"], returnPct: -22 },
+  { ticker: "VIXY", name: "Volatility", theme: "Hedge", tags: ["vol"], returnPct: -25 },
+  { ticker: "NXE", name: "NexGen Energy", theme: "Metals", tags: ["uranium"], returnPct: -29 },
+  { ticker: "PDD", name: "PDD Holdings", theme: "China", tags: ["ecommerce"], returnPct: -33 },
+  { ticker: "JD", name: "JD.com", theme: "China", tags: ["ecommerce"], returnPct: -42 },
+  { ticker: "BB", name: "BlackBerry", theme: "Tech", tags: ["software"], returnPct: -45 },
+  { ticker: "PINS", name: "Pinterest", theme: "Internet", tags: ["ads"], returnPct: -59 },
+  { ticker: "ZETA", name: "Zeta Global", theme: "Internet", tags: ["ad-tech"], returnPct: -61 },
+  { ticker: "BHVN", name: "Biohaven", theme: "Biotech", tags: ["pharma"], returnPct: -100 },
+  { ticker: "META", name: "Meta (put hedge)", theme: "Hedge", tags: ["puts"], returnPct: -100 },
+];
+
 // Combined TFSA + RRSP. Mostly long-dated LEAPS calls plus two share positions.
 // returnPct = unrealized vs book; weightPct = share of current market value.
 export const POSITIONS: Position[] = [

@@ -193,6 +193,14 @@ a.cn:hover{color:var(--emerald)}
 .pc-li .s{font-family:var(--mono);font-weight:700;flex:none}
 .pc-li.pro .s{color:var(--emerald)} .pc-li.con .s{color:var(--red)}
 
+/* collapsible section (summary styled as a ▸ LED header; click to toggle) */
+details.coll{margin:0}
+details.coll>summary.cd-sec{cursor:pointer;list-style:none;user-select:none}
+details.coll>summary.cd-sec::-webkit-details-marker{display:none}
+details.coll>summary.cd-sec::before{content:"\25B8"}       /* ▸ when collapsed */
+details.coll[open]>summary.cd-sec::before{content:"\25BE"} /* ▾ when open */
+details.coll>summary.cd-sec:hover{color:var(--emerald)}
+
 /* apply CTA — outlined terminal button */
 .cd-apply{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--emerald);border:1px solid var(--emerald);background:transparent;padding:10px 20px;border-radius:7px;margin-top:6px}
 .cd-apply:hover{background:var(--emerald-tint)}
