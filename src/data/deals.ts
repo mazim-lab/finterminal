@@ -3,42 +3,84 @@ export interface Deal {
   merchant: string;
   /** Direct link to the merchant. We never credit where we spotted it. */
   url: string;
+  /** Headline price, the number people actually care about. */
+  price?: string;
+  /** Was-price or regular price, shown struck through next to price. */
+  was?: string;
   blurb: string;
   category: string;
   posted: string;
+  /** Human-friendly expiry label shown in the meta line, e.g. "ends Jun 21". */
   expires?: string;
+  /** Machine-readable expiry as "YYYY-MM-DD". Once this date has passed, the deal
+   *  auto-moves to the Archive on the Deals page. Omit for deals with no end date. */
+  expiresAt?: string;
 }
 
-// Curated 2 to 3 times a day. Pick genuinely good value or anything that fits the
-// cards / points / personal-finance theme. Always link straight to the merchant.
+// Curated 2 to 3 times a day. We only post real product or service deals that
+// save people money: high quality things at a deep discount, or productive buys
+// that pay for themselves over time. No credit card or bank welcome offers here,
+// those live in the Cards tab. Always verify the deal is live, then link straight
+// to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
-    title: "20% back in Scene+ points on select gift cards",
-    merchant: "Scene+",
-    url: "https://www.sceneplus.ca/",
+    title: "LG 65-inch OLED C5 4K TV",
+    merchant: "Costco",
+    url: "https://www.costco.ca/p/-/lg-65-class-oledc5-series-4k-uhd-oled-tv/4000370787",
+    price: "$1,696.99",
+    was: "$2,196.99",
     blurb:
-      "Redeem Scene+ points for select gift cards and get 20 percent of those points back. If you were already sitting on a points balance with no travel plans, this is a tidy way to stretch it on everyday spending.",
-    category: "Points",
-    posted: "Jun 20, 2026",
-    expires: "while supplies last",
+      "The LG C5 is the OLED a lot of people quietly want, and Costco has the 65 inch down to $1,696.99 from $2,196.99, a clean $500 off. The picture is the real draw here, with the perfect inky blacks and rich contrast that make sports and movies look special, and right now LG is tossing in six months of TSN on top. Two honest notes before you jump. This price has dipped here once or twice before, so think of it as a strong deal rather than a once ever one. And OLED panels are a bit of a lottery, so I would add Costco's inexpensive extended warranty for real peace of mind, and their return policy has your back if anything ever goes sideways. The sale runs to June 26.",
+    category: "Electronics",
+    posted: "Jun 21, 2026",
+    expires: "ends Jun 26",
+    expiresAt: "2026-06-26",
   },
   {
-    title: "0% interest for 18 months on balance transfers",
-    merchant: "BMO",
-    url: "https://www.bmo.com/en-ca/main/personal/credit-cards/",
+    title: "Benchmark 173cc 2-in-1 gas lawn mower, 21 inch",
+    merchant: "Home Hardware",
+    url: "https://www.homehardware.ca/en/173cc-2-in-1-grasscycler-gas-lawn-mower-21/p/5124070",
+    price: "$149.97",
+    was: "$299.99",
     blurb:
-      "The BMO Preferred Rate Mastercard is running a balance transfer offer at 0 percent for 18 months with a 1 percent transfer fee. If you are carrying a balance on a high-rate card, moving it here can buy you real breathing room to pay it down.",
-    category: "Credit",
+      "Half price on a straightforward gas mower, $149.97 down from $299.99, and Home Hardware backs it with a five year warranty. If you have a small or medium yard and you are tired of paying someone to cut it, a mower like this pays for itself in a season or two. One honest heads up so you buy with eyes open: this is a basic 173cc engine, happiest on dry grass that you keep up with weekly. Let the lawn get tall or soggy and it can bog down, so it is not the one for a big or rough property. Shipping to your local store is free with plenty of stock on hand, and the sale runs through July 29.",
+    category: "Home & Garden",
+    posted: "Jun 21, 2026",
+    expires: "ends Jul 29",
+    expiresAt: "2026-07-29",
+  },
+  {
+    title: "Roborock Q7 M5+ robot vacuum and mop",
+    merchant: "Best Buy",
+    url: "https://www.bestbuy.ca/en-ca/product/roborock-q7-m5-robot-vacuum-mop-for-pet-hair-carpet-with-self-empty-dock-10000pa-suction-dual-anti-tangle-lidar-app-control/19815215",
+    price: "$279.99",
+    was: "$649",
+    blurb:
+      "This is Wirecutter's top robot vacuum pick, and it just dropped to $279.99 from $649. It empties itself, maps your home, and quietly hands you back an hour or two every week. If a clean floor without the nagging sounds good, this is the lowest price we have seen on it, and a fair bit under what Amazon is asking. One honest note so you buy with eyes open: the mopping is light duty and long hair can still tangle the brush, so it is happiest set loose on hard floors.",
+    category: "Home",
     posted: "Jun 20, 2026",
   },
   {
-    title: "Concert Week: $30 all-in tickets",
-    merchant: "Ticketmaster",
-    url: "https://www.ticketmaster.ca/",
+    title: "Sony WH-1000XM5 wireless noise-cancelling headphones",
+    merchant: "Amazon",
+    url: "https://www.amazon.ca/dp/B09XS7JWHH",
+    price: "$298",
+    was: "$449",
     blurb:
-      "Ticketmaster's Concert Week brings back flat $30 all-in tickets to a long list of summer shows. A nice excuse to plan a night out without the usual sticker shock, and a good fit if you have a card that earns extra on entertainment.",
-    category: "Entertainment",
+      "Sony's flagship over-ear headphones are down to $298, a long way from their usual $449 and change. The noise cancelling is the kind that makes a noisy house or a long flight feel calm, and the battery stretches for days between charges. If you have been telling yourself you will get a proper pair eventually, this is a comfortable price to finally do it.",
+    category: "Electronics",
     posted: "Jun 20, 2026",
-    expires: "limited time",
+  },
+  {
+    title: "Apple AirPods Pro 3",
+    merchant: "Shoppers Drug Mart",
+    url: "https://www.shoppersdrugmart.ca/en/health-and-pharmacy/electronics",
+    price: "$329.99",
+    blurb:
+      "Shoppers has the newest AirPods Pro at $329.99 and is stacking points offers that hand back roughly 148,000 PC Optimum points, which is about $148 you can put toward groceries or gas down the road. Net it out and you are closer to $182 to $224 for the best earbuds Apple makes for an iPhone. Buy online and sign in first so both point offers actually show up at checkout, a few people found they had to refresh their login. This one wraps up June 21, so it is a short window.",
+    category: "Electronics",
+    posted: "Jun 20, 2026",
+    expires: "ends Jun 21",
+    expiresAt: "2026-06-21",
   },
 ];

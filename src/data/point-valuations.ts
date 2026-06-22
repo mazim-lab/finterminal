@@ -39,7 +39,7 @@ export const POINT_VALUATIONS: Record<string, Valuation> = {
   'national bank': { baseline: 0.95, max: null, transferable: false },
   'mbna rewards': { baseline: 1.0, max: null, transferable: false },
   'desjardins bonusdollars': { baseline: 1.0, max: null, transferable: false },
-  'pc optimum': { baseline: 0.7, max: null, transferable: false },
+  'pc optimum': { baseline: 0.1, max: null, transferable: false },
   'triangle rewards': { baseline: 0.5, max: null, transferable: false },
   'westjet rewards': { baseline: 1.0, max: null, transferable: false },
   'cash back': { baseline: 1.0, max: null, transferable: false },

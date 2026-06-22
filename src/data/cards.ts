@@ -212,9 +212,16 @@ interface RawCA {
 }
 
 function normalizeCA(raw: RawCA): Card {
-  const earnRates: EarnRate[] = raw.earn_rates
-    ? Object.entries(raw.earn_rates).map(([k, v]) => ({ category: stripFootnotes(cleanEarnRateKey(k)), rate: v }))
-    : [];
+  // Safety gate: drop earn-rate entries with junk/fragment category keys or non-clean
+  // rates (older scrapes cross-contaminated these from shared caches). Curated entries pass.
+  const earnRates: EarnRate[] = (raw.earn_rates
+    ? Object.entries(raw.earn_rates).map(([k, v]) => ({ category: stripFootnotes(cleanEarnRateKey(k)), rate: String(v) }))
+    : []
+  ).filter(({ category, rate }) => {
+    if (!category || category.length > 40 || category.split(/\s+/).length > 7) return false;
+    if (/Go to note|note \[|à la carte|agrency|purchasesGo/i.test(category)) return false;
+    return /^[\d.]+\s*(?:x|%)?$/i.test(rate.trim());
+  });
 
   const earnSummary = earnRates.map(e => `${e.rate} ${e.category}`).join(', ');
   // Value the bonus at OUR baseline cpp (points × baseline), consistent across the site;
@@ -366,12 +373,48 @@ function extractUsBonusDollars(text: string): number {
   return m ? parseInt(m[1].replace(/,/g, ''), 10) : 0;
 }
 
+// The US scraper often captured the same boilerplate for every card's earn_rates —
+// APR figures ("21.99%") and sentence fragments rather than real reward multipliers.
+// Surface earn rates only when the whole set looks clean; otherwise show nothing
+// rather than wrong, identical data. Curated entries in the JSON pass this gate.
+function parseUsEarnRates(raw: RawUS): EarnRate[] {
+  const er = raw.earn_rates;
+  if (!er || typeof er !== 'object' || Array.isArray(er)) return [];
+  const entries = Object.entries(er as Record<string, string>);
+  if (!entries.length) return [];
+  const looksJunk = entries.some(([k, v]) => {
+    const s = String(v).trim();
+    const n = parseFloat(s);
+    if (/%/.test(s) && n > 10) return true;                 // APR, not an earn rate
+    if (!/^[\d.]+\s*(?:x|%|x\s*points?)?$/i.test(s)) return true; // rate not a clean number
+    if (k.length > 40 || k.split(/\s+/).length > 7) return true; // run-on fragment
+    return false;
+  });
+  if (looksJunk) return [];
+  const seen = new Set<string>();
+  const out: EarnRate[] = [];
+  for (const [k, v] of entries) {
+    const category = stripFootnotes(cleanEarnRateKey(k));
+    const rate = String(v).trim();
+    const id = `${category.toLowerCase()}|${rate}`;
+    if (seen.has(id)) continue;
+    seen.add(id);
+    out.push({ category, rate });
+  }
+  return out;
+}
+
 function normalizeUS(raw: RawUS): Card {
   // Value the signup bonus with a program-specific baseline cpp, then convert USD→CAD.
   const cppUsd = usCpp(`${raw.name} ${raw.issuer || ''} ${raw.signup_bonus_currency || ''}`);
   const sfRaw = raw.signup_bonus_formatted || '';
   const curRaw = (raw.signup_bonus_currency || '').toLowerCase();
+  // A "$X bonus cash back" / "statement credit" phrasing is a cash bonus even when the
+  // currency field is mislabeled "points" (a known scraper slip on cash-back cards).
+  const saysCashBonus = /\$[\d,]+\s*(?:bonus\s*)?cash\s*back|cash\s*back\s*bonus|statement credit/i
+    .test(`${sfRaw} ${raw.welcome_bonus || ''}`);
   const isCash = curRaw.includes('cash') || curRaw.includes('dollar') || curRaw.includes('statement')
+    || saysCashBonus
     || (!/(point|mile|reward|avios|skymiles)/i.test(`${curRaw} ${sfRaw}`) && /\$\s?\d/.test(sfRaw));
   let bonusPoints: number | null = null;
   let bonusValueUsd = 0;
@@ -379,7 +422,12 @@ function normalizeUS(raw: RawUS): Card {
     bonusValueUsd = (raw.signup_bonus_value_usd && raw.signup_bonus_value_usd <= 5000 ? raw.signup_bonus_value_usd : 0) || extractUsBonusDollars(sfRaw);
   } else {
     bonusPoints = extractUsBonusPoints(sfRaw);
-    if (!bonusPoints && raw.signup_bonus && raw.signup_bonus >= 5000) bonusPoints = raw.signup_bonus;
+    // Only trust the raw signup_bonus number if it isn't actually a "$N" spend
+    // threshold quoted in the marketing text (e.g. "every purchase of $5,000 or more").
+    if (!bonusPoints && raw.signup_bonus && raw.signup_bonus >= 5000) {
+      const asDollarThreshold = new RegExp(`\\$\\s?${raw.signup_bonus.toLocaleString()}\\b|\\$\\s?${raw.signup_bonus}\\b`).test(sfRaw);
+      if (!asDollarThreshold) bonusPoints = raw.signup_bonus;
+    }
     if (bonusPoints) bonusValueUsd = bonusPoints * cppUsd / 100;
     else if (raw.signup_bonus_value_usd) bonusValueUsd = raw.signup_bonus_value_usd > 2000 ? raw.signup_bonus_value_usd * cppUsd / 100 : raw.signup_bonus_value_usd;
   }
@@ -407,7 +455,7 @@ function normalizeUS(raw: RawUS): Card {
     welcome_bonus: cleanWelcomeBonus(bonusText),
     welcome_bonus_value: bonusValue,
     welcome_bonus_conditions: cleanStr(raw.welcome_bonus_conditions),
-    earn_rates: [],
+    earn_rates: parseUsEarnRates(raw),
     earn_rates_summary: cleanStr(raw.earn_rates_summary),
     rewards_program: raw.signup_bonus_currency || '',
     foreign_transaction_fee: raw.foreign_transaction_fee,
@@ -496,10 +544,10 @@ export function getTopCardsByValue(count: number, country?: 'CA' | 'US'): Card[]
   return [...cards].sort((a, b) => b.first_year_value - a.first_year_value).slice(0, count);
 }
 
-export function formatCurrency(value: number, country: 'CA' | 'US' = 'CA'): string {
-  const prefix = country === 'US' ? 'US$' : 'CA$';
-  return `${prefix}${Math.round(value).toLocaleString()}`;
-}
+// formatCurrency lives in the JSON-free card-view module so client components
+// can use it without pulling the card data into their bundle. Re-exported here
+// for the server-side callers that already import it from cards.ts.
+export { formatCurrency, type SlimCard } from './card-view';
 
 export function getMaxFirstYearValue(): number {
   return Math.max(...allCards.map(c => c.first_year_value), 1);

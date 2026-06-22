@@ -3,7 +3,7 @@
     "slug": "the-platinum-card",
     "name": "The Platinum Card®",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 799,
     "first_year_fee": null,
@@ -15,13 +15,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "dining & food delivery purchases in Canada": "2x",
-      "travel": "2x",
-      "everything else": "1x"
+      "Dining & food delivery": "2x",
+      "Travel": "2x",
+      "All other purchases": "1x"
     },
     "rewards_program": "membership rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits",
       "Access to a $200 Annual Travel Credit6",
@@ -62,7 +62,7 @@
     "slug": "americanexpress-gold-rewards-card",
     "name": "American Express® Gold Rewards Card",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 250,
     "first_year_fee": null,
@@ -74,14 +74,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "travel": "2x",
-      "everyday purchases": "2x",
-      "everything else": "1x",
-      "purchases and": "21.99%"
+      "Travel": "2x",
+      "Everyday purchases": "2x",
+      "All other purchases": "1x"
     },
     "rewards_program": "membership rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Airport lounge access",
       "Statement credits",
@@ -138,13 +137,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases and": "21.99%",
-      "Card purchases at hotels participating in Marriott Bonvoy®, plus the poi": "5x",
-      "other Card purchases": "2x"
+      "Marriott purchases": "5x",
+      "All other purchases": "2x"
     },
     "rewards_program": "marriott bonvoy",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Receive complimentary Marriott Bonvoy Silver Elite status",
       "Front of the Line presale tickets",
@@ -191,7 +189,7 @@
     "slug": "americanexpress-aeroplan-reserve-card",
     "name": "American Express® Aeroplan®* Reserve Card",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 599,
     "first_year_fee": null,
@@ -204,13 +202,12 @@
     "balance_transfer_rate": null,
     "earn_rates": {
       "Air Canada": "3x",
-      "dining & food delivery": "2x",
-      "everything else": "1.25x",
-      "purchases and": "21.99%"
+      "Dining & food delivery": "2x",
+      "All other purchases": "1.25x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "You can earn up to $4,400 or more in value within your first 13 months!35",
       "Airport lounge access",
@@ -264,7 +261,7 @@
     "slug": "business-platinum-card-from-americanexpress",
     "name": "Business Platinum Card® from American Express",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 799,
     "first_year_fee": null,
@@ -276,13 +273,11 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "everything": "1.25x",
-      "everything for every $": "1.25x",
-      "Card purchases": "1.25x"
+      "All purchases": "1.25x"
     },
     "rewards_program": "membership rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Statement credits",
@@ -337,7 +332,7 @@
     "slug": "americanexpress-business-gold-rewards-card",
     "name": "American Express® Business Gold Rewards Card",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 199,
     "first_year_fee": null,
@@ -349,13 +344,11 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "everything": "1x",
-      "everythingfor every $": "1x",
-      "Card purchases": "1x"
+      "All purchases": "1x"
     },
     "rewards_program": "membership rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Statement credits",
@@ -405,7 +398,7 @@
     "slug": "marriott-bonvoy-business-americanexpress-card",
     "name": "Marriott Bonvoy® Business American Express®* Card",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 150,
     "first_year_fee": null,
@@ -417,14 +410,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases and": "21.99%",
-      "Card purchases at hotels participating in Marriott Bonvoy®": "5x",
-      "Card purchases on eligible gas, dining and travel": "3x",
-      "other purchases charged to the Card": "2x"
+      "Marriott purchases": "5x",
+      "Gas, dining & travel": "3x",
+      "All other purchases": "2x"
     },
     "rewards_program": "marriott bonvoy",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Receive 15 Elite Night Credits each calendar year5",
       "Receive an Annual Free Night Award3",
@@ -470,12 +462,12 @@
     "slug": "americanexpress-aeroplan-business-reserve-card",
     "name": "American Express® Aeroplan®* Business Reserve Card",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 599,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to 90,000 Welcome Bonus Aeroplan®* points.2",
-    "welcome_bonus_value_cad": 1845,
+    "welcome_bonus": "Earn up to 120,000 Aeroplan®* points",
+    "welcome_bonus_value_cad": 2460,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": null,
@@ -483,15 +475,12 @@
     "balance_transfer_rate": null,
     "earn_rates": {
       "Air Canada": "3x",
-      "hotel and car rentals": "2x",
-      "everything else": "1.25x",
-      "purchases and": "21.99%",
-      "Air Canada®* and Air Canada®* Vacations purchases": "3x",
-      "hotels and car rentals": "2x"
+      "Hotel & car rentals": "2x",
+      "All other purchases": "1.25x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits",
       "You could earn up to $5,600 or more in value within your first 13 months26",
@@ -524,7 +513,7 @@
     "apply_url": "https://www.americanexpress.com/en-ca/credit-cards/aeroplan-business-reserve-card",
     "is_business": true,
     "cpp_cad": 2.05,
-    "welcome_bonus_points": 90000,
+    "welcome_bonus_points": 120000,
     "first_year_value_cad": 1246,
     "benefits": {
       "car_rental_insurance": true,
@@ -543,7 +532,7 @@
     "slug": "americanexpress-aeroplan-card",
     "name": "American Express® Aeroplan®* Card",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 120,
     "first_year_fee": null,
@@ -556,12 +545,12 @@
     "balance_transfer_rate": null,
     "earn_rates": {
       "Air Canada": "2x",
-      "dining & food delivery": "1.5x",
-      "everything else": "1x"
+      "Dining & food delivery": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Reach Aeroplan EliteTM Status faster6‡",
       "Front of the Line presale tickets",
@@ -608,7 +597,7 @@
     "slug": "americanexpress-cobalt-card",
     "name": "American Express Cobalt® Card",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 191.88,
     "first_year_fee": null,
@@ -620,15 +609,14 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "eats & drinks": "5x",
-      "streaming subscriptions": "3x",
-      "gas, transit & ride share": "2x",
-      "everything else": "1x",
-      "purchases and": "21.99%"
+      "Eats & drinks": "5x",
+      "Streaming subscriptions": "3x",
+      "Gas, transit & ride share": "2x",
+      "All other purchases": "1x"
     },
     "rewards_program": "membership rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Statement credits",
@@ -673,7 +661,7 @@
     "slug": "americanexpressgreen-card",
     "name": "American Express®Green Card",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
@@ -685,12 +673,11 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "everyday purchases": "1x",
-      "purchases and": "21.99%"
+      "All purchases": "1x"
     },
     "rewards_program": "membership rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Earn 1X the points for every $1 in eligible Card purchases3",
       "Pay for almost anything charged to your Card with points11",
@@ -729,28 +716,25 @@
     "slug": "simplycash-preferred-card-from-americanexpress",
     "name": "SimplyCash® Preferred Card from American Express",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "cashback",
     "annual_fee": 119.88,
     "first_year_fee": null,
-    "welcome_bonus": "Make more happen with a bonus of up to 10% cash back1",
-    "welcome_bonus_value_cad": null,
+    "welcome_bonus": "Earn up to $250 in bonus value: up to $200 bonus cash back (10% on up to $2,000 in purchases in first 3 months) plus a $50 statement credit",
+    "welcome_bonus_value_cad": 250,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "all": "10%",
-      "purchases and": "21.99%",
-      "gas": "4%",
-      "grocery": "4%",
-      "everything else": "2%",
-      "All purchases": "10%"
+      "Gas": "4%",
+      "Groceries": "4%",
+      "All other purchases": "2%"
     },
-    "rewards_program": "membership rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "rewards_program": "cash back",
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits",
       "Earn up to 4% cash back on eligible gas and grocery purchases3",
@@ -793,7 +777,8 @@
       "lounge_access": false,
       "no_fx_fee": false,
       "free_checked_bags": false
-    }
+    },
+    "welcome_bonus_points": null
   },
   {
     "slug": "simplycash-card-from-american-express",
@@ -803,24 +788,21 @@
     "card_type": "cashback",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Make it happen with a bonus of up to 5% cash back1",
-    "welcome_bonus_value_cad": null,
+    "welcome_bonus": "Earn up to $100 in bonus cash back: 5% cash back on all purchases (up to $2,000) in your first 3 months",
+    "welcome_bonus_value_cad": 100,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "all": "5%",
-      "purchases and": "21.99%",
-      "gas": "2%",
-      "grocery": "2%",
-      "everything else": "1.25%",
-      "All purchases": "5%"
+      "Gas": "2%",
+      "Groceries": "2%",
+      "All other purchases": "1.25%"
     },
-    "rewards_program": "membership rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "rewards_program": "cash back",
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits",
       "Earn up to 2% cash back on eligible gas and grocery purchases3",
@@ -856,13 +838,14 @@
       "lounge_access": false,
       "no_fx_fee": false,
       "free_checked_bags": false
-    }
+    },
+    "welcome_bonus_points": null
   },
   {
     "slug": "americanexpress-essentialtm-creditcard",
     "name": "American Express EssentialTM Credit Card",
     "issuer": "American Express",
-    "network": "Unknown",
+    "network": "Amex",
     "card_type": "rewards",
     "annual_fee": 25,
     "first_year_fee": null,
@@ -875,13 +858,9 @@
     "balance_transfer_rate": null,
     "earn_rates": {},
     "rewards_program": "membership rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
-      "Hotel elite status/collection",
-      "Statement credits",
-      "Airport lounge access",
-      "Front of the Line presale tickets",
       "Get more flexibility when paying off your balance",
       "Access to Amex ExperiencesTM2",
       "Save on interest payments with an interest rate of 12.99%"
@@ -932,14 +911,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "Grocery, Gas & Electric Vehicle Charging, and Public Transit Purchases": "3%",
-      "other Purchases": "1%",
-      "other purchases": "1%",
-      "All purchases": "10%"
+      "Groceries, gas & EV charging, transit": "3%",
+      "Recurring bills & streaming": "3%",
+      "All other purchases": "1%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Concierge service"
@@ -998,13 +976,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "other Purchases": "0.5%",
-      "Grocery, Gas & Electric Vehicle Charging, and Public Transit Purchases": "1%",
-      "All purchases": "1%"
+      "Gas, groceries, transit & bills": "1%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "purchase_protection": "6",
@@ -1057,12 +1034,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas, electric vehicle charging, grocery and": "1.5x",
-      "other Purchases": "1x"
+      "Gas, EV charging, grocery, Air Canada": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Travel program credit (NEXUS/Global Entry)",
@@ -1125,12 +1102,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas, electric vehicle charging, grocery and": "1x",
-      "gas, electric vehicle charging, grocery and Air Canada® purchases, inclu": "1x"
+      "Gas, EV charging, grocery, Air Canada": "1x",
+      "All other purchases": "0.67x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "lost_baggage": "1000",
@@ -1187,12 +1164,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases made": "2x",
-      "charge to your Card on all other purchases": "1.25x"
+      "Air Canada": "2x",
+      "Gas, grocery, travel, transit, dining": "1.5x",
+      "All other purchases": "1.25x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Travel program credit (NEXUS/Global Entry)",
@@ -1256,14 +1234,14 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "travel through Expedia® For TD": "8x",
-      "Groceries, Dining, and Public Transit": "6x",
-      "Recurring Bill Payments and Streaming, Digital Gaming & Media": "4x",
-      "Purchases made using your Card": "2x"
+      "Travel via Expedia For TD": "8x",
+      "Groceries, dining & transit": "6x",
+      "Recurring bills & streaming": "4x",
+      "All other purchases": "2x"
     },
     "rewards_program": "td rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Airport lounge access"
@@ -1323,14 +1301,14 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "travel through Expedia® For TD": "6x",
-      "Groceries, Dining, and Public Transit": "4.5x",
-      "Recurring Bill Payments and Streaming, Digital Gaming & Media": "3x",
-      "Purchases made using your Card": "1.5x"
+      "Travel via Expedia For TD": "6x",
+      "Groceries, dining & transit": "4.5x",
+      "Recurring bills & streaming": "3x",
+      "All other purchases": "1.5x"
     },
     "rewards_program": "td rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "lost_baggage": "1000",
@@ -1387,14 +1365,14 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "travel through Expedia® For TD": "4x",
-      "Groceries, Dining, and Public Transit": "3x",
-      "Recurring Bill Payments and Streaming, Digital Gaming & Media": "2x",
-      "Purchases made using your Card": "1x"
+      "Travel via Expedia For TD": "4x",
+      "Groceries, dining & transit": "3x",
+      "Recurring bills & streaming": "2x",
+      "All other purchases": "1x"
     },
     "rewards_program": "td rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "purchase_protection": "8",
@@ -1449,8 +1427,8 @@
     "balance_transfer_rate": null,
     "earn_rates": {},
     "rewards_program": "td rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "purchase_protection": "3",
@@ -1502,7 +1480,7 @@
     "balance_transfer_rate": null,
     "earn_rates": {},
     "rewards_program": "td rewards",
-    "foreign_transaction_fee": null,
+    "foreign_transaction_fee": false,
     "foreign_transaction_fee_pct": null,
     "key_perks": [],
     "insurance": {},
@@ -1540,22 +1518,23 @@
     "card_type": "rewards",
     "annual_fee": 149,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to $1,300 in value, including up to 200,000 TD Rewards Points, and an Annual Fee rebate for the first year",
-    "welcome_bonus_value_cad": 1000,
+    "welcome_bonus": "Earn up to $1,300 in value, including up to 200,000 TD Rewards Points, and an Annual Fee Rebate for the first year. Offer effective March 2, 2026.",
+    "welcome_bonus_value_cad": 1300,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 19.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "Dining": "6x",
-      "Streaming, Digital Gaming & Media Purchases and recurring bill payments5": "6x",
-      "Foreign Currency Purchases": "6x",
-      "the lowest available base rates": "10%"
+      "Travel via ExpediaForTD": "9x",
+      "Dining, EV charging & transit": "6x",
+      "Streaming, gaming & recurring bills": "6x",
+      "Foreign currency purchases": "6x",
+      "All other purchases": "2x"
     },
     "rewards_program": "td rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "lost_baggage": "1000",
@@ -1603,22 +1582,21 @@
     "card_type": "rewards",
     "annual_fee": 149,
     "first_year_fee": null,
-    "welcome_bonus": "Up to 60,000 Aeroplan points2 could be yours with the TD® Aeroplan® Visa* Business Card2. Conditions Apply. Account must be approved, open and in Good Standing. Offer effective as of January 13, 2026.",
-    "welcome_bonus_value_cad": 1230,
+    "welcome_bonus": "Up to $1,900 in value, including up to 60,000 Aeroplan points, plus an Annual Fee Rebate for the first year. Offer effective March 2, 2026.",
+    "welcome_bonus_value_cad": 1900,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 14.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases made": "2x",
-      "other eligible purchases on your Card.6": "1x",
-      "purchases for travel & transit, dining or electric vehicle charging and": "1.5x",
-      "other eligible purchases on your Card": "1x"
+      "Air Canada & Air Canada Vacations": "2x",
+      "Travel, transit, dining & EV": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Premium lounge access",
       "Travel program credit (NEXUS/Global Entry)",
@@ -1679,14 +1657,14 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "Gas, Electric Vehicle Charging and Public Transit Purchases": "2%",
-      "Office Supply Purchases": "2%",
-      "other Purchases": "0.5%",
-      "All purchases": "2%"
+      "Gas, EV charging & transit": "2%",
+      "Recurring bills & streaming": "2%",
+      "Office supplies": "2%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits"
     ],
@@ -1740,8 +1718,8 @@
     "balance_transfer_rate": null,
     "earn_rates": {},
     "rewards_program": "td rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -1786,15 +1764,14 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "fuel": "3¢/litre"
+      "Travel purchases": "1.25x",
+      "All other purchases": "1x"
     },
     "rewards_program": "rbc avion",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
-      "Hotel elite status/collection",
       "Airport lounge access",
-      "Food delivery credits",
       "Subscription perks",
       "Concierge service"
     ],
@@ -1846,11 +1823,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "fuel and earn": "3¢/litre"
+      "Groceries, gas, rideshare & streaming": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Subscription perks"
@@ -1902,12 +1880,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas at Petro-Canada with every fill-up, plus earn": "3¢/litre",
-      "All purchases": "2x"
+      "WestJet & Sunwing travel": "2x",
+      "Groceries & transportation": "2x",
+      "All other purchases": "1.5x"
     },
     "rewards_program": "westjet rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Subscription perks",
       "Airport lounge access",
@@ -1953,28 +1932,21 @@
     "card_type": "cashback",
     "annual_fee": 99,
     "first_year_fee": null,
-    "welcome_bonus": "Get 12% cash back for the first 3 months on up to $2,000 in total purchases.",
-    "welcome_bonus_value_cad": null,
+    "welcome_bonus": "Get 12% cash back for the first 3 months on up to $2,000 in total purchases. Apply by September 9, 2026.",
+    "welcome_bonus_value_cad": 240,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "the first": "12%",
-      "your spending, with no limit to the total cash back you e": "1.5%",
-      "purchases": "1.5%",
-      "your spending, with no limit to the total cash back you earn": "1.5%",
-      "fuel": "3¢/litre",
-      "All purchases": "12%"
+      "All purchases (first $25k/yr)": "1.5%",
+      "All purchases thereafter": "1%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
-    "key_perks": [
-      "Food delivery credits",
-      "Subscription perks"
-    ],
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
+    "key_perks": [],
     "insurance": {
       "purchase_protection": "7"
     },
@@ -2005,7 +1977,8 @@
       "purchase_protection": true,
       "extended_warranty": true,
       "free_checked_bags": false
-    }
+    },
+    "welcome_bonus_points": null
   },
   {
     "slug": "rbc-visa-classic-low-rate-option",
@@ -2024,11 +1997,9 @@
     "balance_transfer_rate": null,
     "earn_rates": {},
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
-    "key_perks": [
-      "Subscription perks"
-    ],
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
+    "key_perks": [],
     "insurance": {},
     "minimum_income": null,
     "minimum_credit_score": null,
@@ -2072,11 +2043,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "fuel and earn": "3¢/litre"
+      "Groceries, gas, rideshare & streaming": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Subscription perks"
@@ -2121,21 +2093,20 @@
     "annual_fee": 0,
     "first_year_fee": null,
     "welcome_bonus": "Up to 20,000 bonus More Rewards points - a value of $30 in groceries.",
-    "welcome_bonus_value_cad": 360,
+    "welcome_bonus_value_cad": 30,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "fuel and earn": "3¢/litre",
-      "over": "5x",
-      "gas, EV charging and dining": "5x",
-      "other purchases": "3x"
+      "Grocery, pharmacy & partners": "5x",
+      "Gas, EV charging & dining": "5x",
+      "All other purchases": "3x"
     },
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Subscription perks"
     ],
@@ -2178,19 +2149,21 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Get up to 5,000 bonus Moi points1 – that’s a value of $40. Apply by January 20, 2027.",
-    "welcome_bonus_value_cad": 90,
+    "welcome_bonus": "Get up to 5,000 bonus Moi points - a value of $40. Apply by January 20, 2027.",
+    "welcome_bonus_value_cad": 40,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "fuel and earn": "3¢/litre"
+      "Moi partner stores": "2x",
+      "Dining, gas & EV charging": "2x",
+      "All other purchases": "1x"
     },
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Subscription perks"
     ],
@@ -2241,18 +2214,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "fuel": "3¢/litre"
+      "All purchases": "1x"
     },
     "rewards_program": "rbc avion",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
-    "key_perks": [
-      "Hotel elite status/collection",
-      "Airport lounge access",
-      "Food delivery credits",
-      "Subscription perks",
-      "Concierge service"
-    ],
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
+    "key_perks": [],
     "insurance": {
       "mobile_insurance": "Yes",
       "trip_cancellation": "7"
@@ -2301,16 +2268,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas at Petro-Canada with every fill-up, plus earn": "3¢/litre",
-      "All purchases": "2x"
+      "WestJet flights & vacations": "1.5x",
+      "Dining, delivery & subscriptions": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "westjet rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Subscription perks",
-      "Airport lounge access",
-      "Food delivery credits",
       "Free first checked bag"
     ],
     "insurance": {
@@ -2326,13 +2292,13 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel-credit-cards/westjet-world-mastercard.html",
+    "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel/westjet-rbc-mastercard.html",
     "is_business": false,
     "cpp_cad": 1,
     "welcome_bonus_points": 15000,
     "first_year_value_cad": 111,
     "benefits": {
-      "lounge_access": true,
+      "lounge_access": false,
       "no_fx_fee": false,
       "car_rental_insurance": true,
       "travel_medical": true,
@@ -2360,11 +2326,11 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "fuel": "3¢/litre"
+      "All purchases": "1.25x"
     },
     "rewards_program": "rbc avion",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Airport lounge access",
@@ -2420,11 +2386,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "fuel": "3¢/litre"
+      "British Airways purchases": "3x",
+      "Dining & food delivery": "2x",
+      "All other purchases": "1x"
     },
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Hotel elite status/collection",
@@ -2475,12 +2443,10 @@
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "fuel": "3¢/litre"
-    },
+    "earn_rates": {},
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Subscription perks"
@@ -2498,7 +2464,7 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel/rbc-visa-platinum-avion.html",
+    "apply_url": "https://www.rbcroyalbank.com/credit-cards/no-fee/rbc-visa-platinum.html",
     "is_business": false,
     "cpp_cad": 1.8,
     "benefits": {
@@ -2529,9 +2495,11 @@
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {},
+    "earn_rates": {
+      "All purchases": "1x"
+    },
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
+    "foreign_transaction_fee": false,
     "foreign_transaction_fee_pct": null,
     "key_perks": [
       "Subscription perks"
@@ -2564,55 +2532,6 @@
     }
   },
   {
-    "slug": "rbc-rateadvantage-visa",
-    "name": "RBC RateAdvantage Visa",
-    "issuer": "RBC",
-    "network": "Visa",
-    "card_type": "rewards",
-    "annual_fee": 0,
-    "first_year_fee": null,
-    "welcome_bonus": "",
-    "welcome_bonus_value_cad": null,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
-    "purchase_interest_rate": 4.99,
-    "cash_advance_rate": null,
-    "balance_transfer_rate": null,
-    "earn_rates": {},
-    "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
-    "key_perks": [
-      "Subscription perks"
-    ],
-    "insurance": {},
-    "minimum_income": null,
-    "minimum_credit_score": null,
-    "country": "CA",
-    "sources": [],
-    "last_updated": "2026-02-23",
-    "card_image_url": null,
-    "pot_first_year_value": null,
-    "pot_rewards_valuation_cpp": null,
-    "pot_url": null,
-    "historical_offers": [],
-    "apply_url": "https://www.rbcroyalbank.com/credit-cards/low-interest/rbc-rateadvantage-visa.html",
-    "is_business": false,
-    "cpp_cad": 1.8,
-    "benefits": {
-      "lounge_access": false,
-      "no_fx_fee": false,
-      "car_rental_insurance": false,
-      "travel_medical": false,
-      "trip_cancellation": false,
-      "flight_delay": false,
-      "mobile_insurance": false,
-      "purchase_protection": true,
-      "extended_warranty": true,
-      "free_checked_bags": false
-    }
-  },
-  {
     "slug": "more-rewards-rbc-visa-infinite",
     "name": "More Rewards RBC Visa Infinite",
     "issuer": "RBC",
@@ -2621,21 +2540,20 @@
     "annual_fee": 0,
     "first_year_fee": null,
     "welcome_bonus": "Up to 20,000 bonus More Rewards points - a value of $30 in groceries.",
-    "welcome_bonus_value_cad": 360,
+    "welcome_bonus_value_cad": 30,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "fuel and earn": "3¢/litre",
-      "over": "5x",
-      "gas, EV charging and dining": "5x",
-      "other purchases": "3x"
+      "Partner grocery locations": "8x",
+      "Gas, EV charging & dining": "8x",
+      "All other purchases": "4x"
     },
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Subscription perks"
     ],
@@ -2652,7 +2570,7 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.rbcroyalbank.com/credit-cards/rewards/more-rewards-rbc-visa.html",
+    "apply_url": "https://www.rbcroyalbank.com/credit-cards/rewards/more-rewards-rbc-visa-infinite.html",
     "is_business": false,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 20000,
@@ -2678,19 +2596,21 @@
     "card_type": "rewards",
     "annual_fee": 175,
     "first_year_fee": null,
-    "welcome_bonus": "Receive 35,000 welcome WestJet points after your first purchase",
-    "welcome_bonus_value_cad": 350,
+    "welcome_bonus": "Receive up to 45,000 welcome WestJet points after your first purchase (offer ends June 30, 2026)",
+    "welcome_bonus_value_cad": 450,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 19.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas at Petro-Canada with every fill-up, plus earn": "3¢/litre"
+      "WestJet & Sunwing vacations": "3x",
+      "Telecom, shipping & electronics": "3x",
+      "All other purchases": "1.5x"
     },
     "rewards_program": "westjet rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Subscription perks",
       "Airport lounge access",
@@ -2713,10 +2633,10 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel/westjet-rbc-world-elite-mastercard.html",
+    "apply_url": "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/westjet-rbc-world-elite-mastercard-business.html",
     "is_business": true,
     "cpp_cad": 1,
-    "welcome_bonus_points": 35000,
+    "welcome_bonus_points": 45000,
     "first_year_value_cad": 175,
     "benefits": {
       "lounge_access": true,
@@ -2739,20 +2659,20 @@
     "card_type": "rewards",
     "annual_fee": 175,
     "first_year_fee": null,
-    "welcome_bonus": "Receive 35,000 Welcome Avion points upon enrollment",
-    "welcome_bonus_value_cad": 630,
+    "welcome_bonus": "Get up to 45,000 welcome Avion points upon enrollment (offer ends June 30, 2026)",
+    "welcome_bonus_value_cad": 810,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 19.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "the base rate only (time and mileage charges) (“Discount”) is": "20%",
-      "instantly on gas": "3¢/litre"
+      "Purchases up to $75,000/year": "1.25x",
+      "Purchases over $75,000/year": "1x"
     },
     "rewards_program": "rbc avion",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Airport lounge access",
@@ -2780,10 +2700,10 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel/rbc-visa-infinite-avion.html",
+    "apply_url": "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/avion-visa-infinite-business.html",
     "is_business": true,
     "cpp_cad": 1.8,
-    "welcome_bonus_points": 35000,
+    "welcome_bonus_points": 45000,
     "first_year_value_cad": 455,
     "benefits": {
       "lounge_access": false,
@@ -2814,12 +2734,11 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "the base rate only (time and mileage charges) (“Discount”) is": "20%",
-      "fuel": "3¢/litre"
+      "All purchases": "1x"
     },
     "rewards_program": "rbc avion",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Subscription perks"
@@ -2873,15 +2792,11 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases* to reinvest in your business": "1%",
-      "purchases* made on your card in the first three months": "2%",
-      "purchases* made on your card after three months": "1%",
-      "fuel": "3¢/litre",
       "All purchases": "1%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Subscription perks"
@@ -2931,12 +2846,10 @@
     "purchase_interest_rate": 19.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "fuel": "3¢/litre"
-    },
+    "earn_rates": {},
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Subscription perks"
@@ -2979,19 +2892,19 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 1 Avion point for every $2 spent",
-    "welcome_bonus_value_cad": 0.02,
+    "welcome_bonus": "",
+    "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 2.9,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "fuel": "3¢/litre"
+      "All purchases": "0.5x"
     },
     "rewards_program": "rbc rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Subscription perks"
@@ -3013,7 +2926,7 @@
     "apply_url": "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/visa-creditline.html",
     "is_business": true,
     "cpp_cad": 1.8,
-    "welcome_bonus_points": 1,
+    "welcome_bonus_points": null,
     "first_year_value_cad": 0.02,
     "benefits": {
       "lounge_access": false,
@@ -3044,10 +2957,10 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases made on the Account after the": "1x",
-      "purchases and": "20.99%",
-      "travel purchases": "1x",
-      "hotels and car rentals when you book through Scene+ Travel, Powered by Expedia": "3x"
+      "Groceries (Sobeys, Safeway, IGA, etc.)": "3x",
+      "Grocery, dining, entertainment, transit": "2x",
+      "Travel": "1x",
+      "All other purchases": "1x"
     },
     "rewards_program": "scene+",
     "foreign_transaction_fee": false,
@@ -3113,22 +3026,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "up to $": "10%",
-      "eligible everyday purchases when you shop with your card": "4%",
-      "gas, electric vehicle charging, daily transit like buses, tax": "2%",
-      "other purchases Browse the Scotia Momentum® Visa* Infinit": "1%",
-      "the first $": "10%",
-      "that category so that you will earn a total of": "6%",
-      "the amount of all eligible everyday purchases in that categor": "10%",
-      "purchases and": "20.99%",
-      "Purchases on your Account at Grocery and on Recurrin": "4%",
-      "Purchases on Gas Stations, Electric Vehicle Charging": "2%",
-      "Purchases on Gas Stations, Electric Vehicle Charging (EV), Transit, Ride": "2%",
-      "All purchases": "10%"
+      "Groceries & recurring bills": "4%",
+      "Gas, EV charging, transit, food delivery": "2%",
+      "All other purchases": "1%"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Statement credits",
@@ -3187,9 +3091,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases and": "20.99%",
-      "travel purchases": "1x",
-      "hotels and car rentals when you book through Scene+ Travel, Powered by Expedia": "3x"
+      "Groceries (Sobeys, Safeway, etc.)": "6x",
+      "Dining, food delivery, other groceries": "5x",
+      "Entertainment": "5x",
+      "Gas & transit": "3x",
+      "Streaming services": "3x",
+      "Travel": "1x",
+      "All other purchases": "1x"
     },
     "rewards_program": "scene+",
     "foreign_transaction_fee": false,
@@ -3256,12 +3164,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases and": "20.99%",
-      "travel purchases": "1x"
+      "Groceries (Sobeys, Safeway, etc.)": "2x",
+      "Home Hardware": "2x",
+      "Cineplex": "2x",
+      "Travel": "1x",
+      "All other purchases": "1x"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -3303,7 +3214,7 @@
     "card_type": "rewards",
     "annual_fee": 49,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 5% cash back on all purchases for the first 3 months (up to $2,000 in total purchases).2",
+    "welcome_bonus": "No points or cash welcome bonus. Current offer: 2.99% introductory interest rate on balance transfers for the first 6 months.",
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
@@ -3311,20 +3222,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "select purchases": "2%",
-      "eligible everyday purchases when you shop with your card": "2%",
-      "groceries, food delivery and food subscription services, and": "2%",
-      "gas, electric vehicle charging, and daily transit like buses": "2%",
-      "recurring subscription services like music and video": "2%",
-      "other eligible purchases Browse the Scotia Momentum® Visa": "1%",
-      "purchases and": "25.99%",
-      "Purchases on your Account at Grocery, Gas Stations": "2%",
-      "Purchases on your Account at Grocery, Gas Stations, Electric Vehicle Cha": "2%",
-      "All purchases": "2%"
+      "Groceries, food delivery, drugstore": "2%",
+      "Gas, EV charging, transit": "2%",
+      "Recurring bill payments": "2%",
+      "Subscription services": "2%",
+      "All other purchases": "1%"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits"
     ],
@@ -3358,7 +3264,8 @@
       "purchase_protection": true,
       "extended_warranty": true,
       "free_checked_bags": false
-    }
+    },
+    "welcome_bonus_points": null
   },
   {
     "slug": "scotia-momentum-no-fee-visa-card",
@@ -3368,32 +3275,23 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 10% cash back on all purchases for the first 3 months (up to $2,000 in total purchases)",
-    "welcome_bonus_value_cad": null,
+    "welcome_bonus": "Earn 10% cash back on all purchases for the first 3 months (up to $2,000 in total purchases).",
+    "welcome_bonus_value_cad": 200,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 19.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "up to $": "5%",
-      "select purchases": "1%",
-      "eligible everyday purchases when you shop with your card": "1%",
-      "groceries, food delivery and food subscription services, and": "1%",
-      "gas, electric vehicle charging, and daily transit like buses": "1%",
-      "recurring subscription services like music and video": "1%",
-      "other eligible purchases Browse the Scotia Momentum® No-F": "0.5%",
-      "the first $": "5%",
-      "that category so that you will earn a total of": "4%",
-      "the amount of all eligible everyday purchases in that categor": "5%",
-      "purchases and": "25.99%",
-      "Purchases on your Account at Grocery, Gas Stations": "1%",
-      "Purchases on your Account at Grocery, Gas Stations, Electric Vehicle Cha": "1%",
-      "All purchases": "5%"
+      "Groceries, food delivery, drugstore": "1%",
+      "Gas, EV charging, transit": "1%",
+      "Recurring bill payments": "1%",
+      "Subscription services": "1%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits"
     ],
@@ -3425,7 +3323,8 @@
       "purchase_protection": false,
       "extended_warranty": false,
       "free_checked_bags": false
-    }
+    },
+    "welcome_bonus_points": null
   },
   {
     "slug": "scotiabank-american-express-card",
@@ -3443,13 +3342,17 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "20.99%",
-      "purchases and": "19.99%",
-      "other eligible everyday purchases": "1x"
+      "Groceries (Sobeys, Safeway, etc.)": "3x",
+      "Dining, food delivery, other groceries": "2x",
+      "Entertainment": "2x",
+      "Gas & transit": "2x",
+      "Streaming services": "2x",
+      "Travel": "1x",
+      "All other purchases": "1x"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Front of the Line presale tickets"
     ],
@@ -3504,9 +3407,7 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "20.99%",
-      "purchases and": "9.99%",
-      "eligible purchases": "2x"
+      "All purchases": "2x"
     },
     "rewards_program": "scene+",
     "foreign_transaction_fee": false,
@@ -3572,16 +3473,17 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases and": "20.99%"
+      "Travel": "3x",
+      "Dining & entertainment": "2x",
+      "All other purchases": "1x"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
+    "foreign_transaction_fee": false,
     "foreign_transaction_fee_pct": null,
     "key_perks": [
       "Hotel elite status/collection",
       "Statement credits",
       "Airport lounge access",
-      "Free first checked bag",
       "Concierge service"
     ],
     "insurance": {
@@ -3633,16 +3535,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "eligible gas station, grocery store, drug store purchases": "1%",
-      "other eligible purchases": "0.5%",
-      "net purchases": "1%",
-      "purchases and": "20.99%",
-      "eligible gas station, grocery store, drug store purchases and recurring payme": "1%",
-      "All purchases": "1%"
+      "Gas, groceries, drugstore": "1%",
+      "Recurring bill payments": "1%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -3691,7 +3590,7 @@
     "balance_transfer_rate": null,
     "earn_rates": {},
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
+    "foreign_transaction_fee": false,
     "foreign_transaction_fee_pct": null,
     "key_perks": [],
     "insurance": {
@@ -3734,19 +3633,17 @@
     "card_type": "rewards",
     "annual_fee": 29,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to 10,000 bonus Scene+ points within your first 3 months.2",
-    "welcome_bonus_value_cad": 100,
+    "welcome_bonus": "Get a 0.99% promotional interest rate on balance transfers for your first 9 months (2% transfer fee). Plus, pay no annual fee during your first year.",
+    "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "purchases and": "24.99%"
-    },
+    "earn_rates": {},
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -3762,7 +3659,7 @@
     "apply_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/value-card.html",
     "is_business": false,
     "cpp_cad": 1,
-    "welcome_bonus_points": 10000,
+    "welcome_bonus_points": null,
     "first_year_value_cad": 71,
     "interest_rates": {
       "purchases": 13.99
@@ -3796,12 +3693,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases and": "20.99%",
-      "travel purchases": "1x"
+      "Groceries": "2x",
+      "Home Hardware": "2x",
+      "Cineplex": "2x",
+      "Travel": "1x",
+      "All other purchases": "1x"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -3843,19 +3743,17 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "",
+    "welcome_bonus": "Get a 0.99% promotional interest rate on balance transfers for your first 9 months (2% transfer fee). Plus, pay no annual fee during your first year.",
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "purchases and": "24.99%"
-    },
+    "earn_rates": {},
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -3885,7 +3783,8 @@
       "purchase_protection": false,
       "extended_warranty": false,
       "free_checked_bags": false
-    }
+    },
+    "welcome_bonus_points": null
   },
   {
     "slug": "scotia-momentum-visa-card-for-students",
@@ -3893,9 +3792,9 @@
     "issuer": "Scotiabank",
     "network": "Visa",
     "card_type": "rewards",
-    "annual_fee": 0,
+    "annual_fee": 49,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 5% cash back on all purchases for the first 3 months (up to $2,000 in total purchases).2",
+    "welcome_bonus": "No points or cash welcome bonus. Current offer: 2.99% introductory interest rate on balance transfers for the first 6 months.",
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
@@ -3903,20 +3802,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "select purchases": "2%",
-      "eligible everyday purchases when you shop with your card": "2%",
-      "groceries, food delivery and food subscription services, and": "2%",
-      "gas, electric vehicle charging, and daily transit like buses": "2%",
-      "recurring subscription services like music and video": "2%",
-      "other eligible purchases Browse the Scotia Momentum® Visa": "1%",
-      "purchases and": "25.99%",
-      "Purchases on your Account at Grocery, Gas Stations": "2%",
-      "Purchases on your Account at Grocery, Gas Stations, Electric Vehicle Cha": "2%",
-      "All purchases": "2%"
+      "Groceries & drugstore": "2%",
+      "Gas, EV charging & transit": "2%",
+      "Recurring bills": "2%",
+      "Recurring subscriptions": "2%",
+      "All other purchases": "1%"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits"
     ],
@@ -3950,7 +3844,8 @@
       "purchase_protection": true,
       "extended_warranty": true,
       "free_checked_bags": false
-    }
+    },
+    "welcome_bonus_points": null
   },
   {
     "slug": "scotia-momentum-no-fee-visa-card-for-students",
@@ -3960,24 +3855,23 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 10% cash back on all purchases for the first 3 months (up to $2,000 in total purchases)",
-    "welcome_bonus_value_cad": null,
+    "welcome_bonus": "Earn 10% Cash Back on all purchases for the first 3 months (up to $2,000 in total purchases). Plus, 0% introductory interest rate on balance transfers for the first 6 months.",
+    "welcome_bonus_value_cad": 200,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 19.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases for the first": "10%",
-      "eligible gas station, grocery store, drug store purchases": "1%",
-      "eligible gas station, grocery store, drug store purchases and recurring payme": "1%",
-      "travel purchases": "3x",
-      "dining and entertainment": "2x",
-      "All purchases": "10%"
+      "Groceries & drugstore": "1%",
+      "Gas, EV charging & transit": "1%",
+      "Recurring bills": "1%",
+      "Recurring subscriptions": "1%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -4004,7 +3898,8 @@
       "purchase_protection": false,
       "extended_warranty": false,
       "free_checked_bags": false
-    }
+    },
+    "welcome_bonus_points": null
   },
   {
     "slug": "scotiabank-american-express-card-for-students",
@@ -4022,12 +3917,17 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases and": "19.99%",
-      "other eligible everyday purchases": "1x"
+      "Groceries (Sobeys group)": "3x",
+      "Dining & food delivery": "2x",
+      "Entertainment": "2x",
+      "Gas & transit": "2x",
+      "Streaming services": "2x",
+      "Travel": "1x",
+      "All other purchases": "1x"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "purchase_protection": "10",
@@ -4072,24 +3972,21 @@
     "card_type": "rewards",
     "annual_fee": 79,
     "first_year_fee": null,
-    "welcome_bonus": "2.99% introductory interest rate on Balance transfers for the first 6 months",
-    "welcome_bonus_value_cad": null,
+    "welcome_bonus": "Get 5% cash back on up to $6,500 in purchases in the first 3 months. Plus, 2.99% introductory interest rate on balance transfers for the first 6 months.",
+    "welcome_bonus_value_cad": 325,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases for the first": "10%",
-      "eligible gas station, grocery store, drug store purchases": "1%",
-      "eligible gas station, grocery store, drug store purchases and recurring payme": "1%",
-      "travel purchases": "3x",
-      "dining and entertainment": "2x",
-      "All purchases": "10%"
+      "Gas, EV, dining, office supplies & bills": "3%",
+      "Shipping & accounting services": "2%",
+      "All other purchases": "1%"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -4116,7 +4013,8 @@
       "purchase_protection": true,
       "extended_warranty": true,
       "free_checked_bags": false
-    }
+    },
+    "welcome_bonus_points": null
   },
   {
     "slug": "scotiabank-passport-visa-infinite-business-card",
@@ -4126,7 +4024,7 @@
     "card_type": "rewards",
     "annual_fee": 199,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to $2,800 in first year savings including up to 40,000 bonus Scene+ points",
+    "welcome_bonus": "Earn up to $2,600 in first year savings and reward value, including up to 40,000 bonus Scene+ points.",
     "welcome_bonus_value_cad": 400,
     "welcome_bonus_conditions": null,
     "min_spend": null,
@@ -4134,15 +4032,10 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases for the first": "10%",
-      "eligible gas station, grocery store, drug store purchases": "1%",
-      "eligible gas station, grocery store, drug store purchases and recurring payme": "1%",
-      "travel purchases": "3x",
-      "dining and entertainment": "2x",
-      "All purchases": "10%"
+      "All business purchases": "1.5x"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
+    "foreign_transaction_fee": false,
     "foreign_transaction_fee_pct": null,
     "key_perks": [],
     "insurance": {},
@@ -4189,17 +4082,10 @@
     "purchase_interest_rate": 1.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "purchases for the first": "10%",
-      "eligible gas station, grocery store, drug store purchases": "1%",
-      "eligible gas station, grocery store, drug store purchases and recurring payme": "1%",
-      "travel purchases": "3x",
-      "dining and entertainment": "2x",
-      "All purchases": "10%"
-    },
+    "earn_rates": {},
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -4236,24 +4122,19 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to 7,500 bonus Scene+ points in first 3 months",
-    "welcome_bonus_value_cad": 75,
+    "welcome_bonus": "Earn up to 15,000 bonus Scene+ points in your first 3 months (up to $150 in points value).",
+    "welcome_bonus_value_cad": 150,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases for the first": "10%",
-      "eligible gas station, grocery store, drug store purchases": "1%",
-      "eligible gas station, grocery store, drug store purchases and recurring payme": "1%",
-      "travel purchases": "3x",
-      "dining and entertainment": "2x",
-      "All purchases": "10%"
+      "Home Hardware purchases": "1x"
     },
     "rewards_program": "scene+",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -4269,7 +4150,7 @@
     "apply_url": "https://www.scotiabank.com/ca/en/small-business/business-banking/credit-cards/scotia-home-hardware-pro-visa-business-credit-card.html",
     "is_business": true,
     "cpp_cad": 1,
-    "welcome_bonus_points": 7500,
+    "welcome_bonus_points": 15000,
     "first_year_value_cad": 75,
     "benefits": {
       "lounge_access": false,
@@ -4300,13 +4181,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "travel": "2x",
-      "gas stations, electric vehicle charging stations, grocery stores and dru": "1.5x",
-      "other purchases": "1x"
+      "Travel via CIBC Rewards Centre": "2x",
+      "Gas, EV, groceries & drugstores": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "cibc aventura",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Travel program credit (NEXUS/Global Entry)"
     ],
@@ -4360,12 +4241,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas, electric vehicle charging, groceries and with Air Canada": "1.5x",
-      "other purchases": "1x"
+      "Gas, EV, groceries & Air Canada": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Free first checked bag",
       "Concierge service"
@@ -4420,14 +4301,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "travel": "3x",
-      "dining, entertainment, transportation, gas, electric vehicle charging, a": "2x",
-      "other purchases ⓘ Other Purchases Discover the amazing features and benefits": "1.25x",
-      "dining, entertainment, transportation, gas, electric": "2x"
+      "Travel via CIBC Rewards Centre": "3x",
+      "Dining, gas, groceries & transport": "2x",
+      "All other purchases": "1.25x"
     },
     "rewards_program": "cibc aventura",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Travel program credit (NEXUS/Global Entry)"
@@ -4482,12 +4362,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas, electric vehicle charging, groceries, travel and dining": "1.5x",
-      "other purchases": "1.25x"
+      "Air Canada": "2x",
+      "Gas, groceries, travel & dining": "1.5x",
+      "All other purchases": "1.25x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Premium lounge access",
       "Airport lounge access",
@@ -4544,14 +4425,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "travel": "2x",
-      "gas stations, electric vehicle charging stations, grocery stores and dru": "1.5x",
-      "other purchases ⓘ Other Purchases Discover the amazing features and benefits": "1x",
-      "other purchases ⓘ Other Purchases Discover the amazing fe": "1x"
+      "Travel via CIBC Rewards Centre": "2x",
+      "Gas, EV charging, groceries, drug stores": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "cibc aventura",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Travel program credit (NEXUS/Global Entry)"
     ],
@@ -4597,20 +4477,20 @@
     "annual_fee": 0,
     "first_year_fee": null,
     "welcome_bonus": "Earn up to 12,500 Aventura Points",
-    "welcome_bonus_value_cad": 138,
+    "welcome_bonus_value_cad": 125,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas stations, electric vehicle charging stations, grocery stores and dru": "1x",
-      "travel": "1x",
-      "other purchases ⓘ Other Purchases Get the most from your CIBC Aventura reward": "1pt/$2"
+      "Gas, EV charging, groceries, drug stores": "1x",
+      "Travel via CIBC Rewards Centre": "1x",
+      "All other purchases": "0.5x"
     },
     "rewards_program": "cibc aventura",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "purchase_protection": ""
@@ -4659,11 +4539,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas, electric vehicle charging, groceries and with Air Canada": "1x"
+      "Gas, EV charging, groceries, Air Canada": "1x",
+      "All other purchases": "0.67x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "car_rental": "",
@@ -4713,11 +4594,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas Get a discount every time you fill up at participating ga": "10¢/litre"
+      "Top 3 spend categories monthly": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "cibc aventura",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -4733,7 +4615,7 @@
     "apply_url": "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/adapta-mastercard.html",
     "is_business": false,
     "cpp_cad": 1.1,
-    "welcome_bonus_points": 3000,
+    "welcome_bonus_points": 6000,
     "first_year_value_cad": 100,
     "benefits": {
       "lounge_access": false,
@@ -4764,14 +4646,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas, electric vehicle charging, and groceries": "4%",
-      "everything else": "1%",
-      "participating Pioneer, Fas Gas, Ultramar and Chevron gas stat": "10¢/litre",
-      "All purchases": "10%"
+      "Gas, EV charging & groceries": "4%",
+      "Transport, dining, bills & travel": "2%",
+      "All other purchases": "1%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Concierge service"
     ],
@@ -4824,14 +4705,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas, electric vehicle charging, and groceries": "3%",
-      "everything else": "1%",
-      "participating Pioneer, Fas Gas, Ultramar and Chevron gas stat": "10¢/litre",
-      "All purchases": "10%"
+      "Gas, EV charging & groceries": "3%",
+      "Transport, dining, bills & travel": "2%",
+      "All other purchases": "1%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "car_rental": "",
@@ -4881,16 +4761,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "groceries": "2%",
-      "gas, electric vehicle charging, transportation, dini": "1%",
-      "everything else": "0.5%",
-      "gas, electric vehicle charging, transportation, dining, recurring paymen": "1%",
-      "participating Pioneer, Fas Gas, Ultramar and Chevron gas stat": "10¢/litre",
-      "All purchases": "2%"
+      "Groceries": "2%",
+      "Gas, transport, dining & bills": "1%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "purchase_protection": ""
@@ -4937,18 +4814,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases ⓘ where Mastercard is accepted": "3%",
-      "restaurants and at Costco gas": "3%",
-      "gas stations, electric vehicle charging stations and at": "2%",
-      "other purchases including at Costco": "1%",
-      "dining and food delivery, ⓘ on top of your Skip+ savings": "3%",
-      "gas stations, electric vehicle charging stations and at Costco.ca Opens a n": "2%",
-      "dining and food delivery, ⓘ on top of your Skip+ savings and rewards": "3%",
-      "All purchases": "3%"
+      "Restaurants & Costco gas": "3%",
+      "Other gas, EV charging & Costco.ca": "2%",
+      "All other purchases": "1%"
     },
-    "rewards_program": "cibc aventura",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "rewards_program": "cash back",
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "purchase_protection": "",
@@ -4988,7 +4860,7 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to $150 in value with no annual fee",
+    "welcome_bonus": "Join and earn up to $150 in value with no annual fee",
     "welcome_bonus_value_cad": 150,
     "welcome_bonus_conditions": null,
     "min_spend": null,
@@ -4996,11 +4868,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas Get a discount every time you fill up at participating ga": "10¢/litre"
+      "Top 3 spend categories monthly": "1.5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "cibc aventura",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -5016,7 +4889,7 @@
     "apply_url": "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/adapta-mastercard-for-students.html",
     "is_business": false,
     "cpp_cad": 1.1,
-    "welcome_bonus_points": null,
+    "welcome_bonus_points": 12000,
     "first_year_value_cad": 150,
     "benefits": {
       "lounge_access": false,
@@ -5047,18 +4920,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "groceries": "2%",
-      "gas, electric vehicle charging, transportation, dini": "1%",
-      "everything else": "0.5%",
-      "grocery purchases and up to": "2%",
-      "everyday purchases like books, movies, food delivery and more": "1%",
-      "gas, electric vehicle charging, transportation, dining, recurring paymen": "1%",
-      "participating Pioneer, Fas Gas, Ultramar and Chevron gas stat": "10¢/litre",
-      "All purchases": "10%"
+      "Groceries": "2%",
+      "Gas, transport, dining & bills": "1%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "purchase_protection": "8"
@@ -5107,13 +4975,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "participating Pioneer, Fas Gas, Ultramar and Chevron gas stat": "10¢/litre",
-      "gas stations, electric vehicle charging stations, grocery stores and dru": "1x",
-      "travel": "1x"
+      "Gas, EV charging, groceries, drug stores": "1x",
+      "Travel via CIBC Rewards Centre": "1x",
+      "All other purchases": "0.5x"
     },
     "rewards_program": "cibc aventura",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "purchase_protection": ""
@@ -5162,11 +5030,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "gas, electric vehicle charging, groceries and with Air Canada": "1x"
+      "Gas, EV charging, groceries, Air Canada": "1x",
+      "All other purchases": "0.67x"
     },
     "rewards_program": "aeroplan",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "car_rental": "",
@@ -5216,14 +5085,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "every $": "5x",
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%",
-      "everything else": "1pt/$2"
+      "Bills, groceries, dining & takeout": "5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits"
     ],
@@ -5274,19 +5141,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%",
-      "everyday essentials like groceries, gas, and transit": "5x",
-      "everything else": "1x",
-      "grocery stores": "5x",
-      "gas, public transit, and rideshare apps like Uber and Lyft": "5x",
-      "dining out or grabbing drinks at your favorite restaurants, p": "5x",
-      "takeout or delivery from restaurants and apps like UberEats a": "5x",
-      "All purchases": "5x"
+      "Groceries, gas, transit, dining, takeout": "5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Statement credits"
@@ -5336,12 +5196,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%"
+      "Travel": "5x",
+      "Dining, entertainment, recurring bills": "3x",
+      "All other purchases": "1x"
     },
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Travel program credit (NEXUS/Global Entry)",
@@ -5395,13 +5256,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%",
-      "everything else": "1x"
+      "Groceries, dining, gas & travel": "5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Hotel elite status/collection",
       "Travel program credit (NEXUS/Global Entry)",
@@ -5456,16 +5316,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "grocery purchases, so you can earn more on your favourite foo": "3%",
-      "other purchases, so you earn every time you spend": "0.5%",
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%",
-      "every purchase in your first": "5%",
-      "All purchases": "5%"
+      "Groceries": "3%",
+      "Recurring bills": "1%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Statement credits"
@@ -5505,7 +5362,7 @@
     "issuer": "BMO",
     "network": "Mastercard",
     "card_type": "cashback",
-    "annual_fee": 120,
+    "annual_fee": 139,
     "first_year_fee": null,
     "welcome_bonus": "Get up to $650 in value and annual fees waived first year",
     "welcome_bonus_value_cad": 650,
@@ -5515,18 +5372,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "groceries – the highest cash back earn rate on groceries in C": "5%",
-      "groceries": "5%",
-      "transit": "4%",
-      "recurring bills": "2%",
-      "other purchases": "1%",
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%",
-      "All purchases": "1%"
+      "Groceries": "5%",
+      "Transit": "4%",
+      "Gas & EV charging": "3%",
+      "Recurring bills": "2%",
+      "All other purchases": "1%"
     },
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits",
       "Statement credits"
@@ -5577,14 +5431,10 @@
     "purchase_interest_rate": 0,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%",
-      "All purchases": "5%"
-    },
+    "earn_rates": {},
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Travel program credit (NEXUS/Global Entry)",
       "Statement credits"
@@ -5632,15 +5482,14 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%",
-      "All purchases": "5%"
+      "Groceries": "3%",
+      "Recurring bills": "1%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
-      "Travel program credit (NEXUS/Global Entry)",
       "Statement credits"
     ],
     "insurance": {},
@@ -5686,20 +5535,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%",
-      "Porter purchases.∆∆": "2x",
-      "everyday travel like gas and transportation.∆∆﻿": "1x",
-      "groceries and dining.∆∆": "1x",
-      "hotel accommodations.∆∆": "1x",
       "Porter purchases": "2x",
-      "everyday travel like gas and transportation": "1x",
-      "groceries and dining": "1x",
-      "hotel accommodations": "1x"
+      "Everyday travel, gas & transport": "1x",
+      "Groceries & dining": "1x",
+      "Hotels": "1x",
+      "All other purchases": "0.5x"
     },
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Food delivery credits"
     ],
@@ -5750,22 +5594,17 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%",
-      "Porter purchases.∆∆": "3x",
-      "everyday travel like gas and transportation.∆∆﻿": "2x",
-      "groceries and dining.∆∆": "2x",
-      "hotel accomodations.∆∆﻿": "2x",
       "Porter purchases": "3x",
-      "everyday travel like gas and transportation": "2x",
-      "groceries and dining": "2x",
-      "hotel accomodations": "2x"
+      "Everyday travel, gas & transport": "2x",
+      "Groceries & dining": "2x",
+      "Hotels": "2x",
+      "All other purchases": "1x"
     },
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
-      "Food delivery credits",
+      "Instacart+ membership credit",
       "Free first checked bag"
     ],
     "insurance": {
@@ -5805,7 +5644,7 @@
     "issuer": "BMO",
     "network": "Mastercard",
     "card_type": "rewards",
-    "annual_fee": 149,
+    "annual_fee": 175,
     "first_year_fee": null,
     "welcome_bonus": "Get up to $2,175 in value including up to 150,000 bonus BMO Rewards Points in your first year (that's $1,000 in value)",
     "welcome_bonus_value_cad": 1005,
@@ -5815,13 +5654,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "21.99%",
-      "Quebec residents": "21.99%",
-      "All purchases": "5%"
+      "Office supplies, cellphone & internet": "4x",
+      "Gas": "4x",
+      "All other purchases": "1.5x"
     },
     "rewards_program": "bmo rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Travel program credit (NEXUS/Global Entry)",
       "Statement credits"
@@ -5871,11 +5710,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "All purchases": "5x"
+      "Groceries & restaurants": "5x",
+      "Gas, EV, recurring bills & travel": "2x",
+      "All other purchases": "1x"
     },
     "rewards_program": "national bank",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "flight_delay": "500",
@@ -5919,23 +5760,17 @@
     "card_type": "low_interest",
     "annual_fee": 35,
     "first_year_fee": null,
-    "welcome_bonus": "Get up to $105 cashback",
-    "welcome_bonus_value_cad": 105,
+    "welcome_bonus": "",
+    "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 8.9,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "everything else Money-Back World Mastercard®* Your everyday C": "0.5%",
-      "everything else Money-Back Credit CardMoney-Back World Master": "0.5%",
-      "everything elseAdditional Benefits ↳ FlexiRoam": "0.5%",
-      "purchases in two categories of your choice": "2%",
-      "All purchases": "2%"
-    },
+    "earn_rates": {},
     "rewards_program": "national bank",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
       "purchase_protection": "5",
@@ -5982,21 +5817,21 @@
     "card_type": "rewards",
     "annual_fee": 70,
     "first_year_fee": null,
-    "welcome_bonus": "",
-    "welcome_bonus_value_cad": null,
+    "welcome_bonus": "Earn up to 25,000 National Bank rewards points and get the first year free",
+    "welcome_bonus_value_cad": 238,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "1.5x",
-      "purchases with À la carte TravelTM agrency": "1.5x",
-      "All purchases": "1.5x"
+      "Groceries & restaurants": "2x",
+      "Gas, EV, recurring bills & travel": "1.5x",
+      "All other purchases": "0.67x"
     },
     "rewards_program": "national bank",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -6009,7 +5844,7 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.nbc.ca/business/credit-cards/platinum-mastercard.html",
+    "apply_url": "https://www.nbc.ca/personal/mastercard-credit-cards/platinum.html",
     "is_business": false,
     "cpp_cad": 0.95,
     "interest_rates": {
@@ -6026,7 +5861,8 @@
       "purchase_protection": true,
       "extended_warranty": true,
       "free_checked_bags": false
-    }
+    },
+    "welcome_bonus_points": 25000
   },
   {
     "slug": "national-bank-business-mastercard",
@@ -6043,12 +5879,10 @@
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "All purchases": "1.5x"
-    },
+    "earn_rates": {},
     "rewards_program": "national bank",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -6092,12 +5926,10 @@
     "purchase_interest_rate": 5,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "All purchases": "1.5x"
-    },
+    "earn_rates": {},
     "rewards_program": "national bank",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -6142,13 +5974,11 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchases": "1.5x",
-      "purchases with À la carte TravelTM agrency": "1.5x",
       "All purchases": "1.5x"
     },
     "rewards_program": "national bank",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -6186,7 +6016,7 @@
     "issuer": "National Bank",
     "network": "Mastercard",
     "card_type": "rewards",
-    "annual_fee": 0,
+    "annual_fee": 35,
     "first_year_fee": null,
     "welcome_bonus": "",
     "welcome_bonus_value_cad": null,
@@ -6195,14 +6025,10 @@
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "grocery": "1%",
-      "gas": "1%",
-      "everything else": "0.5%"
-    },
+    "earn_rates": {},
     "rewards_program": "national bank",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -6248,8 +6074,8 @@
     "balance_transfer_rate": null,
     "earn_rates": {},
     "rewards_program": "mbna rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -6298,8 +6124,8 @@
     "balance_transfer_rate": null,
     "earn_rates": {},
     "rewards_program": "mbna rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {},
     "minimum_income": null,
@@ -6340,19 +6166,19 @@
     "annual_fee": 0,
     "first_year_fee": null,
     "welcome_bonus": "Earn up to 10,000 bonus points",
-    "welcome_bonus_value_cad": 100,
+    "welcome_bonus_value_cad": 50,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "restaurant, grocery, digital media, membership, and": "4x",
-      "All purchases": "4x"
+      "Dining, groceries, media & bills": "2x",
+      "All other purchases": "1x"
     },
     "rewards_program": "mbna rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits"
     ],
@@ -6398,19 +6224,20 @@
     "card_type": "rewards",
     "annual_fee": 120,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to 30,000 bonus MBNA Rewards Points",
-    "welcome_bonus_value_cad": 300,
+    "welcome_bonus": "Earn up to 30,000 bonus MBNA Rewards Points (20,000 after $2,000 spend in 90 days + 10,000 for paperless e-statements)",
+    "welcome_bonus_value_cad": 245,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "restaurant, grocery, digital media, membership, and household utility pu": "5x"
+      "Dining, groceries, media & bills": "5x",
+      "All other purchases": "1x"
     },
     "rewards_program": "mbna rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits"
     ],
@@ -6458,22 +6285,19 @@
     "annual_fee": 0,
     "first_year_fee": null,
     "welcome_bonus": "Get $100 cash back when you spend $1,500 in your first 3 months",
-    "welcome_bonus_value_cad": 120,
+    "welcome_bonus_value_cad": 100,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "favourite stores * and": "4%",
-      "Triangle Mastercard or": "0.5%",
-      "Triangle World Elite Mastercard": "1%",
-      "other charges": "21.99%",
-      "Gas+ and Petro-Canada locations": "5¢/litre"
+      "Up to 3 chosen categories": "2%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "2% cash back in up to 3 categories",
       "0.5% on everything else",
@@ -6494,10 +6318,10 @@
     "apply_url": "https://www.tangerine.ca/en/personal/spend/credit-cards/world-credit-card",
     "is_business": false,
     "cpp_cad": 1,
-    "welcome_bonus_points": 120,
+    "welcome_bonus_points": null,
     "first_year_value_cad": 120,
     "benefits": {
-      "lounge_access": true,
+      "lounge_access": false,
       "no_fx_fee": false,
       "car_rental_insurance": true,
       "travel_medical": false,
@@ -6525,11 +6349,11 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchasesGo to note [": "2%"
+      "All eligible purchases": "2%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "2% on non-USD with Rogers service",
       "1% without Rogers service",
@@ -6581,12 +6405,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "eligible purchases": "2%",
-      "everything else": "1%"
+      "U.S. dollar purchases": "3%",
+      "All other purchases": "2%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "1.5% on non-USD with Rogers service",
       "Statement credits",
@@ -6643,14 +6467,10 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "everything Earn on all your spending with no complicated cate": "2%",
-      "morning lattes morning lattes hot yoga classes a dozen oyster": "2%",
-      "purchases and": "25.99%",
-      "everything! Data collected as of October": "2%",
       "All purchases": "2%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
+    "foreign_transaction_fee": false,
     "foreign_transaction_fee_pct": null,
     "key_perks": [
       "No FX fees",
@@ -6709,13 +6529,11 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "grocery": "1%",
-      "gas": "1%",
-      "everything else": "0.5%"
+      "Gas & groceries": "1%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Guaranteed approval",
       "1% grocery",
@@ -6765,12 +6583,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "everything else Collect cashback no matter where you shop": "0.5%",
-      "All purchases": "2%"
+      "Groceries, gas & recurring bills": "2%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "2% grocery",
       "2% gas",
@@ -6815,7 +6633,7 @@
     "issuer": "Neo Financial",
     "network": "Mastercard",
     "card_type": "rewards",
-    "annual_fee": 125,
+    "annual_fee": 149,
     "first_year_fee": null,
     "welcome_bonus": "",
     "welcome_bonus_value_cad": null,
@@ -6825,13 +6643,14 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "groceries": "5%",
-      "gas²": "3%",
-      "everything else Collect cashback no matter where you shop": "1%"
+      "Groceries": "5%",
+      "Recurring bills": "4%",
+      "Gas": "3%",
+      "All other purchases": "1%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "5% grocery",
       "Airport lounge access",
@@ -6892,14 +6711,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "restaurants and bars": "4%",
-      "gas, groceries, drugstore purchases and pre-authoriz": "1.5%",
-      "other credit card purchases with no limit on how much you": "0.5%",
-      "All purchases": "20%"
+      "Restaurants, bars & coffee shops": "4%",
+      "Gas, groceries, drugstore & bills": "1.5%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Up to 4% cash back at restaurants",
       "Up to 1.5% on groceries",
@@ -6945,25 +6763,22 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 50,000 bonus PC Optimum Points",
-    "welcome_bonus_value_cad": 350,
+    "welcome_bonus": "Earn 50,000 bonus PC Optimum points when you spend $100+ at participating stores within 60 days (apply by June 30, 2026)",
+    "welcome_bonus_value_cad": 50,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "our grocery stores": "1%",
-      "Joe Fresh®": "1%",
-      "dining, transit and everywhere else": "1%",
-      "Esso™ and Mobil™ stations": "3¢/litre"
+      "Shoppers Drug Mart": "2.5%",
+      "Groceries": "1%",
+      "Dining, transit & everywhere else": "1%"
     },
     "rewards_program": "pc optimum",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
-    "key_perks": [
-      "Concierge service"
-    ],
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
+    "key_perks": [],
     "insurance": {
       "car_rental": "8"
     },
@@ -6979,7 +6794,7 @@
     "historical_offers": [],
     "apply_url": "https://www.pcfinancial.ca/en/credit-cards/pc-mastercard/",
     "is_business": false,
-    "cpp_cad": 0.7,
+    "cpp_cad": 0.1,
     "welcome_bonus_points": 50000,
     "first_year_value_cad": 350,
     "benefits": {
@@ -7003,22 +6818,21 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 50,000 bonus PC Optimum Points",
-    "welcome_bonus_value_cad": 350,
+    "welcome_bonus": "Earn 50,000 bonus PC Optimum points when you spend $100+ at participating stores within 60 days (apply by June 30, 2026)",
+    "welcome_bonus_value_cad": 50,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "our grocery stores": "2%",
-      "Joe Fresh®": "2%",
-      "dining, transit, and everywhere else": "1%",
-      "EssoTM and MobilTM stations": "3¢/litre"
+      "Shoppers Drug Mart": "3.5%",
+      "Groceries": "2%",
+      "Dining, transit & everywhere else": "1%"
     },
     "rewards_program": "pc optimum",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits",
       "Concierge service"
@@ -7036,7 +6850,7 @@
     "historical_offers": [],
     "apply_url": "https://www.pcfinancial.ca/en/credit-cards/world-mastercard/",
     "is_business": false,
-    "cpp_cad": 0.7,
+    "cpp_cad": 0.1,
     "welcome_bonus_points": 50000,
     "first_year_value_cad": 350,
     "benefits": {
@@ -7060,22 +6874,21 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 50,000 bonus PC Optimum Points",
-    "welcome_bonus_value_cad": 350,
+    "welcome_bonus": "Earn 50,000 bonus PC Optimum points when you spend $100+ at participating stores within 60 days (apply by June 30, 2026)",
+    "welcome_bonus_value_cad": 50,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "our grocery stores": "3%",
-      "Joe Fresh®": "3%",
-      "dining, transit, and everywhere else": "1%",
-      "EssoTM and MobilTM stations": "3¢/litre"
+      "Shoppers Drug Mart": "4.5%",
+      "Groceries": "3%",
+      "Dining, transit & everywhere else": "1%"
     },
     "rewards_program": "pc optimum",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Up to 3% back at grocery stores",
       "Statement credits",
@@ -7099,7 +6912,7 @@
     "historical_offers": [],
     "apply_url": "https://www.pcfinancial.ca/en/credit-cards/world-elite/",
     "is_business": false,
-    "cpp_cad": 0.7,
+    "cpp_cad": 0.1,
     "welcome_bonus_points": 50000,
     "first_year_value_cad": 350,
     "benefits": {
@@ -7121,25 +6934,23 @@
     "issuer": "PC Financial",
     "network": "Mastercard",
     "card_type": "rewards",
-    "annual_fee": 119,
+    "annual_fee": 120,
     "first_year_fee": null,
     "welcome_bonus": "Earn 50,000 bonus PC Optimum Points + first year annual fee waived",
-    "welcome_bonus_value_cad": 350,
+    "welcome_bonus_value_cad": 50,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "pickup orders": "2%",
-      "our grocery stores": "4%",
-      "Joe Fresh® stores": "4%",
-      "dining, transit, and everywhere else": "1%",
-      "EssoTM and MobilTM stations": "7¢/litre"
+      "Shoppers Drug Mart": "3.5%",
+      "Groceries": "4%",
+      "Dining, transit & everywhere else": "1%"
     },
     "rewards_program": "pc optimum",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits",
       "Concierge service"
@@ -7159,7 +6970,7 @@
     "historical_offers": [],
     "apply_url": "https://www.pcfinancial.ca/en/credit-cards/insiders/",
     "is_business": false,
-    "cpp_cad": 0.7,
+    "cpp_cad": 0.1,
     "welcome_bonus_points": 50000,
     "first_year_value_cad": 350,
     "benefits": {
@@ -7191,11 +7002,12 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchasesGo to note [": "2%"
+      "Canadian Tire stores, gas & Mark's": "3%",
+      "All other purchases": "1.5%"
     },
     "rewards_program": "triangle rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Up to 1.5% cash back on all purchases",
       "Up to 3% at Canadian Tire stores",
@@ -7247,15 +7059,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "favourite stores * and": "4%",
-      "Triangle Mastercard or": "0.5%",
-      "Triangle World Elite Mastercard": "1%",
-      "other charges": "21.99%",
-      "Gas+ and Petro-Canada locations": "5¢/litre"
+      "Canadian Tire family of stores": "4%",
+      "Groceries": "1.5%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "triangle rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "4% CT Money at CT/Sport Chek/Marks/etc",
       "1.5% at grocery stores (first $12K/yr)",
@@ -7305,15 +7115,13 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "favourite stores * and": "4%",
-      "Triangle Mastercard or": "0.5%",
-      "Triangle World Elite Mastercard": "1%",
-      "other charges": "21.99%",
-      "Gas+ and Petro-Canada locations": "5¢/litre"
+      "Canadian Tire family of stores": "4%",
+      "Groceries": "3%",
+      "All other purchases": "1%"
     },
     "rewards_program": "triangle rewards",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Highest CT Money earn rate",
       "Min income $80K personal or $150K household"
@@ -7360,13 +7168,10 @@
     "purchase_interest_rate": 10.9,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
-    "earn_rates": {
-      "eligible purchases": "2%",
-      "everything else": "1%"
-    },
+    "earn_rates": {},
     "rewards_program": "desjardins bonusdollars",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Statement credits"
     ],
@@ -7416,11 +7221,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchasesGo to note [": "2%"
+      "Restaurants": "2%",
+      "Entertainment": "2%",
+      "Alternative transportation": "2%",
+      "Pre-authorized payments": "2%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Up to 2% cash back"
     ],
@@ -7470,15 +7279,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "favourite stores * and": "4%",
-      "Triangle Mastercard or": "0.5%",
-      "Triangle World Elite Mastercard": "1%",
-      "other charges": "21.99%",
-      "Gas+ and Petro-Canada locations": "5¢/litre"
+      "Restaurants": "2%",
+      "Entertainment": "2%",
+      "Alternative transportation": "2%",
+      "Pre-authorized payments": "2%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Up to 2% cash back"
     ],
@@ -7525,11 +7334,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "All purchases": "2%"
+      "Restaurants": "2%",
+      "Entertainment": "2%",
+      "Alternative transportation": "2%",
+      "Pre-authorized payments": "2%",
+      "All other purchases": "0.5%"
     },
     "rewards_program": "desjardins bonusdollars",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Up to 2% in BONUSDOLLARS"
     ],
@@ -7572,7 +7385,7 @@
     "issuer": "Desjardins",
     "network": "Mastercard",
     "card_type": "cashback",
-    "annual_fee": 120,
+    "annual_fee": 100,
     "first_year_fee": null,
     "welcome_bonus": "",
     "welcome_bonus_value_cad": null,
@@ -7582,11 +7395,15 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchasesGo to note [": "2%"
+      "Groceries": "4%",
+      "Restaurants": "3%",
+      "Entertainment": "3%",
+      "Alternative transportation": "3%",
+      "All other purchases": "1%"
     },
     "rewards_program": "cash back",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Up to 3% cash back"
     ],
@@ -7626,7 +7443,7 @@
     "issuer": "Desjardins",
     "network": "Visa",
     "card_type": "rewards",
-    "annual_fee": 139,
+    "annual_fee": 110,
     "first_year_fee": null,
     "welcome_bonus": "",
     "welcome_bonus_value_cad": null,
@@ -7636,11 +7453,16 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchasesGo to note [": "2%"
+      "Restaurants": "2%",
+      "Entertainment": "2%",
+      "Alternative transportation": "2%",
+      "Pre-authorized payments": "2%",
+      "Travel": "2%",
+      "All other purchases": "0.65%"
     },
     "rewards_program": "desjardins bonusdollars",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Travel rewards",
       "BONUSDOLLARS"
@@ -7681,7 +7503,7 @@
     "issuer": "Desjardins",
     "network": "Mastercard",
     "card_type": "rewards",
-    "annual_fee": 149,
+    "annual_fee": 130,
     "first_year_fee": null,
     "welcome_bonus": "",
     "welcome_bonus_value_cad": null,
@@ -7691,11 +7513,16 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchasesGo to note [": "2%"
+      "Groceries": "3%",
+      "Restaurants": "3%",
+      "Entertainment": "2%",
+      "Alternative transportation": "2%",
+      "Travel": "2%",
+      "All other purchases": "1%"
     },
     "rewards_program": "desjardins bonusdollars",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Travel rewards",
       "BONUSDOLLARS",
@@ -7737,7 +7564,7 @@
     "issuer": "Desjardins",
     "network": "Visa",
     "card_type": "rewards",
-    "annual_fee": 399,
+    "annual_fee": 395,
     "first_year_fee": null,
     "welcome_bonus": "",
     "welcome_bonus_value_cad": null,
@@ -7747,11 +7574,16 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "purchasesGo to note [": "2%"
+      "Restaurants": "4%",
+      "Entertainment": "4%",
+      "Alternative transportation": "4%",
+      "Groceries": "3%",
+      "Travel": "3%",
+      "All other purchases": "1.5%"
     },
     "rewards_program": "desjardins bonusdollars",
-    "foreign_transaction_fee": null,
-    "foreign_transaction_fee_pct": null,
+    "foreign_transaction_fee": true,
+    "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Premium travel rewards",
       "BONUSDOLLARS",
