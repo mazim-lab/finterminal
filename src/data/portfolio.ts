@@ -30,8 +30,9 @@ export const LAST_UPDATED: string | null = "2026-06-20";
 /** True until the first market-value snapshot is applied. */
 export const SNAPSHOT_PENDING = false;
 /**
- * All-time return from Wealthsimple's reported money-weighted figures (combined accounts):
- * figures redacted (TFSA +140.71% / RRSP +360.43%) = +268.0%.
+ * All-time money-weighted return, blended across the combined accounts
+ * (TFSA +140.71% / RRSP +360.43%) = +268.0%. Percentages only here; the
+ * underlying dollar figures stay in the gitignored private/ folder.
  */
 export const ALLTIME_RETURN_PCT: number | null = 268.0;
 /** Unrealized return on the current open book only (vs book cost). */
