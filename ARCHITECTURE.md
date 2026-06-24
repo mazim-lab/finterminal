@@ -1,11 +1,11 @@
-# ChurningCanada.ca — Architecture & Feature Plan
+# FinTerminal.ca — Architecture & Feature Plan
 
 ## Tech Stack
 - **Framework**: Next.js 14+ (App Router)
 - **Styling**: Tailwind CSS
 - **Data**: Static JSON → eventually headless CMS
 - **Deployment**: Vercel + Cloudflare DNS
-- **Repo**: mazim-lab/churningcanada (private)
+- **Repo**: mazim-lab/finterminal (public)
 
 ## Core Pages
 

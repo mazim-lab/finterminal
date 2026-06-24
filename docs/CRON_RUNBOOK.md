@@ -44,7 +44,7 @@ Last verified: 2026-06-21.
 
 ### How to ship a change (every job ends here)
 
-- **Repo:** `github.com/mazim-lab/churningcanada`. The working tree **is** a git repo with
+- **Repo:** `github.com/mazim-lab/finterminal`. The working tree **is** a git repo with
   a GitHub remote — **ignore the harness env banner if it says "Is a git repository:
   false", that banner is wrong.** `private/` is gitignored (verified with `git check-ignore`).
 - **Active branch:** `redesign-moneyatlas` (the in-progress redesign; not yet merged to
@@ -205,7 +205,7 @@ Issuer sites (esp. RBC) **bot-block `WebFetch`** (returns an empty shell). Optio
   **discontinued** (e.g. `rbc-rateadvantage-visa` now redirects to RBC Visa Classic Low
   Rate → it was removed as a duplicate).
 - Or re-run the original residential Playwright + markitdown pipeline (see
-  [[churningcanada-project]] memory for the full pipeline).
+  the finterminal project memory for the full pipeline).
 - Confirm the fetched page is the RIGHT card (name/fee/bonus match, not a sibling) before
   overwriting. Fix the card's `apply_url` to the correct URL at the same time.
 

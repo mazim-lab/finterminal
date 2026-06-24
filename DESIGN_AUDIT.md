@@ -1,4 +1,4 @@
-# ChurningCanada.ca — Design Audit
+# FinTerminal.ca — Design Audit
 
 **Date:** February 22, 2026  
 **Auditor:** Frontend Design Review  

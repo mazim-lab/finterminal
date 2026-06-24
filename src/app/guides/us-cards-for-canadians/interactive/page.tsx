@@ -845,8 +845,8 @@ function USCardsGuideWizard() {
             description: 'Step-by-step guide to getting an ITIN, building US credit, and accessing the best US rewards cards as a Canadian.',
             datePublished: '2026-02-22',
             dateModified: '2026-02-22',
-            author: { '@type': 'Organization', name: 'ChurningCanada' },
-            publisher: { '@type': 'Organization', name: 'ChurningCanada' },
+            author: { '@type': 'Organization', name: 'FinTerminal' },
+            publisher: { '@type': 'Organization', name: 'FinTerminal' },
           }),
         }}
       />

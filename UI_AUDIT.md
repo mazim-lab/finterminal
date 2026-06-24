@@ -1,6 +1,6 @@
-# ChurningCanada UI/Code Audit Report
+# FinTerminal UI/Code Audit Report
 
-This report details the findings of a comprehensive UI and code audit of the ChurningCanada website. The audit focused on two primary issues: dark mode visibility and incorrect issuer filtering.
+This report details the findings of a comprehensive UI and code audit of the FinTerminal website. The audit focused on two primary issues: dark mode visibility and incorrect issuer filtering.
 
 ## Issue 1: Dark Mode Fonts & UI Visibility
 

@@ -1,1 +1,1 @@
-# Bank-specific parsers for ChurningCanada scraper
+# Bank-specific parsers for FinTerminal scraper

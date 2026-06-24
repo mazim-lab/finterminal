@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ChurningCanada Bank Card Scraper
+FinTerminal Bank Card Scraper
 Scrapes credit card data directly from Canadian and US bank websites.
 Designed to run as a GitHub Action on a weekly schedule.
 
@@ -382,7 +382,7 @@ def save_databases(ca_cards, us_cards):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="ChurningCanada Bank Card Scraper")
+    parser = argparse.ArgumentParser(description="FinTerminal Bank Card Scraper")
     parser.add_argument("--bank", help="Scrape a specific bank")
     parser.add_argument("--all", action="store_true", help="Scrape all banks")
     parser.add_argument("--build", action="store_true", help="Build comprehensive DBs from existing bank files")
