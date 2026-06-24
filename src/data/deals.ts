@@ -50,14 +50,17 @@ export const DEALS: Deal[] = [
     expiresAt: "2026-06-26",
   },
   {
-    title: "Corliving Nova Ridge upholstered queen bed",
-    merchant: "Home Depot",
-    url: "https://www.homedepot.ca/product/corliving-nova-ridge-dark-grey-button-tufted-upholstered-queen-bed/1001490953",
-    price: "$139",
+    title: "Apple Watch on sale across the lineup (Series 11, SE 3, Ultra 3)",
+    merchant: "Amazon",
+    url: "https://www.amazon.ca/dp/B0FQFH6261",
+    price: "$414",
+    was: "$589",
     blurb:
-      "This is a genuinely good price on a real bed, not a flimsy frame: $139 for an upholstered queen with a padded, button tufted headboard from Home Depot, in dark grey or ocean blue. For a spare room, a first apartment, or a teen's room, it is hard to do better, and delivery is free. A couple of honest heads ups so there are no surprises. You supply your own mattress, this is the frame and headboard only, and it uses wooden slats so you do not need a box spring. And it ships rather than sitting in store, with delivery landing in early July, so it is not a same week fix.",
-    category: "Furniture",
+      "Apple almost never marks down the Apple Watch, so a real Prime Day cut across the whole lineup is worth a look. The Series 11 in 46mm GPS is down to $414 from $589, about 30% off, and the cheaper SE 3 and the rugged Ultra 3 are discounted too. It is the upgrade most people actually feel day to day: a bigger always-on screen, proper sleep and heart tracking, and the watchOS bits that just work with an iPhone. Two honest notes so you pick the right one. This price is the GPS model, the cellular version costs more and only earns its keep if you want to leave your phone behind on runs. And if you mostly want notifications and fitness basics, the SE 3 does the job for a good bit less. Sale runs through Prime Day, which wraps June 26.",
+    category: "Electronics",
     posted: "Jun 24, 2026",
+    expires: "ends Jun 26",
+    expiresAt: "2026-06-26",
   },
   {
     title: "LG 65-inch OLED C5 4K TV",

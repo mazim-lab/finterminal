@@ -307,3 +307,16 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
   .stats{grid-template-columns:repeat(2,1fr)}
   main{padding:18px 16px}
 }
+
+/* Site-wide footer with affiliate disclosure */
+.site-foot{
+  max-width:1200px;margin:48px auto 0;padding:16px 28px 30px;
+  border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 28px;
+  font-family:var(--mono);font-size:11px;line-height:1.6;color:var(--ink-dim);
+}
+.site-foot .sf-disc{max-width:760px}
+.site-foot a{color:var(--gold);text-decoration:none}
+.site-foot a:hover{text-decoration:underline}
+.site-foot .sf-meta{white-space:nowrap}
+@media (max-width:720px){.site-foot .sf-meta{white-space:normal}}

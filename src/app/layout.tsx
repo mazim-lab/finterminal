@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono, Doto } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { MobileMenu, MobileMenuProvider } from "@/components/MobileMenu";
 import { TerminalHeader } from "@/components/TerminalHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import { allCards } from "@/data/cards";
 import "./globals.css";
 import "./terminal.css";
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <MobileMenu />
             <TerminalHeader />
             {children}
+            <SiteFooter />
           </MobileMenuProvider>
         </ThemeProvider>
       </body>
