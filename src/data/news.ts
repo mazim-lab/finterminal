@@ -21,6 +21,42 @@ export interface NewsItem {
 // Canadian market first. Newest at the top.
 export const NEWS: NewsItem[] = [
   {
+    time: "11:24",
+    headline: "Aeroplan and Amazon are giving away a million points to ten winners this Prime Day",
+    dek: "Shop Amazon through the Aeroplan eStore by June 26 and you are entered in the draw, with up to 10 times the points on eligible categories on top.",
+    body:
+      "This one is easy to like because it asks almost nothing of you. Register on the Aeroplan site, then click through the Aeroplan eStore before you shop Amazon between now and June 26, and you are entered. Ten winners each take home a million points. You need an Amazon Prime membership to play, and there is a no-purchase mail-in option if you would rather not buy anything. Even outside the contest, going through the eStore quietly stacks extra Aeroplan points on purchases you were making anyway, with up to 10 times the points on eligible categories during Prime Day.",
+    category: "Promotions",
+    region: "CA",
+    date: "Jun 2026",
+    sourceLabel: "Aeroplan",
+    href: "/deals",
+  },
+  {
+    time: "11:02",
+    headline: "Porter cuts the surcharge on points bookings in half, to $20 each way",
+    dek: "As of June 23, redeeming VIPorter points carries a $20 per person surcharge each way, down from the $40 it doubled to three months ago.",
+    body:
+      "Good news for anyone sitting on VIPorter points. Porter has cut the fee on award bookings from $40 to $20 per person each way, and it shows up now as an air transportation charge rather than a peak surcharge. One honest caveat so you are not surprised at checkout: the total taxes and fees dropped by less than the full $20, because some airport improvement fees went up at the same time. Still, a real move in the right direction.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jun 2026",
+    sourceLabel: "Porter",
+    href: "/travel",
+  },
+  {
+    time: "10:35",
+    headline: "Aeroplan flyers have a deadline to book Asiana awards before the Korean Air merger",
+    dek: "Asiana leaves Star Alliance on December 16 ahead of folding into Korean Air, so the window to use Aeroplan points on Asiana is closing.",
+    body:
+      "If you have had your eye on an Asiana redemption, the clock is now ticking. Aeroplan members can keep earning miles on Asiana flights until October 15, and can book or fly Asiana award seats up to December 16. After that Asiana merges into Korean Air, which is not a Star Alliance carrier, so the easy Aeroplan access goes away. Worth a look if Seoul or an onward Asia route is on your list. Our sweet-spots guide can help you find the seats worth chasing.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jun 2026",
+    sourceLabel: "Aeroplan",
+    href: "/travel/aeroplan-sweet-spots",
+  },
+  {
     time: "09:40",
     headline: "Amex Canada lifts welcome bonuses across its Membership Rewards cards",
     dek: "American Express has refreshed the offers on its Membership Rewards lineup, with the top of the range now reaching up to 170,000 points.",
