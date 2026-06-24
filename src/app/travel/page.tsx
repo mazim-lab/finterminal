@@ -7,6 +7,14 @@ export const metadata = {
 
 const ARTICLES = [
   {
+    slug: "avios-sweet-spots-rbc-avion-transfer",
+    title: "Avios sweet spots, and converting RBC Avion to Avios",
+    dek: "Avios are best on short flights and on partner airlines that skip the big surcharges. Here is where they shine, plus how to move RBC Avion points into Avios without nasty surprises.",
+    tag: "Strategy",
+    read: "8 min read",
+    date: "Jun 2026",
+  },
+  {
     slug: "amex-mr-to-aeroplan",
     title: "How to convert Amex Membership Rewards to Aeroplan",
     dek: "A simple walkthrough for moving your Amex points to Air Canada Aeroplan at 1 to 1, including when to do it, how to avoid the common mistakes, and how to catch a transfer bonus.",

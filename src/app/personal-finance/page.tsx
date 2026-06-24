@@ -7,6 +7,14 @@ export const metadata = {
 
 const ARTICLES = [
   {
+    slug: "costco-membership-worth-it-canada",
+    title: "Does a Costco membership pay for itself?",
+    dek: "A clear, no-hype look at Costco Canada's fees, the 2% Executive reward, and where the savings really come from, so you can run the breakeven math for your own household.",
+    tag: "Money",
+    read: "8 min read",
+    date: "Jun 2026",
+  },
+  {
     slug: "smith-manoeuvre",
     title: "The Smith Manoeuvre, explained properly",
     dek: "How Canadian homeowners can turn mortgage interest into a tax deduction and build an investment portfolio at the same time. Every variation, step by step, with the risks laid out honestly.",
