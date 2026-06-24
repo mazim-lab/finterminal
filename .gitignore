@@ -31,3 +31,10 @@ design-previews/
 
 # private financial data (Wealthsimple dumps) — never commit
 private/
+
+# git backup bundles (one contains pre-scrub figures) — never commit
+*.bundle
+
+# local business docs / generators — keep out of the public repo
+make_affiliate_guide.py
+*.docx

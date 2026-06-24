@@ -23,7 +23,7 @@ import sys
 sys.stdout.reconfigure(line_buffering=True)
 
 AGENT_BROWSER = "/Users/shafbot/.openclaw/tools/node-v22.22.0/bin/agent-browser"
-PROJECT = os.path.expanduser("~/Documents/Shafbot Projects/churningcanada")
+PROJECT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE_DIR = os.path.join(PROJECT, "scrapers", "detail_cache")
 SESSION = "rescrape"
 

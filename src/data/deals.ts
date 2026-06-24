@@ -24,6 +24,42 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "DEWALT 20V MAX cordless tire inflator (DCC020IB)",
+    merchant: "Amazon",
+    url: "https://www.amazon.ca/dp/B07H39S9JQ",
+    price: "$142",
+    was: "$198.70",
+    blurb:
+      "A good cordless inflator is one of those buys you forget about until the morning you have a soft tire and somewhere to be, and then it pays for itself in one go. The DEWALT 20V MAX is the one most people land on, and Prime Day has it at $142 down from $198.70. It tops up car tires quickly, handles bikes and sports balls, and runs off the same 20V batteries as the rest of the DEWALT lineup. One honest catch so you buy with eyes open: this is the tool only, no battery or charger in the box, so it is a no brainer if you already own DEWALT 20V gear and a pricier proposition if you are starting from scratch. Deal runs through Prime Day, which wraps June 26.",
+    category: "Tools",
+    posted: "Jun 24, 2026",
+    expires: "ends Jun 26",
+    expiresAt: "2026-06-26",
+  },
+  {
+    title: "LEGO Speed Champions Back to the Future Time Machine (77256)",
+    merchant: "Amazon",
+    url: "https://www.amazon.ca/dp/B0FMS84RFJ",
+    price: "$26.49",
+    was: "$34.99",
+    blurb:
+      "If you have a Back to the Future fan in the house, this is a lovely little gift at $26.49, down from $34.99. It is the DeLorean time machine in LEGO form, 357 pieces, with Doc Brown and Marty minifigures and two build modes. Aimed at ages nine and up, and honestly just as fun for the grown up who grew up on the movies. Two honest notes: it is a Prime Day price so you need a Prime membership to grab it, and Amazon is showing it more than half claimed already, so it may sell out before the sale ends June 26.",
+    category: "Toys",
+    posted: "Jun 24, 2026",
+    expires: "ends Jun 26",
+    expiresAt: "2026-06-26",
+  },
+  {
+    title: "Corliving Nova Ridge upholstered queen bed",
+    merchant: "Home Depot",
+    url: "https://www.homedepot.ca/product/corliving-nova-ridge-dark-grey-button-tufted-upholstered-queen-bed/1001490953",
+    price: "$139",
+    blurb:
+      "This is a genuinely good price on a real bed, not a flimsy frame: $139 for an upholstered queen with a padded, button tufted headboard from Home Depot, in dark grey or ocean blue. For a spare room, a first apartment, or a teen's room, it is hard to do better, and delivery is free. A couple of honest heads ups so there are no surprises. You supply your own mattress, this is the frame and headboard only, and it uses wooden slats so you do not need a box spring. And it ships rather than sitting in store, with delivery landing in early July, so it is not a same week fix.",
+    category: "Furniture",
+    posted: "Jun 24, 2026",
+  },
+  {
     title: "LG 65-inch OLED C5 4K TV",
     merchant: "Costco",
     url: "https://www.costco.ca/p/-/lg-65-class-oledc5-series-4k-uhd-oled-tv/4000370787",
