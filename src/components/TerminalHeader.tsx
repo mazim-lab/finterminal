@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import { SplitFlapWordmark } from "./SplitFlapWordmark";
 import { Ticker } from "./Ticker";
 
@@ -19,20 +19,34 @@ export function TerminalHeader() {
   const path = usePathname() || "/";
   const router = useRouter();
   const [q, setQ] = useState("");
+  const [open, setOpen] = useState(false);
+
+  const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+
+  // On mobile the tab strip is hidden, so tapping the wordmark opens a dropdown
+  // of the tabs. On desktop the wordmark stays a plain link to home.
+  const onBrandClick = (e: MouseEvent) => {
+    if (typeof window !== "undefined" && window.matchMedia("(max-width:760px)").matches) {
+      e.preventDefault();
+      setOpen((o) => !o);
+    }
+  };
 
   return (
     <div className="topbar">
-      <SplitFlapWordmark />
-      <nav>
-        {NAV.map((n) => {
-          const active = n.href === "/" ? path === "/" : path.startsWith(n.href);
-          return (
-            <a key={n.href} href={n.href} className={active ? "on" : ""}>
-              {n.label}
-            </a>
-          );
-        })}
+      <div className={`brand${open ? " open" : ""}`} onClickCapture={onBrandClick}>
+        <SplitFlapWordmark />
+        <span className="navcaret" aria-hidden="true">▾</span>
+      </div>
+
+      <nav className="desknav">
+        {NAV.map((n) => (
+          <a key={n.href} href={n.href} className={isActive(n.href) ? "on" : ""}>
+            {n.label}
+          </a>
+        ))}
       </nav>
+
       <div className="right">
         <Ticker />
         <input
@@ -43,6 +57,19 @@ export function TerminalHeader() {
           placeholder="⌘K  search 195 cards…"
         />
       </div>
+
+      {open && (
+        <>
+          <div className="mobnav-overlay" onClick={() => setOpen(false)} />
+          <nav className="mobnav">
+            {NAV.map((n) => (
+              <a key={n.href} href={n.href} className={isActive(n.href) ? "on" : ""} onClick={() => setOpen(false)}>
+                {n.label}
+              </a>
+            ))}
+          </nav>
+        </>
+      )}
     </div>
   );
 }
