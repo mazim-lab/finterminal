@@ -13,6 +13,7 @@ const TOC = [
   { id: "scenarios", label: "Breakeven cases" },
   { id: "caveats", label: "The caveats" },
   { id: "verdict", label: "Is it for you" },
+  { id: "gold", label: "The gold tip" },
 ];
 
 export default function CostcoMembershipPage() {
@@ -202,6 +203,43 @@ export default function CostcoMembershipPage() {
               comes down to how you actually live and shop.
             </p>
           </div>
+
+          <div id="gold" className="cd-sec" style={{ scrollMarginTop: 70 }}>A bonus move for the points crowd</div>
+          <p>
+            If you have ever wondered whether your Costco run could quietly earn credit card rewards, here is one
+            that churners talk about: Costco sells one ounce gold bars, you put the purchase on a rewards card, and
+            then you sell the bar to a local bullion dealer for cash. The rewards stay on your card. Sounds tidy.
+            The honest version is that for everyday earning, it usually loses you a little money.
+          </p>
+          <p>
+            Here is why. Costco prices its gold bars at a small markup over the spot price, often around two
+            percent, and that purchase does not earn the Executive 2 percent reward, so the card is your only earn.
+            On the other side, a dealer buys below spot, because paying you under market is how they make their
+            margin. So a round trip is buy at spot plus a premium, sell at spot minus a haircut. That spread is
+            normally a cost of a few percent, and with a plain one to two percent card it eats your rewards.
+          </p>
+          <p>
+            The move really only makes sense in two cases. One, you are chasing a big welcome bonus and need to put
+            a large charge somewhere, so the bonus value dwarfs the spread. Two, you have an unusually high earn
+            rate on that purchase.
+          </p>
+          <div className="cd-note">
+            <div className="cap">A worked example</div>
+            <p style={{ margin: 0 }} className="sub">
+              Say gold is around $4,000 an ounce, illustrative only. You pay Costco about spot plus two percent, so
+              roughly $4,080. A dealer pays you maybe three percent under spot, about $3,880. That round trip costs
+              you around $200. On a plain 1.5 percent card you earn about $61 in rewards, so you are down roughly
+              $139. Now run the bonus case: that same $4,080 counts toward a $5,000 minimum spend that unlocks a
+              welcome bonus worth around $800. Even after eating the $200 spread, you come out hundreds ahead.
+              Plain earning loses, the bonus case wins.
+            </p>
+          </div>
+          <p>
+            A few eyes open notes. Gold can move while you hold it, which can help or hurt. Costco bars are final
+            sale with per member limits, dealer payouts vary so call around first, and you are tying up real cash
+            for a bit. Keep your receipts for tax records, and know that heavy manufactured spend can draw a bank’s
+            attention. This is an advanced move for a specific situation, not financial advice.
+          </p>
 
           <div className="cd-sec">Keep going</div>
           <p>If you go Executive, a flat-rate cash-back card you can use at Costco squeezes a little more out of every run.</p>
