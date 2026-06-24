@@ -22,11 +22,6 @@ export default function PersonalFinancePage() {
       <main>
         <div className="doc">
           <div className="head"><h1>Personal Finance</h1></div>
-          <p className="lede">
-            Money decisions are personal, and they are easier when someone explains the why and not just the
-            what. These are the guides we wish we had earlier, written plainly, with your real life and your
-            real constraints in mind. Start wherever you are.
-          </p>
 
           <div className="cd-sec">Guides</div>
           {ARTICLES.map((a) => (

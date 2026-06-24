@@ -16,13 +16,13 @@ export default function Home() {
     <div className="app norail">
       <main>
         <div className="head"><h1>The board</h1><span className="meta">FinTerminal · Canada</span></div>
-        <div className="subhead">Everything we track, in one place.</div>
+        <div className="subhead">Everything we track.</div>
 
         <div className="stats">
           <div className="stat"><div className="l">Cards tracked</div><div className="v">{allCards.length}</div><div className="d">comprehensive data</div></div>
           <div className="stat"><div className="l">Point programs</div><div className="v em">{Object.keys(POINT_VALUATIONS).length}</div><div className="d">valued &amp; updated</div></div>
           <div className="stat"><div className="l">Portfolio holdings</div><div className="v gd">{POSITIONS.length}</div><div className="d">live, with theses</div></div>
-          <div className="stat"><div className="l">Sponsored posts</div><div className="v">0</div><div className="d">independent</div></div>
+          <div className="stat"><div className="l">Issuers tracked</div><div className="v">{new Set(allCards.map((c) => c.issuer)).size}</div><div className="d">banks &amp; programs</div></div>
         </div>
 
         <div className="tablewrap">
@@ -45,7 +45,7 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-          <div className="foot"><span>click any row to open it</span><span>independent · verified data · no sponsored noise</span></div>
+          <div className="foot"><span>click any row to open it</span><span>independent · verified data</span></div>
         </div>
       </main>
     </div>

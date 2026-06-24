@@ -44,7 +44,6 @@ export default function NewsPage() {
       <main>
         <div className="doc">
           <div className="head"><h1>Newswire</h1><span className="meta">cards · points · markets · Canada first</span></div>
-          <div className="subhead">Headlines as they break. Tap one to read the full story, or jump straight to what it affects.</div>
           <div className="newsfeed" ref={feedRef} style={{ minHeight: "auto", marginBottom: 8 }} />
 
           <div className="cd-sec">The stories</div>

@@ -64,12 +64,6 @@ export default function DealsPage() {
       <main>
         <div className="doc">
           <div className="head"><h1>Deals</h1><span className="meta">hand-picked · updated daily</span></div>
-          <p className="lede">
-            We sift through the noise and post only a handful of deals a day, the ones we would actually tell a
-            friend about. The bar is simple: a quality product or service at a genuinely deep discount, or
-            something productive that pays for itself over time. Every link goes straight to the merchant, with
-            no hoops in between.
-          </p>
 
           <div className="cd-sec">Today&apos;s picks</div>
           {active.length ? (

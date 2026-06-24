@@ -30,12 +30,6 @@ export default function TravelPage() {
       <main>
         <div className="doc">
           <div className="head"><h1>Travel &amp; Points</h1></div>
-          <p className="lede">
-            Points are only worth something when they become a trip. These guides are about the fun part,
-            turning the rewards you earn on everyday spending into flights you would be glad to take, without
-            overpaying or overthinking it. We lead with Aeroplan and Amex Membership Rewards, because for most
-            Canadians that is where the best value lives.
-          </p>
 
           <div className="cd-sec">Guides</div>
           {ARTICLES.map((a) => (
