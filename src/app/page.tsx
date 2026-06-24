@@ -4,19 +4,19 @@ import { POSITIONS } from "@/data/portfolio";
 
 const BOARD = [
   { label: "News", href: "/news", sub: "cards · points · markets", what: "Headlines as they break", status: "LIVE", brd: false },
-  { label: "Personal Finance", href: "/personal-finance", sub: "credit · rates · fees", what: "Plain-English guides", status: "BOARDING", brd: true },
-  { label: "Deals", href: "/deals", sub: "limited-time offers", what: "Assorted promos", status: "BOARDING", brd: true },
-  { label: "Credit Cards", href: "/cards", sub: `${allCards.length} cards · explorer`, what: "Compare by real value", status: "ON TIME", brd: false },
-  { label: "Travel & Points", href: "/travel", sub: "transfers · sweet spots", what: "Putting those points to use", status: "BOARDING", brd: true },
-  { label: "Current Portfolio", href: "/portfolio", sub: "my holdings · theses", what: "What I own & why", status: "ON TIME", brd: false },
+  { label: "Personal Finance", href: "/personal-finance", sub: "credit · rates · fees", what: "Plain-English guides", status: "UPDATED", brd: true },
+  { label: "Deals", href: "/deals", sub: "limited-time offers", what: "Assorted promos", status: "LIVE", brd: false },
+  { label: "Credit Cards", href: "/cards", sub: `${allCards.length} cards · explorer`, what: "Compare by real value", status: "UPDATED", brd: true },
+  { label: "Travel & Points", href: "/travel", sub: "transfers · sweet spots", what: "Putting those points to use", status: "UPDATED", brd: true },
+  { label: "Current Portfolio", href: "/portfolio", sub: "my holdings · theses", what: "What I own & why", status: "LIVE", brd: false },
 ];
 
 export default function Home() {
   return (
     <div className="app norail">
       <main>
-        <div className="head"><h1>Departures</h1><span className="meta">FinTerminal · Canada</span></div>
-        <div className="subhead">Select your flight.</div>
+        <div className="head"><h1>The board</h1><span className="meta">FinTerminal · Canada</span></div>
+        <div className="subhead">Everything we track, in one place.</div>
 
         <div className="stats">
           <div className="stat"><div className="l">Cards tracked</div><div className="v">{allCards.length}</div><div className="d">comprehensive data</div></div>
@@ -28,7 +28,7 @@ export default function Home() {
         <div className="tablewrap">
           <div className="tablescroll">
             <table>
-              <thead><tr><th>Board</th><th>What&apos;s on it</th><th className="r">Status</th></tr></thead>
+              <thead><tr><th>Desk</th><th>What&apos;s on it</th><th className="r">Status</th></tr></thead>
               <tbody>
                 {BOARD.map((b) => (
                   <tr key={b.href} className="gorow">
@@ -39,13 +39,13 @@ export default function Home() {
                       </a>
                     </td>
                     <td><a href={b.href} style={{ display: "block" }}>{b.what}</a></td>
-                    <td className="r"><a href={b.href} className={`status${b.brd ? " brd" : ""}`}>{b.brd ? "◐" : "●"} {b.status}</a></td>
+                    <td className="r"><a href={b.href} className={`status${b.brd ? " brd" : ""}`}>{b.brd ? "↻" : "●"} {b.status}</a></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <div className="foot"><span>click any row to open its board</span><span>independent · verified data · no sponsored noise</span></div>
+          <div className="foot"><span>click any row to open it</span><span>independent · verified data · no sponsored noise</span></div>
         </div>
       </main>
     </div>
