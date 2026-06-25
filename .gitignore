@@ -38,6 +38,8 @@ private/
 # local business docs / generators — keep out of the public repo
 make_affiliate_guide.py
 *.docx
+*.xlsx
+/monetization/
 
 # stray editor temp files
 *.tmp.*
