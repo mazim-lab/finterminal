@@ -121,9 +121,15 @@ own page.
 
 **File:** `src/data/news.ts` (a `NewsItem[]`). **Page:** `src/app/news/page.tsx`.
 
+**FRESHNESS (strict, set 2026-06-30): include ONLY items published within the LAST 2 DAYS.**
+Verify each item's publication date and DROP anything older, even if still notable. Do NOT
+pad to a target count: a handful (2-5) of genuinely fresh items is normal, fewer is fine,
+and making no change is correct if nothing new qualifies. Evergreen or structural changes
+(e.g. an award-chart revamp) belong in the guides, not the newswire.
+
 **Steps:**
-1. Gather 5 recent, **Canada-first** items via WebSearch (cards/points/travel/personal
-   finance relevant to Canadians).
+1. Gather the **Canada-first** items from the LAST 2 DAYS via WebSearch (cards/points/
+   travel/personal finance relevant to Canadians); a handful, not a fixed count.
 2. For each, set `exclusive: [...]` (crediting PoT/OMAAT/DoC by name) **only** if the
    story is genuinely exclusive to that outlet. Otherwise write it as our own reporting
    with `sourceLabel` = the issuer/airline.
