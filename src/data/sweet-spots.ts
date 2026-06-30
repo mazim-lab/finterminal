@@ -38,6 +38,18 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "avios-toronto-to-dublin-aer-lingus-50k",
+    program: "Avios",
+    title: "Avios sweet spot: Toronto to Dublin on Aer Lingus from about 13,000 points",
+    dek: "Aer Lingus gives Canadians one of the friendliest ways into Europe on Avios, an economy seat to Dublin from roughly 13,000 points one-way off-peak, or the lie-flat business cabin for about 50,000.",
+    read: "5 min read",
+    date: "Jun 2026",
+    body:
+      "Avios is the shared currency behind British Airways, Aer Lingus, Iberia, and Qatar, and one balance moves freely between them at the same rate. For Canadians the standout is Aer Lingus, because its transatlantic hub in Dublin is one of the closest European gateways to the East Coast, which keeps the Avios price low. These figures are an example of how the chart works, not a quote for any given date, so always confirm the live price when you search.\n\nThe numbers look like this off-peak. Toronto to Dublin runs around 13,000 Avios one-way in economy and about 50,000 in business, the lie-flat cabin Aer Lingus flies on its A330s. Peak dates cost more, so the off-peak calendar is where the value lives, and Aer Lingus does not impose the heavy fuel surcharges British Airways is known for, which keeps the cash portion sane.\n\nHere is the cents-per-point math on a realistic business class booking. Say the cash fare is about $3,000 and the award books for 50,000 Avios plus roughly $225 in taxes and fees. That works out to (3000 minus 225) divided by 50000, times 100, which is around 5.5 cents per Avios. Anything above about 1.5 cents is a solid use of Avios, so a lie-flat seat to Europe at this price is your points doing real work.\n\nOne quietly important tip. Book the Aer Lingus award through the Aer Lingus site or avios.com rather than through British Airways. The Avios price is identical, but the taxes and fees can be hundreds of dollars lower, on the order of $225 instead of nearly $790 in business on the same seat. Same flight, same points, far less cash, just for booking on the right site.\n\nA few honest caveats. Getting the Avios in the first place matters for Canadians: RBC Avion transfers to British Airways at 1 to 1, and RBC runs a 30 percent transfer bonus a couple of times a year, but transfers are one-way, so only move points once you have found the seat you want. Off-peak award space in the lie-flat cabin is genuinely limited and the best dates go early, so stay flexible and search a few days on either side. And price your specific trip before you assume a number, because the Avios charts do get adjusted.",
+    href: "/travel/avios-sweet-spots-rbc-avion-transfer",
+    hrefLabel: "Full Avios guide",
+  },
+  {
     slug: "aeroplan-toronto-to-europe-business-60k",
     program: "Aeroplan",
     title: "Aeroplan sweet spot: Toronto to Europe in business for about 60,000 points",
