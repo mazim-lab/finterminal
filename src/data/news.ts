@@ -29,6 +29,20 @@ export interface NewsItem {
 // archive: never delete or rewrite existing items, only prepend new ones.
 export const NEWS: NewsItem[] = [
   {
+    time: "12:00",
+    slug: "aeroplan-san-antonio-package-5000-bonus",
+    headline: "Air Canada Vacations is adding 5,000 bonus Aeroplan points on San Antonio packages",
+    dek: "A new promo hands Aeroplan members 5,000 bonus points on select San Antonio flight and hotel packages booked by July 26.",
+    body:
+      "This one is narrow but it is easy value if San Antonio was already on your list. Air Canada Vacations is giving Aeroplan members 5,000 bonus points each on select Flight and Hotel packages to the Texas city, for bookings made from June 29 through July 26 and travel between July 1 and October 31. The catch is a seven-night minimum stay, so it really only pays off if you were planning a proper week there rather than a quick weekend away. If that fits your summer, it is a tidy little top-up on a trip you were buying anyway, but we would not build a vacation around 5,000 points.",
+    category: "Travel and points",
+    region: "CA",
+    date: "Jun 29, 2026",
+    sourceLabel: "Air Canada Vacations",
+    href: "/travel",
+    hrefLabel: "Explore travel and points",
+  },
+  {
     time: "11:30",
     slug: "petro-canada-triangle-canada-day-bonus-ct-money",
     headline: "Petro-Canada is handing out bonus CT Money on Canada Day fill-ups",
