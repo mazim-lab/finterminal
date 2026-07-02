@@ -18,6 +18,8 @@ const STATIC_PATHS = [
   "/cards",
   "/compare",
   "/portfolio",
+  "/newsletter",
+  "/contact",
   "/how-we-value-points",
   "/disclosure",
   "/guides/us-cards-for-canadians",

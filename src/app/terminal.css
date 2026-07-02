@@ -351,3 +351,36 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
   background:var(--panel);border:1px solid var(--line-strong);border-radius:8px;padding:9px 16px;cursor:pointer;
   margin:3px 0 16px;letter-spacing:.02em}
 .loadmore:hover{background:var(--panel-2);border-color:var(--emerald)}
+
+/* ---- Forms: contact + newsletter ---- */
+.fform{display:flex;flex-direction:column;gap:14px;max-width:560px;margin:8px 0 4px}
+.ffield{display:flex;flex-direction:column;gap:5px}
+.flabel{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
+.finput{background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:10px 12px;color:var(--ink);font-size:14px;font-family:var(--sans);width:100%}
+.finput::placeholder{color:var(--ink-dim)}
+.finput:focus{outline:none;border-color:var(--emerald)}
+.fselect{cursor:pointer}
+.ftext{resize:vertical;min-height:120px;line-height:1.6}
+.frow{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.fbtn{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--paper);
+  background:var(--emerald);border:1px solid var(--emerald);border-radius:8px;padding:10px 20px;cursor:pointer}
+.fbtn:hover{background:var(--emerald-d);border-color:var(--emerald-d)}
+.fbtn:disabled{opacity:.6;cursor:default}
+.fok{background:var(--emerald-tint);border:1px solid var(--line-strong);border-radius:8px;padding:14px 16px;
+  color:var(--ink);font-size:14px;line-height:1.6;max-width:560px;margin:8px 0 4px}
+.ferr{color:var(--red);font-size:13px;font-family:var(--mono)}
+
+/* newsletter signup (page + compact footer) */
+.nlform{display:flex;gap:8px;flex-wrap:wrap;align-items:center;max-width:430px;margin:8px 0}
+.nlinput{max-width:250px;flex:1 1 180px}
+.nlbtn{white-space:nowrap}
+.nlok{color:var(--emerald);font-family:var(--mono);font-size:13px;font-weight:600;margin:8px 0}
+.site-foot .sf-nl{flex-basis:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:8px 20px;padding-bottom:14px;margin-bottom:4px;border-bottom:1px solid var(--line)}
+.site-foot .sf-nl-label{color:var(--ink-soft);max-width:360px}
+.site-foot .sf-nl .nlform{margin:0}
+.site-foot .sf-nl .nlinput{max-width:210px}
+.site-foot .sf-nl .finput{padding:8px 11px;font-size:13px}
+.site-foot .sf-nl .fbtn{padding:8px 14px;font-size:12px}
+.site-foot .sf-nl .nlok{margin:0}
+.site-foot .sf-links a{color:var(--gold)}

@@ -40,7 +40,8 @@ export default function DisclosurePage() {
           </p>
 
           <p className="lede" style={{ marginTop: 20 }}>
-            Questions? Reach out any time. We would rather earn your trust than a quick click.
+            Questions? <a className="lnk" href="/contact">Reach out any time</a>. We would rather earn your trust
+            than a quick click.
           </p>
         </div>
       </main>
