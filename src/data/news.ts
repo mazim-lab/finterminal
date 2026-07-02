@@ -29,6 +29,21 @@ export interface NewsItem {
 // archive: never delete or rewrite existing items, only prepend new ones.
 export const NEWS: NewsItem[] = [
   {
+    time: "12:30",
+    slug: "aeroplan-club-avolta-airport-shopping-partnership",
+    headline: "Aeroplan ties up with Club Avolta so you can earn points shopping and dining at the airport",
+    dek: "A new North American partnership lets you earn 1 Aeroplan point per $2 spent at Hudson, Dufry, and other airport shops once you link the two accounts.",
+    body:
+      "This is a nice little earn if you already buy the odd thing before a flight. Announced June 30, the tie-up between Aeroplan and Club Avolta, the loyalty program behind airport retailers like Hudson and Dufry duty-free, lets you collect 1 Aeroplan point for every $2 you spend in-store or through Reserve & Collect. You have to link your Aeroplan and Club Avolta accounts in the Club Avolta app first, or none of it tracks. It is live now at Canadian airports including Toronto Pearson, Vancouver, Calgary, and Billy Bishop, plus a handful of US hubs like LAX, San Francisco, and Chicago, with HMSHost restaurants set to join for dining points by the end of the year and the full network reaching about 1,900 locations. Be honest with yourself here though: half a point per dollar is a thin return, and airport shops carry a captive-audience markup, so this is worth grabbing on a water and a magazine you were buying anyway, not a reason to browse the duty-free.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jun 30, 2026",
+    sourceLabel: "Aeroplan",
+    sourceUrl: "https://www.theglobeandmail.com/investing/markets/stocks/ACDVF/pressreleases/36756973/aeroplan-and-club-avolta-forge-loyalty-program-partnership-in-north-america/",
+    href: "/travel/aeroplan-sweet-spots",
+    hrefLabel: "Aeroplan sweet-spots guide",
+  },
+  {
     time: "12:00",
     slug: "aeroplan-san-antonio-package-5000-bonus",
     headline: "Air Canada Vacations is adding 5,000 bonus Aeroplan points on San Antonio packages",
