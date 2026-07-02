@@ -1,10 +1,14 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { isPFPublished } from "@/data/personal-finance";
 
 export const metadata = {
   title: "Paying rent, taxes, and your mortgage with a credit card in Canada — FinTerminal",
   description:
     "Third-party services will charge your credit card and send the money onward for a fee of roughly 1.75 to 2.99 percent. Here is a clear, honest look at Chexy, PaySimply, and Plastiq, and the exact cases where it is actually worth it.",
 };
+
+export const revalidate = 3600;
 
 const TOC = [
   { id: "premise", label: "The premise" },
@@ -17,6 +21,8 @@ const TOC = [
 ];
 
 export default function PayBillsWithCreditCardPage() {
+  if (!isPFPublished("pay-bills-with-credit-card-canada")) notFound();
+
   return (
     <div className="app norail">
       <main>

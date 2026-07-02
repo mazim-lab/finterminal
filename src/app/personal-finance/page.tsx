@@ -1,38 +1,16 @@
 import { LoadMoreCards } from "@/components/LoadMoreCards";
+import { livePFArticles } from "@/data/personal-finance";
 
 export const metadata = {
   title: "Personal Finance — FinTerminal",
   description: "Practical, plain-language personal finance guides for Canadians, from tax-efficient borrowing to building real wealth.",
 };
 
-const ARTICLES = [
-  {
-    slug: "pay-bills-with-credit-card-canada",
-    title: "Paying rent, taxes, and your mortgage with a credit card in Canada",
-    dek: "Third-party services will run your rent, taxes, or mortgage through your card for a fee of about 1.75 to 2.99 percent. Here is the honest math, the services (Chexy, PaySimply, Plastiq), and the three cases where it actually pays off.",
-    tag: "Cards",
-    read: "10 min read",
-    date: "Jul 2026",
-  },
-  {
-    slug: "costco-membership-worth-it-canada",
-    title: "Does a Costco membership pay for itself?",
-    dek: "A clear, no-hype look at Costco Canada's fees, the 2% Executive reward, and where the savings really come from, so you can run the breakeven math for your own household.",
-    tag: "Money",
-    read: "8 min read",
-    date: "Jun 2026",
-  },
-  {
-    slug: "smith-manoeuvre",
-    title: "The Smith Manoeuvre, explained properly",
-    dek: "How Canadian homeowners can turn mortgage interest into a tax deduction and build an investment portfolio at the same time. Every variation, step by step, with the risks laid out honestly.",
-    tag: "Strategy",
-    read: "18 min read",
-    date: "Jun 2026",
-  },
-];
+// Re-check hourly so scheduled articles appear on their publishAt date, no redeploy needed.
+export const revalidate = 3600;
 
 export default function PersonalFinancePage() {
+  const articles = livePFArticles();
   return (
     <div className="app norail">
       <main>
@@ -41,7 +19,7 @@ export default function PersonalFinancePage() {
 
           <div className="cd-sec">Guides</div>
           <LoadMoreCards
-            cards={ARTICLES.map((a) => ({
+            cards={articles.map((a) => ({
               href: `/personal-finance/${a.slug}`,
               title: a.title,
               dek: a.dek,
@@ -52,8 +30,7 @@ export default function PersonalFinancePage() {
           />
 
           <p className="lede" style={{ marginTop: 20 }}>
-            More on the way, including TFSA versus RRSP in real numbers, a calm guide to your first taxable
-            account, and how to think about debt when rates move.
+            New guides land regularly, on cards, points, and building real wealth in Canada. Check back soon.
           </p>
         </div>
       </main>
