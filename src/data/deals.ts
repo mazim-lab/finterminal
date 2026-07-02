@@ -24,6 +24,27 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "ASICS Gel-Kayano 32 running shoes",
+    merchant: "Altitude Sports",
+    url: "https://www.altitude-sports.com/p/asics-gelkayano-32-running-shoes-mens-acs-1011c052",
+    price: "$145.19",
+    was: "$219.99",
+    blurb:
+      "The Gel-Kayano is Asics' flagship stability shoe, the one runners with flat feet or tired knees quietly swear by, and Altitude Sports has the current version 32 on clearance at $145.19, down from $219.99, simply because the Kayano 33 just landed. Nothing about the shoe changed overnight because a new model number arrived. Sign up for a free Altitude Sports account and another 5 percent comes off at checkout, bringing it to $137.93. If you run, walk a lot, or stand all day, this is a genuine flagship shoe at a mid-tier price. One honest note so you go in clear eyed: clearance means sizes and colours are already thinning out and a few widths are gone, so grab your size sooner rather than later, and buy it because you need good shoes, not because the percent-off looks big.",
+    category: "Apparel",
+    posted: "Jul 2, 2026",
+  },
+  {
+    title: "Milwaukee M12 REDLITHIUM HIGH OUTPUT XC 5.0Ah battery 2-pack with charger",
+    merchant: "Home Depot",
+    url: "https://www.homedepot.ca/product/milwaukee-tool-m12-12v-lithium-ion-extended-capacity-xc-5-0-ah-redlithium-battery-with-charger-2-pack-/1001917113",
+    price: "$148",
+    blurb:
+      "If you already live in the Milwaukee M12 cordless world, this is the kind of quiet restock deal worth jumping on. Home Depot has the M12 REDLITHIUM HIGH OUTPUT XC 5.0 Ah battery two-pack, charger included, for $148. A single one of these high-output batteries on its own usually runs close to what this whole kit costs, so getting two of them plus a charger at this price is the real draw, and they power the entire M12 lineup of 125-plus tools. One honest caveat so nobody buys wrong: this is batteries and a charger, not a tool, and it only makes sense if you are already on M12 or about to be. If you have never owned a Milwaukee tool, start with an actual tool kit instead. Stock has moved around by region through this sale, so make sure your local store shows it in stock before you drive over.",
+    category: "Tools",
+    posted: "Jul 2, 2026",
+  },
+  {
     title: "Helinox Chair One lightweight camping chair, 2-pack",
     merchant: "Costco",
     url: "https://www.costco.ca/p/-/helinox-chair-one-original-lightweight-compact-collapsible-camping-chair-2-pack/4000420308",
