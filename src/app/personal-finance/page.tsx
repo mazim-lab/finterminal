@@ -2,7 +2,7 @@ import { LoadMoreCards } from "@/components/LoadMoreCards";
 import { livePFArticles } from "@/data/personal-finance";
 
 export const metadata = {
-  title: "Personal Finance — FinTerminal",
+  title: "Personal Finance | FinTerminal",
   description: "Practical, plain-language personal finance guides for Canadians, from tax-efficient borrowing to building real wealth.",
 };
 

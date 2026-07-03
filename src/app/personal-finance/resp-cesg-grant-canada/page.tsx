@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
 export const metadata = {
-  title: "RESP and the 20% CESG grant: the easiest guaranteed return in Canada — FinTerminal",
+  title: "RESP and the 20% CESG grant: the easiest guaranteed return in Canada | FinTerminal",
   description:
     "The government adds 20 percent to what you put in an RESP, up to $500 a year per child, through the Canada Education Savings Grant. Here is how the grant works, how not to leave money on the table, and how to invest it wisely.",
 };
@@ -11,13 +11,13 @@ export const metadata = {
 export const revalidate = 3600;
 
 const TOC = [
-  { id: "headline", label: "The headline" },
-  { id: "limits", label: "The limits" },
-  { id: "catchup", label: "Catching up" },
-  { id: "extras", label: "Extra help" },
-  { id: "plans", label: "Family vs individual" },
-  { id: "invest", label: "Investing it" },
-  { id: "withdrawals", label: "Getting it out" },
+  { id: "headline", label: "How does the CESG grant work?" },
+  { id: "limits", label: "How much can I contribute and get?" },
+  { id: "catchup", label: "Can I catch up on missed years?" },
+  { id: "extras", label: "Extra help for lower income" },
+  { id: "plans", label: "Family or individual plan?" },
+  { id: "invest", label: "How should I invest it?" },
+  { id: "withdrawals", label: "How do I get the money out?" },
   { id: "caveats", label: "The caveats" },
 ];
 
@@ -28,6 +28,60 @@ export default function RespCesgGrantPage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "How much money does the government add to an RESP?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The Canada Education Savings Grant adds 20 percent of what you contribute, on the first $2,500 per child each year. That is up to $500 a year per child. The basic grant has no income test, so families at any income level can collect it.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How much should I contribute each year to get the full CESG?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Contribute $2,500 per child per year to capture the full $500 grant. Put in less and you get 20 percent of whatever you contribute. Put in more in one year and the extra earns no additional grant that year, though it can still grow tax sheltered.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I catch up on RESP grant room from missed years?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. Unused grant room carries forward, but you can only claim one missed year on top of the current year. That means the most CESG you can collect in a single year is $1,000, on a $5,000 contribution. You cannot wipe out several missed years in one big deposit.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is the lifetime CESG limit per child?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The lifetime CESG cap is $7,200 per child. That is separate from the $50,000 lifetime contribution limit, which is your own money. At $500 a year it takes roughly 14 or 15 years of full contributions to reach the $7,200 grant maximum.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What happens to the RESP if my child does not go to school?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The CESG that was never used goes back to the government. Your own contributions stay yours and come out tax-free. The investment growth becomes an Accumulated Income Payment, taxable as income plus a penalty tax, though you can often move up to $50,000 of it into your RRSP if you have room and the plan qualifies, which avoids the penalty.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is RESP money taxed when it comes out?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Your contributions come back tax-free because they are your own capital. The grant and growth are paid as an Educational Assistance Payment, which is taxable in the student's hands, not yours. Because most students have little income and get tuition and personal credits, this money is often taxed very little or not at all.",
+                },
+              },
+            ],
+          }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
@@ -49,6 +103,17 @@ export default function RespCesgGrantPage() {
             <span>rules and figures change; general info, not advice</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              An RESP is a registered account for a child&apos;s education, and the Canada Education Savings Grant
+              (CESG) tops up your contributions by 20 percent. The grant applies to the first $2,500 you put in per
+              child each year, so contributing $2,500 captures the full $500 annual grant, up to a lifetime cap of
+              $7,200 per child. It is a guaranteed 20 percent return before you invest a dollar, with no income test
+              on the basic grant, which is why it is usually the first education account worth opening.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -57,7 +122,7 @@ export default function RespCesgGrantPage() {
           </div>
 
           {/* HEADLINE */}
-          <div id="headline" className="cd-sec" style={{ scrollMarginTop: 70 }}>The headline: a 20 percent grant, guaranteed</div>
+          <div id="headline" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does the CESG grant actually work?</div>
           <p>
             An RESP is a registered account built for one purpose, saving for a child&apos;s education after high
             school. What makes it special is the grant that comes with it. The Canada Education Savings Grant, or
@@ -87,7 +152,7 @@ export default function RespCesgGrantPage() {
           </p>
 
           {/* LIMITS */}
-          <div id="limits" className="cd-sec" style={{ scrollMarginTop: 70 }}>The limits: what you can put in and how much grant you can get</div>
+          <div id="limits" className="cd-sec" style={{ scrollMarginTop: 70 }}>How much can you put in, and how much grant can you get?</div>
           <p>Two separate ceilings are at play here, and keeping them straight saves a lot of confusion.</p>
           <ul>
             <li><strong>The lifetime CESG cap is $7,200 per child.</strong> That is the most grant money one child can ever receive. At $500 a year, it takes about 14 or 15 years of full contributions to reach it, which is roughly why steady annual contributing from early on works so neatly.</li>
@@ -100,7 +165,7 @@ export default function RespCesgGrantPage() {
           </p>
 
           {/* CATCHUP */}
-          <div id="catchup" className="cd-sec" style={{ scrollMarginTop: 70 }}>Catching up on missed years</div>
+          <div id="catchup" className="cd-sec" style={{ scrollMarginTop: 70 }}>Can you catch up on missed years?</div>
           <p>
             Life happens, and plenty of parents cannot manage $2,500 every single year, especially in the busy,
             expensive early years. The good news is that unused grant room carries forward, so a lean year is not
@@ -152,7 +217,7 @@ export default function RespCesgGrantPage() {
           </p>
 
           {/* PLANS */}
-          <div id="plans" className="cd-sec" style={{ scrollMarginTop: 70 }}>Family plan versus individual plan</div>
+          <div id="plans" className="cd-sec" style={{ scrollMarginTop: 70 }}>Should you pick a family plan or an individual plan?</div>
           <p>
             When you open an RESP you choose between an individual plan and a family plan, and for most households
             with more than one child, the family plan is the friendlier choice.
@@ -168,7 +233,7 @@ export default function RespCesgGrantPage() {
           </p>
 
           {/* INVEST */}
-          <div id="invest" className="cd-sec" style={{ scrollMarginTop: 70 }}>Actually invest it, then glide to safety</div>
+          <div id="invest" className="cd-sec" style={{ scrollMarginTop: 70 }}>How should you invest the money?</div>
           <p>
             Here is a mistake I see often. A parent diligently contributes, captures every dollar of grant, and
             then leaves the whole balance sitting in cash or a low-interest savings option inside the RESP. The
@@ -192,7 +257,7 @@ export default function RespCesgGrantPage() {
           </div>
 
           {/* WITHDRAWALS */}
-          <div id="withdrawals" className="cd-sec" style={{ scrollMarginTop: 70 }}>Getting the money out, and the tax that (barely) applies</div>
+          <div id="withdrawals" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you get the money out, and is it taxed?</div>
           <p>
             When your child enrols in an eligible program after high school, the RESP splits into two kinds of
             money on the way out, and they are treated very differently.
@@ -236,6 +301,46 @@ export default function RespCesgGrantPage() {
             If you take one thing from all of this, let it be the headline: a guaranteed 20 percent, free, on money
             you were going to save for your kid anyway. Open the account, capture the grant, invest it patiently,
             and glide it to safety near the end. Future-you and future-them will both be glad you started.
+          </p>
+
+          <div className="cd-sec">Frequently asked questions</div>
+          <h4>How much money does the government add to an RESP?</h4>
+          <p>
+            The Canada Education Savings Grant adds 20 percent of what you contribute, on the first $2,500 per child
+            each year. That is up to $500 a year per child. The basic grant has no income test, so families at any
+            income level can collect it.
+          </p>
+          <h4>How much should I contribute each year to get the full CESG?</h4>
+          <p>
+            Contribute $2,500 per child per year to capture the full $500 grant. Put in less and you get 20 percent
+            of whatever you contribute. Put in more in one year and the extra earns no additional grant that year,
+            though it can still grow tax sheltered.
+          </p>
+          <h4>Can I catch up on RESP grant room from missed years?</h4>
+          <p>
+            Yes. Unused grant room carries forward, but you can only claim one missed year on top of the current
+            year. That means the most CESG you can collect in a single year is $1,000, on a $5,000 contribution. You
+            cannot wipe out several missed years in one big deposit.
+          </p>
+          <h4>What is the lifetime CESG limit per child?</h4>
+          <p>
+            The lifetime CESG cap is $7,200 per child. That is separate from the $50,000 lifetime contribution
+            limit, which is your own money. At $500 a year it takes roughly 14 or 15 years of full contributions to
+            reach the $7,200 grant maximum.
+          </p>
+          <h4>What happens to the RESP if my child does not go to school?</h4>
+          <p>
+            The CESG that was never used goes back to the government. Your own contributions stay yours and come out
+            tax-free. The investment growth becomes an Accumulated Income Payment, taxable as income plus a penalty
+            tax, though you can often move up to $50,000 of it into your RRSP if you have room and the plan
+            qualifies, which avoids the penalty.
+          </p>
+          <h4>Is RESP money taxed when it comes out?</h4>
+          <p>
+            Your contributions come back tax-free because they are your own capital. The grant and growth are paid
+            as an Educational Assistance Payment, which is taxable in the student&apos;s hands, not yours. Because
+            most students have little income and get tuition and personal credits, this money is often taxed very
+            little or not at all.
           </p>
 
           <div className="cd-sec">Keep going</div>

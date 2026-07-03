@@ -2,7 +2,7 @@ import type { Deal } from "@/data/deals";
 import { DEALS } from "@/data/deals";
 
 export const metadata = {
-  title: "Deals — FinTerminal",
+  title: "Deals | FinTerminal",
   description: "A short, hand-picked list of genuinely good deals for Canadians, refreshed through the day. Links go straight to the merchant.",
 };
 

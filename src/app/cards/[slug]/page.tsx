@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const card = allCards.find(c => c.slug === slug);
   if (!card) return { title: 'Card Not Found' };
   return {
-    title: `${card.name} — FinTerminal`,
+    title: `${card.name} | FinTerminal`,
     description: `${card.name} by ${card.issuer}. Annual fee: ${formatCurrency(card.annual_fee, card.country)}. ${card.welcome_bonus || 'Compare and learn more.'}`,
   };
 }

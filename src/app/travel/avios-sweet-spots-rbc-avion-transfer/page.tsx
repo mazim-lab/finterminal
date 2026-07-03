@@ -1,18 +1,18 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Avios sweet spots, and converting RBC Avion to Avios — FinTerminal",
+  title: "Avios sweet spots, and converting RBC Avion to Avios | FinTerminal",
   description:
     "Where Avios deliver real value for Canadians (short-haul and surcharge-free partners), the British Airways surcharge trap to avoid, and how to move RBC Avion points into Avios.",
 };
 
 const TOC = [
-  { id: "what", label: "What Avios is" },
-  { id: "pricing", label: "How it prices" },
-  { id: "surcharges", label: "The surcharge trap" },
-  { id: "spots", label: "The sweet spots" },
-  { id: "longhaul", label: "The long-haul trap" },
-  { id: "transfer", label: "Avion to Avios" },
+  { id: "what", label: "What is Avios, really?" },
+  { id: "pricing", label: "How does Avios pricing work?" },
+  { id: "surcharges", label: "What is the surcharge trap?" },
+  { id: "spots", label: "Where do Avios actually pay off for Canadians?" },
+  { id: "longhaul", label: "Is long-haul economy worth it?" },
+  { id: "transfer", label: "How do I move RBC Avion into Avios?" },
 ];
 
 export default function AviosSweetSpotsPage() {
@@ -20,6 +20,65 @@ export default function AviosSweetSpotsPage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "Is Avios only a British Airways currency?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "No. Avios is a shared currency used by British Airways, Aer Lingus, Iberia, Qatar Airways, and Finnair, plus smaller carriers like Vueling and Loganair. You can move Avios between these programs, often at 1 to 1, and each program prices the same flight and taxes its own way. That is why comparing a couple of programs before you book matters.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Why are British Airways Avios flights so expensive at checkout?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "British Airways adds large carrier-imposed surcharges to many awards, especially long-haul. Those are cash fees on top of the Avios, and in a premium cabin on a long flight they can run into the hundreds of dollars each way. The points themselves are fine; the surcharges on certain bookings are the problem. Always read the cash line next to the points before you confirm.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "How do I avoid the Avios surcharge trap?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Two ways. Stick to short-haul, where the Avios price is low and surcharges are smaller. Or book through partner airlines like Aer Lingus, Iberia, and Qatar, which generally do not pile on the big British Airways-style fuel fees on their own flights. If a British Airways award shows an ugly cash total, price the same route through one of those programs instead.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "How many Avios is Qatar business class?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "As a rough guide, one-way business class between North America and Doha has started around 70,000 Avios off-peak, plus taxes that are usually modest, often in the low hundreds of dollars depending on the route. Qatar currently waives carrier surcharges on its own Avios awards, so you mostly pay points plus taxes. The number shifts with availability and Qatar has changed its award fees before, so confirm the live price.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can I convert RBC Avion points to Avios, and can I reverse it?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, you can move RBC Avion points into British Airways Avios through Avion Rewards, generally at 1 to 1, with periodic bonus promotions that make transfers go further. There is usually a minimum transfer, often around 10,000 points, and points move in set increments. The transfer is one-way and cannot be reversed, so only move what you have a real plan to use.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Should I use Avios for long-haul economy?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Usually no. A long flight costs a lot of Avios because of distance pricing, and on British Airways metal you may also pay surcharges on top, so you can end up spending a large points balance plus cash for a seat you could have bought outright for a fair price. If you are spending a lot of Avios on a long flight, put it toward a premium cabin on a partner that goes light on surcharges instead.",
+                    },
+                  },
+                ],
+              }),
+            }}
+          />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/travel">travel</Link><span className="sep">/</span>
@@ -40,6 +99,18 @@ export default function AviosSweetSpotsPage() {
             <span>prices and ratios change, confirm before you book</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              Avios pay off on short flights and on partner airlines that skip British Airways-style fuel
+              surcharges, not on long-haul “free” tickets that quietly add hundreds of dollars in fees. Once
+              you are in Europe, intra-Europe hops can run a few thousand Avios plus modest taxes, and Qatar
+              business class has started around 70,000 Avios one-way off-peak with only modest taxes. RBC Avion
+              points convert to British Airways Avios, generally at 1 to 1 with periodic bonus promotions, but
+              the transfer is one-way, so find your seat first.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -47,7 +118,7 @@ export default function AviosSweetSpotsPage() {
             </div>
           </div>
 
-          <div id="what" className="cd-sec" style={{ scrollMarginTop: 70 }}>What Avios actually is</div>
+          <div id="what" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is Avios, really?</div>
           <p>
             Avios is not just a British Airways thing. It is a shared points currency used by a group of airlines:
             British Airways, Aer Lingus, Iberia, Qatar Airways, and Finnair, plus a couple of smaller ones like
@@ -73,7 +144,7 @@ export default function AviosSweetSpotsPage() {
             </p>
           </div>
 
-          <div id="pricing" className="cd-sec" style={{ scrollMarginTop: 70 }}>How Avios pricing works</div>
+          <div id="pricing" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does Avios pricing work?</div>
           <p>
             British Airways prices many reward flights by distance rather than by the cash fare. Short flights cost
             few Avios. Long flights cost a lot. There are also peak and off-peak dates, published in advance, and
@@ -91,7 +162,7 @@ export default function AviosSweetSpotsPage() {
             for reasons we will get to.
           </p>
 
-          <div id="surcharges" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest catch: surcharges</div>
+          <div id="surcharges" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the surcharge trap?</div>
           <p>
             Here is the part that wrecks people, so I want to be plain about it. British Airways adds large
             carrier-imposed surcharges on many awards, especially long-haul. These are cash fees on top of the
@@ -118,7 +189,7 @@ export default function AviosSweetSpotsPage() {
             </p>
           </div>
 
-          <div id="spots" className="cd-sec" style={{ scrollMarginTop: 70 }}>Real sweet spots for Canadians</div>
+          <div id="spots" className="cd-sec" style={{ scrollMarginTop: 70 }}>Where do Avios actually pay off for Canadians?</div>
           <p>
             You are not usually starting your trip in London, so Avios work a little differently for us. The wins
             tend to show up once you are already over there, or on specific partner routes. A few that hold up:
@@ -135,7 +206,7 @@ export default function AviosSweetSpotsPage() {
             whenever you feel like it.
           </p>
 
-          <div id="longhaul" className="cd-sec" style={{ scrollMarginTop: 70 }}>The long-haul economy trap</div>
+          <div id="longhaul" className="cd-sec" style={{ scrollMarginTop: 70 }}>Is long-haul economy worth it?</div>
           <p>
             A quick honest warning before we move on to topping up. Long-haul economy on Avios is usually poor
             value. A long flight costs a lot of Avios because of the distance pricing, and if it is on British
@@ -148,7 +219,7 @@ export default function AviosSweetSpotsPage() {
             sense. Long-haul economy, generally, does not.
           </p>
 
-          <div id="transfer" className="cd-sec" style={{ scrollMarginTop: 70 }}>Feeding your Avios with RBC Avion</div>
+          <div id="transfer" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do I move RBC Avion into Avios?</div>
           <p>
             If you collect RBC Avion points through Avion Rewards, you can move them into Avios to top up a balance.
             This is a nice option for Canadians because it gives Avion holders a path into all those distance-based
@@ -203,6 +274,51 @@ export default function AviosSweetSpotsPage() {
             way to feed that balance, just confirm the current ratio, watch for a bonus, and never transfer until
             you have the seat in your sights. Do that and Avios earn their keep. Treat them like generic airline
             miles and they will disappoint you.
+          </p>
+
+          <div className="cd-sec">Frequently asked questions</div>
+          <h4>Is Avios only a British Airways currency?</h4>
+          <p>
+            No. Avios is a shared currency used by British Airways, Aer Lingus, Iberia, Qatar Airways, and
+            Finnair, plus smaller carriers like Vueling and Loganair. You can move Avios between these programs,
+            often at 1 to 1, and each program prices the same flight and taxes its own way. That is why comparing
+            a couple of programs before you book matters.
+          </p>
+          <h4>Why are British Airways Avios flights so expensive at checkout?</h4>
+          <p>
+            British Airways adds large carrier-imposed surcharges to many awards, especially long-haul. Those are
+            cash fees on top of the Avios, and in a premium cabin on a long flight they can run into the hundreds
+            of dollars each way. The points themselves are fine; the surcharges on certain bookings are the
+            problem. Always read the cash line next to the points before you confirm.
+          </p>
+          <h4>How do I avoid the Avios surcharge trap?</h4>
+          <p>
+            Two ways. Stick to short-haul, where the Avios price is low and surcharges are smaller. Or book
+            through partner airlines like Aer Lingus, Iberia, and Qatar, which generally do not pile on the big
+            British Airways-style fuel fees on their own flights. If a British Airways award shows an ugly cash
+            total, price the same route through one of those programs instead.
+          </p>
+          <h4>How many Avios is Qatar business class?</h4>
+          <p>
+            As a rough guide, one-way business class between North America and Doha has started around 70,000
+            Avios off-peak, plus taxes that are usually modest, often in the low hundreds of dollars depending on
+            the route. Qatar currently waives carrier surcharges on its own Avios awards, so you mostly pay points
+            plus taxes. The number shifts with availability and Qatar has changed its award fees before, so
+            confirm the live price.
+          </p>
+          <h4>Can I convert RBC Avion points to Avios, and can I reverse it?</h4>
+          <p>
+            Yes, you can move RBC Avion points into British Airways Avios through Avion Rewards, generally at 1 to
+            1, with periodic bonus promotions that make transfers go further. There is usually a minimum transfer,
+            often around 10,000 points, and points move in set increments. The transfer is one-way and cannot be
+            reversed, so only move what you have a real plan to use.
+          </p>
+          <h4>Should I use Avios for long-haul economy?</h4>
+          <p>
+            Usually no. A long flight costs a lot of Avios because of distance pricing, and on British Airways
+            metal you may also pay surcharges on top, so you can end up spending a large points balance plus cash
+            for a seat you could have bought outright for a fair price. If you are spending a lot of Avios on a
+            long flight, put it toward a premium cabin on a partner that goes light on surcharges instead.
           </p>
 
           <div className="cd-sec">Keep going</div>

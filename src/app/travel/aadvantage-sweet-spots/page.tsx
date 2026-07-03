@@ -1,16 +1,16 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "AAdvantage sweet spots: redeeming American Airlines miles — FinTerminal",
+  title: "AAdvantage sweet spots: redeeming American Airlines miles | FinTerminal",
   description:
     "How a Canadian redeems American Airlines AAdvantage miles, why partner awards beat AA's own dynamic pricing, the genuine sweet spots (Qatar Qsuite, Etihad, JAL, business to Europe), and the surcharge and devaluation catches to watch.",
 };
 
 const TOC = [
-  { id: "how", label: "How AAdvantage prices" },
-  { id: "spots", label: "The sweet spots" },
-  { id: "search", label: "Finding and booking space" },
-  { id: "fees", label: "Taxes and surcharges" },
+  { id: "how", label: "How does AAdvantage price flights?" },
+  { id: "spots", label: "Where are the sweet spots?" },
+  { id: "search", label: "How do you find and book partner space?" },
+  { id: "fees", label: "What will taxes and surcharges cost?" },
   { id: "example", label: "A worked example" },
   { id: "caveats", label: "Honest caveats" },
 ];
@@ -20,6 +20,60 @@ export default function AAdvantageSweetSpotsPage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Should I use AAdvantage miles on American flights or partner airlines?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Point them at partners almost every time. American's own flights are priced dynamically, so the mile cost tracks the cash fare and can balloon on busy dates. Partner airlines are priced from a fixed, region-based award chart that has barely moved in years, which is where the value lives.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How many AAdvantage miles is business class to Europe?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A one-way business class seat between North America and Europe on a partner runs about 57,500 miles, for a lie-flat cabin that routinely sells for several thousand dollars in cash. Economy on the same chart starts around 22,500 miles one-way off-peak, and first class, where it exists, is about 85,000. Lean on partners like Finnair or Iberia for the metal.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does AAdvantage charge fuel surcharges on partner awards?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "On most partner awards, no. You generally pay only genuine taxes and airport fees, which on a route like the US to Doha can be under fifty dollars. The clear exception is British Airways and Iberia, where American does pass surcharges through, and on British Airways long-haul those fees can run well past several hundred dollars each way.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I book AAdvantage partner awards online?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most oneworld partner awards can be searched and booked right on aa.com, including British Airways, Iberia, Finnair, Qatar Airways, Cathay Pacific, Japan Airlines, Qantas and Royal Air Maroc. The notable exception is Etihad, which is not a oneworld member, so its space often does not appear online and usually has to be booked by calling American.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How many AAdvantage miles do I need for Qatar Qsuite?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Business class on partners like Etihad or Qatar Airways is about 70,000 miles one-way to the Middle East and the Indian subcontinent, with first class around 100,000. Qatar's Qsuite booked this way is one of the marquee redemptions in the hobby, with taxes that are often under fifty dollars. Nonstop space out of the US can be scarce, but pairing a domestic American flight with the long-haul partner leg tends to show up more readily at the same rate.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is transferring RBC Avion to AAdvantage worth the haircut?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Only for high-value redemptions. Avion moves at roughly 1 Avion to 0.7 miles, so it takes about 100,000 Avion points to land 70,000 AAdvantage miles. Spent on a Qatar Qsuite seat worth several thousand dollars in cash, that is an excellent trade. Spent on a cheap economy seat you could have bought outright, the haircut makes it a poor one.",
+                },
+              },
+            ],
+          }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/travel">travel</Link><span className="sep">/</span>
@@ -41,6 +95,17 @@ export default function AAdvantageSweetSpotsPage() {
             <span>chart figures are approximate, confirm before you book</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              AAdvantage miles are best spent on partner airlines, not American&apos;s own flights. American metal is
+              priced dynamically and floats with the cash fare, while partners follow a fixed award chart that has barely
+              moved in years. The standout redemptions are business class to Europe around 57,500 miles, Japan Airlines
+              around 60,000, and Qatar Qsuite or Etihad business around 70,000, all with low surcharges as long as you
+              avoid British Airways and Iberia metal.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -49,7 +114,7 @@ export default function AAdvantageSweetSpotsPage() {
           </div>
 
           {/* HOW */}
-          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How AAdvantage prices flights</div>
+          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does AAdvantage price flights?</div>
           <p>
             AAdvantage runs two completely different pricing systems, and knowing which one you are looking at decides
             whether a redemption is brilliant or terrible. Flights operated by American Airlines itself are priced
@@ -73,7 +138,7 @@ export default function AAdvantageSweetSpotsPage() {
           </div>
 
           {/* SPOTS */}
-          <div id="spots" className="cd-sec" style={{ scrollMarginTop: 70 }}>The sweet spots</div>
+          <div id="spots" className="cd-sec" style={{ scrollMarginTop: 70 }}>Where are the sweet spots?</div>
 
           <h4>Short hops within North America</h4>
           <p>
@@ -121,7 +186,7 @@ export default function AAdvantageSweetSpotsPage() {
           </p>
 
           {/* SEARCH */}
-          <div id="search" className="cd-sec" style={{ scrollMarginTop: 70 }}>Finding and booking partner space</div>
+          <div id="search" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you find and book partner space?</div>
           <p>
             Most oneworld partner awards can be searched and booked right on aa.com, which is a big part of what makes
             AAdvantage pleasant to use. British Airways, Iberia, Finnair, Qatar Airways, Cathay Pacific, Japan Airlines,
@@ -145,7 +210,7 @@ export default function AAdvantageSweetSpotsPage() {
           </div>
 
           {/* FEES */}
-          <div id="fees" className="cd-sec" style={{ scrollMarginTop: 70 }}>Taxes, fees and fuel surcharges</div>
+          <div id="fees" className="cd-sec" style={{ scrollMarginTop: 70 }}>What will taxes and surcharges cost?</div>
           <p>
             One of the best things about AAdvantage is that it does not pass along carrier-imposed fuel surcharges on
             most partner awards. On programs that do, those surcharges can add hundreds of dollars each way and quietly
@@ -201,6 +266,50 @@ export default function AAdvantageSweetSpotsPage() {
             or Etihad business around 70,000 are the redemptions worth chasing, all with low surcharges as long as you
             steer clear of British Airways and Iberia metal. Feed the balance with Avion when a high-value seat is in
             your sights, confirm the live price every time, and these miles do real work.
+          </p>
+
+          <div className="cd-sec">Frequently asked questions</div>
+          <h4>Should I use AAdvantage miles on American flights or partner airlines?</h4>
+          <p>
+            Point them at partners almost every time. American&apos;s own flights are priced dynamically, so the mile
+            cost tracks the cash fare and can balloon on busy dates. Partner airlines are priced from a fixed,
+            region-based award chart that has barely moved in years, which is where the value lives.
+          </p>
+          <h4>How many AAdvantage miles is business class to Europe?</h4>
+          <p>
+            A one-way business class seat between North America and Europe on a partner runs about 57,500 miles, for a
+            lie-flat cabin that routinely sells for several thousand dollars in cash. Economy on the same chart starts
+            around 22,500 miles one-way off-peak, and first class, where it exists, is about 85,000. Lean on partners
+            like Finnair or Iberia for the metal.
+          </p>
+          <h4>Does AAdvantage charge fuel surcharges on partner awards?</h4>
+          <p>
+            On most partner awards, no. You generally pay only genuine taxes and airport fees, which on a route like the
+            US to Doha can be under fifty dollars. The clear exception is British Airways and Iberia, where American does
+            pass surcharges through, and on British Airways long-haul those fees can run well past several hundred
+            dollars each way.
+          </p>
+          <h4>Can I book AAdvantage partner awards online?</h4>
+          <p>
+            Most oneworld partner awards can be searched and booked right on aa.com, including British Airways, Iberia,
+            Finnair, Qatar Airways, Cathay Pacific, Japan Airlines, Qantas and Royal Air Maroc. The notable exception is
+            Etihad, which is not a oneworld member, so its space often does not appear online and usually has to be booked
+            by calling American.
+          </p>
+          <h4>How many AAdvantage miles do I need for Qatar Qsuite?</h4>
+          <p>
+            Business class on partners like Etihad or Qatar Airways is about 70,000 miles one-way to the Middle East and
+            the Indian subcontinent, with first class around 100,000. Qatar&apos;s Qsuite booked this way is one of the
+            marquee redemptions in the hobby, with taxes that are often under fifty dollars. Nonstop space out of the US
+            can be scarce, but pairing a domestic American flight with the long-haul partner leg tends to show up more
+            readily at the same rate.
+          </p>
+          <h4>Is transferring RBC Avion to AAdvantage worth the haircut?</h4>
+          <p>
+            Only for high-value redemptions. Avion moves at roughly 1 Avion to 0.7 miles, so it takes about 100,000 Avion
+            points to land 70,000 AAdvantage miles. Spent on a Qatar Qsuite seat worth several thousand dollars in cash,
+            that is an excellent trade. Spent on a cheap economy seat you could have bought outright, the haircut makes it
+            a poor one.
           </p>
 
           <div className="cd-sec">Keep going</div>

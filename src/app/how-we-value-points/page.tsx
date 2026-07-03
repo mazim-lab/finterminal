@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'How we value points — Charted',
+  title: 'How we value points | Charted',
   description: 'How Charted estimates the first-year value of a credit card welcome bonus.',
 };
 

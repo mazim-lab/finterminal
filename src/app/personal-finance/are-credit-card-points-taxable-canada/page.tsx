@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
 export const metadata = {
-  title: "Are credit card points and cash back taxable in Canada? — FinTerminal",
+  title: "Are credit card points and cash back taxable in Canada? | FinTerminal",
   description:
     "For everyday personal spending, the CRA treats credit card points and cash back as a discount, not income, so they are not taxable. Here is the clear version, plus the real nuances around business, employment, and referral rewards.",
 };
@@ -11,13 +11,13 @@ export const metadata = {
 export const revalidate = 3600;
 
 const TOC = [
-  { id: "short", label: "The short answer" },
-  { id: "why", label: "Why it is a rebate" },
-  { id: "business", label: "Business & work" },
+  { id: "short", label: "Are they taxable?" },
+  { id: "why", label: "Why is it a rebate?" },
+  { id: "business", label: "What about business & work?" },
   { id: "signup", label: "Sign-ups & referrals" },
   { id: "bank", label: "Bank bonuses & interest" },
-  { id: "churner", label: "The normal churner" },
-  { id: "accountant", label: "When to ask a pro" },
+  { id: "churner", label: "What about a normal churner?" },
+  { id: "accountant", label: "When should you ask a pro?" },
 ];
 
 export default function CreditCardPointsTaxablePage() {
@@ -27,6 +27,60 @@ export default function CreditCardPointsTaxablePage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Do I have to report credit card points or cash back on my taxes in Canada?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "For rewards earned on your own personal spending, no. The CRA treats points, miles, and cash back as a discount on what you bought rather than income, so there is nothing to report and nothing to pay. You will not receive a tax slip for your Aeroplan miles or your cash-back statement.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are credit card sign-up bonuses taxable?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most welcome bonuses are earned by hitting a minimum spend, which keeps them in rebate territory and not taxable. The less settled cases are bonuses you get with little or no spending required, which are harder to call a discount on a purchase. For the average person, spend-based welcome bonuses are nothing to report.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are credit card referral rewards taxable in Canada?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Referral rewards are not a rebate on anything you bought, so they sit in an uncertain zone. Where they become large or regular there is an argument they could look like income, potentially business income, though for the occasional referral most people treat them as a windfall. This is genuinely unsettled ground in Canada.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is bank account interest taxed differently from credit card rewards?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. Interest from a chequing or savings account, a GIC, or a high-interest savings account is investment income and is taxable. Your bank will usually issue a T5 once it passes a small threshold, and you report it. That is different from card rewards, which are treated as a discount and stay untaxed.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are credit card rewards taxable if I run a business or use a work card?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "They can be. If you deduct business expenses charged to a card, the CRA may expect the reward value to reduce what you deduct rather than sit in your pocket tax-free. If the card and points belong to your employer, keeping them for personal use can be a taxable benefit. Converting business or work rewards to cash is the scenario most likely to be treated as income, so talk to an accountant.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does earning a large amount of points or cash back make it taxable?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No. A big welcome bonus you earned by paying your ordinary bills is still a reward earned as a result of spending, so the same rebate logic applies. Volume alone does not turn a personal rebate into taxable income.",
+                },
+              },
+            ],
+          }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
@@ -49,6 +103,17 @@ export default function CreditCardPointsTaxablePage() {
             <span>general info, not tax advice; CRA positions can change</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              No, credit card points and cash back you earn on ordinary personal spending are not taxable in
+              Canada. The CRA treats them as a discount on what you bought, not income, so there is nothing to
+              report and no slip to expect. The narrow exceptions all involve something other than plain personal
+              spending: business or employer cards, reward value tangled up with expenses you deduct, and
+              referral or no-spend bonuses that become a large, recurring stream.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -57,7 +122,7 @@ export default function CreditCardPointsTaxablePage() {
           </div>
 
           {/* SHORT */}
-          <div id="short" className="cd-sec" style={{ scrollMarginTop: 70 }}>The short answer</div>
+          <div id="short" className="cd-sec" style={{ scrollMarginTop: 70 }}>Are credit card points and cash back taxable?</div>
           <p>
             If you earn points, miles, or cash back on your own personal credit card, for your own personal
             purchases, the CRA generally treats those rewards as a rebate or discount rather than income. That
@@ -79,7 +144,7 @@ export default function CreditCardPointsTaxablePage() {
           </div>
 
           {/* WHY */}
-          <div id="why" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why the CRA calls it a rebate, not income</div>
+          <div id="why" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why does the CRA call it a rebate, not income?</div>
           <p>
             This is a long-standing administrative position, not a new interpretation. The CRA has for years
             taken the view that rewards earned as a result of an amount you spend are a discount on the purchase
@@ -96,7 +161,7 @@ export default function CreditCardPointsTaxablePage() {
           </p>
 
           {/* BUSINESS */}
-          <div id="business" className="cd-sec" style={{ scrollMarginTop: 70 }}>Business spending, employer cards, and deducted expenses</div>
+          <div id="business" className="cd-sec" style={{ scrollMarginTop: 70 }}>What about business spending, employer cards, and deducted expenses?</div>
           <p>
             This is the most important nuance, and the one worth reading slowly if you are self-employed, run a
             business, or use a card for work. None of it should alarm a normal personal churner, but if any of
@@ -206,7 +271,7 @@ export default function CreditCardPointsTaxablePage() {
           </div>
 
           {/* CHURNER */}
-          <div id="churner" className="cd-sec" style={{ scrollMarginTop: 70 }}>What this means for a normal personal churner</div>
+          <div id="churner" className="cd-sec" style={{ scrollMarginTop: 70 }}>What does this mean for a normal personal churner?</div>
           <p>
             If you are a regular person who opens personal cards, chases welcome bonuses through everyday
             spending, earns points and cash back, and redeems them for travel or statement credits, the honest
@@ -215,7 +280,7 @@ export default function CreditCardPointsTaxablePage() {
             treated as discounts on your own purchases.
           </p>
           <p>
-            That holds even when the numbers get large. A big welcome bonus you unlocked by paying your ordinary
+            That holds even when the numbers get large. A big welcome bonus you earned by paying your ordinary
             bills is still a reward earned as a result of spending, so the same rebate logic applies. Volume
             alone does not turn a personal rebate into taxable income.
           </p>
@@ -227,7 +292,7 @@ export default function CreditCardPointsTaxablePage() {
           </p>
 
           {/* ACCOUNTANT */}
-          <div id="accountant" className="cd-sec" style={{ scrollMarginTop: 70 }}>When it is worth talking to an accountant</div>
+          <div id="accountant" className="cd-sec" style={{ scrollMarginTop: 70 }}>When is it worth talking to an accountant?</div>
           <p>
             A short, honest checklist. Consider getting professional advice if you can say yes to any of these:
           </p>
@@ -253,6 +318,48 @@ export default function CreditCardPointsTaxablePage() {
               to a qualified tax professional before you rely on any of this.
             </p>
           </div>
+
+          <div className="cd-sec">Frequently asked questions</div>
+          <h4>Do I have to report credit card points or cash back on my taxes in Canada?</h4>
+          <p>
+            For rewards earned on your own personal spending, no. The CRA treats points, miles, and cash back as
+            a discount on what you bought rather than income, so there is nothing to report and nothing to pay.
+            You will not receive a tax slip for your Aeroplan miles or your cash-back statement.
+          </p>
+          <h4>Are credit card sign-up bonuses taxable?</h4>
+          <p>
+            Most welcome bonuses are earned by hitting a minimum spend, which keeps them in rebate territory and
+            not taxable. The less settled cases are bonuses you get with little or no spending required, which are
+            harder to call a discount on a purchase. For the average person, spend-based welcome bonuses are
+            nothing to report.
+          </p>
+          <h4>Are credit card referral rewards taxable in Canada?</h4>
+          <p>
+            Referral rewards are not a rebate on anything you bought, so they sit in an uncertain zone. Where they
+            become large or regular there is an argument they could look like income, potentially business income,
+            though for the occasional referral most people treat them as a windfall. This is genuinely unsettled
+            ground in Canada.
+          </p>
+          <h4>Is bank account interest taxed differently from credit card rewards?</h4>
+          <p>
+            Yes. Interest from a chequing or savings account, a GIC, or a high-interest savings account is
+            investment income and is taxable. Your bank will usually issue a T5 once it passes a small threshold,
+            and you report it. That is different from card rewards, which are treated as a discount and stay
+            untaxed.
+          </p>
+          <h4>Are credit card rewards taxable if I run a business or use a work card?</h4>
+          <p>
+            They can be. If you deduct business expenses charged to a card, the CRA may expect the reward value to
+            reduce what you deduct rather than sit in your pocket tax-free. If the card and points belong to your
+            employer, keeping them for personal use can be a taxable benefit. Converting business or work rewards
+            to cash is the scenario most likely to be treated as income, so talk to an accountant.
+          </p>
+          <h4>Does earning a large amount of points or cash back make it taxable?</h4>
+          <p>
+            No. A big welcome bonus you earned by paying your ordinary bills is still a reward earned as a
+            result of spending, so the same rebate logic applies. Volume alone does not turn a personal rebate
+            into taxable income.
+          </p>
 
           <div className="cd-sec">Keep going</div>
           <p>Now that you know the tax side is simple, the fun part is earning and using the rewards well.</p>

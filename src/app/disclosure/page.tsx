@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Affiliate Disclosure — FinTerminal",
+  title: "Affiliate Disclosure | FinTerminal",
   description: "How FinTerminal uses affiliate links, and our promise that they never change our rankings or recommendations.",
 };
 

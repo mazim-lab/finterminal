@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
 export const metadata = {
-  title: "Points vs cash back: which actually wins for your household — FinTerminal",
+  title: "Points vs cash back: which actually wins for your household | FinTerminal",
   description:
     "Travel points can be worth more per dollar, but only if you redeem them well. Here is the honest cents-per-point threshold where simple, frictionless cash back is the smarter, lower-effort choice for a Canadian household.",
 };
@@ -11,13 +11,13 @@ export const metadata = {
 export const revalidate = 3600;
 
 const TOC = [
-  { id: "tradeoff", label: "The honest tradeoff" },
-  { id: "cpp", label: "The cents-per-point math" },
-  { id: "example", label: "A worked example" },
-  { id: "leak", label: "The quiet leak" },
-  { id: "cashback", label: "Lean cash back if" },
-  { id: "points", label: "Lean points if" },
-  { id: "verdict", label: "Know thyself" },
+  { id: "tradeoff", label: "What is the real tradeoff?" },
+  { id: "cpp", label: "What cents-per-point math settles it?" },
+  { id: "example", label: "How does it play out in dollars?" },
+  { id: "leak", label: "Why do points often return less?" },
+  { id: "cashback", label: "Should you lean cash back?" },
+  { id: "points", label: "Should you lean points?" },
+  { id: "verdict", label: "Which card should you pick?" },
 ];
 
 export default function PointsVsCashBackPage() {
@@ -27,6 +27,60 @@ export default function PointsVsCashBackPage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Are points or cash back better in Canada?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "It depends on how you redeem. A points card only beats cash back if you redeem points above the breakeven cents-per-point value. For a 2-points-per-dollar card compared to a 2 percent cash-back card, that breakeven is exactly 1 cent per point. Redeem above 1 cent and points win, redeem below it and cash back wins.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I calculate the breakeven cents per point?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Divide the cash-back rate by the points earn rate. A 2-points-per-dollar card versus a 2 percent cash-back card breaks even at 2% divided by 2 points, which is 1.0 cent per point. Beat that redemption value and the points card comes out ahead, fall below it and the cash-back card does.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Why do points often return less than the brochure suggests?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Two quiet leaks pull the real return down. People hoard points waiting for the perfect trip, and a balance you never spend is worth zero. Programs also devalue, quietly raising the points a flight costs, so points held for years tend to lose value. Cash back has neither problem, since it cannot be devalued and never expires unused.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is 2 percent cash back good in Canada?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. A flat 2 percent everyday rate is about the ceiling for Canadian cash-back cards, with richer rates showing up in specific categories like groceries and gas. It is guaranteed, frictionless, and cannot be devalued, so a 2 percent return you always collect can easily beat a higher points return you only capture some of the time.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "When should I choose points over cash back?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Lean points when you have specific travel goals, are willing to learn a handful of redemption sweet spots, have flexible dates, and will earn and burn instead of hoarding. That is where premium-cabin redemptions reaching 4 or 5 plus cents per point live, which is the reason experienced churners favour travel currencies.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do travel points expire or lose value?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "They can lose value through devaluation, where a program raises the number of points a flight costs and every point you hold becomes worth a little less. This has happened repeatedly across airline and hotel programs. The general rule of the hobby is to earn and burn, because points held for years tend to lose value rather than gain it.",
+                },
+              },
+            ],
+          }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
@@ -48,6 +102,17 @@ export default function PointsVsCashBackPage() {
             <span>values change; general info, not advice</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              Points beat cash back only if you redeem them above the breakeven value, which for a
+              2-points-per-dollar card versus a 2 percent cash-back card is exactly 1 cent per point. Redeem above
+              that and points win, sometimes by a wide margin on premium flights worth 3 to 5 plus cents each.
+              Redeem below it, or let points sit unredeemed while programs devalue them, and simple, guaranteed cash
+              back is the smarter, lower-effort choice. The best card is the one whose rewards you will actually use.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -56,7 +121,7 @@ export default function PointsVsCashBackPage() {
           </div>
 
           {/* TRADEOFF */}
-          <div id="tradeoff" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest tradeoff</div>
+          <div id="tradeoff" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the real tradeoff between points and cash back?</div>
           <p>
             Start with what each reward really is. Cash back is money. It lands in your account or on your
             statement, it is worth exactly one cent per cent, and you can spend it on anything. A good Canadian
@@ -82,7 +147,7 @@ export default function PointsVsCashBackPage() {
           </p>
 
           {/* CPP */}
-          <div id="cpp" className="cd-sec" style={{ scrollMarginTop: 70 }}>The cents-per-point math that settles it</div>
+          <div id="cpp" className="cd-sec" style={{ scrollMarginTop: 70 }}>What cents-per-point math settles the debate?</div>
           <p>
             Here is the framing that cuts through all the noise. A card that earns some number of points per dollar
             only beats a straightforward cash-back card if you actually redeem those points above a certain value
@@ -115,7 +180,7 @@ export default function PointsVsCashBackPage() {
           </div>
 
           {/* EXAMPLE */}
-          <div id="example" className="cd-sec" style={{ scrollMarginTop: 70 }}>A worked example, both outcomes</div>
+          <div id="example" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does it play out in real dollars?</div>
           <p>
             Let me make it concrete with round numbers. Picture two cards for the same $20,000 of annual household
             spending. Card A is a flat 2 percent cash-back card. Card B earns 2 points per dollar in a travel
@@ -145,7 +210,7 @@ export default function PointsVsCashBackPage() {
           </p>
 
           {/* LEAK */}
-          <div id="leak" className="cd-sec" style={{ scrollMarginTop: 70 }}>The quiet leak nobody talks about: unredeemed points and devaluations</div>
+          <div id="leak" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why do points often return less than the brochure suggests?</div>
           <p>
             The cents-per-point math assumes you actually redeem your points, and redeem them well. In real life,
             this is where the biggest value quietly drains away, and it is the most important part of this whole
@@ -181,7 +246,7 @@ export default function PointsVsCashBackPage() {
           </div>
 
           {/* CASHBACK */}
-          <div id="cashback" className="cd-sec" style={{ scrollMarginTop: 70 }}>Lean cash back if this sounds like you</div>
+          <div id="cashback" className="cd-sec" style={{ scrollMarginTop: 70 }}>Should you lean cash back?</div>
           <p>
             Cash back is the right default for more households than the points crowd likes to admit, and choosing it
             is not settling. It is matching the reward to your actual life.
@@ -195,7 +260,7 @@ export default function PointsVsCashBackPage() {
           </ul>
 
           {/* POINTS */}
-          <div id="points" className="cd-sec" style={{ scrollMarginTop: 70 }}>Lean points if this sounds like you</div>
+          <div id="points" className="cd-sec" style={{ scrollMarginTop: 70 }}>Should you lean points?</div>
           <p>
             Points can be the far richer choice, sometimes dramatically so, when you are the kind of person who will
             actually do the work and enjoy it. The upside is real, and for the right household it dwarfs cash back.
@@ -213,7 +278,7 @@ export default function PointsVsCashBackPage() {
           </p>
 
           {/* VERDICT */}
-          <div id="verdict" className="cd-sec" style={{ scrollMarginTop: 70 }}>Know thyself: the best card is the one you will actually use</div>
+          <div id="verdict" className="cd-sec" style={{ scrollMarginTop: 70 }}>Which card should you actually pick?</div>
           <p>
             After all the math, the answer is less about spreadsheets than about self-knowledge. The best rewards
             card is not the one with the highest theoretical value. It is the one whose rewards you will genuinely
@@ -236,6 +301,49 @@ export default function PointsVsCashBackPage() {
               full so interest never erases the rewards on either side of this choice.
             </p>
           </div>
+
+          <div className="cd-sec">Frequently asked questions</div>
+          <h4>Are points or cash back better in Canada?</h4>
+          <p>
+            It depends on how you redeem. A points card only beats cash back if you redeem points above the
+            breakeven cents-per-point value. For a 2-points-per-dollar card compared to a 2 percent cash-back card,
+            that breakeven is exactly 1 cent per point. Redeem above 1 cent and points win, redeem below it and cash
+            back wins.
+          </p>
+          <h4>How do I calculate the breakeven cents per point?</h4>
+          <p>
+            Divide the cash-back rate by the points earn rate. A 2-points-per-dollar card versus a 2 percent
+            cash-back card breaks even at 2% divided by 2 points, which is 1.0 cent per point. Beat that redemption
+            value and the points card comes out ahead, fall below it and the cash-back card does.
+          </p>
+          <h4>Why do points often return less than the brochure suggests?</h4>
+          <p>
+            Two quiet leaks pull the real return down. People hoard points waiting for the perfect trip, and a
+            balance you never spend is worth zero. Programs also devalue, quietly raising the points a flight costs,
+            so points held for years tend to lose value. Cash back has neither problem, since it cannot be devalued
+            and never expires unused.
+          </p>
+          <h4>Is 2 percent cash back good in Canada?</h4>
+          <p>
+            Yes. A flat 2 percent everyday rate is about the ceiling for Canadian cash-back cards, with richer rates
+            showing up in specific categories like groceries and gas. It is guaranteed, frictionless, and cannot be
+            devalued, so a 2 percent return you always collect can easily beat a higher points return you only
+            capture some of the time.
+          </p>
+          <h4>When should I choose points over cash back?</h4>
+          <p>
+            Lean points when you have specific travel goals, are willing to learn a handful of redemption sweet
+            spots, have flexible dates, and will earn and burn instead of hoarding. That is where premium-cabin
+            redemptions reaching 4 or 5 plus cents per point live, which is the reason experienced churners favour
+            travel currencies.
+          </p>
+          <h4>Do travel points expire or lose value?</h4>
+          <p>
+            They can lose value through devaluation, where a program raises the number of points a flight costs and
+            every point you hold becomes worth a little less. This has happened repeatedly across airline and hotel
+            programs. The general rule of the hobby is to earn and burn, because points held for years tend to lose
+            value rather than gain it.
+          </p>
 
           <div className="cd-sec">Keep going</div>
           <p>Once you know which camp you are in, the next step is finding a card that fits it, whether that is a flat cash-back rate or a travel currency with real sweet spots.</p>

@@ -2,7 +2,7 @@ import { SWEET_SPOTS } from "@/data/sweet-spots";
 import { LoadMoreCards } from "@/components/LoadMoreCards";
 
 export const metadata = {
-  title: "Travel & Points — FinTerminal",
+  title: "Travel & Points | FinTerminal",
   description: "Guides for turning Canadian credit card points into real trips, with a focus on Aeroplan and Amex Membership Rewards.",
 };
 

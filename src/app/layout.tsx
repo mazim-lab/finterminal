@@ -14,7 +14,7 @@ const doto = Doto({ subsets: ["latin"], display: "swap", weight: ["500", "700", 
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.finterminal.ca"),
-  title: "FinTerminal — Cards, Points & Personal Finance for Canadians",
+  title: "FinTerminal | Cards, Points & Personal Finance for Canadians",
   description: `The terminal for Canadian money: compare ${allCards.length}+ credit cards, maximize travel points, and track a real portfolio — verified data, no sponsored noise.`,
   openGraph: {
     title: "FinTerminal",

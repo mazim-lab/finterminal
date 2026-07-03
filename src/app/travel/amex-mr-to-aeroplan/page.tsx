@@ -1,17 +1,17 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to convert Amex Membership Rewards to Aeroplan — FinTerminal",
+  title: "How to convert Amex Membership Rewards to Aeroplan | FinTerminal",
   description:
     "Step-by-step guide for transferring Amex Membership Rewards points to Air Canada Aeroplan at 1 to 1, including timing, transfer bonuses, and the mistakes to avoid.",
 };
 
 const TOC = [
-  { id: "basics", label: "The basics" },
-  { id: "cards", label: "Which cards qualify" },
-  { id: "steps", label: "How to transfer" },
-  { id: "timing", label: "When to transfer" },
-  { id: "mistakes", label: "Mistakes to avoid" },
+  { id: "basics", label: "What ratio does MR transfer to Aeroplan?" },
+  { id: "cards", label: "Which cards qualify?" },
+  { id: "steps", label: "How do you transfer, step by step?" },
+  { id: "timing", label: "When should you transfer?" },
+  { id: "mistakes", label: "What mistakes should you avoid?" },
 ];
 
 export default function MrToAeroplanPage() {
@@ -19,6 +19,60 @@ export default function MrToAeroplanPage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is the Amex MR to Aeroplan transfer ratio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Membership Rewards points transfer to Aeroplan at 1 to 1, so 30,000 Amex points become 30,000 Aeroplan points. Points move in set increments such as 100 or 1,000 depending on your card.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does an Amex MR transfer to Aeroplan take?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Transfers are usually quick. The points often appear in Aeroplan within minutes, though it can occasionally take up to 24 hours. Because of that, you should confirm your award seat before you move the points.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I transfer Aeroplan points back to Amex Membership Rewards?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No. The transfer only goes one way. Once your points land in Aeroplan they cannot come back to Amex, which is why you should transfer with a plan rather than on a whim.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Which Amex cards can transfer to Aeroplan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "You need an Amex card that earns full Membership Rewards points and includes airline transfer partners. In Canada the common ones are the Cobalt Card, the Gold Rewards Card, The Platinum Card, the Business Platinum Card, and the Business Gold Rewards Card. Confirm your specific card lists Aeroplan as a partner in your online account.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Should I wait for an Amex transfer bonus to Aeroplan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Only if you already know you will use the points. Amex occasionally runs limited-time promotions that add a bonus of roughly 25 to 35 percent when you move points to Aeroplan. That is a good reason to transfer a little early for a trip you have planned, but a bonus is not a deal if you were not going to use the points.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How many points should I transfer to Aeroplan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Transfer only what your booking needs, plus a small buffer if you like. Over-transferring leaves stranded points sitting in Aeroplan with no plan, and those points can no longer be used with other partners.",
+                },
+              },
+            ],
+          }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/travel">travel</Link><span className="sep">/</span>
@@ -37,6 +91,17 @@ export default function MrToAeroplanPage() {
             <span>about 7 min read</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              Amex Membership Rewards points transfer to Air Canada Aeroplan at a 1 to 1 ratio, so 30,000 MR
+              points become 30,000 Aeroplan points, usually within minutes. The transfer only goes one way and
+              cannot be reversed, so confirm your award seat first and move only what you need. The best time to
+              transfer is right before you book, or during an Amex transfer bonus of roughly 25 to 35 percent if
+              you already have a trip planned.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -45,7 +110,7 @@ export default function MrToAeroplanPage() {
           </div>
 
           {/* BASICS */}
-          <div id="basics" className="cd-sec" style={{ scrollMarginTop: 70 }}>The basics</div>
+          <div id="basics" className="cd-sec" style={{ scrollMarginTop: 70 }}>What ratio does MR transfer to Aeroplan?</div>
           <p>
             Membership Rewards points transfer to Aeroplan at a 1 to 1 ratio, so 30,000 Amex points become
             30,000 Aeroplan points. Transfers are usually quick, often instant and occasionally up to a day, and
@@ -58,7 +123,7 @@ export default function MrToAeroplanPage() {
           </p>
 
           {/* CARDS */}
-          <div id="cards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Which cards qualify</div>
+          <div id="cards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Which cards qualify?</div>
           <p>
             You need an Amex card that earns full Membership Rewards points and includes airline transfer
             partners. In Canada the common ones are below.
@@ -78,7 +143,7 @@ export default function MrToAeroplanPage() {
           </div>
 
           {/* STEPS */}
-          <div id="steps" className="cd-sec" style={{ scrollMarginTop: 70 }}>How to transfer, step by step</div>
+          <div id="steps" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you transfer, step by step?</div>
           <div className="steps">
             <div className="step">
               <div className="num">1</div>
@@ -113,7 +178,7 @@ export default function MrToAeroplanPage() {
           </div>
 
           {/* TIMING */}
-          <div id="timing" className="cd-sec" style={{ scrollMarginTop: 70 }}>When to transfer</div>
+          <div id="timing" className="cd-sec" style={{ scrollMarginTop: 70 }}>When should you transfer?</div>
           <p>
             The best transfer is one that happens right before you book, against a confirmed award seat. The
             second-best moment is during a transfer bonus.
@@ -132,13 +197,27 @@ export default function MrToAeroplanPage() {
           </div>
 
           {/* MISTAKES */}
-          <div id="mistakes" className="cd-sec" style={{ scrollMarginTop: 70 }}>Mistakes to avoid</div>
+          <div id="mistakes" className="cd-sec" style={{ scrollMarginTop: 70 }}>What mistakes should you avoid?</div>
           <ul>
             <li><strong>Transferring before confirming award space.</strong> Always find the seat first. Moving points and then discovering the flight is gone is the classic regret.</li>
             <li><strong>Over-transferring.</strong> Send what you need. Stranded points sitting in Aeroplan with no plan are points you can no longer use elsewhere.</li>
             <li><strong>Name mismatches.</strong> Your name on Amex and Aeroplan should match. A typo can hold up the transfer.</li>
             <li><strong>Chasing a bonus with no plan.</strong> A transfer bonus is only a deal if you were going to use the points. Otherwise it is just locking points into one program early.</li>
           </ul>
+
+          <div className="cd-sec">Frequently asked questions</div>
+          <h4>What is the Amex MR to Aeroplan transfer ratio?</h4>
+          <p>Membership Rewards points transfer to Aeroplan at 1 to 1, so 30,000 Amex points become 30,000 Aeroplan points. Points move in set increments such as 100 or 1,000 depending on your card.</p>
+          <h4>How long does an Amex MR transfer to Aeroplan take?</h4>
+          <p>Transfers are usually quick. The points often appear in Aeroplan within minutes, though it can occasionally take up to 24 hours. Because of that, you should confirm your award seat before you move the points.</p>
+          <h4>Can I transfer Aeroplan points back to Amex Membership Rewards?</h4>
+          <p>No. The transfer only goes one way. Once your points land in Aeroplan they cannot come back to Amex, which is why you should transfer with a plan rather than on a whim.</p>
+          <h4>Which Amex cards can transfer to Aeroplan?</h4>
+          <p>You need an Amex card that earns full Membership Rewards points and includes airline transfer partners. In Canada the common ones are the Cobalt Card, the Gold Rewards Card, The Platinum Card, the Business Platinum Card, and the Business Gold Rewards Card. Confirm your specific card lists Aeroplan as a partner in your online account.</p>
+          <h4>Should I wait for an Amex transfer bonus to Aeroplan?</h4>
+          <p>Only if you already know you will use the points. Amex occasionally runs limited-time promotions that add a bonus of roughly 25 to 35 percent when you move points to Aeroplan. That is a good reason to transfer a little early for a trip you have planned, but a bonus is not a deal if you were not going to use the points.</p>
+          <h4>How many points should I transfer to Aeroplan?</h4>
+          <p>Transfer only what your booking needs, plus a small buffer if you like. Over-transferring leaves stranded points sitting in Aeroplan with no plan, and those points can no longer be used with other partners.</p>
 
           <div className="cd-sec">Next</div>
           <p>Now that your points are in Aeroplan, here is how to spend them well.</p>

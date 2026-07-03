@@ -15,9 +15,9 @@ function findItem(slug: string) {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const item = findItem(slug);
-  if (!item) return { title: "Story Not Found — FinTerminal" };
+  if (!item) return { title: "Story Not Found | FinTerminal" };
   return {
-    title: `${item.headline} — FinTerminal`,
+    title: `${item.headline} | FinTerminal`,
     description: item.dek,
   };
 }

@@ -1,19 +1,19 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to transfer RBC Avion points to American Airlines AAdvantage — FinTerminal",
+  title: "How to transfer RBC Avion points to American Airlines AAdvantage | FinTerminal",
   description:
     "A plain-English walkthrough for Canadians: which RBC Avion cards can transfer to American Airlines, the real 1 to 0.7 ratio and 5,000 point minimum, how to do it in Avion Rewards, timing, and why to wait for a transfer bonus.",
 };
 
 const TOC = [
-  { id: "cards", label: "Which cards qualify" },
-  { id: "ratio", label: "The ratio and minimum" },
-  { id: "how", label: "How to transfer" },
-  { id: "timing", label: "How long it takes" },
-  { id: "bonus", label: "Wait for a bonus" },
+  { id: "cards", label: "Which Avion cards can transfer to airlines?" },
+  { id: "ratio", label: "What is the ratio and the minimum?" },
+  { id: "how", label: "How do you actually do the transfer?" },
+  { id: "timing", label: "How long does it take to post?" },
+  { id: "bonus", label: "Should you wait for a transfer bonus?" },
   { id: "example", label: "A worked example" },
-  { id: "caveats", label: "Honest caveats" },
+  { id: "caveats", label: "What are the catches?" },
 ];
 
 export default function AvionToAmericanAirlinesPage() {
@@ -21,6 +21,60 @@ export default function AvionToAmericanAirlinesPage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is the RBC Avion to AAdvantage transfer ratio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The base rate is 10 Avion points for 7 American Airlines AAdvantage miles, which is a 1 to 0.7 ratio. So 1,000 Avion points become 700 miles, and you lose 30 percent of your points count in the move. The minimum transfer is 5,000 Avion points.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Which RBC cards can transfer Avion points to American Airlines?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Only cards that earn Avion Elite points can transfer to airline partners. Those are the RBC Avion Visa Infinite, the RBC Avion Visa Platinum, the RBC Avion Visa Infinite Privilege, and the RBC Avion Visa Infinite Business. No-fee and lower-tier cards like the RBC ION and ION+ earn points that cannot be sent to American Airlines.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does an Avion to AAdvantage transfer take?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "RBC officially asks you to allow up to four weeks for the miles to appear in your AAdvantage account, and that is the number to plan around. In practice many people report the miles landing within a few days, but transfers are one-way and can run slow. Confirm your award seat before you transfer, since American does not hold seats for free while you wait.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is transferring Avion to AAdvantage worth it?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "It is worth it when the AAdvantage award on the other side is priced well and comes with low cash fees, because American does not pass along big fuel surcharges. For a mediocre redemption you are better off keeping your Avion in British Airways Avios or Cathay Pacific Asia Miles, which both transfer at a clean 1 to 1. Waiting for a transfer bonus makes the trade meaningfully kinder.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Should I wait for an RBC transfer bonus to American Airlines?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "If your trip is flexible, yes. RBC periodically runs transfer bonuses that push the rate higher, for example a 15 percent bonus that ran through August 2025 and moved the rate to 10 Avion points for 8.05 miles. That turns a 30 percent loss into closer to 20 percent. But if you have already found a great award seat that may not last, book it rather than wait.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I reverse an Avion to AAdvantage transfer?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No. Once Avion points become AAdvantage miles the transfer is one-way and final, and the miles cannot be converted back. Only transfer what you have a concrete plan to use, and confirm the award seat first.",
+                },
+              },
+            ],
+          }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/travel">travel</Link><span className="sep">/</span>
@@ -42,6 +96,17 @@ export default function AvionToAmericanAirlinesPage() {
             <span>ratios and bonuses change, confirm before you transfer</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              RBC Avion transfers to American Airlines AAdvantage at a base rate of 10 Avion points for 7 miles, a 1 to
+              0.7 ratio, with a 5,000 point minimum, and only Avion Elite cards can do it. You lose 30 percent of your
+              points count, so the move only pays off when the AAdvantage award on the far end is priced well and cheap
+              in cash fees. Miles can take up to four weeks to post, so confirm the seat before you transfer, and wait
+              for one of RBC&apos;s periodic transfer bonuses if your trip is flexible.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -50,7 +115,7 @@ export default function AvionToAmericanAirlinesPage() {
           </div>
 
           {/* CARDS */}
-          <div id="cards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Which Avion cards can transfer to airlines</div>
+          <div id="cards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Which Avion cards can transfer to airlines?</div>
           <p>
             This is the part that trips people up, so let us start here. Not every card in the Avion Rewards
             ecosystem can send points to airline partners. The ability to convert to American Airlines, British
@@ -79,7 +144,7 @@ export default function AvionToAmericanAirlinesPage() {
           </div>
 
           {/* RATIO */}
-          <div id="ratio" className="cd-sec" style={{ scrollMarginTop: 70 }}>The ratio and the minimum</div>
+          <div id="ratio" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the ratio and the minimum?</div>
           <p>
             Here is the number that matters most. The base conversion rate is 10 Avion points for 7 AAdvantage
             miles, which works out to 1,000 Avion points becoming 700 miles, or a 1 to 0.7 ratio. There is no way to
@@ -102,7 +167,7 @@ export default function AvionToAmericanAirlinesPage() {
           </p>
 
           {/* HOW */}
-          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How to actually do the transfer</div>
+          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you actually do the transfer?</div>
           <p>
             The mechanics are straightforward once you know where to look. You do not need to pre-link your American
             Airlines account or jump through verification hoops ahead of time. You do, however, want your AAdvantage
@@ -138,7 +203,7 @@ export default function AvionToAmericanAirlinesPage() {
           </div>
 
           {/* TIMING */}
-          <div id="timing" className="cd-sec" style={{ scrollMarginTop: 70 }}>How long it takes to post</div>
+          <div id="timing" className="cd-sec" style={{ scrollMarginTop: 70 }}>How long does it take to post?</div>
           <p>
             RBC officially asks you to allow up to four weeks for the miles to appear in your AAdvantage account.
             That is the number you should plan around. In practice many people report the miles landing far faster,
@@ -153,7 +218,7 @@ export default function AvionToAmericanAirlinesPage() {
           </p>
 
           {/* BONUS */}
-          <div id="bonus" className="cd-sec" style={{ scrollMarginTop: 70 }}>Wait for a transfer bonus if you can</div>
+          <div id="bonus" className="cd-sec" style={{ scrollMarginTop: 70 }}>Should you wait for a transfer bonus?</div>
           <p>
             Here is the single best way to soften that 1 to 0.7 rate. RBC periodically runs transfer bonuses to
             American Airlines, and when one is live it changes the math meaningfully. The most recent one I can point
@@ -198,7 +263,7 @@ export default function AvionToAmericanAirlinesPage() {
           </p>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest caveats</div>
+          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>What are the catches?</div>
           <ul>
             <li><strong>The 1 to 0.7 rate is a real loss.</strong> You are giving up 30 percent of your points count off the top. That is only worth it if the AAdvantage award is priced well enough to win the trade. For a mediocre redemption, you are better off keeping your Avion in a program that transfers at 1 to 1.</li>
             <li><strong>It is one-way and final.</strong> Once Avion points become AAdvantage miles, they cannot be reversed or converted back. Only transfer what you have a concrete plan to use.</li>
@@ -214,6 +279,47 @@ export default function AvionToAmericanAirlinesPage() {
             up to four weeks to show up. The move pays off when the AAdvantage award on the other side is genuinely
             good, and it pays off more when you wait for one of RBC&apos;s periodic transfer bonuses. Confirm the seat
             first, transfer second, and you will rarely regret it.
+          </p>
+
+          <div className="cd-sec">Frequently asked questions</div>
+          <h4>What is the RBC Avion to AAdvantage transfer ratio?</h4>
+          <p>
+            The base rate is 10 Avion points for 7 American Airlines AAdvantage miles, which is a 1 to 0.7 ratio. So
+            1,000 Avion points become 700 miles, and you lose 30 percent of your points count in the move. The minimum
+            transfer is 5,000 Avion points.
+          </p>
+          <h4>Which RBC cards can transfer Avion points to American Airlines?</h4>
+          <p>
+            Only cards that earn Avion Elite points can transfer to airline partners. Those are the RBC Avion Visa
+            Infinite, the RBC Avion Visa Platinum, the RBC Avion Visa Infinite Privilege, and the RBC Avion Visa
+            Infinite Business. No-fee and lower-tier cards like the RBC ION and ION+ earn points that cannot be sent to
+            American Airlines.
+          </p>
+          <h4>How long does an Avion to AAdvantage transfer take?</h4>
+          <p>
+            RBC officially asks you to allow up to four weeks for the miles to appear in your AAdvantage account, and
+            that is the number to plan around. In practice many people report the miles landing within a few days, but
+            transfers are one-way and can run slow. Confirm your award seat before you transfer, since American does
+            not hold seats for free while you wait.
+          </p>
+          <h4>Is transferring Avion to AAdvantage worth it?</h4>
+          <p>
+            It is worth it when the AAdvantage award on the other side is priced well and comes with low cash fees,
+            because American does not pass along big fuel surcharges. For a mediocre redemption you are better off
+            keeping your Avion in British Airways Avios or Cathay Pacific Asia Miles, which both transfer at a clean 1
+            to 1. Waiting for a transfer bonus makes the trade meaningfully kinder.
+          </p>
+          <h4>Should I wait for an RBC transfer bonus to American Airlines?</h4>
+          <p>
+            If your trip is flexible, yes. RBC periodically runs transfer bonuses that push the rate higher, for
+            example a 15 percent bonus that ran through August 2025 and moved the rate to 10 Avion points for 8.05
+            miles. That turns a 30 percent loss into closer to 20 percent. But if you have already found a great award
+            seat that may not last, book it rather than wait.
+          </p>
+          <h4>Can I reverse an Avion to AAdvantage transfer?</h4>
+          <p>
+            No. Once Avion points become AAdvantage miles the transfer is one-way and final, and the miles cannot be
+            converted back. Only transfer what you have a concrete plan to use, and confirm the award seat first.
           </p>
 
           <div className="cd-sec">Keep going</div>

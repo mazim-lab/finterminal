@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
 export const metadata = {
-  title: "Where your next dollar should go: the Canadian account order — FinTerminal",
+  title: "Where your next dollar should go: the Canadian account order | FinTerminal",
   description:
     "Employer match, RESP, FHSA, TFSA, RRSP, or taxable? A clear order of operations for where a Canadian should put the next dollar, with the marginal-rate logic that decides when an RRSP beats a TFSA.",
 };
@@ -11,12 +11,12 @@ export const metadata = {
 export const revalidate = 3600;
 
 const TOC = [
-  { id: "why", label: "Why order matters" },
-  { id: "waterfall", label: "The waterfall" },
-  { id: "tfsa-rrsp", label: "TFSA vs RRSP" },
-  { id: "reorder", label: "When it reorders" },
+  { id: "why", label: "Why does the order matter?" },
+  { id: "waterfall", label: "What is the waterfall?" },
+  { id: "tfsa-rrsp", label: "TFSA or RRSP?" },
+  { id: "reorder", label: "When should you reorder it?" },
   { id: "caveats", label: "The caveats" },
-  { id: "verdict", label: "Is it for you" },
+  { id: "verdict", label: "Is this order for you?" },
 ];
 
 export default function AccountOrderOfOperationsPage() {
@@ -26,6 +26,60 @@ export default function AccountOrderOfOperationsPage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is the order of operations for a Canadian's next dollar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The default waterfall is: clear high-interest debt first, then capture any employer match, then the RESP if you have kids, then the FHSA if a first home is on the horizon, then the TFSA, then the RRSP, and finally a non-registered taxable account once your registered room is full. Each dollar fills the highest-value bucket first, then spills into the next.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Should I pay off my credit card before investing?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, in almost every case. A credit card balance costs you roughly 20 percent or more a year, and paying it off is a guaranteed, tax-free return of that same 20 percent. No investment reliably beats that, and none does it risk-free, so clearing expensive debt comes before everything else.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is the TFSA or RRSP better for me?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "It depends on your tax rate now versus in retirement. The RRSP tends to win when your rate today is higher than it will be later, because you deduct at a high rate and withdraw at a low one. The TFSA tends to win when your rate is lower now, or when you value tax-free, penalty-free access. If you are torn, splitting between the two is a reasonable hedge.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Where does the RESP fit in the order?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "If you have kids and unused grant room, the RESP ranks very high, just below capturing free money at work. The government adds a 20 percent grant on the first $2,500 you contribute per child each year, up to $500 a year and $7,200 over the child's lifetime. That guaranteed 20 percent top-up beats your own TFSA and RRSP contributions.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What are the 2026 contribution limits for these accounts?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "For 2026 the TFSA annual room is $7,000, the FHSA allows up to $8,000 a year to a lifetime limit of $40,000, and the RRSP lets you contribute 18 percent of last year's earned income up to $33,810, minus any pension adjustment. Limits and grant amounts change, so confirm the current figures before you rely on them.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "When should I change this order for my own situation?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The waterfall is a default, not a law. Build an emergency fund first if you have none, move the FHSA up if a first home is your near-term goal, move the RRSP up if you are a high earner, favour the TFSA if your income is uneven, and treat lower-interest debt like a mortgage with less urgency than a credit card. Your goals and timeline fill in the details.",
+                },
+              },
+            ],
+          }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
@@ -48,6 +102,18 @@ export default function AccountOrderOfOperationsPage() {
             <span>limits change; general info, not advice</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              For most Canadian households, send your next dollar down this waterfall in order: clear high-interest
+              debt (around 20 percent), then grab any employer match, then the RESP if you have kids, then the FHSA
+              if a first home is coming, then the TFSA, then the RRSP, and finally a taxable account once the
+              shelters are full. Guaranteed returns come before tax shelters, and the RRSP-versus-TFSA call comes
+              down to whether your tax rate is higher now or in retirement. Limits change, so confirm the current
+              figures before you act.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -56,7 +122,7 @@ export default function AccountOrderOfOperationsPage() {
           </div>
 
           {/* WHY */}
-          <div id="why" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why the order matters at all</div>
+          <div id="why" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why does the order matter at all?</div>
           <p>
             Every place you can put a dollar comes with a return, and those returns are not equal. Paying off a
             credit card charging 20 percent is worth far more than earning a few percent in a savings account.
@@ -72,7 +138,7 @@ export default function AccountOrderOfOperationsPage() {
           </p>
 
           {/* WATERFALL */}
-          <div id="waterfall" className="cd-sec" style={{ scrollMarginTop: 70 }}>The waterfall, step by step</div>
+          <div id="waterfall" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the waterfall, step by step?</div>
           <p>
             Here is the default sequence. Work down it. When one bucket is full, or does not apply to you, move
             to the next.
@@ -125,7 +191,7 @@ export default function AccountOrderOfOperationsPage() {
           </div>
 
           {/* TFSA VS RRSP */}
-          <div id="tfsa-rrsp" className="cd-sec" style={{ scrollMarginTop: 70 }}>TFSA vs RRSP, made intuitive</div>
+          <div id="tfsa-rrsp" className="cd-sec" style={{ scrollMarginTop: 70 }}>TFSA or RRSP: which one wins?</div>
           <p>
             This is the part that trips people up, so let me make it as plain as I can. Both accounts shelter your
             growth from tax. The difference is when you pay the tax on the money itself. With an RRSP you skip tax
@@ -162,7 +228,7 @@ export default function AccountOrderOfOperationsPage() {
           </p>
 
           {/* REORDER */}
-          <div id="reorder" className="cd-sec" style={{ scrollMarginTop: 70 }}>When your life reorders the list</div>
+          <div id="reorder" className="cd-sec" style={{ scrollMarginTop: 70 }}>When should your life reorder the list?</div>
           <p>
             Here is the honest truth about the waterfall: it is a default, not a law. It is a strong starting
             point for a typical household, and then real life rearranges it. A few common situations that
@@ -216,6 +282,20 @@ export default function AccountOrderOfOperationsPage() {
               The framework is a tool. How you use it depends on how you actually live.
             </p>
           </div>
+
+          <div className="cd-sec">Frequently asked questions</div>
+          <h4>What is the order of operations for a Canadian&apos;s next dollar?</h4>
+          <p>The default waterfall is: clear high-interest debt first, then capture any employer match, then the RESP if you have kids, then the FHSA if a first home is on the horizon, then the TFSA, then the RRSP, and finally a non-registered taxable account once your registered room is full. Each dollar fills the highest-value bucket first, then spills into the next.</p>
+          <h4>Should I pay off my credit card before investing?</h4>
+          <p>Yes, in almost every case. A credit card balance costs you roughly 20 percent or more a year, and paying it off is a guaranteed, tax-free return of that same 20 percent. No investment reliably beats that, and none does it risk-free, so clearing expensive debt comes before everything else.</p>
+          <h4>Is the TFSA or RRSP better for me?</h4>
+          <p>It depends on your tax rate now versus in retirement. The RRSP tends to win when your rate today is higher than it will be later, because you deduct at a high rate and withdraw at a low one. The TFSA tends to win when your rate is lower now, or when you value tax-free, penalty-free access. If you are torn, splitting between the two is a reasonable hedge.</p>
+          <h4>Where does the RESP fit in the order?</h4>
+          <p>If you have kids and unused grant room, the RESP ranks very high, just below capturing free money at work. The government adds a 20 percent grant on the first $2,500 you contribute per child each year, up to $500 a year and $7,200 over the child&apos;s lifetime. That guaranteed 20 percent top-up beats your own TFSA and RRSP contributions.</p>
+          <h4>What are the 2026 contribution limits for these accounts?</h4>
+          <p>For 2026 the TFSA annual room is $7,000, the FHSA allows up to $8,000 a year to a lifetime limit of $40,000, and the RRSP lets you contribute 18 percent of last year&apos;s earned income up to $33,810, minus any pension adjustment. Limits and grant amounts change, so confirm the current figures before you rely on them.</p>
+          <h4>When should I change this order for my own situation?</h4>
+          <p>The waterfall is a default, not a law. Build an emergency fund first if you have none, move the FHSA up if a first home is your near-term goal, move the RRSP up if you are a high earner, favour the TFSA if your income is uneven, and treat lower-interest debt like a mortgage with less urgency than a credit card. Your goals and timeline fill in the details.</p>
 
           <div className="cd-sec">Keep going</div>
           <p>Once you know where your dollars should go, the right card can help the everyday spending along the way earn a little something too.</p>

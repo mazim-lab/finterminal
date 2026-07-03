@@ -1,7 +1,7 @@
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata = {
-  title: "Contact — FinTerminal",
+  title: "Contact | FinTerminal",
   description:
     "Reach the person behind FinTerminal: questions about cards or points, a request for an exclusive credit-card referral link, feedback, or a partnership and data enquiry.",
 };

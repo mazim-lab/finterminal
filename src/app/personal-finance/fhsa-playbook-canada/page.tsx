@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
 export const metadata = {
-  title: "The FHSA playbook: Canada's most underused account — FinTerminal",
+  title: "The FHSA playbook: Canada's most underused account | FinTerminal",
   description:
     "The First Home Savings Account gives you an RRSP-style deduction and a TFSA-style tax-free withdrawal for a first home. Here is how the room works, how to invest it, and how to stack it with the RRSP Home Buyers' Plan.",
 };
@@ -11,15 +11,15 @@ export const metadata = {
 export const revalidate = 3600;
 
 const TOC = [
-  { id: "special", label: "Why it is special" },
-  { id: "room", label: "How the room works" },
-  { id: "eligibility", label: "Who can open one" },
-  { id: "clock", label: "The 15-year clock" },
-  { id: "invest", label: "Invest it, do not park it" },
-  { id: "deduction", label: "The deduction timing move" },
-  { id: "hbp", label: "Stacking with the HBP" },
-  { id: "nohome", label: "If you never buy" },
-  { id: "caveats", label: "Honest caveats" },
+  { id: "special", label: "What makes the FHSA special?" },
+  { id: "room", label: "How much can you contribute?" },
+  { id: "eligibility", label: "Who can open one?" },
+  { id: "clock", label: "How long can you keep an FHSA open?" },
+  { id: "invest", label: "Should you invest it or leave it in cash?" },
+  { id: "deduction", label: "When should you claim the deduction?" },
+  { id: "hbp", label: "Can you stack it with the RRSP Home Buyers' Plan?" },
+  { id: "nohome", label: "What if you never buy a home?" },
+  { id: "caveats", label: "Who is the FHSA not for?" },
 ];
 
 export default function FHSAPlaybookPage() {
@@ -29,6 +29,65 @@ export default function FHSAPlaybookPage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "How much can you contribute to an FHSA?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "The FHSA has an annual contribution limit of $8,000 and a lifetime limit of $40,000. If you do not use your full $8,000 in a year, you can carry unused room forward, but only up to $8,000 into the next year. That means the most you can contribute in a single year is $16,000, this year's $8,000 plus at most $8,000 carried over.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Is FHSA room retroactive if I open the account late?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "No. Unlike the TFSA, where room accumulates from the year you turn 18 whether you have an account or not, FHSA room only starts once you actually open the account. If you are eligible and even vaguely thinking about a first home, the smart move is to open an FHSA now, even with a small deposit or none at all, just to start the clock on your room.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can I use the FHSA and the RRSP Home Buyers' Plan together?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes. They are separate programs, so you can use both for the same first home. The FHSA gives you a tax-free withdrawal with no repayment, while the Home Buyers' Plan lets you withdraw up to $60,000 from your RRSP that you repay over 15 years. Confirm the current HBP limit and repayment rules before you plan around them, since the government has adjusted them recently.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "What happens to my FHSA if I never buy a home?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "If you do not use the FHSA for a home, you can transfer the entire balance, contributions and growth, into your RRSP or a RRIF on a tax-free basis, and that transfer does not use up any of your RRSP contribution room. In effect the FHSA acts as bonus RRSP room. You could instead take the money as a non-qualifying withdrawal, but that amount is taxable as income, so the transfer is almost always the better route.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Do I have to claim the FHSA deduction in the year I contribute?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "No. Just like with an RRSP, contributing and deducting are separate steps that do not have to happen in the same year. You can contribute now to get the money growing, then carry the deduction forward and claim it in a future year when your income and tax rate are higher, so the same deduction saves you more tax.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Who is eligible to open an FHSA?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "You need to be a resident of Canada with a valid Social Insurance Number, at least 18 (and no younger than the age of majority in your province) and no older than 71, and a first-time home buyer. For the FHSA, first-time buyer means you did not live in a home that you or your spouse or common-law partner owned at any point in the current year or the previous four calendar years. That four-year lookback means some past owners who have been renting can qualify again.",
+                    },
+                  },
+                ],
+              }),
+            }}
+          />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
@@ -50,6 +109,17 @@ export default function FHSAPlaybookPage() {
             <span>rules and limits change; general info, not advice</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              The First Home Savings Account is the only Canadian account that gives you an RRSP-style deduction going
+              in and a TFSA-style tax-free withdrawal coming out for a first home. You can contribute up to $8,000 a
+              year and $40,000 over your life, and room only starts once you open the account, so open one early even
+              with a small deposit. Invest the money rather than leaving it in cash, and you can stack it with the
+              RRSP Home Buyers&apos; Plan on the same purchase.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -58,7 +128,7 @@ export default function FHSAPlaybookPage() {
           </div>
 
           {/* SPECIAL */}
-          <div id="special" className="cd-sec" style={{ scrollMarginTop: 70 }}>What makes the FHSA special</div>
+          <div id="special" className="cd-sec" style={{ scrollMarginTop: 70 }}>What makes the FHSA special?</div>
           <p>
             Every registered account in Canada asks you to pick your tax break. With an RRSP, your contribution is
             deductible now, so you get a refund today, but the money is taxed when you eventually pull it out. With
@@ -88,7 +158,7 @@ export default function FHSAPlaybookPage() {
           </p>
 
           {/* ROOM */}
-          <div id="room" className="cd-sec" style={{ scrollMarginTop: 70 }}>How the room works</div>
+          <div id="room" className="cd-sec" style={{ scrollMarginTop: 70 }}>How much can you contribute?</div>
           <p>
             The contribution rules are straightforward once you see them laid out. There are two numbers that
             matter, and one habit that trips people up.
@@ -123,7 +193,7 @@ export default function FHSAPlaybookPage() {
           </div>
 
           {/* ELIGIBILITY */}
-          <div id="eligibility" className="cd-sec" style={{ scrollMarginTop: 70 }}>Who can open one</div>
+          <div id="eligibility" className="cd-sec" style={{ scrollMarginTop: 70 }}>Who can open one?</div>
           <p>To open an FHSA, you need to check a few boxes. They are simple, but each one matters.</p>
           <ul>
             <li><strong>You are a resident of Canada</strong> with a valid Social Insurance Number.</li>
@@ -138,7 +208,7 @@ export default function FHSAPlaybookPage() {
           </p>
 
           {/* CLOCK */}
-          <div id="clock" className="cd-sec" style={{ scrollMarginTop: 70 }}>The 15-year clock, and what ends it</div>
+          <div id="clock" className="cd-sec" style={{ scrollMarginTop: 70 }}>How long can you keep an FHSA open?</div>
           <p>
             The FHSA is not meant to run forever. It has a maximum lifespan, and understanding it keeps you from
             being caught out later.
@@ -159,7 +229,7 @@ export default function FHSAPlaybookPage() {
           </p>
 
           {/* INVEST */}
-          <div id="invest" className="cd-sec" style={{ scrollMarginTop: 70 }}>Invest it, do not park it in cash</div>
+          <div id="invest" className="cd-sec" style={{ scrollMarginTop: 70 }}>Should you invest it or leave it in cash?</div>
           <p>
             This is the most common and most costly FHSA mistake, so it gets its own section. The name has the word
             savings in it, and a great many people take that literally, open an FHSA at their bank, and leave the
@@ -185,7 +255,7 @@ export default function FHSAPlaybookPage() {
           </div>
 
           {/* DEDUCTION */}
-          <div id="deduction" className="cd-sec" style={{ scrollMarginTop: 70 }}>The deduction timing move</div>
+          <div id="deduction" className="cd-sec" style={{ scrollMarginTop: 70 }}>When should you claim the deduction?</div>
           <p>
             Here is a piece of flexibility that a lot of FHSA holders miss. Contributing and deducting are two
             separate steps, and they do not have to happen in the same year. Just like with an RRSP, you can
@@ -209,7 +279,7 @@ export default function FHSAPlaybookPage() {
           </div>
 
           {/* HBP */}
-          <div id="hbp" className="cd-sec" style={{ scrollMarginTop: 70 }}>Stacking with the RRSP Home Buyers&apos; Plan</div>
+          <div id="hbp" className="cd-sec" style={{ scrollMarginTop: 70 }}>Can you stack it with the RRSP Home Buyers&apos; Plan?</div>
           <p>
             The FHSA does not replace the RRSP Home Buyers&apos; Plan. You can use both for the same purchase, and
             stacking them is how you assemble a genuinely large down payment from registered money.
@@ -233,7 +303,7 @@ export default function FHSAPlaybookPage() {
           </div>
 
           {/* NOHOME */}
-          <div id="nohome" className="cd-sec" style={{ scrollMarginTop: 70 }}>If you never buy a home</div>
+          <div id="nohome" className="cd-sec" style={{ scrollMarginTop: 70 }}>What if you never buy a home?</div>
           <p>
             A fair worry stops some people from opening an FHSA at all: what if my plans change and I never actually
             buy? It is a reasonable question, and the answer is reassuring enough that it should not hold you back.
@@ -253,7 +323,7 @@ export default function FHSAPlaybookPage() {
           </p>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>Honest caveats, and who it is not for</div>
+          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>Who is the FHSA not for?</div>
           <p>
             The FHSA is excellent, but it is not for absolutely everyone, and pretending otherwise would not be
             honest. A few things to weigh.
@@ -274,6 +344,52 @@ export default function FHSAPlaybookPage() {
               situation is complicated, an hour with a fee-for-service planner or an accountant is money well spent.
             </p>
           </div>
+
+          <div className="cd-sec">Frequently asked questions</div>
+          <h4>How much can you contribute to an FHSA?</h4>
+          <p>
+            The FHSA has an annual contribution limit of $8,000 and a lifetime limit of $40,000. If you do not use
+            your full $8,000 in a year, you can carry unused room forward, but only up to $8,000 into the next year.
+            That means the most you can contribute in a single year is $16,000, this year&apos;s $8,000 plus at most
+            $8,000 carried over.
+          </p>
+          <h4>Is FHSA room retroactive if I open the account late?</h4>
+          <p>
+            No. Unlike the TFSA, where room accumulates from the year you turn 18 whether you have an account or not,
+            FHSA room only starts once you actually open the account. If you are eligible and even vaguely thinking
+            about a first home, the smart move is to open an FHSA now, even with a small deposit or none at all, just
+            to start the clock on your room.
+          </p>
+          <h4>Can I use the FHSA and the RRSP Home Buyers&apos; Plan together?</h4>
+          <p>
+            Yes. They are separate programs, so you can use both for the same first home. The FHSA gives you a
+            tax-free withdrawal with no repayment, while the Home Buyers&apos; Plan lets you withdraw up to $60,000
+            from your RRSP that you repay over 15 years. Confirm the current HBP limit and repayment rules before you
+            plan around them, since the government has adjusted them recently.
+          </p>
+          <h4>What happens to my FHSA if I never buy a home?</h4>
+          <p>
+            If you do not use the FHSA for a home, you can transfer the entire balance, contributions and growth,
+            into your RRSP or a RRIF on a tax-free basis, and that transfer does not use up any of your RRSP
+            contribution room. In effect the FHSA acts as bonus RRSP room. You could instead take the money as a
+            non-qualifying withdrawal, but that amount is taxable as income, so the transfer is almost always the
+            better route.
+          </p>
+          <h4>Do I have to claim the FHSA deduction in the year I contribute?</h4>
+          <p>
+            No. Just like with an RRSP, contributing and deducting are separate steps that do not have to happen in
+            the same year. You can contribute now to get the money growing, then carry the deduction forward and
+            claim it in a future year when your income and tax rate are higher, so the same deduction saves you more
+            tax.
+          </p>
+          <h4>Who is eligible to open an FHSA?</h4>
+          <p>
+            You need to be a resident of Canada with a valid Social Insurance Number, at least 18 (and no younger
+            than the age of majority in your province) and no older than 71, and a first-time home buyer. For the
+            FHSA, first-time buyer means you did not live in a home that you or your spouse or common-law partner
+            owned at any point in the current year or the previous four calendar years. That four-year lookback means
+            some past owners who have been renting can qualify again.
+          </p>
 
           <div className="cd-sec">Keep going</div>
           <p>The FHSA is one piece of a bigger question: where your next saved dollar should actually go.</p>

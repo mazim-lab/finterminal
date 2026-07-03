@@ -1,18 +1,18 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Using Aeroplan points to get the most value — FinTerminal",
+  title: "Using Aeroplan points to get the most value | FinTerminal",
   description:
     "Where Aeroplan points deliver the best value for Canadians, from cheap short-haul hops to business class to Europe, plus the stopover trick and the cents-per-point math.",
 };
 
 const TOC = [
-  { id: "how", label: "How Aeroplan prices" },
-  { id: "cpp", label: "The cpp math" },
-  { id: "spots", label: "The sweet spots" },
-  { id: "stopover", label: "The stopover trick" },
-  { id: "fees", label: "Low fees advantage" },
-  { id: "tips", label: "Booking tips" },
+  { id: "how", label: "How does Aeroplan price flights?" },
+  { id: "cpp", label: "Is the redemption worth it?" },
+  { id: "spots", label: "Where are the sweet spots?" },
+  { id: "stopover", label: "How does the stopover work?" },
+  { id: "fees", label: "Does Aeroplan skip fuel surcharges?" },
+  { id: "tips", label: "How do I book the best value?" },
 ];
 
 export default function AeroplanSweetSpotsPage() {
@@ -20,6 +20,14 @@ export default function AeroplanSweetSpotsPage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
+            { "@type": "Question", name: "What is the best value redemption with Aeroplan points?", acceptedAnswer: { "@type": "Answer", text: "The classic standout is business class from Canada to Europe on a Star Alliance partner, which tends to land around 60,000 points one-way off-peak for a cabin that can cost several thousand dollars in cash. That works out to roughly four or five cents per point, which is hard to beat. Long-haul premium cabins to Asia and beyond follow the same logic on a bigger scale." } },
+            { "@type": "Question", name: "How do I know if an Aeroplan redemption is worth it?", acceptedAnswer: { "@type": "Answer", text: "Work out the cents-per-point value: take the cash price, subtract the taxes and fees on the award, divide by the points, then multiply by 100. Anything around 2 cents per point or more is generally a solid use of Aeroplan points, and premium cabins can climb well past 5 cents. Always confirm the live price when you search, since the chart shifts over time." } },
+            { "@type": "Question", name: "Why are partner flights better value than Air Canada flights?", acceptedAnswer: { "@type": "Answer", text: "Air Canada operated flights are priced dynamically, so the points cost rises and falls a bit like the cash fare. Star Alliance and other partner flights are priced from a more predictable region-based chart, so the price holds steady even when cash fares are sky high. That predictable chart is where most of the best value hides." } },
+            { "@type": "Question", name: "How does the Aeroplan stopover work?", acceptedAnswer: { "@type": "Answer", text: "On a one-way award you can add a stopover, meaning a stay of more than 24 hours in a connecting city, for a flat 5,000 points. In practice that turns one trip into two destinations for a small, fixed cost. Used well, it is one of the best values in the program, so always ask whether your route allows one." } },
+            { "@type": "Question", name: "Does Aeroplan charge fuel surcharges on award tickets?", acceptedAnswer: { "@type": "Answer", text: "No. Aeroplan does not pass along carrier-imposed fuel surcharges on its award tickets, which is a real and underrated benefit. On some other programs those surcharges can add hundreds of dollars to an international award. With Aeroplan you generally pay only the genuine taxes and airport fees." } },
+            { "@type": "Question", name: "How many points do short flights within North America cost?", acceptedAnswer: { "@type": "Answer", text: "For partner flights wholly within North America, Aeroplan prices economy by distance band, starting around 6,000 points one-way for the shortest routes and stepping up from there. On a short, expensive route this can be excellent value and often beats the cash fare comfortably. It is also a great way to spend a smaller points balance." } }
+          ] }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/travel">travel</Link><span className="sep">/</span>
@@ -39,6 +47,18 @@ export default function AeroplanSweetSpotsPage() {
             <span>chart figures are approximate</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              Aeroplan pays off best when you book partner flights off the predictable region-based chart rather
+              than dynamically priced Air Canada seats. The standout redemptions are business class from Canada to
+              Europe, often around 60,000 points one-way for a cabin worth several thousand dollars in cash, plus
+              cheap short-haul North American hops from about 6,000 points. Aim for 2 cents per point or more, and
+              use the flat 5,000-point stopover to add a second city. Aeroplan also skips fuel surcharges, so you
+              usually pay only real taxes and fees.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -47,7 +67,7 @@ export default function AeroplanSweetSpotsPage() {
           </div>
 
           {/* HOW */}
-          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How Aeroplan prices flights</div>
+          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does Aeroplan price flights?</div>
           <p>
             Aeroplan uses two different pricing approaches, and knowing which one you are looking at is half the
             game. Flights operated by Air Canada are priced dynamically, so the points cost rises and falls a bit
@@ -62,7 +82,7 @@ export default function AeroplanSweetSpotsPage() {
           </p>
 
           {/* CPP */}
-          <div id="cpp" className="cd-sec" style={{ scrollMarginTop: 70 }}>The cents-per-point math</div>
+          <div id="cpp" className="cd-sec" style={{ scrollMarginTop: 70 }}>Is the redemption worth it?</div>
           <p>
             Before any redemption, it helps to know what your points are worth on that specific booking. The
             formula is simple.
@@ -78,7 +98,7 @@ export default function AeroplanSweetSpotsPage() {
           </div>
 
           {/* SPOTS */}
-          <div id="spots" className="cd-sec" style={{ scrollMarginTop: 70 }}>The sweet spots</div>
+          <div id="spots" className="cd-sec" style={{ scrollMarginTop: 70 }}>Where are the sweet spots?</div>
 
           <h4>Short hops within North America</h4>
           <p>
@@ -105,13 +125,13 @@ export default function AeroplanSweetSpotsPage() {
 
           <h4>Air Canada flights for cardholders</h4>
           <p>
-            If you hold an Aeroplan co-branded credit card, you unlock preferred pricing on Air Canada operated
+            If you hold an Aeroplan co-branded credit card, you get preferred pricing on Air Canada operated
             flights, which shaves points off many bookings and is a nice everyday perk on top of the partner
             sweet spots above.
           </p>
 
           {/* STOPOVER */}
-          <div id="stopover" className="cd-sec" style={{ scrollMarginTop: 70 }}>The stopover trick</div>
+          <div id="stopover" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does the stopover work?</div>
           <p>
             One of Aeroplan&apos;s most loved features is the stopover. On a one-way award you can add a stopover,
             meaning a stay of more than 24 hours in a connecting city, for a flat 5,000 points. In practice that
@@ -121,7 +141,7 @@ export default function AeroplanSweetSpotsPage() {
           </p>
 
           {/* FEES */}
-          <div id="fees" className="cd-sec" style={{ scrollMarginTop: 70 }}>The low-fees advantage</div>
+          <div id="fees" className="cd-sec" style={{ scrollMarginTop: 70 }}>Does Aeroplan skip fuel surcharges?</div>
           <p>
             Aeroplan does not pass along carrier-imposed fuel surcharges on its award tickets, which is a real
             and underrated benefit. On some other programs those surcharges can add hundreds of dollars to an
@@ -130,7 +150,7 @@ export default function AeroplanSweetSpotsPage() {
           </p>
 
           {/* TIPS */}
-          <div id="tips" className="cd-sec" style={{ scrollMarginTop: 70 }}>Booking tips</div>
+          <div id="tips" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do I book the best value?</div>
           <ul>
             <li><strong>Search partner award space directly.</strong> The predictable chart applies to partner-operated flights, so that is where to hunt for the strong values.</li>
             <li><strong>Be flexible with dates.</strong> Off-peak pricing and better award availability often sit a day or two on either side of the date you first had in mind.</li>
@@ -138,6 +158,54 @@ export default function AeroplanSweetSpotsPage() {
             <li><strong>Use the stopover when it fits.</strong> For 5,000 points it can add a whole second destination, so always ask whether your route allows one.</li>
             <li><strong>Some partners need a phone call.</strong> Most awards book online, but a few partner airlines are easier to reserve over the phone if you cannot find them on the site.</li>
           </ul>
+
+          <div className="cd-sec">Frequently asked questions</div>
+
+          <h4>What is the best value redemption with Aeroplan points?</h4>
+          <p>
+            The classic standout is business class from Canada to Europe on a Star Alliance partner, which tends to
+            land around 60,000 points one-way off-peak for a cabin that can cost several thousand dollars in cash.
+            That works out to roughly four or five cents per point, which is hard to beat. Long-haul premium cabins
+            to Asia and beyond follow the same logic on a bigger scale.
+          </p>
+
+          <h4>How do I know if an Aeroplan redemption is worth it?</h4>
+          <p>
+            Work out the cents-per-point value: take the cash price, subtract the taxes and fees on the award,
+            divide by the points, then multiply by 100. Anything around 2 cents per point or more is generally a
+            solid use of Aeroplan points, and premium cabins can climb well past 5 cents. Always confirm the live
+            price when you search, since the chart shifts over time.
+          </p>
+
+          <h4>Why are partner flights better value than Air Canada flights?</h4>
+          <p>
+            Air Canada operated flights are priced dynamically, so the points cost rises and falls a bit like the
+            cash fare. Star Alliance and other partner flights are priced from a more predictable region-based
+            chart, so the price holds steady even when cash fares are sky high. That predictable chart is where
+            most of the best value hides.
+          </p>
+
+          <h4>How does the Aeroplan stopover work?</h4>
+          <p>
+            On a one-way award you can add a stopover, meaning a stay of more than 24 hours in a connecting city,
+            for a flat 5,000 points. In practice that turns one trip into two destinations for a small, fixed cost.
+            Used well, it is one of the best values in the program, so always ask whether your route allows one.
+          </p>
+
+          <h4>Does Aeroplan charge fuel surcharges on award tickets?</h4>
+          <p>
+            No. Aeroplan does not pass along carrier-imposed fuel surcharges on its award tickets, which is a real
+            and underrated benefit. On some other programs those surcharges can add hundreds of dollars to an
+            international award. With Aeroplan you generally pay only the genuine taxes and airport fees.
+          </p>
+
+          <h4>How many points do short flights within North America cost?</h4>
+          <p>
+            For partner flights wholly within North America, Aeroplan prices economy by distance band, starting
+            around 6,000 points one-way for the shortest routes and stepping up from there. On a short, expensive
+            route this can be excellent value and often beats the cash fare comfortably. It is also a great way to
+            spend a smaller points balance.
+          </p>
 
           <div className="cd-sec">Get the points first</div>
           <p>If you are still building your balance, the fastest route for most Canadians is earning Membership Rewards and transferring them over.</p>

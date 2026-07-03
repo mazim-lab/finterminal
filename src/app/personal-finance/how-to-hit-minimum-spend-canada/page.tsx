@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
 export const metadata = {
-  title: "How to hit a credit card minimum spend without wasting a dollar — FinTerminal",
+  title: "How to hit a credit card minimum spend without wasting a dollar | FinTerminal",
   description:
     "A calm, practical guide to clearing a credit card welcome-bonus minimum spend in Canada using money you were already going to spend, so you earn the bonus without wasting a cent on things you do not need.",
 };
@@ -11,13 +11,13 @@ export const metadata = {
 export const revalidate = 3600;
 
 const TOC = [
-  { id: "what", label: "What a minimum spend is" },
+  { id: "what", label: "What is a minimum spend?" },
   { id: "rule", label: "The cardinal rule" },
-  { id: "methods", label: "The honest methods" },
-  { id: "example", label: "A worked example" },
-  { id: "track", label: "Track the deadline" },
+  { id: "methods", label: "How do you hit it?" },
+  { id: "example", label: "Does it actually pay off?" },
+  { id: "track", label: "How do you track the deadline?" },
   { id: "caveats", label: "The caveats" },
-  { id: "verdict", label: "Is it for you" },
+  { id: "verdict", label: "Is it for you?" },
 ];
 
 export default function HowToHitMinimumSpendPage() {
@@ -27,6 +27,60 @@ export default function HowToHitMinimumSpendPage() {
     <div className="app norail">
       <main>
         <div className="doc">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "When does the minimum spend clock start?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "It almost always starts on your account approval or account opening date, not the day the card arrives or when you activate it. That means the clock can already be ticking before the card is in your wallet. Confirm the exact deadline from your approval details the day you are approved.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do gift card purchases count toward a minimum spend?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, buying a gift card counts as spending today, so it qualifies. The catch is that it ties up your cash, so only buy gift cards for places you reliably use, like your regular grocery chain, gas station, or pharmacy. A gift card for a store you never shop at is money you may never get back.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What purchases do not count toward the minimum spend?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Some charges commonly do not qualify, including cash advances, balance transfers, interest, annual fees, and sometimes gambling or certain cash-like transactions. Focus your spend on ordinary purchases and confirm the exclusions in your card's terms before you rely on anything unusual.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I pay rent or taxes to hit a minimum spend?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "You can push a bill that does not normally take a card, such as rent or taxes, through a third-party service like Chexy or PaySimply, but they charge a fee of roughly 1.75 to 2.5 percent. This costs real money, so only do it as a last resort when the bonus you are unlocking clearly dwarfs the fee.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What happens if I miss the minimum spend deadline?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "In most cases the bonus is simply gone, even if you fall short by a few days or a few dollars. Issuers rarely extend the window, and you generally cannot re-qualify on the same card. That is why it helps to clear the requirement a couple of weeks early with a small cushion above the number.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is hitting a minimum spend worth it?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "If you already pay your card in full every month and can meet the threshold with spending you were always going to do, it is one of the highest-value, lowest-effort moves in personal finance. If meeting it would tempt you into buying things you do not need or carrying a balance you cannot clear, the honest answer is to skip the bonus for now.",
+                },
+              },
+            ],
+          }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
@@ -48,6 +102,18 @@ export default function HowToHitMinimumSpendPage() {
             <span>offers change; general info, not advice</span>
           </div>
 
+          <div className="cd-note">
+            <div className="cap">The short answer</div>
+            <p style={{ margin: 0 }} className="sub">
+              Hit a minimum spend by routing money you were already going to spend through the new card, never by
+              buying things you do not need. Put all your routine spending on it, time any big planned purchases
+              into the window, and only if you still have a gap, prepay bills, buy gift cards for places you truly
+              use, or as a last resort push rent or taxes through a fee service. Confirm your exact required spend
+              and deadline the day you are approved, and always pay the statement in full, or the interest will
+              cost you more than the bonus is worth.
+            </p>
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -56,7 +122,7 @@ export default function HowToHitMinimumSpendPage() {
           </div>
 
           {/* WHAT */}
-          <div id="what" className="cd-sec" style={{ scrollMarginTop: 70 }}>What a minimum spend actually is</div>
+          <div id="what" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is a minimum spend, actually?</div>
           <p>
             When a card advertises a welcome bonus, that bonus almost always comes with a condition attached. It
             reads something like &quot;earn 60,000 points after you spend $3,000 in the first three months.&quot;
@@ -102,7 +168,7 @@ export default function HowToHitMinimumSpendPage() {
           </p>
 
           {/* METHODS */}
-          <div id="methods" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest methods, roughly best to worst</div>
+          <div id="methods" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you hit it without wasting money?</div>
           <p>
             Here are the ways to clear a minimum spend, ordered from the cleanest and cheapest to the ones that
             carry a real cost. Start at the top and only move down the list if you still have a gap to close.
@@ -150,7 +216,7 @@ export default function HowToHitMinimumSpendPage() {
           </div>
 
           {/* EXAMPLE */}
-          <div id="example" className="cd-sec" style={{ scrollMarginTop: 70 }}>A worked example, the right way and the wrong way</div>
+          <div id="example" className="cd-sec" style={{ scrollMarginTop: 70 }}>Does it actually pay off? A worked example</div>
           <p>
             Let me make the cardinal rule concrete, because seeing it in numbers is what makes it stick. Picture a
             card offering a welcome bonus worth about $500 once you spend $3,000 in three months.
@@ -181,7 +247,7 @@ export default function HowToHitMinimumSpendPage() {
           </p>
 
           {/* TRACK */}
-          <div id="track" className="cd-sec" style={{ scrollMarginTop: 70 }}>Track your progress and watch the deadline</div>
+          <div id="track" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you track progress and the deadline?</div>
           <p>
             Because the whole reward hinges on two numbers, the safest thing you can do is write them down the day
             you are approved. Note your exact required spend and the exact date it is due, and set a calendar
@@ -231,6 +297,20 @@ export default function HowToHitMinimumSpendPage() {
               when you can meet it with spending you were already going to do.
             </p>
           </div>
+
+          <div className="cd-sec">Frequently asked questions</div>
+          <h4>When does the minimum spend clock start?</h4>
+          <p>It almost always starts on your account approval or account opening date, not the day the card arrives or when you activate it. That means the clock can already be ticking before the card is in your wallet. Confirm the exact deadline from your approval details the day you are approved.</p>
+          <h4>Do gift card purchases count toward a minimum spend?</h4>
+          <p>Yes, buying a gift card counts as spending today, so it qualifies. The catch is that it ties up your cash, so only buy gift cards for places you reliably use, like your regular grocery chain, gas station, or pharmacy. A gift card for a store you never shop at is money you may never get back.</p>
+          <h4>What purchases do not count toward the minimum spend?</h4>
+          <p>Some charges commonly do not qualify, including cash advances, balance transfers, interest, annual fees, and sometimes gambling or certain cash-like transactions. Focus your spend on ordinary purchases and confirm the exclusions in your card&apos;s terms before you rely on anything unusual.</p>
+          <h4>Can I pay rent or taxes to hit a minimum spend?</h4>
+          <p>You can push a bill that does not normally take a card, such as rent or taxes, through a third-party service like Chexy or PaySimply, but they charge a fee of roughly 1.75 to 2.5 percent. This costs real money, so only do it as a last resort when the bonus you are unlocking clearly dwarfs the fee.</p>
+          <h4>What happens if I miss the minimum spend deadline?</h4>
+          <p>In most cases the bonus is simply gone, even if you fall short by a few days or a few dollars. Issuers rarely extend the window, and you generally cannot re-qualify on the same card. That is why it helps to clear the requirement a couple of weeks early with a small cushion above the number.</p>
+          <h4>Is hitting a minimum spend worth it?</h4>
+          <p>If you already pay your card in full every month and can meet the threshold with spending you were always going to do, it is one of the highest-value, lowest-effort moves in personal finance. If meeting it would tempt you into buying things you do not need or carrying a balance you cannot clear, the honest answer is to skip the bonus for now.</p>
 
           <div className="cd-sec">Keep going</div>
           <p>This move starts with picking the right card and its bonus, and it pairs closely with knowing when a fee service is worth it.</p>

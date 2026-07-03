@@ -15,8 +15,8 @@ function findSpot(slug: string) {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const spot = findSpot(slug);
-  if (!spot) return { title: "Sweet Spot Not Found — FinTerminal" };
-  return { title: `${spot.title} — FinTerminal`, description: spot.dek };
+  if (!spot) return { title: "Sweet Spot Not Found | FinTerminal" };
+  return { title: `${spot.title} | FinTerminal`, description: spot.dek };
 }
 
 export default async function SweetSpotPage({ params }: { params: Promise<{ slug: string }> }) {

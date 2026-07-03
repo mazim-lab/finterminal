@@ -4,7 +4,7 @@ import { POSITIONS, CLOSED_POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, ALLTIME_RE
 import { ReturnChart } from "@/components/ReturnChart";
 
 export const metadata: Metadata = {
-  title: "Current Portfolio — FinTerminal",
+  title: "Current Portfolio | FinTerminal",
   description: "My real positions and the thesis behind each. Personal positions, not advice.",
 };
 
