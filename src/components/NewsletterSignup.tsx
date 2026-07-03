@@ -2,10 +2,11 @@
 
 import { useState, type FormEvent } from "react";
 
-// Same no-backend delivery as the contact form. Signups land in the inbox so
-// the list can be built now; move to a proper email tool (beehiiv/Kit) with
-// confirmed opt-in before sending any bulk mail, per CASL.
-const ENDPOINT = "https://formsubmit.co/ajax/finterminal@tahleh.com";
+// Posts straight into our Kit (finterminal.kit.com) inline form so subscribers
+// land on the real list with Kit's double opt-in + one-click unsubscribe (CASL).
+// This is the exact endpoint/field Kit's own embed script uses; no API key, so
+// nothing secret ships in the repo.
+const KIT_ENDPOINT = "https://app.kit.com/forms/9639853/subscriptions";
 
 export function NewsletterSignup({ compact = false }: { compact?: boolean }) {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "err">("idle");
@@ -17,19 +18,13 @@ export function NewsletterSignup({ compact = false }: { compact?: boolean }) {
     if (data.get("_honey")) return; // bot trap
     setStatus("sending");
     try {
-      const res = await fetch(ENDPOINT, {
+      const res = await fetch(KIT_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          email: data.get("email"),
-          source: compact ? "Newsletter signup (footer)" : "Newsletter signup",
-          _subject: "New FinTerminal newsletter signup",
-          _template: "table",
-          _captcha: "false",
-        }),
+        body: JSON.stringify({ email_address: data.get("email") }),
       });
       const json = await res.json().catch(() => ({}));
-      if (res.ok && (json.success === true || json.success === "true")) {
+      if (res.ok && json?.status !== "error" && !json?.errors) {
         setStatus("ok");
         form.reset();
       } else {
@@ -41,7 +36,11 @@ export function NewsletterSignup({ compact = false }: { compact?: boolean }) {
   }
 
   if (status === "ok") {
-    return <p className="nlok">You&apos;re on the list. Thanks for signing up.</p>;
+    return (
+      <p className="nlok">
+        Almost there — check your inbox and click the confirmation link to finish signing up.
+      </p>
+    );
   }
 
   return (
