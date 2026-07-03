@@ -1,17 +1,18 @@
 import Link from 'next/link';
 
 const TOC = [
-  { id: 'why', label: 'Why US cards' },
+  { id: 'why', label: 'Why get US cards?' },
   { id: 'step-1', label: '1. US address' },
   { id: 'step-2', label: '2. Bank account' },
   { id: 'step-3', label: '3. First card' },
-  { id: 'step-4', label: '4. Get your ITIN' },
+  { id: 'step-4', label: '4. How to get an ITIN' },
   { id: 'step-5', label: '5. Build credit' },
   { id: 'step-6', label: '6. Chase cards' },
   { id: 'step-7', label: '7. Expand' },
   { id: 'managing', label: 'Managing from Canada' },
   { id: 'mistakes', label: 'Mistakes to avoid' },
   { id: 'roadmap', label: 'First-year sequence' },
+  { id: 'faq', label: 'FAQ' },
 ];
 
 export default function USCardsGuidePage() {
@@ -37,6 +38,11 @@ export default function USCardsGuidePage() {
             <span>covers ITIN, US credit, Chase 5/24</span>
           </div>
 
+          <div className="cd-note" style={{ marginTop: 14 }}>
+            <div className="cap">Short answer</div>
+            Yes, a Canadian can get US credit cards. You need a US mailing address, a US bank account, and a US credit history, plus an ITIN for most issuers. The usual path is to get your first US Amex through Amex Global Transfer (no ITIN or US credit needed), apply for an ITIN in parallel, build a few months of history, then move on to Chase and other banks. Expect the full sequence to reach Chase to take roughly 12 to 18 months.
+          </div>
+
           <div className="toc">
             <div className="tt">In this guide</div>
             <div className="toc-grid">
@@ -45,7 +51,7 @@ export default function USCardsGuidePage() {
           </div>
 
           {/* WHY */}
-          <div id="why" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why Canadians get US cards</div>
+          <div id="why" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why do Canadians get US credit cards?</div>
           <p>
             If you care about travel rewards, the US credit card market is a different league. The welcome
             bonuses are bigger, there are far more transfer partners, and some cards hand you hotel elite
@@ -139,7 +145,7 @@ export default function USCardsGuidePage() {
               </div>
             </div>
 
-            {/* Step 4 — ITIN */}
+            {/* Step 4: ITIN */}
             <div id="step-4" className="step" style={{ scrollMarginTop: 70 }}>
               <div className="num">4</div>
               <div className="st">Apply for an ITIN</div>
@@ -254,7 +260,7 @@ export default function USCardsGuidePage() {
                   <div className="arow"><strong>A:</strong> your country of citizenship during the tax year.</div>
                   <div className="arow"><strong>B:</strong> <span className="fld">Canada</span>, if you live and work in Canada.</div>
                   <div className="arow"><strong>C, D:</strong> usually No.</div>
-                  <div className="arow"><strong>E:</strong> write <span className="fld">Not present in U.S. — no U.S. immigration status</span>, unless you were in the US on December 31.</div>
+                  <div className="arow"><strong>E:</strong> write <span className="fld">Not present in U.S., no U.S. immigration status</span>, unless you were in the US on December 31.</div>
                   <div className="arow"><strong>F:</strong> No.</div>
                   <div className="arow"><strong>G:</strong> list the dates you entered and left the US that year, including layovers. You can check your history at <a href="https://i94.cbp.dhs.gov" target="_blank" rel="noopener noreferrer" className="lnk">i94.cbp.dhs.gov</a>. Leave it blank if you were not in the US.</div>
                   <div className="arow"><strong>H:</strong> the number of days present in the US for each of the past 3 tax years.</div>
@@ -363,7 +369,7 @@ export default function USCardsGuidePage() {
           </div>
 
           {/* MANAGING */}
-          <div id="managing" className="cd-sec" style={{ scrollMarginTop: 70 }}>Managing your US cards from Canada</div>
+          <div id="managing" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you manage US cards from Canada?</div>
           <h4>Paying your bills</h4>
           <p>Skip your bank&apos;s exchange rate, since you will lose 2 to 2.5 percent on every transfer. Use a dedicated FX service like Wise, VBCE, or Knightsbridge FX instead. They typically run about 1 percent above the spot rate, which adds up to real savings over a year.</p>
           <h4>Using US cards in Canada</h4>
@@ -372,7 +378,7 @@ export default function USCardsGuidePage() {
           <p>If you have a spouse or partner, set them up alongside you. Two players means double the welcome bonuses, double the points, and the ability to pool points between accounts. It is the single biggest force multiplier in this hobby.</p>
 
           {/* MISTAKES */}
-          <div id="mistakes" className="cd-sec" style={{ scrollMarginTop: 70 }}>Mistakes to avoid</div>
+          <div id="mistakes" className="cd-sec" style={{ scrollMarginTop: 70 }}>What mistakes should you avoid?</div>
           <ul>
             <li><strong>Getting too many cards too fast.</strong> Five or more personal cards in 24 months locks you out of Chase. Plan your sequence.</li>
             <li><strong>Forgetting to link your ITIN to existing Amex accounts.</strong> Without it, your history may be invisible to other issuers. Call Amex the day your ITIN arrives.</li>
@@ -394,6 +400,81 @@ export default function USCardsGuidePage() {
             <div className="cd-note"><div className="cap">Month 12 to 18</div><strong>Chase Sapphire Preferred and Ink Business Preferred.</strong> You now have the history Chase wants.</div>
             <div className="cd-note"><div className="cap">Month 18+</div><strong>Chase United, IHG, Hyatt, then Capital One and Citi.</strong> Keep expanding, spacing applications a few months apart.</div>
           </div>
+
+          {/* FAQ */}
+          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h4>Can a Canadian get a US credit card?</h4>
+          <p>Yes. The most reliable first step is Amex Global Transfer, which lets you use an existing Canadian Amex card to get approved for a US Amex with no US credit history and no ITIN. For most other issuers, like Chase, Citi, and Capital One, you also need a US mailing address, a US bank account, an ITIN, and several months of US credit history.</p>
+          <h4>Do you need an ITIN to get US credit cards?</h4>
+          <p>Not for your first Amex through Global Transfer, but you do for almost everyone else. Chase, Citi, Capital One, and Bank of America all want an ITIN, which is the tax ID the IRS issues to people who are not eligible for a Social Security Number. That is why the usual plan is to get the Amex card first and apply for the ITIN in parallel.</p>
+          <h4>How much does it cost to get an ITIN?</h4>
+          <p>The do-it-yourself route costs under $10. You file a 1040-NR return declaring a small amount of self-declared US-source gambling income, around $75 to $100, which creates a valid reason to need an ITIN and leaves you owing about $9 in tax. If you would rather not touch IRS forms, a specialist tax service handles the whole thing for roughly $150 to $300.</p>
+          <h4>How long does the whole process take?</h4>
+          <p>Getting your first Amex takes about 2 to 4 weeks, and the ITIN takes roughly 6 to 12 weeks to process. Because those run in parallel, your credit is already building while the IRS works. Most people reach the point where Chase will approve them around 12 to 18 months after their first US card.</p>
+          <h4>Why do you have to check the commercial-address flag?</h4>
+          <p>Look up your US address in the USPS tool and check the Commercial Mail Receiving Agency flag. It must read N. If it shows Y, issuers like Chase may flag and reject your applications. Some mail forwarding addresses are flagged as commercial, so always verify before you sign up.</p>
+          <h4>Can you use US cards for spending in Canada?</h4>
+          <p>Yes. Most premium US cards have no foreign transaction fee, so you can use them for everyday Canadian purchases and earn US points without the usual 2.5 percent surcharge. Just keep the double currency conversion in mind, and pay your bills through an FX service like Wise, VBCE, or Knightsbridge FX rather than your bank&apos;s exchange rate.</p>
+
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'Can a Canadian get a US credit card?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. The most reliable first step is Amex Global Transfer, which lets you use an existing Canadian Amex card to get approved for a US Amex with no US credit history and no ITIN. For most other issuers, like Chase, Citi, and Capital One, you also need a US mailing address, a US bank account, an ITIN, and several months of US credit history.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Do you need an ITIN to get US credit cards?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Not for your first Amex through Global Transfer, but you do for almost everyone else. Chase, Citi, Capital One, and Bank of America all want an ITIN, which is the tax ID the IRS issues to people who are not eligible for a Social Security Number. That is why the usual plan is to get the Amex card first and apply for the ITIN in parallel.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'How much does it cost to get an ITIN?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'The do-it-yourself route costs under $10. You file a 1040-NR return declaring a small amount of self-declared US-source gambling income, around $75 to $100, which creates a valid reason to need an ITIN and leaves you owing about $9 in tax. If you would rather not touch IRS forms, a specialist tax service handles the whole thing for roughly $150 to $300.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'How long does the whole process take?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Getting your first Amex takes about 2 to 4 weeks, and the ITIN takes roughly 6 to 12 weeks to process. Because those run in parallel, your credit is already building while the IRS works. Most people reach the point where Chase will approve them around 12 to 18 months after their first US card.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Why do you have to check the commercial-address flag?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Look up your US address in the USPS tool and check the Commercial Mail Receiving Agency flag. It must read N. If it shows Y, issuers like Chase may flag and reject your applications. Some mail forwarding addresses are flagged as commercial, so always verify before you sign up.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Can you use US cards for spending in Canada?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. Most premium US cards have no foreign transaction fee, so you can use them for everyday Canadian purchases and earn US points without the usual 2.5 percent surcharge. Just keep the double currency conversion in mind, and pay your bills through an FX service like Wise, VBCE, or Knightsbridge FX rather than your bank\'s exchange rate.',
+                    },
+                  },
+                ],
+              }),
+            }}
+          />
 
           {/* CTA */}
           <div className="cd-sec">Ready to start</div>

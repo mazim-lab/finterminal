@@ -43,6 +43,22 @@ export default async function SweetSpotPage({ params }: { params: Promise<{ slug
     <div className="app norail">
       <main>
         <div className="doc">
+          {spot.faqs && spot.faqs.length > 0 ? (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: spot.faqs.map((f) => ({
+                    "@type": "Question",
+                    name: f.q,
+                    acceptedAnswer: { "@type": "Answer", text: f.a },
+                  })),
+                }),
+              }}
+            />
+          ) : null}
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/travel">travel</Link><span className="sep">/</span>
@@ -58,7 +74,26 @@ export default async function SweetSpotPage({ params }: { params: Promise<{ slug
             <span>{spot.date}</span>
           </div>
 
+          {spot.shortAnswer ? (
+            <div className="cd-note">
+              <div className="cap">The short answer</div>
+              <p style={{ margin: 0 }} className="sub">{spot.shortAnswer}</p>
+            </div>
+          ) : null}
+
           {paragraphs.map((p, i) => <p key={i}>{p}</p>)}
+
+          {spot.faqs && spot.faqs.length > 0 ? (
+            <>
+              <div className="cd-sec">Frequently asked questions</div>
+              {spot.faqs.map((f, i) => (
+                <div key={i}>
+                  <h4>{f.q}</h4>
+                  <p>{f.a}</p>
+                </div>
+              ))}
+            </>
+          ) : null}
 
           <div className="cd-sec">Where to next</div>
           <p>Dig into the full strategy, or go back for more examples.</p>

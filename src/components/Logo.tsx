@@ -1,4 +1,4 @@
-/** Charted mark — a compass / navigation star (maps + charting a course). */
+/** FinTerminal mark: a compass / navigation star (maps + charting a course). */
 export function Logo({ className = '' }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden className={className}>

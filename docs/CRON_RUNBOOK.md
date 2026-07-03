@@ -285,8 +285,18 @@ most recent `SWEET_SPOTS` entry, looping back to the start.
 3. Write ONE `SweetSpot` object in the HOUSE VOICE (no em dashes, warm, honest caveats),
    matching the shape and length of the existing entry: `{ slug, program, title, dek, read,
    date: "Mon YYYY", body (paragraphs separated by blank lines, with a cents-per-point or
-   value example and at least one honest caveat), href?, hrefLabel? }`. Make `slug` unique
-   and descriptive, e.g. `avios-short-haul-yyz-bos-7500`.
+   value example and at least one honest caveat), href?, hrefLabel?, shortAnswer, faqs }`.
+   Make `slug` unique and descriptive, e.g. `avios-short-haul-yyz-bos-7500`.
+   - **`shortAnswer` (REQUIRED for every new entry):** a 2 to 4 sentence self-contained answer
+     to the post's core question that INCLUDES the key number (points cost and/or cents-per-point).
+     It must stand on its own for AI search and read in house voice. Drawn strictly from the body.
+   - **`faqs` (REQUIRED for every new entry):** 4 to 6 genuine related Q/As as
+     `{ q: string; a: string }[]`, each answer 1 to 3 sentences drawn strictly from the body.
+     The template renders these as a visible FAQ AND builds matching FAQPage JSON-LD from the
+     same array, so the visible text and structured data always agree. Write real questions a
+     reader would ask (cost, is it worth it, how to earn/book, caveats), not filler.
+   - Both fields are typed OPTIONAL in the interface so old entries never break, but new
+     cron-generated entries MUST populate both.
 4. PREPEND it to `SWEET_SPOTS` (newest first).
 5. Commit and push to `main` (auto-publishes). The travel page and sitemap pick it up
    automatically, so there are no other files to touch.

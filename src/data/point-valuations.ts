@@ -1,5 +1,5 @@
 /**
- * Point & mile valuations (cents per point, CAD) — CHARTED'S OWN ESTIMATES.
+ * Point & mile valuations (cents per point, CAD). FINTERMINAL'S OWN ESTIMATES.
  *
  * These are our own directional estimates, informed by the per-program cpp already in our
  * card data and by widely-known Canadian redemption norms. They are NOT taken from a single
@@ -46,7 +46,7 @@ export const POINT_VALUATIONS: Record<string, Valuation> = {
 };
 
 export const VALUATION_SOURCE = {
-  name: 'Charted estimates',
+  name: 'FinTerminal estimates',
   url: null,
   asOf: '2026-06',
 };
