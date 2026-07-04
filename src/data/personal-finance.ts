@@ -19,6 +19,22 @@ export interface PFArticle {
 // the page and sitemap). No cron or deploy needed; they reveal on schedule.
 export const PF_ARTICLES: PFArticle[] = [
   {
+    slug: "fhsa-vs-rrsp-home-buyers-plan",
+    title: "FHSA vs the RRSP Home Buyers' Plan: which to use for a first home",
+    dek: "The FHSA gives a tax-free withdrawal you never repay; the Home Buyers' Plan is a loan from your own RRSP you repay over 15 years. Which to prioritize for a first home, and how to use both.",
+    tag: "Strategy",
+    read: "10 min read",
+    date: "Jul 2026",
+  },
+  {
+    slug: "rrsp-vs-tfsa-canada",
+    title: "RRSP vs TFSA: the honest decision for Canadians",
+    dek: "The real answer comes down to your marginal tax rate now versus in retirement. A plain-language head-to-head on how each account works, who each one favours, the refund trap, withdrawal and room mechanics, and why 'both' is usually right.",
+    tag: "Strategy",
+    read: "12 min read",
+    date: "Jul 2026",
+  },
+  {
     slug: "resp-cesg-grant-canada",
     title: "RESP and the 20% CESG grant: the easiest guaranteed return in Canada",
     dek: "The government adds 20 percent to what you put in an RESP, up to $500 a year per child. Here is how the grant works, how not to leave money on the table, and how to invest it.",

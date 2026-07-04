@@ -13,9 +13,13 @@ export const revalidate = 3600;
 const STATIC_PATHS = [
   "",
   "/tags",
+  "/rates",
   "/news",
   "/deals",
   "/personal-finance",
+  "/personal-finance/rrsp-vs-tfsa-canada",
+  "/personal-finance/credit-card-interest-canada",
+  "/personal-finance/fhsa-vs-rrsp-home-buyers-plan",
   "/personal-finance/best-savings-account-rates-canada",
   "/personal-finance/best-gic-rates-canada",
   "/personal-finance/best-chequing-account-bonuses-canada",
