@@ -328,6 +328,9 @@ export default function BestSavingsAccountRatesPage() {
             card for your spending and with the rest of our plain-language personal-finance guides.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+            <Link href="/personal-finance/best-gic-rates-canada" className="cd-apply">
+              Best GIC rates in Canada &rarr;
+            </Link>
             <Link href="/personal-finance/pay-bills-with-credit-card-canada" className="cd-apply">
               Paying bills with a credit card &rarr;
             </Link>

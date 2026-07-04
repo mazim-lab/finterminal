@@ -39,6 +39,9 @@ export default function PersonalFinancePage() {
             <Link href="/personal-finance/best-savings-account-rates-canada" className="cd-apply">
               Best high-interest savings rates in Canada &rarr;
             </Link>
+            <Link href="/personal-finance/best-gic-rates-canada" className="cd-apply">
+              Best GIC rates in Canada &rarr;
+            </Link>
           </div>
         </div>
       </main>
