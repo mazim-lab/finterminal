@@ -440,6 +440,9 @@ export default function BestTravelCardsPage() {
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">
               Points transfer partners &rarr;
             </Link>
+            <Link href="/travel/airport-lounge-access-canada" className="cd-apply">
+              How airport lounge access works &rarr;
+            </Link>
             <Link href="/personal-finance/best-cash-back-credit-cards-canada" className="cd-apply">
               Best cash-back cards &rarr;
             </Link>

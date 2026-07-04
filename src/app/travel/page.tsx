@@ -16,6 +16,14 @@ const ARTICLES = [
     date: "Jul 2026",
   },
   {
+    slug: "airport-lounge-access-canada",
+    title: "Airport lounge access for Canadians: how it actually works",
+    dek: "The three ways into a lounge: a Priority Pass or DragonPass membership bundled with a card, an airline lounge like Air Canada's Maple Leaf reached via status or fare, or a paid day pass. Plus the Canadian cards in our data that include lounge access, and the fine print that decides its worth.",
+    tag: "Hub",
+    read: "9 min read",
+    date: "Jul 2026",
+  },
+  {
     slug: "airline-alliances-guide-canada",
     title: "The airline alliance guide for Canadians: Star Alliance, oneworld, and SkyTeam",
     dek: "The three global alliances, the notable member airlines, and exactly how a Canadian reaches each with points. Star is strongest via Aeroplan, oneworld via Avios and AAdvantage, and SkyTeam the honest thin spot.",
