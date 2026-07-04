@@ -3,7 +3,7 @@
 // If AIRTABLE_TOKEN + AIRTABLE_BASE_ID are set (in Vercel env vars), the Deals
 // and News pages read from Airtable so they can be posted from a phone/grid.
 // If the env vars are missing, the fetch fails, or a table is empty, these
-// return null and the pages fall back to the committed src/data files — so the
+// return null and the pages fall back to the committed src/data files, so the
 // site never breaks before or after setup.
 //
 // This module is server-only (the token is never sent to the browser): it is

@@ -17,6 +17,34 @@ const TOC = [
   { id: "deep", label: "Deep dives and next steps" },
 ];
 
+// Single source of truth for the FAQ: drives both the visible list and the JSON-LD.
+const FAQ = [
+  {
+    q: "What is an airline alliance?",
+    a: "An airline alliance is a group of airlines that agree to cooperate on things like shared lounges, connections, and loyalty. The three big global alliances are Star Alliance, oneworld, and SkyTeam. For points, the key benefit is that one program inside an alliance usually lets you book award flights on many partner airlines and earn or redeem across the group, so a single balance of miles reaches a whole network of carriers.",
+  },
+  {
+    q: "Which alliance is Air Canada in, and how do Canadians reach it with points?",
+    a: "Air Canada is in Star Alliance, alongside United, Lufthansa, Swiss, Austrian, Brussels, ANA, Singapore, Turkish, and EVA, among others. Canadians reach Star Alliance most easily through Aeroplan, Air Canada's own program. You can also feed Aeroplan from Amex Membership Rewards at 1 to 1, which makes Star the strongest alliance for Canadian points collectors. As of July 2026; confirm memberships and ratios live before you book.",
+  },
+  {
+    q: "How do Canadians book oneworld flights with points?",
+    a: "oneworld includes American, British Airways, Cathay Pacific, Qatar, Iberia, Finnair, Japan Airlines, Qantas, and Alaska, among others. Canadians reach it mainly through Avios (used by British Airways, Iberia, Aer Lingus, and Qatar) and through American Airlines AAdvantage. Amex Membership Rewards and RBC Avion both transfer to British Airways Avios, and RBC Avion on Avion Elite cards transfers to American AAdvantage at a base 10 points for 7 miles. As of July 2026.",
+  },
+  {
+    q: "Can Canadians book SkyTeam flights with credit card points?",
+    a: "SkyTeam, which includes Air France, KLM, Delta, and Korean Air, is the hardest alliance for Canadians to reach with points. Its main loyalty programs, Air France-KLM Flying Blue and Delta SkyMiles, are not standard transfer partners of the mainstream Canadian transferable currencies, so there is no clean direct path from a Canadian bank or card program into SkyTeam the way there is for Star or oneworld. Confirm current partners live, since programs do change.",
+  },
+  {
+    q: "Is Aer Lingus in an alliance?",
+    a: "No. Aer Lingus is not a member of any of the three global alliances, but it is an Avios partner, so you can still book Aer Lingus flights using Avios. WestJet is likewise not in a global alliance. Alliance membership and points partnerships are two different things, so always check both before you plan.",
+  },
+  {
+    q: "Are points transfers into alliance programs reversible?",
+    a: "No. Transfers from a Canadian currency like Amex Membership Rewards or RBC Avion into an airline program such as Aeroplan or Avios are one-way and irreversible. The safe habit is to find and confirm the specific award seat first, then transfer only the points that booking needs.",
+  },
+];
+
 export default function AirlineAlliancesGuideCanadaPage() {
   return (
     <div className="app norail">
@@ -28,56 +56,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "What is an airline alliance?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "An airline alliance is a group of airlines that agree to cooperate on things like shared lounges, connections, and loyalty. The three big global alliances are Star Alliance, oneworld, and SkyTeam. For points, the key benefit is that one program inside an alliance usually lets you book award flights on many partner airlines and earn or redeem across the group, so a single balance of miles reaches a whole network of carriers.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Which alliance is Air Canada in, and how do Canadians reach it with points?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Air Canada is in Star Alliance, alongside United, Lufthansa, Swiss, Austrian, Brussels, ANA, Singapore, Turkish, and EVA, among others. Canadians reach Star Alliance most easily through Aeroplan, Air Canada's own program. You can also feed Aeroplan from Amex Membership Rewards at 1 to 1, which makes Star the strongest alliance for Canadian points collectors. As of July 2026; confirm memberships and ratios live before you book.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "How do Canadians book oneworld flights with points?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "oneworld includes American, British Airways, Cathay Pacific, Qatar, Iberia, Finnair, Japan Airlines, Qantas, and Alaska, among others. Canadians reach it mainly through Avios (used by British Airways, Iberia, Aer Lingus, and Qatar) and through American Airlines AAdvantage. Amex Membership Rewards and RBC Avion both transfer to British Airways Avios, and RBC Avion on Avion Elite cards transfers to American AAdvantage at a base 10 points for 7 miles. As of July 2026.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Can Canadians book SkyTeam flights with credit card points?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "SkyTeam, which includes Air France, KLM, Delta, and Korean Air, is the hardest alliance for Canadians to reach with points. Its main loyalty programs, Air France-KLM Flying Blue and Delta SkyMiles, are not standard transfer partners of the mainstream Canadian transferable currencies, so there is no clean direct path from a Canadian bank or card program into SkyTeam the way there is for Star or oneworld. Confirm current partners live, since programs do change.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Is Aer Lingus in an alliance?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "No. Aer Lingus is not a member of any of the three global alliances, but it is an Avios partner, so you can still book Aer Lingus flights using Avios. WestJet is likewise not in a global alliance. Alliance membership and points partnerships are two different things, so always check both before you plan.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Are points transfers into alliance programs reversible?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "No. Transfers from a Canadian currency like Amex Membership Rewards or RBC Avion into an airline program such as Aeroplan or Avios are one-way and irreversible. The safe habit is to find and confirm the specific award seat first, then transfer only the points that booking needs.",
-                    },
-                  },
-                ],
+                mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
               }),
             }}
           />
@@ -308,7 +287,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
             Three global alliances, three very different stories for a Canadian. Star Alliance is the easy one, reached
             through Aeroplan and fed by Amex Membership Rewards at 1 to 1, and it covers Air Canada, United, Lufthansa,
             ANA, Singapore, Turkish, and more. oneworld takes a bit more work but is very reachable through Avios (Amex MR
-            and RBC Avion) and through American AAdvantage (RBC Avion on Avion Elite), unlocking American, British
+            and RBC Avion) and through American AAdvantage (RBC Avion on Avion Elite), reaching American, British
             Airways, Cathay Pacific, Qatar, Japan Airlines, Qantas, and Alaska. SkyTeam, home to Air France, KLM, Delta,
             and Korean Air, is the honest thin spot, with no clean route from the mainstream Canadian currencies today.
             Know which alliance your target airline sits in, match it to a program you can actually reach, find the seat
@@ -318,49 +297,12 @@ export default function AirlineAlliancesGuideCanadaPage() {
 
           {/* FAQ */}
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>What is an airline alliance?</h4>
-          <p>
-            An airline alliance is a group of airlines that agree to cooperate on things like shared lounges,
-            connections, and loyalty. The three big global alliances are Star Alliance, oneworld, and SkyTeam. For
-            points, the key benefit is that one program inside an alliance usually lets you book award flights on many
-            partner airlines and earn or redeem across the group, so a single balance of miles reaches a whole network of
-            carriers.
-          </p>
-          <h4>Which alliance is Air Canada in, and how do Canadians reach it with points?</h4>
-          <p>
-            Air Canada is in Star Alliance, alongside United, Lufthansa, Swiss, Austrian, Brussels, ANA, Singapore,
-            Turkish, and EVA, among others. Canadians reach Star Alliance most easily through Aeroplan, Air Canada&apos;s
-            own program. You can also feed Aeroplan from Amex Membership Rewards at 1 to 1, which makes Star the strongest
-            alliance for Canadian points collectors. As of July 2026; confirm memberships and ratios live before you book.
-          </p>
-          <h4>How do Canadians book oneworld flights with points?</h4>
-          <p>
-            oneworld includes American, British Airways, Cathay Pacific, Qatar, Iberia, Finnair, Japan Airlines, Qantas,
-            and Alaska, among others. Canadians reach it mainly through Avios (used by British Airways, Iberia, Aer
-            Lingus, and Qatar) and through American Airlines AAdvantage. Amex Membership Rewards and RBC Avion both
-            transfer to British Airways Avios, and RBC Avion on Avion Elite cards transfers to American AAdvantage at a
-            base 10 points for 7 miles. As of July 2026.
-          </p>
-          <h4>Can Canadians book SkyTeam flights with credit card points?</h4>
-          <p>
-            SkyTeam, which includes Air France, KLM, Delta, and Korean Air, is the hardest alliance for Canadians to
-            reach with points. Its main loyalty programs, Air France-KLM Flying Blue and Delta SkyMiles, are not standard
-            transfer partners of the mainstream Canadian transferable currencies, so there is no clean direct path from a
-            Canadian bank or card program into SkyTeam the way there is for Star or oneworld. Confirm current partners
-            live, since programs do change.
-          </p>
-          <h4>Is Aer Lingus in an alliance?</h4>
-          <p>
-            No. Aer Lingus is not a member of any of the three global alliances, but it is an Avios partner, so you can
-            still book Aer Lingus flights using Avios. WestJet is likewise not in a global alliance. Alliance membership
-            and points partnerships are two different things, so always check both before you plan.
-          </p>
-          <h4>Are points transfers into alliance programs reversible?</h4>
-          <p>
-            No. Transfers from a Canadian currency like Amex Membership Rewards or RBC Avion into an airline program such
-            as Aeroplan or Avios are one-way and irreversible. The safe habit is to find and confirm the specific award
-            seat first, then transfer only the points that booking needs.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           {/* KEEP GOING */}
           <div id="deep" className="cd-sec" style={{ scrollMarginTop: 70 }}>Deep dives and next steps</div>

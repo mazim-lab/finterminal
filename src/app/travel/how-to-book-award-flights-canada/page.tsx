@@ -17,6 +17,34 @@ const TOC = [
   { id: "deep", label: "Deep dives and next steps" },
 ];
 
+// Single source of truth for the FAQ: drives both the visible list and the JSON-LD.
+const FAQ = [
+  {
+    q: "How do I book an award flight from Canada?",
+    a: "Work in this order: decide the trip and check how many points you have and in which currency; search award availability at the source, which is the airline or program's own site, and optionally with award-search tools to scan several programs at once; accept that availability is the real constraint, so be flexible on dates; hold the seat if the program allows, or be ready to book immediately; then, and only then, transfer your points in, since transfers are one-way and irreversible; finally book and verify the ticket. As of July 2026; award availability, tools, fees, and pricing change, so confirm on the program's own site before you transfer or book.",
+  },
+  {
+    q: "Where do I search for award availability as a Canadian?",
+    a: "The airline or program's own site is the source of truth. For Star Alliance partner space, search Aeroplan on aircanada.com; United's site is a useful cross-reference for the same Star space. For Avios, search on avios.com, British Airways, or Aer Lingus. For American, search AAdvantage on aa.com. Award-search tools like seats.aero and point.me can scan many programs at once, but the program site is authoritative, so always confirm the seat there before you move points. As of July 2026.",
+  },
+  {
+    q: "Should I transfer my points before or after I find the award seat?",
+    a: "After. Always find and confirm the award seat first, and hold it if the program lets you, before you transfer any points in. Transfers from Canadian currencies like Amex Membership Rewards or RBC Avion into an airline program such as Aeroplan or Avios are one-way and irreversible, so never transfer speculatively. Watch for a transfer bonus, but only transfer once you can actually book the seat.",
+  },
+  {
+    q: "Why can't I find award space on my dates?",
+    a: "Availability is the real constraint in award travel, not points. Airlines release a limited number of saver or partner award seats on each flight, and popular routes and dates go fast. Be flexible: search a few days either side of your target, try off-peak dates where a program has peak and off-peak pricing, and consider nearby airports. If nothing shows online, some partner space can only be booked by phone.",
+  },
+  {
+    q: "Do award flights have extra fees?",
+    a: "Yes, award tickets still carry taxes and fees, and some programs or partner airlines add large carrier-imposed surcharges on top, which can turn a cheap award into an expensive one. Aeroplan does not pass along big fuel surcharges on most partners, while some other programs and partners do. Our sweet-spot guides flag which pairings are surcharge-light. As of July 2026; confirm the full cash cost on the program's own site before you book.",
+  },
+  {
+    q: "Do I have to book award flights online?",
+    a: "Not always. A lot of partner award space books cleanly online, but some partner segments do not show up in a program's online engine and can only be booked by calling the program. If you can see the seat on the operating airline's own site or in an award-search tool but your program's website will not price it, phoning the program is the normal next step. As of July 2026.",
+  },
+];
+
 export default function HowToBookAwardFlightsCanadaPage() {
   return (
     <div className="app norail">
@@ -28,56 +56,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "How do I book an award flight from Canada?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Work in this order: decide the trip and check how many points you have and in which currency; search award availability at the source, which is the airline or program's own site, and optionally with award-search tools to scan several programs at once; accept that availability is the real constraint, so be flexible on dates; hold the seat if the program allows, or be ready to book immediately; then, and only then, transfer your points in, since transfers are one-way and irreversible; finally book and verify the ticket. As of July 2026; award availability, tools, fees, and pricing change, so confirm on the program's own site before you transfer or book.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Where do I search for award availability as a Canadian?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "The airline or program's own site is the source of truth. For Star Alliance partner space, search Aeroplan on aircanada.com; United's site is a useful cross-reference for the same Star space. For Avios, search on avios.com, British Airways, or Aer Lingus. For American, search AAdvantage on aa.com. Award-search tools like seats.aero and point.me can scan many programs at once, but the program site is authoritative, so always confirm the seat there before you move points. As of July 2026.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Should I transfer my points before or after I find the award seat?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "After. Always find and confirm the award seat first, and hold it if the program lets you, before you transfer any points in. Transfers from Canadian currencies like Amex Membership Rewards or RBC Avion into an airline program such as Aeroplan or Avios are one-way and irreversible, so never transfer speculatively. Watch for a transfer bonus, but only transfer once you can actually book the seat.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Why can't I find award space on my dates?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Availability is the real constraint in award travel, not points. Airlines release a limited number of saver or partner award seats on each flight, and popular routes and dates go fast. Be flexible: search a few days either side of your target, try off-peak dates where a program has peak and off-peak pricing, and consider nearby airports. If nothing shows online, some partner space can only be booked by phone.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Do award flights have extra fees?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Yes, award tickets still carry taxes and fees, and some programs or partner airlines add large carrier-imposed surcharges on top, which can turn a cheap award into an expensive one. Aeroplan does not pass along big fuel surcharges on most partners, while some other programs and partners do. Our sweet-spot guides flag which pairings are surcharge-light. As of July 2026; confirm the full cash cost on the program's own site before you book.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Do I have to book award flights online?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Not always. A lot of partner award space books cleanly online, but some partner segments do not show up in a program's online engine and can only be booked by calling the program. If you can see the seat on the operating airline's own site or in an award-search tool but your program's website will not price it, phoning the program is the normal next step. As of July 2026.",
-                    },
-                  },
-                ],
+                mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
               }),
             }}
           />
@@ -330,53 +309,12 @@ export default function HowToBookAwardFlightsCanadaPage() {
 
           {/* FAQ */}
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>How do I book an award flight from Canada?</h4>
-          <p>
-            Work in this order: decide the trip and check how many points you have and in which currency; search award
-            availability at the source, which is the airline or program&apos;s own site, and optionally with award-search
-            tools to scan several programs at once; accept that availability is the real constraint, so be flexible on
-            dates; hold the seat if the program allows, or be ready to book immediately; then, and only then, transfer your
-            points in, since transfers are one-way and irreversible; finally book and verify the ticket. As of July 2026;
-            award availability, tools, fees, and pricing change, so confirm on the program&apos;s own site before you
-            transfer or book.
-          </p>
-          <h4>Where do I search for award availability as a Canadian?</h4>
-          <p>
-            The airline or program&apos;s own site is the source of truth. For Star Alliance partner space, search
-            Aeroplan on aircanada.com; United&apos;s site is a useful cross-reference for the same Star space. For Avios,
-            search on avios.com, British Airways, or Aer Lingus. For American, search AAdvantage on aa.com. Award-search
-            tools like seats.aero and point.me can scan many programs at once, but the program site is authoritative, so
-            always confirm the seat there before you move points. As of July 2026.
-          </p>
-          <h4>Should I transfer my points before or after I find the award seat?</h4>
-          <p>
-            After. Always find and confirm the award seat first, and hold it if the program lets you, before you transfer
-            any points in. Transfers from Canadian currencies like Amex Membership Rewards or RBC Avion into an airline
-            program such as Aeroplan or Avios are one-way and irreversible, so never transfer speculatively. Watch for a
-            transfer bonus, but only transfer once you can actually book the seat.
-          </p>
-          <h4>Why can&apos;t I find award space on my dates?</h4>
-          <p>
-            Availability is the real constraint in award travel, not points. Airlines release a limited number of saver or
-            partner award seats on each flight, and popular routes and dates go fast. Be flexible: search a few days
-            either side of your target, try off-peak dates where a program has peak and off-peak pricing, and consider
-            nearby airports. If nothing shows online, some partner space can only be booked by phone.
-          </p>
-          <h4>Do award flights have extra fees?</h4>
-          <p>
-            Yes, award tickets still carry taxes and fees, and some programs or partner airlines add large carrier-imposed
-            surcharges on top, which can turn a cheap award into an expensive one. Aeroplan does not pass along big fuel
-            surcharges on most partners, while some other programs and partners do. Our sweet-spot guides flag which
-            pairings are surcharge-light. As of July 2026; confirm the full cash cost on the program&apos;s own site before
-            you book.
-          </p>
-          <h4>Do I have to book award flights online?</h4>
-          <p>
-            Not always. A lot of partner award space books cleanly online, but some partner segments do not show up in a
-            program&apos;s online engine and can only be booked by calling the program. If you can see the seat on the
-            operating airline&apos;s own site or in an award-search tool but your program&apos;s website will not price it,
-            phoning the program is the normal next step. As of July 2026.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           {/* KEEP GOING */}
           <div id="deep" className="cd-sec" style={{ scrollMarginTop: 70 }}>Deep dives and next steps</div>

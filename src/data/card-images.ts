@@ -68,7 +68,7 @@ export function getNetworkStyle(network: string): NetworkStyle {
   return { label: network.slice(0, 4).toUpperCase(), bg: 'bg-slate-500', text: 'text-white' };
 }
 
-// Category color coding for left border — warm tones
+// Category color coding for left border: warm tones
 export function getCategoryColor(cardType: string): string {
   switch (cardType.toLowerCase()) {
     case 'travel': return 'border-l-emerald-700';

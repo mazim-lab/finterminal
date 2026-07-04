@@ -18,6 +18,33 @@ const TOC = [
   { id: "who", label: "Is it for you?" },
 ];
 
+const FAQ = [
+  {
+    q: "Is the Smith Manoeuvre legal in Canada?",
+    a: "Yes. It relies on a long-standing rule in the Income Tax Act that makes interest deductible when the borrowed money is used to earn income from a business or property. You are not exploiting a loophole, you are borrowing to invest in income-producing assets and deducting that interest, which the CRA has always allowed. The catch is traceability, so you need a clean, unbroken paper trail from the borrowed dollars to the investments.",
+  },
+  {
+    q: "How much equity do I need to start the Smith Manoeuvre?",
+    a: "You generally need at least 20 percent equity in your home. A readvanceable line of credit cannot push your total borrowing above 80 percent of the home's value, so that 20 percent cushion is what makes room for the strategy. Beyond the equity, you also want stable cash flow and a long time horizon before you begin.",
+  },
+  {
+    q: "Do I need a special mortgage for the Smith Manoeuvre?",
+    a: "Yes, you need a readvanceable mortgage, which pairs a normal amortizing mortgage with a line of credit that grows automatically as you pay down principal. Common Canadian options include the Scotia STEP, the National Bank All-in-One, Manulife One, the RBC Homeline Plan, and MCAP Fusion. Without a readvanceable product, the freed-up room does not appear on its own and the loop does not run.",
+  },
+  {
+    q: "What happens if my leveraged investments lose money?",
+    a: "You still owe the full line-of-credit balance and the interest on it, even if the portfolio is worth less than the loan. A downturn early on is the hardest case, because you can end up owing more than the investments are worth. This is why the strategy suits people with staying power, reliable cash flow, and a long horizon who can ride a dip out rather than sell at the bottom.",
+  },
+  {
+    q: "Should I do the Smith Manoeuvre before maxing my TFSA and RRSP?",
+    a: "Usually not. For most families it is worth filling your TFSA and RRSP room first, since those give you tax advantages without any leverage. The Smith Manoeuvre tends to make the most sense once those easy, unleveraged shelters are already working for you and you still have appetite for more.",
+  },
+  {
+    q: "What is a return-of-capital distribution and why does it matter?",
+    a: "Some funds pay distributions that are partly a return of your own capital rather than income. That matters because return of capital can slowly erode how much of your interest stays deductible. The cleanest move is to put any return of capital back against the investment loan so your deduction stays intact.",
+  },
+];
+
 export default function SmithManoeuvrePage() {
   return (
     <div className="app norail">
@@ -26,56 +53,11 @@ export default function SmithManoeuvrePage() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Is the Smith Manoeuvre legal in Canada?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. It relies on a long-standing rule in the Income Tax Act that makes interest deductible when the borrowed money is used to earn income from a business or property. You are not exploiting a loophole, you are borrowing to invest in income-producing assets and deducting that interest, which the CRA has always allowed. The catch is traceability, so you need a clean, unbroken paper trail from the borrowed dollars to the investments.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How much equity do I need to start the Smith Manoeuvre?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "You generally need at least 20 percent equity in your home. A readvanceable line of credit cannot push your total borrowing above 80 percent of the home's value, so that 20 percent cushion is what makes room for the strategy. Beyond the equity, you also want stable cash flow and a long time horizon before you begin.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Do I need a special mortgage for the Smith Manoeuvre?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes, you need a readvanceable mortgage, which pairs a normal amortizing mortgage with a line of credit that grows automatically as you pay down principal. Common Canadian options include the Scotia STEP, the National Bank All-in-One, Manulife One, the RBC Homeline Plan, and MCAP Fusion. Without a readvanceable product, the freed-up room does not appear on its own and the loop does not run.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What happens if my leveraged investments lose money?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "You still owe the full line-of-credit balance and the interest on it, even if the portfolio is worth less than the loan. A downturn early on is the hardest case, because you can end up owing more than the investments are worth. This is why the strategy suits people with staying power, reliable cash flow, and a long horizon who can ride a dip out rather than sell at the bottom.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Should I do the Smith Manoeuvre before maxing my TFSA and RRSP?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Usually not. For most families it is worth filling your TFSA and RRSP room first, since those give you tax advantages without any leverage. The Smith Manoeuvre tends to make the most sense once those easy, unleveraged shelters are already working for you and you still have appetite for more.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What is a return-of-capital distribution and why does it matter?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Some funds pay distributions that are partly a return of your own capital rather than income. That matters because return of capital can slowly erode how much of your interest stays deductible. The cleanest move is to put any return of capital back against the investment loan so your deduction stays intact.",
-                },
-              },
-            ],
+            mainEntity: FAQ.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
           }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
@@ -159,9 +141,9 @@ export default function SmithManoeuvrePage() {
           </ul>
           <div className="cd-note">
             <div className="cap">A sensible order of operations</div>
-            For most families, it is worth filling your TFSA and RRSP room first, since those give you tax
+            <p style={{ margin: 0 }} className="sub">For most families, it is worth filling your TFSA and RRSP room first, since those give you tax
             advantages without leverage. The Smith Manoeuvre tends to make the most sense once the easy,
-            unleveraged tax shelters are already working for you.
+            unleveraged tax shelters are already working for you.</p>
           </div>
 
           {/* LOOP */}
@@ -278,25 +260,19 @@ export default function SmithManoeuvrePage() {
           </p>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            This guide is educational and is written to help you understand the strategy, not to recommend it for
+            <p style={{ margin: 0 }} className="sub">This guide is educational and is written to help you understand the strategy, not to recommend it for
             your specific situation. Before you set anything up, talk it through with a fee-for-service planner or
             an accountant who knows the Smith Manoeuvre well. An hour of good advice here pays for itself many
-            times over.
+            times over.</p>
           </div>
 
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>Is the Smith Manoeuvre legal in Canada?</h4>
-          <p>Yes. It relies on a long-standing rule in the Income Tax Act that makes interest deductible when the borrowed money is used to earn income from a business or property. You are not exploiting a loophole, you are borrowing to invest in income-producing assets and deducting that interest, which the CRA has always allowed. The catch is traceability, so you need a clean, unbroken paper trail from the borrowed dollars to the investments.</p>
-          <h4>How much equity do I need to start the Smith Manoeuvre?</h4>
-          <p>You generally need at least 20 percent equity in your home. A readvanceable line of credit cannot push your total borrowing above 80 percent of the home&apos;s value, so that 20 percent cushion is what makes room for the strategy. Beyond the equity, you also want stable cash flow and a long time horizon before you begin.</p>
-          <h4>Do I need a special mortgage for the Smith Manoeuvre?</h4>
-          <p>Yes, you need a readvanceable mortgage, which pairs a normal amortizing mortgage with a line of credit that grows automatically as you pay down principal. Common Canadian options include the Scotia STEP, the National Bank All-in-One, Manulife One, the RBC Homeline Plan, and MCAP Fusion. Without a readvanceable product, the freed-up room does not appear on its own and the loop does not run.</p>
-          <h4>What happens if my leveraged investments lose money?</h4>
-          <p>You still owe the full line-of-credit balance and the interest on it, even if the portfolio is worth less than the loan. A downturn early on is the hardest case, because you can end up owing more than the investments are worth. This is why the strategy suits people with staying power, reliable cash flow, and a long horizon who can ride a dip out rather than sell at the bottom.</p>
-          <h4>Should I do the Smith Manoeuvre before maxing my TFSA and RRSP?</h4>
-          <p>Usually not. For most families it is worth filling your TFSA and RRSP room first, since those give you tax advantages without any leverage. The Smith Manoeuvre tends to make the most sense once those easy, unleveraged shelters are already working for you and you still have appetite for more.</p>
-          <h4>What is a return-of-capital distribution and why does it matter?</h4>
-          <p>Some funds pay distributions that are partly a return of your own capital rather than income. That matters because return of capital can slowly erode how much of your interest stays deductible. The cleanest move is to put any return of capital back against the investment loan so your deduction stays intact.</p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           <div className="cd-sec">Keep going</div>
           <p>If you are thinking about the investment side, our card and points guides can help you put any rewards you earn to work too.</p>

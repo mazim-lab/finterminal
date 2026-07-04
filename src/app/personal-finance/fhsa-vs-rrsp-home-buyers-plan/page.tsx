@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { isPFPublished } from "@/data/personal-finance";
 
 export const metadata = {
   title: "FHSA vs the RRSP Home Buyers' Plan: which to use for a first home | FinTerminal",
@@ -87,7 +88,12 @@ export default function FHSAvsHBPPage() {
             you are on the hook to repay over 15 years. That single difference decides which one you should lean on
             first, and once you see it clearly, the whole thing gets a lot easier to plan. This is a focused head-to-head
             on funding the purchase itself. If you want the full mechanics of the FHSA, our{" "}
-            <Link href="/personal-finance/fhsa-playbook-canada">FHSA playbook</Link> goes deep on the account itself.
+            {isPFPublished("fhsa-playbook-canada") ? (
+              <Link href="/personal-finance/fhsa-playbook-canada">FHSA playbook</Link>
+            ) : (
+              "FHSA playbook"
+            )}{" "}
+            goes deep on the account itself.
           </p>
           <div className="docmeta">
             <span className="gd">PERSONAL FINANCE</span><span className="sep">·</span>
@@ -159,7 +165,12 @@ export default function FHSAvsHBPPage() {
                 <strong>Withdrawal:</strong> a qualifying withdrawal can take out up to the full balance, contributions
                 plus growth, tax-free. <strong>Repayment:</strong> none, ever. <strong>Tax going in:</strong> contributions
                 are deductible, like an RRSP. See the{" "}
-                <Link href="/personal-finance/fhsa-playbook-canada">FHSA playbook</Link> for the deep mechanics.
+                {isPFPublished("fhsa-playbook-canada") ? (
+                  <Link href="/personal-finance/fhsa-playbook-canada">FHSA playbook</Link>
+                ) : (
+                  "FHSA playbook"
+                )}{" "}
+                for the deep mechanics.
               </div>
             </div>
             <div className="kvrow">
@@ -276,7 +287,12 @@ export default function FHSAvsHBPPage() {
             One honest caveat: the FHSA only helps if you have actually funded it. Room does not build up before you open
             the account, so if a purchase is close and your FHSA is thin, an HBP withdrawal from an already-funded RRSP
             may be the larger lever you have on hand. That is a reason to open and feed an FHSA early, which our{" "}
-            <Link href="/personal-finance/fhsa-playbook-canada">FHSA playbook</Link> makes the case for in detail.
+            {isPFPublished("fhsa-playbook-canada") ? (
+              <Link href="/personal-finance/fhsa-playbook-canada">FHSA playbook</Link>
+            ) : (
+              "FHSA playbook"
+            )}{" "}
+            makes the case for in detail.
           </p>
 
           {/* BOTH */}
@@ -300,7 +316,12 @@ export default function FHSAvsHBPPage() {
               Spend the FHSA first because it is tax-free with no repayment, then add an HBP withdrawal only for the
               amount you still need. That keeps your repayment obligation as small as it can be while still getting you to
               the down payment you are aiming for. If you are also weighing this against other savings goals, our{" "}
-              <Link href="/personal-finance/canadian-account-order-of-operations">account order guide</Link> covers where each dollar
+              {isPFPublished("canadian-account-order-of-operations") ? (
+                <Link href="/personal-finance/canadian-account-order-of-operations">account order guide</Link>
+              ) : (
+                "account order guide"
+              )}{" "}
+              covers where each dollar
               should go.
             </p>
           </div>
@@ -391,12 +412,16 @@ export default function FHSAvsHBPPage() {
             operations.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
-            <Link href="/personal-finance/fhsa-playbook-canada" className="cd-apply">
-              The FHSA playbook &rarr;
-            </Link>
-            <Link href="/personal-finance/canadian-account-order-of-operations" className="cd-apply">
-              What order to fund your accounts &rarr;
-            </Link>
+            {isPFPublished("fhsa-playbook-canada") && (
+              <Link href="/personal-finance/fhsa-playbook-canada" className="cd-apply">
+                The FHSA playbook &rarr;
+              </Link>
+            )}
+            {isPFPublished("canadian-account-order-of-operations") && (
+              <Link href="/personal-finance/canadian-account-order-of-operations" className="cd-apply">
+                What order to fund your accounts &rarr;
+              </Link>
+            )}
             <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
               More personal finance &rarr;
             </Link>

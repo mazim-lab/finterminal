@@ -16,6 +16,34 @@ const TOC = [
   { id: "caveats", label: "Honest caveats" },
 ];
 
+// Single source of truth for the FAQ: drives both the visible list and the JSON-LD.
+const FAQ = [
+  {
+    q: "Should I use AAdvantage miles on American flights or partner airlines?",
+    a: "Point them at partners almost every time. American's own flights are priced dynamically, so the mile cost tracks the cash fare and can balloon on busy dates. Partner airlines are priced from a fixed, region-based award chart that has barely moved in years, which is where the value lives.",
+  },
+  {
+    q: "How many AAdvantage miles is business class to Europe?",
+    a: "A one-way business class seat between North America and Europe on a partner runs about 57,500 miles, for a lie-flat cabin that routinely sells for several thousand dollars in cash. Economy on the same chart starts around 22,500 miles one-way off-peak, and first class, where it exists, is about 85,000. Lean on partners like Finnair or Iberia for the metal.",
+  },
+  {
+    q: "Does AAdvantage charge fuel surcharges on partner awards?",
+    a: "On most partner awards, no. You generally pay only genuine taxes and airport fees, which on a route like the US to Doha can be under fifty dollars. The clear exception is British Airways and Iberia, where American does pass surcharges through, and on British Airways long-haul those fees can run well past several hundred dollars each way.",
+  },
+  {
+    q: "Can I book AAdvantage partner awards online?",
+    a: "Most oneworld partner awards can be searched and booked right on aa.com, including British Airways, Iberia, Finnair, Qatar Airways, Cathay Pacific, Japan Airlines, Qantas and Royal Air Maroc. The notable exception is Etihad, which is not a oneworld member, so its space often does not appear online and usually has to be booked by calling American. Etihad also typically releases premium partner award space only within about 30 days of departure, so a booking made further ahead usually needs Etihad Guest miles instead.",
+  },
+  {
+    q: "How many AAdvantage miles do I need for Qatar Qsuite?",
+    a: "Business class on partners like Etihad or Qatar Airways is about 70,000 miles one-way to the Middle East and the Indian subcontinent, with first class around 100,000. Qatar's Qsuite booked this way is one of the marquee redemptions in the hobby, with taxes that are often under fifty dollars. Nonstop space out of the US can be scarce, but pairing a domestic American flight with the long-haul partner leg tends to show up more readily at the same rate. Note that Etihad typically releases premium partner award space only within about 30 days of departure, so a long-lead Etihad booking usually needs Etihad Guest miles rather than AAdvantage.",
+  },
+  {
+    q: "Is transferring RBC Avion to AAdvantage worth the haircut?",
+    a: "Only for high-value redemptions. Avion moves at roughly 1 Avion to 0.7 miles, so it takes about 100,000 Avion points to land 70,000 AAdvantage miles. Spent on a Qatar Qsuite seat worth several thousand dollars in cash, that is an excellent trade. Spent on a cheap economy seat you could have bought outright, the haircut makes it a poor one.",
+  },
+];
+
 export default function AAdvantageSweetSpotsPage() {
   return (
     <div className="app norail">
@@ -24,56 +52,7 @@ export default function AAdvantageSweetSpotsPage() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Should I use AAdvantage miles on American flights or partner airlines?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Point them at partners almost every time. American's own flights are priced dynamically, so the mile cost tracks the cash fare and can balloon on busy dates. Partner airlines are priced from a fixed, region-based award chart that has barely moved in years, which is where the value lives.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How many AAdvantage miles is business class to Europe?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "A one-way business class seat between North America and Europe on a partner runs about 57,500 miles, for a lie-flat cabin that routinely sells for several thousand dollars in cash. Economy on the same chart starts around 22,500 miles one-way off-peak, and first class, where it exists, is about 85,000. Lean on partners like Finnair or Iberia for the metal.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Does AAdvantage charge fuel surcharges on partner awards?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "On most partner awards, no. You generally pay only genuine taxes and airport fees, which on a route like the US to Doha can be under fifty dollars. The clear exception is British Airways and Iberia, where American does pass surcharges through, and on British Airways long-haul those fees can run well past several hundred dollars each way.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can I book AAdvantage partner awards online?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Most oneworld partner awards can be searched and booked right on aa.com, including British Airways, Iberia, Finnair, Qatar Airways, Cathay Pacific, Japan Airlines, Qantas and Royal Air Maroc. The notable exception is Etihad, which is not a oneworld member, so its space often does not appear online and usually has to be booked by calling American.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How many AAdvantage miles do I need for Qatar Qsuite?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Business class on partners like Etihad or Qatar Airways is about 70,000 miles one-way to the Middle East and the Indian subcontinent, with first class around 100,000. Qatar's Qsuite booked this way is one of the marquee redemptions in the hobby, with taxes that are often under fifty dollars. Nonstop space out of the US can be scarce, but pairing a domestic American flight with the long-haul partner leg tends to show up more readily at the same rate.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Is transferring RBC Avion to AAdvantage worth the haircut?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Only for high-value redemptions. Avion moves at roughly 1 Avion to 0.7 miles, so it takes about 100,000 Avion points to land 70,000 AAdvantage miles. Spent on a Qatar Qsuite seat worth several thousand dollars in cash, that is an excellent trade. Spent on a cheap economy seat you could have bought outright, the haircut makes it a poor one.",
-                },
-              },
-            ],
+            mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
           }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
@@ -175,7 +154,9 @@ export default function AAdvantageSweetSpotsPage() {
             the marquee redemptions in the whole hobby, an outstanding business cabin for the price of points plus taxes
             that are often under fifty dollars. Nonstop Qsuite space out of the US can be scarce unless you book close to
             when the schedule opens, but itineraries that pair a domestic American flight with the long-haul partner leg
-            tend to show up more readily at the same rate.
+            tend to show up more readily at the same rate. One important timing catch with Etihad specifically: it
+            typically releases premium partner award space only within about 30 days of departure, so if you want to lock
+            in an Etihad seat further ahead, that usually means booking with Etihad Guest miles rather than AAdvantage.
           </p>
 
           <h4>Other premium-cabin partners</h4>
@@ -198,9 +179,11 @@ export default function AAdvantageSweetSpotsPage() {
           </p>
           <p>
             The notable exception is Etihad, which is not a oneworld member. Etihad partner space often does not appear
-            online and usually has to be booked by calling American. A few other partners can be hit or miss on the site
-            too, so if you can see the seats on a third-party award search but aa.com will not let you book them, a phone
-            call to AAdvantage is the fallback. Have the exact flights and dates ready before you call.
+            online and usually has to be booked by calling American. Etihad also typically releases premium partner award
+            space only within about 30 days of departure, so if your trip is further out, an Etihad seat usually has to be
+            booked with Etihad Guest miles instead. A few other partners can be hit or miss on the site too, so if you can
+            see the seats on a third-party award search but aa.com will not let you book them, a phone call to AAdvantage
+            is the fallback. Have the exact flights and dates ready before you call.
           </p>
           <div className="cd-note">
             <div className="cap">Check the price tag, not just the seat</div>
@@ -271,48 +254,12 @@ export default function AAdvantageSweetSpotsPage() {
           </p>
 
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>Should I use AAdvantage miles on American flights or partner airlines?</h4>
-          <p>
-            Point them at partners almost every time. American&apos;s own flights are priced dynamically, so the mile
-            cost tracks the cash fare and can balloon on busy dates. Partner airlines are priced from a fixed,
-            region-based award chart that has barely moved in years, which is where the value lives.
-          </p>
-          <h4>How many AAdvantage miles is business class to Europe?</h4>
-          <p>
-            A one-way business class seat between North America and Europe on a partner runs about 57,500 miles, for a
-            lie-flat cabin that routinely sells for several thousand dollars in cash. Economy on the same chart starts
-            around 22,500 miles one-way off-peak, and first class, where it exists, is about 85,000. Lean on partners
-            like Finnair or Iberia for the metal.
-          </p>
-          <h4>Does AAdvantage charge fuel surcharges on partner awards?</h4>
-          <p>
-            On most partner awards, no. You generally pay only genuine taxes and airport fees, which on a route like the
-            US to Doha can be under fifty dollars. The clear exception is British Airways and Iberia, where American does
-            pass surcharges through, and on British Airways long-haul those fees can run well past several hundred
-            dollars each way.
-          </p>
-          <h4>Can I book AAdvantage partner awards online?</h4>
-          <p>
-            Most oneworld partner awards can be searched and booked right on aa.com, including British Airways, Iberia,
-            Finnair, Qatar Airways, Cathay Pacific, Japan Airlines, Qantas and Royal Air Maroc. The notable exception is
-            Etihad, which is not a oneworld member, so its space often does not appear online and usually has to be booked
-            by calling American.
-          </p>
-          <h4>How many AAdvantage miles do I need for Qatar Qsuite?</h4>
-          <p>
-            Business class on partners like Etihad or Qatar Airways is about 70,000 miles one-way to the Middle East and
-            the Indian subcontinent, with first class around 100,000. Qatar&apos;s Qsuite booked this way is one of the
-            marquee redemptions in the hobby, with taxes that are often under fifty dollars. Nonstop space out of the US
-            can be scarce, but pairing a domestic American flight with the long-haul partner leg tends to show up more
-            readily at the same rate.
-          </p>
-          <h4>Is transferring RBC Avion to AAdvantage worth the haircut?</h4>
-          <p>
-            Only for high-value redemptions. Avion moves at roughly 1 Avion to 0.7 miles, so it takes about 100,000 Avion
-            points to land 70,000 AAdvantage miles. Spent on a Qatar Qsuite seat worth several thousand dollars in cash,
-            that is an excellent trade. Spent on a cheap economy seat you could have bought outright, the haircut makes it
-            a poor one.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           <div className="cd-sec">Keep going</div>
           <p>If you have not topped up your balance yet, start with the transfer guide, then come back here to spend.</p>

@@ -36,6 +36,34 @@ const PREMIUM = pickExamples(500, 100000, 3);
 const MID = pickExamples(200, 500, 3);
 const ENTRY = pickExamples(1, 200, 3);
 
+// Single source of truth for the FAQ: drives both the visible list and the JSON-LD.
+const FAQ = [
+  {
+    q: "How do Canadians get airport lounge access?",
+    a: "There are three main routes. First, a credit card can bundle a membership in a lounge network like Priority Pass or DragonPass, which gets you into hundreds of lounges worldwide, though the exact terms vary by card. Second, airline lounges like Air Canada's Maple Leaf Lounges are reached through elite status, a same-day business or premium fare, or in some cases an airline credit card benefit. Third, when you have neither, you can buy a day pass or use a lounge booking app. As of July 2026; lounge programs, card benefits, and access rules change, so confirm the current terms with the card issuer and the lounge program before you rely on access.",
+  },
+  {
+    q: "How does Priority Pass or DragonPass work with a Canadian credit card?",
+    a: "Some Canadian cards include a membership in a lounge network such as Priority Pass or DragonPass, which is a network of independent airport lounges you can visit around the world. A card membership typically comes with either a set number of free visits per year or unlimited visits, and guests are usually an extra charge. The exact number of visits, the guest policy, and which network a card uses vary card by card and change over time, so check the card's own benefit guide and the lounge program's terms for the specifics. As of July 2026.",
+  },
+  {
+    q: "How do I get into an Air Canada Maple Leaf Lounge?",
+    a: "Air Canada Maple Leaf Lounges are generally reached one of three ways: holding Aeroplan Elite status, flying a same-day Air Canada business or premium fare, or a lounge benefit attached to certain Aeroplan credit cards. When you fly international business on a Star Alliance partner, you can often use partner lounges too. The rules depend on your fare and status, which can both change, so confirm your eligibility with Air Canada before you travel. As of July 2026.",
+  },
+  {
+    q: "Can I get into a lounge without a card or status?",
+    a: "Yes. Many lounges sell a day pass at the door or online, and lounge booking apps let you reserve and pay for a single visit at participating lounges. It is the pay-as-you-go route when you have neither a card membership nor airline status, and it can be worth it on a long layover. Prices vary by lounge and change, so check the current cost before you count on it. As of July 2026.",
+  },
+  {
+    q: "Is lounge access with a credit card guaranteed?",
+    a: "No. Lounge access is a perk, not a guarantee. Lounges have a capacity and can fill up and turn you away at busy times, and shared network lounges tend to feel this most at peak hours. On top of that, guest policies and visit caps are the fine print that decides how useful the benefit really is, and status-based access can change with your fare or your status. Treat lounge access as a nice-to-have you confirm in advance, not something you count on. As of July 2026.",
+  },
+  {
+    q: "Which Canadian credit card is best for lounge access?",
+    a: "That depends on how you travel and which lounges you actually use, so this guide does not re-rank cards. It explains how the lounge routes work and points to the Canadian cards in our data that include lounge access. For a ranked pick of the best card for lounge access, see our best travel credit cards in Canada roundup. As of July 2026.",
+  },
+];
+
 export default function AirportLoungeAccessCanadaPage() {
   return (
     <div className="app norail">
@@ -47,56 +75,7 @@ export default function AirportLoungeAccessCanadaPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "How do Canadians get airport lounge access?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "There are three main routes. First, a credit card can bundle a membership in a lounge network like Priority Pass or DragonPass, which gets you into hundreds of lounges worldwide, though the exact terms vary by card. Second, airline lounges like Air Canada's Maple Leaf Lounges are reached through elite status, a same-day business or premium fare, or in some cases an airline credit card benefit. Third, when you have neither, you can buy a day pass or use a lounge booking app. As of July 2026; lounge programs, card benefits, and access rules change, so confirm the current terms with the card issuer and the lounge program before you rely on access.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "How does Priority Pass or DragonPass work with a Canadian credit card?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Some Canadian cards include a membership in a lounge network such as Priority Pass or DragonPass, which is a network of independent airport lounges you can visit around the world. A card membership typically comes with either a set number of free visits per year or unlimited visits, and guests are usually an extra charge. The exact number of visits, the guest policy, and which network a card uses vary card by card and change over time, so check the card's own benefit guide and the lounge program's terms for the specifics. As of July 2026.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "How do I get into an Air Canada Maple Leaf Lounge?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Air Canada Maple Leaf Lounges are generally reached one of three ways: holding Aeroplan Elite status, flying a same-day Air Canada business or premium fare, or a lounge benefit attached to certain Aeroplan credit cards. When you fly international business on a Star Alliance partner, you can often use partner lounges too. The rules depend on your fare and status, which can both change, so confirm your eligibility with Air Canada before you travel. As of July 2026.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Can I get into a lounge without a card or status?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Yes. Many lounges sell a day pass at the door or online, and lounge booking apps let you reserve and pay for a single visit at participating lounges. It is the pay-as-you-go route when you have neither a card membership nor airline status, and it can be worth it on a long layover. Prices vary by lounge and change, so check the current cost before you count on it. As of July 2026.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Is lounge access with a credit card guaranteed?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "No. Lounge access is a perk, not a guarantee. Lounges have a capacity and can fill up and turn you away at busy times, and shared network lounges tend to feel this most at peak hours. On top of that, guest policies and visit caps are the fine print that decides how useful the benefit really is, and status-based access can change with your fare or your status. Treat lounge access as a nice-to-have you confirm in advance, not something you count on. As of July 2026.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Which Canadian credit card is best for lounge access?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "That depends on how you travel and which lounges you actually use, so this guide does not re-rank cards. It explains how the lounge routes work and points to the Canadian cards in our data that include lounge access. For a ranked pick of the best card for lounge access, see our best travel credit cards in Canada roundup. As of July 2026.",
-                    },
-                  },
-                ],
+                mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
               }),
             }}
           />
@@ -322,56 +301,12 @@ export default function AirportLoungeAccessCanadaPage() {
 
           {/* FAQ */}
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>How do Canadians get airport lounge access?</h4>
-          <p>
-            There are three main routes. First, a credit card can bundle a membership in a lounge network like Priority
-            Pass or DragonPass, which gets you into hundreds of lounges worldwide, though the exact terms vary by card.
-            Second, airline lounges like Air Canada&apos;s Maple Leaf Lounges are reached through elite status, a same-day
-            business or premium fare, or in some cases an airline credit card benefit. Third, when you have neither, you
-            can buy a day pass or use a lounge booking app. As of July 2026; lounge programs, card benefits, and access
-            rules change, so confirm the current terms with the card issuer and the lounge program before you rely on
-            access.
-          </p>
-          <h4>How does Priority Pass or DragonPass work with a Canadian credit card?</h4>
-          <p>
-            Some Canadian cards include a membership in a lounge network such as Priority Pass or DragonPass, which is a
-            network of independent airport lounges you can visit around the world. A card membership typically comes with
-            either a set number of free visits per year or unlimited visits, and guests are usually an extra charge. The
-            exact number of visits, the guest policy, and which network a card uses vary card by card and change over
-            time, so check the card&apos;s own benefit guide and the lounge program&apos;s terms for the specifics. As of
-            July 2026.
-          </p>
-          <h4>How do I get into an Air Canada Maple Leaf Lounge?</h4>
-          <p>
-            Air Canada Maple Leaf Lounges are generally reached one of three ways: holding Aeroplan Elite status, flying a
-            same-day Air Canada business or premium fare, or a lounge benefit attached to certain Aeroplan credit cards.
-            When you fly international business on a Star Alliance partner, you can often use partner lounges too. The
-            rules depend on your fare and status, which can both change, so confirm your eligibility with Air Canada
-            before you travel. As of July 2026.
-          </p>
-          <h4>Can I get into a lounge without a card or status?</h4>
-          <p>
-            Yes. Many lounges sell a day pass at the door or online, and lounge booking apps let you reserve and pay for a
-            single visit at participating lounges. It is the pay-as-you-go route when you have neither a card membership
-            nor airline status, and it can be worth it on a long layover. Prices vary by lounge and change, so check the
-            current cost before you count on it. As of July 2026.
-          </p>
-          <h4>Is lounge access with a credit card guaranteed?</h4>
-          <p>
-            No. Lounge access is a perk, not a guarantee. Lounges have a capacity and can fill up and turn you away at
-            busy times, and shared network lounges tend to feel this most at peak hours. On top of that, guest policies
-            and visit caps are the fine print that decides how useful the benefit really is, and status-based access can
-            change with your fare or your status. Treat lounge access as a nice-to-have you confirm in advance, not
-            something you count on. As of July 2026.
-          </p>
-          <h4>Which Canadian credit card is best for lounge access?</h4>
-          <p>
-            That depends on how you travel and which lounges you actually use, so this guide does not re-rank cards. It
-            explains how the lounge routes work and points to the Canadian cards in our data that include lounge access.
-            For a ranked pick of the best card for lounge access, see our{" "}
-            <Link href="/personal-finance/best-travel-credit-cards-canada">best travel credit cards in Canada</Link>{" "}
-            roundup. As of July 2026.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           {/* KEEP GOING */}
           <div id="deep" className="cd-sec" style={{ scrollMarginTop: 70 }}>Keep going</div>

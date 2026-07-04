@@ -38,7 +38,7 @@ export function NewsletterSignup({ compact = false }: { compact?: boolean }) {
   if (status === "ok") {
     return (
       <p className="nlok">
-        Almost there — check your inbox and click the confirmation link to finish signing up.
+        Almost there. Check your inbox and click the confirmation link to finish signing up.
       </p>
     );
   }

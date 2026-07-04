@@ -22,6 +22,33 @@ const TOC = [
   { id: "caveats", label: "The caveats" },
 ];
 
+const FAQ = [
+  {
+    q: "How much money does the government add to an RESP?",
+    a: "The Canada Education Savings Grant adds 20 percent of what you contribute, on the first $2,500 per child each year. That is up to $500 a year per child. The basic grant has no income test, so families at any income level can collect it.",
+  },
+  {
+    q: "How much should I contribute each year to get the full CESG?",
+    a: "Contribute $2,500 per child per year to capture the full $500 grant. Put in less and you get 20 percent of whatever you contribute. Put in more in one year and the extra earns no additional grant that year, though it can still grow tax sheltered.",
+  },
+  {
+    q: "Can I catch up on RESP grant room from missed years?",
+    a: "Yes. Unused grant room carries forward, but you can only claim one missed year on top of the current year. That means the most CESG you can collect in a single year is $1,000, on a $5,000 contribution. You cannot wipe out several missed years in one big deposit.",
+  },
+  {
+    q: "What is the lifetime CESG limit per child?",
+    a: "The lifetime CESG cap is $7,200 per child. That is separate from the $50,000 lifetime contribution limit, which is your own money. At $500 a year it takes roughly 14 or 15 years of full contributions to reach the $7,200 grant maximum.",
+  },
+  {
+    q: "What happens to the RESP if my child does not go to school?",
+    a: "The CESG that was never used goes back to the government. Your own contributions stay yours and come out tax-free. The investment growth becomes an Accumulated Income Payment, taxable as income plus a penalty tax, though you can often move up to $50,000 of it into your RRSP if you have room and the plan qualifies, which avoids the penalty.",
+  },
+  {
+    q: "Is RESP money taxed when it comes out?",
+    a: "Your contributions come back tax-free because they are your own capital. The grant and growth are paid as an Educational Assistance Payment, which is taxable in the student's hands, not yours. Because most students have little income and get tuition and personal credits, this money is often taxed very little or not at all.",
+  },
+];
+
 export default function RespCesgGrantPage() {
   if (!isPFPublished("resp-cesg-grant-canada")) notFound();
 
@@ -32,56 +59,11 @@ export default function RespCesgGrantPage() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "How much money does the government add to an RESP?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The Canada Education Savings Grant adds 20 percent of what you contribute, on the first $2,500 per child each year. That is up to $500 a year per child. The basic grant has no income test, so families at any income level can collect it.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How much should I contribute each year to get the full CESG?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Contribute $2,500 per child per year to capture the full $500 grant. Put in less and you get 20 percent of whatever you contribute. Put in more in one year and the extra earns no additional grant that year, though it can still grow tax sheltered.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can I catch up on RESP grant room from missed years?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. Unused grant room carries forward, but you can only claim one missed year on top of the current year. That means the most CESG you can collect in a single year is $1,000, on a $5,000 contribution. You cannot wipe out several missed years in one big deposit.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What is the lifetime CESG limit per child?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The lifetime CESG cap is $7,200 per child. That is separate from the $50,000 lifetime contribution limit, which is your own money. At $500 a year it takes roughly 14 or 15 years of full contributions to reach the $7,200 grant maximum.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What happens to the RESP if my child does not go to school?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The CESG that was never used goes back to the government. Your own contributions stay yours and come out tax-free. The investment growth becomes an Accumulated Income Payment, taxable as income plus a penalty tax, though you can often move up to $50,000 of it into your RRSP if you have room and the plan qualifies, which avoids the penalty.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Is RESP money taxed when it comes out?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Your contributions come back tax-free because they are your own capital. The grant and growth are paid as an Educational Assistance Payment, which is taxable in the student's hands, not yours. Because most students have little income and get tuition and personal credits, this money is often taxed very little or not at all.",
-                },
-              },
-            ],
+            mainEntity: FAQ.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
           }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
@@ -306,44 +288,12 @@ export default function RespCesgGrantPage() {
           </p>
 
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>How much money does the government add to an RESP?</h4>
-          <p>
-            The Canada Education Savings Grant adds 20 percent of what you contribute, on the first $2,500 per child
-            each year. That is up to $500 a year per child. The basic grant has no income test, so families at any
-            income level can collect it.
-          </p>
-          <h4>How much should I contribute each year to get the full CESG?</h4>
-          <p>
-            Contribute $2,500 per child per year to capture the full $500 grant. Put in less and you get 20 percent
-            of whatever you contribute. Put in more in one year and the extra earns no additional grant that year,
-            though it can still grow tax sheltered.
-          </p>
-          <h4>Can I catch up on RESP grant room from missed years?</h4>
-          <p>
-            Yes. Unused grant room carries forward, but you can only claim one missed year on top of the current
-            year. That means the most CESG you can collect in a single year is $1,000, on a $5,000 contribution. You
-            cannot wipe out several missed years in one big deposit.
-          </p>
-          <h4>What is the lifetime CESG limit per child?</h4>
-          <p>
-            The lifetime CESG cap is $7,200 per child. That is separate from the $50,000 lifetime contribution
-            limit, which is your own money. At $500 a year it takes roughly 14 or 15 years of full contributions to
-            reach the $7,200 grant maximum.
-          </p>
-          <h4>What happens to the RESP if my child does not go to school?</h4>
-          <p>
-            The CESG that was never used goes back to the government. Your own contributions stay yours and come out
-            tax-free. The investment growth becomes an Accumulated Income Payment, taxable as income plus a penalty
-            tax, though you can often move up to $50,000 of it into your RRSP if you have room and the plan
-            qualifies, which avoids the penalty.
-          </p>
-          <h4>Is RESP money taxed when it comes out?</h4>
-          <p>
-            Your contributions come back tax-free because they are your own capital. The grant and growth are paid
-            as an Educational Assistance Payment, which is taxable in the student&apos;s hands, not yours. Because
-            most students have little income and get tuition and personal credits, this money is often taxed very
-            little or not at all.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           <div className="cd-sec">Keep going</div>
           <p>Once the RESP is humming, it helps to know where your next dollar should go across all your accounts, and how to put any rewards you earn to work too.</p>

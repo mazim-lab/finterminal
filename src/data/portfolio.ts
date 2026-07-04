@@ -1,5 +1,5 @@
 /**
- * Current Portfolio — a public, privacy-safe view of real positions.
+ * Current Portfolio: a public, privacy-safe view of real positions.
  *
  * PRIVACY: this committed file holds ONLY percentages (return vs book, and weight)
  * and editorial theses. No share/contract counts, strike prices, or dollar amounts

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Affiliate Disclosure | FinTerminal",
   description: "How FinTerminal uses affiliate links, and our promise that they never change our rankings or recommendations.",
@@ -40,7 +42,7 @@ export default function DisclosurePage() {
           </p>
 
           <p className="lede" style={{ marginTop: 20 }}>
-            Questions? <a className="lnk" href="/contact">Reach out any time</a>. We would rather earn your trust
+            Questions? <Link className="lnk" href="/contact">Reach out any time</Link>. We would rather earn your trust
             than a quick click.
           </p>
         </div>

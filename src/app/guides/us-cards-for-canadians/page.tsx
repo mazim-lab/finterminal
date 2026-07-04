@@ -1,4 +1,32 @@
 import Link from 'next/link';
+import { ArticleTags } from "@/components/ArticleTags";
+
+const FAQ = [
+  {
+    q: 'Can a Canadian get a US credit card?',
+    a: 'Yes. The most reliable first step is Amex Global Transfer, which lets you use an existing Canadian Amex card to get approved for a US Amex with no US credit history and no ITIN. For most other issuers, like Chase, Citi, and Capital One, you also need a US mailing address, a US bank account, an ITIN, and several months of US credit history.',
+  },
+  {
+    q: 'Do you need an ITIN to get US credit cards?',
+    a: 'Not for your first Amex through Global Transfer, but you do for almost everyone else. Chase, Citi, Capital One, and Bank of America all want an ITIN, which is the tax ID the IRS issues to people who are not eligible for a Social Security Number. That is why the usual plan is to get the Amex card first and apply for the ITIN in parallel.',
+  },
+  {
+    q: 'How much does it cost to get an ITIN?',
+    a: 'The do-it-yourself route costs under $10. You file a 1040-NR return declaring a small amount of self-declared US-source gambling income, around $75 to $100, which creates a valid reason to need an ITIN and leaves you owing about $9 in tax. If you would rather not touch IRS forms, a specialist tax service handles the whole thing for roughly $150 to $300.',
+  },
+  {
+    q: 'How long does the whole process take?',
+    a: 'Getting your first Amex takes about 2 to 4 weeks, and the ITIN takes about 7 weeks to process, or 9 to 11 weeks if you apply during tax season (mid-January to late April) or from outside the US. Because those run in parallel, your credit is already building while the IRS works. Most people reach the point where Chase will approve them around 12 to 18 months after their first US card.',
+  },
+  {
+    q: 'Why do you have to check the commercial-address flag?',
+    a: 'Look up your US address in the USPS tool and check the Commercial Mail Receiving Agency flag. It must read N. If it shows Y, issuers like Chase may flag and reject your applications. Some mail forwarding addresses are flagged as commercial, so always verify before you sign up.',
+  },
+  {
+    q: 'Can you use US cards for spending in Canada?',
+    a: 'Yes. Most premium US cards have no foreign transaction fee, so you can use them for everyday Canadian purchases and earn US points without the usual 2.5 percent surcharge. Just keep the double currency conversion in mind, and pay your bills through an FX service like Wise, VBCE, or Knightsbridge FX rather than your bank\'s exchange rate.',
+  },
+];
 
 const TOC = [
   { id: 'why', label: 'Why get US cards?' },
@@ -37,6 +65,8 @@ export default function USCardsGuidePage() {
             <span>about 25 min read</span><span className="sep">·</span>
             <span>covers ITIN, US credit, Chase 5/24</span>
           </div>
+
+          <ArticleTags path="/guides/us-cards-for-canadians" />
 
           <div className="cd-note" style={{ marginTop: 14 }}>
             <div className="cap">Short answer</div>
@@ -149,7 +179,7 @@ export default function USCardsGuidePage() {
             <div id="step-4" className="step" style={{ scrollMarginTop: 70 }}>
               <div className="num">4</div>
               <div className="st">Apply for an ITIN</div>
-              <div className="stm">timeline: 6 to 12 weeks to process</div>
+              <div className="stm">timeline: about 7 weeks, or 9 to 11 weeks if you apply during tax season (mid-January to late April) or from outside the US</div>
               <p>
                 An Individual Taxpayer Identification Number (ITIN) is a tax ID the IRS issues to people who
                 are not eligible for a Social Security Number. You need one to apply for cards from Chase,
@@ -191,7 +221,8 @@ export default function USCardsGuidePage() {
                   <ul style={{ margin: '4px 0 0' }}>
                     <li>Mail to: Internal Revenue Service, ITIN Operation, P.O. Box 149342, Austin, TX 78714-9342, USA.</li>
                     <li>Use Canada Post registered mail (about $15) so you have tracking and proof.</li>
-                    <li>You must include your original passport, since the IRS no longer accepts certified copies. It can take around five months to come back, and passports have occasionally been lost in transit. If you have travel coming up, choose Path A.</li>
+                    <li>You can include either your original passport or a copy certified by Passport Canada, the issuing agency. A notarized copy is not enough. If you mail the original, it can take up to 60 days to come back, and passports have occasionally been lost in transit.</li>
+                    <li>To avoid mailing your passport at all, an IRS-authorized Certifying Acceptance Agent (CAA) or a Taxpayer Assistance Center can verify it in person, so you never have to send the original. If you have travel coming up, choose Path A.</li>
                   </ul>
                 </div>
               </div>
@@ -285,7 +316,7 @@ export default function USCardsGuidePage() {
               <ul>
                 <li>Pay the roughly $9 by cheque to the United States Treasury with your mailing, or online at <a href="https://www.irs.gov/payments" target="_blank" rel="noopener noreferrer" className="lnk">irs.gov/payments</a>.</li>
                 <li>Any late penalty caps at 100 percent of the tax owed, so about $9 at most plus a little interest. There is no need to stress about timing.</li>
-                <li>Processing takes 6 to 8 weeks, after which you receive a letter with your nine-digit ITIN.</li>
+                <li>Processing takes about 7 weeks, or 9 to 11 weeks if you apply during tax season (mid-January to late April) or from outside the US, after which you receive a letter with your nine-digit ITIN.</li>
                 <li>As soon as it arrives, link it to your Amex US account.</li>
                 <li>An ITIN expires if it is not used on a return for three years, so file periodically to keep it active. Lost the letter? Call <span className="fld">267-941-1000</span> with your name, address, and birthdate.</li>
               </ul>
@@ -294,7 +325,7 @@ export default function USCardsGuidePage() {
                 This is exactly why we got the Amex card first. Your credit is already building through Global Transfer while your ITIN works its way through the IRS in parallel.
               </div>
               <p className="sub" style={{ fontSize: 12 }}>
-                This guide is educational and is not tax advice. For your specific situation, talk to a tax professional.
+                This guide is educational and is not tax advice. For your specific situation, talk to a cross-border tax professional, and always report your income accurately.
               </p>
             </div>
 
@@ -393,7 +424,7 @@ export default function USCardsGuidePage() {
           <p className="sub">Every situation is different, but this is a solid framework for your first 18 months and beyond.</p>
           <div className="acc-pair">
             <div className="cd-note"><div className="cap">Month 0</div><strong>Amex Hilton Honors (no-fee keeper).</strong> Your anchor card, kept forever as your oldest account.</div>
-            <div className="cd-note"><div className="cap">Month 1 to 2</div><strong>Apply for your ITIN.</strong> Submit the W-7 through a service or DIY. Roughly 8 weeks to process.</div>
+            <div className="cd-note"><div className="cap">Month 1 to 2</div><strong>Apply for your ITIN.</strong> Submit the W-7 through a service or DIY. About 7 weeks to process, or 9 to 11 weeks if you apply during tax season (mid-January to late April) or from outside the US.</div>
             <div className="cd-note"><div className="cap">Month 3</div><strong>Amex Hilton Aspire or Amex Gold.</strong> A second personal card to deepen your file, chosen on current offers.</div>
             <div className="cd-note"><div className="cap">Month 3 to 6</div><strong>Amex Business Platinum and Business Gold.</strong> Business cards do not count toward 5/24, so grab them for the bonuses.</div>
             <div className="cd-note"><div className="cap">Month 4</div><strong>ITIN arrives, link it everywhere.</strong> Call Amex to link your ITIN to every US account.</div>
@@ -403,18 +434,12 @@ export default function USCardsGuidePage() {
 
           {/* FAQ */}
           <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
-          <h4>Can a Canadian get a US credit card?</h4>
-          <p>Yes. The most reliable first step is Amex Global Transfer, which lets you use an existing Canadian Amex card to get approved for a US Amex with no US credit history and no ITIN. For most other issuers, like Chase, Citi, and Capital One, you also need a US mailing address, a US bank account, an ITIN, and several months of US credit history.</p>
-          <h4>Do you need an ITIN to get US credit cards?</h4>
-          <p>Not for your first Amex through Global Transfer, but you do for almost everyone else. Chase, Citi, Capital One, and Bank of America all want an ITIN, which is the tax ID the IRS issues to people who are not eligible for a Social Security Number. That is why the usual plan is to get the Amex card first and apply for the ITIN in parallel.</p>
-          <h4>How much does it cost to get an ITIN?</h4>
-          <p>The do-it-yourself route costs under $10. You file a 1040-NR return declaring a small amount of self-declared US-source gambling income, around $75 to $100, which creates a valid reason to need an ITIN and leaves you owing about $9 in tax. If you would rather not touch IRS forms, a specialist tax service handles the whole thing for roughly $150 to $300.</p>
-          <h4>How long does the whole process take?</h4>
-          <p>Getting your first Amex takes about 2 to 4 weeks, and the ITIN takes roughly 6 to 12 weeks to process. Because those run in parallel, your credit is already building while the IRS works. Most people reach the point where Chase will approve them around 12 to 18 months after their first US card.</p>
-          <h4>Why do you have to check the commercial-address flag?</h4>
-          <p>Look up your US address in the USPS tool and check the Commercial Mail Receiving Agency flag. It must read N. If it shows Y, issuers like Chase may flag and reject your applications. Some mail forwarding addresses are flagged as commercial, so always verify before you sign up.</p>
-          <h4>Can you use US cards for spending in Canada?</h4>
-          <p>Yes. Most premium US cards have no foreign transaction fee, so you can use them for everyday Canadian purchases and earn US points without the usual 2.5 percent surcharge. Just keep the double currency conversion in mind, and pay your bills through an FX service like Wise, VBCE, or Knightsbridge FX rather than your bank&apos;s exchange rate.</p>
+          {FAQ.map(item => (
+            <div key={item.q}>
+              <h4>{item.q}</h4>
+              <p>{item.a}</p>
+            </div>
+          ))}
 
           <script
             type="application/ld+json"
@@ -422,56 +447,14 @@ export default function USCardsGuidePage() {
               __html: JSON.stringify({
                 '@context': 'https://schema.org',
                 '@type': 'FAQPage',
-                mainEntity: [
-                  {
-                    '@type': 'Question',
-                    name: 'Can a Canadian get a US credit card?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Yes. The most reliable first step is Amex Global Transfer, which lets you use an existing Canadian Amex card to get approved for a US Amex with no US credit history and no ITIN. For most other issuers, like Chase, Citi, and Capital One, you also need a US mailing address, a US bank account, an ITIN, and several months of US credit history.',
-                    },
+                mainEntity: FAQ.map(item => ({
+                  '@type': 'Question',
+                  name: item.q,
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: item.a,
                   },
-                  {
-                    '@type': 'Question',
-                    name: 'Do you need an ITIN to get US credit cards?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Not for your first Amex through Global Transfer, but you do for almost everyone else. Chase, Citi, Capital One, and Bank of America all want an ITIN, which is the tax ID the IRS issues to people who are not eligible for a Social Security Number. That is why the usual plan is to get the Amex card first and apply for the ITIN in parallel.',
-                    },
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'How much does it cost to get an ITIN?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'The do-it-yourself route costs under $10. You file a 1040-NR return declaring a small amount of self-declared US-source gambling income, around $75 to $100, which creates a valid reason to need an ITIN and leaves you owing about $9 in tax. If you would rather not touch IRS forms, a specialist tax service handles the whole thing for roughly $150 to $300.',
-                    },
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'How long does the whole process take?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Getting your first Amex takes about 2 to 4 weeks, and the ITIN takes roughly 6 to 12 weeks to process. Because those run in parallel, your credit is already building while the IRS works. Most people reach the point where Chase will approve them around 12 to 18 months after their first US card.',
-                    },
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Why do you have to check the commercial-address flag?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Look up your US address in the USPS tool and check the Commercial Mail Receiving Agency flag. It must read N. If it shows Y, issuers like Chase may flag and reject your applications. Some mail forwarding addresses are flagged as commercial, so always verify before you sign up.',
-                    },
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Can you use US cards for spending in Canada?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Yes. Most premium US cards have no foreign transaction fee, so you can use them for everyday Canadian purchases and earn US points without the usual 2.5 percent surcharge. Just keep the double currency conversion in mind, and pay your bills through an FX service like Wise, VBCE, or Knightsbridge FX rather than your bank\'s exchange rate.',
-                    },
-                  },
-                ],
+                })),
               }),
             }}
           />

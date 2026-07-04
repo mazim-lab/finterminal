@@ -136,7 +136,7 @@ export default function NewcomerFirstCardsAccountsPage() {
           <p>
             To give a sense of how these programs are structured, here are two current examples stated on the banks' own
             newcomer pages, as of July 2026. On its{" "}
-            <a href="https://www.rbcroyalbank.com/new-to-canada/index.html" target="_blank" rel="noopener noreferrer">newcomer page</a>, RBC says the monthly fee is waived for the first twelve
+            <a href="https://www.rbcroyalbank.com/new-to-canada/" target="_blank" rel="noopener noreferrer">newcomer page</a>, RBC says the monthly fee is waived for the first twelve
             months on an eligible chequing account, and that eligible newcomers can get a credit card with no credit
             history required. Scotiabank's{" "}
             <a href="https://startright.scotiabank.com/ca/en.html" target="_blank" rel="noopener noreferrer">StartRight program</a> states that a Canadian credit history is not required to be

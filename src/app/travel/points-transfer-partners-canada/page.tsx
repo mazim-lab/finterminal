@@ -17,6 +17,34 @@ const TOC = [
   { id: "deep", label: "Deep dives by program" },
 ];
 
+// Single source of truth for the FAQ: drives both the visible list and the JSON-LD.
+const FAQ = [
+  {
+    q: "Which Canadian credit card points transfer to airlines?",
+    a: "In Canada, the two currencies that genuinely transfer into airline and hotel loyalty programs are American Express Membership Rewards and RBC Avion Rewards (on Avion Elite cards). Amex MR moves to partners like Air Canada Aeroplan and British Airways Avios, generally at 1 to 1. RBC Avion moves to British Airways Avios at 1 to 1 and American Airlines AAdvantage at 10 points for 7 miles, among a short list. The other big-bank programs are mostly fixed-value or travel-portal programs, not airline-transfer currencies.",
+  },
+  {
+    q: "Can I transfer TD Rewards, Scene+, CIBC Aventura or BMO Rewards to airlines?",
+    a: "Not in the way people mean by transfer. TD Rewards, Scotiabank Scene+, CIBC Aventura and BMO Rewards are primarily fixed-value or travel-portal programs. You redeem the points against a travel booking, or through the program's own award chart in the case of Aventura, rather than converting them into a stack of Aeroplan or Avios you then book with. They are useful, they just work differently, so treat their points as a set number of dollars off travel, not as a transferable airline currency.",
+  },
+  {
+    q: "What is the Amex Membership Rewards to Aeroplan ratio in Canada?",
+    a: "Amex Membership Rewards transfers to Air Canada Aeroplan at 1 to 1, so 30,000 MR points become 30,000 Aeroplan points, usually within minutes. British Airways Avios is also 1 to 1. A minimum of 1,000 points applies and transfers move in 100-point increments. Ratios and partners change, so confirm the live figure in your Amex account before you move anything. As of July 2026.",
+  },
+  {
+    q: "What is the RBC Avion to British Airways and American Airlines ratio?",
+    a: "On Avion Elite cards, RBC Avion transfers to British Airways Avios at a base 1 to 1 with a 10,000-point minimum, and to American Airlines AAdvantage at a base 10 Avion points for 7 miles (a 1 to 0.7 ratio) with a 5,000-point minimum. RBC also lists Cathay Pacific Asia Miles and WestJet as conversion partners; confirm those live ratios in Avion Rewards. RBC runs periodic transfer bonuses that improve the math. As of July 2026.",
+  },
+  {
+    q: "Are points transfers reversible?",
+    a: "No. Every transfer covered here is one-way and irreversible. Once your Membership Rewards or Avion points become Aeroplan, Avios, AAdvantage or Asia Miles, you cannot convert them back. That is why the golden rule is to find and confirm the award seat first, then transfer only the points that booking needs.",
+  },
+  {
+    q: "Should I wait for a transfer bonus?",
+    a: "If your trip is flexible, yes. Both Amex and RBC periodically run limited-time transfer bonuses that add roughly 15 to 35 percent to a given partner, which meaningfully softens a ratio like Avion to AAdvantage. But a bonus only helps if you were going to use the points and the award seat is still there. Never transfer against a seat you have not confirmed just to catch a promo.",
+  },
+];
+
 export default function PointsTransferPartnersCanadaPage() {
   return (
     <div className="app norail">
@@ -28,56 +56,7 @@ export default function PointsTransferPartnersCanadaPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "Which Canadian credit card points transfer to airlines?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "In Canada, the two currencies that genuinely transfer into airline and hotel loyalty programs are American Express Membership Rewards and RBC Avion Rewards (on Avion Elite cards). Amex MR moves to partners like Air Canada Aeroplan and British Airways Avios, generally at 1 to 1. RBC Avion moves to British Airways Avios at 1 to 1 and American Airlines AAdvantage at 10 points for 7 miles, among a short list. The other big-bank programs are mostly fixed-value or travel-portal programs, not airline-transfer currencies.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Can I transfer TD Rewards, Scene+, CIBC Aventura or BMO Rewards to airlines?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Not in the way people mean by transfer. TD Rewards, Scotiabank Scene+, CIBC Aventura and BMO Rewards are primarily fixed-value or travel-portal programs. You redeem the points against a travel booking, or through the program's own award chart in the case of Aventura, rather than converting them into a stack of Aeroplan or Avios you then book with. They are useful, they just work differently, so treat their points as a set number of dollars off travel, not as a transferable airline currency.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "What is the Amex Membership Rewards to Aeroplan ratio in Canada?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Amex Membership Rewards transfers to Air Canada Aeroplan at 1 to 1, so 30,000 MR points become 30,000 Aeroplan points, usually within minutes. British Airways Avios is also 1 to 1. A minimum of 1,000 points applies and transfers move in 100-point increments. Ratios and partners change, so confirm the live figure in your Amex account before you move anything. As of July 2026.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "What is the RBC Avion to British Airways and American Airlines ratio?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "On Avion Elite cards, RBC Avion transfers to British Airways Avios at a base 1 to 1 with a 10,000-point minimum, and to American Airlines AAdvantage at a base 10 Avion points for 7 miles (a 1 to 0.7 ratio) with a 5,000-point minimum. RBC also lists Cathay Pacific Asia Miles and WestJet as conversion partners; confirm those live ratios in Avion Rewards. RBC runs periodic transfer bonuses that improve the math. As of July 2026.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Are points transfers reversible?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "No. Every transfer covered here is one-way and irreversible. Once your Membership Rewards or Avion points become Aeroplan, Avios, AAdvantage or Asia Miles, you cannot convert them back. That is why the golden rule is to find and confirm the award seat first, then transfer only the points that booking needs.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Should I wait for a transfer bonus?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "If your trip is flexible, yes. Both Amex and RBC periodically run limited-time transfer bonuses that add roughly 15 to 35 percent to a given partner, which meaningfully softens a ratio like Avion to AAdvantage. But a bonus only helps if you were going to use the points and the award seat is still there. Never transfer against a seat you have not confirmed just to catch a promo.",
-                    },
-                  },
-                ],
+                mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
               }),
             }}
           />
@@ -131,7 +110,7 @@ export default function PointsTransferPartnersCanadaPage() {
             The word &ldquo;transfer&rdquo; gets used loosely in Canadian points, and the looseness is exactly what
             trips people up. In the classic, valuable sense, a transfer means moving your bank or card points into a
             separate airline or hotel loyalty program, where they become that program&apos;s own miles or points and get
-            booked under that program&apos;s award rules. That is how you unlock a business-class seat that would cost a
+            booked under that program&apos;s award rules. That is how you reach a business-class seat that would cost a
             fortune in cash. Only a couple of Canadian currencies do this.
           </p>
           <p>
@@ -251,7 +230,8 @@ export default function PointsTransferPartnersCanadaPage() {
           <p>
             RBC Avion Rewards is the other genuinely transferable Canadian currency, with one big asterisk: only Avion
             Elite points can transfer to airline partners. Those are the points earned on the premium Avion-branded
-            credit cards, such as the RBC Avion Visa Infinite and Visa Infinite Privilege. Points earned on no-fee or
+            credit cards: the RBC Avion Visa Infinite, the RBC Avion Visa Platinum, the RBC Avion Visa Infinite
+            Privilege, and the RBC Avion Visa Infinite Business. Points earned on no-fee or
             lower-tier RBC cards like the ION and ION+ cannot make the airline jump, so check which points you actually
             hold before you build a plan.
           </p>
@@ -323,50 +303,12 @@ export default function PointsTransferPartnersCanadaPage() {
 
           {/* FAQ */}
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>Which Canadian credit card points transfer to airlines?</h4>
-          <p>
-            In Canada, the two currencies that genuinely transfer into airline and hotel loyalty programs are American
-            Express Membership Rewards and RBC Avion Rewards (on Avion Elite cards). Amex MR moves to partners like Air
-            Canada Aeroplan and British Airways Avios, generally at 1 to 1. RBC Avion moves to British Airways Avios at
-            1 to 1 and American Airlines AAdvantage at 10 points for 7 miles, among a short list. The other big-bank
-            programs are mostly fixed-value or travel-portal programs, not airline-transfer currencies.
-          </p>
-          <h4>Can I transfer TD Rewards, Scene+, CIBC Aventura or BMO Rewards to airlines?</h4>
-          <p>
-            Not in the way people mean by transfer. TD Rewards, Scotiabank Scene+, CIBC Aventura, and BMO Rewards are
-            primarily fixed-value or travel-portal programs. You redeem the points against a travel booking, or through
-            the program&apos;s own award chart in the case of Aventura, rather than converting them into a stack of
-            Aeroplan or Avios you then book with. They are useful, they just work differently, so treat their points as
-            a set number of dollars off travel, not as a transferable airline currency.
-          </p>
-          <h4>What is the Amex Membership Rewards to Aeroplan ratio in Canada?</h4>
-          <p>
-            Amex Membership Rewards transfers to Air Canada Aeroplan at 1 to 1, so 30,000 MR points become 30,000
-            Aeroplan points, usually within minutes. British Airways Avios is also 1 to 1. A minimum of 1,000 points
-            applies and transfers move in 100-point increments. Ratios and partners change, so confirm the live figure
-            in your Amex account before you move anything. As of July 2026.
-          </p>
-          <h4>What is the RBC Avion to British Airways and American Airlines ratio?</h4>
-          <p>
-            On Avion Elite cards, RBC Avion transfers to British Airways Avios at a base 1 to 1 with a 10,000-point
-            minimum, and to American Airlines AAdvantage at a base 10 Avion points for 7 miles (a 1 to 0.7 ratio) with a
-            5,000-point minimum. RBC also lists Cathay Pacific Asia Miles and WestJet as conversion partners; confirm
-            those live ratios in Avion Rewards. RBC runs periodic transfer bonuses that improve the math. As of July
-            2026.
-          </p>
-          <h4>Are points transfers reversible?</h4>
-          <p>
-            No. Every transfer covered here is one-way and irreversible. Once your Membership Rewards or Avion points
-            become Aeroplan, Avios, AAdvantage, or Asia Miles, you cannot convert them back. That is why the golden rule
-            is to find and confirm the award seat first, then transfer only the points that booking needs.
-          </p>
-          <h4>Should I wait for a transfer bonus?</h4>
-          <p>
-            If your trip is flexible, yes. Both Amex and RBC periodically run limited-time transfer bonuses that add
-            roughly 15 to 35 percent to a given partner, which meaningfully softens a ratio like Avion to AAdvantage.
-            But a bonus only helps if you were going to use the points and the award seat is still there. Never transfer
-            against a seat you have not confirmed just to catch a promo.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           {/* KEEP GOING */}
           <div id="deep" className="cd-sec" style={{ scrollMarginTop: 70 }}>Deep dives by program</div>

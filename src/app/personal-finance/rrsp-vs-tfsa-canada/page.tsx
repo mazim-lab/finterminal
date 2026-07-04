@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { isPFPublished } from "@/data/personal-finance";
 
 export const metadata = {
   title: "RRSP vs TFSA: the honest decision for Canadians | FinTerminal",
@@ -92,7 +93,11 @@ export default function RrspVsTfsaPage() {
             over, so you can make the call for your own situation rather than copying someone whose income looks nothing
             like yours. If your real question is which account to fill first among all of them, that is a slightly
             different problem, and our{" "}
-            <Link href="/personal-finance/canadian-account-order-of-operations">account order of operations guide</Link>{" "}
+            {isPFPublished("canadian-account-order-of-operations") ? (
+              <Link href="/personal-finance/canadian-account-order-of-operations">account order of operations guide</Link>
+            ) : (
+              "account order of operations guide"
+            )}{" "}
             handles the full waterfall.
           </p>
           <div className="docmeta">
@@ -295,7 +300,12 @@ export default function RrspVsTfsaPage() {
           <p>
             If a first home is your goal, note that there is now a dedicated account for exactly that, and it often beats
             using either the RRSP or the TFSA for a down payment. Our{" "}
-            <Link href="/personal-finance/fhsa-playbook-canada">FHSA playbook</Link> walks through how the First Home
+            {isPFPublished("fhsa-playbook-canada") ? (
+              <Link href="/personal-finance/fhsa-playbook-canada">FHSA playbook</Link>
+            ) : (
+              "FHSA playbook"
+            )}{" "}
+            walks through how the First Home
             Savings Account combines an RRSP-style deduction with TFSA-style tax-free withdrawals for a qualifying home
             purchase.
           </p>
@@ -350,7 +360,11 @@ export default function RrspVsTfsaPage() {
           <p>
             If you are weighing where the very next dollar should go across every account, including an employer match,
             RESP, and FHSA, that ordering question is worth its own read. Start with our{" "}
-            <Link href="/personal-finance/canadian-account-order-of-operations">account order of operations guide</Link>,
+            {isPFPublished("canadian-account-order-of-operations") ? (
+              <Link href="/personal-finance/canadian-account-order-of-operations">account order of operations guide</Link>
+            ) : (
+              "account order of operations guide"
+            )},
             then come back here for the RRSP-versus-TFSA tie-break once you have narrowed it down to these two.
           </p>
 
@@ -412,12 +426,16 @@ export default function RrspVsTfsaPage() {
             horizon, whether the FHSA should come first.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
-            <Link href="/personal-finance/canadian-account-order-of-operations" className="cd-apply">
-              The Canadian account order of operations &rarr;
-            </Link>
-            <Link href="/personal-finance/fhsa-playbook-canada" className="cd-apply">
-              The FHSA playbook for Canadians &rarr;
-            </Link>
+            {isPFPublished("canadian-account-order-of-operations") && (
+              <Link href="/personal-finance/canadian-account-order-of-operations" className="cd-apply">
+                The Canadian account order of operations &rarr;
+              </Link>
+            )}
+            {isPFPublished("fhsa-playbook-canada") && (
+              <Link href="/personal-finance/fhsa-playbook-canada" className="cd-apply">
+                The FHSA playbook for Canadians &rarr;
+              </Link>
+            )}
             <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
               More personal finance &rarr;
             </Link>

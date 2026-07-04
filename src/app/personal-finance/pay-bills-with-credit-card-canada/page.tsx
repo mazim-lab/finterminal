@@ -21,6 +21,33 @@ const TOC = [
   { id: "verdict", label: "Is it worth it for you?" },
 ];
 
+const FAQ = [
+  {
+    q: "Can you pay rent, taxes, or your mortgage with a credit card in Canada?",
+    a: "Not directly, but third-party services will do it for you. Chexy, PaySimply, and Plastiq charge your credit card, take a fee of roughly 1.75 to 2.99 percent, and forward the money to your landlord, the CRA, or your lender by a method they accept. From the recipient's side it looks like an ordinary payment.",
+  },
+  {
+    q: "How much do these services charge?",
+    a: "Chexy charges roughly 1.75 percent on domestic Canadian cards and about 2.5 percent on international ones. PaySimply charges about 2.5 percent for credit or debit card payments. Plastiq charges around 2.99 percent as of early 2026. Fees change often, so confirm the live rate on each provider's own page before a large payment.",
+  },
+  {
+    q: "Is paying bills with a credit card worth the fee?",
+    a: "Usually not, if you are only chasing everyday points. Paying a 2.5 percent fee to earn about 1.5 percent back loses money on every payment. It is worth it only when something bigger is on the other side: unlocking a welcome bonus, reaching a spend-based perk or threshold, or holding a card that out-earns the fee.",
+  },
+  {
+    q: "Which service accepts American Express?",
+    a: "Chexy and PaySimply both accept Amex, which matters because Amex usually carries the largest welcome bonuses in Canada, so whether a service takes your specific Amex often decides whether it is useful. Plastiq is the odd one out: in Canada, Plastiq works with Visa and Mastercard (Amex is not supported here), and some bill types like mortgages, car loans, and student loans are off limits on personal Visa cards. Check your card and bill type on Plastiq's compatibility chart.",
+  },
+  {
+    q: "Will the payment count as a cash advance?",
+    a: "These services are designed to code as ordinary purchases, not cash advances, so you earn rewards and avoid cash-advance fees and immediate interest. Still, verify it with a small first payment and check your statement before you trust the service with something as large as rent. A payment that codes as a cash advance can quietly wreck the math.",
+  },
+  {
+    q: "How long does a payment take to reach the CRA?",
+    a: "Payments through these services are not instant, so allow several business days for the money to land. For a CRA deadline this matters, because the date that counts is when the CRA receives the money, not when you click pay. Do not leave a tax payment to the last afternoon.",
+  },
+];
+
 export default function PayBillsWithCreditCardPage() {
   if (!isPFPublished("pay-bills-with-credit-card-canada")) notFound();
 
@@ -28,14 +55,7 @@ export default function PayBillsWithCreditCardPage() {
     <div className="app norail">
       <main>
         <div className="doc">
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
-            { "@type": "Question", name: "Can you pay rent, taxes, or your mortgage with a credit card in Canada?", acceptedAnswer: { "@type": "Answer", text: "Not directly, but third-party services will do it for you. Chexy, PaySimply, and Plastiq charge your credit card, take a fee of roughly 1.75 to 2.99 percent, and forward the money to your landlord, the CRA, or your lender by a method they accept. From the recipient's side it looks like an ordinary payment." } },
-            { "@type": "Question", name: "How much do these services charge?", acceptedAnswer: { "@type": "Answer", text: "Chexy charges roughly 1.75 percent on domestic Canadian cards and about 2.5 percent on international ones. PaySimply charges about 2.5 percent for credit or debit card payments. Plastiq charges around 2.99 percent as of early 2026. Fees change often, so confirm the live rate on each provider's own page before a large payment." } },
-            { "@type": "Question", name: "Is paying bills with a credit card worth the fee?", acceptedAnswer: { "@type": "Answer", text: "Usually not, if you are only chasing everyday points. Paying a 2.5 percent fee to earn about 1.5 percent back loses money on every payment. It is worth it only when something bigger is on the other side: unlocking a welcome bonus, reaching a spend-based perk or threshold, or holding a card that out-earns the fee." } },
-            { "@type": "Question", name: "Which service accepts American Express?", acceptedAnswer: { "@type": "Answer", text: "Chexy and PaySimply both accept Amex, and Plastiq accepts Amex too. This matters because Amex usually carries the largest welcome bonuses in Canada, so whether a service takes your specific Amex often decides whether it is useful. Plastiq is the odd one out for a different reason: it does not accept Visa for most consumer payments." } },
-            { "@type": "Question", name: "Will the payment count as a cash advance?", acceptedAnswer: { "@type": "Answer", text: "These services are designed to code as ordinary purchases, not cash advances, so you earn rewards and avoid cash-advance fees and immediate interest. Still, verify it with a small first payment and check your statement before you trust the service with something as large as rent. A payment that codes as a cash advance can quietly wreck the math." } },
-            { "@type": "Question", name: "How long does a payment take to reach the CRA?", acceptedAnswer: { "@type": "Answer", text: "Payments through these services are not instant, so allow several business days for the money to land. For a CRA deadline this matters, because the date that counts is when the CRA receives the money, not when you click pay. Do not leave a tax payment to the last afternoon." } }
-          ] }) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
@@ -127,23 +147,27 @@ export default function PayBillsWithCreditCardPage() {
             though those do not run through a credit card and so earn no points.
           </p>
 
-          <h4>Plastiq (broader bills, but mind the Visa gap)</h4>
+          <h4>Plastiq (broader bills, but check card and bill type)</h4>
           <p>
             Plastiq is available in Canada and can pay a wide range of vendors, including rent, mortgage, and
             tuition, by charging your card and then sending the recipient a bank transfer or cheque. As of early
-            2026 it charges around <strong>2.99 percent</strong>, and here is the important quirk: it accepts{" "}
-            <strong>Mastercard, American Express, and Diners Club, but not Visa</strong> for most consumer
-            payments. Its higher fee makes it the least attractive on price, so it tends to matter only when you
-            need to reach a recipient the other services cannot.
+            2026 it charges around <strong>2.99 percent</strong>, and here is the important quirk: in Canada,
+            Plastiq works with Visa and Mastercard (Amex is not supported here), and some bill types like
+            mortgages, car loans, and student loans are off limits on personal Visa cards. Check your card and
+            bill type on Plastiq&apos;s compatibility chart. Its higher fee makes it the least attractive on
+            price, so it tends to matter only when you need to reach a recipient the other services cannot.
           </p>
 
           <div className="cd-note">
             <div className="cap">The Amex quirk worth remembering</div>
             <p style={{ margin: 0 }} className="sub">
               American Express usually carries the largest welcome bonuses in Canada, so whether a service takes
-              Amex often decides whether it is useful to you. Chexy and PaySimply both accept Amex. Plastiq
-              accepts Amex but not Visa. Always confirm your specific card is eligible before you count on it,
-              since providers add and drop card types over time.
+              Amex often decides whether it is useful to you. Chexy and PaySimply both accept Amex. Plastiq is
+              the odd one out here: in Canada, Plastiq works with Visa and Mastercard (Amex is not supported
+              here), and some bill types like mortgages, car loans, and student loans are off limits on personal
+              Visa cards. Check your card and bill type on Plastiq&apos;s compatibility chart. Always confirm
+              your specific card is eligible before you count on it, since providers add and drop card types over
+              time.
             </p>
           </div>
 
@@ -233,7 +257,7 @@ export default function PayBillsWithCreditCardPage() {
             <li><strong>Make sure it codes as a purchase, not a cash advance.</strong> This is the one that can quietly wreck the math. If your card treats the payment as a cash advance, you face a cash-advance fee plus interest that starts the moment you pay, and often no rewards at all. These services are designed to code as purchases, but verify with a small first payment and check your statement before you trust it with rent.</li>
             <li><strong>Always pay the statement in full.</strong> Any rewards you earn are erased many times over by credit card interest, which runs around 20 percent or more. If you cannot clear the balance the moment it posts, this strategy is not for you right now, full stop.</li>
             <li><strong>Watch your cash flow and timing.</strong> Payments are not always instant. For a CRA deadline especially, the date that counts is when the money arrives, so build in several business days and do not leave it to the last afternoon.</li>
-            <li><strong>Not every card is eligible.</strong> Networks and specific issuers get added and dropped. Plastiq not taking Visa is the obvious example, but any provider can exclude a card type, so confirm yours works.</li>
+            <li><strong>Not every card or bill type is eligible.</strong> Networks and specific issuers get added and dropped, and some providers exclude certain bills too. Plastiq in Canada is the obvious example: it works with Visa and Mastercard but not Amex, and personal Visa cards cannot cover bill types like mortgages, car loans, and student loans. Any provider can exclude a card or bill type, so confirm yours works on the provider&apos;s compatibility chart.</li>
             <li><strong>This is a tool for a goal, not a habit.</strong> The people who come out ahead use these services deliberately, to clear a welcome bonus or reach a threshold, and then stop. Paying a fee on every bill forever is how you slowly donate money to a payment processor.</li>
           </ul>
 
@@ -262,18 +286,12 @@ export default function PayBillsWithCreditCardPage() {
           </div>
 
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>Can you pay rent, taxes, or your mortgage with a credit card in Canada?</h4>
-          <p>Not directly, but third-party services will do it for you. Chexy, PaySimply, and Plastiq charge your credit card, take a fee of roughly 1.75 to 2.99 percent, and forward the money to your landlord, the CRA, or your lender by a method they accept. From the recipient&apos;s side it looks like an ordinary payment.</p>
-          <h4>How much do these services charge?</h4>
-          <p>Chexy charges roughly 1.75 percent on domestic Canadian cards and about 2.5 percent on international ones. PaySimply charges about 2.5 percent for credit or debit card payments. Plastiq charges around 2.99 percent as of early 2026. Fees change often, so confirm the live rate on each provider&apos;s own page before a large payment.</p>
-          <h4>Is paying bills with a credit card worth the fee?</h4>
-          <p>Usually not, if you are only chasing everyday points. Paying a 2.5 percent fee to earn about 1.5 percent back loses money on every payment. It is worth it only when something bigger is on the other side: unlocking a welcome bonus, reaching a spend-based perk or threshold, or holding a card that out-earns the fee.</p>
-          <h4>Which service accepts American Express?</h4>
-          <p>Chexy and PaySimply both accept Amex, and Plastiq accepts Amex too. This matters because Amex usually carries the largest welcome bonuses in Canada, so whether a service takes your specific Amex often decides whether it is useful. Plastiq is the odd one out for a different reason: it does not accept Visa for most consumer payments.</p>
-          <h4>Will the payment count as a cash advance?</h4>
-          <p>These services are designed to code as ordinary purchases, not cash advances, so you earn rewards and avoid cash-advance fees and immediate interest. Still, verify it with a small first payment and check your statement before you trust the service with something as large as rent. A payment that codes as a cash advance can quietly wreck the math.</p>
-          <h4>How long does a payment take to reach the CRA?</h4>
-          <p>Payments through these services are not instant, so allow several business days for the money to land. For a CRA deadline this matters, because the date that counts is when the CRA receives the money, not when you click pay. Do not leave a tax payment to the last afternoon.</p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           <div className="cd-sec">Keep going</div>
           <p>This move pairs naturally with picking the right card for a welcome bonus, and with the rest of our points and personal-finance guides.</p>

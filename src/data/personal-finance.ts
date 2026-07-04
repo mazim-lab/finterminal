@@ -19,6 +19,38 @@ export interface PFArticle {
 // the page and sitemap). No cron or deploy needed; they reveal on schedule.
 export const PF_ARTICLES: PFArticle[] = [
   {
+    slug: "how-to-build-credit-canada",
+    title: "How to build (or rebuild) credit in Canada",
+    dek: "How credit scores work in Canada, who tracks them (Equifax and TransUnion, roughly 300 to 900), the factors that move them, and a practical playbook to build credit from scratch, from a thin file, or after missed payments.",
+    tag: "Money",
+    read: "10 min read",
+    date: "Jul 2026",
+  },
+  {
+    slug: "check-your-credit-report-canada",
+    title: "Check your credit report and score in Canada, free",
+    dek: "How to read your Canadian credit report, check both your report and score for free from Equifax Canada and TransUnion Canada, understand why your number moves, spot and dispute errors, and see through common credit myths.",
+    tag: "Money",
+    read: "9 min read",
+    date: "Jul 2026",
+  },
+  {
+    slug: "newcomer-to-canada-first-cards-accounts",
+    title: "Newcomer to Canada: your first credit cards and bank accounts",
+    dek: "A plain-language playbook for newcomers: get a SIN, open a chequing and savings account, get a first credit card to start a Canadian credit file, and build credit from scratch. Your foreign credit history does not transfer.",
+    tag: "Money",
+    read: "9 min read",
+    date: "Jul 2026",
+  },
+  {
+    slug: "credit-card-travel-insurance-canada",
+    title: "What your credit card's travel insurance actually covers",
+    dek: "What credit-card travel insurance in Canada actually covers: emergency medical, trip cancellation, delays and rental cars, plus the age caps and day limits that catch people out.",
+    tag: "Cards",
+    read: "9 min read",
+    date: "Jul 2026",
+  },
+  {
     slug: "fhsa-vs-rrsp-home-buyers-plan",
     title: "FHSA vs the RRSP Home Buyers' Plan: which to use for a first home",
     dek: "The FHSA gives a tax-free withdrawal you never repay; the Home Buyers' Plan is a loan from your own RRSP you repay over 15 years. Which to prioritize for a first home, and how to use both.",

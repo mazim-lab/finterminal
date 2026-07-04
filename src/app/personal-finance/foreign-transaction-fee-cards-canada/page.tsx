@@ -22,6 +22,33 @@ const TOC = [
   { id: "verdict", label: "Is it for you?" },
 ];
 
+const FAQ = [
+  {
+    q: "How much is the foreign transaction fee in Canada?",
+    a: "Most Canadian credit cards add a foreign transaction fee of about 2.5 percent on any purchase made in a currency other than Canadian dollars. It is charged on top of the card network's own conversion rate, and it applies to the whole purchase. Because it is baked into the converted total on your statement rather than listed as its own line, most people never notice it.",
+  },
+  {
+    q: "Do I pay the foreign transaction fee on online shopping from home?",
+    a: "Yes. The fee is triggered by the currency of the purchase, not by where you are standing. If you buy from a US site billed in US dollars, a UK shop priced in pounds, or a subscription billed in euros, you pay the 2.5 percent even while sitting at home in Canada. Online shopping from foreign merchants is one of the biggest and most invisible sources of this fee.",
+  },
+  {
+    q: "Which Canadian credit cards have no foreign transaction fee?",
+    a: "The Scotiabank Passport Visa Infinite, the Wealthsimple Cash Back Visa, and the Home Trust Preferred Visa all charge no foreign transaction fee, so they work in any currency. The Rogers Red World Elite works differently: it still charges the 2.5 percent but pays about 3 percent cash back on US-dollar purchases, so it more than offsets the fee on USD spending specifically.",
+  },
+  {
+    q: "Is the Home Trust Preferred Visa really free to hold?",
+    a: "The Home Trust Preferred Visa has no annual fee and no foreign transaction fee, which makes it the simplest no-cost card to keep purely for foreign spending. A few honest footnotes: it is not available to residents of Quebec, there is a modest income requirement, and it can charge a small inactivity fee if you do not use it at least once a year. Put an occasional purchase through it to keep it alive.",
+  },
+  {
+    q: "What is dynamic currency conversion and should I accept it?",
+    a: "Dynamic currency conversion, or DCC, is when a foreign terminal or ATM offers to charge you in Canadian dollars instead of the local currency. Do not accept it. When you pay in Canadian dollars, the merchant's payment processor does the conversion at a poor rate padded with a markup that is often several percent, sometimes worse than the fee you were avoiding. Always choose the local currency and let your card network convert.",
+  },
+  {
+    q: "Does a no-FX card mean I pay nothing extra on foreign purchases?",
+    a: "No. A no-FX card removes the issuer's 2.5 percent surcharge, but you still pay the network's conversion rate, which is fair but not free. A merchant or a foreign ATM can also add its own charge. The card removes one cost, the issuer's surcharge, not every possible cost of spending in another currency.",
+  },
+];
+
 export default function ForeignTransactionFeePage() {
   if (!isPFPublished("foreign-transaction-fee-cards-canada")) notFound();
 
@@ -32,56 +59,11 @@ export default function ForeignTransactionFeePage() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "How much is the foreign transaction fee in Canada?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Most Canadian credit cards add a foreign transaction fee of about 2.5 percent on any purchase made in a currency other than Canadian dollars. It is charged on top of the card network's own conversion rate, and it applies to the whole purchase. Because it is baked into the converted total on your statement rather than listed as its own line, most people never notice it.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Do I pay the foreign transaction fee on online shopping from home?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. The fee is triggered by the currency of the purchase, not by where you are standing. If you buy from a US site billed in US dollars, a UK shop priced in pounds, or a subscription billed in euros, you pay the 2.5 percent even while sitting at home in Canada. Online shopping from foreign merchants is one of the biggest and most invisible sources of this fee.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Which Canadian credit cards have no foreign transaction fee?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The Scotiabank Passport Visa Infinite, the Wealthsimple credit card, and the Home Trust Preferred Visa all charge no foreign transaction fee, so they work in any currency. The Rogers Red World Elite works differently: it still charges the 2.5 percent but pays about 3 percent cash back on US-dollar purchases, so it more than offsets the fee on USD spending specifically.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Is the Home Trust Preferred Visa really free to hold?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The Home Trust Preferred Visa has no annual fee and no foreign transaction fee, which makes it the simplest no-cost card to keep purely for foreign spending. A few honest footnotes: it is not available to residents of Quebec, there is a modest income requirement, and it can charge a small inactivity fee if you do not use it at least once a year. Put an occasional purchase through it to keep it alive.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What is dynamic currency conversion and should I accept it?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Dynamic currency conversion, or DCC, is when a foreign terminal or ATM offers to charge you in Canadian dollars instead of the local currency. Do not accept it. When you pay in Canadian dollars, the merchant's payment processor does the conversion at a poor rate padded with a markup that is often several percent, sometimes worse than the fee you were avoiding. Always choose the local currency and let your card network convert.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Does a no-FX card mean I pay nothing extra on foreign purchases?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "No. A no-FX card removes the issuer's 2.5 percent surcharge, but you still pay the network's conversion rate, which is fair but not free. A merchant or a foreign ATM can also add its own charge. The card removes one cost, the issuer's surcharge, not every possible cost of spending in another currency.",
-                },
-              },
-            ],
+            mainEntity: FAQ.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
           }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
@@ -200,7 +182,8 @@ export default function ForeignTransactionFeePage() {
 
           <h4>Scotiabank Passport Visa Infinite (and its siblings)</h4>
           <p>
-            The Scotiabank Passport line is the best-known no-FX travel card in Canada, and it genuinely charges no
+            The <Link href="/cards/scotiabank-passport-visa-infinite-card">Scotiabank Passport Visa Infinite</Link>{" "}
+            line is the best-known no-FX travel card in Canada, and it genuinely charges no
             foreign transaction fee on foreign-currency purchases. You pay only Visa&apos;s conversion rate. The
             core Passport Visa Infinite carries an annual fee, roughly $150 at writing, and it layers on travel
             perks like some airport lounge passes and travel insurance, so it is aimed at people who travel enough
@@ -210,15 +193,15 @@ export default function ForeignTransactionFeePage() {
             options below.
           </p>
 
-          <h4>Wealthsimple credit card</h4>
+          <h4>Wealthsimple Cash Back Visa</h4>
           <p>
-            Wealthsimple&apos;s card is a strong modern pick: no foreign transaction fee on foreign-currency
-            purchases, plus a flat cash-back rate on everything you buy. Instead of a traditional annual fee, it
-            sits inside Wealthsimple&apos;s account tiers, so there can be a monthly cost tied to how much you keep
-            with them, though that cost can be waived if you meet their asset or direct-deposit thresholds. If you
-            already bank or invest with Wealthsimple, it can effectively be a no-FX card with no extra fee, which
-            is a genuinely nice combination. If you do not, weigh the tier requirement honestly before assuming it
-            is free.
+            The <Link href="/cards/wealthsimple-cash-back-visa">Wealthsimple Cash Back Visa</Link> is a strong
+            modern pick: no foreign transaction fee on foreign-currency purchases, plus a flat cash-back rate on
+            everything you buy. Instead of a traditional annual fee, it sits inside Wealthsimple&apos;s account
+            tiers, so there can be a monthly cost tied to how much you keep with them, though that cost can be
+            waived if you meet their asset or direct-deposit thresholds. If you already bank or invest with
+            Wealthsimple, it can effectively be a no-FX card with no extra fee, which is a genuinely nice
+            combination. If you do not, weigh the tier requirement honestly before assuming it is free.
           </p>
 
           <h4>Home Trust Preferred Visa</h4>
@@ -230,6 +213,14 @@ export default function ForeignTransactionFeePage() {
             It is not available to residents of Quebec, there is a modest income requirement, and it can charge a
             small inactivity fee if you do not use it at least once a year, so put an occasional purchase through
             it to keep it alive.
+          </p>
+          <p>
+            One practical note: the Home Trust Preferred Visa is not currently in our card explorer, so we cannot
+            link you to a card page for it. If you want a no-FX card you can look up and compare on FinTerminal
+            today, the two in-dataset picks above are the{" "}
+            <Link href="/cards/wealthsimple-cash-back-visa">Wealthsimple Cash Back Visa</Link> and the{" "}
+            <Link href="/cards/scotiabank-passport-visa-infinite-card">Scotiabank Passport Visa Infinite</Link>,
+            both of which charge no foreign transaction fee.
           </p>
 
           <h4>Rogers Red World Elite Mastercard (the offset card)</h4>
@@ -348,49 +339,12 @@ export default function ForeignTransactionFeePage() {
           </div>
 
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>How much is the foreign transaction fee in Canada?</h4>
-          <p>
-            Most Canadian credit cards add a foreign transaction fee of about 2.5 percent on any purchase made in a
-            currency other than Canadian dollars. It is charged on top of the card network&apos;s own conversion
-            rate, and it applies to the whole purchase. Because it is baked into the converted total on your
-            statement rather than listed as its own line, most people never notice it.
-          </p>
-          <h4>Do I pay the foreign transaction fee on online shopping from home?</h4>
-          <p>
-            Yes. The fee is triggered by the currency of the purchase, not by where you are standing. If you buy
-            from a US site billed in US dollars, a UK shop priced in pounds, or a subscription billed in euros, you
-            pay the 2.5 percent even while sitting at home in Canada. Online shopping from foreign merchants is one
-            of the biggest and most invisible sources of this fee.
-          </p>
-          <h4>Which Canadian credit cards have no foreign transaction fee?</h4>
-          <p>
-            The Scotiabank Passport Visa Infinite, the Wealthsimple credit card, and the Home Trust Preferred Visa
-            all charge no foreign transaction fee, so they work in any currency. The Rogers Red World Elite works
-            differently: it still charges the 2.5 percent but pays about 3 percent cash back on US-dollar purchases,
-            so it more than offsets the fee on USD spending specifically.
-          </p>
-          <h4>Is the Home Trust Preferred Visa really free to hold?</h4>
-          <p>
-            The Home Trust Preferred Visa has no annual fee and no foreign transaction fee, which makes it the
-            simplest no-cost card to keep purely for foreign spending. A few honest footnotes: it is not available
-            to residents of Quebec, there is a modest income requirement, and it can charge a small inactivity fee
-            if you do not use it at least once a year. Put an occasional purchase through it to keep it alive.
-          </p>
-          <h4>What is dynamic currency conversion and should I accept it?</h4>
-          <p>
-            Dynamic currency conversion, or DCC, is when a foreign terminal or ATM offers to charge you in Canadian
-            dollars instead of the local currency. Do not accept it. When you pay in Canadian dollars, the
-            merchant&apos;s payment processor does the conversion at a poor rate padded with a markup that is often
-            several percent, sometimes worse than the fee you were avoiding. Always choose the local currency and
-            let your card network convert.
-          </p>
-          <h4>Does a no-FX card mean I pay nothing extra on foreign purchases?</h4>
-          <p>
-            No. A no-FX card removes the issuer&apos;s 2.5 percent surcharge, but you still pay the network&apos;s
-            conversion rate, which is fair but not free. A merchant or a foreign ATM can also add its own charge.
-            The card removes one cost, the issuer&apos;s surcharge, not every possible cost of spending in another
-            currency.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           <div className="cd-sec">Keep going</div>
           <p>Once you have picked a card for foreign spending, it is worth comparing it against your everyday earner too.</p>

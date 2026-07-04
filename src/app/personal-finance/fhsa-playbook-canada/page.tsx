@@ -23,6 +23,33 @@ const TOC = [
   { id: "caveats", label: "Who is the FHSA not for?" },
 ];
 
+const FAQ = [
+  {
+    q: "How much can you contribute to an FHSA?",
+    a: "The FHSA has an annual contribution limit of $8,000 and a lifetime limit of $40,000. If you do not use your full $8,000 in a year, you can carry unused room forward, but only up to $8,000 into the next year. That means the most you can contribute in a single year is $16,000, this year's $8,000 plus at most $8,000 carried over.",
+  },
+  {
+    q: "Is FHSA room retroactive if I open the account late?",
+    a: "No. Unlike the TFSA, where room accumulates from the year you turn 18 whether you have an account or not, FHSA room only starts once you actually open the account. If you are eligible and even vaguely thinking about a first home, the smart move is to open an FHSA now, even with a small deposit or none at all, just to start the clock on your room.",
+  },
+  {
+    q: "Can I use the FHSA and the RRSP Home Buyers' Plan together?",
+    a: "Yes. They are separate programs, so you can use both for the same first home. The FHSA gives you a tax-free withdrawal with no repayment, while the Home Buyers' Plan lets you withdraw up to $60,000 from your RRSP that you repay over 15 years. Confirm the current HBP limit and repayment rules before you plan around them, since the government has adjusted them recently.",
+  },
+  {
+    q: "What happens to my FHSA if I never buy a home?",
+    a: "If you do not use the FHSA for a home, you can transfer the entire balance, contributions and growth, into your RRSP or a RRIF on a tax-free basis, and that transfer does not use up any of your RRSP contribution room. In effect the FHSA acts as bonus RRSP room. You could instead take the money as a non-qualifying withdrawal, but that amount is taxable as income, so the transfer is almost always the better route.",
+  },
+  {
+    q: "Do I have to claim the FHSA deduction in the year I contribute?",
+    a: "No. Just like with an RRSP, contributing and deducting are separate steps that do not have to happen in the same year. You can contribute now to get the money growing, then carry the deduction forward and claim it in a future year when your income and tax rate are higher, so the same deduction saves you more tax.",
+  },
+  {
+    q: "Who is eligible to open an FHSA?",
+    a: "You need to be a resident of Canada with a valid Social Insurance Number, at least 18 (and no younger than the age of majority in your province) and no older than 71, and a first-time home buyer. For the FHSA, first-time buyer means you did not live in a home that you or your spouse or common-law partner owned at any point in the current year or the previous four calendar years. That four-year lookback means some past owners who have been renting can qualify again.",
+  },
+];
+
 export default function FHSAPlaybookPage() {
   if (!isPFPublished("fhsa-playbook-canada")) notFound();
 
@@ -36,56 +63,11 @@ export default function FHSAPlaybookPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "How much can you contribute to an FHSA?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "The FHSA has an annual contribution limit of $8,000 and a lifetime limit of $40,000. If you do not use your full $8,000 in a year, you can carry unused room forward, but only up to $8,000 into the next year. That means the most you can contribute in a single year is $16,000, this year's $8,000 plus at most $8,000 carried over.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Is FHSA room retroactive if I open the account late?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "No. Unlike the TFSA, where room accumulates from the year you turn 18 whether you have an account or not, FHSA room only starts once you actually open the account. If you are eligible and even vaguely thinking about a first home, the smart move is to open an FHSA now, even with a small deposit or none at all, just to start the clock on your room.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Can I use the FHSA and the RRSP Home Buyers' Plan together?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Yes. They are separate programs, so you can use both for the same first home. The FHSA gives you a tax-free withdrawal with no repayment, while the Home Buyers' Plan lets you withdraw up to $60,000 from your RRSP that you repay over 15 years. Confirm the current HBP limit and repayment rules before you plan around them, since the government has adjusted them recently.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "What happens to my FHSA if I never buy a home?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "If you do not use the FHSA for a home, you can transfer the entire balance, contributions and growth, into your RRSP or a RRIF on a tax-free basis, and that transfer does not use up any of your RRSP contribution room. In effect the FHSA acts as bonus RRSP room. You could instead take the money as a non-qualifying withdrawal, but that amount is taxable as income, so the transfer is almost always the better route.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Do I have to claim the FHSA deduction in the year I contribute?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "No. Just like with an RRSP, contributing and deducting are separate steps that do not have to happen in the same year. You can contribute now to get the money growing, then carry the deduction forward and claim it in a future year when your income and tax rate are higher, so the same deduction saves you more tax.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Who is eligible to open an FHSA?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "You need to be a resident of Canada with a valid Social Insurance Number, at least 18 (and no younger than the age of majority in your province) and no older than 71, and a first-time home buyer. For the FHSA, first-time buyer means you did not live in a home that you or your spouse or common-law partner owned at any point in the current year or the previous four calendar years. That four-year lookback means some past owners who have been renting can qualify again.",
-                    },
-                  },
-                ],
+                mainEntity: FAQ.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
               }),
             }}
           />
@@ -348,50 +330,12 @@ export default function FHSAPlaybookPage() {
           </div>
 
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>How much can you contribute to an FHSA?</h4>
-          <p>
-            The FHSA has an annual contribution limit of $8,000 and a lifetime limit of $40,000. If you do not use
-            your full $8,000 in a year, you can carry unused room forward, but only up to $8,000 into the next year.
-            That means the most you can contribute in a single year is $16,000, this year&apos;s $8,000 plus at most
-            $8,000 carried over.
-          </p>
-          <h4>Is FHSA room retroactive if I open the account late?</h4>
-          <p>
-            No. Unlike the TFSA, where room accumulates from the year you turn 18 whether you have an account or not,
-            FHSA room only starts once you actually open the account. If you are eligible and even vaguely thinking
-            about a first home, the smart move is to open an FHSA now, even with a small deposit or none at all, just
-            to start the clock on your room.
-          </p>
-          <h4>Can I use the FHSA and the RRSP Home Buyers&apos; Plan together?</h4>
-          <p>
-            Yes. They are separate programs, so you can use both for the same first home. The FHSA gives you a
-            tax-free withdrawal with no repayment, while the Home Buyers&apos; Plan lets you withdraw up to $60,000
-            from your RRSP that you repay over 15 years. Confirm the current HBP limit and repayment rules before you
-            plan around them, since the government has adjusted them recently.
-          </p>
-          <h4>What happens to my FHSA if I never buy a home?</h4>
-          <p>
-            If you do not use the FHSA for a home, you can transfer the entire balance, contributions and growth,
-            into your RRSP or a RRIF on a tax-free basis, and that transfer does not use up any of your RRSP
-            contribution room. In effect the FHSA acts as bonus RRSP room. You could instead take the money as a
-            non-qualifying withdrawal, but that amount is taxable as income, so the transfer is almost always the
-            better route.
-          </p>
-          <h4>Do I have to claim the FHSA deduction in the year I contribute?</h4>
-          <p>
-            No. Just like with an RRSP, contributing and deducting are separate steps that do not have to happen in
-            the same year. You can contribute now to get the money growing, then carry the deduction forward and
-            claim it in a future year when your income and tax rate are higher, so the same deduction saves you more
-            tax.
-          </p>
-          <h4>Who is eligible to open an FHSA?</h4>
-          <p>
-            You need to be a resident of Canada with a valid Social Insurance Number, at least 18 (and no younger
-            than the age of majority in your province) and no older than 71, and a first-time home buyer. For the
-            FHSA, first-time buyer means you did not live in a home that you or your spouse or common-law partner
-            owned at any point in the current year or the previous four calendar years. That four-year lookback means
-            some past owners who have been renting can qualify again.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           <div className="cd-sec">Keep going</div>
           <p>The FHSA is one piece of a bigger question: where your next saved dollar should actually go.</p>

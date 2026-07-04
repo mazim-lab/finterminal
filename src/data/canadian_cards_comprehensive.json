@@ -5320,7 +5320,7 @@
       "Recurring bills": "1%",
       "All other purchases": "0.5%"
     },
-    "rewards_program": "bmo rewards",
+    "rewards_program": "cash back",
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
@@ -5342,7 +5342,7 @@
     "historical_offers": [],
     "apply_url": "https://www.bmo.com/main/personal/credit-cards/bmo-cashback-mastercard/",
     "is_business": false,
-    "cpp_cad": 0.67,
+    "cpp_cad": 1.0,
     "benefits": {
       "lounge_access": false,
       "no_fx_fee": false,
@@ -5378,7 +5378,7 @@
       "Recurring bills": "2%",
       "All other purchases": "1%"
     },
-    "rewards_program": "bmo rewards",
+    "rewards_program": "cash back",
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
@@ -5400,7 +5400,7 @@
     "historical_offers": [],
     "apply_url": "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-cashback-world-elite-mastercard/",
     "is_business": false,
-    "cpp_cad": 0.67,
+    "cpp_cad": 1.0,
     "welcome_bonus_points": null,
     "first_year_value_cad": 650,
     "benefits": {
@@ -5486,7 +5486,7 @@
       "Recurring bills": "1%",
       "All other purchases": "0.5%"
     },
-    "rewards_program": "bmo rewards",
+    "rewards_program": "cash back",
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
@@ -5505,7 +5505,7 @@
     "historical_offers": [],
     "apply_url": "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-cashback-mastercard-for-students/",
     "is_business": false,
-    "cpp_cad": 0.67,
+    "cpp_cad": 1.0,
     "benefits": {
       "lounge_access": false,
       "no_fx_fee": false,

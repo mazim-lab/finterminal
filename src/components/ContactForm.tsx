@@ -34,7 +34,7 @@ export function ContactForm() {
           email: data.get("email"),
           reason: data.get("reason"),
           message: data.get("message"),
-          _subject: `FinTerminal contact — ${data.get("reason")}`,
+          _subject: `FinTerminal contact: ${data.get("reason")}`,
           _template: "table",
           _captcha: "false",
         }),

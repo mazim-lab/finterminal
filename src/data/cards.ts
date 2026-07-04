@@ -98,7 +98,7 @@ function stripFootnotes(s: string): string {
 // Welcome-bonus marketing copy often appends a redundant dollar-value claim taken verbatim from
 // the issuer's offer page ("…points – that's up to $150 in value", "Up to $1,350 in value
 // including up to 40,000 points"). We surface value from our own cpp estimates, so strip those
-// claims — but ONLY when a points figure remains; for pure cashback/rebate bundles the dollar
+// claims, but ONLY when a points figure remains; for pure cashback/rebate bundles the dollar
 // value is the only bonus stated, so leave those untouched.
 const POINTS_RE = /\b\d[\d,]{2,}\b[^.!]*?\b(?:points|pts|miles|aeroplan|avion|scene\+?|membership rewards|ultimate rewards|td rewards|rbc rewards|bmo rewards|thankyou|avios|skymiles|aadvantage|moi)\b/i;
 function cleanWelcomeBonus(input: string | null | undefined): string {
@@ -155,7 +155,7 @@ function extractBenefits(card: { key_perks?: string[] | null; insurance?: Record
 }
 
 // Derive filter categories (travel/hotel/airline/cashback/rewards/business/student/secured)
-// from the card's program, name and earn rates — the raw card_type is too coarse.
+// from the card's program, name and earn rates: the raw card_type is too coarse.
 function deriveCategories(card: Card): string[] {
   const text = `${card.name} ${card.rewards_program} ${card.card_type} ${card.earn_rates_summary}`.toLowerCase();
   const brand = `${card.name} ${card.rewards_program}`.toLowerCase(); // for co-brand detection (earn rates cause false positives)
@@ -333,9 +333,9 @@ interface RawUS {
   [key: string]: unknown;
 }
 
-// US rewards valuations — baseline cents-per-point (USD), by program keyword.
+// US rewards valuations: baseline cents-per-point (USD), by program keyword.
 // Source: Frequent Miler / The Points Guy baseline valuations (cross-checked), 2026-06.
-// US values stay in USD (native) and are labelled USD in the UI — we don't convert.
+// US values stay in USD (native) and are labelled USD in the UI: we don't convert.
 const US_PROGRAM_CPP: [string, number][] = [
   ['ihg', 0.5], ['hilton', 0.5], ['bonvoy', 0.8], ['marriott', 0.8], ['hyatt', 1.7],
   ['delta', 1.2], ['skymiles', 1.2], ['united', 1.3], ['southwest', 1.4], ['avios', 1.3],
@@ -373,7 +373,7 @@ function extractUsBonusDollars(text: string): number {
   return m ? parseInt(m[1].replace(/,/g, ''), 10) : 0;
 }
 
-// The US scraper often captured the same boilerplate for every card's earn_rates —
+// The US scraper often captured the same boilerplate for every card's earn_rates:
 // APR figures ("21.99%") and sentence fragments rather than real reward multipliers.
 // Surface earn rates only when the whole set looks clean; otherwise show nothing
 // rather than wrong, identical data. Curated entries in the JSON pass this gate.
@@ -508,7 +508,7 @@ export const allCards: Card[] = (() => {
     ...(canadianCardsRaw as unknown as RawCA[]).map(normalizeCA),
     ...(usCardsRaw as unknown as RawUS[]).map(normalizeUS),
   ];
-  // Deduplicate by slug — keep first occurrence
+  // Deduplicate by slug, keep first occurrence
   const seen = new Set<string>();
   return raw.filter(c => {
     if (seen.has(c.slug)) return false;

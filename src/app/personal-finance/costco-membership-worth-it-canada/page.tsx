@@ -7,6 +7,8 @@ export const metadata = {
     "A clear, no-hype look at Costco Canada's fees, the 2% Executive reward, and where the savings really come from, so you can run the breakeven math for your own household.",
 };
 
+export const revalidate = 3600;
+
 const TOC = [
   { id: "cost", label: "What does it cost?" },
   { id: "executive", label: "Is Executive worth it?" },
@@ -15,6 +17,33 @@ const TOC = [
   { id: "caveats", label: "The caveats" },
   { id: "verdict", label: "Is it for you?" },
   { id: "gold", label: "The gold-bar move" },
+];
+
+const FAQ = [
+  {
+    q: "How much does a Costco membership cost in Canada?",
+    a: "Costco Canada has two main tiers. Gold Star runs about $65 a year and Executive runs about $130 a year, so Executive costs roughly $65 more. Costco raised both fees in 2024, the first increase in about seven years, so treat these as approximate and confirm the current pricing on Costco.ca before you sign up.",
+  },
+  {
+    q: "Is the Executive membership worth the upgrade?",
+    a: "The Executive tier costs about $65 more than Gold Star and pays you back 2% on qualifying purchases. Dividing $65 by 0.02 gives $3,250, so once you spend more than about $3,250 a year on qualifying merchandise, the reward covers the upgrade. Below that, Gold Star is the smarter pick. Confirm the current fee gap on Costco.ca, since it changes the number.",
+  },
+  {
+    q: "What purchases do not earn the 2% Executive reward?",
+    a: "The 2% reward leaves out things like gas, prescriptions, the food court, and membership fees. So your qualifying spend is really your in-warehouse grocery and merchandise total, not every dollar you hand Costco. The reward is also capped at $1,250 a year, which only matters above about $62,500 of annual spending. The exact exclusions can shift, so check the current terms if you want to be precise.",
+  },
+  {
+    q: "Can gas savings alone cover a Costco membership?",
+    a: "For a regular commuter, yes. Costco fuel is typically priced a few cents per litre below nearby stations. If you save about 7 cents a litre and burn through 2,000 litres a year, that is roughly $140 in fuel savings, which more than covers a Gold Star membership. If you barely drive, this benefit shrinks to almost nothing, so be honest about your real mileage.",
+  },
+  {
+    q: "Is buying Costco gold bars a good way to earn credit card rewards?",
+    a: "For everyday earning it usually loses you a little money. Costco prices gold bars at a small markup over spot and dealers buy below spot, so a round trip costs a few percent, which eats the rewards from a plain 1 to 2 percent card. It only makes sense when you are chasing a large welcome bonus that dwarfs the spread, or you have an unusually high earn rate on that purchase.",
+  },
+  {
+    q: "When is a Costco membership not worth it?",
+    a: "Small households and infrequent shoppers often will not break even, and that is completely fine. The fee is fixed whether you visit twice or fifty times, bulk sizes can lead to waste and impulse buys, and not everything is cheaper than the regular grocery store. If you have to stretch to make the math work, trust that feeling and skip it for now.",
+  },
 ];
 
 export default function CostcoMembershipPage() {
@@ -28,63 +57,18 @@ export default function CostcoMembershipPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "How much does a Costco membership cost in Canada?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Costco Canada has two main tiers. Gold Star runs about $65 a year and Executive runs about $130 a year, so Executive costs roughly $65 more. Costco raised both fees in 2024, the first increase in about seven years, so treat these as approximate and confirm the current pricing on Costco.ca before you sign up.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Is the Executive membership worth the upgrade?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "The Executive tier costs about $65 more than Gold Star and pays you back 2% on qualifying purchases. Dividing $65 by 0.02 gives $3,250, so once you spend more than about $3,250 a year on qualifying merchandise, the reward covers the upgrade. Below that, Gold Star is the smarter pick. Confirm the current fee gap on Costco.ca, since it changes the number.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "What purchases do not earn the 2% Executive reward?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "The 2% reward leaves out things like gas, prescriptions, the food court, and membership fees. So your qualifying spend is really your in-warehouse grocery and merchandise total, not every dollar you hand Costco. The reward is also capped at $1,250 a year, which only matters above about $62,500 of annual spending. The exact exclusions can shift, so check the current terms if you want to be precise.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Can gas savings alone cover a Costco membership?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "For a regular commuter, yes. Costco fuel is typically priced a few cents per litre below nearby stations. If you save about 7 cents a litre and burn through 2,000 litres a year, that is roughly $140 in fuel savings, which more than covers a Gold Star membership. If you barely drive, this benefit shrinks to almost nothing, so be honest about your real mileage.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Is buying Costco gold bars a good way to earn credit card rewards?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "For everyday earning it usually loses you a little money. Costco prices gold bars at a small markup over spot and dealers buy below spot, so a round trip costs a few percent, which eats the rewards from a plain 1 to 2 percent card. It only makes sense when you are chasing a large welcome bonus that dwarfs the spread, or you have an unusually high earn rate on that purchase.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "When is a Costco membership not worth it?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Small households and infrequent shoppers often will not break even, and that is completely fine. The fee is fixed whether you visit twice or fifty times, bulk sizes can lead to waste and impulse buys, and not everything is cheaper than the regular grocery store. If you have to stretch to make the math work, trust that feeling and skip it for now.",
-                    },
-                  },
-                ],
+                mainEntity: FAQ.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
               }),
             }}
           />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">costco-membership-worth-it</span>
+            <span className="cur">costco-membership-worth-it-canada</span>
           </nav>
 
           <div className="head"><h1>Does a Costco Membership Pay for Itself?</h1></div>
@@ -315,47 +299,12 @@ export default function CostcoMembershipPage() {
           </p>
 
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>How much does a Costco membership cost in Canada?</h4>
-          <p>
-            Costco Canada has two main tiers. Gold Star runs about $65 a year and Executive runs about $130 a year,
-            so Executive costs roughly $65 more. Costco raised both fees in 2024, the first increase in about seven
-            years, so treat these as approximate and confirm the current pricing on Costco.ca before you sign up.
-          </p>
-          <h4>Is the Executive membership worth the upgrade?</h4>
-          <p>
-            The Executive tier costs about $65 more than Gold Star and pays you back 2% on qualifying purchases.
-            Dividing $65 by 0.02 gives $3,250, so once you spend more than about $3,250 a year on qualifying
-            merchandise, the reward covers the upgrade. Below that, Gold Star is the smarter pick. Confirm the
-            current fee gap on Costco.ca, since it changes the number.
-          </p>
-          <h4>What purchases do not earn the 2% Executive reward?</h4>
-          <p>
-            The 2% reward leaves out things like gas, prescriptions, the food court, and membership fees. So your
-            qualifying spend is really your in-warehouse grocery and merchandise total, not every dollar you hand
-            Costco. The reward is also capped at $1,250 a year, which only matters above about $62,500 of annual
-            spending. The exact exclusions can shift, so check the current terms if you want to be precise.
-          </p>
-          <h4>Can gas savings alone cover a Costco membership?</h4>
-          <p>
-            For a regular commuter, yes. Costco fuel is typically priced a few cents per litre below nearby
-            stations. If you save about 7 cents a litre and burn through 2,000 litres a year, that is roughly $140
-            in fuel savings, which more than covers a Gold Star membership. If you barely drive, this benefit
-            shrinks to almost nothing, so be honest about your real mileage.
-          </p>
-          <h4>Is buying Costco gold bars a good way to earn credit card rewards?</h4>
-          <p>
-            For everyday earning it usually loses you a little money. Costco prices gold bars at a small markup over
-            spot and dealers buy below spot, so a round trip costs a few percent, which eats the rewards from a
-            plain 1 to 2 percent card. It only makes sense when you are chasing a large welcome bonus that dwarfs
-            the spread, or you have an unusually high earn rate on that purchase.
-          </p>
-          <h4>When is a Costco membership not worth it?</h4>
-          <p>
-            Small households and infrequent shoppers often will not break even, and that is completely fine. The fee
-            is fixed whether you visit twice or fifty times, bulk sizes can lead to waste and impulse buys, and not
-            everything is cheaper than the regular grocery store. If you have to stretch to make the math work,
-            trust that feeling and skip it for now.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           <div className="cd-sec">Keep going</div>
           <p>If you go Executive, a flat-rate cash-back card you can use at Costco squeezes a little more out of every run.</p>

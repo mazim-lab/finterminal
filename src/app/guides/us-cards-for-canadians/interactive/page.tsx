@@ -50,7 +50,7 @@ function CardRec({ name, note }: { name: string; note?: string }) {
     <span className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-sm font-medium">
       <CreditCard className="w-3.5 h-3.5 text-accent" />
       <span>{name}</span>
-      {note && <span className="text-muted-foreground font-normal">— {note}</span>}
+      {note && <span className="text-muted-foreground font-normal">{' '}{note}</span>}
     </span>
   );
 }
@@ -69,7 +69,7 @@ const STEPS: StepData[] = [
         <p><strong>Option A: Mail forwarding service.</strong> Companies like <strong>24/7 Parcel</strong>, <strong>US Global Mail</strong>, and <strong>Traveling Mailbox</strong> give you a real street address (not a PO box) and scan or forward your mail. Expect to pay $70–90 USD per year.</p>
         <p><strong>Option B: Friend or family in the US.</strong> If you have someone willing to receive mail for you, this is the cheapest option.</p>
         <WarningBox>
-          <strong>Critical check:</strong> Go to the USPS address lookup tool and verify your address. Look for &quot;Commercial Mail Receiving Agency&quot; — it must show <strong>&quot;N&quot;</strong>. If it shows &quot;Y&quot;, card issuers like Chase may flag and reject your applications.
+          <strong>Critical check:</strong> Go to the USPS address lookup tool and verify your address. Look for &quot;Commercial Mail Receiving Agency&quot;, which must show <strong>&quot;N&quot;</strong>. If it shows &quot;Y&quot;, card issuers like Chase may flag and reject your applications.
         </WarningBox>
         <TipBox>
           <strong>Pro tip:</strong> Check your address at <strong>USPS.com</strong> before committing to any service. If the result includes &quot;Commercial Mail Receiving Agency: Y&quot;, find a different provider.
@@ -92,10 +92,10 @@ const STEPS: StepData[] = [
         <p>You need a US bank account for paying credit card bills in USD and for address verification with card issuers.</p>
         <p>The easiest path is through <strong>Canadian banks with US subsidiaries</strong>:</p>
         <ul>
-          <li><strong>CIBC US</strong> — Most popular. No monthly fee on Smart Account. Open online from Canada.</li>
-          <li><strong>TD Bank</strong> — Great if you&apos;re already a TD Canada customer. Branches across US East Coast.</li>
-          <li><strong>BMO Harris</strong> — BMO&apos;s US banking arm. Easy cross-border setup.</li>
-          <li><strong>RBC Bank</strong> — RBC&apos;s US presence, primarily in the Southeast.</li>
+          <li><strong>CIBC US.</strong> Most popular. No monthly fee on Smart Account. Open online from Canada.</li>
+          <li><strong>TD Bank.</strong> Great if you&apos;re already a TD Canada customer. Branches across US East Coast.</li>
+          <li><strong>BMO Harris.</strong> BMO&apos;s US banking arm. Easy cross-border setup.</li>
+          <li><strong>RBC Bank.</strong> RBC&apos;s US presence, primarily in the Southeast.</li>
         </ul>
         <TipBox>
           Set your <strong>US mailing address as the primary address</strong> on this account. You&apos;ll use bank statements as proof of address when applying for credit cards.
@@ -115,7 +115,7 @@ const STEPS: StepData[] = [
     cost: 'Varies',
     content: (
       <>
-        <p><strong>Amex Global Transfer</strong> lets you leverage your existing Canadian Amex relationship to get approved for a US Amex card — no US credit history or ITIN required.</p>
+        <p><strong>Amex Global Transfer</strong> lets you use your existing Canadian Amex relationship to get approved for a US Amex card, with no US credit history or ITIN required.</p>
         <p><strong>Requirements:</strong></p>
         <ul>
           <li>An existing Canadian Amex card, open for at least 3 months</li>
@@ -128,11 +128,11 @@ const STEPS: StepData[] = [
         </WarningBox>
         <p><strong>Best starter cards:</strong></p>
         <div className="flex flex-wrap gap-2 my-3">
-          <CardRec name="Amex Hilton Honors" note="no annual fee — great keeper" />
+          <CardRec name="Amex Hilton Honors" note="no annual fee, great keeper" />
           <CardRec name="Amex Gold Card" note="strong earning" />
         </div>
         <TipBox>
-          Your first US card will be your oldest account on your US credit report forever. Pick something you&apos;ll want to keep long-term — a no-annual-fee card like Hilton Honors is ideal.
+          Your first US card will be your oldest account on your US credit report forever. Pick something you&apos;ll want to keep long-term. A no-annual-fee card like Hilton Honors is ideal.
         </TipBox>
       </>
     ),
@@ -145,7 +145,7 @@ const STEPS: StepData[] = [
   {
     icon: FileText,
     title: 'Apply for an ITIN',
-    time: '8-12 weeks',
+    time: 'about 7 weeks (9 to 11 in tax season or from abroad)',
     cost: '$0-300',
     content: (
       <>
@@ -156,7 +156,7 @@ const STEPS: StepData[] = [
 
         <h4 className="font-semibold mt-4 mb-2">Method 2: DIY with Gambling Income (~$10)</h4>
         <TipBox>
-          <strong>The DIY approach is straightforward.</strong> File a 1040-NR declaring $75–100 of US-source gambling income (from US online casinos — self-declared, no proof needed). You&apos;ll owe ~$9 in taxes, and this creates a valid reason for an ITIN.
+          <strong>The DIY approach is straightforward.</strong> File a 1040-NR declaring $75 to $100 of US-source gambling income (from US online casinos, self-declared, no proof needed). You&apos;ll owe ~$9 in taxes, and this creates a valid reason for an ITIN.
         </TipBox>
         <p>You&apos;ll need: <strong>Form W-7</strong>, <strong>Form 1040-NR</strong>, <strong>Schedule 1</strong>, <strong>Schedule OI</strong>, your Canadian SIN, and a list of dates you were in the US during the tax year.</p>
 
@@ -177,9 +177,10 @@ const STEPS: StepData[] = [
               <ul className="text-sm space-y-1 text-foreground/80">
                 <li>Mail to: IRS ITIN Operation, P.O. Box 149342, Austin, TX 78714-9342, USA</li>
                 <li>Canada Post registered mail (~$15) for tracking</li>
-                <li>Must include <strong>original passport</strong> (no certified copies accepted)</li>
+                <li>Include either your <strong>original passport</strong> or a copy certified by Passport Canada (the issuing agency). A notarized copy is not enough.</li>
+                <li>To skip mailing your passport, an IRS-authorized Certifying Acceptance Agent (CAA) or a Taxpayer Assistance Center can verify it in person, so you never send the original.</li>
               </ul>
-              <WarningBox>Passport takes ~5 months to return. Some have been lost in transit. Have upcoming travel? Use Path A.</WarningBox>
+              <WarningBox>If you mail the original passport, it can take up to 60 days to return. Some have been lost in transit. Have upcoming travel? Use Path A.</WarningBox>
             </div>
           </div>
         </div>
@@ -193,20 +194,20 @@ const STEPS: StepData[] = [
             <strong>Don&apos;t be intimidated!</strong> The key entries are your name, address, SIN, passport info, and a small gambling income number. That&apos;s it.
           </TipBox>
 
-          <p className="text-xs text-muted-foreground italic mb-4">⚠️ Form line numbers may change year to year — verify against current forms from <a href="https://www.irs.gov/forms-instructions" className="underline hover:text-accent" target="_blank" rel="noopener noreferrer">irs.gov</a>.</p>
+          <p className="text-xs text-muted-foreground italic mb-4">⚠️ Form line numbers may change year to year, so verify against current forms from <a href="https://www.irs.gov/forms-instructions" className="underline hover:text-accent" target="_blank" rel="noopener noreferrer">irs.gov</a>.</p>
 
           {/* W-7 */}
           <details className="mb-3 rounded-xl border border-border bg-card overflow-hidden">
             <summary className="cursor-pointer p-3 font-bold text-sm hover:bg-primary/[0.03] transition-colors flex items-center gap-2">
               <span className="w-6 h-6 rounded bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0">1</span>
-              Form W-7 — ITIN Application
+              Form W-7, ITIN Application
             </summary>
             <div className="px-3 pb-3 space-y-2 text-sm">
               <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
                 <strong>Top right:</strong> Check <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">&quot;Apply for a New ITIN&quot;</span>
               </div>
               <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>Reason:</strong> Check box <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">(b) — filing a tax return</span>
+                <strong>Reason:</strong> Check box <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">(b) filing a tax return</span>
               </div>
               <p><strong>Name:</strong> Must match passport exactly</p>
               <p><strong>Mailing address:</strong> Canadian address is fine</p>
@@ -229,13 +230,13 @@ const STEPS: StepData[] = [
           <details className="mb-3 rounded-xl border border-border bg-card overflow-hidden">
             <summary className="cursor-pointer p-3 font-bold text-sm hover:bg-primary/[0.03] transition-colors flex items-center gap-2">
               <span className="w-6 h-6 rounded bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0">2</span>
-              Form 1040-NR — Non-Resident Tax Return
+              Form 1040-NR, Non-Resident Tax Return
             </summary>
             <div className="px-3 pb-3 space-y-2 text-sm">
               <p><strong>Filing status:</strong> Single (or Married Filing Separately)</p>
               <p><strong>Name:</strong> Match W-7 exactly</p>
               <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>Identifying number:</strong> <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">Leave blank</span> — you&apos;re applying for one!
+                <strong>Identifying number:</strong> <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">Leave blank</span>, you&apos;re applying for one!
               </div>
               <p><strong>Address:</strong> Canadian mailing address</p>
               <p><strong>Virtual currency:</strong> Yes or No &nbsp;|&nbsp; <strong>Dependents:</strong> Blank</p>
@@ -268,7 +269,7 @@ const STEPS: StepData[] = [
           <details className="mb-3 rounded-xl border border-border bg-card overflow-hidden">
             <summary className="cursor-pointer p-3 font-bold text-sm hover:bg-primary/[0.03] transition-colors flex items-center gap-2">
               <span className="w-6 h-6 rounded bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0">3</span>
-              Schedule OI — Other Information
+              Schedule OI, Other Information
             </summary>
             <div className="px-3 pb-3 space-y-2 text-sm">
               <p><strong>Name:</strong> At top of page</p>
@@ -277,7 +278,7 @@ const STEPS: StepData[] = [
               </div>
               <p><strong>C, D:</strong> &quot;No&quot;</p>
               <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>E:</strong> <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">&quot;Not present in U.S.—No U.S. immigration status&quot;</span>
+                <strong>E:</strong> <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">&quot;Not present in U.S., no U.S. immigration status&quot;</span>
               </div>
               <p><strong>F:</strong> No</p>
               <p><strong>G:</strong> Dates entered/left USA (check <a href="https://i94.cbp.dhs.gov" className="underline hover:text-accent" target="_blank" rel="noopener noreferrer">i94.cbp.dhs.gov</a>). Blank if not in US.</p>
@@ -293,7 +294,7 @@ const STEPS: StepData[] = [
           <details className="mb-3 rounded-xl border border-border bg-card overflow-hidden">
             <summary className="cursor-pointer p-3 font-bold text-sm hover:bg-primary/[0.03] transition-colors flex items-center gap-2">
               <span className="w-6 h-6 rounded bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0">4</span>
-              Schedule 1 — Additional Income
+              Schedule 1, Additional Income
             </summary>
             <div className="px-3 pb-3 space-y-2 text-sm">
               <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
@@ -313,18 +314,18 @@ const STEPS: StepData[] = [
         <div className="rounded-xl border border-border bg-card p-4 mb-3">
           <p className="text-sm font-bold mb-2">📬 After Submission</p>
           <ul className="text-sm space-y-1 text-foreground/80">
-            <li>Processing: 6–8 weeks → receive letter with 9-digit ITIN</li>
+            <li>Processing: about 7 weeks, or 9 to 11 weeks if you apply during tax season (mid-January to late April) or from outside the US, then you receive a letter with your 9-digit ITIN</li>
             <li><strong>Immediately</strong> link ITIN to your Amex US account</li>
-            <li>Expires if unused for 3 years — file periodically</li>
+            <li>Expires if unused for 3 years, so file periodically</li>
             <li>Lost letter? Call +1 267-941-1000 with name, address, birthdate</li>
           </ul>
         </div>
 
         <TipBox>
-          You don&apos;t need to wait for your ITIN to start building credit — that&apos;s why we get the Amex card first. Apply for your ITIN in parallel while your card builds history.
+          You don&apos;t need to wait for your ITIN to start building credit, and that&apos;s why we get the Amex card first. Apply for your ITIN in parallel while your card builds history.
         </TipBox>
 
-        <p className="text-xs text-muted-foreground italic mt-3">⚖️ This guide is for informational purposes only and does not constitute tax advice. Consult a tax professional for your specific situation.</p>
+        <p className="text-xs text-muted-foreground italic mt-3">⚖️ This guide is for informational purposes only and does not constitute tax advice. Talk to a cross-border tax professional for your specific situation, and always report your income accurately.</p>
       </>
     ),
     checklist: [
@@ -344,9 +345,9 @@ const STEPS: StepData[] = [
         <p>Now you play the waiting game. Your first Amex card is reporting to the US credit bureaus, and you need history before other issuers will approve you.</p>
         <ul>
           <li><strong>Get 1-2 more Amex personal cards</strong> in your first 3-6 months to build credit file depth.</li>
-          <li><strong>Amex business cards don&apos;t count for Chase&apos;s 5/24 rule</strong> — grab Business Platinum, Business Gold, etc. freely during this period.</li>
+          <li><strong>Amex business cards don&apos;t count for Chase&apos;s 5/24 rule</strong>, so grab Business Platinum, Business Gold, etc. freely during this period.</li>
           <li><strong>Keep utilization at 5-10%</strong> on all cards. Low utilization signals responsible credit use.</li>
-          <li><strong>Open a Chase checking account</strong> if you can visit a US branch — having a banking relationship helps approval odds later.</li>
+          <li><strong>Open a Chase checking account</strong> if you can visit a US branch, since having a banking relationship helps approval odds later.</li>
         </ul>
         <WarningBox>
           <strong>Critical:</strong> Once you receive your ITIN, call Amex immediately and link it to all your US accounts. Without this, Chase and other issuers may not be able to pull your credit.
@@ -366,7 +367,7 @@ const STEPS: StepData[] = [
     cost: 'Varies',
     content: (
       <>
-        <p>Chase is the holy grail for churners — Ultimate Rewards points are incredibly flexible, and their hotel cards are best-in-class. But Chase is the pickiest issuer.</p>
+        <p>Chase is the holy grail for churners. Ultimate Rewards points are incredibly flexible, and their hotel cards are best-in-class. But Chase is the pickiest issuer.</p>
         <p><strong>What Chase wants:</strong></p>
         <ul>
           <li>At least <strong>12-18 months</strong> of US credit history</li>
@@ -374,7 +375,7 @@ const STEPS: StepData[] = [
           <li>Ideally, a Chase banking relationship</li>
         </ul>
         <h4 className="font-semibold mt-4 mb-2">The 5/24 Rule</h4>
-        <p>Chase will deny you if you&apos;ve opened <strong>5 or more personal credit cards</strong> across all issuers in the past 24 months. That&apos;s why we get Amex business cards first — they don&apos;t count.</p>
+        <p>Chase will deny you if you&apos;ve opened <strong>5 or more personal credit cards</strong> across all issuers in the past 24 months. That&apos;s why we get Amex business cards first, since they don&apos;t count.</p>
         <p><strong>Recommended first Chase cards:</strong></p>
         <div className="flex flex-wrap gap-2 my-3">
           <CardRec name="Chase Sapphire Preferred" note="great starter" />
@@ -403,10 +404,10 @@ const STEPS: StepData[] = [
         <ul>
           <li><strong>Capital One:</strong> Typically wants ~3 years of history. Max 1 application per 6 months. Worth it for the Venture X.</li>
           <li><strong>Citi:</strong> The Strata Premier is excellent. Citi ThankYou points transfer to Air Canada Aeroplan and more.</li>
-          <li><strong>Bank of America:</strong> Alaska Airlines card is a fan favourite. Apply in-branch with ITIN — online system doesn&apos;t always handle ITINs well.</li>
+          <li><strong>Bank of America:</strong> Alaska Airlines card is a fan favourite. Apply in-branch with ITIN, since the online system doesn&apos;t always handle ITINs well.</li>
         </ul>
         <TipBox>
-          Keep building and maintaining your credit. Pay all balances in full, keep accounts open, and space out applications. A mature profile unlocks better approval odds and higher limits.
+          Keep building and maintaining your credit. Pay all balances in full, keep accounts open, and space out applications. A mature profile earns you better approval odds and higher limits.
         </TipBox>
       </>
     ),
@@ -521,7 +522,7 @@ function IntroScreen({ onStart }: { onStart: () => void }) {
         for Canadians
       </h1>
       <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-4">
-        Everything you need to know about getting an ITIN, building US credit, and accessing the world&apos;s best rewards cards — in 7 simple steps.
+        Everything you need to know about getting an ITIN, building US credit, and accessing the world&apos;s best rewards cards, in 7 simple steps.
       </p>
       <p className="text-sm text-muted-foreground mb-10">Last updated February 2026</p>
 

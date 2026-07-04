@@ -238,10 +238,10 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
   const maxCpp = val.max ?? null;
   const bonusDisplay = card.welcome_bonus_points
     ? card.welcome_bonus_points.toLocaleString()
-    : (card.welcome_bonus_value > 0 ? formatCurrency(card.welcome_bonus_value, card.country) : '—');
+    : (card.welcome_bonus_value > 0 ? formatCurrency(card.welcome_bonus_value, card.country) : 'none');
   const fxLabel = card.foreign_transaction_fee === false
     ? '0%'
-    : (card.foreign_transaction_fee_pct != null ? `${card.foreign_transaction_fee_pct}%` : '—');
+    : (card.foreign_transaction_fee_pct != null ? `${card.foreign_transaction_fee_pct}%` : 'n/a');
 
   const tags = TAG_DEFS.filter(([k]) => card.benefits[k]).map(([, l]) => l);
 
@@ -455,7 +455,7 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
           </>
         )}
 
-        <p className="cd-formula" style={{ marginTop: 22 }}>// last updated {card.last_updated || '—'} · est. value = welcome bonus × base ¢/pt − annual fee</p>
+        <p className="cd-formula" style={{ marginTop: 22 }}>// last updated {card.last_updated || 'n/a'} · est. value = welcome bonus × base ¢/pt − annual fee</p>
 
         <script
           type="application/ld+json"

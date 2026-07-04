@@ -1,9 +1,41 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import { POINT_VALUATIONS, VALUATION_SOURCE } from '@/data/point-valuations';
 
 export const metadata: Metadata = {
   title: 'How we value points | FinTerminal',
   description: 'How FinTerminal estimates the first-year value of a credit card welcome bonus.',
 };
+
+// Program display names for the valuations table. We drive the table straight
+// from POINT_VALUATIONS so the numbers here can never drift from the ones the
+// card explorer uses. "cash back" is 1 cent by definition, so it is not a
+// per-program row worth listing.
+const PROGRAM_LABELS: Record<string, string> = {
+  'membership rewards': 'Amex Membership Rewards',
+  'aeroplan': 'Aeroplan',
+  'rbc avion': 'RBC Avion',
+  'rbc rewards': 'RBC Rewards',
+  'cibc aventura': 'CIBC Aventura',
+  'marriott bonvoy': 'Marriott Bonvoy',
+  'scene+': 'Scene+',
+  'td rewards': 'TD Rewards',
+  'bmo rewards': 'BMO Rewards',
+  'national bank': 'National Bank À la carte',
+  'mbna rewards': 'MBNA Rewards',
+  'desjardins bonusdollars': 'Desjardins BonusDollars',
+  'pc optimum': 'PC Optimum',
+  'triangle rewards': 'Triangle Rewards',
+  'westjet rewards': 'WestJet Rewards',
+};
+
+const valuationRows = Object.entries(POINT_VALUATIONS)
+  .filter(([key]) => key !== 'cash back')
+  .map(([key, v]) => ({
+    program: PROGRAM_LABELS[key] || key,
+    baseline: v.baseline,
+    max: v.max,
+  }));
 
 const sections = [
   {
@@ -90,6 +122,36 @@ export default function HowWeValuePoints() {
           </section>
         ))}
       </div>
+
+      <div className="atlas-rule my-12" />
+      <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold mb-4">Our point valuations by program</h2>
+      <p className="text-muted-foreground leading-relaxed mb-6">
+        Here are the baseline rates we use for the headline first-year value, plus the upper-end &quot;up to&quot; rate you can reach on premium transfer-partner sweet spots. These are estimates to help you compare cards, not guarantees. Cash back is always valued at 1 cent per point.
+      </p>
+      <div className="overflow-x-auto rounded-lg border border-border mb-4">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-border bg-muted/40 text-left">
+              <th className="px-4 py-2 font-semibold">Program</th>
+              <th className="px-4 py-2 font-semibold text-right">Baseline (¢/pt)</th>
+              <th className="px-4 py-2 font-semibold text-right">Up to (¢/pt)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {valuationRows.map(row => (
+              <tr key={row.program} className="border-b border-border last:border-0">
+                <td className="px-4 py-2">{row.program}</td>
+                <td className="px-4 py-2 text-right tabular-nums">{row.baseline.toFixed(2)}</td>
+                <td className="px-4 py-2 text-right tabular-nums text-muted-foreground">{row.max != null ? row.max.toFixed(1) : 'fixed value'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="text-xs text-muted-foreground mb-2">
+        Source: {VALUATION_SOURCE.name}, as of {VALUATION_SOURCE.asOf}. Reviewed quarterly. &quot;Fixed value&quot; means the currency is not transferable to airline or hotel partners.
+      </p>
+
       <div className="atlas-rule my-12" />
       <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold mb-6">Frequently asked questions</h2>
       <div className="space-y-8">
@@ -102,7 +164,7 @@ export default function HowWeValuePoints() {
       </div>
       <div className="atlas-rule my-12" />
       <p className="text-sm text-muted-foreground">
-        Questions about a specific card&apos;s valuation? <a href="/cards" className="text-gold-text dark:text-gold font-medium hover:underline">Browse the card explorer →</a>
+        Questions about a specific card&apos;s valuation? <Link href="/cards" className="text-gold-text dark:text-gold font-medium hover:underline">Browse the card explorer →</Link>
       </p>
     </div>
   );

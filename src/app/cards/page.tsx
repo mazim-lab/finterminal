@@ -3,6 +3,11 @@ import { allCards } from '@/data/cards';
 import type { SlimCard } from '@/data/card-view';
 import Explorer from './Explorer';
 
+export const metadata = {
+  title: "Compare Canadian credit cards | FinTerminal",
+  description: `Browse and filter ${allCards.length} Canadian credit cards by rewards, fees, and perks, with our own point valuations.`,
+};
+
 // Server component: the full card data + normalization stay on the server. We
 // ship only the lean SlimCard list the explorer table/filters need, so the
 // browser no longer downloads ~270KB of raw card JSON or re-runs normalization.

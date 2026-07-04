@@ -15,6 +15,34 @@ const TOC = [
   { id: "mistakes", label: "What mistakes should you avoid?" },
 ];
 
+// Single source of truth for the FAQ: drives both the visible list and the JSON-LD.
+const FAQ = [
+  {
+    q: "What is the Amex MR to Aeroplan transfer ratio?",
+    a: "Membership Rewards points transfer to Aeroplan at 1 to 1, so 30,000 Amex points become 30,000 Aeroplan points. Points move in set increments such as 100 or 1,000 depending on your card.",
+  },
+  {
+    q: "How long does an Amex MR transfer to Aeroplan take?",
+    a: "Transfers are usually quick. The points often appear in Aeroplan within minutes, though it can occasionally take up to 24 hours. Because of that, you should confirm your award seat before you move the points.",
+  },
+  {
+    q: "Can I transfer Aeroplan points back to Amex Membership Rewards?",
+    a: "No. The transfer only goes one way. Once your points land in Aeroplan they cannot come back to Amex, which is why you should transfer with a plan rather than on a whim.",
+  },
+  {
+    q: "Which Amex cards can transfer to Aeroplan?",
+    a: "You need an Amex card that earns full Membership Rewards points and includes airline transfer partners. In Canada the common ones are the Cobalt Card, the Gold Rewards Card, The Platinum Card, the Business Platinum Card, and the Business Gold Rewards Card. Confirm your specific card lists Aeroplan as a partner in your online account.",
+  },
+  {
+    q: "Should I wait for an Amex transfer bonus to Aeroplan?",
+    a: "Only if you already know you will use the points. Amex occasionally runs limited-time promotions that add a bonus of roughly 25 to 35 percent when you move points to Aeroplan. That is a good reason to transfer a little early for a trip you have planned, but a bonus is not a deal if you were not going to use the points.",
+  },
+  {
+    q: "How many points should I transfer to Aeroplan?",
+    a: "Transfer only what your booking needs, plus a small buffer if you like. Over-transferring leaves stranded points sitting in Aeroplan with no plan, and those points can no longer be used with other partners.",
+  },
+];
+
 export default function MrToAeroplanPage() {
   return (
     <div className="app norail">
@@ -23,56 +51,7 @@ export default function MrToAeroplanPage() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "What is the Amex MR to Aeroplan transfer ratio?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Membership Rewards points transfer to Aeroplan at 1 to 1, so 30,000 Amex points become 30,000 Aeroplan points. Points move in set increments such as 100 or 1,000 depending on your card.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How long does an Amex MR transfer to Aeroplan take?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Transfers are usually quick. The points often appear in Aeroplan within minutes, though it can occasionally take up to 24 hours. Because of that, you should confirm your award seat before you move the points.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can I transfer Aeroplan points back to Amex Membership Rewards?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "No. The transfer only goes one way. Once your points land in Aeroplan they cannot come back to Amex, which is why you should transfer with a plan rather than on a whim.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Which Amex cards can transfer to Aeroplan?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "You need an Amex card that earns full Membership Rewards points and includes airline transfer partners. In Canada the common ones are the Cobalt Card, the Gold Rewards Card, The Platinum Card, the Business Platinum Card, and the Business Gold Rewards Card. Confirm your specific card lists Aeroplan as a partner in your online account.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Should I wait for an Amex transfer bonus to Aeroplan?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Only if you already know you will use the points. Amex occasionally runs limited-time promotions that add a bonus of roughly 25 to 35 percent when you move points to Aeroplan. That is a good reason to transfer a little early for a trip you have planned, but a bonus is not a deal if you were not going to use the points.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How many points should I transfer to Aeroplan?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Transfer only what your booking needs, plus a small buffer if you like. Over-transferring leaves stranded points sitting in Aeroplan with no plan, and those points can no longer be used with other partners.",
-                },
-              },
-            ],
+            mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
           }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
@@ -208,18 +187,12 @@ export default function MrToAeroplanPage() {
           </ul>
 
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>What is the Amex MR to Aeroplan transfer ratio?</h4>
-          <p>Membership Rewards points transfer to Aeroplan at 1 to 1, so 30,000 Amex points become 30,000 Aeroplan points. Points move in set increments such as 100 or 1,000 depending on your card.</p>
-          <h4>How long does an Amex MR transfer to Aeroplan take?</h4>
-          <p>Transfers are usually quick. The points often appear in Aeroplan within minutes, though it can occasionally take up to 24 hours. Because of that, you should confirm your award seat before you move the points.</p>
-          <h4>Can I transfer Aeroplan points back to Amex Membership Rewards?</h4>
-          <p>No. The transfer only goes one way. Once your points land in Aeroplan they cannot come back to Amex, which is why you should transfer with a plan rather than on a whim.</p>
-          <h4>Which Amex cards can transfer to Aeroplan?</h4>
-          <p>You need an Amex card that earns full Membership Rewards points and includes airline transfer partners. In Canada the common ones are the Cobalt Card, the Gold Rewards Card, The Platinum Card, the Business Platinum Card, and the Business Gold Rewards Card. Confirm your specific card lists Aeroplan as a partner in your online account.</p>
-          <h4>Should I wait for an Amex transfer bonus to Aeroplan?</h4>
-          <p>Only if you already know you will use the points. Amex occasionally runs limited-time promotions that add a bonus of roughly 25 to 35 percent when you move points to Aeroplan. That is a good reason to transfer a little early for a trip you have planned, but a bonus is not a deal if you were not going to use the points.</p>
-          <h4>How many points should I transfer to Aeroplan?</h4>
-          <p>Transfer only what your booking needs, plus a small buffer if you like. Over-transferring leaves stranded points sitting in Aeroplan with no plan, and those points can no longer be used with other partners.</p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           <div className="cd-sec">Next</div>
           <p>Now that your points are in Aeroplan, here is how to spend them well.</p>

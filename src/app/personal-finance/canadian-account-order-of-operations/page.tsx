@@ -20,6 +20,33 @@ const TOC = [
   { id: "verdict", label: "Is this order for you?" },
 ];
 
+const FAQ = [
+  {
+    q: "What is the order of operations for a Canadian's next dollar?",
+    a: "The default waterfall is: clear high-interest debt first, then capture any employer match, then the RESP if you have kids, then the FHSA if a first home is on the horizon, then the TFSA, then the RRSP, and finally a non-registered taxable account once your registered room is full. Each dollar fills the highest-value bucket first, then spills into the next.",
+  },
+  {
+    q: "Should I pay off my credit card before investing?",
+    a: "Yes, in almost every case. A credit card balance costs you roughly 20 percent or more a year, and paying it off is a guaranteed, tax-free return of that same 20 percent. No investment reliably beats that, and none does it risk-free, so clearing expensive debt comes before everything else.",
+  },
+  {
+    q: "Is the TFSA or RRSP better for me?",
+    a: "It depends on your tax rate now versus in retirement. The RRSP tends to win when your rate today is higher than it will be later, because you deduct at a high rate and withdraw at a low one. The TFSA tends to win when your rate is lower now, or when you value tax-free, penalty-free access. If you are torn, splitting between the two is a reasonable hedge.",
+  },
+  {
+    q: "Where does the RESP fit in the order?",
+    a: "If you have kids and unused grant room, the RESP ranks very high, just below capturing free money at work. The government adds a 20 percent grant on the first $2,500 you contribute per child each year, up to $500 a year and $7,200 over the child's lifetime. That guaranteed 20 percent top-up beats your own TFSA and RRSP contributions.",
+  },
+  {
+    q: "What are the 2026 contribution limits for these accounts?",
+    a: "For 2026 the TFSA annual room is $7,000, the FHSA allows up to $8,000 a year to a lifetime limit of $40,000, and the RRSP lets you contribute 18 percent of last year's earned income up to $33,810, minus any pension adjustment. Limits and grant amounts change, so confirm the current figures before you rely on them.",
+  },
+  {
+    q: "When should I change this order for my own situation?",
+    a: "The waterfall is a default, not a law. Build an emergency fund first if you have none, move the FHSA up if a first home is your near-term goal, move the RRSP up if you are a high earner, favour the TFSA if your income is uneven, and treat lower-interest debt like a mortgage with less urgency than a credit card. Your goals and timeline fill in the details.",
+  },
+];
+
 export default function AccountOrderOfOperationsPage() {
   if (!isPFPublished("canadian-account-order-of-operations")) notFound();
 
@@ -30,56 +57,11 @@ export default function AccountOrderOfOperationsPage() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "What is the order of operations for a Canadian's next dollar?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The default waterfall is: clear high-interest debt first, then capture any employer match, then the RESP if you have kids, then the FHSA if a first home is on the horizon, then the TFSA, then the RRSP, and finally a non-registered taxable account once your registered room is full. Each dollar fills the highest-value bucket first, then spills into the next.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Should I pay off my credit card before investing?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes, in almost every case. A credit card balance costs you roughly 20 percent or more a year, and paying it off is a guaranteed, tax-free return of that same 20 percent. No investment reliably beats that, and none does it risk-free, so clearing expensive debt comes before everything else.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Is the TFSA or RRSP better for me?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "It depends on your tax rate now versus in retirement. The RRSP tends to win when your rate today is higher than it will be later, because you deduct at a high rate and withdraw at a low one. The TFSA tends to win when your rate is lower now, or when you value tax-free, penalty-free access. If you are torn, splitting between the two is a reasonable hedge.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Where does the RESP fit in the order?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "If you have kids and unused grant room, the RESP ranks very high, just below capturing free money at work. The government adds a 20 percent grant on the first $2,500 you contribute per child each year, up to $500 a year and $7,200 over the child's lifetime. That guaranteed 20 percent top-up beats your own TFSA and RRSP contributions.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What are the 2026 contribution limits for these accounts?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "For 2026 the TFSA annual room is $7,000, the FHSA allows up to $8,000 a year to a lifetime limit of $40,000, and the RRSP lets you contribute 18 percent of last year's earned income up to $33,810, minus any pension adjustment. Limits and grant amounts change, so confirm the current figures before you rely on them.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "When should I change this order for my own situation?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The waterfall is a default, not a law. Build an emergency fund first if you have none, move the FHSA up if a first home is your near-term goal, move the RRSP up if you are a high earner, favour the TFSA if your income is uneven, and treat lower-interest debt like a mortgage with less urgency than a credit card. Your goals and timeline fill in the details.",
-                },
-              },
-            ],
+            mainEntity: FAQ.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
           }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
@@ -286,18 +268,12 @@ export default function AccountOrderOfOperationsPage() {
           </div>
 
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>What is the order of operations for a Canadian&apos;s next dollar?</h4>
-          <p>The default waterfall is: clear high-interest debt first, then capture any employer match, then the RESP if you have kids, then the FHSA if a first home is on the horizon, then the TFSA, then the RRSP, and finally a non-registered taxable account once your registered room is full. Each dollar fills the highest-value bucket first, then spills into the next.</p>
-          <h4>Should I pay off my credit card before investing?</h4>
-          <p>Yes, in almost every case. A credit card balance costs you roughly 20 percent or more a year, and paying it off is a guaranteed, tax-free return of that same 20 percent. No investment reliably beats that, and none does it risk-free, so clearing expensive debt comes before everything else.</p>
-          <h4>Is the TFSA or RRSP better for me?</h4>
-          <p>It depends on your tax rate now versus in retirement. The RRSP tends to win when your rate today is higher than it will be later, because you deduct at a high rate and withdraw at a low one. The TFSA tends to win when your rate is lower now, or when you value tax-free, penalty-free access. If you are torn, splitting between the two is a reasonable hedge.</p>
-          <h4>Where does the RESP fit in the order?</h4>
-          <p>If you have kids and unused grant room, the RESP ranks very high, just below capturing free money at work. The government adds a 20 percent grant on the first $2,500 you contribute per child each year, up to $500 a year and $7,200 over the child&apos;s lifetime. That guaranteed 20 percent top-up beats your own TFSA and RRSP contributions.</p>
-          <h4>What are the 2026 contribution limits for these accounts?</h4>
-          <p>For 2026 the TFSA annual room is $7,000, the FHSA allows up to $8,000 a year to a lifetime limit of $40,000, and the RRSP lets you contribute 18 percent of last year&apos;s earned income up to $33,810, minus any pension adjustment. Limits and grant amounts change, so confirm the current figures before you rely on them.</p>
-          <h4>When should I change this order for my own situation?</h4>
-          <p>The waterfall is a default, not a law. Build an emergency fund first if you have none, move the FHSA up if a first home is your near-term goal, move the RRSP up if you are a high earner, favour the TFSA if your income is uneven, and treat lower-interest debt like a mortgage with less urgency than a credit card. Your goals and timeline fill in the details.</p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           <div className="cd-sec">Keep going</div>
           <p>Once you know where your dollars should go, the right card can help the everyday spending along the way earn a little something too.</p>

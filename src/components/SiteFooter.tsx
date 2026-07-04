@@ -6,7 +6,7 @@ export function SiteFooter() {
   return (
     <footer className="site-foot">
       <div className="sf-nl">
-        <span className="sf-nl-label">Canada&apos;s no-fluff cards &amp; points brief — one short email, no spam.</span>
+        <span className="sf-nl-label">Canada&apos;s no-fluff cards &amp; points brief. One short email, no spam.</span>
         <NewsletterSignup compact />
       </div>
 

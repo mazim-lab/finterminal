@@ -53,7 +53,7 @@ export function CardTileV2({ card }: { card: Card }) {
             {(() => {
               const v = valuationFor(card.rewards_program);
               return v.transferable && v.max && v.max > v.baseline ? (
-                <p className="text-[11px] text-gold-text dark:text-gold mt-1">↗ Transferable — up to {v.max}¢/pt via partners</p>
+                <p className="text-[11px] text-gold-text dark:text-gold mt-1">↗ Transferable, up to {v.max}¢/pt via partners</p>
               ) : null;
             })()}
           </>

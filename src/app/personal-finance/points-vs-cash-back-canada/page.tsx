@@ -21,6 +21,33 @@ const TOC = [
   { id: "verdict", label: "Which card should you pick?" },
 ];
 
+const FAQ = [
+  {
+    q: "Are points or cash back better in Canada?",
+    a: "It depends on how you redeem. A points card only beats cash back if you redeem points above the breakeven cents-per-point value. For a 2-points-per-dollar card compared to a 2 percent cash-back card, that breakeven is exactly 1 cent per point. Redeem above 1 cent and points win, redeem below it and cash back wins.",
+  },
+  {
+    q: "How do I calculate the breakeven cents per point?",
+    a: "Divide the cash-back rate by the points earn rate. A 2-points-per-dollar card versus a 2 percent cash-back card breaks even at 2% divided by 2 points, which is 1.0 cent per point. Beat that redemption value and the points card comes out ahead, fall below it and the cash-back card does.",
+  },
+  {
+    q: "Why do points often return less than the brochure suggests?",
+    a: "Two quiet leaks pull the real return down. People hoard points waiting for the perfect trip, and a balance you never spend is worth zero. Programs also devalue, quietly raising the points a flight costs, so points held for years tend to lose value. Cash back has neither problem, since it cannot be devalued and never expires unused.",
+  },
+  {
+    q: "Is 2 percent cash back good in Canada?",
+    a: "Yes. A flat 2 percent everyday rate is about the ceiling for Canadian cash-back cards, with richer rates showing up in specific categories like groceries and gas. It is guaranteed, frictionless, and cannot be devalued, so a 2 percent return you always collect can easily beat a higher points return you only capture some of the time.",
+  },
+  {
+    q: "When should I choose points over cash back?",
+    a: "Lean points when you have specific travel goals, are willing to learn a handful of redemption sweet spots, have flexible dates, and will earn and burn instead of hoarding. That is where premium-cabin redemptions reaching 4 or 5 plus cents per point live, which is the reason experienced churners favour travel currencies.",
+  },
+  {
+    q: "Do travel points expire or lose value?",
+    a: "They can lose value through devaluation, where a program raises the number of points a flight costs and every point you hold becomes worth a little less. This has happened repeatedly across airline and hotel programs. The general rule of the hobby is to earn and burn, because points held for years tend to lose value rather than gain it.",
+  },
+];
+
 export default function PointsVsCashBackPage() {
   if (!isPFPublished("points-vs-cash-back-canada")) notFound();
 
@@ -31,56 +58,11 @@ export default function PointsVsCashBackPage() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Are points or cash back better in Canada?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "It depends on how you redeem. A points card only beats cash back if you redeem points above the breakeven cents-per-point value. For a 2-points-per-dollar card compared to a 2 percent cash-back card, that breakeven is exactly 1 cent per point. Redeem above 1 cent and points win, redeem below it and cash back wins.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How do I calculate the breakeven cents per point?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Divide the cash-back rate by the points earn rate. A 2-points-per-dollar card versus a 2 percent cash-back card breaks even at 2% divided by 2 points, which is 1.0 cent per point. Beat that redemption value and the points card comes out ahead, fall below it and the cash-back card does.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Why do points often return less than the brochure suggests?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Two quiet leaks pull the real return down. People hoard points waiting for the perfect trip, and a balance you never spend is worth zero. Programs also devalue, quietly raising the points a flight costs, so points held for years tend to lose value. Cash back has neither problem, since it cannot be devalued and never expires unused.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Is 2 percent cash back good in Canada?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. A flat 2 percent everyday rate is about the ceiling for Canadian cash-back cards, with richer rates showing up in specific categories like groceries and gas. It is guaranteed, frictionless, and cannot be devalued, so a 2 percent return you always collect can easily beat a higher points return you only capture some of the time.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "When should I choose points over cash back?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Lean points when you have specific travel goals, are willing to learn a handful of redemption sweet spots, have flexible dates, and will earn and burn instead of hoarding. That is where premium-cabin redemptions reaching 4 or 5 plus cents per point live, which is the reason experienced churners favour travel currencies.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Do travel points expire or lose value?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "They can lose value through devaluation, where a program raises the number of points a flight costs and every point you hold becomes worth a little less. This has happened repeatedly across airline and hotel programs. The general rule of the hobby is to earn and burn, because points held for years tend to lose value rather than gain it.",
-                },
-              },
-            ],
+            mainEntity: FAQ.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
           }) }} />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
@@ -305,47 +287,12 @@ export default function PointsVsCashBackPage() {
           </div>
 
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>Are points or cash back better in Canada?</h4>
-          <p>
-            It depends on how you redeem. A points card only beats cash back if you redeem points above the
-            breakeven cents-per-point value. For a 2-points-per-dollar card compared to a 2 percent cash-back card,
-            that breakeven is exactly 1 cent per point. Redeem above 1 cent and points win, redeem below it and cash
-            back wins.
-          </p>
-          <h4>How do I calculate the breakeven cents per point?</h4>
-          <p>
-            Divide the cash-back rate by the points earn rate. A 2-points-per-dollar card versus a 2 percent
-            cash-back card breaks even at 2% divided by 2 points, which is 1.0 cent per point. Beat that redemption
-            value and the points card comes out ahead, fall below it and the cash-back card does.
-          </p>
-          <h4>Why do points often return less than the brochure suggests?</h4>
-          <p>
-            Two quiet leaks pull the real return down. People hoard points waiting for the perfect trip, and a
-            balance you never spend is worth zero. Programs also devalue, quietly raising the points a flight costs,
-            so points held for years tend to lose value. Cash back has neither problem, since it cannot be devalued
-            and never expires unused.
-          </p>
-          <h4>Is 2 percent cash back good in Canada?</h4>
-          <p>
-            Yes. A flat 2 percent everyday rate is about the ceiling for Canadian cash-back cards, with richer rates
-            showing up in specific categories like groceries and gas. It is guaranteed, frictionless, and cannot be
-            devalued, so a 2 percent return you always collect can easily beat a higher points return you only
-            capture some of the time.
-          </p>
-          <h4>When should I choose points over cash back?</h4>
-          <p>
-            Lean points when you have specific travel goals, are willing to learn a handful of redemption sweet
-            spots, have flexible dates, and will earn and burn instead of hoarding. That is where premium-cabin
-            redemptions reaching 4 or 5 plus cents per point live, which is the reason experienced churners favour
-            travel currencies.
-          </p>
-          <h4>Do travel points expire or lose value?</h4>
-          <p>
-            They can lose value through devaluation, where a program raises the number of points a flight costs and
-            every point you hold becomes worth a little less. This has happened repeatedly across airline and hotel
-            programs. The general rule of the hobby is to earn and burn, because points held for years tend to lose
-            value rather than gain it.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           <div className="cd-sec">Keep going</div>
           <p>Once you know which camp you are in, the next step is finding a card that fits it, whether that is a flat cash-back rate or a travel currency with real sweet spots.</p>

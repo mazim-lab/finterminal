@@ -16,6 +16,30 @@ const TOC = [
   { id: "deep", label: "Keep going" },
 ];
 
+// Single source of truth for the FAQ: drives both the visible list and the JSON-LD.
+const FAQ = [
+  {
+    q: "What is a business-class sweet spot?",
+    a: "A sweet spot is a redemption where the miles price is low relative to the cash fare, and it shows up most dramatically in business class, where the seat can sell for several thousand dollars but book for a fixed, often modest number of miles. The value comes from award charts that price a lie-flat seat off region and distance rather than the floating cash fare. As of July 2026; award prices and availability change, so confirm on the program's own site before you transfer or book.",
+  },
+  {
+    q: "Which points feed the best business-class redemptions for Canadians?",
+    a: "For Star Alliance business class, Aeroplan is the workhorse, and Amex Membership Rewards feeds it at 1 to 1. For oneworld business class, two doors open: British Airways Avios, which both Amex Membership Rewards and RBC Avion transfer to, and American AAdvantage, which RBC Avion on Avion Elite cards reaches at a base 10 points for 7 miles. Those are the transfer paths verified on our Canadian points-transfer map. As of July 2026.",
+  },
+  {
+    q: "Are business-class award seats easy to find?",
+    a: "No, availability is the real constraint, not points. Airlines release only a limited number of business-class saver or partner award seats per flight, and the best dates go quickly. Stay flexible, search a few days either side of your target, favour off-peak dates where a program has them, and expect some partner space to need a phone call.",
+  },
+  {
+    q: "Do business-class awards still cost cash?",
+    a: "Yes. Award tickets carry taxes and fees, and some programs or partner airlines add large carrier-imposed surcharges on top, which can quietly turn a cheap-looking award into an expensive one. Aeroplan does not pass along big fuel surcharges on most partners, and Aer Lingus is surcharge-light, while British Airways long-haul metal is not. Check the full cash cost before you book. As of July 2026.",
+  },
+  {
+    q: "Do I transfer my points before or after I find the seat?",
+    a: "After, always. Find and confirm the specific business-class award seat first, and hold it if the program lets you, before you transfer any points in. Transfers from Amex Membership Rewards or RBC Avion into an airline program such as Aeroplan, Avios, or AAdvantage are one-way and irreversible, so never transfer speculatively.",
+  },
+];
+
 export default function BusinessClassSweetSpotsCanadaPage() {
   return (
     <div className="app norail">
@@ -27,48 +51,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "What is a business-class sweet spot?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "A sweet spot is a redemption where the miles price is low relative to the cash fare, and it shows up most dramatically in business class, where the seat can sell for several thousand dollars but book for a fixed, often modest number of miles. The value comes from award charts that price a lie-flat seat off region and distance rather than the floating cash fare. As of July 2026; award prices and availability change, so confirm on the program's own site before you transfer or book.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Which points feed the best business-class redemptions for Canadians?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "For Star Alliance business class, Aeroplan is the workhorse, and Amex Membership Rewards feeds it at 1 to 1. For oneworld business class, two doors open: British Airways Avios, which both Amex Membership Rewards and RBC Avion transfer to, and American AAdvantage, which RBC Avion on Avion Elite cards reaches at a base 10 points for 7 miles. Those are the transfer paths verified on our Canadian points-transfer map. As of July 2026.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Are business-class award seats easy to find?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "No, availability is the real constraint, not points. Airlines release only a limited number of business-class saver or partner award seats per flight, and the best dates go quickly. Stay flexible, search a few days either side of your target, favour off-peak dates where a program has them, and expect some partner space to need a phone call.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Do business-class awards still cost cash?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Yes. Award tickets carry taxes and fees, and some programs or partner airlines add large carrier-imposed surcharges on top, which can quietly turn a cheap-looking award into an expensive one. Aeroplan does not pass along big fuel surcharges on most partners, and Aer Lingus is surcharge-light, while British Airways long-haul metal is not. Check the full cash cost before you book. As of July 2026.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Do I transfer my points before or after I find the seat?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "After, always. Find and confirm the specific business-class award seat first, and hold it if the program lets you, before you transfer any points in. Transfers from Amex Membership Rewards or RBC Avion into an airline program such as Aeroplan, Avios, or AAdvantage are one-way and irreversible, so never transfer speculatively.",
-                    },
-                  },
-                ],
+                mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
               }),
             }}
           />
@@ -190,7 +173,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
               <div className="kvk">AAdvantage (oneworld business)</div>
               <div className="kvv">
                 <strong>Why it is good value:</strong> American&apos;s partner award chart has barely moved in years and
-                unlocks marquee cabins like Qatar Qsuite with low surcharges, as long as you avoid British Airways and
+                reaches marquee cabins like Qatar Qsuite with low surcharges, as long as you avoid British Airways and
                 Iberia metal. <strong>Canadian currency:</strong> RBC Avion on Avion Elite cards transfers to AAdvantage
                 at a base 10 points for 7 miles (a 1 to 0.7 ratio), so it only pays off on high-value premium seats. See
                 our{" "}
@@ -233,8 +216,9 @@ export default function BusinessClassSweetSpotsCanadaPage() {
             <div className="kvrow">
               <div className="kvk">Canada to Europe in business, via Aeroplan</div>
               <div className="kvv">
-                As an example, Toronto to most of Europe on a Star Alliance partner has tended to land around 60,000
-                Aeroplan points one-way off-peak, plus roughly $200 in taxes and fees, for a cabin that often sells for
+                As an example, Toronto to Europe on a Star Alliance partner has tended to land around 60,000 Aeroplan
+                points one-way for the shortest transatlantic band, rising to about 75,000 for longer routes, plus
+                roughly $200 in taxes and fees, for a cabin that often sells for
                 three to four thousand dollars in cash. That is the kind of math that clears 5 cents per point. This is
                 an illustrative figure as of July 2026, not a quote for your dates, so confirm the live price on Aeroplan
                 before you book. Full example in our{" "}
@@ -289,46 +273,17 @@ export default function BusinessClassSweetSpotsCanadaPage() {
 
           {/* FAQ */}
           <div className="cd-sec">Frequently asked questions</div>
-          <h4>What is a business-class sweet spot?</h4>
-          <p>
-            A sweet spot is a redemption where the miles price is low relative to the cash fare, and it shows up most
-            dramatically in business class, where the seat can sell for several thousand dollars but book for a fixed,
-            often modest number of miles. The value comes from award charts that price a lie-flat seat off region and
-            distance rather than the floating cash fare. As of July 2026; award prices and availability change, so
-            confirm on the program&apos;s own site before you transfer or book.
-          </p>
-          <h4>Which points feed the best business-class redemptions for Canadians?</h4>
-          <p>
-            For Star Alliance business class, Aeroplan is the workhorse, and Amex Membership Rewards feeds it at 1 to 1.
-            For oneworld business class, two doors open: British Airways Avios, which both Amex Membership Rewards and RBC
-            Avion transfer to, and American AAdvantage, which RBC Avion on Avion Elite cards reaches at a base 10 points
-            for 7 miles. Those are the transfer paths verified on our Canadian points-transfer map. As of July 2026.
-          </p>
-          <h4>Are business-class award seats easy to find?</h4>
-          <p>
-            No, availability is the real constraint, not points. Airlines release only a limited number of business-class
-            saver or partner award seats per flight, and the best dates go quickly. Stay flexible, search a few days
-            either side of your target, favour off-peak dates where a program has them, and expect some partner space to
-            need a phone call.
-          </p>
-          <h4>Do business-class awards still cost cash?</h4>
-          <p>
-            Yes. Award tickets carry taxes and fees, and some programs or partner airlines add large carrier-imposed
-            surcharges on top, which can quietly turn a cheap-looking award into an expensive one. Aeroplan does not pass
-            along big fuel surcharges on most partners, and Aer Lingus is surcharge-light, while British Airways long-haul
-            metal is not. Check the full cash cost before you book. As of July 2026.
-          </p>
-          <h4>Do I transfer my points before or after I find the seat?</h4>
-          <p>
-            After, always. Find and confirm the specific business-class award seat first, and hold it if the program lets
-            you, before you transfer any points in. Transfers from Amex Membership Rewards or RBC Avion into an airline
-            program such as Aeroplan, Avios, or AAdvantage are one-way and irreversible, so never transfer speculatively.
-          </p>
+          {FAQ.map((f) => (
+            <div key={f.q}>
+              <h4>{f.q}</h4>
+              <p>{f.a}</p>
+            </div>
+          ))}
 
           {/* KEEP GOING */}
           <div id="deep" className="cd-sec" style={{ scrollMarginTop: 70 }}>Keep going</div>
           <p>
-            Pick the program that matches your points and your destination, then dive into the specific transfer and
+            Pick the program that matches your points and your destination, then go deeper on the specific transfer and
             redemption. These walk through the exact mechanics and the live numbers on each Canadian-friendly path.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>

@@ -104,7 +104,7 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
 
         <h4>Max annual fee</h4>
         <input type="range" min={0} max={1000} step={25} value={maxFee} onChange={(e) => setMaxFee(Number(e.target.value))} />
-        <div className="range">{maxFee >= 1000 ? 'Any' : `$0 — $${maxFee}`}</div>
+        <div className="range">{maxFee >= 1000 ? 'Any' : `$0 to $${maxFee}`}</div>
 
         <h4>Benefits</h4>
         {RAIL_BENEFITS.map(([k, label]) => (

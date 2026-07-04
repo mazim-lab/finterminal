@@ -22,7 +22,6 @@ export const TAGS: Tag[] = [
   { slug: "aadvantage", label: "AAdvantage", description: "American Airlines miles, the partner sweet spots, and how to feed them from Canada." },
   { slug: "amex", label: "Amex / Membership Rewards", description: "Amex Membership Rewards, the transfer partners, and the cards that earn them." },
   { slug: "rbc-avion", label: "RBC Avion", description: "RBC's Avion points, one of the few Canadian currencies that actually transfers to airlines." },
-  { slug: "scene-plus", label: "Scene+", description: "The Scene+ program, where the points are handy, and where they quietly fall short." },
   { slug: "transfers", label: "Points transfers", description: "Which Canadian points move to airlines and hotels, at what ratio, and when to pull the trigger." },
 
   // Cards subtopics
@@ -52,7 +51,7 @@ export interface TaggedArticle {
   path: string;
   title: string;
   dek?: string;
-  section: "Personal finance" | "Travel" | "Sweet spot" | "News";
+  section: "Personal finance" | "Travel" | "Sweet spot" | "News" | "Guides";
   tags: string[];
 }
 
@@ -72,13 +71,6 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     dek: "The marginal-rate rule that actually decides it, and why the answer is often both.",
     section: "Personal finance",
     tags: ["personal-finance", "registered-accounts", "taxes"],
-  },
-  {
-    path: "/personal-finance/fhsa-vs-rrsp-home-buyers-plan",
-    title: "FHSA vs the RRSP Home Buyers' Plan for a first home",
-    dek: "Tax-free and never repaid, or a loan from your own RRSP? Which to use, and how to stack both.",
-    section: "Personal finance",
-    tags: ["personal-finance", "registered-accounts", "home-buying"],
   },
   {
     path: "/personal-finance/credit-card-interest-canada",
@@ -210,13 +202,6 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     path: "/personal-finance/resp-cesg-grant-canada",
     title: "RESP and the 20% CESG grant: the easiest guaranteed return in Canada",
     dek: "Why the RESP grant is free money you should not leave on the table.",
-    section: "Personal finance",
-    tags: ["personal-finance", "registered-accounts", "taxes"],
-  },
-  {
-    path: "/personal-finance/rrsp-vs-tfsa-canada",
-    title: "RRSP vs TFSA: the honest decision for Canadians",
-    dek: "A plain-language head-to-head built on the marginal-rate rule that actually decides it.",
     section: "Personal finance",
     tags: ["personal-finance", "registered-accounts", "taxes"],
   },
@@ -393,6 +378,15 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     dek: "The June refresh keeps the $95 annual fee while adding a $100 hotel credit and a Global Entry, TSA PreCheck or NEXUS credit, alongside its best-ever welcome offer.",
     section: "News",
     tags: ["news", "cards", "welcome-bonuses", "travel-cards", "points"],
+  },
+
+  // Guides
+  {
+    path: "/guides/us-cards-for-canadians",
+    title: "US credit cards for Canadians: how to get approved and why you would",
+    dek: "Building US credit and landing American welcome bonuses from north of the border.",
+    section: "Guides",
+    tags: ["personal-finance", "cards", "welcome-bonuses", "amex", "newcomers"],
   },
 ];
 
