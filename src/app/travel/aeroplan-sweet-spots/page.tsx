@@ -211,6 +211,7 @@ export default function AeroplanSweetSpotsPage() {
           <p>If you are still building your balance, the fastest route for most Canadians is earning Membership Rewards and transferring them over.</p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
             <Link href="/travel/amex-mr-to-aeroplan" className="cd-apply">Transfer MR to Aeroplan →</Link>
+            <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/cards?q=aeroplan" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Aeroplan cards →</Link>
           </div>
         </div>

@@ -8,6 +8,14 @@ export const metadata = {
 
 const ARTICLES = [
   {
+    slug: "business-class-sweet-spots-canada",
+    title: "Business-class sweet spots from Canada: where your points go furthest",
+    dek: "The hub for the best lie-flat redemptions Canadians can actually reach: what a sweet spot is, the honest reality of availability and surcharges, and which currency feeds Aeroplan, AAdvantage, and Avios business class. Links every deep-dive.",
+    tag: "Hub",
+    read: "8 min read",
+    date: "Jul 2026",
+  },
+  {
     slug: "how-to-book-award-flights-canada",
     title: "How to search for and book award flights from Canada",
     dek: "The whole method in order: decide the trip, search availability at the source, treat availability as the real constraint, hold the seat, then transfer points in only once you can book. Where to search each Canadian program, plus the honest gotchas.",

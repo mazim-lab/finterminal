@@ -316,6 +316,7 @@ export default function AAdvantageSweetSpotsPage() {
           <p>If you have not topped up your balance yet, start with the transfer guide, then come back here to spend.</p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
             <Link href="/travel/rbc-avion-to-aadvantage" className="cd-apply">Transfer Avion to AAdvantage →</Link>
+            <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Avios sweet spots →</Link>
           </div>
         </div>

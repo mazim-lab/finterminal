@@ -377,6 +377,7 @@ export default function PointsTransferPartnersCanadaPage() {
             <Link href="/travel/rbc-avion-to-aadvantage" className="cd-apply">RBC Avion to AAdvantage →</Link>
             <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply">Avios sweet spots &amp; Avion transfer →</Link>
             <Link href="/travel/aeroplan-sweet-spots" className="cd-apply">Aeroplan sweet spots →</Link>
+            <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/travel/how-to-book-award-flights-canada" className="cd-apply">How to search for and book award flights →</Link>
             <Link href="/travel/airline-alliances-guide-canada" className="cd-apply">The airline alliance guide for Canadians →</Link>
             <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards →</Link>

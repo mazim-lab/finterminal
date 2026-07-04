@@ -43,6 +43,7 @@ const STATIC_PATHS = [
   "/travel/airline-alliances-guide-canada",
   "/travel/how-to-book-award-flights-canada",
   "/travel/airport-lounge-access-canada",
+  "/travel/business-class-sweet-spots-canada",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

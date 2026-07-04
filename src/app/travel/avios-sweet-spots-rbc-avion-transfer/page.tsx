@@ -326,6 +326,7 @@ export default function AviosSweetSpotsPage() {
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map →</Link>
             <Link href="/travel/aeroplan-sweet-spots" className="cd-apply">Aeroplan sweet spots →</Link>
+            <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/cards?q=avion" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>RBC Avion cards →</Link>
           </div>
         </div>

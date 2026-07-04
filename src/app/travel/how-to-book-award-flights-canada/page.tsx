@@ -385,6 +385,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map →</Link>
             <Link href="/travel/airline-alliances-guide-canada" className="cd-apply">The airline alliance guide for Canadians →</Link>
+            <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/travel/aeroplan-sweet-spots" className="cd-apply">Aeroplan sweet spots →</Link>
             <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply">Avios sweet spots &amp; Avion transfer →</Link>
             <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards →</Link>
