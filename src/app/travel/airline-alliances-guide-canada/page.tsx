@@ -368,6 +368,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map →</Link>
+            <Link href="/travel/how-to-book-award-flights-canada" className="cd-apply">How to search for and book award flights →</Link>
             <Link href="/travel/aeroplan-sweet-spots" className="cd-apply">Aeroplan sweet spots →</Link>
             <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply">Avios sweet spots &amp; Avion transfer →</Link>
             <Link href="/travel/amex-mr-to-aeroplan" className="cd-apply">Amex MR to Aeroplan →</Link>

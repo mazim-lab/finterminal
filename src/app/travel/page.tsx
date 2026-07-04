@@ -8,6 +8,14 @@ export const metadata = {
 
 const ARTICLES = [
   {
+    slug: "how-to-book-award-flights-canada",
+    title: "How to search for and book award flights from Canada",
+    dek: "The whole method in order: decide the trip, search availability at the source, treat availability as the real constraint, hold the seat, then transfer points in only once you can book. Where to search each Canadian program, plus the honest gotchas.",
+    tag: "How-to",
+    read: "9 min read",
+    date: "Jul 2026",
+  },
+  {
     slug: "airline-alliances-guide-canada",
     title: "The airline alliance guide for Canadians: Star Alliance, oneworld, and SkyTeam",
     dek: "The three global alliances, the notable member airlines, and exactly how a Canadian reaches each with points. Star is strongest via Aeroplan, oneworld via Avios and AAdvantage, and SkyTeam the honest thin spot.",
