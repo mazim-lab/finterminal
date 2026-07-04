@@ -8,6 +8,14 @@ export const metadata = {
 
 const ARTICLES = [
   {
+    slug: "points-transfer-partners-canada",
+    title: "The Canadian points-transfer map: which points actually transfer, and where",
+    dek: "Most Canadian bank points do not transfer to airlines. Here is the honest map: Amex MR and RBC Avion are the real transfer currencies, while TD, Scene+, Aventura and BMO are fixed-value or portal programs. Verified partners and ratios.",
+    tag: "Hub",
+    read: "9 min read",
+    date: "Jul 2026",
+  },
+  {
     slug: "rbc-avion-to-aadvantage",
     title: "How to transfer RBC Avion points to American Airlines AAdvantage",
     dek: "Avion is one of the few Canadian programs that feeds American Airlines, though the rate is a real 1 to 0.7. Here is which cards qualify, the exact steps, and the timing trick that softens the haircut.",

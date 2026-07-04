@@ -326,6 +326,7 @@ export default function AvionToAmericanAirlinesPage() {
           <p>Getting the miles is only half the job. The next step is knowing where AAdvantage miles actually shine, so you transfer toward a redemption that earns its keep.</p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
             <Link href="/travel/aadvantage-sweet-spots" className="cd-apply">AAdvantage sweet spots →</Link>
+            <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map →</Link>
             <Link href="/cards?q=avion" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>RBC Avion cards →</Link>
           </div>
         </div>

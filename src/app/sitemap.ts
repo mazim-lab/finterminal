@@ -36,6 +36,7 @@ const STATIC_PATHS = [
   "/travel/avios-sweet-spots-rbc-avion-transfer",
   "/travel/rbc-avion-to-aadvantage",
   "/travel/aadvantage-sweet-spots",
+  "/travel/points-transfer-partners-canada",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
