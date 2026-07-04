@@ -18,6 +18,7 @@ const STATIC_PATHS = [
   "/personal-finance/best-gic-rates-canada",
   "/personal-finance/best-chequing-account-bonuses-canada",
   "/personal-finance/where-to-hold-cash-canada",
+  "/personal-finance/how-to-build-credit-canada",
   "/travel",
   "/cards",
   "/compare",

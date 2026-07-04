@@ -48,6 +48,9 @@ export default function PersonalFinancePage() {
             <Link href="/personal-finance/where-to-hold-cash-canada" className="cd-apply">
               Where to hold your cash in Canada &rarr;
             </Link>
+            <Link href="/personal-finance/how-to-build-credit-canada" className="cd-apply">
+              How to build (or rebuild) credit in Canada &rarr;
+            </Link>
           </div>
         </div>
       </main>
