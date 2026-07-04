@@ -51,6 +51,9 @@ export default function PersonalFinancePage() {
             <Link href="/personal-finance/how-to-build-credit-canada" className="cd-apply">
               How to build (or rebuild) credit in Canada &rarr;
             </Link>
+            <Link href="/personal-finance/check-your-credit-report-canada" className="cd-apply">
+              Check and understand your credit report and score &rarr;
+            </Link>
             <Link href="/personal-finance/newcomer-to-canada-first-cards-accounts" className="cd-apply">
               Newcomer to Canada: your first cards and accounts &rarr;
             </Link>
