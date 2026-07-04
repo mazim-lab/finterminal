@@ -368,6 +368,9 @@ export default function BestCashBackCardsPage() {
             <Link href="/compare" className="cd-apply">
               Compare cards side by side &rarr;
             </Link>
+            <Link href="/personal-finance/best-travel-credit-cards-canada" className="cd-apply">
+              Best travel and rewards cards &rarr;
+            </Link>
             <Link href="/how-we-value-points" className="cd-apply">
               How we value points &rarr;
             </Link>

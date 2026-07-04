@@ -19,6 +19,7 @@ const STATIC_PATHS = [
   "/personal-finance/best-chequing-account-bonuses-canada",
   "/personal-finance/where-to-hold-cash-canada",
   "/personal-finance/best-cash-back-credit-cards-canada",
+  "/personal-finance/best-travel-credit-cards-canada",
   "/personal-finance/how-to-build-credit-canada",
   "/personal-finance/check-your-credit-report-canada",
   "/personal-finance/newcomer-to-canada-first-cards-accounts",
