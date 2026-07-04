@@ -16,6 +16,7 @@ const STATIC_PATHS = [
   "/personal-finance",
   "/personal-finance/best-savings-account-rates-canada",
   "/personal-finance/best-gic-rates-canada",
+  "/personal-finance/best-chequing-account-bonuses-canada",
   "/travel",
   "/cards",
   "/compare",

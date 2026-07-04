@@ -42,6 +42,9 @@ export default function PersonalFinancePage() {
             <Link href="/personal-finance/best-gic-rates-canada" className="cd-apply">
               Best GIC rates in Canada &rarr;
             </Link>
+            <Link href="/personal-finance/best-chequing-account-bonuses-canada" className="cd-apply">
+              Best chequing account welcome bonuses in Canada &rarr;
+            </Link>
           </div>
         </div>
       </main>
