@@ -54,6 +54,9 @@ export default function PersonalFinancePage() {
             <Link href="/personal-finance/best-travel-credit-cards-canada" className="cd-apply">
               The best travel and rewards credit cards in Canada &rarr;
             </Link>
+            <Link href="/personal-finance/credit-card-travel-insurance-canada" className="cd-apply">
+              What your credit card's travel insurance actually covers &rarr;
+            </Link>
             <Link href="/personal-finance/how-to-build-credit-canada" className="cd-apply">
               How to build (or rebuild) credit in Canada &rarr;
             </Link>
