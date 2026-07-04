@@ -14,6 +14,7 @@ const STATIC_PATHS = [
   "/news",
   "/deals",
   "/personal-finance",
+  "/personal-finance/best-savings-account-rates-canada",
   "/travel",
   "/cards",
   "/compare",

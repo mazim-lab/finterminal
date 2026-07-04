@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { LoadMoreCards } from "@/components/LoadMoreCards";
 import { livePFArticles } from "@/data/personal-finance";
 
@@ -32,6 +33,13 @@ export default function PersonalFinancePage() {
           <p className="lede" style={{ marginTop: 20 }}>
             New guides land regularly, on cards, points, and building real wealth in Canada. Check back soon.
           </p>
+
+          <div className="cd-sec" style={{ marginTop: 24 }}>Reference</div>
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+            <Link href="/personal-finance/best-savings-account-rates-canada" className="cd-apply">
+              Best high-interest savings rates in Canada &rarr;
+            </Link>
+          </div>
         </div>
       </main>
     </div>
