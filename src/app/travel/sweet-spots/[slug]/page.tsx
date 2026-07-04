@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { SWEET_SPOTS } from "@/data/sweet-spots";
+import { ArticleTags } from "@/components/ArticleTags";
 
 // All sweet-spot posts are known at build time from the committed list.
 export function generateStaticParams() {
@@ -73,6 +74,7 @@ export default async function SweetSpotPage({ params }: { params: Promise<{ slug
             <span>{spot.read}</span><span className="sep">·</span>
             <span>{spot.date}</span>
           </div>
+          <ArticleTags path={`/travel/sweet-spots/${spot.slug}`} />
 
           {spot.shortAnswer ? (
             <div className="cd-note">

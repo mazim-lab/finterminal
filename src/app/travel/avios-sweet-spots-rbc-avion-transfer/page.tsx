@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Avios sweet spots, and converting RBC Avion to Avios | FinTerminal",
@@ -98,6 +99,7 @@ export default function AviosSweetSpotsPage() {
             <span>about 8 min read</span><span className="sep">·</span>
             <span>prices and ratios change, confirm before you book</span>
           </div>
+          <ArticleTags path="/travel/avios-sweet-spots-rbc-avion-transfer" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

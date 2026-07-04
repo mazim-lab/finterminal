@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "AAdvantage sweet spots: redeeming American Airlines miles | FinTerminal",
@@ -94,6 +95,7 @@ export default function AAdvantageSweetSpotsPage() {
             <span>about 10 min read</span><span className="sep">·</span>
             <span>chart figures are approximate, confirm before you book</span>
           </div>
+          <ArticleTags path="/travel/aadvantage-sweet-spots" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

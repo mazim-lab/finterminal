@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Where to hold your cash in Canada: HISA vs GIC vs high-interest chequing vs cash ETFs | FinTerminal",
@@ -85,6 +86,7 @@ export default function WhereToHoldCashPage() {
             <span>about 9 min read</span><span className="sep">·</span>
             <span>General info as of July 2026; rates and product details change, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/where-to-hold-cash-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

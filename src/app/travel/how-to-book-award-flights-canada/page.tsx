@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "How to search for and book award flights from Canada: the method | FinTerminal",
@@ -101,6 +102,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
             <span>about 9 min read</span><span className="sep">·</span>
             <span>as of July 2026, availability, tools, and fees change, confirm before you transfer or book</span>
           </div>
+          <ArticleTags path="/travel/how-to-book-award-flights-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

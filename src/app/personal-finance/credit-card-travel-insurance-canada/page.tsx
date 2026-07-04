@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "What Your Credit Card's Travel Insurance Actually Covers in Canada | FinTerminal",
@@ -88,6 +89,7 @@ export default function CreditCardTravelInsurancePage() {
             <span>about 11 min read</span><span className="sep">·</span>
             <span>General info as of July 2026; coverage varies by card and changes, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/credit-card-travel-insurance-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

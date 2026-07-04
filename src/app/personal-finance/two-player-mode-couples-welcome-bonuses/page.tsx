@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
@@ -55,6 +56,7 @@ export default function TwoPlayerModePage() {
             <span>about 8 min read</span><span className="sep">·</span>
             <span>offers change; general info, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/two-player-mode-couples-welcome-bonuses" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

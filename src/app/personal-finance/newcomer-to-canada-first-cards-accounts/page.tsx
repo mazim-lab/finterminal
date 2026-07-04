@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Newcomer to Canada: Your First Credit Cards and Bank Accounts | FinTerminal",
@@ -80,6 +81,7 @@ export default function NewcomerFirstCardsAccountsPage() {
             <span>about 10 min read</span><span className="sep">·</span>
             <span>General info as of July 2026; general information, not immigration, financial, or tax advice</span>
           </div>
+          <ArticleTags path="/personal-finance/newcomer-to-canada-first-cards-accounts" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

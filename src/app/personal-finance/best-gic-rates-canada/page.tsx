@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Best GIC rates in Canada | FinTerminal",
@@ -85,6 +86,7 @@ export default function BestGicRatesPage() {
             <span>about 10 min read</span><span className="sep">·</span>
             <span>Rates as of July 2026; general info, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/best-gic-rates-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

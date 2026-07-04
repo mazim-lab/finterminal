@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Business-class sweet spots from Canada: where your points go furthest | FinTerminal",
@@ -93,6 +94,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
             <span>about 8 min read</span><span className="sep">·</span>
             <span>as of July 2026, award prices and availability change, confirm on the program&apos;s own site before you transfer or book</span>
           </div>
+          <ArticleTags path="/travel/business-class-sweet-spots-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

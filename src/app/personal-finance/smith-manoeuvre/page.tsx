@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "The Smith Manoeuvre, explained properly | FinTerminal",
@@ -95,6 +96,7 @@ export default function SmithManoeuvrePage() {
             <span>about 18 min read</span><span className="sep">·</span>
             <span>educational, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/smith-manoeuvre" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

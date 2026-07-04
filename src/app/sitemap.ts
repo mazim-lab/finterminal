@@ -3,6 +3,7 @@ import { allCards } from "@/data/cards";
 import { NEWS } from "@/data/news";
 import { SWEET_SPOTS } from "@/data/sweet-spots";
 import { livePFArticles } from "@/data/personal-finance";
+import { TAGS, tagCount } from "@/data/tags";
 
 const BASE = "https://www.finterminal.ca";
 
@@ -11,6 +12,7 @@ export const revalidate = 3600;
 
 const STATIC_PATHS = [
   "",
+  "/tags",
   "/news",
   "/deals",
   "/personal-finance",
@@ -56,5 +58,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...news.map((n) => ({ url: `${BASE}/news/${n.slug}`, lastModified: now })),
     ...SWEET_SPOTS.map((s) => ({ url: `${BASE}/travel/sweet-spots/${s.slug}`, lastModified: now })),
     ...livePFArticles().map((a) => ({ url: `${BASE}/personal-finance/${a.slug}`, lastModified: now })),
+    ...TAGS.filter((t) => tagCount(t.slug) > 0).map((t) => ({ url: `${BASE}/tags/${t.slug}`, lastModified: now })),
   ];
 }

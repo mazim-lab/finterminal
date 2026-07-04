@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "The Canadian points-transfer map: which points actually transfer, and where | FinTerminal",
@@ -100,6 +101,7 @@ export default function PointsTransferPartnersCanadaPage() {
             <span>about 9 min read</span><span className="sep">·</span>
             <span>as of July 2026, ratios and partners change, confirm before you transfer</span>
           </div>
+          <ArticleTags path="/travel/points-transfer-partners-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

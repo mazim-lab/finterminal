@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 import { allCards, formatCurrency, type Card } from "@/data/cards";
 
 export const metadata = {
@@ -275,6 +276,7 @@ export default function BestTravelCardsPage() {
             <span>about 9 min read</span><span className="sep">·</span>
             <span>Our view as of July 2026; card offers and earn rates change, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/best-travel-credit-cards-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Does a Costco membership pay for itself? | FinTerminal",
@@ -98,6 +99,7 @@ export default function CostcoMembershipPage() {
             <span>about 8 min read</span><span className="sep">·</span>
             <span>fees and prices change; general info, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/costco-membership-worth-it-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
@@ -108,6 +109,7 @@ export default function FHSAPlaybookPage() {
             <span>about 11 min read</span><span className="sep">·</span>
             <span>rules and limits change; general info, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/fhsa-playbook-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

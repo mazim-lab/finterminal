@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "How to Build (or Rebuild) Credit in Canada: A Plain-Language Guide | FinTerminal",
@@ -85,6 +86,7 @@ export default function HowToBuildCreditPage() {
             <span>about 10 min read</span><span className="sep">·</span>
             <span>General info as of July 2026; general information, not financial or credit advice</span>
           </div>
+          <ArticleTags path="/personal-finance/how-to-build-credit-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

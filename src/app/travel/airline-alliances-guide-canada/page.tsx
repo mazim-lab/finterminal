@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "The airline alliance guide for Canadians: Star Alliance, oneworld, and SkyTeam | FinTerminal",
@@ -101,6 +102,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
             <span>about 9 min read</span><span className="sep">·</span>
             <span>as of July 2026, alliances and partners change, confirm before you book or transfer</span>
           </div>
+          <ArticleTags path="/travel/airline-alliances-guide-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

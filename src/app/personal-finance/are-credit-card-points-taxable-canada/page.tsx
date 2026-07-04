@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
@@ -102,6 +103,7 @@ export default function CreditCardPointsTaxablePage() {
             <span>about 8 min read</span><span className="sep">·</span>
             <span>general info, not tax advice; CRA positions can change</span>
           </div>
+          <ArticleTags path="/personal-finance/are-credit-card-points-taxable-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

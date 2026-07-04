@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "How to transfer RBC Avion points to American Airlines AAdvantage | FinTerminal",
@@ -95,6 +96,7 @@ export default function AvionToAmericanAirlinesPage() {
             <span>about 8 min read</span><span className="sep">·</span>
             <span>ratios and bonuses change, confirm before you transfer</span>
           </div>
+          <ArticleTags path="/travel/rbc-avion-to-aadvantage" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

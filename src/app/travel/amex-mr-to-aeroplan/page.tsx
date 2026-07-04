@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "How to convert Amex Membership Rewards to Aeroplan | FinTerminal",
@@ -90,6 +91,7 @@ export default function MrToAeroplanPage() {
             <span className="gd">TRAVEL &amp; POINTS</span><span className="sep">·</span>
             <span>about 7 min read</span>
           </div>
+          <ArticleTags path="/travel/amex-mr-to-aeroplan" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

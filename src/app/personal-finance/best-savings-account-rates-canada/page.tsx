@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Best high-interest savings account (HISA) rates in Canada | FinTerminal",
@@ -83,6 +84,7 @@ export default function BestSavingsAccountRatesPage() {
             <span>about 9 min read</span><span className="sep">·</span>
             <span>Rates as of July 2026; general info, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/best-savings-account-rates-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

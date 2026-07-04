@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Check Your Credit Report and Score in Canada, Free | FinTerminal",
@@ -86,6 +87,7 @@ export default function CheckYourCreditReportPage() {
             <span>about 10 min read</span><span className="sep">·</span>
             <span>General info as of July 2026; general information, not financial or credit advice</span>
           </div>
+          <ArticleTags path="/personal-finance/check-your-credit-report-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
@@ -101,6 +102,7 @@ export default function HowToHitMinimumSpendPage() {
             <span>about 9 min read</span><span className="sep">·</span>
             <span>offers change; general info, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/how-to-hit-minimum-spend-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

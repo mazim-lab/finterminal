@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { allCards } from "@/data/cards";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Airport lounge access for Canadians: how it actually works | FinTerminal",
@@ -120,6 +121,7 @@ export default function AirportLoungeAccessCanadaPage() {
             <span>about 9 min read</span><span className="sep">·</span>
             <span>as of July 2026, lounge programs and access rules change, confirm with the issuer and the lounge program before you rely on access</span>
           </div>
+          <ArticleTags path="/travel/airport-lounge-access-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

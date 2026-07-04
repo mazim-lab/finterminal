@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { NEWS } from "@/data/news";
+import { ArticleTags } from "@/components/ArticleTags";
 
 // All stories are known at build time from the committed news list.
 export function generateStaticParams() {
@@ -64,6 +65,7 @@ export default async function NewsStoryPage({ params }: { params: Promise<{ slug
                 ? <><span className="sep">·</span><span>source: {item.sourceLabel}</span></>
                 : null}
           </div>
+          <ArticleTags path={`/news/${item.slug}`} />
 
           {paragraphs.map((p, i) => <p key={i}>{p}</p>)}
 

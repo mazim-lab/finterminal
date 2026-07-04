@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
@@ -103,6 +104,7 @@ export default function ForeignTransactionFeePage() {
             <span>about 8 min read</span><span className="sep">·</span>
             <span>fees and card terms change; general info, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/foreign-transaction-fee-cards-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

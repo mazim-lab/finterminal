@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 
@@ -56,6 +57,7 @@ export default function PayBillsWithCreditCardPage() {
             <span>about 10 min read</span><span className="sep">·</span>
             <span>fees change; general info, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/pay-bills-with-credit-card-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

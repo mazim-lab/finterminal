@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Best chequing account welcome bonuses in Canada | FinTerminal",
@@ -84,6 +85,7 @@ export default function BestChequingBonusesPage() {
             <span>about 9 min read</span><span className="sep">·</span>
             <span>Offers as of July 2026; general info, not advice</span>
           </div>
+          <ArticleTags path="/personal-finance/best-chequing-account-bonuses-canada" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>

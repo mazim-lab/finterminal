@@ -1,0 +1,399 @@
+// Topic tags for editorial articles and news items. Tags render as clickable
+// chips on each article, and each tag has its own hub page at /tags/<slug>.
+
+export interface Tag {
+  slug: string;
+  label: string;
+  description: string;
+}
+
+// The canonical tag list. Add new slugs here (and only here) when the taxonomy grows.
+export const TAGS: Tag[] = [
+  // Section-level
+  { slug: "points", label: "Points", description: "Everything about earning, moving, and cashing out loyalty points from Canadian cards." },
+  { slug: "travel", label: "Travel", description: "Turning points into real trips, from award booking to lounges and business class." },
+  { slug: "personal-finance", label: "Personal finance", description: "The everyday money stuff: savings, chequing, credit, and the accounts that hold it all." },
+  { slug: "cards", label: "Credit cards", description: "Picking the right Canadian card, from welcome bonuses to cash back to no FX fees." },
+  { slug: "news", label: "News", description: "What just changed in Canadian cards, points, and personal finance, and why it matters to you." },
+
+  // Loyalty programs and currencies
+  { slug: "aeroplan", label: "Aeroplan", description: "Air Canada's Aeroplan program: where the points shine and how to get them there." },
+  { slug: "avios", label: "Avios", description: "The Avios currency behind British Airways, Qatar, and friends, and how Canadians reach it." },
+  { slug: "aadvantage", label: "AAdvantage", description: "American Airlines miles, the partner sweet spots, and how to feed them from Canada." },
+  { slug: "amex", label: "Amex / Membership Rewards", description: "Amex Membership Rewards, the transfer partners, and the cards that earn them." },
+  { slug: "rbc-avion", label: "RBC Avion", description: "RBC's Avion points, one of the few Canadian currencies that actually transfers to airlines." },
+  { slug: "scene-plus", label: "Scene+", description: "The Scene+ program, where the points are handy, and where they quietly fall short." },
+  { slug: "transfers", label: "Points transfers", description: "Which Canadian points move to airlines and hotels, at what ratio, and when to pull the trigger." },
+
+  // Cards subtopics
+  { slug: "welcome-bonuses", label: "Welcome bonuses", description: "The big up-front point hauls, the spend to unlock them, and how to plan around them." },
+  { slug: "cash-back", label: "Cash back", description: "Straightforward cards that hand you money back, no points math required." },
+  { slug: "travel-cards", label: "Travel cards", description: "Cards built for trips: travel earn rates, insurance, and perks that pay their fee." },
+  { slug: "no-fx-fees", label: "No FX fees", description: "Cards that skip the foreign transaction fee, so spending abroad does not cost extra." },
+
+  // Travel how-to
+  { slug: "award-booking", label: "Award booking", description: "Searching for and locking in award seats before you ever transfer a single point." },
+  { slug: "lounges", label: "Airport lounges", description: "How lounge access really works in Canada, and which cards get you through the door." },
+  { slug: "alliances", label: "Airline alliances", description: "Star Alliance, oneworld, and SkyTeam, and how a Canadian reaches each one with points." },
+  { slug: "business-class", label: "Business class", description: "The lie-flat redemptions that give Canadians the most value for their points." },
+  { slug: "travel-insurance", label: "Travel insurance", description: "The travel coverage tucked into Canadian cards, and how to read the fine print." },
+
+  // Personal finance subtopics
+  { slug: "savings-and-gics", label: "Savings and GICs", description: "Where to park cash for a real rate, from high-interest savings to laddered GICs." },
+  { slug: "chequing", label: "Chequing accounts", description: "Everyday banking, the fees worth dodging, and the sign-up bonuses worth grabbing." },
+  { slug: "credit-score", label: "Credit score and reports", description: "How Canadian credit scores work, how to build one, and how to read your report." },
+  { slug: "newcomers", label: "Newcomers to Canada", description: "First cards, first accounts, and building credit from scratch after you land." },
+  { slug: "registered-accounts", label: "Registered accounts", description: "The tax-sheltered accounts that do the heavy lifting: TFSA, RRSP, FHSA, and RESP." },
+  { slug: "home-buying", label: "Home buying", description: "Saving the down payment and the accounts and rules that help you get there." },
+  { slug: "taxes", label: "Taxes", description: "The Canadian tax angles on your money, from registered accounts to points and perks." },
+];
+
+export interface TaggedArticle {
+  path: string;
+  title: string;
+  dek?: string;
+  section: "Personal finance" | "Travel" | "Sweet spot" | "News";
+  tags: string[];
+}
+
+// Phase 2 populates this registry. Empty is fine; everything still compiles.
+export const TAGGED_ARTICLES: TaggedArticle[] = [
+  // Personal finance standalone pages
+  {
+    path: "/personal-finance/are-credit-card-points-taxable-canada",
+    title: "Are credit card points and cash back taxable in Canada?",
+    dek: "When the CRA cares about your rewards, and when it does not.",
+    section: "Personal finance",
+    tags: ["personal-finance", "taxes", "points", "cash-back", "cards"],
+  },
+  {
+    path: "/personal-finance/best-cash-back-credit-cards-canada",
+    title: "The best cash-back credit cards in Canada",
+    dek: "The cards that hand you money back, and how to pick the right one.",
+    section: "Personal finance",
+    tags: ["personal-finance", "cards", "cash-back"],
+  },
+  {
+    path: "/personal-finance/best-chequing-account-bonuses-canada",
+    title: "Best chequing account welcome bonuses in Canada",
+    dek: "The everyday bank accounts paying you to switch, and the fees to dodge.",
+    section: "Personal finance",
+    tags: ["personal-finance", "chequing"],
+  },
+  {
+    path: "/personal-finance/best-gic-rates-canada",
+    title: "Best GIC rates in Canada",
+    dek: "Where to lock in a guaranteed rate, and how to ladder your GICs.",
+    section: "Personal finance",
+    tags: ["personal-finance", "savings-and-gics"],
+  },
+  {
+    path: "/personal-finance/best-savings-account-rates-canada",
+    title: "Best high-interest savings account (HISA) rates in Canada",
+    dek: "Where to park cash for a real rate without locking it away.",
+    section: "Personal finance",
+    tags: ["personal-finance", "savings-and-gics"],
+  },
+  {
+    path: "/personal-finance/best-travel-credit-cards-canada",
+    title: "The best travel and rewards credit cards in Canada",
+    dek: "The travel cards worth their fee, from earn rates to insurance and perks.",
+    section: "Personal finance",
+    tags: ["personal-finance", "cards", "travel-cards", "points", "welcome-bonuses"],
+  },
+  {
+    path: "/personal-finance/canadian-account-order-of-operations",
+    title: "Where your next dollar should go: the Canadian account order",
+    dek: "A plain-language order of operations for every extra dollar you save.",
+    section: "Personal finance",
+    tags: ["personal-finance", "registered-accounts", "savings-and-gics"],
+  },
+  {
+    path: "/personal-finance/check-your-credit-report-canada",
+    title: "Check your credit report and score in Canada, free",
+    dek: "How to pull your Equifax and TransUnion reports and read what is on them.",
+    section: "Personal finance",
+    tags: ["personal-finance", "credit-score"],
+  },
+  {
+    path: "/personal-finance/costco-membership-worth-it-canada",
+    title: "Does a Costco membership pay for itself?",
+    dek: "The honest math on whether the membership fee earns its keep.",
+    section: "Personal finance",
+    tags: ["personal-finance", "cash-back"],
+  },
+  {
+    path: "/personal-finance/credit-card-travel-insurance-canada",
+    title: "What your credit card's travel insurance actually covers in Canada",
+    dek: "Reading the fine print on the coverage tucked into your card.",
+    section: "Personal finance",
+    tags: ["personal-finance", "cards", "travel-insurance", "travel-cards"],
+  },
+  {
+    path: "/personal-finance/fhsa-playbook-canada",
+    title: "The FHSA playbook: Canada's most underused account",
+    dek: "How the First Home Savings Account works and why you should open one now.",
+    section: "Personal finance",
+    tags: ["personal-finance", "registered-accounts", "home-buying", "taxes"],
+  },
+  {
+    path: "/personal-finance/foreign-transaction-fee-cards-canada",
+    title: "The 2.5% foreign transaction fee, and the cards that kill it",
+    dek: "Why spending abroad costs extra, and the cards that skip the fee.",
+    section: "Personal finance",
+    tags: ["personal-finance", "cards", "no-fx-fees"],
+  },
+  {
+    path: "/personal-finance/how-to-build-credit-canada",
+    title: "How to build (or rebuild) credit in Canada: a plain-language guide",
+    dek: "The steps that actually move your score, from your first card up.",
+    section: "Personal finance",
+    tags: ["personal-finance", "credit-score", "cards"],
+  },
+  {
+    path: "/personal-finance/how-to-hit-minimum-spend-canada",
+    title: "How to hit a credit card minimum spend without wasting a dollar",
+    dek: "Clearing a welcome bonus threshold on spending you were doing anyway.",
+    section: "Personal finance",
+    tags: ["personal-finance", "cards", "welcome-bonuses", "points"],
+  },
+  {
+    path: "/personal-finance/newcomer-to-canada-first-cards-accounts",
+    title: "Newcomer to Canada: your first credit cards and bank accounts",
+    dek: "First cards, first accounts, and building credit from scratch after you land.",
+    section: "Personal finance",
+    tags: ["personal-finance", "newcomers", "credit-score", "cards", "chequing"],
+  },
+  {
+    path: "/personal-finance/pay-bills-with-credit-card-canada",
+    title: "Paying rent, taxes, and your mortgage with a credit card in Canada",
+    dek: "When routing big bills through a card is worth the fee, and when it is not.",
+    section: "Personal finance",
+    tags: ["personal-finance", "cards", "points", "welcome-bonuses"],
+  },
+  {
+    path: "/personal-finance/points-vs-cash-back-canada",
+    title: "Points vs cash back: which actually wins for your household",
+    dek: "How to tell whether points or cash back is the better fit for you.",
+    section: "Personal finance",
+    tags: ["personal-finance", "cards", "cash-back", "points"],
+  },
+  {
+    path: "/personal-finance/resp-cesg-grant-canada",
+    title: "RESP and the 20% CESG grant: the easiest guaranteed return in Canada",
+    dek: "Why the RESP grant is free money you should not leave on the table.",
+    section: "Personal finance",
+    tags: ["personal-finance", "registered-accounts", "taxes"],
+  },
+  {
+    path: "/personal-finance/smith-manoeuvre",
+    title: "The Smith Manoeuvre, explained properly",
+    dek: "How the tax-deductible mortgage strategy works, and who it actually suits.",
+    section: "Personal finance",
+    tags: ["personal-finance", "home-buying", "taxes", "registered-accounts"],
+  },
+  {
+    path: "/personal-finance/two-player-mode-couples-welcome-bonuses",
+    title: "Two-player mode: how Canadian couples double their welcome bonuses",
+    dek: "Coordinating two people's applications to double the point hauls.",
+    section: "Personal finance",
+    tags: ["personal-finance", "cards", "welcome-bonuses", "points"],
+  },
+  {
+    path: "/personal-finance/where-to-hold-cash-canada",
+    title: "Where to hold your cash in Canada: HISA vs GIC vs high-interest chequing vs cash ETFs",
+    dek: "Matching where you park cash to when you actually need it.",
+    section: "Personal finance",
+    tags: ["personal-finance", "savings-and-gics", "chequing"],
+  },
+
+  // Travel standalone pages
+  {
+    path: "/travel/aadvantage-sweet-spots",
+    title: "AAdvantage sweet spots: redeeming American Airlines miles",
+    dek: "The partner redemptions where AAdvantage miles go furthest from Canada.",
+    section: "Travel",
+    tags: ["travel", "aadvantage", "points", "award-booking", "business-class", "alliances"],
+  },
+  {
+    path: "/travel/aeroplan-sweet-spots",
+    title: "Using Aeroplan points to get the most value",
+    dek: "Where Aeroplan shines, from business class to the flat-rate stopover.",
+    section: "Travel",
+    tags: ["travel", "aeroplan", "points", "award-booking", "business-class", "alliances"],
+  },
+  {
+    path: "/travel/airline-alliances-guide-canada",
+    title: "The airline alliance guide for Canadians: Star Alliance, oneworld, and SkyTeam",
+    dek: "How the three alliances work and how a Canadian reaches each with points.",
+    section: "Travel",
+    tags: ["travel", "alliances", "points", "award-booking"],
+  },
+  {
+    path: "/travel/airport-lounge-access-canada",
+    title: "Airport lounge access for Canadians: how it actually works",
+    dek: "The real ways into a lounge, and which cards get you through the door.",
+    section: "Travel",
+    tags: ["travel", "lounges", "travel-cards", "cards"],
+  },
+  {
+    path: "/travel/amex-mr-to-aeroplan",
+    title: "How to convert Amex Membership Rewards to Aeroplan",
+    dek: "Moving Amex points to Aeroplan, at what ratio, and when to do it.",
+    section: "Travel",
+    tags: ["travel", "aeroplan", "amex", "points", "transfers"],
+  },
+  {
+    path: "/travel/avios-sweet-spots-rbc-avion-transfer",
+    title: "Avios sweet spots, and converting RBC Avion to Avios",
+    dek: "The best Avios redemptions and how RBC Avion feeds your balance.",
+    section: "Travel",
+    tags: ["travel", "avios", "rbc-avion", "points", "transfers", "award-booking"],
+  },
+  {
+    path: "/travel/business-class-sweet-spots-canada",
+    title: "Business-class sweet spots from Canada: where your points go furthest",
+    dek: "The lie-flat redemptions that give Canadians the most value per point.",
+    section: "Travel",
+    tags: ["travel", "business-class", "points", "award-booking", "alliances"],
+  },
+  {
+    path: "/travel/how-to-book-award-flights-canada",
+    title: "How to search for and book award flights from Canada: the method",
+    dek: "A repeatable method for finding award seats before you transfer a point.",
+    section: "Travel",
+    tags: ["travel", "award-booking", "points", "transfers"],
+  },
+  {
+    path: "/travel/points-transfer-partners-canada",
+    title: "The Canadian points-transfer map: which points actually transfer, and where",
+    dek: "Which Canadian points move to airlines and hotels, and at what ratio.",
+    section: "Travel",
+    tags: ["travel", "transfers", "points", "amex", "rbc-avion", "aeroplan"],
+  },
+  {
+    path: "/travel/rbc-avion-to-aadvantage",
+    title: "How to transfer RBC Avion points to American Airlines AAdvantage",
+    dek: "Moving RBC Avion to AAdvantage, and the sweet spots waiting on the other side.",
+    section: "Travel",
+    tags: ["travel", "rbc-avion", "aadvantage", "points", "transfers"],
+  },
+
+  // Sweet-spot pages
+  {
+    path: "/travel/sweet-spots/avios-toronto-to-dublin-aer-lingus-50k",
+    title: "Avios sweet spot: Toronto to Dublin on Aer Lingus from about 13,000 points",
+    dek: "Aer Lingus gives Canadians one of the friendliest ways into Europe on Avios, economy from roughly 13,000 points or business for about 50,000.",
+    section: "Sweet spot",
+    tags: ["travel", "avios", "rbc-avion", "points", "award-booking", "business-class"],
+  },
+  {
+    path: "/travel/sweet-spots/aeroplan-toronto-to-europe-business-60k",
+    title: "Aeroplan sweet spot: Toronto to Europe in business for about 60,000 points",
+    dek: "A worked example of the redemption Aeroplan is famous for, a lie-flat seat across the Atlantic for roughly 60,000 points one-way.",
+    section: "Sweet spot",
+    tags: ["travel", "aeroplan", "points", "award-booking", "business-class", "alliances"],
+  },
+
+  // News items
+  {
+    path: "/news/aeroplan-club-avolta-airport-shopping-partnership",
+    title: "Aeroplan ties up with Club Avolta so you can earn points shopping and dining at the airport",
+    dek: "A new North American partnership lets you earn 1 Aeroplan point per $2 spent at Hudson, Dufry, and other airport shops once you link the two accounts.",
+    section: "News",
+    tags: ["news", "aeroplan", "points"],
+  },
+  {
+    path: "/news/aeroplan-san-antonio-package-5000-bonus",
+    title: "Air Canada Vacations is adding 5,000 bonus Aeroplan points on San Antonio packages",
+    dek: "A new promo hands Aeroplan members 5,000 bonus points on select San Antonio flight and hotel packages booked by July 26.",
+    section: "News",
+    tags: ["news", "aeroplan", "points", "travel"],
+  },
+  {
+    path: "/news/petro-canada-triangle-canada-day-bonus-ct-money",
+    title: "Petro-Canada is handing out bonus CT Money on Canada Day fill-ups",
+    dek: "From July 1 to 5 you can collect $3 in bonus Canadian Tire Money every time you pump 25 litres or more, and there is no cap on how often you earn it.",
+    section: "News",
+    tags: ["news", "points"],
+  },
+  {
+    path: "/news/aeroplan-estore-20x-canadian-down-feather",
+    title: "Earn 20x Aeroplan points on bedding from the Canadian Down & Feather Company",
+    dek: "Through July 12 the Aeroplan eStore is paying 20 points per dollar at the Canadian-made bedding brand, one of the richest multipliers we have seen this year.",
+    section: "News",
+    tags: ["news", "aeroplan", "points"],
+  },
+  {
+    path: "/news/amex-aeroplan-reserve-150k-welcome",
+    title: "The Amex Aeroplan Reserve is back at its all-time-high 150,000-point welcome offer",
+    dek: "Through July 28 new cardmembers can earn up to 150,000 Aeroplan points, the richest welcome bonus this card has ever carried.",
+    section: "News",
+    tags: ["news", "aeroplan", "amex", "cards", "welcome-bonuses", "points"],
+  },
+  {
+    path: "/news/westjet-companion-voucher-fuel-surcharge-trimmed",
+    title: "WestJet trims the companion voucher fuel surcharge from $60 to $40",
+    dek: "As fuel prices ease, WestJet has cut the surcharge on companion voucher bookings to $40, with Porter going further down to $20.",
+    section: "News",
+    tags: ["news", "travel", "points"],
+  },
+  {
+    path: "/news/british-airways-porter-codeshare-avios",
+    title: "British Airways and Porter launch a codeshare, and you can earn Avios on Porter flights",
+    dek: "From July 8 you can book 17 Porter destinations across Canada on a single British Airways ticket and earn Avios and tier points on the Porter legs.",
+    section: "News",
+    tags: ["news", "avios", "points", "travel", "alliances"],
+  },
+  {
+    path: "/news/rbc-avion-ticketmaster-redemption",
+    title: "RBC opens up Avion points for Ticketmaster events across Canada",
+    dek: "Avion Rewards members can now put points toward concert and event tickets on Ticketmaster.ca, from a single cent up to $500 a day with no redemption fees.",
+    section: "News",
+    tags: ["news", "rbc-avion", "points"],
+  },
+  {
+    path: "/news/chase-sapphire-preferred-100k-refresh",
+    title: "Chase Sapphire Preferred refreshes its perks and brings back a 100,000-point bonus",
+    dek: "The June refresh keeps the $95 annual fee while adding a $100 hotel credit and a Global Entry, TSA PreCheck or NEXUS credit, alongside its best-ever welcome offer.",
+    section: "News",
+    tags: ["news", "cards", "welcome-bonuses", "travel-cards", "points"],
+  },
+];
+
+export function listTags(): Tag[] {
+  return TAGS;
+}
+
+export function tagBySlug(slug: string): Tag | undefined {
+  return TAGS.find((t) => t.slug === slug);
+}
+
+export function articlesForTag(slug: string): TaggedArticle[] {
+  return TAGGED_ARTICLES.filter((a) => a.tags.includes(slug));
+}
+
+export function tagsForPath(path: string): Tag[] {
+  const entry = TAGGED_ARTICLES.find((a) => a.path === path);
+  if (!entry) return [];
+  return entry.tags
+    .map((slug) => tagBySlug(slug))
+    .filter((t): t is Tag => t !== undefined);
+}
+
+export function tagCount(slug: string): number {
+  return articlesForTag(slug).length;
+}
+
+// Fallback for data-driven items that may not be in the registry yet.
+export function fallbackTagsForPath(path: string): string[] {
+  if (path.startsWith("/travel/sweet-spots/")) return ["travel", "points", "award-booking"];
+  if (path.startsWith("/news/")) return ["news"];
+  return [];
+}
+
+export function resolveTagSlugsForPath(path: string): string[] {
+  const entry = TAGGED_ARTICLES.find((a) => a.path === path);
+  if (entry) return entry.tags;
+  return fallbackTagsForPath(path);
+}

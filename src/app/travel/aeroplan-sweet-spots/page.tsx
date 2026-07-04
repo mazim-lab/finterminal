@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleTags } from "@/components/ArticleTags";
 
 export const metadata = {
   title: "Using Aeroplan points to get the most value | FinTerminal",
@@ -46,6 +47,7 @@ export default function AeroplanSweetSpotsPage() {
             <span>about 11 min read</span><span className="sep">·</span>
             <span>chart figures are approximate</span>
           </div>
+          <ArticleTags path="/travel/aeroplan-sweet-spots" />
 
           <div className="cd-note">
             <div className="cap">The short answer</div>
