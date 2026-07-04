@@ -36,15 +36,6 @@ export default function PersonalFinancePage() {
 
           <div className="cd-sec" style={{ marginTop: 24 }}>Reference</div>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
-            <Link href="/personal-finance/rrsp-vs-tfsa-canada" className="cd-apply">
-              RRSP vs TFSA: the honest decision &rarr;
-            </Link>
-            <Link href="/personal-finance/fhsa-vs-rrsp-home-buyers-plan" className="cd-apply">
-              FHSA vs the RRSP Home Buyers&apos; Plan &rarr;
-            </Link>
-            <Link href="/personal-finance/credit-card-interest-canada" className="cd-apply">
-              How credit card interest works (and how to never pay it) &rarr;
-            </Link>
             <Link href="/rates" className="cd-apply">
               Best rates in Canada: savings, GICs, chequing &rarr;
             </Link>

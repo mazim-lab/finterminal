@@ -35,6 +35,14 @@ export const PF_ARTICLES: PFArticle[] = [
     date: "Jul 2026",
   },
   {
+    slug: "credit-card-interest-canada",
+    title: "How credit card interest works in Canada (and how to never pay it)",
+    dek: "Grace periods, how interest is actually calculated, why cash advances are worse, and the one habit that keeps the interest you pay at zero. Plus what to do if you already carry a balance.",
+    tag: "Cards",
+    read: "9 min read",
+    date: "Jul 2026",
+  },
+  {
     slug: "resp-cesg-grant-canada",
     title: "RESP and the 20% CESG grant: the easiest guaranteed return in Canada",
     dek: "The government adds 20 percent to what you put in an RESP, up to $500 a year per child. Here is how the grant works, how not to leave money on the table, and how to invest it.",
