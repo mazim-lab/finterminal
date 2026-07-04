@@ -8,6 +8,14 @@ export const metadata = {
 
 const ARTICLES = [
   {
+    slug: "airline-alliances-guide-canada",
+    title: "The airline alliance guide for Canadians: Star Alliance, oneworld, and SkyTeam",
+    dek: "The three global alliances, the notable member airlines, and exactly how a Canadian reaches each with points. Star is strongest via Aeroplan, oneworld via Avios and AAdvantage, and SkyTeam the honest thin spot.",
+    tag: "Hub",
+    read: "9 min read",
+    date: "Jul 2026",
+  },
+  {
     slug: "points-transfer-partners-canada",
     title: "The Canadian points-transfer map: which points actually transfer, and where",
     dek: "Most Canadian bank points do not transfer to airlines. Here is the honest map: Amex MR and RBC Avion are the real transfer currencies, while TD, Scene+, Aventura and BMO are fixed-value or portal programs. Verified partners and ratios.",
