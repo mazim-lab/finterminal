@@ -355,6 +355,9 @@ export default function HowToBuildCreditPage() {
             <Link href="/cards" className="cd-apply">
               Browse cards, including secured and no-fee options &rarr;
             </Link>
+            <Link href="/personal-finance/newcomer-to-canada-first-cards-accounts" className="cd-apply">
+              Newcomer to Canada: your first cards and accounts &rarr;
+            </Link>
             <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
               More personal finance &rarr;
             </Link>
