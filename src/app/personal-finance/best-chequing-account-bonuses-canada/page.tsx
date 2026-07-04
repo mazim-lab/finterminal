@@ -345,6 +345,9 @@ export default function BestChequingBonusesPage() {
             <Link href="/personal-finance/best-gic-rates-canada" className="cd-apply">
               Best GIC rates in Canada &rarr;
             </Link>
+            <Link href="/personal-finance/where-to-hold-cash-canada" className="cd-apply">
+              Where to hold your cash in Canada &rarr;
+            </Link>
             <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
               Browse cards &amp; bonuses &rarr;
             </Link>
