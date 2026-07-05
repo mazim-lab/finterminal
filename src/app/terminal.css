@@ -428,6 +428,6 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
 .ds-node{fill:var(--emerald)}
 .ds-node-ring{fill:none;stroke:var(--emerald);stroke-width:1.4;opacity:.55}
 .ds-arc{fill:none;stroke:var(--gold);stroke-width:1.4;opacity:.42}
-.ds-tile{fill:#14130f;opacity:.92}
-.ds-tile-line{stroke:rgba(239,232,214,.14);stroke-width:1}
+.ds-tile{fill:#14130f;stroke:var(--emerald);stroke-opacity:.4;stroke-width:1}
+.ds-tile-line{stroke:rgba(239,232,214,.16);stroke-width:1}
 @media (max-width:760px){.home-hero{min-height:238px}.hh-title{font-size:31px}.home-hero-copy{padding:24px 22px}}
