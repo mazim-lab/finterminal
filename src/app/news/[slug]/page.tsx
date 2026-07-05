@@ -44,11 +44,33 @@ export default async function NewsStoryPage({ params }: { params: Promise<{ slug
   }
 
   const paragraphs = item.body.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  // Parse the human date ("Jun 30, 2026") to ISO for structured data; guard against
+  // a malformed date so a bad entry can never throw during render.
+  const published = (() => {
+    const d = new Date(`${item.date} 12:00:00`);
+    return Number.isNaN(d.getTime()) ? null : d.toISOString();
+  })();
 
   return (
     <div className="app norail">
       <main>
         <div className="doc">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "NewsArticle",
+                headline: item.headline,
+                description: item.dek,
+                image: `https://www.finterminal.ca/api/og?title=${encodeURIComponent(item.headline)}&kicker=News`,
+                ...(published ? { datePublished: published, dateModified: published } : {}),
+                author: { "@type": "Organization", name: "FinTerminal", url: "https://www.finterminal.ca" },
+                publisher: { "@type": "Organization", name: "FinTerminal", url: "https://www.finterminal.ca" },
+                mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.finterminal.ca/news/${item.slug}` },
+              }),
+            }}
+          />
           <nav className="crumb">
             <Link href="/">home</Link><span className="sep">/</span>
             <Link href="/news">news</Link><span className="sep">/</span>
