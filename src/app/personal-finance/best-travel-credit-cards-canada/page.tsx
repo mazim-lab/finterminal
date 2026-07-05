@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { allCards, formatCurrency, type Card } from "@/data/cards";
+import { ArticleHero } from "@/components/ArticleHero";
+import { DataGridMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 
 export const metadata = {
@@ -261,6 +263,10 @@ export default function BestTravelCardsPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">best-travel-credit-cards-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="A comparison grid with a highlighted top row">
+            <DataGridMotif />
+          </ArticleHero>
 
           <div className="head"><h1>The Best Travel and Rewards Credit Cards in Canada</h1></div>
           <p className="lede">
