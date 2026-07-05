@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { GrowthMotif } from "@/components/heroes/motifs";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
 
@@ -80,6 +82,10 @@ export default function FHSAvsHBPPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">fhsa-vs-rrsp-home-buyers-plan</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="A rising bar chart with an upward trend line">
+            <GrowthMotif />
+          </ArticleHero>
 
           <div className="head"><h1>FHSA vs the RRSP Home Buyers&apos; Plan: Which to Use for a First Home</h1></div>
           <p className="lede">

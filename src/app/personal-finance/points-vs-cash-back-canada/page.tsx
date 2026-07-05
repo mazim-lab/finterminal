@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { DataGridMotif } from "@/components/heroes/motifs";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
@@ -71,6 +73,10 @@ export default function PointsVsCashBackPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">points-vs-cash-back-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="A comparison grid of options">
+            <DataGridMotif />
+          </ArticleHero>
 
           <div className="head"><h1>Points vs Cash Back: Which Actually Wins for Your Household</h1></div>
           <p className="lede">

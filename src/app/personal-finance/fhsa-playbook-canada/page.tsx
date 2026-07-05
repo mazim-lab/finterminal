@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
@@ -78,6 +80,10 @@ export default function FHSAPlaybookPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">fhsa-playbook-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="Rising stacks of coins">
+            <ValueCoinsMotif />
+          </ArticleHero>
 
           <div className="head"><h1>The FHSA Playbook: Canada&apos;s Most Underused Account</h1></div>
           <p className="lede">
