@@ -3,11 +3,13 @@ import { ArticleTags } from "@/components/ArticleTags";
 import { isPFPublished } from "@/data/personal-finance";
 import { ArticleHero } from "@/components/ArticleHero";
 import { AccountDecisionGraphic } from "@/components/heroes/AccountDecisionGraphic";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "RRSP vs TFSA: the honest decision for Canadians | FinTerminal",
   description:
     "RRSP or TFSA? The real answer comes down to your marginal tax rate now versus in retirement. A plain-language head-to-head on how each account works, who each one favours, the refund trap, withdrawal and room mechanics, and why 'both' is usually right. General info as of July 2026, not advice.",
+  ...ogMeta("RRSP vs TFSA: the honest decision for Canadians", "Personal finance"),
 };
 
 export const revalidate = 3600;

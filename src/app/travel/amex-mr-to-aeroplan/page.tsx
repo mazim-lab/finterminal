@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "How to convert Amex Membership Rewards to Aeroplan | FinTerminal",
   description:
     "Step-by-step guide for transferring Amex Membership Rewards points to Air Canada Aeroplan at 1 to 1, including timing, transfer bonuses, and the mistakes to avoid.",
+  ...ogMeta("How to convert Amex Membership Rewards to Aeroplan", "Travel & points"),
 };
 
 const TOC = [

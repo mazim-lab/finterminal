@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "AAdvantage sweet spots: redeeming American Airlines miles | FinTerminal",
   description:
     "How a Canadian redeems American Airlines AAdvantage miles, why partner awards beat AA's own dynamic pricing, the genuine sweet spots (Qatar Qsuite, Etihad, JAL, business to Europe), and the surcharge and devaluation catches to watch.",
+  ...ogMeta("AAdvantage sweet spots: redeeming American Airlines miles", "Travel & points"),
 };
 
 const TOC = [

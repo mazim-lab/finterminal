@@ -2,11 +2,13 @@ import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "The 2.5% foreign transaction fee, and the cards that kill it | FinTerminal",
   description:
     "Most Canadian cards quietly add about 2.5 percent on every foreign-currency purchase, including online shopping. Here is what it costs, the cards that skip or rebate it (Scotia Passport, Wealthsimple, Rogers, Home Trust), and the dynamic currency conversion trap to avoid.",
+  ...ogMeta("The 2.5% foreign transaction fee, and the cards that kill it", "Personal finance"),
 };
 
 export const revalidate = 3600;

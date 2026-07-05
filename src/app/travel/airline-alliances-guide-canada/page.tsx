@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "The airline alliance guide for Canadians: Star Alliance, oneworld, and SkyTeam | FinTerminal",
   description:
     "A plain-English guide to the three global airline alliances (Star Alliance, oneworld, and SkyTeam), the notable member airlines, and exactly how a Canadian reaches each one with points. Star is strongest via Aeroplan, oneworld via Avios and AAdvantage, and SkyTeam the thinnest. As of July 2026.",
+  ...ogMeta("The airline alliance guide for Canadians", "Travel & points"),
 };
 
 const TOC = [

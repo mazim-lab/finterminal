@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "The Canadian points-transfer map: which points actually transfer, and where | FinTerminal",
   description:
     "A plain-English map of Canadian rewards currencies: which points genuinely transfer to airline and hotel loyalty programs (essentially Amex Membership Rewards and RBC Avion) and which big-bank programs are fixed-value or portal programs instead. Verified partners and ratios as of July 2026.",
+  ...ogMeta("The Canadian points-transfer map: which points actually transfer, and where", "Travel & points"),
 };
 
 const TOC = [

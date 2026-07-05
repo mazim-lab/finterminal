@@ -2,11 +2,13 @@ import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Two-player mode: how Canadian couples double their welcome bonuses | FinTerminal",
   description:
     "Two people means two credit profiles, so two full sets of welcome bonuses over time, plus referral points for pointing each other to cards. Here is how a household runs it together without wrecking anyone's credit.",
+  ...ogMeta("Two-player mode: how Canadian couples double their welcome bonuses", "Personal finance"),
 };
 
 export const revalidate = 3600;

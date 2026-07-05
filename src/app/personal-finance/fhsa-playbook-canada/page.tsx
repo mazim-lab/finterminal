@@ -2,11 +2,13 @@ import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "The FHSA playbook: Canada's most underused account | FinTerminal",
   description:
     "The First Home Savings Account gives you an RRSP-style deduction and a TFSA-style tax-free withdrawal for a first home. Here is how the room works, how to invest it, and how to stack it with the RRSP Home Buyers' Plan.",
+  ...ogMeta("The FHSA playbook: Canada's most underused account", "Personal finance"),
 };
 
 export const revalidate = 3600;

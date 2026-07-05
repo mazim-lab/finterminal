@@ -2,11 +2,13 @@ import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "How to hit a credit card minimum spend without wasting a dollar | FinTerminal",
   description:
     "A calm, practical guide to clearing a credit card welcome-bonus minimum spend in Canada using money you were already going to spend, so you earn the bonus without wasting a cent on things you do not need.",
+  ...ogMeta("How to hit a credit card minimum spend without wasting a dollar", "Personal finance"),
 };
 
 export const revalidate = 3600;

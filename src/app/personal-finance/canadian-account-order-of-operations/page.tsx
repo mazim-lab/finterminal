@@ -2,11 +2,13 @@ import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Where your next dollar should go: the Canadian account order | FinTerminal",
   description:
     "Employer match, RESP, FHSA, TFSA, RRSP, or taxable? A clear order of operations for where a Canadian should put the next dollar, with the marginal-rate logic that decides when an RRSP beats a TFSA.",
+  ...ogMeta("Where your next dollar should go: the Canadian account order", "Personal finance"),
 };
 
 export const revalidate = 3600;

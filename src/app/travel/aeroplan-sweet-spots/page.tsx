@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Using Aeroplan points to get the most value | FinTerminal",
   description:
     "Where Aeroplan points deliver the best value for Canadians, from cheap short-haul hops to business class to Europe, plus the stopover trick and the cents-per-point math.",
+  ...ogMeta("Using Aeroplan points to get the most value", "Travel & points"),
 };
 
 const TOC = [

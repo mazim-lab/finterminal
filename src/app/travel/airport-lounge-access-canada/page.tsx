@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { allCards } from "@/data/cards";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Airport lounge access for Canadians: how it actually works | FinTerminal",
   description:
     "A plain-English guide to airport lounge access for Canadians: how a card-bundled network like Priority Pass or DragonPass works, how airline lounges such as Air Canada Maple Leaf Lounges are reached through status or fare or a card, and the paid day-pass options when you have neither. Which of our Canadian cards include lounge access, and the fine print that actually matters. As of July 2026.",
+  ...ogMeta("Airport lounge access for Canadians: how it actually works", "Travel & points"),
 };
 
 const TOC = [

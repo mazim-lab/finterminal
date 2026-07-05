@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Newcomer to Canada: Your First Credit Cards and Bank Accounts | FinTerminal",
   description:
     "A plain-language playbook for newcomers to Canada: get a SIN, open a chequing and savings account, get a first credit card to start a Canadian credit file, and build credit from scratch. Your foreign credit history does not transfer. General info as of July 2026, not immigration, financial, or tax advice.",
+  ...ogMeta("Newcomer to Canada: Your First Credit Cards and Bank Accounts", "Personal finance"),
 };
 
 export const revalidate = 3600;

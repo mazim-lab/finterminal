@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { ArticleHero } from "@/components/ArticleHero";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Business-class sweet spots from Canada: where your points go furthest | FinTerminal",
   description:
     "A hub for the best business-class redemptions Canadians can actually reach with points. What a sweet spot is, the honest reality of availability and surcharges, and links to our deep-dives on Aeroplan, AAdvantage, and Avios, with the Canadian currency that feeds each. As of July 2026.",
+  ...ogMeta("Business-class sweet spots from Canada: where your points go furthest", "Travel & points"),
 };
 
 const TOC = [

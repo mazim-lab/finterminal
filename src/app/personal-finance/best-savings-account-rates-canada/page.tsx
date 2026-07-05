@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Best high-interest savings account (HISA) rates in Canada | FinTerminal",
   description:
     "A clear, honest look at the best everyday high-interest savings account rates in Canada, from EQ Bank and Wealthsimple to Neo, Saven, and Oaken. Rates as of July 2026, with the CDIC coverage you actually get and the promo-rate traps to watch.",
+  ...ogMeta("Best high-interest savings account (HISA) rates in Canada", "Personal finance"),
 };
 
 export const revalidate = 3600;

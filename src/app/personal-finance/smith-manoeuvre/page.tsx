@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "The Smith Manoeuvre, explained properly | FinTerminal",
   description:
     "A clear, honest, step-by-step guide to the Smith Manoeuvre for Canadian homeowners: how it works, every variation, the CRA rules that keep it valid, and the risks worth respecting.",
+  ...ogMeta("The Smith Manoeuvre, explained properly", "Personal finance"),
 };
 
 const TOC = [

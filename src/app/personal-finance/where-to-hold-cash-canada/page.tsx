@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Where to hold your cash in Canada: HISA vs GIC vs high-interest chequing vs cash ETFs | FinTerminal",
   description:
     "A plain-language decision guide for where to park your cash in Canada, matched to your goal and time horizon. High-interest savings, GICs, high-interest chequing, and cash or HISA ETFs compared on liquidity, yield, insurance, and best use. General info as of July 2026, not advice.",
+  ...ogMeta("Where to hold your cash in Canada: HISA vs GIC vs chequing vs cash ETFs", "Personal finance"),
 };
 
 export const revalidate = 3600;

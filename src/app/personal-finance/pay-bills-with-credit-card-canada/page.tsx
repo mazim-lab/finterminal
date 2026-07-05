@@ -2,11 +2,13 @@ import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Paying rent, taxes, and your mortgage with a credit card in Canada | FinTerminal",
   description:
     "Third-party services will charge your credit card and send the money onward for a fee of roughly 1.75 to 2.99 percent. Here is a clear, honest look at Chexy, PaySimply, and Plastiq, and the exact cases where it is actually worth it.",
+  ...ogMeta("Paying rent, taxes, and your mortgage with a credit card in Canada", "Personal finance"),
 };
 
 export const revalidate = 3600;

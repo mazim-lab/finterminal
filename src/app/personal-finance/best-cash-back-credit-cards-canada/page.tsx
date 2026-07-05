@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { allCards, formatCurrency, type Card } from "@/data/cards";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "The best cash-back credit cards in Canada | FinTerminal",
   description:
     "Our pick of the best cash-back credit cards in Canada, organized by how you actually spend: best no-annual-fee, best for groceries, best flat-rate everyday, and best premium. Every fee, earn rate, and value figure comes straight from our own card data. Our view as of July 2026, not advice.",
+  ...ogMeta("The best cash-back credit cards in Canada", "Personal finance"),
 };
 
 export const revalidate = 3600;
