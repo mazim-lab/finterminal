@@ -5,6 +5,7 @@ import { FeePercentMotif } from "@/components/heroes/motifs";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Paying rent, taxes, and your mortgage with a credit card in Canada | FinTerminal",
@@ -65,6 +66,7 @@ export default function PayBillsWithCreditCardPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">pay-bills-with-credit-card-canada</span>
           </nav>
+          <ArticleSchema headline="Paying rent, taxes, and your mortgage with a credit card in Canada" path="/personal-finance/pay-bills-with-credit-card-canada" kicker="Personal finance" />
 
           <ArticleHero variant="graphic" alt="A value bar with a highlighted fee slice and a percent sign">
             <FeePercentMotif />

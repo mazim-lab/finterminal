@@ -5,6 +5,7 @@ import { isPFPublished } from "@/data/personal-finance";
 import { ArticleHero } from "@/components/ArticleHero";
 import { FeePercentMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Are credit card points and cash back taxable in Canada? | FinTerminal",
@@ -73,6 +74,7 @@ export default function CreditCardPointsTaxablePage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">are-credit-card-points-taxable-canada</span>
           </nav>
+          <ArticleSchema headline="Are credit card points and cash back taxable in Canada?" path="/personal-finance/are-credit-card-points-taxable-canada" kicker="Personal finance" />
 
           <ArticleHero variant="graphic" alt="A value bar with a highlighted slice and a percent sign">
             <FeePercentMotif />

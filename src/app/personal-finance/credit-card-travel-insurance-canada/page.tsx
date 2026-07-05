@@ -3,6 +3,7 @@ import { ArticleTags } from "@/components/ArticleTags";
 import { ArticleHero } from "@/components/ArticleHero";
 import { ShieldMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "What Your Credit Card's Travel Insurance Actually Covers in Canada | FinTerminal",
@@ -75,6 +76,7 @@ export default function CreditCardTravelInsurancePage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">credit-card-travel-insurance-canada</span>
           </nav>
+          <ArticleSchema headline="What Your Credit Card's Travel Insurance Actually Covers in Canada" path="/personal-finance/credit-card-travel-insurance-canada" kicker="Personal finance" />
 
           <ArticleHero variant="graphic" alt="A shield with a checkmark, representing coverage">
             <ShieldMotif />

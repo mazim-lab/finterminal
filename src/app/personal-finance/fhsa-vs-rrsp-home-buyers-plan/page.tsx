@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { GrowthMotif } from "@/components/heroes/motifs";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "FHSA vs the RRSP Home Buyers' Plan: which to use for a first home | FinTerminal",
@@ -82,6 +83,7 @@ export default function FHSAvsHBPPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">fhsa-vs-rrsp-home-buyers-plan</span>
           </nav>
+          <ArticleSchema headline="FHSA vs the RRSP Home Buyers' Plan: which to use for a first home" path="/personal-finance/fhsa-vs-rrsp-home-buyers-plan" kicker="Personal finance" />
 
           <ArticleHero variant="graphic" alt="A rising bar chart with an upward trend line">
             <GrowthMotif />

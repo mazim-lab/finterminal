@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SWEET_SPOTS } from "@/data/sweet-spots";
 import { ArticleTags } from "@/components/ArticleTags";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 import { ArticleHero } from "@/components/ArticleHero";
 import { RouteArcsMotif } from "@/components/heroes/motifs";
 
@@ -68,6 +69,7 @@ export default async function SweetSpotPage({ params }: { params: Promise<{ slug
             <Link href="/travel">travel</Link><span className="sep">/</span>
             <span className="cur">{spot.slug}</span>
           </nav>
+          <ArticleSchema headline={spot.title} path={`/travel/sweet-spots/${spot.slug}`} kicker="Travel · Sweet spot" />
 
           <ArticleHero variant="graphic" alt="Flight-path arcs connecting cities over a faint map">
             <RouteArcsMotif />

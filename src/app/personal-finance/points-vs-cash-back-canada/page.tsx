@@ -5,6 +5,7 @@ import { DataGridMotif } from "@/components/heroes/motifs";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Points vs cash back: which actually wins for your household | FinTerminal",
@@ -73,6 +74,7 @@ export default function PointsVsCashBackPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">points-vs-cash-back-canada</span>
           </nav>
+          <ArticleSchema headline="Points vs cash back: which actually wins for your household" path="/personal-finance/points-vs-cash-back-canada" kicker="Personal finance" />
 
           <ArticleHero variant="graphic" alt="A comparison grid of options">
             <DataGridMotif />

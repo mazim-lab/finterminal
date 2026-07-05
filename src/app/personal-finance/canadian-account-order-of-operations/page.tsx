@@ -5,6 +5,7 @@ import { GrowthMotif } from "@/components/heroes/motifs";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Where your next dollar should go: the Canadian account order | FinTerminal",
@@ -72,6 +73,7 @@ export default function AccountOrderOfOperationsPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">canadian-account-order-of-operations</span>
           </nav>
+          <ArticleSchema headline="Where your next dollar should go: the Canadian account order" path="/personal-finance/canadian-account-order-of-operations" kicker="Personal finance" />
 
           <ArticleHero variant="graphic" alt="A rising bar chart with an upward trend line">
             <GrowthMotif />

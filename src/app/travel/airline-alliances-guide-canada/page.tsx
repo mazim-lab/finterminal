@@ -3,6 +3,7 @@ import { ArticleTags } from "@/components/ArticleTags";
 import { ArticleHero } from "@/components/ArticleHero";
 import { RouteArcsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "The airline alliance guide for Canadians: Star Alliance, oneworld, and SkyTeam | FinTerminal",
@@ -69,6 +70,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
             <Link href="/travel">travel</Link><span className="sep">/</span>
             <span className="cur">airline-alliances-guide-canada</span>
           </nav>
+          <ArticleSchema headline="The airline alliance guide for Canadians" path="/travel/airline-alliances-guide-canada" kicker="Travel & points" />
 
           <ArticleHero variant="graphic" alt="Flight-path arcs connecting cities over a faint map">
             <RouteArcsMotif />

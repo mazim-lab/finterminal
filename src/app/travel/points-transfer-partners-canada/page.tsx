@@ -3,6 +3,7 @@ import { ArticleTags } from "@/components/ArticleTags";
 import { ArticleHero } from "@/components/ArticleHero";
 import { TransferFlowMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "The Canadian points-transfer map: which points actually transfer, and where | FinTerminal",
@@ -69,6 +70,7 @@ export default function PointsTransferPartnersCanadaPage() {
             <Link href="/travel">travel</Link><span className="sep">/</span>
             <span className="cur">points-transfer-partners-canada</span>
           </nav>
+          <ArticleSchema headline="The Canadian points-transfer map: which points actually transfer, and where" path="/travel/points-transfer-partners-canada" kicker="Travel & points" />
 
           <ArticleHero variant="graphic" alt="Points flowing from several sources through a hub to destinations">
             <TransferFlowMotif />

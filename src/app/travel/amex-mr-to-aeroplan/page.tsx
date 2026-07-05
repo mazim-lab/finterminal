@@ -3,6 +3,7 @@ import { ArticleTags } from "@/components/ArticleTags";
 import { ArticleHero } from "@/components/ArticleHero";
 import { TransferFlowMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "How to convert Amex Membership Rewards to Aeroplan | FinTerminal",
@@ -62,6 +63,7 @@ export default function MrToAeroplanPage() {
             <Link href="/travel">travel</Link><span className="sep">/</span>
             <span className="cur">amex-mr-to-aeroplan</span>
           </nav>
+          <ArticleSchema headline="How to convert Amex Membership Rewards to Aeroplan" path="/travel/amex-mr-to-aeroplan" kicker="Travel & points" />
 
           <ArticleHero variant="graphic" alt="Points flowing from a source through a hub to a destination">
             <TransferFlowMotif />

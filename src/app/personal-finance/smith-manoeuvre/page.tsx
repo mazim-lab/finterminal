@@ -3,6 +3,7 @@ import { ArticleTags } from "@/components/ArticleTags";
 import { ArticleHero } from "@/components/ArticleHero";
 import { GrowthMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "The Smith Manoeuvre, explained properly | FinTerminal",
@@ -68,6 +69,7 @@ export default function SmithManoeuvrePage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">smith-manoeuvre</span>
           </nav>
+          <ArticleSchema headline="The Smith Manoeuvre, explained properly" path="/personal-finance/smith-manoeuvre" kicker="Personal finance" />
 
           <ArticleHero variant="graphic" alt="A rising bar chart with an upward trend line">
             <GrowthMotif />

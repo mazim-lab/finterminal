@@ -4,6 +4,7 @@ import { ArticleTags } from "@/components/ArticleTags";
 import { ArticleHero } from "@/components/ArticleHero";
 import { RouteArcsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Airport lounge access for Canadians: how it actually works | FinTerminal",
@@ -88,6 +89,7 @@ export default function AirportLoungeAccessCanadaPage() {
             <Link href="/travel">travel</Link><span className="sep">/</span>
             <span className="cur">airport-lounge-access-canada</span>
           </nav>
+          <ArticleSchema headline="Airport lounge access for Canadians: how it actually works" path="/travel/airport-lounge-access-canada" kicker="Travel & points" />
 
           <ArticleHero variant="graphic" alt="Flight-path arcs connecting cities over a faint map">
             <RouteArcsMotif />

@@ -3,6 +3,7 @@ import { ArticleTags } from "@/components/ArticleTags";
 import { ArticleHero } from "@/components/ArticleHero";
 import { GrowthMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Best GIC rates in Canada | FinTerminal",
@@ -74,6 +75,7 @@ export default function BestGicRatesPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">best-gic-rates-canada</span>
           </nav>
+          <ArticleSchema headline="Best GIC rates in Canada" path="/personal-finance/best-gic-rates-canada" kicker="Personal finance" />
 
           <ArticleHero variant="graphic" alt="A rising bar chart with an upward trend line">
             <GrowthMotif />

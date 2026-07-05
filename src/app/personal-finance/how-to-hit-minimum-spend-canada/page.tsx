@@ -5,6 +5,7 @@ import { isPFPublished } from "@/data/personal-finance";
 import { ArticleHero } from "@/components/ArticleHero";
 import { GrowthMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "How to hit a credit card minimum spend without wasting a dollar | FinTerminal",
@@ -91,6 +92,7 @@ export default function HowToHitMinimumSpendPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">how-to-hit-minimum-spend-canada</span>
           </nav>
+          <ArticleSchema headline="How to hit a credit card minimum spend without wasting a dollar" path="/personal-finance/how-to-hit-minimum-spend-canada" kicker="Personal finance" />
 
           <ArticleHero variant="graphic" alt="A rising bar chart with an upward trend line">
             <GrowthMotif />

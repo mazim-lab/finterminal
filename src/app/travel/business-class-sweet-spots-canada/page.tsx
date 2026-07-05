@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { ArticleHero } from "@/components/ArticleHero";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Business-class sweet spots from Canada: where your points go furthest | FinTerminal",
@@ -63,6 +64,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
             <Link href="/travel">travel</Link><span className="sep">/</span>
             <span className="cur">business-class-sweet-spots-canada</span>
           </nav>
+          <ArticleSchema headline="Business-class sweet spots from Canada: where your points go furthest" path="/travel/business-class-sweet-spots-canada" kicker="Travel & points" />
 
           <ArticleHero
             variant="photo"
