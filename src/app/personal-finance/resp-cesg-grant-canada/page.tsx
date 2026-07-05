@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { GrowthMotif } from "@/components/heroes/motifs";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
@@ -72,6 +74,10 @@ export default function RespCesgGrantPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">resp-cesg-grant-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="A rising bar chart with an upward trend line">
+            <GrowthMotif />
+          </ArticleHero>
 
           <div className="head"><h1>RESP and the 20% CESG Grant: the Easiest Guaranteed Return in Canada</h1></div>
           <p className="lede">

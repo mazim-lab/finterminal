@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { DataGridMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 
 export const metadata = {
@@ -72,6 +74,10 @@ export default function WhereToHoldCashPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">where-to-hold-cash-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="A comparison grid of options">
+            <DataGridMotif />
+          </ArticleHero>
 
           <div className="head"><h1>Where to Hold Your Cash in Canada: HISA vs GIC vs High-Interest Chequing vs Cash ETFs</h1></div>
           <p className="lede">
