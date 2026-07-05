@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     siteName: "FinTerminal",
     locale: "en_CA",
     url: "https://www.finterminal.ca",
+    images: [{ url: "/api/og?title=The+terminal+for+Canadian+money&kicker=Cards%2C+points+%26+personal+finance", width: 1200, height: 630, alt: "FinTerminal" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FinTerminal",
+    description: "The terminal for Canadian money: cards, points, personal finance and a live portfolio.",
+    images: ["/api/og?title=The+terminal+for+Canadian+money&kicker=Cards%2C+points+%26+personal+finance"],
   },
 };
 

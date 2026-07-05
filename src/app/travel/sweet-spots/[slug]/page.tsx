@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { SWEET_SPOTS } from "@/data/sweet-spots";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 // All sweet-spot posts are known at build time from the committed list.
 export function generateStaticParams() {
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const spot = findSpot(slug);
   if (!spot) return { title: "Sweet Spot Not Found | FinTerminal" };
-  return { title: `${spot.title} | FinTerminal`, description: spot.dek };
+  return { title: `${spot.title} | FinTerminal`, description: spot.dek, ...ogMeta(spot.title, "Travel · Sweet spot") };
 }
 
 export default async function SweetSpotPage({ params }: { params: Promise<{ slug: string }> }) {

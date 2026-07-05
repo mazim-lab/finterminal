@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { NEWS } from "@/data/news";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ogMeta } from "@/lib/og";
 
 // All stories are known at build time from the committed news list.
 export function generateStaticParams() {
@@ -20,6 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${item.headline} | FinTerminal`,
     description: item.dek,
+    ...ogMeta(item.headline, "News"),
   };
 }
 
