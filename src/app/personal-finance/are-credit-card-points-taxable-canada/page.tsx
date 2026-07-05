@@ -2,6 +2,8 @@ import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
+import { ArticleHero } from "@/components/ArticleHero";
+import { FeePercentMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 
 export const metadata = {
@@ -71,6 +73,10 @@ export default function CreditCardPointsTaxablePage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">are-credit-card-points-taxable-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="A value bar with a highlighted slice and a percent sign">
+            <FeePercentMotif />
+          </ArticleHero>
 
           <div className="head"><h1>Are Credit Card Points and Cash Back Taxable in Canada?</h1></div>
           <p className="lede">

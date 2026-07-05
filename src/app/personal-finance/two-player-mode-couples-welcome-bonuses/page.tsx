@@ -2,6 +2,8 @@ import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
+import { ArticleHero } from "@/components/ArticleHero";
+import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 
 export const metadata = {
@@ -43,6 +45,10 @@ export default function TwoPlayerModePage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">two-player-mode-couples-welcome-bonuses</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="Rising stacks of coins">
+            <ValueCoinsMotif />
+          </ArticleHero>
 
           <div className="head"><h1>Two-Player Mode: How Canadian Couples Double Their Welcome Bonuses</h1></div>
           <p className="lede">

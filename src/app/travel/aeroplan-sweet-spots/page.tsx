@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { RouteArcsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 
 export const metadata = {
@@ -57,6 +59,10 @@ export default function AeroplanSweetSpotsPage() {
             <Link href="/travel">travel</Link><span className="sep">/</span>
             <span className="cur">aeroplan-sweet-spots</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="Flight-path arcs connecting cities over a faint map">
+            <RouteArcsMotif />
+          </ArticleHero>
 
           <div className="head"><h1>Aeroplan Sweet Spots</h1></div>
           <p className="lede">
