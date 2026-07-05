@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "The FHSA playbook: Canada's most underused account | FinTerminal",
@@ -78,6 +81,11 @@ export default function FHSAPlaybookPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">fhsa-playbook-canada</span>
           </nav>
+          <ArticleSchema headline="The FHSA playbook: Canada's most underused account" path="/personal-finance/fhsa-playbook-canada" kicker="Personal finance" />
+
+          <ArticleHero variant="graphic" alt="Rising stacks of coins">
+            <ValueCoinsMotif />
+          </ArticleHero>
 
           <div className="head"><h1>The FHSA Playbook: Canada&apos;s Most Underused Account</h1></div>
           <p className="lede">

@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { FeePercentMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "How Credit Card Interest Works in Canada (and How to Never Pay It) | FinTerminal",
@@ -83,6 +86,11 @@ export default function CreditCardInterestPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">credit-card-interest-canada</span>
           </nav>
+          <ArticleSchema headline="How Credit Card Interest Works in Canada (and How to Never Pay It)" path="/personal-finance/credit-card-interest-canada" kicker="Personal finance" />
+
+          <ArticleHero variant="graphic" alt="A value bar with a highlighted fee slice and a percent sign">
+            <FeePercentMotif />
+          </ArticleHero>
 
           <div className="head"><h1>How Credit Card Interest Works in Canada (and How to Never Pay It)</h1></div>
           <p className="lede">

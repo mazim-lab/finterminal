@@ -4,6 +4,7 @@ import { isPFPublished } from "@/data/personal-finance";
 import { ArticleHero } from "@/components/ArticleHero";
 import { AccountDecisionGraphic } from "@/components/heroes/AccountDecisionGraphic";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "RRSP vs TFSA: the honest decision for Canadians | FinTerminal",
@@ -86,6 +87,7 @@ export default function RrspVsTfsaPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">rrsp-vs-tfsa-canada</span>
           </nav>
+          <ArticleSchema headline="RRSP vs TFSA: the honest decision for Canadians" path="/personal-finance/rrsp-vs-tfsa-canada" kicker="Personal finance" />
 
           <ArticleHero variant="graphic" alt="One dollar diverging into two account paths, an RRSP and a TFSA">
             <AccountDecisionGraphic />

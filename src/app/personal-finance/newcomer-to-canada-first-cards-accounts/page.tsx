@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { CreditGaugeMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Newcomer to Canada: Your First Credit Cards and Bank Accounts | FinTerminal",
@@ -67,6 +70,11 @@ export default function NewcomerFirstCardsAccountsPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">newcomer-to-canada-first-cards-accounts</span>
           </nav>
+          <ArticleSchema headline="Newcomer to Canada: Your First Credit Cards and Bank Accounts" path="/personal-finance/newcomer-to-canada-first-cards-accounts" kicker="Personal finance" />
+
+          <ArticleHero variant="graphic" alt="A credit-score gauge dial">
+            <CreditGaugeMotif />
+          </ArticleHero>
 
           <div className="head"><h1>Newcomer to Canada: Your First Credit Cards and Bank Accounts</h1></div>
           <p className="lede">

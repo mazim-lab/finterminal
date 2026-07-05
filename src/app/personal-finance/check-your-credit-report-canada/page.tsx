@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { CreditGaugeMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Check Your Credit Report and Score in Canada, Free | FinTerminal",
@@ -73,6 +76,11 @@ export default function CheckYourCreditReportPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">check-your-credit-report-canada</span>
           </nav>
+          <ArticleSchema headline="Check Your Credit Report and Score in Canada, Free" path="/personal-finance/check-your-credit-report-canada" kicker="Personal finance" />
+
+          <ArticleHero variant="graphic" alt="A credit-score gauge dial">
+            <CreditGaugeMotif />
+          </ArticleHero>
 
           <div className="head"><h1>How to Check and Understand Your Credit Report and Score in Canada</h1></div>
           <p className="lede">

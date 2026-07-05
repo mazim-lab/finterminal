@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Does a Costco membership pay for itself? | FinTerminal",
@@ -72,6 +75,11 @@ export default function CostcoMembershipPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">costco-membership-worth-it-canada</span>
           </nav>
+          <ArticleSchema headline="Does a Costco membership pay for itself?" path="/personal-finance/costco-membership-worth-it-canada" kicker="Personal finance" />
+
+          <ArticleHero variant="graphic" alt="Rising stacks of coins">
+            <ValueCoinsMotif />
+          </ArticleHero>
 
           <div className="head"><h1>Does a Costco Membership Pay for Itself?</h1></div>
           <p className="lede">

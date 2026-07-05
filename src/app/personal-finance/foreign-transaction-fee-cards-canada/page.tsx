@@ -2,7 +2,10 @@ import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
+import { ArticleHero } from "@/components/ArticleHero";
+import { FeePercentMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "The 2.5% foreign transaction fee, and the cards that kill it | FinTerminal",
@@ -72,6 +75,11 @@ export default function ForeignTransactionFeePage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">foreign-transaction-fee-cards-canada</span>
           </nav>
+          <ArticleSchema headline="The 2.5% foreign transaction fee, and the cards that kill it" path="/personal-finance/foreign-transaction-fee-cards-canada" kicker="Personal finance" />
+
+          <ArticleHero variant="graphic" alt="A value bar with a highlighted fee slice and a percent sign">
+            <FeePercentMotif />
+          </ArticleHero>
 
           <div className="head"><h1>The 2.5% Foreign Transaction Fee, and the Cards That Kill It</h1></div>
           <p className="lede">

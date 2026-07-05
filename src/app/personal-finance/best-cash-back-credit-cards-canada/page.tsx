@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { allCards, formatCurrency, type Card } from "@/data/cards";
 import { ogMeta } from "@/lib/og";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "The best cash-back credit cards in Canada | FinTerminal",
@@ -211,6 +214,11 @@ export default function BestCashBackCardsPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">best-cash-back-credit-cards-canada</span>
           </nav>
+          <ArticleSchema headline="The best cash-back credit cards in Canada" path="/personal-finance/best-cash-back-credit-cards-canada" kicker="Personal finance" />
+
+          <ArticleHero variant="graphic" alt="Rising stacks of coins, representing cash back">
+            <ValueCoinsMotif />
+          </ArticleHero>
 
           <div className="head"><h1>The Best Cash-Back Credit Cards in Canada</h1></div>
           <p className="lede">
