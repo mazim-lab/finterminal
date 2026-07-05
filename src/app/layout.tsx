@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono, Doto } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { MobileMenu, MobileMenuProvider } from "@/components/MobileMenu";
@@ -31,6 +31,15 @@ export const metadata: Metadata = {
     description: "The terminal for Canadian money: cards, points, personal finance and a live portfolio.",
     images: ["/api/og?title=The+terminal+for+Canadian+money&kicker=Cards%2C+points+%26+personal+finance"],
   },
+};
+
+// Match the mobile browser chrome to the active theme (paper background per mode).
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0e1110" },
+    { media: "(prefers-color-scheme: light)", color: "#f2f1eb" },
+  ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
