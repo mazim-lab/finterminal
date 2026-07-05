@@ -10,6 +10,16 @@
   --mono:var(--font-jetbrains),'JetBrains Mono',ui-monospace,monospace;
   --led:var(--font-doto),var(--font-jetbrains),'JetBrains Mono',monospace;
 }
+/* Light (day) theme: warm-paper board, charcoal ink, deeper green/red accents for
+   contrast. Split-flap tiles stay dark by design (a departure board reads dark in
+   any light), and the CRT scanline/vignette is dropped in daylight. */
+html.light{
+  --paper:#f2f1eb; --panel:#fbfaf5; --panel-2:#eae9e1; --line:#dad8ce; --line-strong:#86b79e;
+  --ink:#1c211e; --ink-soft:#566159; --ink-dim:#808a82;
+  --emerald:#2f8a50; --emerald-d:#21633a; --emerald-tint:#e3f1e8;
+  --red:#cb3a31; --gold:#2f8a50; --gold-tint:#e3f1e8;
+}
+html.light body::after{display:none}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;font-size:14px;overflow-x:hidden}
 /* CRT board texture: scanlines + vignette */

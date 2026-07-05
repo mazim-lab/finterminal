@@ -26,6 +26,30 @@
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
+/* Light (day) theme. Applied when next-themes puts .light on <html>, which follows
+   the OS prefers-color-scheme unless the visitor overrides it with the toggle.
+   The dark values above stay the default (.dark and the no-JS fallback). */
+html { color-scheme: dark; }
+html.light { color-scheme: light; }
+html.light {
+  --color-background: #f2f1eb;
+  --color-card: #fbfaf5;
+  --color-muted: #eae9e1;
+  --color-border: #dad8ce;
+  --color-foreground: #1c211e;
+  --color-card-foreground: #1c211e;
+  --color-muted-foreground: #5c665e;
+  --color-primary: #2f8a50;
+  --color-primary-light: #46b36c;
+  --color-primary-dark: #21633a;
+  --color-accent: #2f8a50;
+  --color-accent-light: #46b36c;
+  --color-gold: #2f8a50;
+  --color-gold-light: #46b36c;
+  --color-gold-dark: #21633a;
+  --color-gold-text: #2f8a50;
+}
+
 /* Custom range slider (secondary pages) */
 input[type="range"] { @apply appearance-none h-2 rounded-full bg-border; }
 input[type="range"]::-webkit-slider-thumb { @apply appearance-none w-4 h-4 rounded-full bg-primary cursor-pointer; }

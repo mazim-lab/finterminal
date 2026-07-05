@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState, type MouseEvent } from "react";
 import { SplitFlapWordmark } from "./SplitFlapWordmark";
 import { Ticker } from "./Ticker";
+import { ThemeToggle } from "./ThemeToggle";
 
 const NAV = [
   { label: "Home", href: "/" },
@@ -56,6 +57,7 @@ export function TerminalHeader() {
           onKeyDown={(e) => { if (e.key === "Enter") router.push(`/cards${q ? `?q=${encodeURIComponent(q)}` : ""}`); }}
           placeholder="⌘K  search 195 cards…"
         />
+        <ThemeToggle />
       </div>
 
       {open && (
