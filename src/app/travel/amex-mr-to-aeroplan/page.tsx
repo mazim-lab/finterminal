@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { TransferFlowMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 
 export const metadata = {
@@ -60,6 +62,10 @@ export default function MrToAeroplanPage() {
             <Link href="/travel">travel</Link><span className="sep">/</span>
             <span className="cur">amex-mr-to-aeroplan</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="Points flowing from a source through a hub to a destination">
+            <TransferFlowMotif />
+          </ArticleHero>
 
           <div className="head"><h1>Amex MR to Aeroplan</h1></div>
           <p className="lede">

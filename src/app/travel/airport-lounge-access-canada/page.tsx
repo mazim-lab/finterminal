@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { allCards } from "@/data/cards";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { RouteArcsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 
 export const metadata = {
@@ -86,6 +88,10 @@ export default function AirportLoungeAccessCanadaPage() {
             <Link href="/travel">travel</Link><span className="sep">/</span>
             <span className="cur">airport-lounge-access-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="Flight-path arcs connecting cities over a faint map">
+            <RouteArcsMotif />
+          </ArticleHero>
 
           <div className="head"><h1>Airport Lounge Access for Canadians: How It Actually Works</h1></div>
           <p className="lede">
