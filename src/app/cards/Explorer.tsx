@@ -37,6 +37,7 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
   const [maxFee, setMaxFee] = useState(1000);
   const [sortKey, setSortKey] = useState<SortKey>('value');
   const [sortDir, setSortDir] = useState<SortDir>('desc');
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const base = useMemo(() => (country === 'all' ? cards : cards.filter((c) => c.country === country)), [country, cards]);
   const typeCounts = useMemo(() => Object.fromEntries(CARD_TYPES.map((t) => [t, base.filter((c) => c.categories.includes(t)).length])), [base]);
@@ -93,7 +94,15 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
 
   return (
     <div className="app">
-      <aside className="rail">
+      <button
+        type="button"
+        className="railtoggle"
+        onClick={() => setFiltersOpen((o) => !o)}
+        aria-expanded={filtersOpen}
+      >
+        {filtersOpen ? 'Hide filters' : 'Filters'}
+      </button>
+      <aside className={`rail${filtersOpen ? ' open' : ''}`}>
         <h4>Card type</h4>
         {CARD_TYPES.map((t) => (
           <label key={t} className={`filt${types.includes(t) ? ' on' : ''}`} style={{ textTransform: 'capitalize' }}>

@@ -108,7 +108,7 @@ main{padding:24px 28px;min-width:0}
 .tablewrap{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .tablescroll{overflow-x:auto}
 table{width:100%;border-collapse:collapse}
-thead th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#E4EAE6;font-weight:700;padding:13px 16px;border-bottom:2px solid var(--line-strong);background:var(--panel-2);cursor:pointer;white-space:nowrap;user-select:none}
+thead th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);font-weight:700;padding:13px 16px;border-bottom:2px solid var(--line-strong);background:var(--panel-2);cursor:pointer;white-space:nowrap;user-select:none}
 thead th.r{text-align:right}
 thead th .ar{color:var(--emerald)}
 tbody td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
@@ -130,6 +130,11 @@ a.cn:hover{color:var(--emerald)}
 /* filter rail only shows on the Credit Cards explorer */
 .app.norail{grid-template-columns:1fr}
 .app.norail .rail{display:none}
+/* mobile filters toggle (hidden on desktop; the rail shows normally there) */
+.railtoggle{display:none;align-items:center;gap:8px;width:fit-content;margin:0 0 14px;padding:9px 14px;
+  border:1px solid var(--line-strong);border-radius:8px;background:var(--panel-2);color:var(--ink);
+  font-family:var(--sans);font-weight:700;font-size:13px;cursor:pointer}
+.railtoggle:hover{color:var(--emerald)}
 /* home departures board */
 .gorow{cursor:pointer}
 .gorow:hover{background:var(--panel-2)}
@@ -312,7 +317,10 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
 /* responsive: shrink the wordmark + collapse rail so it never crowds */
 @media (max-width:1000px){
   .app{grid-template-columns:1fr}
-  .app .rail{display:none}
+  .app .rail{display:none;border-right:none;border-bottom:1px solid var(--line);border-radius:10px;
+    background:var(--panel);padding:4px 16px 16px;margin-bottom:16px}
+  .app .rail.open{display:block}
+  .railtoggle{display:inline-flex;grid-column:1 / -1}
 }
 @media (max-width:760px){
   .flap .tile{width:16px;height:21px;font-size:12px}
