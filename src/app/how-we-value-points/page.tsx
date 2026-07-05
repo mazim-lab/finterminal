@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { POINT_VALUATIONS, VALUATION_SOURCE } from '@/data/point-valuations';
+import { ogMeta } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: 'How we value points | FinTerminal',
   description: 'How FinTerminal estimates the first-year value of a credit card welcome bonus.',
+  ...ogMeta("How we value points", "Methodology"),
 };
 
 // Program display names for the valuations table. We drive the table straight

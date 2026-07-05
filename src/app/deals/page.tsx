@@ -1,9 +1,11 @@
 import type { Deal } from "@/data/deals";
 import { DEALS } from "@/data/deals";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Deals | FinTerminal",
   description: "A short, hand-picked list of genuinely good deals for Canadians, refreshed through the day. Links go straight to the merchant.",
+  ...ogMeta("Deals", "Deals"),
 };
 
 // Re-render hourly so deals roll into the archive as their expiry passes

@@ -2,10 +2,12 @@ import { Suspense } from 'react';
 import { allCards } from '@/data/cards';
 import type { SlimCard } from '@/data/card-view';
 import Explorer from './Explorer';
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Compare Canadian credit cards | FinTerminal",
   description: `Browse and filter ${allCards.length} Canadian credit cards by rewards, fees, and perks, with our own point valuations.`,
+  ...ogMeta("Compare Canadian credit cards", "Credit cards"),
 };
 
 // Server component: the full card data + normalization stay on the server. We

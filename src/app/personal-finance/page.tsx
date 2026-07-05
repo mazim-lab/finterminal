@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { LoadMoreCards } from "@/components/LoadMoreCards";
 import { livePFArticles } from "@/data/personal-finance";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Personal Finance | FinTerminal",
   description: "Practical, plain-language personal finance guides for Canadians, from tax-efficient borrowing to building real wealth.",
+  ...ogMeta("Personal Finance", "Personal finance"),
 };
 
 // Re-check hourly so scheduled articles appear on their publishAt date, no redeploy needed.

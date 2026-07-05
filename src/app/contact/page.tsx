@@ -1,9 +1,11 @@
 import { ContactForm } from "@/components/ContactForm";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Contact | FinTerminal",
   description:
     "Reach the person behind FinTerminal: questions about cards or points, a request for an exclusive credit-card referral link, feedback, or a partnership and data enquiry.",
+  ...ogMeta("Contact", "Contact"),
 };
 
 export default function ContactPage() {

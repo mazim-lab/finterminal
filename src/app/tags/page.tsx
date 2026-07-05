@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { TAGS, tagCount } from "@/data/tags";
 import { LoadMoreCards } from "@/components/LoadMoreCards";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Browse by topic | FinTerminal",
   description: "Every FinTerminal topic in one place. Pick a tag to see every article on points, travel, cards, and personal finance that touches it.",
+  ...ogMeta("Browse by topic", "Topics"),
 };
 
 export const revalidate = 3600;

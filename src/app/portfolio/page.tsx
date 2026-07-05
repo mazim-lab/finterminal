@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { POSITIONS, CLOSED_POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, ALLTIME_RETURN_PCT, OPEN_BOOK_RETURN_PCT, PORTFOLIO_HISTORY, TOP_PROFIT, TOP_LOSS } from "@/data/portfolio";
 import { ReturnChart } from "@/components/ReturnChart";
+import { ogMeta } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Current Portfolio | FinTerminal",
   description: "My real positions and the thesis behind each. Personal positions, not advice.",
+  ...ogMeta("Current Portfolio", "Portfolio"),
 };
 
 const pct = (n: number) => (n < 0 ? "−" : "+") + Math.abs(n).toFixed(1) + "%";

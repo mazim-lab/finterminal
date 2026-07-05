@@ -1,9 +1,11 @@
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Newsletter | FinTerminal",
   description:
     "Canada's no-fluff cards and points brief. One short, honest email with the best current offers, a points tip worth using, and a personal-finance note or two.",
+  ...ogMeta("Newsletter", "Newsletter"),
 };
 
 export default function NewsletterPage() {

@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Affiliate Disclosure | FinTerminal",
   description: "How FinTerminal uses affiliate links, and our promise that they never change our rankings or recommendations.",
+  ...ogMeta("Affiliate Disclosure", "FinTerminal"),
 };
 
 export default function DisclosurePage() {

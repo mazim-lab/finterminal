@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Best rates in Canada: savings, GICs, and chequing | FinTerminal",
   description:
     "A simple hub for the best rates in Canada. Where to find live high-interest savings rates, GIC rates by term, and chequing account bonuses, plus a quick framework for how to think about parking your cash. General info as of July 2026, not advice.",
+  ...ogMeta("Best rates in Canada: savings, GICs, and chequing", "Personal finance"),
 };
 
 export const revalidate = 3600;
