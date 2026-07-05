@@ -1,6 +1,7 @@
 import { allCards } from "@/data/cards";
 import { POINT_VALUATIONS } from "@/data/point-valuations";
 import { POSITIONS } from "@/data/portfolio";
+import { HomeHero } from "@/components/HomeHero";
 
 const BOARD = [
   { label: "News", href: "/news", sub: "cards · points · markets", what: "Headlines as they break", status: "LIVE", brd: false },
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <div className="app norail">
       <main>
+        <HomeHero variant="photo" />
         <div className="head"><h1>The board</h1><span className="meta">FinTerminal · Canada</span></div>
         <div className="subhead">Everything we track.</div>
 

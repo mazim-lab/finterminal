@@ -394,3 +394,40 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
 .site-foot .sf-nl .fbtn{padding:8px 14px;font-size:12px}
 .site-foot .sf-nl .nlok{margin:0}
 .site-foot .sf-links a{color:var(--gold)}
+
+/* Front-page hero banner (photo or generative data-scape), overlaid brand copy.
+   Works in light + dark; photo copy stays light since its scrim is always dark. */
+.home-hero{position:relative;margin:0 0 22px;border:1px solid var(--line-strong);border-radius:14px;
+  overflow:hidden;min-height:300px;display:flex;align-items:center}
+.home-hero-media{position:absolute;inset:0}
+.home-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:grayscale(1) contrast(1.08) brightness(.9)}
+.home-hero-gfx{position:absolute;inset:0;width:100%;height:100%}
+.home-hero-photo .home-hero-tint{position:absolute;inset:0;
+  background:
+    linear-gradient(90deg, rgba(14,17,16,.94) 0%, rgba(14,17,16,.72) 42%, rgba(14,17,16,.32) 100%),
+    linear-gradient(0deg, rgba(70,179,108,.16), rgba(70,179,108,.02))}
+.home-hero-graphic .home-hero-media{background:radial-gradient(130% 120% at 8% 12%, var(--panel-2), var(--paper))}
+.home-hero-graphic .home-hero-tint{position:absolute;inset:0;
+  background:linear-gradient(90deg, color-mix(in srgb, var(--paper) 82%, transparent) 0%, transparent 62%)}
+.home-hero-grain{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.08) 0 1px, transparent 1px 3px)}
+.home-hero-copy{position:relative;z-index:2;padding:38px 42px;max-width:660px}
+.hh-kick{color:var(--emerald);font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.22em}
+.hh-title{font-family:var(--led);font-weight:700;font-size:44px;line-height:1.08;margin:11px 0 13px;
+  letter-spacing:.01em;color:var(--ink)}
+.hh-sub{font-size:15px;line-height:1.62;max-width:520px;color:var(--ink-soft)}
+/* photo variant: copy sits on a dark scrim in both themes, so keep it light */
+.home-hero-photo .hh-title{color:#e7ece9}
+.home-hero-photo .hh-sub{color:#aab4ac}
+/* data-scape primitives (themed via vars; tiles dark by design) */
+.ds-grid{stroke:var(--line);stroke-width:1;opacity:.5}
+.ds-line{fill:none;stroke:var(--emerald);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.ds-line.b{opacity:.5;stroke-width:2}
+.ds-line.c{opacity:.32;stroke-dasharray:2 7}
+.ds-node{fill:var(--emerald)}
+.ds-node-ring{fill:none;stroke:var(--emerald);stroke-width:1.4;opacity:.55}
+.ds-arc{fill:none;stroke:var(--gold);stroke-width:1.4;opacity:.42}
+.ds-tile{fill:#14130f;opacity:.92}
+.ds-tile-line{stroke:rgba(239,232,214,.14);stroke-width:1}
+@media (max-width:760px){.home-hero{min-height:238px}.hh-title{font-size:31px}.home-hero-copy{padding:24px 22px}}
