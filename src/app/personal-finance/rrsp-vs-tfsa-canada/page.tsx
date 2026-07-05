@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { isPFPublished } from "@/data/personal-finance";
+import { ArticleHero } from "@/components/ArticleHero";
+import { AccountDecisionGraphic } from "@/components/heroes/AccountDecisionGraphic";
 
 export const metadata = {
   title: "RRSP vs TFSA: the honest decision for Canadians | FinTerminal",
@@ -82,6 +84,10 @@ export default function RrspVsTfsaPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">rrsp-vs-tfsa-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="One dollar diverging into two account paths, an RRSP and a TFSA">
+            <AccountDecisionGraphic />
+          </ArticleHero>
 
           <div className="head"><h1>RRSP vs TFSA: the Honest Decision for Canadians</h1></div>
           <p className="lede">

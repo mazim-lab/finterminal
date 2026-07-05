@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
 
 export const metadata = {
   title: "Business-class sweet spots from Canada: where your points go furthest | FinTerminal",
@@ -60,6 +61,14 @@ export default function BusinessClassSweetSpotsCanadaPage() {
             <Link href="/travel">travel</Link><span className="sep">/</span>
             <span className="cur">business-class-sweet-spots-canada</span>
           </nav>
+
+          <ArticleHero
+            variant="photo"
+            src="/heroes/travel-window.jpg"
+            alt="The view of clouds at sunset from an airplane window seat"
+            priority
+            credit={<>Photo via <a href="https://www.pexels.com">Pexels</a></>}
+          />
 
           <div className="head"><h1>Business-Class Sweet Spots From Canada</h1></div>
           <p className="lede">
