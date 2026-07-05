@@ -1,17 +1,21 @@
 import Image from "next/image";
 import { DataScapeGraphic } from "@/components/heroes/DataScapeGraphic";
+import { TakeoffGraphic } from "@/components/heroes/TakeoffGraphic";
 
 /**
- * Front-page hero banner with overlaid brand copy. Two variants share one frame:
+ * Front-page hero banner with overlaid brand copy. Variants share one frame:
  *  - "photo": treated stock skyline (dark scrim so the copy always reads).
  *  - "graphic": the generative data-scape (themed, paper fade on the copy side).
+ *  - "takeoff": the animated jet shedding coins (loops; static under reduced-motion).
  */
-export function HomeHero({ variant }: { variant: "photo" | "graphic" }) {
+export function HomeHero({ variant }: { variant: "photo" | "graphic" | "takeoff" }) {
   return (
     <section className={`home-hero home-hero-${variant}`} aria-label="FinTerminal, the terminal for Canadian money">
       <div className="home-hero-media">
         {variant === "photo" ? (
           <Image src="/heroes/skyline.jpg" alt="" fill priority sizes="100vw" className="home-hero-img" />
+        ) : variant === "takeoff" ? (
+          <TakeoffGraphic />
         ) : (
           <DataScapeGraphic />
         )}

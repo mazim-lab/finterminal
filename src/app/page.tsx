@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="app norail">
       <main>
-        <HomeHero variant="graphic" />
+        <HomeHero variant="takeoff" />
         <div className="head"><h1>The board</h1><span className="meta">FinTerminal · Canada</span></div>
         <div className="subhead">Everything we track.</div>
 

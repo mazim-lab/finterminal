@@ -432,6 +432,46 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
 .ds-tile-line{stroke:rgba(239,232,214,.16);stroke-width:1}
 @media (max-width:760px){.home-hero{min-height:238px}.hh-title{font-size:31px}.home-hero-copy{padding:24px 22px}}
 
+/* Animated "takeoff" hero: a line-art jet climbing, shedding coins for exhaust. */
+.home-hero-takeoff .home-hero-media{background:radial-gradient(130% 120% at 8% 12%, var(--panel-2), var(--paper))}
+.home-hero-takeoff .home-hero-tint{position:absolute;inset:0;
+  background:linear-gradient(90deg, color-mix(in srgb, var(--paper) 82%, transparent) 0%, transparent 62%)}
+.tk-runway{stroke:var(--line-strong);stroke-width:2.5;stroke-dasharray:12 14;opacity:.5}
+.tk-guide{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:2 9;opacity:.5}
+.tk-body{fill:var(--panel);stroke:var(--emerald);stroke-width:2.6;stroke-linejoin:round}
+.tk-wing{fill:var(--emerald-tint);stroke:var(--emerald);stroke-width:2.4;stroke-linejoin:round}
+.tk-fin{fill:var(--emerald-tint);stroke:var(--emerald);stroke-width:2.4;stroke-linejoin:round}
+.tk-port{fill:var(--emerald)}
+.tk-coin-c{fill:var(--gold-tint);stroke:var(--gold);stroke-width:2}
+.tk-coin-r{fill:none;stroke:var(--gold);stroke-width:1.4;opacity:.8}
+@keyframes tkBob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(-1.5deg)}}
+@keyframes tkCoin{
+  0%{transform:translate(792px,150px) scale(.55);opacity:0}
+  14%{opacity:1}
+  55%{transform:translate(470px,186px) scale(1);opacity:.92}
+  100%{transform:translate(80px,300px) scale(.5);opacity:0}}
+.tk-plane{animation:tkBob 3.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.tk-coin{animation:tkCoin 6s linear infinite both}
+.tk-coin-0{animation-delay:0s}
+.tk-coin-1{animation-delay:.75s}
+.tk-coin-2{animation-delay:1.5s}
+.tk-coin-3{animation-delay:2.25s}
+.tk-coin-4{animation-delay:3s}
+.tk-coin-5{animation-delay:3.75s}
+.tk-coin-6{animation-delay:4.5s}
+.tk-coin-7{animation-delay:5.25s}
+@media (prefers-reduced-motion:reduce){
+  .tk-plane,.tk-coin{animation:none}
+  .tk-coin{opacity:1}
+  .tk-coin-0{transform:translate(740px,158px)}
+  .tk-coin-1{transform:translate(628px,168px);opacity:.9}
+  .tk-coin-2{transform:translate(510px,182px);opacity:.75}
+  .tk-coin-3{transform:translate(400px,200px);opacity:.6}
+  .tk-coin-4{transform:translate(300px,224px);opacity:.45}
+  .tk-coin-5{transform:translate(210px,252px);opacity:.32}
+  .tk-coin-6{transform:translate(140px,278px);opacity:.2}
+  .tk-coin-7{opacity:0}}
+
 /* Article hero: photo (treated stock) or generative graphic, one house treatment.
    Works in both themes; photo treatment stays dark-toned so images read as framed. */
 .ahero{margin:2px 0 22px;display:flex;flex-direction:column;gap:7px}
