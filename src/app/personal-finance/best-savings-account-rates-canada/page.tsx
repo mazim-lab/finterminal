@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { GrowthMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 
 export const metadata = {
@@ -71,6 +73,10 @@ export default function BestSavingsAccountRatesPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">best-savings-account-rates-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="A rising bar chart with an upward trend line">
+            <GrowthMotif />
+          </ArticleHero>
 
           <div className="head"><h1>Best High-Interest Savings Account (HISA) Rates in Canada</h1></div>
           <p className="lede">

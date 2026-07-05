@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { ShieldMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 
 export const metadata = {
@@ -73,6 +75,10 @@ export default function CreditCardTravelInsurancePage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">credit-card-travel-insurance-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="A shield with a checkmark, representing coverage">
+            <ShieldMotif />
+          </ArticleHero>
 
           <div className="head"><h1>What Your Credit Card's Travel Insurance Actually Covers in Canada</h1></div>
           <p className="lede">

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
+import { ArticleHero } from "@/components/ArticleHero";
+import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { allCards, formatCurrency, type Card } from "@/data/cards";
 import { ogMeta } from "@/lib/og";
 
@@ -211,6 +213,10 @@ export default function BestCashBackCardsPage() {
             <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
             <span className="cur">best-cash-back-credit-cards-canada</span>
           </nav>
+
+          <ArticleHero variant="graphic" alt="Rising stacks of coins, representing cash back">
+            <ValueCoinsMotif />
+          </ArticleHero>
 
           <div className="head"><h1>The Best Cash-Back Credit Cards in Canada</h1></div>
           <p className="lede">
