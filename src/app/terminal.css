@@ -466,4 +466,21 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
 .gh-tick{stroke:var(--ink-dim);stroke-width:2;stroke-linecap:round;opacity:.55}
 .gh-lbl{fill:var(--ink-soft);font-family:var(--mono);font-size:16px;font-weight:700;letter-spacing:.14em}
 .gh-glyph{fill:var(--emerald);font-family:var(--mono);font-size:14px;font-weight:700}
+/* extra motif primitives (shared across the hero motif library; themed via vars) */
+.gh-bar{fill:var(--emerald)}
+.gh-bar-b{fill:var(--emerald);opacity:.42}
+.gh-fill{fill:var(--emerald-tint);stroke:var(--emerald);stroke-width:2}
+.gh-fill-b{fill:var(--gold-tint);stroke:var(--gold);stroke-width:2}
+.gh-arrow{fill:var(--emerald)}
+.gh-arc{fill:none;stroke:var(--gold);stroke-width:2;opacity:.5}
+.gh-shield{fill:var(--panel);stroke:var(--emerald);stroke-width:2.6}
+.gh-shield-b{fill:none;stroke:var(--line-strong);stroke-width:1.6;opacity:.6}
+.gh-track{fill:none;stroke:var(--line);stroke-width:16;opacity:.6}
+.gh-track-v{fill:none;stroke:var(--emerald);stroke-width:16;stroke-linecap:round}
+.gh-needle{stroke:var(--ink);stroke-width:3;stroke-linecap:round}
+.gh-dash{fill:none;stroke:var(--ink-dim);stroke-width:2;stroke-dasharray:2 7;opacity:.55}
+.gh-map{fill:none;stroke:var(--line-strong);stroke-width:1.5;opacity:.5}
+.gh-check{fill:none;stroke:var(--emerald);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.gh-cell{fill:none;stroke:var(--line);stroke-width:1.4}
+.gh-cell-on{fill:var(--emerald-tint);stroke:var(--emerald);stroke-width:1.6}
 @media (max-width:760px){.ahero-media{aspect-ratio:16/8}.gh-lbl{font-size:19px}}
