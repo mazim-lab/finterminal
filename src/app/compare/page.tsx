@@ -86,7 +86,7 @@ export default function ComparePage() {
                     <div className="p-3 border-b border-border">
                       <div className="relative">
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                        <input type="text" placeholder="Search cards..." value={search} onChange={e => setSearch(e.target.value)} autoFocus
+                        <input type="search" aria-label="Search cards" placeholder="Search cards..." value={search} onChange={e => setSearch(e.target.value)} autoFocus
                           className="w-full rounded-lg border border-border bg-background py-2 pl-9 pr-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary" />
                       </div>
                     </div>

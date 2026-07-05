@@ -52,6 +52,8 @@ export function TerminalHeader() {
         <Ticker />
         <input
           className="search"
+          type="search"
+          aria-label="Search cards"
           value={q}
           onChange={(e) => setQ(e.target.value)}
           onKeyDown={(e) => { if (e.key === "Enter") router.push(`/cards${q ? `?q=${encodeURIComponent(q)}` : ""}`); }}
