@@ -97,7 +97,7 @@ export default function CreditCardPointsTaxablePage() {
           </div>
           <ArticleTags path="/personal-finance/are-credit-card-points-taxable-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               No, credit card points and cash back you earn on ordinary personal spending are not taxable in

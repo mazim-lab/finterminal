@@ -82,7 +82,7 @@ export default function MrToAeroplanPage() {
           </div>
           <ArticleTags path="/travel/amex-mr-to-aeroplan" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Amex Membership Rewards points transfer to Air Canada Aeroplan at a 1 to 1 ratio, so 30,000 MR

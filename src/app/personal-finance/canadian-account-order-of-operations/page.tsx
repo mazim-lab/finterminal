@@ -96,7 +96,7 @@ export default function AccountOrderOfOperationsPage() {
           </div>
           <ArticleTags path="/personal-finance/canadian-account-order-of-operations" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               For most Canadian households, send your next dollar down this waterfall in order: clear high-interest

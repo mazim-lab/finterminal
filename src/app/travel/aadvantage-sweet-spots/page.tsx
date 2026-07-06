@@ -86,7 +86,7 @@ export default function AAdvantageSweetSpotsPage() {
           </div>
           <ArticleTags path="/travel/aadvantage-sweet-spots" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               AAdvantage miles are best spent on partner airlines, not American&apos;s own flights. American metal is

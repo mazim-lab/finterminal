@@ -96,7 +96,7 @@ export default function BestSavingsAccountRatesPage() {
           </div>
           <ArticleTags path="/personal-finance/best-savings-account-rates-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               As of July 2026, the best everyday high-interest savings rates from mainstream Canadian providers

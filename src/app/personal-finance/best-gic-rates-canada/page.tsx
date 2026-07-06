@@ -98,7 +98,7 @@ export default function BestGicRatesPage() {
           </div>
           <ArticleTags path="/personal-finance/best-gic-rates-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               As of July 2026, the strongest verified non-redeemable GIC rates from mainstream providers land

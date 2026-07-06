@@ -98,7 +98,7 @@ export default function WhereToHoldCashPage() {
           </div>
           <ArticleTags path="/personal-finance/where-to-hold-cash-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Match the vehicle to the job. For an emergency fund or any money you might need on short notice (0 to 12

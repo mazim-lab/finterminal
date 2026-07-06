@@ -99,7 +99,7 @@ export default function CheckYourCreditReportPage() {
           </div>
           <ArticleTags path="/personal-finance/check-your-credit-report-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Your credit <em>report</em> is the detailed file (your accounts, payment history, inquiries, and any

@@ -18,10 +18,15 @@ type GraphicProps = {
 type Props = PhotoProps | GraphicProps;
 
 /**
- * Article hero with the house treatment. Two variants share one frame + grain:
- *  - "photo": treated stock (grayscale + emerald tint + dark scrim) so any photo
- *    reads as native to the terminal look, in both light and dark themes.
- *  - "graphic": an on-palette generative SVG (themed via CSS vars), no tint.
+ * Boarding-pass article header motif (spec 3.7). The old 16:6 banner is retired;
+ * the article motif is now a small stamp (~96px) that sits beside the serif h1
+ * and dek. The heading, dek, and mono meta rule live in the page next to this
+ * component and compose into a single boarding-pass row via .doc CSS, so the
+ * lede is always visible in the first viewport.
+ *
+ * The `variant` prop is preserved so every existing call site compiles unchanged:
+ *  - "graphic": an on-palette generative SVG motif (themed via .gh-* CSS vars).
+ *  - "photo": treated stock, grayscale + emerald tint, framed as a small stamp.
  */
 export function ArticleHero(props: Props) {
   return (
@@ -36,14 +41,13 @@ export function ArticleHero(props: Props) {
             alt={props.alt}
             fill
             priority={props.priority}
-            sizes="(max-width: 900px) 100vw, 900px"
+            sizes="96px"
             className="ahero-img"
           />
         ) : (
           props.children
         )}
         <div className="ahero-tint" aria-hidden="true" />
-        <div className="ahero-grain" aria-hidden="true" />
       </div>
       {props.credit ? <figcaption className="ahero-cap">{props.credit}</figcaption> : null}
     </figure>

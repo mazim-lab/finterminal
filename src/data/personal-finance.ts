@@ -195,3 +195,8 @@ export function isPFPublished(slug: string): boolean {
 export function livePFArticles(): PFArticle[] {
   return PF_ARTICLES.filter((a) => isPFPublished(a.slug));
 }
+
+/** Look up a single PF article by slug (for the boarding-pass meta rule, etc.). */
+export function pfArticleBySlug(slug: string): PFArticle | undefined {
+  return PF_ARTICLES.find((a) => a.slug === slug);
+}

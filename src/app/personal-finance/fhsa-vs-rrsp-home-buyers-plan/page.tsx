@@ -112,7 +112,7 @@ export default function FHSAvsHBPPage() {
           </div>
           <ArticleTags path="/personal-finance/fhsa-vs-rrsp-home-buyers-plan" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Use the FHSA first. A qualifying FHSA withdrawal for a first home is tax-free and you never repay it, on

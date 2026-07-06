@@ -101,7 +101,7 @@ export default function CreditCardTravelInsurancePage() {
           </div>
           <ArticleTags path="/personal-finance/credit-card-travel-insurance-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Credit-card travel insurance can cover emergency medical care abroad, a cancelled or interrupted trip, flight

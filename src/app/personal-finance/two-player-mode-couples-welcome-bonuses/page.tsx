@@ -68,7 +68,7 @@ export default function TwoPlayerModePage() {
           </div>
           <ArticleTags path="/personal-finance/two-player-mode-couples-welcome-bonuses" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Two people means two separate credit profiles, so a couple can earn the same welcome bonus on the same

@@ -114,7 +114,7 @@ export default function HowToHitMinimumSpendPage() {
           </div>
           <ArticleTags path="/personal-finance/how-to-hit-minimum-spend-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Hit a minimum spend by routing money you were already going to spend through the new card, never by

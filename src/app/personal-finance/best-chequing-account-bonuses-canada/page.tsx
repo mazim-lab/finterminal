@@ -97,7 +97,7 @@ export default function BestChequingBonusesPage() {
           </div>
           <ArticleTags path="/personal-finance/best-chequing-account-bonuses-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               As of July 2026, the biggest verified chequing offers come from the big banks and need bundling:

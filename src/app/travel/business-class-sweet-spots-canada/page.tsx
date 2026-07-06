@@ -92,7 +92,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </div>
           <ArticleTags path="/travel/business-class-sweet-spots-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               A business-class sweet spot is a redemption where the miles price is low relative to the cash fare of a

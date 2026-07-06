@@ -117,7 +117,7 @@ export default function RrspVsTfsaPage() {
           </div>
           <ArticleTags path="/personal-finance/rrsp-vs-tfsa-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               An RRSP gives you a tax deduction now and taxes you when you withdraw, so it is tax-deferred. A TFSA gives

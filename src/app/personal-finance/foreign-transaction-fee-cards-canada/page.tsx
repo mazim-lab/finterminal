@@ -98,7 +98,7 @@ export default function ForeignTransactionFeePage() {
           </div>
           <ArticleTags path="/personal-finance/foreign-transaction-fee-cards-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Most Canadian cards add about a 2.5 percent foreign transaction fee on any purchase made in a
