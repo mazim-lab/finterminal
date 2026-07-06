@@ -672,7 +672,11 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
 .brow .num{font-family:var(--serif);font-size:15.5px;line-height:1.45;color:var(--ink-soft)}
 .brow .num b{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--emerald);font-variant-numeric:tabular-nums}
 .brow .status{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--ink-soft);text-align:right;white-space:nowrap;justify-self:end}
-.brow .status .dot{color:var(--gold)}
+/* CSS-drawn marker, not a font glyph: U+25CF is missing from the mono subset, and
+   the fallback font's dot paints wider than its 1em box, bleeding over the label's
+   first letter. font-size:0 kills the glyph entirely; the dot is the box itself.
+   background:currentColor keeps the gold default and the .live emerald override. */
+.brow .status .dot{color:var(--gold);display:inline-block;position:relative;font-size:0;width:7px;height:7px;border-radius:50%;background:currentColor;vertical-align:middle;transform:translateY(-1px);margin-right:6px}
 .brow .status .dt{color:var(--gold)}
 .brow .status .live{color:var(--emerald)}
 /* full-row hit target: the anchor's ::after covers the row, no dead zones */
