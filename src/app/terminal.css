@@ -480,9 +480,10 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
 .site-foot .sf-links a{color:var(--gold)}
 
 /* Front-page hero banner (photo or generative data-scape), overlaid brand copy.
-   Works in light + dark; photo copy stays light since its scrim is always dark. */
-.home-hero{position:relative;margin:0 0 22px;border:1px solid var(--line-strong);border-radius:6px;
-  overflow:hidden;min-height:300px;display:flex;align-items:center}
+   Roughly half its old height (spec 3.5). Works in light + dark; photo copy stays
+   light since its scrim is always dark. */
+.home-hero{position:relative;margin:0 0 var(--s5);border:1px solid var(--line-strong);border-radius:6px;
+  overflow:hidden;min-height:172px;display:flex;align-items:center}
 .home-hero-media{position:absolute;inset:0}
 .home-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   filter:grayscale(1) contrast(1.08) brightness(.9)}
@@ -496,25 +497,128 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
   background:linear-gradient(90deg, color-mix(in srgb, var(--paper) 82%, transparent) 0%, transparent 62%)}
 /* grain veil purged with the CRT layer (both themes) */
 .home-hero-grain{display:none}
-.home-hero-copy{position:relative;z-index:2;padding:var(--s6) var(--s7);max-width:660px}
+.home-hero-copy{position:relative;z-index:2;padding:var(--s5) var(--s7);max-width:660px}
 .hh-kick{color:var(--emerald);font-family:var(--mono);font-size:var(--t-micro);font-weight:700;letter-spacing:.22em}
-.hh-title{font-family:var(--serif);font-weight:600;font-size:var(--t-disp);line-height:1.08;margin:11px 0 13px;
+.hh-title{font-family:var(--serif);font-weight:600;font-size:var(--t-disp);line-height:1.08;margin:9px 0 11px;
   letter-spacing:0;color:var(--ink)}
-.hh-sub{font-family:var(--serif);font-size:var(--t-body);line-height:1.65;max-width:520px;color:var(--ink-soft)}
+.hh-sub{font-family:var(--serif);font-size:var(--t-body);line-height:1.55;max-width:540px;color:var(--ink-soft)}
+/* the signed human line: a real dad runs this for his own family (spec 3.5) */
+.hh-signed{font-family:var(--serif);font-size:var(--t-data);line-height:1.5;margin-top:var(--s3);color:var(--ink-soft);max-width:540px}
+.hh-signed-link{font-family:var(--mono);font-size:var(--t-micro);font-weight:700;letter-spacing:.04em;color:var(--emerald);white-space:nowrap}
+.hh-signed-link:hover{text-decoration:underline}
 /* photo variant: copy sits on a dark scrim in both themes, so keep it light */
 .home-hero-photo .hh-title{color:#e7ece9}
-.home-hero-photo .hh-sub{color:#aab4ac}
-/* data-scape primitives (themed via vars; tiles dark by design) */
-.ds-grid{stroke:var(--line);stroke-width:1;opacity:.5}
-.ds-line{fill:none;stroke:var(--emerald);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
-.ds-line.b{opacity:.5;stroke-width:2}
-.ds-line.c{opacity:.32;stroke-dasharray:2 7}
+.home-hero-photo .hh-sub,.home-hero-photo .hh-signed{color:#aab4ac}
+/* data-scape primitives (themed via vars; split-flap tiles dark by design) */
+.ds-grid{stroke:var(--line);opacity:.55}
+.ds-line{fill:none;stroke:var(--emerald);stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 .ds-node{fill:var(--emerald)}
-.ds-node-ring{fill:none;stroke:var(--emerald);stroke-width:1.4;opacity:.55}
-.ds-arc{fill:none;stroke:var(--gold);stroke-width:1.4;opacity:.42}
-.ds-tile{fill:#14130F;stroke:var(--emerald);stroke-opacity:.4;stroke-width:1}
-.ds-tile-line{stroke:rgba(239,232,214,.16);stroke-width:1}
-@media (max-width:760px){.home-hero{min-height:238px}.hh-title{font-size:31px}.home-hero-copy{padding:var(--s5) var(--s5)}}
+.ds-arc{fill:none;stroke:var(--gold);stroke-width:1.5;stroke-dasharray:2 7;opacity:.8}
+.ds-arc-tip{fill:var(--gold);opacity:.9}
+.ds-bars rect{fill:var(--emerald-d);opacity:.55}
+.ds-gate text{font-family:var(--mono);font-size:11px;letter-spacing:.16em;fill:var(--ink-dim);opacity:.85}
+.ds-tile{fill:#14130F;stroke:rgba(239,232,214,.16);stroke-width:1}
+.ds-tile-line{stroke:rgba(0,0,0,.6);stroke-width:1}
+.ds-tile-glyph text{font-family:var(--mono);font-size:22px;font-weight:700;fill:#EFE8D6}
+.ds-tile-glyph .g-amber{fill:#E2B45A}
+.ds-tile-glyph .g-em{fill:#46B36C}
+@media (max-width:760px){.home-hero{min-height:150px}.hh-title{font-size:31px}.home-hero-copy{padding:var(--s5) var(--s5)}
+  .hh-sub,.hh-signed{max-width:none}}
+
+/* ── Homepage sections (spec 3.5): departures, tonight's read, proof, wire ── */
+.hp-sec{margin:0 0 var(--s6);max-width:var(--w-data)}
+.hp-sechead{display:flex;align-items:baseline;justify-content:space-between;gap:var(--s4);flex-wrap:wrap;margin-bottom:var(--s3)}
+.hp-mlabel{font-family:var(--mono);font-size:var(--t-micro);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.hp-mlabel.em{color:var(--emerald)}
+.hp-meta{font-family:var(--serif);font-size:var(--t-data);color:var(--ink-soft)}
+
+/* Departures board: reader jobs. Each row is ONE real anchor stretched over the
+   whole row, so "click any row" is literally true. Framed panel, board rail on top. */
+.board{background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--line-strong);border-radius:6px;overflow:hidden}
+.board-cols,.brow{display:grid;grid-template-columns:minmax(180px,1.3fr) 96px minmax(240px,2.4fr) 150px;gap:var(--s4);align-items:center}
+.board-cols{padding:var(--s2) var(--s4);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);border-bottom:1px solid var(--line);background:var(--panel-2)}
+.board-cols .r{text-align:right}
+.brow{padding:var(--s4);border-bottom:1px solid var(--line);position:relative;color:inherit}
+.brow:last-child{border-bottom:none}
+.brow:hover{background:var(--panel-2)}
+.brow:hover .dest{color:var(--emerald)}
+.brow .dest{font-family:var(--mono);font-size:15px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);transition:color .15s ease;display:flex;flex-wrap:wrap;gap:.34em}
+.brow .gate{font-family:var(--mono);font-size:var(--t-micro);font-weight:700;letter-spacing:.08em;color:var(--emerald);text-transform:uppercase}
+.brow .num{font-family:var(--serif);font-size:15.5px;line-height:1.45;color:var(--ink-soft)}
+.brow .num b{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--emerald);font-variant-numeric:tabular-nums}
+.brow .status{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--ink-soft);text-align:right;white-space:nowrap;justify-self:end}
+.brow .status .dot{color:var(--gold)}
+.brow .status .dt{color:var(--gold)}
+.brow .status .live{color:var(--emerald)}
+/* full-row hit target: the anchor's ::after covers the row, no dead zones */
+.brow::after{content:"";position:absolute;inset:0}
+/* the flap-in: clusters arrive once on load, staggered, ~400ms total, then never
+   again. Fully disabled under prefers-reduced-motion (guarded to no-preference). */
+.brow .dest .fw{display:inline-block}
+@media (prefers-reduced-motion:no-preference){
+  .brow .dest .fw{animation:hpFlapIn .16s ease both;animation-delay:var(--d,0s)}
+  .brow .dest .fw:nth-child(2){animation-delay:calc(var(--d,0s) + .05s)}
+  .brow .dest .fw:nth-child(3){animation-delay:calc(var(--d,0s) + .1s)}
+}
+@keyframes hpFlapIn{
+  0%{transform:perspective(300px) rotateX(-84deg);opacity:0}
+  60%{transform:perspective(300px) rotateX(14deg);opacity:1}
+  100%{transform:perspective(300px) rotateX(0)}
+}
+
+/* Tonight's read: one featured guide staged as an object, motif demoted to a
+   small stamp at left, serif title, short excerpt, mono meta with a gold stamp. */
+.featured{background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--line-strong);border-radius:6px;
+  display:grid;grid-template-columns:132px 1fr;gap:var(--s5);padding:var(--s5)}
+.featured-motif{position:relative;width:132px;height:132px;flex:none;border:1px solid var(--line);border-radius:6px;background:var(--paper);overflow:hidden}
+.featured-motif svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.featured-title{font-family:var(--serif);font-size:var(--t-h2);font-weight:600;line-height:1.25;letter-spacing:-.01em;max-width:620px}
+.featured-title a:hover{color:var(--emerald)}
+.featured-dek{font-family:var(--serif);font-size:var(--t-body);line-height:1.6;color:var(--ink-soft);margin-top:var(--s3);max-width:640px}
+.featured-meta{margin-top:var(--s3);font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.05em;color:var(--ink-soft);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.featured-meta .sep{opacity:.4}
+
+/* Proof strip: reader-stakes numbers, not site plumbing. Slim mono strip. */
+.proofstrip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.proof-item{display:flex;flex-direction:column;gap:3px;padding:var(--s4);background:var(--panel);color:inherit;min-width:0}
+a.proof-item:hover{background:var(--panel-2)}
+.proof-item .pl{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim)}
+.proof-item .pv{font-family:var(--led);font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.01em;color:var(--ink)}
+.proof-item .pv.em{color:var(--emerald)}
+.proof-item .pv.gd{color:var(--gold)}
+.proof-item .pv .worst{color:var(--red);font-size:13.5px}
+.proof-item .pd{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft)}
+
+/* The wire: news + deals, two columns inside a data frame, serif headlines, gold
+   mono timestamps. */
+.wire{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+.wirecol{background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--line-strong);border-radius:6px;overflow:hidden}
+.wirecol .wt{display:flex;justify-content:space-between;align-items:baseline;padding:var(--s3) var(--s4);border-bottom:1px solid var(--line);background:var(--panel-2)}
+.wirecol .wt-all{font-family:var(--mono);font-size:var(--t-micro);font-weight:700;letter-spacing:.04em;color:var(--emerald)}
+.wirecol .wt-all:hover{text-decoration:underline}
+.wireitem{display:block;padding:var(--s3) var(--s4);border-bottom:1px solid var(--line)}
+.wireitem:last-child{border-bottom:none}
+.wireitem:hover{background:var(--panel-2)}
+.wireitem .ts{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wireitem h4{font-family:var(--serif);font-size:16px;font-weight:600;line-height:1.4;margin-top:3px;color:var(--ink)}
+.wireitem:hover h4{color:var(--emerald)}
+.wireitem .wd{font-family:var(--serif);font-size:14px;color:var(--ink-soft);line-height:1.5;margin-top:2px}
+
+/* Homepage breakpoints: two-column blocks stack; the board hides its meta col. */
+@media (max-width:900px){
+  .wire{grid-template-columns:1fr}
+  .proofstrip{grid-template-columns:1fr}
+}
+@media (max-width:680px){
+  .board-cols{display:none}
+  .brow{grid-template-columns:1fr auto;gap:var(--s2) var(--s3)}
+  .brow .gate{grid-column:2;grid-row:1;justify-self:end}
+  .brow .num{grid-column:1/-1}
+  .brow .status{grid-column:1/-1;text-align:left;justify-self:start}
+  .featured{grid-template-columns:1fr}
+  .featured-motif{width:96px;height:96px}
+}
 
 /* Article hero: photo (treated stock) or generative graphic, one house treatment.
    Works in both themes; photo treatment stays dark-toned so images read as framed. */

@@ -1,49 +1,81 @@
 /**
- * Front-page generative hero: an abstract "terminal data-scape" (rising ticker
- * lines, glowing nodes, faint flight arcs, a split-flap tile cluster). Pure SVG,
- * themed via CSS vars (.ds-* in terminal.css); the split-flap tiles stay dark by
- * design. Decorative; the hero section carries the label.
+ * Front-page generative hero: an abstract "terminal data-scape" recomposed short
+ * (1200x240, spec 3.5) so the hero runs at roughly half its old height. A gold
+ * flight arc, an emerald portfolio sparkline, faint earn-rate bars, and the
+ * split-flap tile cluster kept dead-centre so a mobile crop never amputates the
+ * most characterful element. Pure SVG, themed via CSS vars (.ds-* in terminal.css);
+ * the split-flap tiles stay dark by design. All strokes are non-scaling so the
+ * slice crop never fattens a line. Decorative; the hero section carries the label.
  */
 export function DataScapeGraphic() {
-  const verticals = Array.from({ length: 25 }, (_, i) => i * 50);
-  const horizontals = Array.from({ length: 7 }, (_, i) => i * 50 + 20);
-  const tiles = [];
-  for (let r = 0; r < 2; r++) {
-    for (let c = 0; c < 5; c++) {
-      tiles.push({ x: 988 + c * 40, y: 232 + r * 52 });
-    }
-  }
+  const verticals = [200, 400, 600, 800, 1000];
+  const horizontals = [60, 120, 180];
   return (
-    <svg className="home-hero-gfx" viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <svg
+      className="home-hero-gfx"
+      viewBox="0 0 1200 240"
+      preserveAspectRatio="xMidYMid slice"
+      aria-hidden="true"
+    >
+      {/* faint board grid */}
       {verticals.map((x) => (
-        <line key={`v${x}`} className="ds-grid" x1={x} y1={0} x2={x} y2={340} />
+        <line key={`v${x}`} className="ds-grid" x1={x} y1={0} x2={x} y2={240} vectorEffect="non-scaling-stroke" />
       ))}
       {horizontals.map((y) => (
-        <line key={`h${y}`} className="ds-grid" x1={0} y1={y} x2={1200} y2={y} />
+        <line key={`h${y}`} className="ds-grid" x1={0} y1={y} x2={1200} y2={y} vectorEffect="non-scaling-stroke" />
       ))}
 
-      {/* faint flight arcs */}
-      <path className="ds-arc" d="M-60 360 Q 460 70 1260 30" />
-      <path className="ds-arc" d="M-60 300 Q 560 180 1260 110" />
+      {/* flight arc, gold, dashed (attention) with a small heading marker */}
+      <path className="ds-arc" d="M60,206 Q600,16 1150,146" vectorEffect="non-scaling-stroke" />
+      <path className="ds-arc-tip" d="M742,90 l20,-3 -14,14 z" />
 
-      {/* ticker sparklines, trending up to the right */}
-      <polyline className="ds-line c" points="0,196 200,204 400,182 600,192 800,166 1000,176 1200,150" />
-      <polyline className="ds-line b" points="0,300 150,291 300,301 450,274 600,284 750,258 900,266 1050,242 1200,252" />
-      <polyline className="ds-line" points="0,250 120,236 240,258 360,208 480,224 600,178 720,194 840,148 960,164 1080,118" />
+      {/* portfolio sparkline, emerald (gain), trending up to the right */}
+      <polyline
+        className="ds-line"
+        points="620,190 680,182 730,192 790,170 850,178 910,156 970,163 1040,140 1110,148 1180,124"
+        vectorEffect="non-scaling-stroke"
+      />
+      <circle className="ds-node" cx="1180" cy="124" r="3.5" />
 
-      {/* glowing nodes on the main line */}
-      <circle className="ds-node-ring" cx="600" cy="178" r="11" />
-      <circle className="ds-node" cx="600" cy="178" r="4.5" />
-      <circle className="ds-node-ring" cx="1080" cy="118" r="12" />
-      <circle className="ds-node" cx="1080" cy="118" r="5" />
+      {/* earn-rate bars */}
+      <g className="ds-bars">
+        <rect x="654" y="214" width="9" height="16" />
+        <rect x="672" y="204" width="9" height="26" />
+        <rect x="690" y="210" width="9" height="20" />
+        <rect x="708" y="196" width="9" height="34" />
+        <rect x="726" y="202" width="9" height="28" />
+        <rect x="744" y="188" width="9" height="42" />
+        <rect x="762" y="196" width="9" height="34" />
+        <rect x="780" y="182" width="9" height="48" />
+      </g>
 
-      {/* split-flap tile cluster (dark by design) */}
-      {tiles.map((t, i) => (
-        <g key={`t${i}`}>
-          <rect className="ds-tile" x={t.x} y={t.y} width="30" height="40" rx="4" />
-          <line className="ds-tile-line" x1={t.x} y1={t.y + 20} x2={t.x + 30} y2={t.y + 20} />
+      {/* gate markers */}
+      <g className="ds-gate">
+        <text x="622" y="52">YYZ 22:04 GATE D8</text>
+        <text x="932" y="228">MCO 01:12 ON TIME</text>
+      </g>
+
+      {/* the split-flap cluster, centred: Y Y Z 2 2 0 4 (dark by design) */}
+      <g transform="translate(600,120)">
+        <g transform="translate(-138,-22)">
+          <g>
+            {[0, 34, 68, 110, 144, 178, 212, 246].map((x) => (
+              <rect key={x} className="ds-tile" x={x} y={0} width="30" height="44" rx="3" />
+            ))}
+            <line className="ds-tile-line" x1={0} y1={22} x2={276} y2={22} />
+          </g>
+          <g className="ds-tile-glyph" textAnchor="middle">
+            <text x="15" y="30">Y</text>
+            <text x="49" y="30">Y</text>
+            <text x="83" y="30">Z</text>
+            <text x="125" y="30" className="g-amber">2</text>
+            <text x="159" y="30" className="g-amber">2</text>
+            <text x="193" y="30" className="g-amber">0</text>
+            <text x="227" y="30" className="g-amber">4</text>
+            <text x="261" y="30" className="g-em">&#9650;</text>
+          </g>
         </g>
-      ))}
+      </g>
     </svg>
   );
 }
