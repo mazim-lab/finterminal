@@ -29,6 +29,21 @@ export interface NewsItem {
 // archive: never delete or rewrite existing items, only prepend new ones.
 export const NEWS: NewsItem[] = [
   {
+    time: "13:00",
+    slug: "scotiabank-scene-plus-refresh-platinum-amex-100k",
+    headline: "Scotiabank refreshes its Scene+ welcome offers, with an all-time-high 100,000 points on the Platinum Amex",
+    dek: "A new round of Scene+ card offers that opened July 2 headlines with up to 100,000 Scene+ points on the Platinum Amex, the richest bonus that card has ever carried, plus a bumped 50,000 on the Gold Amex.",
+    body:
+      "If you have been waiting for a good moment to pick up a Scene+ card, this is a strong one. Scotiabank rolled out a fresh round of welcome offers across its Scene+ lineup for accounts opened starting July 2, and the headline is the Platinum American Express at up to 100,000 Scene+ points, an all-time high for that card. It comes in three pieces: 60,000 points after $5,000 of spending in the first three months, another 20,000 once you reach $10,000 in the first six months, and a final 20,000 for a purchase made in the 14th month. Those are real spend targets, so this suits a household that already runs its everyday bills through one card rather than someone stretching to hit them. The Gold Amex also moved up to 50,000 points, matching its best, and the rest of the family, from the Passport Visa Infinite cards down to the no-fee Scene+ Visa, got refreshed offers too. Most of these run through November 1, so there is no rush, but do weigh the annual fees against how much you would actually earn back before you apply.",
+    category: "Card offers",
+    region: "CA",
+    date: "Jul 3, 2026",
+    sourceLabel: "Scotiabank",
+    sourceUrl: "https://www.scotiabank.com/ca/en/personal/credit-cards/american-express/platinum-card.html",
+    href: "/cards?q=scene",
+    hrefLabel: "Compare Scene+ cards",
+  },
+  {
     time: "12:30",
     slug: "aeroplan-club-avolta-airport-shopping-partnership",
     headline: "Aeroplan ties up with Club Avolta so you can earn points shopping and dining at the airport",
