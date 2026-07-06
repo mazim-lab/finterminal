@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { POSITIONS, CLOSED_POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, ALLTIME_RETURN_PCT, OPEN_BOOK_RETURN_PCT, PORTFOLIO_HISTORY, TOP_PROFIT, TOP_LOSS } from "@/data/portfolio";
 import { ReturnChart } from "@/components/ReturnChart";
+import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { ogMeta } from "@/lib/og";
 
 export const metadata: Metadata = {
@@ -20,12 +21,19 @@ export default function PortfolioPage() {
   // Until the first snapshot, show positions in a stable, readable order.
   const rows = SNAPSHOT_PENDING ? POSITIONS : (ranked.length ? ranked : POSITIONS);
 
-  const updated = LAST_UPDATED ? `updated ${LAST_UPDATED}` : "awaiting first snapshot";
+  // Worst open holding, in percent terms only (standing privacy rule), so the
+  // page carries the same losses-shown honesty as the homepage proof strip.
+  const worst = withNums.reduce<(typeof POSITIONS)[number] | null>(
+    (lo, p) => (lo === null || (p.returnPct as number) < (lo.returnPct as number) ? p : lo),
+    null,
+  );
 
   return (
     <div className="app norail">
       <main>
-        <div className="head"><h1>Current Portfolio</h1><span className="meta">{updated} · refreshed twice weekly</span></div>
+        <div className="head"><h1>Current Portfolio</h1><span className="meta">
+          {LAST_UPDATED ? <VerifiedStamp date={LAST_UPDATED} cadenceDays={7} verb="CHECKED" /> : "awaiting first snapshot"} · refreshed twice weekly
+        </span></div>
         <div className="subhead">My real positions and the thesis behind each. <b>Personal positions, not advice.</b></div>
 
         <div className="stats">
@@ -36,7 +44,7 @@ export default function PortfolioPage() {
           </div>
           <div className="stat">
             <div className="l">Highest loss</div>
-            <div className="v" style={{ color: "var(--red)" }}>{pct(TOP_LOSS.returnPct)}</div>
+            <div className="v rd">{pct(TOP_LOSS.returnPct)}</div>
             <div className="d">{TOP_LOSS.ticker} · {TOP_LOSS.label}</div>
           </div>
           <div className="stat">
@@ -74,6 +82,14 @@ export default function PortfolioPage() {
 
         <details className="coll" open>
           <summary className="cd-sec">Current Positions</summary>
+          {worst && typeof worst.returnPct === "number" && (
+            <div className="worst-moment">
+              <span className="wm-l">Worst holding right now</span>
+              <span className="wm-v negv">{pct(worst.returnPct)}</span>
+              <span className="wm-d">{worst.ticker} · {worst.name}</span>
+              <span className="wm-t">{worst.thesis}</span>
+            </div>
+          )}
           <div className="tablewrap">
             <div className="tablescroll">
               <table>
@@ -86,7 +102,7 @@ export default function PortfolioPage() {
                     <tr key={p.ticker}>
                       <td>
                         <div className="cn">{p.ticker} · {p.name}</div>
-                        <div className="ci" style={{ textTransform: "none", whiteSpace: "normal", maxWidth: 520 }}>{p.thesis}</div>
+                        <div className="p-thesis">{p.thesis}</div>
                       </td>
                       <td>
                         <span className="tag em">{p.theme}</span>
