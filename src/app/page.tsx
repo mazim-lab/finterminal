@@ -5,11 +5,11 @@ import { HomeHero } from "@/components/HomeHero";
 
 const BOARD = [
   { label: "News", href: "/news", sub: "cards · points · markets", what: "Headlines as they break", status: "LIVE", brd: false },
-  { label: "Personal Finance", href: "/personal-finance", sub: "credit · rates · fees", what: "Plain-English guides", status: "UPDATED", brd: true },
+  { label: "Money", href: "/personal-finance", sub: "credit · rates · fees", what: "Plain-English guides", status: "UPDATED", brd: true },
   { label: "Deals", href: "/deals", sub: "limited-time offers", what: "Assorted promos", status: "LIVE", brd: false },
-  { label: "Credit Cards", href: "/cards", sub: `${allCards.length} cards · explorer`, what: "Compare by real value", status: "UPDATED", brd: true },
-  { label: "Travel & Points", href: "/travel", sub: "transfers · sweet spots", what: "Putting those points to use", status: "UPDATED", brd: true },
-  { label: "Current Portfolio", href: "/portfolio", sub: "my holdings · theses", what: "What I own & why", status: "LIVE", brd: false },
+  { label: "Cards", href: "/cards", sub: `${allCards.length} cards · explorer`, what: "Compare by real value", status: "UPDATED", brd: true },
+  { label: "Travel", href: "/travel", sub: "transfers · sweet spots", what: "Putting those points to use", status: "UPDATED", brd: true },
+  { label: "Portfolio", href: "/portfolio", sub: "my holdings · theses", what: "What I own & why", status: "LIVE", brd: false },
 ];
 
 export default function Home() {

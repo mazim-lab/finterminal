@@ -104,11 +104,27 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
 .search::placeholder{color:var(--ink-dim)}
 .search:focus{outline:none;border-color:var(--emerald)}
 
-/* brand + mobile tab dropdown (the tab strip hides on mobile; tap the wordmark) */
+/* brand + labeled mobile menu button (below 1000px the tab strip collapses to
+   a Menu button that toggles the nav; reuses the .railtoggle button pattern) */
 .brand{display:flex;align-items:center;gap:6px;flex:none}
-.navcaret{display:none;color:var(--ink-soft);font-size:11px;transition:transform .15s ease}
-.brand.open .navcaret{transform:rotate(180deg)}
+.navbtn{display:none;align-items:center;gap:8px;padding:8px 12px;
+  border:1px solid var(--line-strong);border-radius:6px;background:var(--panel-2);color:var(--ink);
+  font-family:var(--sans);font-weight:700;font-size:var(--t-data);cursor:pointer;flex:none}
+.navbtn:hover{color:var(--emerald)}
 .topbar nav.mobnav{display:none}
+
+/* honest search: dropdown of live results grouped by kind (spec 3.5) */
+.searchbox{position:relative;flex:none}
+.search-pop{position:absolute;top:calc(100% + 6px);right:0;z-index:60;width:320px;max-height:70vh;overflow-y:auto;
+  background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--line-strong);border-radius:6px;
+  box-shadow:0 14px 26px rgba(0,0,0,.45);padding:6px}
+.search-group + .search-group{margin-top:4px;border-top:1px solid var(--line);padding-top:4px}
+.search-grouplabel{font-family:var(--mono);font-size:var(--t-micro);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-dim);padding:6px 8px 4px}
+.search-opt{display:block;width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  padding:8px;border-radius:3px;color:var(--ink-soft);font-family:var(--sans);font-size:var(--t-data);line-height:1.35}
+.search-opt.on{background:var(--panel-2);color:var(--emerald)}
+.search-empty{padding:10px 8px;font-family:var(--serif);font-size:var(--t-data);color:var(--ink-dim)}
 
 /* layout */
 .app{display:grid;grid-template-columns:252px 1fr;min-height:calc(100vh - 58px)}
@@ -371,6 +387,15 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
     background:var(--panel);padding:4px 16px 16px;margin-bottom:16px}
   .app .rail.open{display:block}
   .railtoggle{display:inline-flex;grid-column:1 / -1}
+  /* the nav strip collapses to a labeled Menu button; ticker steps aside */
+  .topbar nav.desknav,.ticker{display:none}
+  .navbtn{display:inline-flex}
+  .topbar nav.mobnav{display:flex;flex-direction:column;position:absolute;top:58px;left:0;right:0;z-index:55;
+    background:var(--panel);border-bottom:2px solid var(--line-strong);padding:8px;gap:2px;
+    box-shadow:0 14px 26px rgba(0,0,0,.45)}
+  .topbar nav.mobnav a{padding:12px 14px;border-radius:6px;color:var(--ink-soft);font-weight:600;font-size:15px;white-space:normal}
+  .topbar nav.mobnav a.on{background:var(--panel-2);color:var(--emerald)}
+  .mobnav-overlay{position:fixed;inset:58px 0 0;background:rgba(0,0,0,.45);z-index:54}
 }
 /* the 680–1000 squeeze (spec 3.3): the Explorer sheds its two lowest-priority
    columns before it collapses to cards at 680, so there is no undefined middle
@@ -386,16 +411,8 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
   .miniflap .mc{height:15px;min-width:9px;font-size:11px}
   .logo .mark{width:18px;height:18px;margin:0 2px}
   .topbar{gap:12px;padding:0 14px}
-  .topbar nav.desknav,.ticker{display:none}
-  .brand{cursor:pointer}
-  .navcaret{display:inline-block}
-  .topbar nav.mobnav{display:flex;flex-direction:column;position:absolute;top:58px;left:0;right:0;z-index:55;
-    background:var(--panel);border-bottom:2px solid var(--line-strong);padding:8px;gap:2px;
-    box-shadow:0 14px 26px rgba(0,0,0,.45)}
-  .topbar nav.mobnav a{padding:12px 14px;border-radius:6px;color:var(--ink-soft);font-weight:600;font-size:15px;white-space:normal}
-  .topbar nav.mobnav a.on{background:var(--panel-2);color:var(--emerald)}
-  .mobnav-overlay{position:fixed;inset:58px 0 0;background:rgba(0,0,0,.45);z-index:54}
   .search{width:150px}
+  .search-pop{width:min(320px,calc(100vw - 28px))}
   .stats{grid-template-columns:repeat(2,1fr)}
   main{padding:18px 16px}
 }

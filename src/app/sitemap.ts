@@ -28,6 +28,7 @@ const STATIC_PATHS = [
   "/compare",
   "/portfolio",
   "/newsletter",
+  "/about",
   "/contact",
   "/how-we-value-points",
   "/disclosure",

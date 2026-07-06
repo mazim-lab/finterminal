@@ -17,6 +17,8 @@ export function SiteFooter() {
       </span>
 
       <span className="sf-links">
+        <Link href="/about">About</Link>
+        {" · "}
         <Link href="/newsletter">Newsletter</Link>
         {" · "}
         <Link href="/contact">Contact</Link>

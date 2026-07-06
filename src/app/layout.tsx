@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono, Source_Serif_4 } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import { MobileMenu, MobileMenuProvider } from "@/components/MobileMenu";
 import { TerminalHeader } from "@/components/TerminalHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { allCards } from "@/data/cards";
@@ -47,12 +46,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`${inter.variable} ${mono.variable} ${serif.variable}`} suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <MobileMenuProvider>
-            <MobileMenu />
-            <TerminalHeader />
-            {children}
-            <SiteFooter />
-          </MobileMenuProvider>
+          <TerminalHeader />
+          {children}
+          <SiteFooter />
         </ThemeProvider>
       </body>
     </html>
