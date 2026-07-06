@@ -17,6 +17,8 @@ export function SiteFooter() {
       </span>
 
       <span className="sf-links">
+        <Link href="/about">About</Link>
+        {" · "}
         <Link href="/newsletter">Newsletter</Link>
         {" · "}
         <Link href="/contact">Contact</Link>
@@ -24,7 +26,7 @@ export function SiteFooter() {
         <Link href="/disclosure">Disclosure</Link>
       </span>
 
-      <span className="sf-meta">© {year} FinTerminal · independent · verified data · no sponsored noise</span>
+      <span className="sf-meta">© {year} FinTerminal · verified data · dated on every number</span>
     </footer>
   );
 }

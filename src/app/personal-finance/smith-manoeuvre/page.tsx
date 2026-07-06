@@ -90,7 +90,7 @@ export default function SmithManoeuvrePage() {
           </div>
           <ArticleTags path="/personal-finance/smith-manoeuvre" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">The Smith Manoeuvre is a way for Canadian homeowners to make their mortgage interest tax-deductible. Using a readvanceable mortgage, every dollar of principal you pay down frees an equal dollar of line-of-credit room, which you borrow and invest in income-producing assets so its interest becomes deductible. You reinvest each tax refund into the mortgage to speed things up, and over the years your non-deductible mortgage is replaced by a deductible investment loan plus a portfolio. It is genuine leverage though, so it needs at least 20 percent home equity, stable cash flow, a long horizon, and clean records to work.</p>
           </div>

@@ -86,7 +86,7 @@ export default async function SweetSpotPage({ params }: { params: Promise<{ slug
           <ArticleTags path={`/travel/sweet-spots/${spot.slug}`} />
 
           {spot.shortAnswer ? (
-            <div className="cd-note">
+            <div className="cd-note short">
               <div className="cap">The short answer</div>
               <p style={{ margin: 0 }} className="sub">{spot.shortAnswer}</p>
             </div>

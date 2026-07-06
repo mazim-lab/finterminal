@@ -1,29 +1,54 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { Fragment, useState, useMemo } from 'react';
 import type { CSSProperties } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { Benefits } from '@/data/cards';
-import { formatCurrency, type SlimCard } from '@/data/card-view';
+import { CARDS_VERIFIED } from '@/data/cards';
+import { formatCurrency, receiptLines, type SlimCard } from '@/data/card-view';
 import { valuationFor } from '@/data/point-valuations';
+import { VerifiedStamp } from '@/components/VerifiedStamp';
 
 type SortKey = 'name' | 'tags' | 'fee' | 'bonus' | 'cpp' | 'value';
 type SortDir = 'asc' | 'desc';
 
 const CARD_TYPES = ['travel', 'cashback', 'airline', 'hotel', 'business'];
-const TAG_DEFS: [keyof Benefits, string][] = [
-  ['lounge_access', 'lounge'], ['no_fx_fee', 'no-fx'], ['car_rental_insurance', 'car-ins'],
-  ['free_checked_bags', 'free-bag'], ['travel_medical', 'travel-med'], ['trip_cancellation', 'trip-cancel'],
-  ['mobile_insurance', 'mobile'], ['purchase_protection', 'purchase'], ['extended_warranty', 'warranty'], ['flight_delay', 'flight-delay'],
+
+// Tag chips now carry human words (spec 3.7): "no-fx" reads "no foreign fees".
+// [benefit key, short chip label, full tooltip].
+const TAG_DEFS: [keyof Benefits, string, string][] = [
+  ['lounge_access', 'lounge access', 'Airport lounge access'],
+  ['no_fx_fee', 'no foreign fees', 'No foreign transaction fees'],
+  ['car_rental_insurance', 'rental car insurance', 'Rental car collision/damage insurance'],
+  ['free_checked_bags', 'free checked bag', 'Free checked bag on the co-brand airline'],
+  ['travel_medical', 'travel medical', 'Emergency travel medical coverage'],
+  ['trip_cancellation', 'trip cancellation', 'Trip cancellation / interruption coverage'],
+  ['mobile_insurance', 'mobile insurance', 'Cell phone / mobile device insurance'],
+  ['purchase_protection', 'purchase protection', 'Purchase protection on new buys'],
+  ['extended_warranty', 'extended warranty', 'Extended manufacturer warranty'],
+  ['flight_delay', 'flight delay', 'Flight / baggage delay coverage'],
 ];
 const RAIL_BENEFITS: [keyof Benefits, string][] = [
   ['lounge_access', 'Lounge access'], ['no_fx_fee', 'No FX fee'], ['car_rental_insurance', 'Car rental ins.'], ['free_checked_bags', 'Free checked bag'],
 ];
+
+// Family & everyday lens (spec 3.7). Built ONLY from data that actually exists
+// on the slim card: no annual fee, cash-back category, no foreign fees, rental
+// car insurance. No invented groceries/gas fields — earn categories aren't in
+// this payload, so we don't pretend they are.
+type FamilyKey = 'nofee' | 'cashback' | 'nofx' | 'carins';
+const FAMILY_DEFS: { key: FamilyKey; label: string; test: (c: SlimCard) => boolean }[] = [
+  { key: 'nofee', label: 'No annual fee', test: (c) => c.annual_fee === 0 },
+  { key: 'cashback', label: 'Cash back', test: (c) => c.categories.includes('cashback') },
+  { key: 'nofx', label: 'No foreign fees', test: (c) => c.benefits.no_fx_fee },
+  { key: 'carins', label: 'Rental car insurance', test: (c) => c.benefits.car_rental_insurance },
+];
+
 const COLUMNS: { key: SortKey; label: string; right?: boolean }[] = [
   { key: 'name', label: 'Card' }, { key: 'tags', label: 'Tags' }, { key: 'fee', label: 'Annual fee', right: true },
   { key: 'bonus', label: 'Bonus', right: true }, { key: 'cpp', label: 'Base ¢/pt', right: true }, { key: 'value', label: 'Est. 12-mo value', right: true },
 ];
-const tagsFor = (c: SlimCard) => TAG_DEFS.filter(([k]) => c.benefits[k]).map(([, l]) => l);
+const tagsFor = (c: SlimCard) => TAG_DEFS.filter(([k]) => c.benefits[k]);
 const cppFor = (c: SlimCard) => c.cpp_cad ?? 1.0;
 
 export default function Explorer({ cards, networks }: { cards: SlimCard[]; networks: string[] }) {
@@ -34,15 +59,18 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
   const [types, setTypes] = useState<string[]>(searchParams.get('type') ? searchParams.get('type')!.split(',') : []);
   const [networkFilter, setNetworkFilter] = useState<string[]>([]);
   const [benefits, setBenefits] = useState<(keyof Benefits)[]>([]);
+  const [family, setFamily] = useState<FamilyKey[]>([]);
   const [maxFee, setMaxFee] = useState(1000);
   const [sortKey, setSortKey] = useState<SortKey>('value');
   const [sortDir, setSortDir] = useState<SortDir>('desc');
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [openReceipt, setOpenReceipt] = useState<string | null>(null);
 
   const base = useMemo(() => (country === 'all' ? cards : cards.filter((c) => c.country === country)), [country, cards]);
   const typeCounts = useMemo(() => Object.fromEntries(CARD_TYPES.map((t) => [t, base.filter((c) => c.categories.includes(t)).length])), [base]);
   const netCounts = useMemo(() => Object.fromEntries(networks.map((n) => [n, base.filter((c) => c.network === n).length])), [base, networks]);
   const benefitCounts = useMemo(() => Object.fromEntries(RAIL_BENEFITS.map(([k]) => [k, base.filter((c) => c.benefits[k]).length])), [base]);
+  const familyCounts = useMemo(() => Object.fromEntries(FAMILY_DEFS.map((f) => [f.key, base.filter(f.test).length])), [base]);
 
   const filtered = useMemo(() => {
     let list = base;
@@ -58,6 +86,7 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
     if (types.length) list = list.filter((c) => types.some((t) => c.categories.includes(t)));
     if (networkFilter.length) list = list.filter((c) => networkFilter.includes(c.network));
     if (benefits.length) list = list.filter((c) => benefits.every((b) => c.benefits[b]));
+    if (family.length) list = list.filter((c) => family.every((f) => FAMILY_DEFS.find((d) => d.key === f)!.test(c)));
     if (maxFee < 1000) list = list.filter((c) => c.annual_fee <= maxFee);
 
     const dir = sortDir === 'asc' ? 1 : -1;
@@ -76,7 +105,7 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
       if (typeof av === 'string' || typeof bv === 'string') return String(av).localeCompare(String(bv)) * dir;
       return (av - bv) * dir;
     });
-  }, [base, query, types, networkFilter, benefits, maxFee, sortKey, sortDir]);
+  }, [base, query, types, networkFilter, benefits, family, maxFee, sortKey, sortDir]);
 
   const maxValue = Math.max(...filtered.map((c) => c.first_year_value), 1);
   const top = filtered.reduce<SlimCard | null>((a, c) => (!a || c.first_year_value > a.first_year_value ? c : a), null);
@@ -108,6 +137,14 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
           <label key={t} className={`filt${types.includes(t) ? ' on' : ''}`} style={{ textTransform: 'capitalize' }}>
             <input type="checkbox" checked={types.includes(t)} onChange={() => toggle(types, t, setTypes)} /> {t}
             <span className="ct">{typeCounts[t]}</span>
+          </label>
+        ))}
+
+        <h4>Family &amp; everyday</h4>
+        {FAMILY_DEFS.map((f) => (
+          <label key={f.key} className={`filt${family.includes(f.key) ? ' on' : ''}`}>
+            <input type="checkbox" checked={family.includes(f.key)} onChange={() => toggle(family, f.key, setFamily)} /> {f.label}
+            <span className="ct">{familyCounts[f.key]}</span>
           </label>
         ))}
 
@@ -144,6 +181,10 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
           <h1>Card Explorer</h1>
           <span className="meta">showing {filtered.length} / {cards.length} · sorted by {sortLabel} {arrow}</span>
         </div>
+        {/* the formula, promoted from the table footer to a subtitle (spec 3.7) */}
+        <p className="subhead">
+          Est. 12-month value = <b>welcome bonus × base ¢/pt − annual fee</b>, in each card&apos;s native currency. Tap any value to see the math.
+        </p>
         <div className="guidestrip">
           <a className="guidechip" href="/guides/us-cards-for-canadians"><span className="gi">▸</span> US Cards for Canadians: the ITIN guide</a>
         </div>
@@ -161,34 +202,78 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
               <thead>
                 <tr>
                   {COLUMNS.map((col) => (
-                    <th key={col.key} className={col.right ? 'r' : ''} onClick={() => onSort(col.key)}>
+                    <th key={col.key} className={`${col.right ? 'r' : ''}${col.key === 'cpp' ? ' col-cpp' : ''}`} onClick={() => onSort(col.key)}>
                       {col.label}{sortKey === col.key && <span className="ar"> {arrow}</span>}
                     </th>
                   ))}
-                  <th className="r">Value index</th>
+                  {/* Value index is a visual guide, not sortable: no cursor, no onClick,
+                      and a plain-language title so the header explains itself (spec 3.7). */}
+                  <th className="r col-vindex nosort" title="A bar showing each card's estimated value relative to the strongest card in this list. Visual only, not a sort.">Value index</th>
                 </tr>
               </thead>
               <tbody>
                 {filtered.map((c) => {
                   const tags = tagsFor(c);
+                  const isOpen = openReceipt === c.slug;
+                  const lines = isOpen ? receiptLines(c) : [];
                   return (
-                    <tr key={c.slug}>
-                      <td>
+                    <Fragment key={c.slug}>
+                    <tr className={`cardrow${isOpen ? ' rcpt-open' : ''}`}>
+                      <td data-label="Card">
                         <a href={`/cards/${c.slug}`}>
                           <div className="cn">{c.name}</div>
                           <div className="ci" style={{ textTransform: 'lowercase' }}>{c.issuer} · {c.rewards_program || c.card_type}</div>
                         </a>
                       </td>
-                      <td>
-                        {tags.slice(0, 3).map((t) => <span key={t} className="tag em">{t}</span>)}
-                        {tags.length > 3 && <span className="tag em">+{tags.length - 3}</span>}
+                      <td data-label="Tags">
+                        {tags.slice(0, 3).map(([k, label, title]) => <span key={k} className="tag em" title={title}>{label}</span>)}
+                        {tags.length > 3 && <span className="tag em" title={tags.slice(3).map(([, l]) => l).join(', ')}>+{tags.length - 3}</span>}
                       </td>
-                      <td className={`r mono${c.annual_fee > 0 ? ' negv' : ''}`}>{formatCurrency(c.annual_fee, c.country)}</td>
-                      <td className="r mono">{c.welcome_bonus_points ? c.welcome_bonus_points.toLocaleString() : (c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country) : '—')}</td>
-                      <td className="r mono">{cppFor(c).toFixed(2)}</td>
-                      <td className={`r mono big ${c.first_year_value < 0 ? 'negv' : 'pos'}`}>{formatCurrency(c.first_year_value, c.country)}</td>
-                      <td className="r"><span className="vbar" style={{ '--w': `${Math.max(0, (c.first_year_value / maxValue) * 100)}%` } as CSSProperties} /></td>
+                      <td className={`r mono${c.annual_fee > 0 ? ' negv' : ''}`} data-label="Annual fee">{formatCurrency(c.annual_fee, c.country)}</td>
+                      <td className="r mono" data-label="Bonus">{c.welcome_bonus_points ? c.welcome_bonus_points.toLocaleString() : (c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country) : '—')}</td>
+                      <td className="r mono col-cpp" data-label="Base ¢/pt">{cppFor(c).toFixed(2)}</td>
+                      <td className="r" data-label="Est. 12-mo value">
+                        {/* THE RECEIPT (spec 3.6): the value is a button that expands the
+                            row into a mono ledger of the real math. Keyboard accessible. */}
+                        <button
+                          type="button"
+                          className={`valbtn big ${c.first_year_value < 0 ? 'negv' : 'pos'}`}
+                          aria-expanded={isOpen}
+                          onClick={() => setOpenReceipt((s) => (s === c.slug ? null : c.slug))}
+                        >
+                          {formatCurrency(c.first_year_value, c.country)}
+                        </button>
+                      </td>
+                      <td className="r col-vindex" data-label="Value index"><span className="vbar" style={{ '--w': `${Math.max(0, (c.first_year_value / maxValue) * 100)}%` } as CSSProperties} /></td>
                     </tr>
+                    {isOpen && (
+                      <tr className="rcpt">
+                        <td colSpan={7}>
+                          <div className="receipt">
+                            {lines.map((l, i) => (
+                              <div className="rl" key={i}>
+                                <span className="lab">{l.label}</span>
+                                <span className="dots" />
+                                <span className={`amt${l.neg ? ' neg' : ''}`}>
+                                  {l.neg ? '−' : ''}{formatCurrency(Math.abs(l.amount), c.country)}
+                                </span>
+                              </div>
+                            ))}
+                            <div className="rl total">
+                              <span className="lab">EST. FIRST-YEAR VALUE</span>
+                              <span className="dots" />
+                              <span className={`amt${c.first_year_value < 0 ? ' neg' : ''}`}>{formatCurrency(c.first_year_value, c.country)}</span>
+                            </div>
+                            <div className="rl verify">
+                              <VerifiedStamp date={CARDS_VERIFIED} verb="CHECKED" />
+                              <span className="dots" />
+                              <span className="note">same formula for every card</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    )}
+                    </Fragment>
                   );
                 })}
                 {filtered.length === 0 && <tr><td colSpan={7} style={{ textAlign: 'center', padding: '60px', color: 'var(--ink-dim)' }} className="mono">no cards match these filters</td></tr>}
@@ -196,7 +281,7 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
             </table>
           </div>
           <div className="foot">
-            <span>est. value = welcome bonus × base ¢/pt − annual fee · native currency</span>
+            <span>same formula for every card · native currency</span>
             <span>click a column to sort · <a href="/how-we-value-points">methodology →</a></span>
           </div>
         </div>

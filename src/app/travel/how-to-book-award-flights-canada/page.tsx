@@ -93,7 +93,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </div>
           <ArticleTags path="/travel/how-to-book-award-flights-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Do it in order. Decide the trip and check which points you have and in which currency. Search award

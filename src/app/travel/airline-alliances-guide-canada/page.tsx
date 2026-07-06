@@ -93,7 +93,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </div>
           <ArticleTags path="/travel/airline-alliances-guide-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               There are three global airline alliances. Star Alliance (Air Canada, United, Lufthansa, ANA, Singapore,

@@ -237,7 +237,7 @@ export default function BestCashBackCardsPage() {
           </div>
           <ArticleTags path="/personal-finance/best-cash-back-credit-cards-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               If you want one no-fee card and no fuss, a flat 2 percent card with no annual fee and no foreign

@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { ArticleTags } from "@/components/ArticleTags";
 import { ArticleHero } from "@/components/ArticleHero";
+import { ArticleMeta } from "@/components/ArticleMeta";
+import { LedgerStub } from "@/components/LedgerStub";
 import { GrowthMotif } from "@/components/heroes/motifs";
 import { notFound } from "next/navigation";
-import { isPFPublished } from "@/data/personal-finance";
+import { isPFPublished, pfArticleBySlug } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
 
@@ -57,6 +59,8 @@ const FAQ = [
 export default function RespCesgGrantPage() {
   if (!isPFPublished("resp-cesg-grant-canada")) notFound();
 
+  const meta = pfArticleBySlug("resp-cesg-grant-canada");
+
   return (
     <div className="app norail">
       <main>
@@ -81,7 +85,7 @@ export default function RespCesgGrantPage() {
             <GrowthMotif />
           </ArticleHero>
 
-          <div className="head"><h1>RESP and the 20% CESG Grant: the Easiest Guaranteed Return in Canada</h1></div>
+          <div className="head"><h1>RESP and the 20% CESG grant: the easiest guaranteed return in Canada</h1></div>
           <p className="lede">
             There are very few places in personal finance where someone hands you a guaranteed 20 percent return
             with no strings and no risk. The Registered Education Savings Plan is one of them. When you put money
@@ -90,14 +94,10 @@ export default function RespCesgGrantPage() {
             usually the first account I would tell a friend to open. Let me walk you through exactly how it works,
             how to avoid leaving free money on the table, and the honest cautions worth knowing.
           </p>
-          <div className="docmeta">
-            <span className="gd">PERSONAL FINANCE</span><span className="sep">·</span>
-            <span>about 9 min read</span><span className="sep">·</span>
-            <span>rules and figures change; general info, not advice</span>
-          </div>
+          <ArticleMeta readTime={meta?.read ?? "9 min read"} date={meta?.date ?? "Jul 2026"} />
           <ArticleTags path="/personal-finance/resp-cesg-grant-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               An RESP is a registered account for a child&apos;s education, and the Canada Education Savings Grant
@@ -129,15 +129,18 @@ export default function RespCesgGrantPage() {
             before your money has been invested in anything at all, and there is no income test on this basic
             grant, so it is available whether you earn a little or a lot.
           </p>
-          <div className="cd-note">
-            <div className="cap">The one number to remember</div>
-            <p style={{ margin: 0 }} className="sub">
-              Contribute $2,500 per child per year and you capture the full $500 CESG. That is the sweet spot most
-              families aim for. Contribute less and you get 20 percent of whatever you put in; contribute more in a
-              single year and the extra does not earn additional grant that year, though it can still grow tax
-              sheltered.
-            </p>
-          </div>
+          <LedgerStub
+            label="The one number to remember"
+            number="20%"
+            caption="What Ottawa adds to your RESP contributions through the CESG, on the first $2,500 per child each year. Free money, before you invest a dollar."
+            date={meta?.date ?? "Jul 2026"}
+          />
+          <p>
+            In plain terms: contribute $2,500 per child per year and you capture the full $500 CESG. That is the
+            sweet spot most families aim for. Contribute less and you get 20 percent of whatever you put in;
+            contribute more in a single year and the extra does not earn additional grant that year, though it can
+            still grow tax sheltered.
+          </p>
           <p>
             It is worth pausing on how good this is. There is no ordinary investment that promises you 20 percent
             up front with zero risk. The stock market does not, a savings account does not, nothing does. The CESG

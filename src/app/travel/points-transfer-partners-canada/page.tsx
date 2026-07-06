@@ -92,7 +92,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </div>
           <ArticleTags path="/travel/points-transfer-partners-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               In Canada, the points that actually transfer to airline and hotel loyalty programs are essentially Amex

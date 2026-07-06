@@ -109,7 +109,7 @@ export default function CreditCardInterestPage() {
           </div>
           <ArticleTags path="/personal-finance/credit-card-interest-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Pay your full statement balance by the due date every single month and you pay no interest on purchases.

@@ -103,7 +103,7 @@ export default function FHSAPlaybookPage() {
           </div>
           <ArticleTags path="/personal-finance/fhsa-playbook-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               The First Home Savings Account is the only Canadian account that gives you an RRSP-style deduction going

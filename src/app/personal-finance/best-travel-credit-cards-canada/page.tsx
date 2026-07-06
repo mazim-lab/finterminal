@@ -288,7 +288,7 @@ export default function BestTravelCardsPage() {
           </div>
           <ArticleTags path="/personal-finance/best-travel-credit-cards-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               If you fly a lot and will use the perks, a premium card earning flexible Membership Rewards or Aeroplan

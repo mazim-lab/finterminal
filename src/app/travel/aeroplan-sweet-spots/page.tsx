@@ -80,7 +80,7 @@ export default function AeroplanSweetSpotsPage() {
           </div>
           <ArticleTags path="/travel/aeroplan-sweet-spots" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Aeroplan pays off best when you book partner flights off the predictable region-based chart rather

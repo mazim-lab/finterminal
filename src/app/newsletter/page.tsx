@@ -16,8 +16,8 @@ export default function NewsletterPage() {
           <div className="head"><h1>The FinTerminal Brief</h1></div>
           <p className="lede">
             Canada&apos;s no-fluff cards and points brief. Every so often I send one short, honest email: the best
-            current offers, a points tip worth using, and a personal-finance note or two. No sponsored noise, no daily
-            spam, and you can leave any time.
+            current offers, a points tip worth using, and a personal-finance note or two. No daily spam, and you can
+            leave any time.
           </p>
 
           <div className="cd-sec">Get it in your inbox</div>

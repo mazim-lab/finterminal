@@ -95,7 +95,7 @@ export default function CostcoMembershipPage() {
           </div>
           <ArticleTags path="/personal-finance/costco-membership-worth-it-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               A Costco membership pays for itself when your real savings beat the fee, which is about $65 a year for

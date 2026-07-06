@@ -93,7 +93,7 @@ export default function NewcomerFirstCardsAccountsPage() {
           </div>
           <ArticleTags path="/personal-finance/newcomer-to-canada-first-cards-accounts" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Get a Social Insurance Number (free, through the Government of Canada). Open a chequing account for

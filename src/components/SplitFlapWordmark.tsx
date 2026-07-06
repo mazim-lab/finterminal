@@ -7,7 +7,9 @@ const PARTS = ["FIN", "TERMINAL"];
 
 /**
  * FinTerminal split-flap wordmark: FIN · compass rose · TERMINAL.
- * Tiles clack into place on mount and on hover; the rose sits in the middle.
+ * Tiles clack into place once on mount, then settle static; a re-flap runs on
+ * hover. No infinite animation: each pass is a brief settle under ~1.2s. Under
+ * prefers-reduced-motion the wordmark renders instantly with no scramble.
  */
 export function SplitFlapWordmark() {
   const finRef = useRef<HTMLSpanElement>(null);
@@ -19,12 +21,14 @@ export function SplitFlapWordmark() {
     const logo = logoRef.current;
     if (!containers[0] || !containers[1] || !logo) return;
 
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     const tiles: { el: HTMLSpanElement; final: string; order: number }[] = [];
     let ord = 0;
     PARTS.forEach((word, pi) => {
       const container = containers[pi]!;
       container.innerHTML = "";
-      if (pi > 0) ord += 6; // stagger: brief pause before the next word reveals
+      if (pi > 0) ord += 2; // stagger: brief pause before the second word reveals
       for (const ch of word) {
         const t = document.createElement("span");
         t.className = "tile";
@@ -34,28 +38,37 @@ export function SplitFlapWordmark() {
       }
     });
 
+    if (reduce) return; // final letters already set above; no scramble
+
     const flip = (el: HTMLSpanElement) => {
       el.classList.remove("flip");
       void el.offsetWidth;
       el.classList.add("flip");
     };
 
+    // One settle pass, then static. Longest tile finishes in roughly:
+    //   (6 + 13*1) ticks * 60ms ≈ 1.14s.
+    let running = false;
     const intervals: number[] = [];
     const run = () => {
+      if (running) return;
+      running = true;
+      let remaining = tiles.length;
       tiles.forEach((t) => {
-        const ticks = 10 + t.order * 4;
+        const ticks = 6 + t.order;
         let n = 0;
         const iv = window.setInterval(() => {
           if (n >= ticks) {
             t.el.textContent = t.final;
             flip(t.el);
             window.clearInterval(iv);
+            if (--remaining === 0) running = false;
             return;
           }
           t.el.textContent = GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
           flip(t.el);
           n++;
-        }, 95);
+        }, 60);
         intervals.push(iv);
       });
     };

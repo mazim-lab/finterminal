@@ -96,7 +96,7 @@ export default function PointsVsCashBackPage() {
           </div>
           <ArticleTags path="/personal-finance/points-vs-cash-back-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Points beat cash back only if you redeem them above the breakeven value, which for a

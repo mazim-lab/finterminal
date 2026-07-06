@@ -520,6 +520,11 @@ export const allCards: Card[] = (() => {
 export const canadianCards = allCards.filter(c => c.country === 'CA');
 export const usCards = allCards.filter(c => c.country === 'US');
 
+// Date the card table was last re-verified end to end, in the twice-weekly
+// playbook. Single source of truth for the homepage proof strip's gold stamp;
+// bump this string whenever the card data is re-checked. "YYYY-MM-DD".
+export const CARDS_VERIFIED = '2026-07-03';
+
 // ── Helper functions ──────────────────────────────────
 
 export function getCardBySlug(slug: string): Card | undefined {

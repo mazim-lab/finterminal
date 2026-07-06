@@ -98,7 +98,7 @@ export default function HowToBuildCreditPage() {
           </div>
           <ArticleTags path="/personal-finance/how-to-build-credit-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               In Canada, two credit bureaus, Equifax and TransUnion, keep a record of how you borrow and repay, and boil

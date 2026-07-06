@@ -1,46 +1,36 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
-import { useState, type MouseEvent } from "react";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { SplitFlapWordmark } from "./SplitFlapWordmark";
 import { Ticker } from "./Ticker";
 import { ThemeToggle } from "./ThemeToggle";
+import { SearchBox } from "./SearchBox";
 
+// Six plain words (spec 3.5). Routes are unchanged; only the labels moved:
+// "Personal Finance" → Money, "Current Portfolio" → Portfolio.
 const NAV = [
-  { label: "Home", href: "/" },
+  { label: "Cards", href: "/cards" },
+  { label: "Travel", href: "/travel" },
+  { label: "Money", href: "/personal-finance" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "News", href: "/news" },
-  { label: "Personal Finance", href: "/personal-finance" },
   { label: "Deals", href: "/deals" },
-  { label: "Credit Cards", href: "/cards" },
-  { label: "Travel & Points", href: "/travel" },
-  { label: "Current Portfolio", href: "/portfolio" },
 ];
 
 export function TerminalHeader() {
   const path = usePathname() || "/";
-  const router = useRouter();
-  const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
 
   const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
 
-  // On mobile the tab strip is hidden, so tapping the wordmark opens a dropdown
-  // of the tabs. On desktop the wordmark stays a plain link to home.
-  const onBrandClick = (e: MouseEvent) => {
-    if (typeof window !== "undefined" && window.matchMedia("(max-width:760px)").matches) {
-      e.preventDefault();
-      setOpen((o) => !o);
-    }
-  };
-
   return (
     <div className="topbar">
-      <div className={`brand${open ? " open" : ""}`} onClickCapture={onBrandClick}>
+      <div className="brand">
         <SplitFlapWordmark />
-        <span className="navcaret" aria-hidden="true">▾</span>
       </div>
 
-      <nav className="desknav">
+      <nav className="desknav" aria-label="Primary">
         {NAV.map((n) => (
           <a key={n.href} href={n.href} className={isActive(n.href) ? "on" : ""}>
             {n.label}
@@ -50,22 +40,23 @@ export function TerminalHeader() {
 
       <div className="right">
         <Ticker />
-        <input
-          className="search"
-          type="search"
-          aria-label="Search cards"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          onKeyDown={(e) => { if (e.key === "Enter") router.push(`/cards${q ? `?q=${encodeURIComponent(q)}` : ""}`); }}
-          placeholder="⌘K  search 195 cards…"
-        />
+        <SearchBox />
         <ThemeToggle />
+        <button
+          type="button"
+          className="navbtn"
+          aria-expanded={open}
+          aria-controls="mobnav"
+          onClick={() => setOpen((o) => !o)}
+        >
+          {open ? "Close" : "Menu"}
+        </button>
       </div>
 
       {open && (
         <>
           <div className="mobnav-overlay" onClick={() => setOpen(false)} />
-          <nav className="mobnav">
+          <nav className="mobnav" id="mobnav" aria-label="Primary">
             {NAV.map((n) => (
               <a key={n.href} href={n.href} className={isActive(n.href) ? "on" : ""} onClick={() => setOpen(false)}>
                 {n.label}

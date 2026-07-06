@@ -87,7 +87,7 @@ export default function AvionToAmericanAirlinesPage() {
           </div>
           <ArticleTags path="/travel/rbc-avion-to-aadvantage" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               RBC Avion transfers to American Airlines AAdvantage at a base rate of 10 Avion points for 7 miles, a 1 to

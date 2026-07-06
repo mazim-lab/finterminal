@@ -112,7 +112,7 @@ export default function AirportLoungeAccessCanadaPage() {
           </div>
           <ArticleTags path="/travel/airport-lounge-access-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               There are three ways into a lounge. One, a credit card can include a membership in a lounge network like

@@ -90,7 +90,7 @@ export default function AviosSweetSpotsPage() {
           </div>
           <ArticleTags path="/travel/avios-sweet-spots-rbc-avion-transfer" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               Avios pay off on short flights and on partner airlines that skip British Airways-style fuel

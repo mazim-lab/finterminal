@@ -89,7 +89,7 @@ export default function PayBillsWithCreditCardPage() {
           </div>
           <ArticleTags path="/personal-finance/pay-bills-with-credit-card-canada" />
 
-          <div className="cd-note">
+          <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
               You can pay rent, taxes, and your mortgage with a credit card in Canada through services like

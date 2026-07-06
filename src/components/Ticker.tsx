@@ -4,24 +4,46 @@ import { useEffect, useRef } from "react";
 
 const NUM = "0123456789.";
 const FEEDS = [
-  { label: "AERO", vals: ["2.05", "2.10", "2.00"] },
-  { label: "MR", vals: ["1.95", "1.90", "2.00"] },
+  { label: "AERO", val: "2.05" },
+  { label: "MR", val: "1.95" },
 ];
 
-/** Live-feel point-value ticker that re-flaps periodically like a board (mock parity). */
+/**
+ * Point-value ticker. Digits flap into place once on mount, then settle to
+ * their real values and stay static; a re-flap runs on hover. No infinite
+ * animation. Under prefers-reduced-motion the values render instantly.
+ */
 export function Ticker() {
+  const rootRef = useRef<HTMLSpanElement>(null);
   const aeroRef = useRef<HTMLSpanElement>(null);
   const mrRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const cells = [aeroRef.current, mrRef.current];
-    if (!cells[0] || !cells[1]) return;
+    const root = rootRef.current;
+    if (!cells[0] || !cells[1] || !root) return;
 
-    const flip = (el: HTMLSpanElement) => { el.classList.remove("flip"); void el.offsetWidth; el.classList.add("flip"); };
-    const intervals: number[] = [];
-    const render = (el: HTMLSpanElement, text: string) => {
+    const texts = FEEDS.map((f) => f.val + "¢");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const ensure = (el: HTMLSpanElement, text: string) => {
       while (el.children.length < text.length) { const c = document.createElement("span"); c.className = "mc"; el.appendChild(c); }
       while (el.children.length > text.length) el.removeChild(el.lastChild!);
+    };
+
+    if (reduce) {
+      cells.forEach((el, i) => {
+        ensure(el!, texts[i]);
+        for (let j = 0; j < texts[i].length; j++) (el!.children[j] as HTMLSpanElement).textContent = texts[i].charAt(j);
+      });
+      return;
+    }
+
+    const flip = (el: HTMLSpanElement) => { el.classList.remove("flip"); void el.offsetWidth; el.classList.add("flip"); };
+    let running = false;
+    const intervals: number[] = [];
+    const render = (el: HTMLSpanElement, text: string) => {
+      ensure(el, text);
       for (let i = 0; i < text.length; i++) {
         ((cell: HTMLSpanElement, finalCh: string, idx: number) => {
           const ticks = 4 + idx * 2; let n = 0;
@@ -34,17 +56,24 @@ export function Ticker() {
       }
     };
 
-    const state = [0, 0];
-    cells.forEach((el, i) => render(el!, FEEDS[i].vals[0] + "¢"));
-    const cycle = window.setInterval(() => {
-      cells.forEach((el, i) => { state[i] = (state[i] + 1) % FEEDS[i].vals.length; render(el!, FEEDS[i].vals[state[i]] + "¢"); });
-    }, 6500);
-    intervals.push(cycle);
-    return () => intervals.forEach((iv) => window.clearInterval(iv));
+    const run = () => {
+      if (running) return;
+      running = true;
+      cells.forEach((el, i) => render(el!, texts[i]));
+      // Longest cell finishes in (4 + 4*2) ticks * 80ms ≈ 0.96s.
+      window.setTimeout(() => { running = false; }, 1100);
+    };
+
+    run();
+    root.addEventListener("mouseenter", run);
+    return () => {
+      intervals.forEach((iv) => window.clearInterval(iv));
+      root.removeEventListener("mouseenter", run);
+    };
   }, []);
 
   return (
-    <span className="ticker">
+    <span className="ticker" ref={rootRef}>
       <span className="tk">AERO</span>
       <span className="miniflap" ref={aeroRef} />
       <span className="up">▲</span>

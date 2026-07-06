@@ -2,53 +2,44 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Token palette for the legacy/secondary pages (blog, compare, guides, card detail).
-   The primary terminal views are styled by terminal.css, which is the design source of truth. */
+/* Tailwind theme plumbing for the legacy/secondary pages (blog, compare, guides,
+   card detail). terminal.css is the single color source of truth: every color
+   token here points at a terminal.css variable, so the parallel hex palette that
+   used to live here (and drift) is gone. Both files re-theme together from the
+   same :root / html.light definitions.
+   Note: the secondary pages use the "gold" utility family as their green points
+   accent (it was green here historically, never amber). To preserve those pages
+   unchanged while killing the duplicate palette, the gold utilities map to the
+   emerald vars. Real amber (--gold) means verification only and lives in
+   terminal.css, applied via CSS vars, not these Tailwind utilities. */
 @theme {
-  --color-background: #0e1110;
-  --color-card: #121613;
-  --color-muted: #1a201c;
-  --color-border: #242b27;
-  --color-foreground: #c7d1cb;
-  --color-card-foreground: #c7d1cb;
-  --color-muted-foreground: #8c988f;
-  --color-primary: #46b36c;
-  --color-primary-light: #6fc98a;
-  --color-primary-dark: #2f8a50;
-  --color-accent: #46b36c;
-  --color-accent-light: #6fc98a;
-  --color-gold: #46b36c;
-  --color-gold-light: #6fc98a;
-  --color-gold-dark: #2f8a50;
-  --color-gold-text: #6fc98a;
+  --color-background: var(--paper);
+  --color-card: var(--panel);
+  --color-muted: var(--panel-2);
+  --color-border: var(--line);
+  --color-foreground: var(--ink);
+  --color-card-foreground: var(--ink);
+  --color-muted-foreground: var(--ink-soft);
+  --color-primary: var(--emerald);
+  --color-primary-light: var(--emerald);
+  --color-primary-dark: var(--emerald-d);
+  --color-accent: var(--emerald);
+  --color-accent-light: var(--emerald);
+  --color-gold: var(--emerald);
+  --color-gold-light: var(--emerald);
+  --color-gold-dark: var(--emerald-d);
+  --color-gold-text: var(--emerald);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-doto), var(--font-jetbrains), ui-monospace, monospace;
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-display: var(--font-jetbrains), ui-monospace, monospace;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
-/* Light (day) theme. Applied when next-themes puts .light on <html>, which follows
-   the OS prefers-color-scheme unless the visitor overrides it with the toggle.
-   The dark values above stay the default (.dark and the no-JS fallback). */
+/* Theme is toggled by next-themes putting .light on <html>; it follows the OS
+   prefers-color-scheme unless the visitor overrides it. Dark is the default
+   (.dark and the no-JS fallback). The actual color values live in terminal.css. */
 html { color-scheme: dark; }
 html.light { color-scheme: light; }
-html.light {
-  --color-background: #f2f1eb;
-  --color-card: #fbfaf5;
-  --color-muted: #eae9e1;
-  --color-border: #dad8ce;
-  --color-foreground: #1c211e;
-  --color-card-foreground: #1c211e;
-  --color-muted-foreground: #5c665e;
-  --color-primary: #2f8a50;
-  --color-primary-light: #46b36c;
-  --color-primary-dark: #21633a;
-  --color-accent: #2f8a50;
-  --color-accent-light: #46b36c;
-  --color-gold: #2f8a50;
-  --color-gold-light: #46b36c;
-  --color-gold-dark: #21633a;
-  --color-gold-text: #2f8a50;
-}
 
 /* Custom range slider (secondary pages) */
 input[type="range"] { @apply appearance-none h-2 rounded-full bg-border; }
@@ -80,9 +71,11 @@ input[type="checkbox"]:checked {
 
 .atlas-rule { height: 1px; background: linear-gradient(to right, transparent, color-mix(in srgb, var(--color-primary) 55%, transparent), transparent); }
 
-/* Guide prose (secondary pages) */
-.prose-guide p { color: var(--color-muted-foreground); margin-bottom: 1rem; line-height: 1.75; }
+/* Guide prose (secondary pages) — long-form reads in the serif at the body size,
+   680px measure; mono leaks out of sentences (spec 3.2/3.3). */
+.prose-guide { max-width: var(--w-read); }
+.prose-guide p { font-family: var(--font-serif); font-size: var(--t-body); color: var(--color-muted-foreground); margin-bottom: 1rem; line-height: 1.65; }
 .prose-guide ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--color-muted-foreground); }
-.prose-guide li { margin-bottom: 0.5rem; line-height: 1.7; }
+.prose-guide li { font-family: var(--font-serif); font-size: var(--t-body); margin-bottom: 0.5rem; line-height: 1.6; }
 .prose-guide strong { color: var(--color-foreground); }
-.prose-guide h4 { color: var(--color-foreground); font-family: var(--font-display); }
+.prose-guide h4 { color: var(--color-foreground); font-family: var(--font-serif); font-size: var(--t-h3); font-weight: 600; }
