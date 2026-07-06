@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { KIND_LABELS, searchEntries, type SearchEntry } from "@/lib/search-index";
 
 // Honest topbar search. Types filter a build-time index of cards and guides
@@ -37,8 +37,12 @@ export function SearchBox() {
     return { flat, sections };
   }, [results]);
 
-  // Reset the highlight whenever the result set changes.
-  useEffect(() => setActive(0), [q]);
+  // Reset the highlight whenever the query text changes. Handled where q is set
+  // (typing) rather than in an effect, so there is no cascading re-render.
+  const setQuery = useCallback((next: string) => {
+    setQ(next);
+    setActive(0);
+  }, []);
 
   // Real ⌘K / Ctrl-K: focus the search from anywhere. Escape blurs and closes.
   useEffect(() => {
@@ -65,7 +69,7 @@ export function SearchBox() {
 
   const go = (entry: SearchEntry) => {
     setOpen(false);
-    setQ("");
+    setQuery("");
     inputRef.current?.blur();
     router.push(entry.href);
   };
@@ -109,7 +113,7 @@ export function SearchBox() {
         aria-autocomplete="list"
         aria-label="Search cards and guides"
         value={q}
-        onChange={(e) => { setQ(e.target.value); setOpen(true); }}
+        onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
         onFocus={() => setOpen(true)}
         onKeyDown={onKeyDown}
         placeholder="⌘K  search cards & guides"
