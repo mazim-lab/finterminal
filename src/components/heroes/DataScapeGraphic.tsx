@@ -2,10 +2,13 @@
  * Front-page generative hero: an abstract "terminal data-scape" recomposed short
  * (1200x240, spec 3.5) so the hero runs at roughly half its old height. A gold
  * flight arc, an emerald portfolio sparkline, faint earn-rate bars, and the
- * split-flap tile cluster kept dead-centre so a mobile crop never amputates the
- * most characterful element. Pure SVG, themed via CSS vars (.ds-* in terminal.css);
- * the split-flap tiles stay dark by design. All strokes are non-scaling so the
- * slice crop never fattens a line. Decorative; the hero section carries the label.
+ * split-flap tile cluster. The cluster lives in the RIGHT portion of the
+ * composition so it never collides with the copy column on wide viewports; the
+ * hero anchors the crop right on mobile (see .home-hero-gfx) so the cluster
+ * stays in frame there too. Pure SVG, themed via CSS vars (.ds-* in
+ * terminal.css); the split-flap tiles stay dark by design. All strokes are
+ * non-scaling so the slice crop never fattens a line. Decorative; the hero
+ * section carries the label.
  */
 export function DataScapeGraphic() {
   const verticals = [200, 400, 600, 800, 1000];
@@ -14,7 +17,7 @@ export function DataScapeGraphic() {
     <svg
       className="home-hero-gfx"
       viewBox="0 0 1200 240"
-      preserveAspectRatio="xMidYMid slice"
+      preserveAspectRatio="xMaxYMid slice"
       aria-hidden="true"
     >
       {/* faint board grid */}
@@ -51,12 +54,12 @@ export function DataScapeGraphic() {
 
       {/* gate markers */}
       <g className="ds-gate">
-        <text x="622" y="52">YYZ 22:04 GATE D8</text>
-        <text x="932" y="228">MCO 01:12 ON TIME</text>
+        <text x="760" y="60">YYZ 22:04 GATE D8</text>
+        <text x="946" y="228">MCO 01:12 ON TIME</text>
       </g>
 
-      {/* the split-flap cluster, centred: Y Y Z 2 2 0 4 (dark by design) */}
-      <g transform="translate(600,120)">
+      {/* the split-flap cluster in the right portion: Y Y Z 2 2 0 4 (dark by design) */}
+      <g transform="translate(885,132)">
         <g transform="translate(-138,-22)">
           <g>
             {[0, 34, 68, 110, 144, 178, 212, 246].map((x) => (

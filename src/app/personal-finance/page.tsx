@@ -68,13 +68,17 @@ export default function PersonalFinancePage() {
 
   // Assign each live article to its moment; unclaimed articles feed the catch-all.
   const claimed = new Set<string>();
-  const groups = MOMENTS.filter((m) => m.slugs.length > 0).map((m) => {
-    const items = m.slugs
-      .map((s) => bySlug.get(s))
-      .filter((a): a is NonNullable<typeof a> => a !== undefined);
-    items.forEach((a) => claimed.add(a.slug));
-    return { ...m, items };
-  });
+  const groups = MOMENTS.filter((m) => m.slugs.length > 0)
+    .map((m) => {
+      const items = m.slugs
+        .map((s) => bySlug.get(s))
+        .filter((a): a is NonNullable<typeof a> => a !== undefined);
+      items.forEach((a) => claimed.add(a.slug));
+      return { ...m, items };
+    })
+    // Skip any moment whose articles are not live yet; it reappears automatically
+    // when a scheduled article goes live (e.g. "New baby" before resp-cesg goes live).
+    .filter((g) => g.items.length > 0);
   const rest = articles.filter((a) => !claimed.has(a.slug));
   const catchAll = MOMENTS.find((m) => m.slugs.length === 0);
   if (catchAll && rest.length > 0) {
