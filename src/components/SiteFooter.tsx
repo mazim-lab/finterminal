@@ -24,7 +24,7 @@ export function SiteFooter() {
         <Link href="/disclosure">Disclosure</Link>
       </span>
 
-      <span className="sf-meta">© {year} FinTerminal · independent · verified data · no sponsored noise</span>
+      <span className="sf-meta">© {year} FinTerminal · verified data · dated on every number</span>
     </footer>
   );
 }

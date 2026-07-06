@@ -48,7 +48,7 @@ export function ReturnChart({ points }: { points: HistoryPoint[] }) {
       <line x1={padL} x2={W - padR} y1={zeroY} y2={zeroY} stroke="var(--line-strong)" strokeWidth="1" />
 
       <path d={area} fill="url(#rc-fill)" />
-      <path d={line} fill="none" stroke="var(--emerald)" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" style={{ filter: "drop-shadow(0 0 5px rgba(70,179,108,.4))" }} />
+      <path d={line} fill="none" stroke="var(--emerald)" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
 
       {points.map((p, i) => (
         <circle key={i} cx={x(i)} cy={y(p.returnPct)} r="2.6" fill="var(--paper)" stroke="var(--emerald)" strokeWidth="1.5" />

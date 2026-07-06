@@ -22,8 +22,8 @@ export function HomeHero({ variant }: { variant: "photo" | "graphic" }) {
         <div className="hh-kick">FINTERMINAL · CANADA</div>
         <div className="hh-title">The terminal for Canadian money.</div>
         <div className="hh-sub">
-          Compare cards on real value, maximize travel points, and track a live portfolio. Independent, verified,
-          no sponsored noise.
+          Compare cards on real value, maximize travel points, and track a live portfolio. Verified data, dated so
+          you can see when I last checked it.
         </div>
       </div>
     </section>

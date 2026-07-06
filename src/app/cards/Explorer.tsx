@@ -161,11 +161,11 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
               <thead>
                 <tr>
                   {COLUMNS.map((col) => (
-                    <th key={col.key} className={col.right ? 'r' : ''} onClick={() => onSort(col.key)}>
+                    <th key={col.key} className={`${col.right ? 'r' : ''}${col.key === 'cpp' ? ' col-cpp' : ''}`} onClick={() => onSort(col.key)}>
                       {col.label}{sortKey === col.key && <span className="ar"> {arrow}</span>}
                     </th>
                   ))}
-                  <th className="r">Value index</th>
+                  <th className="r col-vindex">Value index</th>
                 </tr>
               </thead>
               <tbody>
@@ -185,9 +185,9 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
                       </td>
                       <td className={`r mono${c.annual_fee > 0 ? ' negv' : ''}`}>{formatCurrency(c.annual_fee, c.country)}</td>
                       <td className="r mono">{c.welcome_bonus_points ? c.welcome_bonus_points.toLocaleString() : (c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country) : '—')}</td>
-                      <td className="r mono">{cppFor(c).toFixed(2)}</td>
+                      <td className="r mono col-cpp">{cppFor(c).toFixed(2)}</td>
                       <td className={`r mono big ${c.first_year_value < 0 ? 'negv' : 'pos'}`}>{formatCurrency(c.first_year_value, c.country)}</td>
-                      <td className="r"><span className="vbar" style={{ '--w': `${Math.max(0, (c.first_year_value / maxValue) * 100)}%` } as CSSProperties} /></td>
+                      <td className="r col-vindex"><span className="vbar" style={{ '--w': `${Math.max(0, (c.first_year_value / maxValue) * 100)}%` } as CSSProperties} /></td>
                     </tr>
                   );
                 })}
