@@ -36,16 +36,17 @@
   /* Containment (spec 3.3) — prose reads at 680, data frames at 1200, wide at 1360. */
   --w-read:680px; --w-data:1200px; --w-wide:1360px;
 }
-/* Light ("Day board") — a re-derived sibling, not an override file. Warm cream
-   paper, charcoal ink, darkened accents so small bold text passes AA. Split-flap
-   tiles stay hardcoded dark in both themes (a departure board reads dark in any
-   light), and there are no glows to strip because glows no longer exist. */
+/* Light ("Day board") — a re-derived sibling, not an override file. Bright white
+   paper, panels held apart by clean cool-neutral lines and a whisper-green panel-2
+   fill (no cream cast), charcoal ink, darkened accents so small bold text passes AA.
+   Split-flap tiles stay hardcoded dark in both themes (a departure board reads dark
+   in any light), and there are no glows to strip because glows no longer exist. */
 html.light{
-  --paper:#F4F1E8; --panel:#FCFAF3; --panel-2:#EAE6D9; --line:#DCD7C8; --line-strong:#2F6B47;
-  --ink:#20261F; --ink-soft:#4F5A51; --ink-dim:#5C665C;
-  --emerald:#1F6B3D; --emerald-d:#17552F; --emerald-tint:#E3F1E8;
-  --red:#A8271F;
-  --gold:#7A5C14; --gold-tint:#F3ECD8;
+  --paper:#FFFFFF; --panel:#FFFFFF; --panel-2:#F1F5F2; --line:#E2E8E3; --line-strong:#2F6B47;
+  --ink:#141A16; --ink-soft:#495049; --ink-dim:#59635A;
+  --emerald:#1B6A3B; --emerald-d:#155830; --emerald-tint:#E4F3EA;
+  --red:#B02016;
+  --gold:#7A5C14; --gold-tint:#F4EED9;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;font-size:var(--t-ui);overflow-x:hidden}
