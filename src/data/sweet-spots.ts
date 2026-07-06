@@ -45,6 +45,46 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "westjet-companion-voucher-premium-europe-499",
+    program: "WestJet",
+    title: "WestJet sweet spot: fly a companion to Europe in Premium for a fixed $499",
+    dek: "WestJet points are a flat cent each with no award chart, so the real sweet spot for Canadians is the RBC World Elite companion voucher, which caps a second Premium base fare to Europe at $499.",
+    read: "5 min read",
+    date: "Jul 2026",
+    body:
+      "WestJet Rewards works differently from the mileage programs, and it helps to say so up front. WestJet points are worth a flat cent each, 100 points knocks $1 off the base fare, surcharges, bags, and seats, and you can apply any number of points to any available fare with no award chart and no blackout dates. That is refreshingly simple, but it also means there is no hidden business class deal buried in the points the way there is with Aeroplan or Avios. The real WestJet sweet spot for Canadians lives in the annual companion voucher that comes with the WestJet RBC World Elite Mastercard. The figures below are an example of how the voucher works, not a quote for any date, so always confirm the live fare when you book.\n\nHere is how it works. You get a round-trip companion voucher after your first purchase on the card and then one more each year. Your travel partner books the exact same itinerary as you and pays a fixed base fare instead of the going rate. Within Canada and the continental US that fixed fare is $119 in economy or $219 in Premium. To the rest of the WestJet network, which is where Europe and the Calgary to Tokyo route live, it is $399 in economy or $499 in Premium. Your companion still owes the taxes and fees, and you still pay your own fare in full, but that second base fare is capped no matter how expensive the route gets.\n\nHere is the value math on a realistic booking. WestJet flies its Boeing 787 Dreamliners from Calgary to Europe, with London, Rome, Paris, Dublin, and Barcelona among the destinations, plus the long Calgary to Tokyo run. Say a summer Premium round trip from Calgary to London prices around $2,600 all in, of which roughly $2,000 is the base fare the voucher discounts and the rest is taxes and fees. Your companion pays the fixed $499 base fare plus those same taxes and fees, so about $1,100 instead of $2,600. That is roughly $1,500 off the second seat, on a card whose annual fee is $139. Confirm the live fare when you book, because prices move and the example is only there to show the shape of the deal.\n\nOne honest thing about the cabin. WestJet Premium on the 787 is a premium economy cabin, a wide recliner in a 2-3-2 layout with a proper leg rest and extra legroom, not a lie-flat business seat. It is a genuine and comfortable step up for a long overnight to Europe, but do not walk on expecting an Aeroplan-style flat bed. The voucher is also not valid on WestJet's Business or BusinessFlex fares, nor on Member Exclusive fares, so the lie-flat cabin is simply off the table for this trick.\n\nA few more caveats worth knowing. You need two people traveling together on the same booking, and the companion still pays the taxes and fees, which on a transatlantic run can be a few hundred dollars. The card's annual fee is $139, and starting November 5 2026 you will need to put $5,000 on the card each year to earn the voucher, though vouchers issued before that date carry no minimum spend. Premium seats on the 787 are limited and summer sells out early, so book ahead and stay flexible. And remember the points themselves are worth a flat cent, handy for shaving cash off any WestJet fare with no blackouts, just not the place to hunt for outsized premium value.",
+    href: "/cards?q=westjet",
+    hrefLabel: "WestJet RBC cards",
+    shortAnswer:
+      "WestJet Rewards points are a flat cent each with no award chart, so the real WestJet sweet spot for Canadians is the annual companion voucher on the RBC World Elite Mastercard. It caps your travel partner's base fare at a fixed $499 in Premium to the rest of the network, which includes WestJet's 787 Dreamliner routes to Europe and Tokyo. On a summer Premium round trip from Calgary to London that might sell for around $2,600 all in, the companion pays the fixed $499 base fare plus the same taxes and fees, roughly $1,100 instead of $2,600, which is about $1,500 off the second seat on a card whose annual fee is $139. Just know that Premium is a premium economy recliner rather than lie-flat business, and confirm the live fare when you book.",
+    faqs: [
+      {
+        q: "How much does a companion pay to Europe with the WestJet voucher?",
+        a: "In Premium to the rest of the WestJet network, which includes Europe, the companion's base fare is capped at a fixed $499 plus the usual taxes and fees. In economy to that same rest of network it is $399, and within Canada and the continental US it drops to $119 in economy or $219 in Premium. You still pay your own fare in full.",
+      },
+      {
+        q: "Is the WestJet companion voucher a good value?",
+        a: "It can be. On a summer Premium round trip from Calgary to London that might sell for around $2,600 all in, the companion pays the fixed $499 base fare plus the same taxes and fees, so about $1,100 instead of $2,600. That is roughly $1,500 off the second seat, on a card whose annual fee is $139. Confirm the live fare when you book, because prices move.",
+      },
+      {
+        q: "Is WestJet Premium on the 787 a lie-flat business seat?",
+        a: "No. WestJet Premium on the Boeing 787 Dreamliner is a premium economy cabin, a wide recliner in a 2-3-2 layout with a leg rest and extra legroom, not a lie-flat bed. The voucher is also not valid on WestJet's Business, BusinessFlex, or Member Exclusive fares, so the lie-flat cabin is off the table for this trick.",
+      },
+      {
+        q: "How do I earn the WestJet companion voucher?",
+        a: "It comes with the WestJet RBC World Elite Mastercard, once after your first purchase and then one more each year. The card's annual fee is $139, and starting November 5 2026 you will need to spend $5,000 on the card each year to earn the voucher, though vouchers issued before that date carry no minimum spend.",
+      },
+      {
+        q: "Are WestJet points worth using for premium cabins?",
+        a: "Not for outsized value. WestJet points are worth a flat cent each, 100 points to $1 off, and apply to any fare with no award chart and no blackouts, so they are handy for shaving cash off a WestJet ticket but not a hidden business class deal. For premium value, the companion voucher is where to look.",
+      },
+      {
+        q: "What are the catches with the companion voucher?",
+        a: "You need two people traveling together on the same booking, and the companion still owes the taxes and fees, which on a transatlantic trip can be a few hundred dollars. Premium seats on the 787 are limited and summer sells out early, so book ahead and stay flexible, and confirm the live fare before you assume the savings.",
+      },
+    ],
+  },
+  {
     slug: "avios-toronto-to-dublin-aer-lingus-50k",
     program: "Avios",
     title: "Avios sweet spot: Toronto to Dublin on Aer Lingus from about 13,000 points",
