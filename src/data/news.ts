@@ -29,6 +29,20 @@ export interface NewsItem {
 // archive: never delete or rewrite existing items, only prepend new ones.
 export const NEWS: NewsItem[] = [
   {
+    time: "09:00",
+    slug: "scene-plus-members-day-july-7-grocery-discount-or-points",
+    headline: "Scene+ Members Day lands today with a choice of up to 15 percent off groceries or bonus points",
+    dek: "A one-day Scene+ Members Day at Sobeys and its Empire grocery banners lets you take 10 or 15 percent off, depending on your province, or earn 200 points per $20 on a $50-plus shop, so plan a bigger grocery run for today.",
+    body:
+      "If you were going to do a grocery run this week, today is the day to do it. Scene+ is running one of its members-only days at Sobeys and the rest of the Empire family of stores, which includes Safeway, IGA, FreshCo, Foodland, and Thrifty Foods, and you get to pick the reward that suits you. The first option is a straight discount at the till, either 10 or 15 percent depending on your province, and the second is 200 Scene+ points for every $20 you spend. Both need a minimum $50 basket to kick in. For most people the discount is the better deal, since 200 points per $20 works out to roughly a 10 percent return and only ties the discount on tidy round totals, but the points route can make sense if you are chasing a particular redemption. If you carry a Scene+ credit card, put the shop on it to stack the everyday earn on top, and keep in mind this is a one-day thing, so it rewards a planned bigger trip rather than a quick pick-up.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jul 7, 2026",
+    sourceLabel: "Scene+",
+    href: "/cards?q=scene",
+    hrefLabel: "Compare Scene+ cards",
+  },
+  {
     time: "13:00",
     slug: "scotiabank-scene-plus-refresh-platinum-amex-100k",
     headline: "Scotiabank refreshes its Scene+ welcome offers, with an all-time-high 100,000 points on the Platinum Amex",
