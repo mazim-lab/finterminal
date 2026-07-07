@@ -45,6 +45,46 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "delta-flash-sale-europe-economy-26k",
+    program: "Delta",
+    title: "Delta sweet spot: round-trip economy to Europe near 26,000 SkyMiles in the flash sales",
+    dek: "Delta SkyMiles has no award chart and prices dynamically, so the real Delta sweet spot is the recurring transatlantic flash sale, where round-trip economy to Europe has dropped near 26,000 SkyMiles, sometimes lower.",
+    read: "5 min read",
+    date: "Jul 2026",
+    body:
+      "Delta SkyMiles works differently from Aeroplan or Avios, and it is only fair to say so before we talk value. There is no published award chart and no fixed distance bands. SkyMiles prices awards dynamically, roughly tracking the cash fare, and across the whole program a mile is worth on average a little over a cent. That means there is no hidden business class band to memorize the way there is with Aeroplan. The genuine Delta sweet spot lives somewhere else, in the transatlantic award flash sales Delta runs several times a year. The figures below are an example drawn from past sales, not a quote for any date, so always confirm the live price when you search.\n\nHere is how the sale works. A few times a year, usually for a short window of about three days, Delta quietly discounts award seats to Europe. In the recent rounds, round-trip economy to popular cities such as Dublin, Madrid, and Marrakech has come down to around 26,000 SkyMiles, and the very best dates have dipped closer to 20,000 round trip. The catch is that the travel window is limited to a set range of off-peak dates, and the cheapest fares get picked over quickly, so you book when you see it rather than when it suits you. Delta One, Premium Select, and Comfort seats are sometimes included in the same sale, though the deepest discounts land in the main economy cabin.\n\nHere is the cents-per-mile math on a realistic economy booking. Say a round trip to Dublin would otherwise cost about $800 in cash, and the award books for 26,000 SkyMiles plus roughly $150 in taxes and fees. That works out to (800 minus 150) divided by 26000, times 100, which is about 2.5 cents per mile. Against a program that averages a little over a cent, that is your SkyMiles doing real work, and if you happen to hold an eligible Delta American Express card, the TakeOff 15 benefit knocks 15 percent off the mileage, dropping the same seat to about 22,100 miles and nudging the value closer to 2.9 cents. Confirm the live fare when you book, because prices move and the example is only there to show the shape of the deal.\n\nOne honest note on TakeOff 15. That 15 percent discount applies only to Delta-operated award flights booked on delta.com, not to partner awards on Air France, KLM, or Virgin Atlantic, and it requires an eligible Delta co-branded Amex. Most of those cards are US products that Canadians cannot easily hold, so treat the discount as a nice bonus if you have the card rather than the baseline you should count on.\n\nA word on the premium cabin, since people always ask. Delta One to Europe does show up in the summer flash sales, recently from about 115,000 SkyMiles one-way, or roughly 97,750 with the TakeOff 15 discount. On a cash fare of two to three thousand dollars one-way that is a fair use of miles, somewhere around 2 to 2.5 cents, but it is still a large pile of SkyMiles for one seat, and the value is nowhere near the outsized business class deals Aeroplan or Avios can produce. The accessible, repeatable Delta sweet spot really is economy on sale, not the lie-flat cabin.\n\nA few honest caveats to close. Earning the SkyMiles is the hard part for Canadians. Amex Canada Membership Rewards does not transfer to Delta, so the cleanest route is Marriott Bonvoy, which moves to Delta at 3 to 1 with no transfer bonus, meaning 60,000 Bonvoy points become 20,000 SkyMiles. Because the sales are dynamically priced and short-lived, there is no date you can plan around in advance, so set an alert and pounce when one lands. And if you just need a cheap short hop, Delta regularly prices short-haul domestic economy from around 5,000 miles one-way, which a cardholder's TakeOff 15 discount can pull below 4,250, a quiet everyday sweet spot that is always there when the flash sale is not.",
+    href: "/cards?q=marriott",
+    hrefLabel: "Amex Bonvoy cards",
+    shortAnswer:
+      "Delta SkyMiles has no award chart and prices dynamically, averaging a little over a cent a mile, so the real Delta sweet spot for Canadians is the recurring transatlantic flash sale, where round-trip economy to Europe such as Dublin or Madrid has dropped near 26,000 SkyMiles and the best dates closer to 20,000. On a roughly $800 round-trip cash fare booked for 26,000 SkyMiles plus about $150 in taxes and fees, that is around 2.5 cents per mile, and an eligible Delta Amex cardholder's 15 percent TakeOff 15 discount trims the seat to about 22,100 miles, closer to 2.9 cents. Earning the miles is the hard part for Canadians, since Amex Canada does not transfer to Delta and the cleanest route is Marriott Bonvoy, which moves 3 to 1 with no bonus, so 60,000 Bonvoy becomes 20,000 SkyMiles. These are example figures from past sales, not a quote for any date, so confirm the live price when you book.",
+    faqs: [
+      {
+        q: "How many SkyMiles is a round trip to Europe in the Delta flash sale?",
+        a: "In the recent transatlantic flash sales, round-trip economy to cities such as Dublin, Madrid, and Marrakech has come down to around 26,000 SkyMiles, and the very best dates have dipped closer to 20,000 round trip. Delta prices dynamically with no award chart, so confirm the live price when you search, because prices move and the travel window is limited to a set range of off-peak dates.",
+      },
+      {
+        q: "Is the Delta flash sale to Europe a good value?",
+        a: "Yes, for economy it is. On a roughly $800 round-trip cash fare booked for 26,000 SkyMiles plus about $150 in taxes and fees, the math is (800 minus 150) divided by 26000, times 100, which is about 2.5 cents per mile. Against a program that averages a little over a cent a mile, that is your SkyMiles doing real work.",
+      },
+      {
+        q: "What is TakeOff 15 and can Canadians use it?",
+        a: "TakeOff 15 knocks 15 percent off the mileage on Delta-operated award flights booked on delta.com, so a 26,000-mile seat drops to about 22,100. It applies only to Delta's own flights, not partner awards on Air France, KLM, or Virgin Atlantic, and it requires an eligible Delta co-branded Amex, most of which are US products Canadians cannot easily hold, so treat it as a bonus rather than the baseline.",
+      },
+      {
+        q: "How do Canadians earn Delta SkyMiles?",
+        a: "Earning is the hard part, because Amex Canada Membership Rewards does not transfer to Delta. The cleanest route is Marriott Bonvoy, which moves to Delta at 3 to 1 with no transfer bonus, so 60,000 Bonvoy points become 20,000 SkyMiles.",
+      },
+      {
+        q: "Is Delta One to Europe on SkyMiles a sweet spot too?",
+        a: "Not really. Delta One shows up in the summer flash sales from about 115,000 SkyMiles one-way, or roughly 97,750 with TakeOff 15, which on a two to three thousand dollar fare is a fair 2 to 2.5 cents but still a large pile of miles for one seat. The accessible, repeatable Delta sweet spot is economy on sale, not the lie-flat cabin.",
+      },
+      {
+        q: "What if I just need a cheap short flight?",
+        a: "Delta regularly prices short-haul domestic economy from around 5,000 miles one-way, which a cardholder's TakeOff 15 discount can pull below 4,250. It is a quiet everyday sweet spot that is always there when the flash sale is not.",
+      },
+    ],
+  },
+  {
     slug: "westjet-companion-voucher-premium-europe-499",
     program: "WestJet",
     title: "WestJet sweet spot: fly a companion to Europe in Premium for a fixed $499",
