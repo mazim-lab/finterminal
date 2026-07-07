@@ -29,6 +29,7 @@ export default function CardsPage() {
     network: c.network,
     categories: c.categories,
     benefits: c.benefits,
+    earn_rates: c.earn_rates.slice(0, 4),
   }));
   const networks = [...new Set(allCards.map((c) => c.network))].filter((n) => n !== 'Unknown').sort();
 

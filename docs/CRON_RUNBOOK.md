@@ -4,7 +4,7 @@ This document tells an automated agent (or a human) exactly how to refresh each
 section of the site. It is self-contained: a cloud cron agent that has cloned this
 repo should be able to follow any job below without prior context.
 
-Last verified: 2026-06-21.
+Last verified: 2026-07-07.
 
 ---
 
@@ -25,12 +25,16 @@ Last verified: 2026-06-21.
 - **Verify before publishing.** Do not write a number, bonus, fee, or deal from memory.
   Confirm it against a real source (issuer page, merchant page, brokerage snapshot).
   If you cannot confirm, mark it UNSURE and leave the stored value rather than guess.
-- **Build / dev gotchas.**
-  - OneDrive locks `.next`: run `rm -rf .next` before any `npm run build`.
-  - **Never** run `npm run build` while `npm run dev` is live (it corrupts the dev
-    server's `.next`). Validate JSON with a quick `python -c "import json; json.load(open(...))"`
-    instead of a full build when the dev server is running.
-  - After data edits, the dev server hot-reloads JSON imports automatically.
+- **Validation (no next build / next dev, ever).**
+  - **Never run `next build` or `next dev`** (nor `npm run build` / `npm run dev`). The repo
+    lives in Dropbox/OneDrive, which locks `.next` and breaks both. They are NOT a validation
+    step for any routine.
+  - Validate a data-file edit one of two ways instead: for the card JSONs, a quick JSON parse,
+    `python -c "import json; json.load(open('src/data/canadian_cards_comprehensive.json', encoding='utf-8'))"`
+    (and the US file); for the TypeScript data files (`news.ts`, `deals.ts`, `sweet-spots.ts`,
+    `cards.ts`), run `npx tsc --noEmit` and confirm it exits 0. These are the SOLE validation paths.
+  - If `npx tsc --noEmit` reports phantom `.next` type errors, delete `.next/dev` and
+    `.next/types` and retry.
 - **Cost.** Use the user's Claude Max plan, not API credits.
 
 ### Cron feasibility (important)
@@ -39,7 +43,7 @@ Last verified: 2026-06-21.
 |---|---|---|---|
 | Deals | on demand | **No — manual job (decided 2026-06-29)** | RFD now paywalls WebFetch (HTTP 402) and merchant prices need on-page checks, so claude-in-chrome plus a live interactive session are required. Run it manually with Claude, not as a cron. |
 | News | daily/weekly | **Yes** | WebSearch/WebFetch only |
-| Card data refresh | quarterly | **Partial** | Issuer pages bot-block `WebFetch`; need the residential/Playwright fetch or the real browser to (re)capture `data/raw/cards/*.md`. The *audit/extraction* over already-captured `.md` files IS cloud-friendly. |
+| Card data refresh | twice weekly (Sun + Wed) | **Partial** | Issuer pages bot-block `WebFetch`; need the residential/Playwright fetch or the real browser to (re)capture `data/raw/cards/*.md`. The *audit/extraction* over already-captured `.md` files IS cloud-friendly. Every verification run must bump `CARDS_VERIFIED` in `src/data/cards.ts`, or the homepage `VerifiedStamp` (cadenceDays=14) goes stale/red after 14 days. |
 | Portfolio | twice weekly | **No — stays manual** | Needs the user's private Wealthsimple CSVs + all-time return %. A cloud cron has no access to these. Keep manual. |
 
 ### How to ship a change (every job ends here)
@@ -125,31 +129,71 @@ own page.
 NEVER delete, reorder, or rewrite existing items** (people browse the news history). Each
 refresh only ADDS new items to the TOP. An item is eligible to add only if it was PUBLISHED
 within the last 2 days (ideally same day); verify each one's publication date. De-dupe: skip
-any story already in the array. If nothing new qualifies, ADD NOTHING and leave the feed
-unchanged (no padding, no rewriting). The only items ever removed were the stale Jun 1
-Aeroplan chart and Jan Air Transat (a one-time cleanup on 2026-06-30); do not remove anything
-else. Evergreen or structural changes belong in the guides, not the newswire. Each item's `date`
-is a full day-level date in the form `Mon D, YYYY` (e.g. `Jun 30, 2026`) = the day the story
-hit the wire; the ticker shows just the month and day. The ticker shows the 5 newest items;
-the full archive renders below with a "Load more" button.
+any story already in the array (see the dedupe key below). If nothing new qualifies, ADD
+NOTHING and leave the feed unchanged (no padding, no rewriting). Evergreen or structural
+changes belong in the guides, not the newswire. Each item's `date` is a full day-level date
+in the form `Mon D, YYYY` (e.g. `Jun 30, 2026`) = the day the story hit the wire; the ticker
+shows just the month and day. The ticker shows the 5 newest items; the full archive renders
+below with a "Load more" button.
+
+**`sourceUrl` is REQUIRED on every new item.** Set `sourceUrl` to the FIRST-PARTY official
+page for the story (the issuer, program, or airline's own announcement, newsroom post, or
+offer page), not an aggregator and not a competitor's write-up. The story page only renders
+its "Read it at the source" button when `sourceUrl` is present, so an item with only a
+`sourceLabel` and no `sourceUrl` ships a dead-end card. First-party links are a standing site
+policy; this closes the gap where several past items shipped with a label but no link.
+
+**The `time` field is decorative.** Every `NewsItem` carries a `time` in `"HH:MM"` form, but
+it is shown ONLY in the homepage ticker for texture; it is not sorted on (items are ordered by
+array position / `date`) and does not need to reflect the real publish time. Set it to a
+plausible morning time (e.g. `"08:30"`) and move on. Do not invent inconsistent values or try
+to make it precise.
+
+**The Jun 30 one-time cleanup is DONE (history only).** The stale Jun 1 Aeroplan chart and the
+Jan Air Transat item were removed once, on 2026-06-30. That cleanup is already complete and is
+noted here only as history, so do NOT re-attempt it or hunt for those items. The archive is
+otherwise never pruned.
 
 **Steps:**
 1. Read the EXISTING `NEWS` array first. Via WebSearch, find **Canada-first** items PUBLISHED
-   in the last 2 days (cards/points/travel/personal finance) that are NOT already present, and
-   PREPEND them while keeping every existing item.
+   in the last 2 days (cards/points/travel/personal finance) that are NOT already present (see
+   the dedupe key below), and PREPEND them while keeping every existing item.
 2. For each, set `exclusive: [...]` (crediting PoT/OMAAT/DoC by name) **only** if the
    story is genuinely exclusive to that outlet. Otherwise write it as our own reporting
    with `sourceLabel` = the issuer/airline.
-3. Keep the typewriter ticker fed from the same array.
-4. House voice. Commit & push.
+3. **Set `sourceUrl` on every new item** to the first-party official page (issuer/program/
+   newsroom/offer page). No `sourceUrl` means no "Read it at the source" button, so this is
+   required, not optional. Set `time` to a plausible morning `"HH:MM"` (decorative only).
+4. Keep the typewriter ticker fed from the same array.
+5. House voice. Commit & push.
+
+**Dedupe key.** Before adding a candidate, skip it if EITHER its normalized headline
+(lowercased, trimmed, punctuation collapsed) OR its `sourceUrl` already appears on any item in
+the array. That catches near-duplicate re-reports of a story we already carry.
+
+**Developing story / follow-up rule.** When a story we already published MATERIALLY changes
+(an offer gets extended, a surcharge changes again, a bonus is pulled), do NOT rewrite or edit
+the old item (the archive is append-only). Instead PREPEND a NEW item that explicitly points
+back to the earlier one, e.g. opening with "Following up on our June 26 note ...". The new item
+gets its own fresh `date` and its own first-party `sourceUrl`. This is a normal, expected
+pattern: the WestJet companion-voucher fuel-surcharge item is itself a follow-up to an earlier
+April change. A genuine follow-up is NOT a dedupe hit; it is a new development on the same
+thread, so the dedupe key (new headline, new source URL) will correctly let it through.
 
 ---
 
-## 3. CARD DATA REFRESH — quarterly-ish
+## 3. CARD DATA REFRESH — twice weekly (Sun + Wed)
 
 Two data files: `src/data/canadian_cards_comprehensive.json` (CA, 131 cards) and
 `src/data/us_cards_comprehensive.json` (US, 63 cards). Normalization + display logic is
 in `src/data/cards.ts`; point valuations in `src/data/point-valuations.ts`.
+
+**Runs Sun + Wed, and MUST bump `CARDS_VERIFIED`.** This is a twice-weekly verification
+routine, not a quarterly one. The homepage proof strip renders a public "cards re-verified"
+stamp via `<VerifiedStamp date={CARDS_VERIFIED} cadenceDays={14} ...>` with copy that reads
+"on the twice-weekly playbook". After 14 days that stamp goes stale (renders red), so every
+verification run MUST bump `CARDS_VERIFIED` in `src/data/cards.ts` to the run date, even when
+no card values changed. The stamp is a promise to readers that the data was checked recently.
 
 **Golden source per card (use these, NOT the raw scraper dicts):**
 - **CA cards:** `data/raw/cards/<slug>.md` — real issuer pages (markitdown; image-heavy,

@@ -20,6 +20,9 @@ export const TAGS: Tag[] = [
   { slug: "aeroplan", label: "Aeroplan", description: "Air Canada's Aeroplan program: where the points shine and how to get them there." },
   { slug: "avios", label: "Avios", description: "The Avios currency behind British Airways, Qatar, and friends, and how Canadians reach it." },
   { slug: "aadvantage", label: "AAdvantage", description: "American Airlines miles, the partner sweet spots, and how to feed them from Canada." },
+  { slug: "delta", label: "Delta SkyMiles", description: "Delta SkyMiles for Canadians, where the dynamic pricing hides real value and how to feed a balance from here." },
+  { slug: "westjet", label: "WestJet Rewards", description: "WestJet points and the RBC companion voucher, and how Canadians squeeze value out of both." },
+  { slug: "scene-plus", label: "Scene+", description: "Scotiabank and Empire's Scene+ program: earning at the grocery till and cashing points out at par." },
   { slug: "amex", label: "Amex / Membership Rewards", description: "Amex Membership Rewards, the transfer partners, and the cards that earn them." },
   { slug: "rbc-avion", label: "RBC Avion", description: "RBC's Avion points, one of the few Canadian currencies that actually transfers to airlines." },
   { slug: "transfers", label: "Points transfers", description: "Which Canadian points move to airlines and hotels, at what ratio, and when to pull the trigger." },
@@ -314,8 +317,36 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "aeroplan", "points", "award-booking", "business-class", "alliances"],
   },
+  {
+    path: "/travel/sweet-spots/delta-flash-sale-europe-economy-26k",
+    title: "Delta sweet spot: round-trip economy to Europe near 26,000 SkyMiles in the flash sales",
+    dek: "Delta SkyMiles has no award chart and prices dynamically, so the real Delta sweet spot is the recurring transatlantic flash sale, where round-trip economy to Europe has dropped near 26,000 SkyMiles, sometimes lower.",
+    section: "Sweet spot",
+    tags: ["travel", "delta", "points", "award-booking", "transfers"],
+  },
+  {
+    path: "/travel/sweet-spots/westjet-companion-voucher-premium-europe-499",
+    title: "WestJet sweet spot: fly a companion to Europe in Premium for a fixed $499",
+    dek: "WestJet points are a flat cent each with no award chart, so the real sweet spot for Canadians is the RBC World Elite companion voucher, which caps a second Premium base fare to Europe at $499.",
+    section: "Sweet spot",
+    tags: ["travel", "westjet", "points", "travel-cards", "cards"],
+  },
 
   // News items
+  {
+    path: "/news/scene-plus-members-day-july-7-grocery-discount-or-points",
+    title: "Scene+ Members Day lands today with a choice of up to 15 percent off groceries or bonus points",
+    dek: "A one-day Scene+ Members Day at Sobeys and its Empire grocery banners lets you take 10 or 15 percent off, depending on your province, or earn 200 points per $20 on a $50-plus shop, so plan a bigger grocery run for today.",
+    section: "News",
+    tags: ["news", "scene-plus", "points"],
+  },
+  {
+    path: "/news/scotiabank-scene-plus-refresh-platinum-amex-100k",
+    title: "Scotiabank refreshes its Scene+ welcome offers, with an all-time-high 100,000 points on the Platinum Amex",
+    dek: "A new round of Scene+ card offers that opened July 2 headlines with up to 100,000 Scene+ points on the Platinum Amex, the richest bonus that card has ever carried, plus a bumped 50,000 on the Gold Amex.",
+    section: "News",
+    tags: ["news", "scene-plus", "cards", "welcome-bonuses"],
+  },
   {
     path: "/news/aeroplan-club-avolta-airport-shopping-partnership",
     title: "Aeroplan ties up with Club Avolta so you can earn points shopping and dining at the airport",

@@ -6,6 +6,7 @@ import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
 import { ArticleHero } from "@/components/ArticleHero";
 import { RouteArcsMotif } from "@/components/heroes/motifs";
+import { VerifiedStamp } from "@/components/VerifiedStamp";
 
 // All sweet-spot posts are known at build time from the committed list.
 export function generateStaticParams() {
@@ -82,6 +83,12 @@ export default async function SweetSpotPage({ params }: { params: Promise<{ slug
             <span>{spot.program}</span><span className="sep">·</span>
             <span>{spot.read}</span><span className="sep">·</span>
             <span>{spot.date}</span>
+            {spot.lastChecked ? (
+              <>
+                <span className="sep">·</span>
+                <VerifiedStamp date={spot.lastChecked} cadenceDays={30} verb="CHECKED" />
+              </>
+            ) : null}
           </div>
           <ArticleTags path={`/travel/sweet-spots/${spot.slug}`} />
 
