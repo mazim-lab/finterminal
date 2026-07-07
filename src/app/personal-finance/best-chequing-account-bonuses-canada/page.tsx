@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { VerifiedStamp } from "@/components/VerifiedStamp";
 
 export const metadata = {
   title: "Best chequing account welcome bonuses in Canada | FinTerminal",
@@ -93,7 +94,8 @@ export default function BestChequingBonusesPage() {
           <div className="docmeta">
             <span className="gd">PERSONAL FINANCE</span><span className="sep">·</span>
             <span>about 9 min read</span><span className="sep">·</span>
-            <span>Offers as of July 2026; general info, not advice</span>
+            <span>Offers as of July 2026; general info, not advice</span><span className="sep">·</span>
+            <VerifiedStamp date="2026-07-02" cadenceDays={30} />
           </div>
           <ArticleTags path="/personal-finance/best-chequing-account-bonuses-canada" />
 

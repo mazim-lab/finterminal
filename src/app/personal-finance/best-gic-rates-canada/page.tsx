@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { GrowthMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { VerifiedStamp } from "@/components/VerifiedStamp";
 
 export const metadata = {
   title: "Best GIC rates in Canada | FinTerminal",
@@ -94,7 +95,8 @@ export default function BestGicRatesPage() {
           <div className="docmeta">
             <span className="gd">PERSONAL FINANCE</span><span className="sep">·</span>
             <span>about 10 min read</span><span className="sep">·</span>
-            <span>Rates as of July 2026; general info, not advice</span>
+            <span>Rates as of July 2026; general info, not advice</span><span className="sep">·</span>
+            <VerifiedStamp date="2026-07-02" cadenceDays={30} />
           </div>
           <ArticleTags path="/personal-finance/best-gic-rates-canada" />
 
