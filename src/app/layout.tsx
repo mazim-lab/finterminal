@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.finterminal.ca"),
   title: "FinTerminal | Cards, Points & Personal Finance for Canadians",
   description: `The terminal for Canadian money: compare ${allCards.length}+ credit cards, maximize travel points, and track a real portfolio with verified, dated data.`,
+  manifest: "/manifest.webmanifest",
+  icons: {
+    apple: [{ url: "/icons/apple-icon-180.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "FinTerminal",
     description: "The terminal for Canadian money: cards, points, personal finance and a live portfolio.",
