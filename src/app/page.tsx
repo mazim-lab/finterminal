@@ -8,6 +8,7 @@ import { DEALS, dealsTodayISO, isDealExpired } from "@/data/deals";
 import { HomeHero } from "@/components/HomeHero";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { GrowthMotif, MOTIFS, type MotifKey } from "@/components/heroes/motifs";
+import { FreshDot } from "@/components/FreshDot";
 
 // Re-check hourly so the featured guide and RESP row flip live on their
 // publishAt dates without a redeploy (see isPFPublished).
@@ -20,14 +21,17 @@ const topCard = getTopCardsByValue(1, "CA")[0];
 const bestValue = topCard ? formatCurrency(topCard.first_year_value, "CA") : "";
 const bestCardHref = topCard ? `/cards?q=${encodeURIComponent(topCard.name)}` : "/cards";
 
-// Portfolio: N positions and the worst performer, in percent terms only. Never a
+// Portfolio: N positions and the BEST performer, in percent terms only. Never a
 // dollar figure. The standing privacy rule holds everywhere.
 const rated = POSITIONS.filter((p) => typeof p.returnPct === "number");
-const worst = rated.reduce<(typeof POSITIONS)[number] | null>(
-  (lo, p) => (lo === null || (p.returnPct as number) < (lo.returnPct as number) ? p : lo),
+const best = rated.reduce<(typeof POSITIONS)[number] | null>(
+  (hi, p) => (hi === null || (p.returnPct as number) > (hi.returnPct as number) ? p : hi),
   null,
 );
-const worstPct = worst && typeof worst.returnPct === "number" ? `${worst.returnPct.toFixed(1)}%` : "";
+const bestPct =
+  best && typeof best.returnPct === "number"
+    ? `${best.returnPct >= 0 ? "+" : ""}${best.returnPct.toFixed(1)}%`
+    : "";
 
 // RESP row: link the RESP guide once it is live, else the Money index (spec 3.5).
 const RESP_SLUG = "resp-cesg-grant-canada";
@@ -205,6 +209,7 @@ export default function Home() {
                   {featured.read} <span className="sep">·</span> {featured.tag}{" "}
                   <span className="sep">·</span>{" "}
                   <VerifiedStamp date={`${featured.date}`} cadenceDays={120} />
+                  <FreshDot date={featured.date} />
                 </p>
               </div>
             </div>
@@ -229,7 +234,7 @@ export default function Home() {
             <Link className="proof-item" href="/portfolio">
               <span className="pl">My portfolio</span>
               <span className="pv">
-                {POSITIONS.length} positions <span className="worst">worst {worstPct}</span>
+                {POSITIONS.length} positions <span className="best">best {bestPct}</span>
               </span>
               <span className="pd">percent terms only, losses shown</span>
             </Link>
@@ -250,7 +255,7 @@ export default function Home() {
               </div>
               {wireNews.map((n) => (
                 <Link key={n.slug} className="wireitem" href={`/news/${n.slug}`}>
-                  <span className="ts">{shortDate(n.date)}</span>
+                  <span className="ts">{shortDate(n.date)}<FreshDot date={n.date} /></span>
                   <h4>{n.headline}</h4>
                   <p className="wd">{n.dek}</p>
                 </Link>
@@ -263,7 +268,7 @@ export default function Home() {
               </div>
               {wireDeals.map((d) => (
                 <a key={d.url} className="wireitem" href={d.url} target="_blank" rel="noopener noreferrer">
-                  <span className="ts">{d.expires ? d.expires.toUpperCase() : shortDate(d.posted)}</span>
+                  <span className="ts">{d.expires ? d.expires.toUpperCase() : shortDate(d.posted)}<FreshDot date={d.posted} /></span>
                   <h4>{d.title}</h4>
                   <p className="wd">{d.price ? `${d.price} at ${d.merchant}` : d.merchant}</p>
                 </a>

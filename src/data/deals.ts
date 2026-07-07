@@ -25,6 +25,38 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "Dyson V15 Detect cordless stick vacuum, refurbished",
+    merchant: "Walmart",
+    url: "https://www.walmart.ca/en/ip/Dyson-Official-Outlet-V15-Detect-Cordless-Stick-Vacuum-Cleaner-Refurbished-Colour-may-vary/2O3EG212IDV7",
+    price: "$499.99",
+    was: "$799.99",
+    blurb:
+      "The V15 Detect is the Dyson a lot of people quietly want and never quite justify at full price, so a certified refurbished one at $499.99 down from $799.99 is the moment to look. It is Dyson's flagship cordless: strong suction, the laser head that lights up the fine dust you did not know was on the floor, and a runtime that gets a whole house done on one charge. It ships from Dyson's own official outlet through Walmart, so it is not some random reseller. One honest note so you buy clear eyed: refurbished means it was returned and reconditioned, the colour may vary, and these are final sale with no returns, only warranty service. If a scuff or a mystery colour would bug you, pay more for new. If you just want a Dyson that works, this is a real chunk off.",
+    category: "Home",
+    posted: "Jul 7, 2026",
+  },
+  {
+    title: "Hisense 3.3 cu ft compact fridge",
+    merchant: "Costco",
+    url: "https://www.costco.ca/hisense-19-in.-3.3-cu-ft.-world-cup-canada-refrigerator.product.4201000053.html",
+    price: "$99.97",
+    was: "$149.99",
+    blurb:
+      "If you have been meaning to put a small fridge in the garage, the basement, a dorm, or a kid's rec room, Costco has a Hisense 3.3 cubic foot compact one down to $99.97 from the $149.99 to $169.99 it sold at before. It is Energy Star rated, has a little 2L beverage shelf and adjustable legs, and at a hundred bucks it is about as cheap as a name brand mini fridge gets. Two honest notes before you grab one. This is a Costco Last Chance clearance, which means there is no set end date and once the stock is gone it just disappears, so do not sit on it. And it is a genuinely small 3.3 cubic foot fridge, a spare or a bar fridge, not something to feed a family, and it happens to wear a World Cup Canada design with a trophy sticker in the box if that is your thing.",
+    category: "Appliances",
+    posted: "Jul 7, 2026",
+  },
+  {
+    title: "RYOBI ONE+ 18V 1-gallon electric sprayer (tool only)",
+    merchant: "Princess Auto",
+    url: "https://www.princessauto.com/en/product/1-gallon-18v-electric-sprayer-tool-only/PA0009626011/9626011",
+    price: "$24.99",
+    blurb:
+      "This is a niche one, but a good price if it fits your life: Princess Auto has the RYOBI ONE+ 18V one-gallon electric sprayer, tool only, for $24.99 on surplus. If you already own RYOBI 18V batteries it turns into a genuinely handy thing, misting the garden, spraying down the deck, applying a water based cleaner or disinfectant, all cordless and one handed instead of pumping a manual sprayer. This same tool runs a fair bit more through the regular tool channels, so twenty five dollars is the draw. Two honest notes so nobody buys wrong. It is tool only, no battery or charger, so it only makes sense if you are already in the RYOBI 18V world. And it is meant for thin water based liquids, not paint or thick weed killers that will clog it. Stock is low and it is a surplus buy, so it will not last.",
+    category: "Tools",
+    posted: "Jul 7, 2026",
+  },
+  {
     title: "ASICS Gel-Kayano 32 running shoes",
     merchant: "Altitude Sports",
     url: "https://www.altitude-sports.com/p/asics-gelkayano-32-running-shoes-mens-acs-1011c052",

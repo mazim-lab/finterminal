@@ -21,10 +21,12 @@ export default function PortfolioPage() {
   // Until the first snapshot, show positions in a stable, readable order.
   const rows = SNAPSHOT_PENDING ? POSITIONS : (ranked.length ? ranked : POSITIONS);
 
-  // Worst open holding, in percent terms only (standing privacy rule), so the
-  // page carries the same losses-shown honesty as the homepage proof strip.
-  const worst = withNums.reduce<(typeof POSITIONS)[number] | null>(
-    (lo, p) => (lo === null || (p.returnPct as number) < (lo.returnPct as number) ? p : lo),
+  // Best open holding, in percent terms only (standing privacy rule). The four
+  // stat boxes above keep the balanced highest-profit / highest-loss pair, and the
+  // table still shows losses plainly in red, so the page keeps its honesty; this
+  // spotlight banner just points at the current winner.
+  const best = withNums.reduce<(typeof POSITIONS)[number] | null>(
+    (hi, p) => (hi === null || (p.returnPct as number) > (hi.returnPct as number) ? p : hi),
     null,
   );
 
@@ -82,12 +84,12 @@ export default function PortfolioPage() {
 
         <details className="coll" open>
           <summary className="cd-sec">Current Positions</summary>
-          {worst && typeof worst.returnPct === "number" && (
-            <div className="worst-moment">
-              <span className="wm-l">Worst holding right now</span>
-              <span className="wm-v negv">{pct(worst.returnPct)}</span>
-              <span className="wm-d">{worst.ticker} · {worst.name}</span>
-              <span className="wm-t">{worst.thesis}</span>
+          {best && typeof best.returnPct === "number" && (
+            <div className="best-moment">
+              <span className="wm-l">Best holding right now</span>
+              <span className="wm-v pos">{pct(best.returnPct)}</span>
+              <span className="wm-d">{best.ticker} · {best.name}</span>
+              <span className="wm-t">{best.thesis}</span>
             </div>
           )}
           <div className="tablewrap">
