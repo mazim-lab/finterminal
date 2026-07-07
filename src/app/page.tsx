@@ -4,7 +4,7 @@ import { getTopCardsByValue, formatCurrency, CARDS_VERIFIED } from "@/data/cards
 import { POSITIONS } from "@/data/portfolio";
 import { livePFArticles, isPFPublished, PF_ARTICLES } from "@/data/personal-finance";
 import { NEWS } from "@/data/news";
-import { DEALS } from "@/data/deals";
+import { DEALS, dealsTodayISO, isDealExpired } from "@/data/deals";
 import { HomeHero } from "@/components/HomeHero";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { GrowthMotif, MOTIFS, type MotifKey } from "@/components/heroes/motifs";
@@ -136,8 +136,11 @@ const DEPARTURES: Departure[] = [
 // ── The wire: newest news + deals (spec 3.5) ────────────────────────────────
 
 const wireNews = NEWS.slice(0, 4);
-// Newest deals first, by posted date.
+// Newest live deals first, by posted date. Expired deals are filtered out
+// (same expiry logic as the Deals page) so the wire never surfaces a dead offer.
+const today = dealsTodayISO();
 const wireDeals = [...DEALS]
+  .filter((d) => !isDealExpired(d, today))
   .sort((a, b) => new Date(b.posted).getTime() - new Date(a.posted).getTime())
   .slice(0, 4);
 

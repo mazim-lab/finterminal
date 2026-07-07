@@ -5,7 +5,7 @@ import type { CSSProperties } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { Benefits } from '@/data/cards';
 import { CARDS_VERIFIED } from '@/data/cards';
-import { formatCurrency, receiptLines, type SlimCard } from '@/data/card-view';
+import { formatCurrency, receiptLines, earnLines, type SlimCard } from '@/data/card-view';
 import { valuationFor } from '@/data/point-valuations';
 import { VerifiedStamp } from '@/components/VerifiedStamp';
 
@@ -216,6 +216,7 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
                   const tags = tagsFor(c);
                   const isOpen = openReceipt === c.slug;
                   const lines = isOpen ? receiptLines(c) : [];
+                  const earn = isOpen ? earnLines(c) : [];
                   return (
                     <Fragment key={c.slug}>
                     <tr className={`cardrow${isOpen ? ' rcpt-open' : ''}`}>
@@ -264,6 +265,22 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
                               <span className="dots" />
                               <span className={`amt${c.first_year_value < 0 ? ' neg' : ''}`}>{formatCurrency(c.first_year_value, c.country)}</span>
                             </div>
+                            {earn.length > 0 && (
+                              <div className="rl-earn" style={{ borderTop: '1px solid var(--line)', marginTop: '8px', paddingTop: '8px' }}>
+                                <div className="rl" style={{ color: 'var(--ink-dim)' }}>
+                                  <span className="lab">earn on your spend</span>
+                                  <span className="dots" />
+                                  <span className="note">rates only, not in the total above</span>
+                                </div>
+                                {earn.map((e, i) => (
+                                  <div className="rl" key={i} style={{ color: 'var(--ink-dim)' }}>
+                                    <span className="lab" style={{ color: 'var(--ink)' }}>{e.category}</span>
+                                    <span className="dots" />
+                                    <span className="mono">{e.rate}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
                             <div className="rl verify">
                               <VerifiedStamp date={CARDS_VERIFIED} verb="CHECKED" />
                               <span className="dots" />

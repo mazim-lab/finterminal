@@ -17,7 +17,8 @@ export interface Deal {
   expiresAt?: string;
 }
 
-// Curated 2 to 3 times a day. We only post real product or service deals that
+// Hand-picked and curated on demand, a deal or two at a time, whenever we spot
+// something worth passing along. We only post real product or service deals that
 // save people money: high quality things at a deep discount, or productive buys
 // that pay for themselves over time. No credit card or bank welcome offers here,
 // those live in the Cards tab. Always verify the deal is live, then link straight
@@ -43,6 +44,8 @@ export const DEALS: Deal[] = [
       "If you already live in the Milwaukee M12 cordless world, this is the kind of quiet restock deal worth jumping on. Home Depot has the M12 REDLITHIUM HIGH OUTPUT XC 5.0 Ah battery two-pack, charger included, for $148. A single one of these high-output batteries on its own usually runs close to what this whole kit costs, so getting two of them plus a charger at this price is the real draw, and they power the entire M12 lineup of 125-plus tools. One honest caveat so nobody buys wrong: this is batteries and a charger, not a tool, and it only makes sense if you are already on M12 or about to be. If you have never owned a Milwaukee tool, start with an actual tool kit instead. Stock has moved around by region through this sale, so make sure your local store shows it in stock before you drive over.",
     category: "Tools",
     posted: "Jul 2, 2026",
+    expires: "ends Jul 18",
+    expiresAt: "2026-07-18",
   },
   {
     title: "Helinox Chair One lightweight camping chair, 2-pack",
@@ -78,6 +81,8 @@ export const DEALS: Deal[] = [
       "If you are driving an older car that never came with CarPlay, a portable screen like this is a genuinely productive little buy that drags your dashboard into the modern era for about a hundred dollars. It runs wireless Apple CarPlay and Android Auto on a 9.26 inch display, supports a backup camera, and handles maps, music, and hands free calls without you ever touching your phone. It lists at $138.99 with a 28% off coupon you tick at checkout, which brings it down to roughly $100. One honest catch so you buy with eyes open: this is an off brand unit from a third party seller rather than a name you will recognize, and the price hinges entirely on that checkout coupon, so make sure the 28% is actually showing before you pay. It is also a screen that mounts on your dash, not a built in head unit.",
     category: "Electronics",
     posted: "Jun 29, 2026",
+    expires: "ends Jul 18",
+    expiresAt: "2026-07-18",
   },
   {
     title: "DEWALT 20V MAX cordless tire inflator (DCC020IB)",
@@ -169,7 +174,7 @@ export const DEALS: Deal[] = [
   {
     title: "Apple AirPods Pro 3",
     merchant: "Shoppers Drug Mart",
-    url: "https://www.shoppersdrugmart.ca/en/health-and-pharmacy/electronics",
+    url: "https://www.shoppersdrugmart.ca/apple-airpods-pro3-active-noise-cancellation-earbuds/p/BB_195950543612?variantCode=195950543612",
     price: "$329.99",
     blurb:
       "Shoppers has the newest AirPods Pro at $329.99 and is stacking points offers that hand back roughly 148,000 PC Optimum points, which is about $148 you can put toward groceries or gas down the road. Net it out and you are closer to $182 to $224 for the best earbuds Apple makes for an iPhone. Buy online and sign in first so both point offers actually show up at checkout, a few people found they had to refresh their login. This one wraps up June 21, so it is a short window.",
@@ -179,3 +184,19 @@ export const DEALS: Deal[] = [
     expiresAt: "2026-06-21",
   },
 ];
+
+// Today's date in Canadian time, as "YYYY-MM-DD" (en-CA formats this way).
+export function dealsTodayISO(): string {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Toronto",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+}
+
+// A deal is expired once its expiry date is strictly before today, so a deal
+// that "ends Jun 21" stays live through all of June 21 and archives on June 22.
+export function isDealExpired(d: Deal, today: string): boolean {
+  return !!d.expiresAt && d.expiresAt < today;
+}

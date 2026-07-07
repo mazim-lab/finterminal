@@ -5,12 +5,14 @@
 // data import would drag the full ~349KB of card JSON back into the browser.
 // Only `import type` from cards.ts is allowed (types are erased at compile).
 
-import type { Benefits } from './cards';
+import type { Benefits, EarnRate } from './cards';
 
 /** The minimal card shape the Card Explorer table + filters actually use.
  *  Keeping this lean means the /cards client bundle ships ~14 fields per card
- *  instead of the full record (long bonus terms, insurance, pros/cons, earn
- *  tables, sources, notes…), all of which stay server-side for the detail page. */
+ *  instead of the full record (long bonus terms, insurance, pros/cons, full earn
+ *  tables, sources, notes…), all of which stay server-side for the detail page.
+ *  earn_rates is included but CAPPED (see cards/page.tsx) to a few short
+ *  {category,rate} pairs, purely for the Receipt's illustrative earn section. */
 export interface SlimCard {
   slug: string;
   name: string;
@@ -26,6 +28,7 @@ export interface SlimCard {
   network: string;
   categories: string[];
   benefits: Benefits;
+  earn_rates: EarnRate[];
 }
 
 export function formatCurrency(value: number, country: 'CA' | 'US' = 'CA'): string {
@@ -83,4 +86,16 @@ export function receiptLines(c: SlimCard): ReceiptLine[] {
   }
 
   return lines;
+}
+
+/** The Receipt, stage two: the honest earn-on-your-spend rows.
+ *  These are illustrative per-category earn rates (e.g. "dining … 2x"), NOT a
+ *  dollar figure. Per-category spend is unknown, so any dollar earn total would
+ *  be fabricated; we deliberately return no amount. Kept as a SEPARATE function
+ *  from receiptLines so the first-year value total and its reconciliation math
+ *  never change. Returns the capped earn_rates from the slim payload, or [] when
+ *  a card carries none (most US cards, gracefully). */
+export function earnLines(c: SlimCard): { category: string; rate: string }[] {
+  if (!c.earn_rates || c.earn_rates.length === 0) return [];
+  return c.earn_rates.map((r) => ({ category: r.category, rate: r.rate }));
 }

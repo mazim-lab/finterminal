@@ -1,32 +1,16 @@
 import type { Deal } from "@/data/deals";
-import { DEALS } from "@/data/deals";
+import { DEALS, dealsTodayISO, isDealExpired } from "@/data/deals";
 import { ogMeta } from "@/lib/og";
 
 export const metadata = {
   title: "Deals | FinTerminal",
-  description: "A short, hand-picked list of genuinely good deals for Canadians, refreshed through the day. Links go straight to the merchant.",
+  description: "A short, hand-picked list of genuinely good deals for Canadians. Links go straight to the merchant.",
   ...ogMeta("Deals", "Deals"),
 };
 
 // Re-render hourly so deals roll into the archive as their expiry passes
 // (compared in America/Toronto), without needing a fresh deploy.
 export const revalidate = 3600;
-
-// Today's date in Canadian time, as "YYYY-MM-DD" (en-CA formats this way).
-function todayISO(): string {
-  return new Intl.DateTimeFormat("en-CA", {
-    timeZone: "America/Toronto",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).format(new Date());
-}
-
-// A deal is expired once its expiry date is strictly before today, so a deal
-// that "ends Jun 21" stays live through all of June 21 and archives on June 22.
-function isExpired(d: Deal, today: string): boolean {
-  return !!d.expiresAt && d.expiresAt < today;
-}
 
 function DealCard({ d }: { d: Deal }) {
   return (
@@ -54,11 +38,11 @@ function DealCard({ d }: { d: Deal }) {
 }
 
 export default async function DealsPage() {
-  const today = todayISO();
+  const today = dealsTodayISO();
   const source = DEALS;
-  const active = source.filter((d) => !isExpired(d, today));
+  const active = source.filter((d) => !isDealExpired(d, today));
   // Most-recently-expired first.
-  const archived = source.filter((d) => isExpired(d, today)).sort((a, b) =>
+  const archived = source.filter((d) => isDealExpired(d, today)).sort((a, b) =>
     (b.expiresAt ?? "").localeCompare(a.expiresAt ?? "")
   );
 
@@ -66,13 +50,13 @@ export default async function DealsPage() {
     <div className="app norail">
       <main>
         <div className="doc">
-          <div className="head"><h1>Deals</h1><span className="meta">hand-picked · updated daily</span></div>
+          <div className="head"><h1>Deals</h1><span className="meta">hand-picked</span></div>
 
           <div className="cd-sec">Today&apos;s picks</div>
           {active.length ? (
             active.map((d, i) => <DealCard key={i} d={d} />)
           ) : (
-            <div className="cd-empty">No live deals at the moment. Check back soon, we post a fresh batch through the day.</div>
+            <div className="cd-empty">No live deals at the moment. Check back soon, we add fresh picks regularly.</div>
           )}
 
           {archived.length > 0 && (
