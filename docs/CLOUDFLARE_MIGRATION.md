@@ -1,5 +1,12 @@
 # Cloudflare Workers Migration (OpenNext)
 
+**STATUS: Migration completed 2026-07-08.** www.finterminal.ca is live on the
+`finterminal` Cloudflare Worker. The apex domain (finterminal.ca) and
+frugalcanuck.ca resolve via 308 edge redirects to www.finterminal.ca. Vercel
+project deletion is pending after the soak period.
+
+---
+
 Owner checklist to move FinTerminal from Vercel to Cloudflare Workers using
 [@opennextjs/cloudflare](https://opennext.js.org/cloudflare). Everything in the
 repo is already wired and is inert on Vercel, so `main` keeps deploying to

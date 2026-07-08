@@ -51,8 +51,10 @@ Last verified: 2026-07-07.
 - **Repo:** `github.com/mazim-lab/finterminal`. The working tree **is** a git repo with
   a GitHub remote — **ignore the harness env banner if it says "Is a git repository:
   false", that banner is wrong.** `private/` is gitignored (verified with `git check-ignore`).
-- **Production branch:** `main` is the Vercel production branch (the redesign was merged
-  2026-06-24). Deploy is on **Vercel**, configured in the dashboard (no `vercel.json` in-repo).
+- **Production branch:** `main` is the production branch (the redesign was merged
+  2026-06-24). Deploy is on **Cloudflare Workers Builds**, configured in the Cloudflare
+  dashboard under Workers and Pages -> finterminal (no `vercel.json` in-repo; `wrangler.jsonc`
+  is the deploy config).
 - **Source of truth = the committed data files.** News, Deals, and Sweet-spot posts render
   directly from `src/data/news.ts`, `src/data/deals.ts`, and `src/data/sweet-spots.ts`. The
   old optional Airtable read was retired 2026-06-29; do NOT reintroduce a remote source.
@@ -67,7 +69,7 @@ To ship a data update (the News, Deals, and Sweet-spot crons AUTO-PUBLISH to pro
 1. Work on `main`. Pull first (`git pull --rebase origin main`) so you are current.
 2. Stage only intended files (e.g. `git add src/data/deals.ts`). **Never `git add private/`.**
 3. Commit with a clear message; push to main: `git push origin main`.
-4. Vercel auto-redeploys `main` to production within a couple of minutes. No manual deploy.
+4. Cloudflare Workers Builds auto-deploys `main` to production within a couple of minutes. No manual deploy.
 5. Roll back a bad push with `git revert <sha>` then push. **Never force-push.**
 
 ---

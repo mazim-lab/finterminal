@@ -3,27 +3,39 @@
 //
 // SETUP FOR THE OWNER (read me):
 //   This module picks a backend at runtime. To turn comments ON in production,
-//   connect an Upstash Redis database from the Vercel Marketplace. Vercel's
-//   Upstash integration injects these env vars automatically:
+//   create a free Upstash Redis database at https://console.upstash.com (there
+//   is no Vercel Marketplace integration anymore; the database is provisioned
+//   directly from your Upstash account). Then add the following as encrypted
+//   secrets in the Cloudflare dashboard:
 //
-//       KV_REST_API_URL            (Upstash REST endpoint)
+//       Workers and Pages -> finterminal -> Settings -> Variables and Secrets
+//
+//       KV_REST_API_URL            (Upstash REST endpoint, e.g. https://xxx.upstash.io)
 //       KV_REST_API_TOKEN          (Upstash REST token)
 //
-//   As a fallback we also accept the raw Upstash names if you wire them by hand:
+//   As a fallback we also accept the alternative Upstash env var names:
 //
 //       UPSTASH_REDIS_REST_URL
 //       UPSTASH_REDIS_REST_TOKEN
 //
-//   One more env var, optional but recommended, unlocks the moderation hatch
+//   One more secret, optional but recommended, unlocks the moderation hatch
 //   (the DELETE endpoint that removes a single comment by id):
 //
 //       COMMENTS_ADMIN_TOKEN       (any long random string you keep private)
+//
+//   For local development, put the same values in .dev.vars (gitignored) so
+//   wrangler picks them up via `npx wrangler dev`.
 //
 //   Until a Redis URL/token pair exists, in PRODUCTION the whole comments
 //   feature degrades to invisible: the API returns 501 and the UI renders
 //   nothing. In local development (NODE_ENV !== "production") an in-memory
 //   Map backend turns on automatically so you can QA with zero setup. That
 //   memory store is per-process and resets on reload; it is never used in prod.
+//
+//   Future option: refactor this adapter to use native Cloudflare Workers KV
+//   instead of Upstash Redis. The KV namespace binding is already in wrangler.jsonc
+//   (NEXT_INC_CACHE_KV); a dedicated comments KV namespace could replace Upstash
+//   entirely and remove the external HTTP round-trip on every comment read/write.
 // ---------------------------------------------------------------------------
 
 export type StoredComment = {
