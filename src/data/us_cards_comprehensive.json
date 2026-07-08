@@ -1152,7 +1152,7 @@
       "mobile_insurance": "Yes",
       "trip_cancellation": ""
     },
-    "welcome_bonus": "Earn 100,000 points",
+    "welcome_bonus": "Earn 125,000 points",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -1182,7 +1182,6 @@
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
-      "Subscription perks",
       "Statement credits",
       "No foreign transaction fee"
     ],
@@ -1206,7 +1205,7 @@
       "mobile_insurance": "Yes",
       "trip_cancellation": ""
     },
-    "welcome_bonus": "Earn 100,000 points (limited-time offer)",
+    "welcome_bonus": "Earn 75,000 bonus points",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1236,7 +1235,6 @@
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
-      "Subscription perks",
       "Statement credits",
       "No foreign transaction fee"
     ],
@@ -1278,15 +1276,14 @@
     "network": "Mastercard",
     "card_type": "personal",
     "annual_fee": 0,
-    "signup_bonus": 1500,
-    "signup_bonus_formatted": "Earn cash back for every purchase. Earn 5% cash back on up to $1,500 on combined purchases in bonus categories each quarter you activate. Plus, earn 5% cash back on travel purchased through Chase TravelSM, 3% on dining and drugstores, and 1% on all other purchases.",
-    "signup_bonus_value_usd": 1500,
-    "signup_bonus_currency": "points",
+    "signup_bonus": 200,
+    "signup_bonus_formatted": "Earn a $200 bonus",
+    "signup_bonus_value_usd": 200,
+    "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
-      "Subscription perks",
       "Statement credits",
       "No foreign transaction fee"
     ],
@@ -1330,15 +1327,14 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 0,
-    "signup_bonus": null,
-    "signup_bonus_formatted": "Establish credit and earn 1.5% cash back on all purchases",
-    "signup_bonus_value_usd": null,
-    "signup_bonus_currency": "points",
+    "signup_bonus": 25,
+    "signup_bonus_formatted": "Earn a $25 statement credit for enrolling in automatic payments",
+    "signup_bonus_value_usd": 25,
+    "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
-      "Subscription perks",
       "Statement credits",
       "No foreign transaction fee"
     ],
@@ -1355,7 +1351,7 @@
       "purchase_protection": "120",
       "trip_cancellation": "1500"
     },
-    "welcome_bonus": "Establish credit and earn 3% cash back on dining offer (limited-time offer)",
+    "welcome_bonus": "Earn a $25 statement credit for enrolling in automatic payments",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1418,7 +1414,7 @@
     "issuer": "Chase",
     "network": "Visa",
     "card_type": "personal",
-    "annual_fee": 0,
+    "annual_fee": 150,
     "signup_bonus": 70000,
     "signup_bonus_formatted": "Earn 70,000 bonus miles after qualifying purchases.",
     "signup_bonus_value_usd": 70000,
@@ -1451,7 +1447,7 @@
       "Hotel stays booked with hotel": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn up to 60,000 bonus miles",
+    "welcome_bonus": "Earn 70,000 bonus miles after qualifying purchases.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -1507,7 +1503,7 @@
       "Select streaming": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn up to 70,000 bonus miles + 500 Premier qualifying points (PQP)",
+    "welcome_bonus": "Earn 80,000 bonus miles + 3,000 Premier qualifying points (PQP) after qualifying purchases.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1538,7 +1534,7 @@
     "key_perks": [
       "No foreign transaction fee",
       "Statement credits",
-      "Free first checked bag",
+      "2 checked bags after $10K annual spend",
       "Concierge service"
     ],
     "foreign_transaction_fee": false,
@@ -1557,7 +1553,7 @@
       "Local transit and commuting": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn up to 40,000 bonus miles",
+    "welcome_bonus": "Earn 30,000 bonus miles after qualifying purchases.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1660,7 +1656,7 @@
       "Gas stations and grocery": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 80,000 bonus points",
+    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 20,000 bonus points after you spend $3,000 in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1709,7 +1705,7 @@
       "Gas stations and restaurants": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 90,000 bonus points",
+    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 40,000 bonus points after you spend $5,000 in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1759,7 +1755,7 @@
       "Grocery and restaurants": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 85,000 bonus points",
+    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 30,000 bonus points after you spend $4,000 in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1959,7 +1955,7 @@
       "Travel, dining, gas stations": "5x",
       "All other purchases": "3x"
     },
-    "welcome_bonus": "Earn up to 185,000 bonus points",
+    "welcome_bonus": "Earn 175,000 Bonus Points after you spend $5,000 on purchases in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1988,7 +1984,9 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "No foreign transaction fee"
+      "No foreign transaction fee",
+      "Subscription perks",
+      "Food delivery credits"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -2006,7 +2004,7 @@
       "purchase_protection": "100",
       "trip_cancellation": ""
     },
-    "welcome_bonus": "Earn up to 125,000 Bonus Points",
+    "welcome_bonus": "Earn up to 120,000 Bonus Points",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2056,7 +2054,7 @@
       "baggage_delay": "100",
       "purchase_protection": "120"
     },
-    "welcome_bonus": "$500 Offer: $300 Disney Gift Card eGift upon approval + $200 statement credit",
+    "welcome_bonus": "$600 Offer: $300 Disney Gift Card eGift upon approval + $300 statement credit",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2087,10 +2085,9 @@
     "key_perks": [
       "Food delivery credits",
       "Subscription perks",
-      "Statement credits",
-      "No foreign transaction fee"
+      "Statement credits"
     ],
-    "foreign_transaction_fee": false,
+    "foreign_transaction_fee": true,
     "country": "US",
     "source": "bank_website",
     "last_verified": "2026-02-23",
@@ -2134,11 +2131,9 @@
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
-      "Subscription perks",
-      "Statement credits",
-      "No foreign transaction fee"
+      "Statement credits"
     ],
-    "foreign_transaction_fee": false,
+    "foreign_transaction_fee": true,
     "country": "US",
     "source": "bank_website",
     "last_verified": "2026-02-23",
@@ -2264,9 +2259,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 95,
-    "signup_bonus": null,
+    "signup_bonus": 75000,
     "signup_bonus_formatted": "Earn 75,000 Avios",
-    "signup_bonus_value_usd": null,
+    "signup_bonus_value_usd": 75000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2274,7 +2269,9 @@
       "Food delivery credits",
       "Subscription perks",
       "Statement credits",
-      "No foreign transaction fee"
+      "No foreign transaction fee",
+      "Travel Together Ticket",
+      "10% Off British Airways Flights"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -2319,7 +2316,9 @@
     "key_perks": [
       "Food delivery credits",
       "Subscription perks",
-      "No foreign transaction fee"
+      "No foreign transaction fee",
+      "Companion Pass",
+      "Priority Boarding"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -2365,7 +2364,9 @@
     "key_perks": [
       "Food delivery credits",
       "Subscription perks",
-      "No foreign transaction fee"
+      "No foreign transaction fee",
+      "$1,000 Airfare Discount Voucher",
+      "10% discount on Iberia flights"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -2426,7 +2427,7 @@
       "Gas, restaurants, local transit": "2%",
       "All other purchases": "1%"
     },
-    "welcome_bonus": "$200 Amazon Gift Card",
+    "welcome_bonus": "$150 Amazon Gift Card",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2455,7 +2456,6 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Food delivery credits",
       "No foreign transaction fee"
     ],
     "foreign_transaction_fee": false,
@@ -2495,8 +2495,8 @@
     "card_type": "personal",
     "annual_fee": 0,
     "signup_bonus": null,
-    "signup_bonus_formatted": "Earn 4% cash back on DoorDash and Caviar orders, 3% cash back on dining when purchased directly from a restaurant, 2% cash back on grocery stores online or in-store and 1% on all other purchases.",
-    "signup_bonus_value_usd": null,
+    "signup_bonus_formatted": "Free year of DashPass (a $96 value)",
+    "signup_bonus_value_usd": 96,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2547,7 +2547,7 @@
     "card_type": "personal",
     "annual_fee": 0,
     "signup_bonus": null,
-    "signup_bonus_formatted": "$50 cash back",
+    "signup_bonus_formatted": "$50 Instacart credit",
     "signup_bonus_value_usd": 50,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
@@ -2569,7 +2569,7 @@
       "Restaurants, gas, streaming": "2%",
       "All other purchases": "1%"
     },
-    "welcome_bonus": "$50 cash back",
+    "welcome_bonus": "$50 Instacart credit",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2616,7 +2616,6 @@
     "apply_url": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve",
     "earn_rates": {
       "Chase Travel": "8x",
-      "Lyft rides": "5x",
       "Flights and hotels booked direct": "4x",
       "Social media and search ads": "3x",
       "All other purchases": "1x"
@@ -2624,11 +2623,11 @@
     "insurance": {
       "baggage_delay": "100",
       "travel_accident": "1000000",
-      "purchase_protection": "",
+      "purchase_protection": "120",
       "mobile_insurance": "Yes",
-      "trip_cancellation": ""
+      "trip_cancellation": "10000"
     },
-    "welcome_bonus": "Earn 200,000 bonus points",
+    "welcome_bonus": "Earn 150,000 bonus points",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -2651,8 +2650,8 @@
     "card_type": "business",
     "annual_fee": 0,
     "signup_bonus": null,
-    "signup_bonus_formatted": "$1000 cash back",
-    "signup_bonus_value_usd": 1000,
+    "signup_bonus_formatted": "$750 cash back",
+    "signup_bonus_value_usd": 750,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2667,13 +2666,12 @@
     "notes_for_canadians": null,
     "apply_url": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
     "earn_rates": {
-      "Lyft rides": "5%",
       "Every purchase": "1.5%"
     },
     "insurance": {
       "purchase_protection": "120"
     },
-    "welcome_bonus": "$1000 cash back",
+    "welcome_bonus": "$750 cash back",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2713,7 +2711,6 @@
     "notes_for_canadians": null,
     "apply_url": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred",
     "earn_rates": {
-      "Lyft rides": "5x",
       "Travel, shipping, ads, internet": "3x",
       "All other purchases": "1x"
     },
@@ -2738,8 +2735,8 @@
     "card_type": "business",
     "annual_fee": 0,
     "signup_bonus": null,
-    "signup_bonus_formatted": "$1000 cash back",
-    "signup_bonus_value_usd": 1000,
+    "signup_bonus_formatted": "$750 bonus cash back",
+    "signup_bonus_value_usd": 750,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2754,7 +2751,6 @@
     "notes_for_canadians": null,
     "apply_url": "https://creditcards.chase.com/business-credit-cards/ink/cash",
     "earn_rates": {
-      "Lyft rides": "5%",
       "Office supply, internet/cable/phone": "5%",
       "Gas stations and restaurants": "2%",
       "All other purchases": "1%"
@@ -2762,7 +2758,7 @@
     "insurance": {
       "purchase_protection": "120"
     },
-    "welcome_bonus": "$1000 cash back",
+    "welcome_bonus": "$750 bonus cash back",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2839,7 +2835,8 @@
       "Statement credits",
       "Food delivery credits",
       "No foreign transaction fee",
-      "Concierge service"
+      "Concierge service",
+      "United Club lounge passes (2 per year)"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -2864,14 +2861,14 @@
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
-      "no_fx_fee": false,
-      "car_rental_insurance": false,
+      "no_fx_fee": true,
+      "car_rental_insurance": true,
       "travel_medical": false,
-      "trip_cancellation": false,
-      "flight_delay": false,
+      "trip_cancellation": true,
+      "flight_delay": true,
       "mobile_insurance": false,
-      "purchase_protection": false,
-      "extended_warranty": false,
+      "purchase_protection": true,
+      "extended_warranty": true,
       "free_checked_bags": true
     }
   },
@@ -2890,8 +2887,10 @@
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
-      "Free first checked bag",
-      "No foreign transaction fee"
+      "Free first and second checked bags",
+      "No foreign transaction fee",
+      "United Club lounge membership",
+      "Premier Access travel services"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -2907,7 +2906,7 @@
       "Renowned Hotels prepaid stays": "5x",
       "All other purchases": "1.5x"
     },
-    "welcome_bonus": "Earn up to 110,000 bonus miles + 2,000 Premier qualifying points (PQP)",
+    "welcome_bonus": "Earn 100,000 bonus miles + 2,000 Premier qualifying points (PQP)",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -2939,7 +2938,10 @@
       "Free first checked bag",
       "Travel program credit (NEXUS/Global Entry)",
       "Statement credits",
-      "No foreign transaction fee"
+      "No foreign transaction fee",
+      "Preferred seat selection",
+      "Group 5 boarding priority",
+      "25% back on inflight purchases"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -3031,7 +3033,9 @@
     "key_perks": [
       "Travel program credit (NEXUS/Global Entry)",
       "Statement credits",
-      "No foreign transaction fee"
+      "No foreign transaction fee",
+      "Automatic IHG Platinum Elite Status",
+      "Anniversary Free Night"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
