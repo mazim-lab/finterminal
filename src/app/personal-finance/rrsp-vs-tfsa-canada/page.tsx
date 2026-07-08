@@ -5,6 +5,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { AccountDecisionGraphic } from "@/components/heroes/AccountDecisionGraphic";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "RRSP vs TFSA: the honest decision for Canadians | FinTerminal",
@@ -450,6 +451,7 @@ export default function RrspVsTfsaPage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/rrsp-vs-tfsa-canada" />
         </div>
       </main>
     </div>

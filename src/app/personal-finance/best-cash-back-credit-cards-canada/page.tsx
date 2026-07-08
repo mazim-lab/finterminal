@@ -5,6 +5,7 @@ import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { allCards, formatCurrency, type Card } from "@/data/cards";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "The best cash-back credit cards in Canada | FinTerminal",
@@ -390,6 +391,7 @@ export default function BestCashBackCardsPage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/best-cash-back-credit-cards-canada" />
         </div>
       </main>
     </div>

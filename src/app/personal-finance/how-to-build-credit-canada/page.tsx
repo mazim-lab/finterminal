@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { CreditGaugeMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "How to Build (or Rebuild) Credit in Canada: A Plain-Language Guide | FinTerminal",
@@ -377,6 +378,7 @@ export default function HowToBuildCreditPage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/how-to-build-credit-canada" />
         </div>
       </main>
     </div>

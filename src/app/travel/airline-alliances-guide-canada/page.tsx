@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { RouteArcsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "The airline alliance guide for Canadians: Star Alliance, oneworld, and SkyTeam | FinTerminal",
@@ -329,6 +330,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
             <Link href="/travel/amex-mr-to-aeroplan" className="cd-apply">Amex MR to Aeroplan →</Link>
             <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards →</Link>
           </div>
+          <Comments path="/travel/airline-alliances-guide-canada" />
         </div>
       </main>
     </div>

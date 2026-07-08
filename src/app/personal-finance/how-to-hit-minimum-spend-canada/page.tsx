@@ -6,6 +6,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { GrowthMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "How to hit a credit card minimum spend without wasting a dollar | FinTerminal",
@@ -330,6 +331,7 @@ export default function HowToHitMinimumSpendPage() {
             <Link href="/cards" className="cd-apply">Browse cards &amp; bonuses →</Link>
             <Link href="/personal-finance/pay-bills-with-credit-card-canada" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Pay bills with a credit card →</Link>
           </div>
+          <Comments path="/personal-finance/how-to-hit-minimum-spend-canada" />
         </div>
       </main>
     </div>

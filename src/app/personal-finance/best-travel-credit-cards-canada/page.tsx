@@ -5,6 +5,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { DataGridMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "The best travel and rewards credit cards in Canada | FinTerminal",
@@ -465,6 +466,7 @@ export default function BestTravelCardsPage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/best-travel-credit-cards-canada" />
         </div>
       </main>
     </div>

@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "The FHSA playbook: Canada's most underused account | FinTerminal",
@@ -353,6 +354,7 @@ export default function FHSAPlaybookPage() {
             <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
             <Link href="/personal-finance/smith-manoeuvre" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>The Smith Manoeuvre →</Link>
           </div>
+          <Comments path="/personal-finance/fhsa-playbook-canada" />
         </div>
       </main>
     </div>

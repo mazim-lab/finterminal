@@ -5,6 +5,7 @@ import { GrowthMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Best GIC rates in Canada | FinTerminal",
@@ -411,6 +412,7 @@ export default function BestGicRatesPage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/best-gic-rates-canada" />
         </div>
       </main>
     </div>

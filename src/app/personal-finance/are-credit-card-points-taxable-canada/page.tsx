@@ -6,6 +6,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { FeePercentMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Are credit card points and cash back taxable in Canada? | FinTerminal",
@@ -327,6 +328,7 @@ export default function CreditCardPointsTaxablePage() {
             <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
             <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse cards &amp; bonuses →</Link>
           </div>
+          <Comments path="/personal-finance/are-credit-card-points-taxable-canada" />
         </div>
       </main>
     </div>

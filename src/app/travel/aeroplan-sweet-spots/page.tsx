@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { RouteArcsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Using Aeroplan points to get the most value | FinTerminal",
@@ -211,6 +212,7 @@ export default function AeroplanSweetSpotsPage() {
             <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/cards?q=aeroplan" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Aeroplan cards →</Link>
           </div>
+          <Comments path="/travel/aeroplan-sweet-spots" />
         </div>
       </main>
     </div>

@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { TransferFlowMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "The Canadian points-transfer map: which points actually transfer, and where | FinTerminal",
@@ -336,6 +337,7 @@ export default function PointsTransferPartnersCanadaPage() {
             <Link href="/travel/airline-alliances-guide-canada" className="cd-apply">The airline alliance guide for Canadians →</Link>
             <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards →</Link>
           </div>
+          <Comments path="/travel/points-transfer-partners-canada" />
         </div>
       </main>
     </div>

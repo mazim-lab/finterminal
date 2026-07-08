@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { TransferFlowMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Avios sweet spots, and converting RBC Avion to Avios | FinTerminal",
@@ -291,6 +292,7 @@ export default function AviosSweetSpotsPage() {
             <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/cards?q=avion" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>RBC Avion cards →</Link>
           </div>
+          <Comments path="/travel/avios-sweet-spots-rbc-avion-transfer" />
         </div>
       </main>
     </div>

@@ -6,6 +6,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { FeePercentMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "The 2.5% foreign transaction fee, and the cards that kill it | FinTerminal",
@@ -362,6 +363,7 @@ export default function ForeignTransactionFeePage() {
             <Link href="/cards" className="cd-apply">Compare cards →</Link>
             <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>More personal finance →</Link>
           </div>
+          <Comments path="/personal-finance/foreign-transaction-fee-cards-canada" />
         </div>
       </main>
     </div>

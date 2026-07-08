@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { DataGridMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Where to hold your cash in Canada: HISA vs GIC vs high-interest chequing vs cash ETFs | FinTerminal",
@@ -346,6 +347,7 @@ export default function WhereToHoldCashPage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/where-to-hold-cash-canada" />
         </div>
       </main>
     </div>

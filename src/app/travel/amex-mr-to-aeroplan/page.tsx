@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { TransferFlowMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "How to convert Amex Membership Rewards to Aeroplan | FinTerminal",
@@ -210,6 +211,7 @@ export default function MrToAeroplanPage() {
             <Link href="/travel/aeroplan-sweet-spots" className="cd-apply">Aeroplan sweet spots →</Link>
             <Link href="/cards?q=membership%20rewards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Cards that earn MR →</Link>
           </div>
+          <Comments path="/travel/amex-mr-to-aeroplan" />
         </div>
       </main>
     </div>
