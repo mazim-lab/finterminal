@@ -10,10 +10,6 @@ import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { GrowthMotif, MOTIFS, type MotifKey } from "@/components/heroes/motifs";
 import { FreshDot } from "@/components/FreshDot";
 
-// Re-check hourly so the featured guide and RESP row flip live on their
-// publishAt dates without a redeploy (see isPFPublished).
-export const revalidate = 3600;
-
 // ── Computed, honest figures (spec 3.5) ─────────────────────────────────────
 
 // Best first-year value on the board right now, computed from the real card data.

@@ -15,8 +15,6 @@ export const metadata = {
   ...ogMeta("The 2.5% foreign transaction fee, and the cards that kill it", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "what", label: "What is it?" },
   { id: "online", label: "Do I pay it online?" },

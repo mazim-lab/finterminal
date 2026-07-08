@@ -13,8 +13,6 @@ export const metadata = {
   ...ogMeta("What Your Credit Card's Travel Insurance Actually Covers in Canada", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "The short answer" },
   { id: "how", label: "How card travel insurance works" },

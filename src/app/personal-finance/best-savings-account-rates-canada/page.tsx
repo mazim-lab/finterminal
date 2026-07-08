@@ -14,8 +14,6 @@ export const metadata = {
   ...ogMeta("Best high-interest savings account (HISA) rates in Canada", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "What is the best rate right now?" },
   { id: "table", label: "The rates, side by side" },

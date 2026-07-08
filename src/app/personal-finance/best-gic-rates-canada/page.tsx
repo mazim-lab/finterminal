@@ -14,8 +14,6 @@ export const metadata = {
   ...ogMeta("Best GIC rates in Canada", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "What is the best GIC rate right now?" },
   { id: "table", label: "The rates, term by term" },

@@ -47,29 +47,32 @@ upgrade is needed; the Workers free tier covers this site.
 The Worker name is `finterminal` (set in `wrangler.jsonc`); keep the dashboard
 name matching so the `WORKER_SELF_REFERENCE` service binding resolves.
 
-## 3. Incremental-cache store (Workers KV)
+## 3. Incremental-cache store (static assets, no KV)
 
-`open-next.config.ts` uses the Workers KV incremental cache for runtime ISR, and
-`wrangler.jsonc` binds it as `NEXT_INC_CACHE_KV`. KV is included in the free
-Workers plan and needs no subscription or payment method. The namespace must be
-created first and its id pinned in `wrangler.jsonc`; wrangler's auto-provisioning
-does not work here because OpenNext's populate-cache step runs `wrangler kv bulk
-put` before the worker deploy provisions anything, so it fails with "No KV
-namespace ID found" if the id is missing. This is already done: the namespace
-`finterminal-inc-cache` (id `2f165e19677f4941a9d23f7f14472f44`) was created under
-Dashboard -> Storage & Databases -> KV and its id is set on the
-`NEXT_INC_CACHE_KV` binding. If the namespace is ever recreated, update the id
-in `wrangler.jsonc` to match.
+`open-next.config.ts` uses the static-assets incremental cache
+(`staticAssetsIncrementalCache`), which uses zero runtime resources. There is no
+KV or R2 binding: `wrangler.jsonc` has no incremental-cache binding at all.
 
-Upgrade path (optional, R2-backed cache): R2 is strongly consistent and is the
-adapter's recommended store, but enabling it is subscription-gated and requires
-a payment method on file (free-tier allowance is 10 GB storage, 1M Class A +
-10M Class B operations per month, which this cache will not approach). To switch
-later: Dashboard -> R2 -> enable R2 and create a bucket named exactly
-`finterminal-inc-cache`, then in `open-next.config.ts` swap `kvIncrementalCache`
-back to `r2IncrementalCache` and in `wrangler.jsonc` replace the `kv_namespaces`
-binding with the `r2_buckets` binding (both commented alternatives are left in
-those files).
+The site is fully static. Since Airtable was removed, every page reads from the
+committed `src/data` modules, so all page data is baked at build time and every
+content change is a git push that triggers a full rebuild on Cloudflare Workers
+Builds. There is no runtime ISR left: the `revalidate` exports on the prerendered
+pages were removed 2026-07-08, so prerendered HTML is served straight from the
+deployed static assets and nothing is written at request time.
+
+Why no KV: the previous `kvIncrementalCache` existed for runtime ISR back when
+pages re-fetched Airtable on a revalidate interval. With Airtable gone it was
+vestigial, and it burned the Workers KV free tier: every deploy's populate-cache
+step wrote ~297 entries and each revalidation wrote more, which tripped a
+50%-of-daily-limit KV warning. Dropping it removes KV usage entirely.
+
+Upgrade path (only if runtime ISR is ever reintroduced): swap
+`open-next.config.ts` back to `kvIncrementalCache` and restore the
+`kv_namespaces` binding in `wrangler.jsonc`. The namespace `finterminal-inc-cache`
+(id `2f165e19677f4941a9d23f7f14472f44`) still exists under Dashboard -> Storage &
+Databases -> KV; the commented binding block in `wrangler.jsonc` carries the id.
+Pages that need runtime freshness would also need their `revalidate` export
+re-added.
 
 ## 4. Set environment variables and secrets
 
@@ -90,9 +93,8 @@ After the first successful deploy, Cloudflare gives you a
 `finterminal.<subdomain>.workers.dev` URL. Before touching DNS, check:
 
 - `/` — home renders, fonts load (next/font is inlined at build time).
-- `/deals` — loads, and is served as ISR. Reload after the revalidate window
-  and confirm content refreshes (validates the KV incremental cache is writing
-  back, not just serving build-time HTML).
+- `/deals` loads, and is served as fully static prerendered HTML from the
+  build (no runtime revalidation; content refreshes on the next deploy).
 - `/personal-finance`, `/guides`, `/travel`, `/news` — index pages render.
 - A specific article under each (e.g. `/news/<slug>`) — dynamic route renders.
 - `/api/og?title=Test` — returns an actual rendered PNG image (not an error),
@@ -122,7 +124,7 @@ hours.
 ## 7. Soak, then decommission Vercel
 
 Let the Cloudflare deployment run on the live domains for a soak period (a few
-days is sensible) and watch logs, analytics, and the ISR pages. Once satisfied,
+days is sensible) and watch logs, analytics, and the prerendered pages. Once satisfied,
 delete the Vercel project so nothing double-deploys.
 
 ## Rollback

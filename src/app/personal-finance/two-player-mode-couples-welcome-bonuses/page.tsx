@@ -15,8 +15,6 @@ export const metadata = {
   ...ogMeta("Two-player mode: how Canadian couples double their welcome bonuses", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "idea", label: "How does it double bonuses?" },
   { id: "referral", label: "Can you stack a referral too?" },

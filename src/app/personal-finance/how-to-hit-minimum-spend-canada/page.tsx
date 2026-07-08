@@ -15,8 +15,6 @@ export const metadata = {
   ...ogMeta("How to hit a credit card minimum spend without wasting a dollar", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "what", label: "What is a minimum spend?" },
   { id: "rule", label: "The cardinal rule" },

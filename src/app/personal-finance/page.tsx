@@ -8,9 +8,6 @@ export const metadata = {
   ...ogMeta("Personal Finance", "Personal finance"),
 };
 
-// Re-check hourly so scheduled articles appear on their publishAt date, no redeploy needed.
-export const revalidate = 3600;
-
 // Life-moment grouping (spec 3.7): the index is organized by the moment a reader
 // is actually in, not by a flat archive list. Each moment carries a mono micro
 // label. The mapping is data-driven by slug; an article lands in the first moment

@@ -17,8 +17,6 @@ export const metadata = {
   ...ogMeta("RESP and the 20% CESG grant: the easiest guaranteed return in Canada", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "headline", label: "How does the CESG grant work?" },
   { id: "limits", label: "How much can I contribute and get?" },

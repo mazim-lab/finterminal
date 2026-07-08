@@ -16,26 +16,19 @@
       "binding": "WORKER_SELF_REFERENCE",
       "service": "finterminal"
     }
-  ],
-  // Persistent incremental cache (runtime ISR) across the fleet, backed by
-  // Workers KV (free plan, no subscription). The namespace must be created
-  // first and its id pinned here: auto-provisioning does NOT work for this
-  // binding, because OpenNext's populate-cache step runs `wrangler kv bulk put`
-  // BEFORE the worker deploy provisions anything (chicken-and-egg). The
-  // namespace "finterminal-inc-cache" was created in the dashboard.
-  "kv_namespaces": [
-    {
-      "binding": "NEXT_INC_CACHE_KV",
-      "id": "2f165e19677f4941a9d23f7f14472f44"
-    }
   ]
-  // upgrade path: enable R2 subscription in the dashboard, create bucket
-  // finterminal-inc-cache, swap open-next.config.ts back to r2IncrementalCache,
-  // and replace the kv_namespaces binding above with:
-  //   "r2_buckets": [
+  // No incremental-cache binding: the site is fully static (see
+  // open-next.config.ts). Runtime ISR + the KV-backed cache were removed
+  // 2026-07-08 to stay within the Workers KV free tier. The static-assets
+  // incremental cache uses zero runtime resources.
+  //
+  // ISR upgrade path: if runtime ISR is ever reintroduced, swap
+  // open-next.config.ts back to kvIncrementalCache and restore this binding
+  // (the namespace "finterminal-inc-cache" still exists):
+  //   "kv_namespaces": [
   //     {
-  //       "binding": "NEXT_INC_CACHE_R2_BUCKET",
-  //       "bucket_name": "finterminal-inc-cache"
+  //       "binding": "NEXT_INC_CACHE_KV",
+  //       "id": "2f165e19677f4941a9d23f7f14472f44"
   //     }
   //   ]
 }

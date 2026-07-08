@@ -13,8 +13,6 @@ export const metadata = {
   ...ogMeta("How to Build (or Rebuild) Credit in Canada: A Plain-Language Guide", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "The short answer" },
   { id: "score", label: "What a credit score is, and who tracks it" },

@@ -14,8 +14,6 @@ export const metadata = {
   ...ogMeta("The best travel and rewards credit cards in Canada", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 // ── Pull every figure from OUR card data, by slug, so the page stays accurate ──
 // as the underlying data updates. We only ever read fields that exist in our
 // Card interface (annual_fee, first_year_fee, welcome_bonus, welcome_bonus_value,

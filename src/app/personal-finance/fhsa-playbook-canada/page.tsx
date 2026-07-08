@@ -15,8 +15,6 @@ export const metadata = {
   ...ogMeta("The FHSA playbook: Canada's most underused account", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "special", label: "What makes the FHSA special?" },
   { id: "room", label: "How much can you contribute?" },

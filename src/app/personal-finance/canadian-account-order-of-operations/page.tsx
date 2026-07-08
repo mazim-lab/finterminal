@@ -15,8 +15,6 @@ export const metadata = {
   ...ogMeta("Where your next dollar should go: the Canadian account order", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "why", label: "Why does the order matter?" },
   { id: "waterfall", label: "What is the waterfall?" },

@@ -13,8 +13,6 @@ export const metadata = {
   ...ogMeta("Check Your Credit Report and Score in Canada, Free", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "The short answer" },
   { id: "report-vs-score", label: "Report versus score, and what is on your report" },

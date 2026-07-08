@@ -13,8 +13,6 @@ export const metadata = {
   ...ogMeta("Newcomer to Canada: Your First Credit Cards and Bank Accounts", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "The short answer" },
   { id: "fresh", label: "Why you start fresh" },

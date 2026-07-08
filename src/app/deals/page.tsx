@@ -8,10 +8,6 @@ export const metadata = {
   ...ogMeta("Deals", "Deals"),
 };
 
-// Re-render hourly so deals roll into the archive as their expiry passes
-// (compared in America/Toronto), without needing a fresh deploy.
-export const revalidate = 3600;
-
 function DealCard({ d }: { d: Deal }) {
   return (
     <a href={d.url} target="_blank" rel="noopener noreferrer" className="arow-card">

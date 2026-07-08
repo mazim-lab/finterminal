@@ -14,8 +14,6 @@ export const metadata = {
   ...ogMeta("RRSP vs TFSA: the honest decision for Canadians", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "The short answer" },
   { id: "mechanic", label: "The core mechanic" },

@@ -13,8 +13,6 @@ export const metadata = {
   ...ogMeta("Where to hold your cash in Canada: HISA vs GIC vs chequing vs cash ETFs", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "The short answer" },
   { id: "horizon", label: "Start with your goal and time horizon" },

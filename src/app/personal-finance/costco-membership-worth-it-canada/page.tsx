@@ -13,8 +13,6 @@ export const metadata = {
   ...ogMeta("Does a Costco membership pay for itself?", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "cost", label: "What does it cost?" },
   { id: "executive", label: "Is Executive worth it?" },

@@ -13,8 +13,6 @@ export const metadata = {
   ...ogMeta("How Credit Card Interest Works in Canada (and How to Never Pay It)", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "The short answer" },
   { id: "apr", label: "What the purchase APR actually is" },

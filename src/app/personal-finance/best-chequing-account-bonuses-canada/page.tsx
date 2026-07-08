@@ -14,8 +14,6 @@ export const metadata = {
   ...ogMeta("Best chequing account welcome bonuses in Canada", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "What is the best bonus right now?" },
   { id: "table", label: "The offers, bank by bank" },

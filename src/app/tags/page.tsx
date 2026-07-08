@@ -9,8 +9,6 @@ export const metadata = {
   ...ogMeta("Browse by topic", "Topics"),
 };
 
-export const revalidate = 3600;
-
 export default function TagsIndexPage() {
   const cards = TAGS.map((t) => ({ ...t, count: tagCount(t.slug) }))
     .filter((t) => t.count > 0)

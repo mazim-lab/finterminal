@@ -8,8 +8,6 @@ export const metadata = {
   ...ogMeta("Best rates in Canada: savings, GICs, and chequing", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 export default function RatesHubPage() {
   return (
     <div className="app norail">

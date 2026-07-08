@@ -15,8 +15,6 @@ export const metadata = {
   ...ogMeta("Are credit card points and cash back taxable in Canada?", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "Are they taxable?" },
   { id: "why", label: "Why is it a rebate?" },

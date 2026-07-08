@@ -15,8 +15,6 @@ export const metadata = {
   ...ogMeta("Paying rent, taxes, and your mortgage with a credit card in Canada", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "premise", label: "Why won't these bills take a card?" },
   { id: "services", label: "Which services can pay them?" },

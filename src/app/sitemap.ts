@@ -7,9 +7,6 @@ import { TAGS, tagCount } from "@/data/tags";
 
 const BASE = "https://www.finterminal.ca";
 
-// Refresh the sitemap on the same short cycle as the content.
-export const revalidate = 3600;
-
 const STATIC_PATHS = [
   "",
   "/tags",

@@ -14,8 +14,6 @@ export const metadata = {
   ...ogMeta("FHSA vs the RRSP Home Buyers' Plan: which to use for a first home", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "short", label: "The short answer" },
   { id: "difference", label: "The one difference that decides it" },

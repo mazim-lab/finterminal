@@ -15,8 +15,6 @@ export const metadata = {
   ...ogMeta("Points vs cash back: which actually wins for your household", "Personal finance"),
 };
 
-export const revalidate = 3600;
-
 const TOC = [
   { id: "tradeoff", label: "What is the real tradeoff?" },
   { id: "cpp", label: "What cents-per-point math settles it?" },
