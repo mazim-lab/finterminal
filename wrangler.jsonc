@@ -18,12 +18,15 @@
     }
   ],
   // Persistent incremental cache (runtime ISR) across the fleet, backed by
-  // Workers KV (free plan, no subscription). No "id" is set: wrangler
-  // auto-provisions the namespace on first deploy (--experimental-provision is
-  // on by default), the same mechanism that attempted to create the R2 bucket.
+  // Workers KV (free plan, no subscription). The namespace must be created
+  // first and its id pinned here: auto-provisioning does NOT work for this
+  // binding, because OpenNext's populate-cache step runs `wrangler kv bulk put`
+  // BEFORE the worker deploy provisions anything (chicken-and-egg). The
+  // namespace "finterminal-inc-cache" was created in the dashboard.
   "kv_namespaces": [
     {
-      "binding": "NEXT_INC_CACHE_KV"
+      "binding": "NEXT_INC_CACHE_KV",
+      "id": "2f165e19677f4941a9d23f7f14472f44"
     }
   ]
   // upgrade path: enable R2 subscription in the dashboard, create bucket

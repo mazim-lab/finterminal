@@ -4,8 +4,10 @@ import kvIncrementalCache from "@opennextjs/cloudflare/overrides/incremental-cac
 // Workers KV-backed incremental cache = true runtime ISR: pages re-fetch
 // Airtable on their revalidate interval and the fresh HTML is persisted across
 // the fleet. KV is included in the free Workers plan (no subscription needed),
-// unlike R2. The KV namespace bound as NEXT_INC_CACHE_KV in wrangler.jsonc is
-// auto-provisioned by wrangler on first deploy (no pre-created id required).
+// unlike R2. The KV namespace bound as NEXT_INC_CACHE_KV in wrangler.jsonc must
+// be created first with its id pinned there: auto-provisioning does not work
+// because OpenNext's populate-cache step needs the namespace id before the
+// first worker deploy.
 //
 // upgrade path: enable R2 subscription in dashboard, create bucket
 // finterminal-inc-cache, swap this back:

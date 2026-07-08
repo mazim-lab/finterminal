@@ -44,11 +44,15 @@ name matching so the `WORKER_SELF_REFERENCE` service binding resolves.
 
 `open-next.config.ts` uses the Workers KV incremental cache for runtime ISR, and
 `wrangler.jsonc` binds it as `NEXT_INC_CACHE_KV`. KV is included in the free
-Workers plan and needs no subscription or payment method. Nothing to create by
-hand: the `kv_namespaces` binding has no `id`, so wrangler auto-provisions the
-namespace on the first deploy (its `--experimental-provision` behaviour is on by
-default). Confirm afterward under Dashboard -> Storage & Databases -> KV that a
-namespace bound as `NEXT_INC_CACHE_KV` now exists.
+Workers plan and needs no subscription or payment method. The namespace must be
+created first and its id pinned in `wrangler.jsonc`; wrangler's auto-provisioning
+does not work here because OpenNext's populate-cache step runs `wrangler kv bulk
+put` before the worker deploy provisions anything, so it fails with "No KV
+namespace ID found" if the id is missing. This is already done: the namespace
+`finterminal-inc-cache` (id `2f165e19677f4941a9d23f7f14472f44`) was created under
+Dashboard -> Storage & Databases -> KV and its id is set on the
+`NEXT_INC_CACHE_KV` binding. If the namespace is ever recreated, update the id
+in `wrangler.jsonc` to match.
 
 Upgrade path (optional, R2-backed cache): R2 is strongly consistent and is the
 adapter's recommended store, but enabling it is subscription-gated and requires
