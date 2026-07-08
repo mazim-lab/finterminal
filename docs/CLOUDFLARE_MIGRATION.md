@@ -40,21 +40,25 @@ upgrade is needed; the Workers free tier covers this site.
 The Worker name is `finterminal` (set in `wrangler.jsonc`); keep the dashboard
 name matching so the `WORKER_SELF_REFERENCE` service binding resolves.
 
-## 3. Create the R2 incremental-cache bucket
+## 3. Incremental-cache store (Workers KV)
 
-`open-next.config.ts` uses the R2 incremental cache for runtime ISR, and
-`wrangler.jsonc` binds it as `NEXT_INC_CACHE_R2_BUCKET`. The bucket must exist
-before the first deploy or the deploy will fail on the missing binding.
+`open-next.config.ts` uses the Workers KV incremental cache for runtime ISR, and
+`wrangler.jsonc` binds it as `NEXT_INC_CACHE_KV`. KV is included in the free
+Workers plan and needs no subscription or payment method. Nothing to create by
+hand: the `kv_namespaces` binding has no `id`, so wrangler auto-provisions the
+namespace on the first deploy (its `--experimental-provision` behaviour is on by
+default). Confirm afterward under Dashboard -> Storage & Databases -> KV that a
+namespace bound as `NEXT_INC_CACHE_KV` now exists.
 
-1. Dashboard -> R2 -> Create bucket.
-2. Name it exactly `finterminal-inc-cache`. One click, default settings.
-
-Note: enabling R2 requires a payment method (credit card or PayPal) on file,
-even though you stay within the free tier. Cloudflare uses it only as
-verification; you are not charged unless you exceed the R2 free allowance
-(10 GB storage, 1M Class A + 10M Class B operations per month), which this
-cache will not approach. Add the card once under R2 -> the activation/checkout
-prompt.
+Upgrade path (optional, R2-backed cache): R2 is strongly consistent and is the
+adapter's recommended store, but enabling it is subscription-gated and requires
+a payment method on file (free-tier allowance is 10 GB storage, 1M Class A +
+10M Class B operations per month, which this cache will not approach). To switch
+later: Dashboard -> R2 -> enable R2 and create a bucket named exactly
+`finterminal-inc-cache`, then in `open-next.config.ts` swap `kvIncrementalCache`
+back to `r2IncrementalCache` and in `wrangler.jsonc` replace the `kv_namespaces`
+binding with the `r2_buckets` binding (both commented alternatives are left in
+those files).
 
 ## 4. Set environment variables and secrets
 
@@ -79,7 +83,7 @@ After the first successful deploy, Cloudflare gives you a
 
 - `/` — home renders, fonts load (next/font is inlined at build time).
 - `/deals` — loads, and is served as ISR. Reload after the revalidate window
-  and confirm content refreshes (validates the R2 incremental cache is writing
+  and confirm content refreshes (validates the KV incremental cache is writing
   back, not just serving build-time HTML).
 - `/personal-finance`, `/guides`, `/travel`, `/news` — index pages render.
 - A specific article under each (e.g. `/news/<slug>`) — dynamic route renders.

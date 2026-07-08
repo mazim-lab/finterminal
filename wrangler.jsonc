@@ -17,12 +17,22 @@
       "service": "finterminal"
     }
   ],
-  // Persistent incremental cache (runtime ISR) across the fleet. The bucket
-  // "finterminal-inc-cache" MUST exist in R2 before the first deploy.
-  "r2_buckets": [
+  // Persistent incremental cache (runtime ISR) across the fleet, backed by
+  // Workers KV (free plan, no subscription). No "id" is set: wrangler
+  // auto-provisions the namespace on first deploy (--experimental-provision is
+  // on by default), the same mechanism that attempted to create the R2 bucket.
+  "kv_namespaces": [
     {
-      "binding": "NEXT_INC_CACHE_R2_BUCKET",
-      "bucket_name": "finterminal-inc-cache"
+      "binding": "NEXT_INC_CACHE_KV"
     }
   ]
+  // upgrade path: enable R2 subscription in the dashboard, create bucket
+  // finterminal-inc-cache, swap open-next.config.ts back to r2IncrementalCache,
+  // and replace the kv_namespaces binding above with:
+  //   "r2_buckets": [
+  //     {
+  //       "binding": "NEXT_INC_CACHE_R2_BUCKET",
+  //       "bucket_name": "finterminal-inc-cache"
+  //     }
+  //   ]
 }
