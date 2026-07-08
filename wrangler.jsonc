@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "finterminal",
+  "compatibility_date": "2025-03-25",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "finterminal"
+    }
+  ],
+  // Persistent incremental cache (runtime ISR) across the fleet. The bucket
+  // "finterminal-inc-cache" MUST exist in R2 before the first deploy.
+  "r2_buckets": [
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "finterminal-inc-cache"
+    }
+  ]
+}

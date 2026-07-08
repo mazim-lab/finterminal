@@ -5,6 +5,11 @@ node_modules/
 .next/
 out/
 
+# opennext / cloudflare workers build output
+.open-next/
+.wrangler/
+.dev.vars
+
 # data
 data/raw/
 

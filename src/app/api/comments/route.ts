@@ -21,12 +21,16 @@ function validPath(path: unknown): path is string {
   return typeof path === "string" && PATH_RE.test(path);
 }
 
-// Client IP for rate-limit bucketing. On Vercel `x-real-ip` is set by the
-// platform to the connecting peer and is NOT client-spoofable, so we trust it
-// first. `x-forwarded-for` CAN be forged by the caller (a client can prepend
-// its own hop), so we only use its first entry as a fallback when x-real-ip is
-// absent. Last resort is a constant so the limiter still buckets *something*.
+// Client IP for rate-limit bucketing. On Cloudflare `cf-connecting-ip` is set
+// by the edge to the connecting peer and is NOT client-spoofable, so we trust
+// it first. On Vercel `x-real-ip` plays the same non-spoofable role, so it is
+// the next fallback. `x-forwarded-for` CAN be forged by the caller (a client
+// can prepend its own hop), so we only use its first entry as a fallback when
+// neither trusted header is present. Last resort is a constant so the limiter
+// still buckets *something*.
 function clientIp(req: NextRequest): string {
+  const cfIp = req.headers.get("cf-connecting-ip")?.trim();
+  if (cfIp) return cfIp;
   const realIp = req.headers.get("x-real-ip")?.trim();
   if (realIp) return realIp;
   const xff = req.headers.get("x-forwarded-for");
