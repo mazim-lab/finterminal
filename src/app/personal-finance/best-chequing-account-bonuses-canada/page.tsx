@@ -5,6 +5,7 @@ import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Best chequing account welcome bonuses in Canada | FinTerminal",
@@ -369,6 +370,7 @@ export default function BestChequingBonusesPage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/best-chequing-account-bonuses-canada" />
         </div>
       </main>
     </div>

@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { ShieldMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "What Your Credit Card's Travel Insurance Actually Covers in Canada | FinTerminal",
@@ -462,6 +463,7 @@ export default function CreditCardTravelInsurancePage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/credit-card-travel-insurance-canada" />
         </div>
       </main>
     </div>

@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { FeePercentMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "How Credit Card Interest Works in Canada (and How to Never Pay It) | FinTerminal",
@@ -422,6 +423,7 @@ export default function CreditCardInterestPage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/credit-card-interest-canada" />
         </div>
       </main>
     </div>

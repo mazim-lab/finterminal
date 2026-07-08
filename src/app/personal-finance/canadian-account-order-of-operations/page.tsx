@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Where your next dollar should go: the Canadian account order | FinTerminal",
@@ -291,6 +292,7 @@ export default function AccountOrderOfOperationsPage() {
             <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
             <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse cards →</Link>
           </div>
+          <Comments path="/personal-finance/canadian-account-order-of-operations" />
         </div>
       </main>
     </div>

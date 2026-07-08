@@ -6,6 +6,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Two-player mode: how Canadian couples double their welcome bonuses | FinTerminal",
@@ -291,6 +292,7 @@ export default function TwoPlayerModePage() {
             <Link href="/cards" className="cd-apply">Browse cards &amp; bonuses →</Link>
             <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>More personal finance →</Link>
           </div>
+          <Comments path="/personal-finance/two-player-mode-couples-welcome-bonuses" />
         </div>
       </main>
     </div>

@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { GrowthMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "The Smith Manoeuvre, explained properly | FinTerminal",
@@ -290,6 +291,7 @@ export default function SmithManoeuvrePage() {
             <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>More personal finance →</Link>
             <Link href="/travel" className="cd-apply">Travel &amp; points →</Link>
           </div>
+          <Comments path="/personal-finance/smith-manoeuvre" />
         </div>
       </main>
     </div>

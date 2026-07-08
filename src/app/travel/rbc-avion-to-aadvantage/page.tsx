@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { TransferFlowMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "How to transfer RBC Avion points to American Airlines AAdvantage | FinTerminal",
@@ -287,6 +288,7 @@ export default function AvionToAmericanAirlinesPage() {
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map →</Link>
             <Link href="/cards?q=avion" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>RBC Avion cards →</Link>
           </div>
+          <Comments path="/travel/rbc-avion-to-aadvantage" />
         </div>
       </main>
     </div>

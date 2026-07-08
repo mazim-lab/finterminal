@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { RouteArcsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "How to search for and book award flights from Canada: the method | FinTerminal",
@@ -340,6 +341,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
             <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply">Avios sweet spots &amp; Avion transfer →</Link>
             <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards →</Link>
           </div>
+          <Comments path="/travel/how-to-book-award-flights-canada" />
         </div>
       </main>
     </div>

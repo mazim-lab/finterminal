@@ -5,6 +5,7 @@ import { GrowthMotif } from "@/components/heroes/motifs";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "FHSA vs the RRSP Home Buyers' Plan: which to use for a first home | FinTerminal",
@@ -436,6 +437,7 @@ export default function FHSAvsHBPPage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/fhsa-vs-rrsp-home-buyers-plan" />
         </div>
       </main>
     </div>

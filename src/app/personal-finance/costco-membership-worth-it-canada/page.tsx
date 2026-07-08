@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { ValueCoinsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Does a Costco membership pay for itself? | FinTerminal",
@@ -322,6 +323,7 @@ export default function CostcoMembershipPage() {
             <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
             <Link href="/cards?q=cashback" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Cash-back cards →</Link>
           </div>
+          <Comments path="/personal-finance/costco-membership-worth-it-canada" />
         </div>
       </main>
     </div>

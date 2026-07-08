@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { isPFPublished } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Points vs cash back: which actually wins for your household | FinTerminal",
@@ -310,6 +311,7 @@ export default function PointsVsCashBackPage() {
             <Link href="/cards" className="cd-apply">Browse cards →</Link>
             <Link href="/how-we-value-points" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>How we value points →</Link>
           </div>
+          <Comments path="/personal-finance/points-vs-cash-back-canada" />
         </div>
       </main>
     </div>

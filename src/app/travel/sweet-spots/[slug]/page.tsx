@@ -5,6 +5,7 @@ import { ArticleTags } from "@/components/ArticleTags";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
 import { ArticleHero } from "@/components/ArticleHero";
+import { Comments } from "@/components/Comments";
 import { RouteArcsMotif } from "@/components/heroes/motifs";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
 
@@ -125,6 +126,8 @@ export default async function SweetSpotPage({ params }: { params: Promise<{ slug
               ← Back to Travel &amp; Points
             </Link>
           </div>
+
+          <Comments path={`/travel/sweet-spots/${spot.slug}`} />
         </div>
       </main>
     </div>

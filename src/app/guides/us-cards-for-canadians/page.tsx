@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArticleTags } from "@/components/ArticleTags";
+import { Comments } from "@/components/Comments";
 
 const FAQ = [
   {
@@ -466,6 +467,7 @@ export default function USCardsGuidePage() {
             <Link href="/cards?country=US" className="cd-apply">Browse US cards →</Link>
             <Link href="/cards?country=CA" className="cd-apply" style={{ borderColor: 'var(--line-strong)', color: 'var(--ink)' }}>Canadian cards →</Link>
           </div>
+          <Comments path="/guides/us-cards-for-canadians" />
         </div>
 
         <script

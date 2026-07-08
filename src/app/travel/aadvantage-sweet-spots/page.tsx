@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { RouteArcsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "AAdvantage sweet spots: redeeming American Airlines miles | FinTerminal",
@@ -278,6 +279,7 @@ export default function AAdvantageSweetSpotsPage() {
             <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Avios sweet spots →</Link>
           </div>
+          <Comments path="/travel/aadvantage-sweet-spots" />
         </div>
       </main>
     </div>

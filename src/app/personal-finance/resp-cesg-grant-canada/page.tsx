@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import { isPFPublished, pfArticleBySlug } from "@/data/personal-finance";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "RESP and the 20% CESG grant: the easiest guaranteed return in Canada | FinTerminal",
@@ -314,6 +315,7 @@ export default function RespCesgGrantPage() {
             <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
             <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse cards &amp; bonuses →</Link>
           </div>
+          <Comments path="/personal-finance/resp-cesg-grant-canada" />
         </div>
       </main>
     </div>

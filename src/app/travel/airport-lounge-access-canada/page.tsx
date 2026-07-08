@@ -5,6 +5,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { RouteArcsMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Airport lounge access for Canadians: how it actually works | FinTerminal",
@@ -331,6 +332,7 @@ export default function AirportLoungeAccessCanadaPage() {
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map &rarr;</Link>
             <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards &rarr;</Link>
           </div>
+          <Comments path="/travel/airport-lounge-access-canada" />
         </div>
       </main>
     </div>

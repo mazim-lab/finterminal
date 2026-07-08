@@ -4,6 +4,7 @@ import { ArticleHero } from "@/components/ArticleHero";
 import { CreditGaugeMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
+import { Comments } from "@/components/Comments";
 
 export const metadata = {
   title: "Check Your Credit Report and Score in Canada, Free | FinTerminal",
@@ -413,6 +414,7 @@ export default function CheckYourCreditReportPage() {
               More personal finance &rarr;
             </Link>
           </div>
+          <Comments path="/personal-finance/check-your-credit-report-canada" />
         </div>
       </main>
     </div>
