@@ -66,13 +66,10 @@ those files).
 
 ## 4. Set environment variables and secrets
 
-Worker -> Settings -> Variables and Secrets. Add as encrypted secrets:
+Worker -> Settings -> Variables and Secrets. Add as encrypted secrets.
 
-Needed from day one (Airtable-backed content):
-- `AIRTABLE_TOKEN`
-- `AIRTABLE_BASE_ID`
-
-Add only when comments go live (KV-backed comments + moderation):
+Only needed when comments are activated (KV-backed comments + moderation);
+the site builds and serves without these:
 - `KV_REST_API_URL`
 - `KV_REST_API_TOKEN`
 - `COMMENTS_ADMIN_TOKEN`

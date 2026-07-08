@@ -112,7 +112,7 @@ export async function GET(req: Request) {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div style={{ display: "flex", color: "#8C998F", fontSize: "26px", fontWeight: 400 }}>finterminal.ca</div>
           <div style={{ display: "flex", color: "#46B36C", fontSize: "24px", fontWeight: 700 }}>
-            &gt; independent · verified data
+            &gt; verified data · dated on every number
           </div>
         </div>
       </div>
