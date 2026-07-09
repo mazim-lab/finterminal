@@ -334,6 +334,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-new-ceo-anko-van-der-werff",
+    title: "Air Canada names Anko Van der Werff as its next CEO, starting early 2027",
+    dek: "Air Canada said on July 8 that Scandinavian Airlines chief Anko Van der Werff will take over as president and CEO by the end of January 2027, succeeding the retiring Michael Rousseau.",
+    section: "News",
+    tags: ["news", "aeroplan", "travel"],
+  },
+  {
     path: "/news/scene-plus-members-day-july-7-grocery-discount-or-points",
     title: "Scene+ Members Day lands today with a choice of up to 15 percent off groceries or bonus points",
     dek: "A one-day Scene+ Members Day at Sobeys and its Empire grocery banners lets you take 10 or 15 percent off, depending on your province, or earn 200 points per $20 on a $50-plus shop, so plan a bigger grocery run for today.",

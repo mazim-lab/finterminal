@@ -29,6 +29,21 @@ export interface NewsItem {
 // archive: never delete or rewrite existing items, only prepend new ones.
 export const NEWS: NewsItem[] = [
   {
+    time: "08:00",
+    slug: "air-canada-new-ceo-anko-van-der-werff",
+    headline: "Air Canada names Anko Van der Werff as its next CEO, starting early 2027",
+    dek: "Air Canada said on July 8 that Scandinavian Airlines chief Anko Van der Werff will take over as president and CEO by the end of January 2027, succeeding the retiring Michael Rousseau.",
+    body:
+      "This one does not change anything in your Aeroplan account today, but it is worth knowing who will be steering the airline you fly and the loyalty program you save into. Air Canada said on July 8 that Anko Van der Werff, currently the chief executive at Scandinavian Airlines, will become its next president and CEO by the end of January 2027. He takes over from Michael Rousseau, who is retiring after nearly two decades with the company. Van der Werff brings a long international résumé, with senior stops at SAS, Avianca, Aeroméxico, KLM, and Qatar Airways across some twenty-five years in the business. A change at the top rarely shows up in award charts overnight, so there is nothing to act on right now, but new leadership does tend to set the tone for where a program like Aeroplan heads next, and this is the person who will be setting it. We will keep an eye on what it means for members as he settles into the role.",
+    category: "Travel and points",
+    region: "CA",
+    date: "Jul 8, 2026",
+    sourceLabel: "Air Canada",
+    sourceUrl: "https://www.aircanada.com/media/air-canada-announces-appointment-of-anko-van-der-werff-as-president-and-chief-executive-officer/",
+    href: "/travel/aeroplan-sweet-spots",
+    hrefLabel: "Aeroplan sweet-spots guide",
+  },
+  {
     time: "09:00",
     slug: "scene-plus-members-day-july-7-grocery-discount-or-points",
     headline: "Scene+ Members Day lands today with a choice of up to 15 percent off groceries or bonus points",
