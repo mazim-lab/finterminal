@@ -342,6 +342,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/rbc-avion-aadvantage-15-percent-transfer-bonus-august",
+    title: "RBC's summer Avion-to-AAdvantage transfer bonus is back, 15 percent through August",
+    dek: "RBC confirmed on July 8 that its annual bonus for moving Avion points to American Airlines AAdvantage returns for August, giving 8.05 miles for every 10 Avion points transferred all month.",
+    section: "News",
+    tags: ["news", "rbc-avion", "aadvantage", "transfers", "points"],
+  },
+  {
     path: "/news/air-canada-new-ceo-anko-van-der-werff",
     title: "Air Canada names Anko Van der Werff as its next CEO, starting early 2027",
     dek: "Air Canada said on July 8 that Scandinavian Airlines chief Anko Van der Werff will take over as president and CEO by the end of January 2027, succeeding the retiring Michael Rousseau.",

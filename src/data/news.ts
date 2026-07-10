@@ -29,6 +29,21 @@ export interface NewsItem {
 // archive: never delete or rewrite existing items, only prepend new ones.
 export const NEWS: NewsItem[] = [
   {
+    time: "08:30",
+    slug: "rbc-avion-aadvantage-15-percent-transfer-bonus-august",
+    headline: "RBC's summer Avion-to-AAdvantage transfer bonus is back, 15 percent through August",
+    dek: "RBC confirmed on July 8 that its annual bonus for moving Avion points to American Airlines AAdvantage returns for August, giving 8.05 miles for every 10 Avion points transferred all month.",
+    body:
+      "If you sit on a pile of RBC Avion points, this is the window a lot of Canadians wait for. RBC confirmed on July 8 that its yearly summer transfer bonus to American Airlines AAdvantage is coming back, running the full month of August. Avion normally moves to AAdvantage at 10 points to 7 miles, and the 15 percent bonus nudges that up to 8.05 miles for every 10 points you send, on any transfer of 5,000 points or more. AAdvantage is one of the more useful currencies you can feed from Canada, since it books oneworld partners like Cathay Pacific, Qatar, and Japan Airlines, and it is the main reason Avion is worth holding for travel rather than cashing out. A couple of honest notes before you move anything: transfers are one-way and can take up to four weeks to land, so this is not a bonus to chase on a whim. Only send points you already have a redemption in mind for, and check that the award seat you want is actually there before you hit the button, because once the miles are in AAdvantage they are staying there. If a specific trip lines up, though, this is a tidy way to stretch a balance you have been building all year.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jul 8, 2026",
+    sourceLabel: "RBC Avion Rewards",
+    sourceUrl: "https://www.avionrewards.com/en-ca/lp/travel/american-airlines/",
+    href: "/cards?q=avion",
+    hrefLabel: "Compare RBC Avion cards",
+  },
+  {
     time: "08:00",
     slug: "air-canada-new-ceo-anko-van-der-werff",
     headline: "Air Canada names Anko Van der Werff as its next CEO, starting early 2027",
