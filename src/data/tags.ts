@@ -21,6 +21,7 @@ export const TAGS: Tag[] = [
   { slug: "avios", label: "Avios", description: "The Avios currency behind British Airways, Qatar, and friends, and how Canadians reach it." },
   { slug: "aadvantage", label: "AAdvantage", description: "American Airlines miles, the partner sweet spots, and how to feed them from Canada." },
   { slug: "delta", label: "Delta SkyMiles", description: "Delta SkyMiles for Canadians, where the dynamic pricing hides real value and how to feed a balance from here." },
+  { slug: "united", label: "United MileagePlus", description: "United MileagePlus for Canadians, where the fixed partner Saver chart and no fuel surcharges hide the real value, and how to feed a balance from here." },
   { slug: "westjet", label: "WestJet Rewards", description: "WestJet points and the RBC companion voucher, and how Canadians squeeze value out of both." },
   { slug: "scene-plus", label: "Scene+", description: "Scotiabank and Empire's Scene+ program: earning at the grocery till and cashing points out at par." },
   { slug: "amex", label: "Amex / Membership Rewards", description: "Amex Membership Rewards, the transfer partners, and the cards that earn them." },
@@ -330,6 +331,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     dek: "WestJet points are a flat cent each with no award chart, so the real sweet spot for Canadians is the RBC World Elite companion voucher, which caps a second Premium base fare to Europe at $499.",
     section: "Sweet spot",
     tags: ["travel", "westjet", "points", "travel-cards", "cards"],
+  },
+  {
+    path: "/travel/sweet-spots/united-partner-business-europe-88k",
+    title: "United sweet spot: Star Alliance business class to Europe from about 88,000 miles with almost no surcharges",
+    dek: "United prices its own flights dynamically, but partner awards still come off a fixed Saver chart, so the durable United sweet spot is a lie-flat seat to Europe on Lufthansa or SWISS from around 88,000 miles one-way, and economy from about 30,000, with the fuel surcharges stripped out.",
+    section: "Sweet spot",
+    tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
   },
 
   // News items

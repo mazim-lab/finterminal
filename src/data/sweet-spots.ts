@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "united-partner-business-europe-88k",
+    program: "United",
+    title: "United sweet spot: Star Alliance business class to Europe from about 88,000 miles with almost no surcharges",
+    dek: "United prices its own flights dynamically, but partner awards still come off a fixed Saver chart, so the durable United sweet spot is a lie-flat seat to Europe on Lufthansa or SWISS from around 88,000 miles one-way, and economy from about 30,000, with the fuel surcharges stripped out.",
+    read: "5 min read",
+    date: "Jul 2026",
+    lastChecked: "2026-07-10",
+    body:
+      "United MileagePlus works differently from a fixed-chart program like Aeroplan, and it is worth saying so before we talk value. United prices its own flights dynamically, so a seat on United metal floats with the cash fare and there is no band to memorize. Its partner awards are the exception, and that is where the real sweet spot lives. When you book a Star Alliance partner such as Lufthansa, SWISS, Austrian, Brussels Airlines, LOT, or TAP through United, the price still comes off a fixed Saver chart, and United does not pass along the carrier-imposed fuel surcharges those airlines are known for. The figures below are an example of how that chart works, not a quote for any date, so always confirm the live price when you search.\n\nThe numbers look like this. North America to Europe on a Star Alliance partner prices from around 30,000 miles one-way in economy and about 88,000 miles one-way in business at the Saver level, and United has at times brought partner business to Europe down closer to 80,000. Treat those as approximate bands rather than a fixed quote, because United does adjust them. The real magic is the cash side, because United absorbs the fuel surcharges, so a Lufthansa or SWISS business seat that would cost hundreds of dollars in surcharges through some other programs comes with only modest taxes attached.\n\nHere is the cents-per-mile math on a realistic business booking. Say the cash fare is about $5,000 and the award books for 88,000 miles plus taxes and fees. Out of a US gateway those fees can be almost nothing, and out of a Canadian city they run higher, so call it roughly $150 all in. That works out to (5000 minus 150) divided by 88000, times 100, which is about 5.5 cents per mile. Anything north of about 1.5 cents is a strong use of United miles, so a lie-flat seat to Europe at this price is your miles doing real work. Prices move, so confirm the live fare when you book.\n\nA couple of things make it sing. United shows most Star Alliance partner Saver space right on united.com, so you can hunt for a Lufthansa or SWISS seat and book it online without a phone call. And the no-surcharge policy is the durable edge here, because the same partner business seat booked through a surcharge-passing program can carry several hundred dollars in fees, while United keeps the cash portion small. Search a range of dates, because Saver space in the front cabin is genuinely limited and the best days go early.\n\nNow the honest caveats, and there are a few. Earning United miles is the hard part for Canadians, because no Canadian bank transfers directly to United. The cleanest route is Marriott Bonvoy, which moves to United at 3 to 1 and tacks on bonus miles when you transfer in 60,000-point blocks, so a 60,000-point transfer lands as roughly 25,000 United miles rather than 20,000. Confirm the current ratio and any transfer bonus before you move points, since transfers are one-way. The other thing to know is that the co-branded card discount, the 10 to 15 percent fewer miles some United cardholders get, applies only to United-operated flights, not to these partner awards, so it does not help here. And the old Excursionist Perk that let you tack a free one-way onto a round trip is gone as of August 2025, so do not plan around it. If business space is scarce, that 30,000-mile economy seat to Europe is the quiet everyday version of this sweet spot, and it prices just as cleanly.",
+    href: "/cards?q=marriott",
+    hrefLabel: "Bonvoy cards that feed United",
+    shortAnswer:
+      "United MileagePlus prices its own flights dynamically, but partner awards still come off a fixed Saver chart, and that is the durable sweet spot: North America to Europe on a Star Alliance partner such as Lufthansa or SWISS runs from around 30,000 miles one-way in economy and about 88,000 in business, sometimes closer to 80,000. Because United does not pass along fuel surcharges, the cash portion stays small, so on a roughly $5,000 business fare booked for 88,000 miles plus about $150 in taxes that is around 5.5 cents per mile, well above the 1.5 cents that already counts as a strong use. Earning is the hard part for Canadians, since no Canadian bank transfers directly to United and the cleanest route is Marriott Bonvoy at 3 to 1, so 60,000 Bonvoy points land as roughly 25,000 United miles. These are approximate chart bands, not a quote for any date, so confirm the live price when you search.",
+    faqs: [
+      {
+        q: "How many United miles is North America to Europe in business?",
+        a: "On a Star Alliance partner such as Lufthansa or SWISS, business prices from around 88,000 miles one-way at the Saver level, and United has at times brought it down closer to 80,000. Economy on the same partners starts from about 30,000 miles one-way. Treat these as approximate chart bands rather than a fixed quote, and confirm the live price when you search, because United does adjust them.",
+      },
+      {
+        q: "Is booking partner business to Europe on United a good value?",
+        a: "Yes. On a roughly $5,000 cash fare booked for 88,000 miles plus about $150 in taxes and fees, the math is (5000 minus 150) divided by 88000, times 100, which is about 5.5 cents per mile. Anything north of about 1.5 cents is a strong use of United miles, so a lie-flat seat to Europe at this price is your miles doing real work.",
+      },
+      {
+        q: "Does United charge fuel surcharges on partner awards?",
+        a: "No, and that is the durable edge of this sweet spot. United does not pass along the carrier-imposed fuel surcharges that airlines like Lufthansa and SWISS are known for, so a business seat that would cost hundreds of dollars in surcharges through some other programs comes with only modest taxes attached.",
+      },
+      {
+        q: "How do Canadians earn United miles?",
+        a: "It is the hard part, because no Canadian bank transfers directly to United. The cleanest route is Marriott Bonvoy, which moves to United at 3 to 1 and adds bonus miles when you transfer in 60,000-point blocks, so a 60,000-point transfer lands as roughly 25,000 United miles rather than 20,000. Confirm the current ratio and any transfer bonus first, since transfers are one-way.",
+      },
+      {
+        q: "Does the United credit card discount help on partner awards?",
+        a: "No. The 10 to 15 percent fewer miles that some United cardholders and elites get applies only to United-operated flights, not to partner awards, so it does not lower these Lufthansa or SWISS bookings. The old Excursionist Perk that added a free one-way to a round trip is also gone as of August 2025, so do not plan around it.",
+      },
+      {
+        q: "What if business class space is scarce?",
+        a: "Fall back to economy. North America to Europe on the same Star Alliance partners prices from about 30,000 miles one-way at the Saver level, the quiet everyday version of this sweet spot, and it prices just as cleanly with the same low surcharges. Search a range of dates, because Saver space in every cabin is limited and the best days go early.",
+      },
+    ],
+  },
+  {
     slug: "delta-flash-sale-europe-economy-26k",
     program: "Delta",
     title: "Delta sweet spot: round-trip economy to Europe near 26,000 SkyMiles in the flash sales",
