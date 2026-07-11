@@ -342,6 +342,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-flight-attendants-strike-mandate-vote",
+    title: "WestJet flight attendants open a strike-mandate vote, but the earliest any walkout could come is August",
+    dek: "WestJet's roughly 4,400 mainline flight attendants, represented by CUPE, opened a strike-mandate vote on July 8 that runs through July 15, though a vote is not a strike and the earliest a legal walkout or lockout could begin is August 2.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/rbc-avion-aadvantage-15-percent-transfer-bonus-august",
     title: "RBC's summer Avion-to-AAdvantage transfer bonus is back, 15 percent through August",
     dek: "RBC confirmed on July 8 that its annual bonus for moving Avion points to American Airlines AAdvantage returns for August, giving 8.05 miles for every 10 Avion points transferred all month.",

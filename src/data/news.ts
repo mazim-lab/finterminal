@@ -30,6 +30,21 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "westjet-flight-attendants-strike-mandate-vote",
+    headline: "WestJet flight attendants open a strike-mandate vote, but the earliest any walkout could come is August",
+    dek: "WestJet's roughly 4,400 mainline flight attendants, represented by CUPE, opened a strike-mandate vote on July 8 that runs through July 15, though a vote is not a strike and the earliest a legal walkout or lockout could begin is August 2.",
+    body:
+      "If you have a WestJet flight booked this summer, here is what is happening and, just as importantly, what is not happening yet. The roughly 4,400 cabin crew at WestJet's mainline operation, represented by CUPE Local 8125, opened a strike-mandate vote on July 8 that runs through July 15. A strong yes gives their bargaining team leverage as talks carry on, with wages, scheduling, and work-life balance the main sticking points. The part worth holding onto is that a strike-mandate vote is not a strike, and it does not put your next flight at risk. The federal conciliation period was set to wrap up around July 11, and even in the worst case a mandatory 21-day cooling-off period follows, which means the earliest a legal strike or lockout could begin is August 2. Anything before then should operate as normal. If you are flying WestJet in August or later, this is worth watching rather than worrying about, so keep an eye out for the vote result after July 15, hold on to a little flexibility if your dates allow it, and make sure any trip you would struggle to rebook is covered by decent travel insurance. Both sides say they still want a negotiated deal, and most of these disputes settle before a single flight is cancelled, so there is no need to change your plans today.",
+    category: "Travel and points",
+    region: "CA",
+    date: "Jul 11, 2026",
+    sourceLabel: "CUPE",
+    sourceUrl: "https://cupe.ca/news/westjet-flight-attendants-open-historic-strike-vote",
+    href: "/cards?q=westjet",
+    hrefLabel: "Compare WestJet cards",
+  },
+  {
+    time: "08:30",
     slug: "rbc-avion-aadvantage-15-percent-transfer-bonus-august",
     headline: "RBC's summer Avion-to-AAdvantage transfer bonus is back, 15 percent through August",
     dek: "RBC confirmed on July 8 that its annual bonus for moving Avion points to American Airlines AAdvantage returns for August, giving 8.05 miles for every 10 Avion points transferred all month.",
