@@ -342,6 +342,20 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-buy-points-100-percent-bonus-flash-sale-july",
+    title: "Aeroplan's summer buy-points sale is back with up to a 100 percent bonus, running through July 17",
+    dek: "Aeroplan brought back its summer buy-points sale on July 12 with up to a 100 percent bonus through July 17, and it lifted the per-transaction cap to 500,000 points, though the offer looks targeted so the bonus you see may be lower.",
+    section: "News",
+    tags: ["news", "aeroplan", "points"],
+  },
+  {
+    path: "/news/rbc-avion-record-high-welcome-bonuses-final-days-july-15",
+    title: "RBC's record-high Avion welcome bonuses close July 15, up to 70,000 points on the Visa Infinite and 100,000 on the Privilege",
+    dek: "RBC's record-high Avion welcome offers close to new applications on July 15, with up to 70,000 Avion points on the Visa Infinite and up to 100,000 on the Visa Infinite Privilege.",
+    section: "News",
+    tags: ["news", "rbc-avion", "cards", "welcome-bonuses"],
+  },
+  {
     path: "/news/westjet-flight-attendants-strike-mandate-vote",
     title: "WestJet flight attendants open a strike-mandate vote, but the earliest any walkout could come is August",
     dek: "WestJet's roughly 4,400 mainline flight attendants, represented by CUPE, opened a strike-mandate vote on July 8 that runs through July 15, though a vote is not a strike and the earliest a legal walkout or lockout could begin is August 2.",

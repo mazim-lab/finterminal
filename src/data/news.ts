@@ -30,6 +30,36 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "aeroplan-buy-points-100-percent-bonus-flash-sale-july",
+    headline: "Aeroplan's summer buy-points sale is back with up to a 100 percent bonus, running through July 17",
+    dek: "Aeroplan brought back its summer buy-points sale on July 12 with up to a 100 percent bonus through July 17, and it lifted the per-transaction cap to 500,000 points, though the offer looks targeted so the bonus you see may be lower.",
+    body:
+      "If you have a specific Aeroplan redemption in your sights, this is one of the better windows to top up. Aeroplan brought back its summer buy-points sale on July 12, offering up to a 100 percent bonus on purchased points through July 17, which in plain terms means you can double whatever you buy. It looks to be targeted, so the exact bonus you see when you log in may land below 100 percent, and the price you pay per point is what really matters. For this sale Aeroplan also lifted the usual cap from 250,000 points to 500,000 before the bonus, so a member chasing a big premium-cabin booking could pick up as much as a million points in one go, though that would run close to $14,000, so this is not a casual purchase. The honest rule with buying points never changes: only buy when you have already found the award seat you want and the math beats paying cash for the same flight. Buy them speculatively and they tend to sit there losing value to the next devaluation. Purchased points usually land in your account within 72 hours, so give yourself a little buffer if a seat is on hold.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jul 12, 2026",
+    sourceLabel: "Aeroplan",
+    sourceUrl: "https://www.aircanada.com/ca/en/aco/home/aeroplan/your-aeroplan.html",
+    href: "/travel/aeroplan-sweet-spots",
+    hrefLabel: "Aeroplan sweet-spots guide",
+  },
+  {
+    time: "08:30",
+    slug: "rbc-avion-record-high-welcome-bonuses-final-days-july-15",
+    headline: "RBC's record-high Avion welcome bonuses close July 15, up to 70,000 points on the Visa Infinite and 100,000 on the Privilege",
+    dek: "RBC's record-high Avion welcome offers close to new applications on July 15, with up to 70,000 Avion points on the Visa Infinite and up to 100,000 on the Visa Infinite Privilege.",
+    body:
+      "If a big travel card has been on your list, the clock is the story here. RBC's record-high welcome offers on its Avion travel cards are in their final days, with applications needing to be in by July 15. The RBC Avion Visa Infinite carries up to 70,000 Avion points, an all-time high for the card, split into 35,000 points that post within sixty days of approval, another 20,000 once you spend $5,000 in the first six months, and a final 15,000 after your first anniversary. The step-up Avion Visa Infinite Privilege goes up to 100,000 points for those who can carry its heftier fee. Avion is one of the few Canadian currencies that actually moves to airlines, transferring to British Airways Avios, American AAdvantage, and WestJet, which is what makes these points worth holding rather than cashing out. A couple of honest notes before you rush: the Visa Infinite needs a $60,000 personal or $100,000 household income, those spend targets are real money, and a welcome bonus is only worth chasing if the card earns its keep after year one. If it fits, though, this is the richest this card has been.",
+    category: "Card offers",
+    region: "CA",
+    date: "Jul 10, 2026",
+    sourceLabel: "RBC Royal Bank",
+    sourceUrl: "https://www.rbcroyalbank.com/credit-cards/travel/rbc-avion-visa-infinite.html",
+    href: "/cards?q=avion",
+    hrefLabel: "Compare RBC Avion cards",
+  },
+  {
+    time: "08:30",
     slug: "westjet-flight-attendants-strike-mandate-vote",
     headline: "WestJet flight attendants open a strike-mandate vote, but the earliest any walkout could come is August",
     dek: "WestJet's roughly 4,400 mainline flight attendants, represented by CUPE, opened a strike-mandate vote on July 8 that runs through July 15, though a vote is not a strike and the earliest a legal walkout or lockout could begin is August 2.",
