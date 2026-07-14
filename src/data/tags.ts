@@ -350,6 +350,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-city-shuttle-downtown-montreal-yul",
+    title: "Air Canada launches a $9 City Shuttle between downtown Montréal and the airport",
+    dek: "Air Canada started a new City Shuttle on July 13 running between the Palais des congrès downtown and Montréal-Trudeau airport for $9 one way, with 37 departures a day and a dedicated lane that can shave up to 25 minutes off the trip at peak times.",
+    section: "News",
+    tags: ["news", "travel"],
+  },
+  {
     path: "/news/aeroplan-buy-points-100-percent-bonus-flash-sale-july",
     title: "Aeroplan's summer buy-points sale is back with up to a 100 percent bonus, running through July 17",
     dek: "Aeroplan brought back its summer buy-points sale on July 12 with up to a 100 percent bonus through July 17, and it lifted the per-transaction cap to 500,000 points, though the offer looks targeted so the bonus you see may be lower.",

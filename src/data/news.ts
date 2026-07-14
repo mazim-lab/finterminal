@@ -30,6 +30,21 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "air-canada-city-shuttle-downtown-montreal-yul",
+    headline: "Air Canada launches a $9 City Shuttle between downtown Montréal and the airport",
+    dek: "Air Canada started a new City Shuttle on July 13 running between the Palais des congrès downtown and Montréal-Trudeau airport for $9 one way, with 37 departures a day and a dedicated lane that can shave up to 25 minutes off the trip at peak times.",
+    body:
+      "If you fly out of Montréal, getting to the airport just got a little easier on the wallet. Air Canada launched its City Shuttle on July 13, a direct motorcoach run between the Palais des congrès de Montréal downtown and Montréal-Trudeau airport for $9 one way plus tax, with children under 15 riding free when they are with an adult. It leaves 37 times a day, every 15 minutes through the early-morning rush and every half hour after that until the last departure at 10 p.m., and it uses the highway's high-occupancy lane and a private airport entrance, which Air Canada says can save you up to 25 minutes at busy times versus the usual roads. The coaches are Quebec-built Prevost vehicles with reclining leather seats, extra legroom, power outlets, and a washroom, run in partnership with The Landline Company. It is worth a quick comparison before you book, since the REM light rail already links downtown to the airport and a taxi or rideshare is quicker door to door if you are nowhere near the Palais des congrès, so this one shines most for travellers starting downtown who want a comfortable, predictable ride at a fair price. If that is you, it is a tidy little addition to the Montréal trip.",
+    category: "Travel and points",
+    region: "CA",
+    date: "Jul 13, 2026",
+    sourceLabel: "Air Canada",
+    sourceUrl: "https://www.aircanada.com/media/air-canada-launches-fast-frequent-city-shuttle-between-downtown-montr%C3%A9al-and-montr%C3%A9al-trudeau-airport",
+    href: "/travel",
+    hrefLabel: "Explore travel and points",
+  },
+  {
+    time: "08:30",
     slug: "aeroplan-buy-points-100-percent-bonus-flash-sale-july",
     headline: "Aeroplan's summer buy-points sale is back with up to a 100 percent bonus, running through July 17",
     dek: "Aeroplan brought back its summer buy-points sale on July 12 with up to a 100 percent bonus through July 17, and it lifted the per-transaction cap to 500,000 points, though the offer looks targeted so the bonus you see may be lower.",
