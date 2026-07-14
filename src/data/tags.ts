@@ -23,6 +23,7 @@ export const TAGS: Tag[] = [
   { slug: "delta", label: "Delta SkyMiles", description: "Delta SkyMiles for Canadians, where the dynamic pricing hides real value and how to feed a balance from here." },
   { slug: "united", label: "United MileagePlus", description: "United MileagePlus for Canadians, where the fixed partner Saver chart and no fuel surcharges hide the real value, and how to feed a balance from here." },
   { slug: "westjet", label: "WestJet Rewards", description: "WestJet points and the RBC companion voucher, and how Canadians squeeze value out of both." },
+  { slug: "alaska", label: "Alaska Atmos Rewards", description: "Alaska's Atmos Rewards, formerly Mileage Plan, where the fixed distance-based partner charts and no fuel surcharges hide lie-flat value to Asia, and how Canadians feed a balance." },
   { slug: "scene-plus", label: "Scene+", description: "Scotiabank and Empire's Scene+ program: earning at the grocery till and cashing points out at par." },
   { slug: "amex", label: "Amex / Membership Rewards", description: "Amex Membership Rewards, the transfer partners, and the cards that earn them." },
   { slug: "rbc-avion", label: "RBC Avion", description: "RBC's Avion points, one of the few Canadian currencies that actually transfers to airlines." },
@@ -338,6 +339,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     dek: "United prices its own flights dynamically, but partner awards still come off a fixed Saver chart, so the durable United sweet spot is a lie-flat seat to Europe on Lufthansa or SWISS from around 88,000 miles one-way, and economy from about 30,000, with the fuel surcharges stripped out.",
     section: "Sweet spot",
     tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
+  },
+  {
+    path: "/travel/sweet-spots/alaska-jal-business-vancouver-tokyo-60k",
+    title: "Alaska sweet spot: Vancouver or Seattle to Tokyo in JAL business for 60,000 Atmos points with no fuel surcharges",
+    dek: "Alaska's Mileage Plan is now Atmos Rewards, but it still prices partner awards off a fixed distance chart, so the durable sweet spot for Canadians is a lie-flat Japan Airlines seat from Vancouver or Seattle to Tokyo for about 60,000 points one-way, with the fuel surcharges stripped out.",
+    section: "Sweet spot",
+    tags: ["travel", "alaska", "points", "award-booking", "business-class", "alliances"],
   },
 
   // News items

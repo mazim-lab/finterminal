@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "alaska-jal-business-vancouver-tokyo-60k",
+    program: "Alaska",
+    title: "Alaska sweet spot: Vancouver or Seattle to Tokyo in JAL business for 60,000 Atmos points with no fuel surcharges",
+    dek: "Alaska's Mileage Plan is now Atmos Rewards, but it still prices partner awards off a fixed distance chart, so the durable sweet spot for Canadians is a lie-flat Japan Airlines seat from Vancouver or Seattle to Tokyo for about 60,000 points one-way, with the fuel surcharges stripped out.",
+    read: "5 min read",
+    date: "Jul 2026",
+    lastChecked: "2026-07-14",
+    body:
+      "Alaska's frequent flyer program was renamed Atmos Rewards in 2026, but the thing that made the old Mileage Plan special is still intact, so it is worth saying up front. In a year when almost every US program has drifted to dynamic pricing, Atmos still prices its partner awards off a fixed, distance based chart, and it still does not pass along the carrier imposed fuel surcharges that some partners are known for. That combination is where the real value lives, and for Canadians the standout is Japan Airlines business class to Tokyo, because Vancouver is one of the closest gateways to Japan and the chart rewards that short distance. The figures below are an example of how the chart works, not a quote for any date, so always confirm the live price when you search.\n\nThe numbers look like this. Vancouver or Seattle to Tokyo on Japan Airlines is just under 5,000 flown miles, which lands it in the chart band that prices business class at about 60,000 Atmos points one-way. Push the start point down the coast and the distance tips over 5,000 miles, so Los Angeles, San Francisco, and San Diego to Tokyo move up to about 75,000 points one-way in business. That is the quiet advantage of flying out of Vancouver: the same lie-flat JAL seat costs a Canadian roughly 15,000 fewer points than it does someone starting in California, purely because of the distance band. Treat these as approximate bands rather than a fixed quote, because Atmos does adjust the chart.\n\nHere is the cents-per-point math on a realistic business booking. Say the cash fare is about $3,500 one-way and the award books for 60,000 points plus taxes and fees. Because Atmos strips the JAL fuel surcharges, the cash portion stays small, often well under $100 outbound from Canada, so call it roughly $150 all in to be safe. That works out to (3500 minus 150) divided by 60000, times 100, which is about 5.6 cents per point. Anything above about 1.5 cents is a strong use of Atmos points, so a flat bed to Tokyo at this price is your points doing real work. Prices move, so confirm the live fare when you book.\n\nTwo things make it sing. The no-surcharge policy is the durable edge, because Japan Airlines awards booked through some other programs can carry hundreds of dollars in fuel surcharges, while Atmos keeps the cash portion to modest taxes. And Atmos lets you add a free stopover on a one-way partner award, so you can break the trip in Tokyo for a week and carry on to another JAL city on the same award, turning one redemption into two destinations. Alaska shows a good deal of partner space, including Japan Airlines, right on its own site, though a few partner awards still need a quick phone call and a small booking fee, so search online first and pick up the phone only if you must.\n\nNow the honest caveats, and there are a few. Earning the points is the hard part for Canadians, because no Canadian bank transfers directly to Atmos. The cleanest route is Marriott Bonvoy, which moves to Atmos at 3 to 1 and adds a 5,000-point bonus for every 60,000 Bonvoy points you transfer in one block, so a 60,000-point transfer lands as 25,000 Atmos points rather than 20,000. That means the 60,000 points for this seat take roughly 144,000 Bonvoy points to build, so plan the transfer around a real booking and confirm the current ratio first, since transfers are one-way. The distance based chart also means your gateway matters, as the same seat out of Los Angeles or San Francisco costs about 75,000 points instead of 60,000. Award space in the front cabin is genuinely limited and the best dates go early, and the 2026 rebrand came with some chart tweaks, so price your specific trip before you assume a number. If business space is scarce, Atmos still prices short-haul economy from around 4,500 points one-way, the quiet everyday version of this program that is always there.",
+    href: "/cards?q=marriott",
+    hrefLabel: "Bonvoy cards that feed Atmos Rewards",
+    shortAnswer:
+      "Alaska's Mileage Plan is now Atmos Rewards, but it still prices partner awards off a fixed distance chart with no fuel surcharges, and that is the durable sweet spot: Japan Airlines business class from Vancouver or Seattle to Tokyo runs about 60,000 points one-way, because that route is just under 5,000 flown miles. Farther gateways like Los Angeles or San Francisco tip into the next band at about 75,000 points, so flying out of Vancouver saves a Canadian roughly 15,000 points on the same lie-flat seat. On a roughly $3,500 one-way cash fare booked for 60,000 points plus about $150 in taxes and fees, that is around 5.6 cents per point, well above the 1.5 cents that already counts as a strong use. Earning is the hard part for Canadians, since no Canadian bank transfers directly to Atmos and the cleanest route is Marriott Bonvoy at 3 to 1 with a 5,000-point bonus per 60,000-point block, so 60,000 Bonvoy points land as 25,000 Atmos points. These are approximate chart bands, not a quote for any date, so confirm the live price when you search.",
+    faqs: [
+      {
+        q: "How many Atmos points is Vancouver to Tokyo in JAL business class?",
+        a: "About 60,000 points one-way, because Vancouver or Seattle to Tokyo on Japan Airlines is just under 5,000 flown miles, which lands in that chart band. Farther gateways like Los Angeles, San Francisco, or San Diego tip over 5,000 miles and move up to about 75,000 points one-way. Treat these as approximate bands rather than a fixed quote, and confirm the live price when you search, because Atmos does adjust the chart.",
+      },
+      {
+        q: "Is booking JAL business to Tokyo on Atmos points a good value?",
+        a: "Yes. On a roughly $3,500 one-way cash fare booked for 60,000 points plus about $150 in taxes and fees, the math is (3500 minus 150) divided by 60000, times 100, which is about 5.6 cents per point. Anything above about 1.5 cents is a strong use of Atmos points, so a flat bed to Tokyo at this price is your points doing real work.",
+      },
+      {
+        q: "Does Atmos Rewards charge fuel surcharges on Japan Airlines awards?",
+        a: "No, and that is the durable edge of this sweet spot. Atmos does not pass along the carrier imposed fuel surcharges that Japan Airlines awards can carry through some other programs, so the cash portion stays to modest taxes, often well under $100 outbound from Canada.",
+      },
+      {
+        q: "How do Canadians earn Atmos Rewards points?",
+        a: "It is the hard part, because no Canadian bank transfers directly to Atmos. The cleanest route is Marriott Bonvoy, which moves to Atmos at 3 to 1 and adds a 5,000-point bonus for every 60,000 Bonvoy points transferred in one block, so 60,000 Bonvoy points land as 25,000 Atmos points rather than 20,000. That means the 60,000 points for this seat take roughly 144,000 Bonvoy points to build, so confirm the current ratio first, since transfers are one-way.",
+      },
+      {
+        q: "Can I add a stopover to this trip?",
+        a: "Yes. Atmos lets you add a free stopover on a one-way partner award, so you can break the trip in Tokyo for a week and carry on to another Japan Airlines city on the same award, turning one redemption into two destinations.",
+      },
+      {
+        q: "What if business class space is scarce?",
+        a: "Atmos still prices short-haul economy from around 4,500 points one-way, the quiet everyday version of this program that is always there when the premium cabin is not. Award space in the front cabin is genuinely limited and the best dates go early, so search a range of dates and book the moment the math works.",
+      },
+    ],
+  },
+  {
     slug: "united-partner-business-europe-88k",
     program: "United",
     title: "United sweet spot: Star Alliance business class to Europe from about 88,000 miles with almost no surcharges",
