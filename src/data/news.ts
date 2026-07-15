@@ -30,6 +30,36 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "marriott-bonvoy-japan-airlines-preferred-partnership",
+    headline: "Marriott Bonvoy and Japan Airlines launch a partnership that hands you points just for linking accounts",
+    dek: "Marriott Bonvoy and Japan Airlines launched a preferred partnership on July 14 that gives Bonvoy members JAL FLY ON Points, from 2,000 up to 20,000 a year by elite tier, just for linking their accounts, while JAL members get a shortcut to Marriott elite status.",
+    body:
+      "If you keep a stash of Marriott Bonvoy points in Canada, and plenty of us do since Amex Membership Rewards moves straight into Bonvoy, here is a partnership worth a look. Marriott Bonvoy and Japan Airlines launched a new preferred partnership on July 14 that ties the two loyalty programs closer together. The headline perk is that once you link your Bonvoy and JAL Mileage Bank accounts, you start collecting JAL's FLY ON Points without setting foot on a plane, ranging from 2,000 a year at the lower Bonvoy tiers up to 20,000 for top-tier elites. Going the other way, JAL Mileage Bank members get an easier road to Marriott elite status, with some qualifying for an instant status match and others needing fewer hotel nights than usual. The two programs already let you convert points and miles back and forth, so this builds on a relationship that was already there. Now for the honest part: FLY ON Points are JAL's status-qualifying currency, so they mostly matter if you actually fly Japan Airlines or chase oneworld status, which is a narrower group of Canadians than the crowd sitting on Bonvoy points for hotel stays. For most people here the real value in Bonvoy stays where it always was, in free nights and in transferring to Aeroplan and other airlines. Still, if Japan is on your map and you hold status in either program, linking the accounts costs nothing and quietly pads your balance.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jul 14, 2026",
+    sourceLabel: "Japan Airlines",
+    sourceUrl: "https://press.jal.co.jp/en/release/202607/009621.html",
+    href: "/travel",
+    hrefLabel: "Explore travel and points",
+  },
+  {
+    time: "08:30",
+    slug: "air-canada-iamaw-tentative-agreement-maintenance",
+    headline: "Air Canada reaches a tentative deal with 11,000 maintenance and operations workers, easing summer disruption worries",
+    dek: "Air Canada said on July 13 that it reached a tentative four-year agreement with the IAMAW, the union for about 11,000 of its technical operations, maintenance, airport, and cargo staff, subject to a ratification vote expected to wrap up over the coming days.",
+    body:
+      "If you have Air Canada flights booked this summer, this is the reassuring kind of labour news. Air Canada said on July 13 that it reached a tentative four-year agreement with the International Association of Machinists and Aerospace Workers, the union representing about 11,000 of its technical operations, maintenance, airport, and cargo workers. The proposed contract would run from April 2026 through March 2030 and still needs to be ratified by union members, a vote the airline expects to wrap up over the coming days. It is the sixth labour deal Air Canada has settled this year, which points to a calmer operational picture than the one hanging over WestJet, where cabin crew are in the middle of their own strike-mandate vote. For travellers there is nothing to do here, and that is rather the point, since a settled maintenance and ground workforce means less risk of the kind of disruption that can upend a trip. We will note it if the ratification vote surprises anyone, but for now it is simply one less thing to worry about when you book Air Canada.",
+    category: "Travel and points",
+    region: "CA",
+    date: "Jul 13, 2026",
+    sourceLabel: "Air Canada",
+    sourceUrl: "https://www.aircanada.com/media/air-canada-reaches-new-tentative-agreement-with-the-iamaw-representing-technical-operations-maintenance-and-operational-support-employees/",
+    href: "/travel",
+    hrefLabel: "Explore travel and points",
+  },
+  {
+    time: "08:30",
     slug: "air-canada-city-shuttle-downtown-montreal-yul",
     headline: "Air Canada launches a $9 City Shuttle between downtown Montréal and the airport",
     dek: "Air Canada started a new City Shuttle on July 13 running between the Palais des congrès downtown and Montréal-Trudeau airport for $9 one way, with 37 departures a day and a dedicated lane that can shave up to 25 minutes off the trip at peak times.",

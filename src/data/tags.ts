@@ -350,6 +350,20 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/marriott-bonvoy-japan-airlines-preferred-partnership",
+    title: "Marriott Bonvoy and Japan Airlines launch a partnership that hands you points just for linking accounts",
+    dek: "Marriott Bonvoy and Japan Airlines launched a preferred partnership on July 14 that gives Bonvoy members JAL FLY ON Points, from 2,000 up to 20,000 a year by elite tier, just for linking their accounts, while JAL members get a shortcut to Marriott elite status.",
+    section: "News",
+    tags: ["news", "points", "transfers", "travel"],
+  },
+  {
+    path: "/news/air-canada-iamaw-tentative-agreement-maintenance",
+    title: "Air Canada reaches a tentative deal with 11,000 maintenance and operations workers, easing summer disruption worries",
+    dek: "Air Canada said on July 13 that it reached a tentative four-year agreement with the IAMAW, the union for about 11,000 of its technical operations, maintenance, airport, and cargo staff, subject to a ratification vote expected to wrap up over the coming days.",
+    section: "News",
+    tags: ["news", "travel"],
+  },
+  {
     path: "/news/air-canada-city-shuttle-downtown-montreal-yul",
     title: "Air Canada launches a $9 City Shuttle between downtown Montréal and the airport",
     dek: "Air Canada started a new City Shuttle on July 13 running between the Palais des congrès downtown and Montréal-Trudeau airport for $9 one way, with 37 departures a day and a dedicated lane that can shave up to 25 minutes off the trip at peak times.",
