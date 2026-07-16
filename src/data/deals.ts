@@ -25,6 +25,61 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "Ninja Foodi 8-qt 2-basket air fryer, DualZone (DZ201C)",
+    merchant: "Amazon",
+    url: "https://www.amazon.ca/dp/B08GL1XSH8",
+    price: "$149.99",
+    was: "$229.99",
+    blurb:
+      "The Ninja DualZone is the air fryer that actually earns its counter space in a busy house, and it is down to $149.99 from $229.99, a clean 35 percent off. The trick is the two separate baskets, so you can run fries in one zone and chicken in the other and have them finish at the same time instead of cooking one thing and then the other. Eight quarts total is plenty for a weeknight family dinner, and the reviews back it up with a 4.7 star average across more than sixteen thousand ratings. One honest note so nobody is surprised: with both baskets going it is a chunky unit that takes up real room on the counter, and if you only ever cook for one or two people a smaller single basket fryer will do the job for less. For feeding a family though, this is the one people keep reaching for.",
+    category: "Appliances",
+    posted: "Jul 16, 2026",
+  },
+  {
+    title: "X-Sense Wi-Fi water leak detector kit, 4 sensors and base",
+    merchant: "Amazon",
+    url: "https://www.amazon.ca/dp/B0DFCMJH5L",
+    price: "$58.99",
+    was: "$69.99",
+    blurb:
+      "This is the kind of boring buy that saves you a five figure headache. A burst supply line or a slow drip under the water heater can wreck a finished basement before you ever smell it, and this X-Sense kit puts four Wi-Fi sensors around the house with a base station that pings your phone the second one gets wet. It is down to $58.99 from $69.99 and holds a 4.5 star rating across nearly two thousand reviews. Set the sensors by the washer, the dishwasher, the sump, the water heater, and under a bathroom sink, and you get a loud 100 dB alarm plus a phone alert even when you are out of the house. One honest note so you buy clear eyed: it leans on your 2.4 GHz Wi-Fi to send the away from home alerts, and it warns you about water, it does not shut the water off. For the price it is cheap insurance.",
+    category: "Home",
+    posted: "Jul 16, 2026",
+  },
+  {
+    title: "Ricardo Beverly Hills Huntington 2-piece hardside luggage set",
+    merchant: "Costco",
+    url: "https://www.costco.ca/ricardo-beverly-hills---huntington-2-piece-hardside-luggage-set.product.4000407321.html",
+    price: "$99.97",
+    was: "$199.99",
+    blurb:
+      "If a bag has ever popped open on you mid trip, a solid hardside set at half price is worth a look. Costco has the Ricardo Beverly Hills Huntington two piece hardside set down to $99.97 from the $199.99 it sold at before, and shipping is free. Ricardo is a real luggage name rather than a no name, and you get a carry on plus a larger checked size, both with spinner wheels and hard shells, which is enough to cover a family that travels a couple of times a year. Two honest notes before you grab it. This is a Costco Last Chance clearance, so there is no set end date and once the stock is gone it just quietly disappears. And a hardside shell scuffs and shows scratches more than soft luggage does, so if you need it to stay showroom clean forever this is not the one, but for getting your stuff there in one piece it does the job.",
+    category: "Travel",
+    posted: "Jul 16, 2026",
+  },
+  {
+    title: "LEGO Icons Ferrari F2004 & Michael Schumacher (11375)",
+    merchant: "Amazon",
+    url: "https://www.amazon.ca/dp/B0FMYV6NRM",
+    price: "$79.99",
+    was: "$119.99",
+    blurb:
+      "If there is an F1 fan in the house, this one is a treat at $79.99, down from $119.99. It is the LEGO Icons build of Michael Schumacher's 2004 Ferrari, the car from his championship run, aimed at adults and meant to sit on a desk or a shelf once it is done. A third off a display piece like this does not come around often, and it carries a 4.8 star rating. One honest note so you buy it for the right reason: this is a grown up build to enjoy putting together and then look at, not a toy to hand a small kid, and eighty dollars is a want and not a need. But if that is your era of racing, it is a lovely thing to have on the shelf.",
+    category: "Toys",
+    posted: "Jul 16, 2026",
+  },
+  {
+    title: "LEGO Sonic the Hedgehog: Sonic's Campfire Clash (77001)",
+    merchant: "Amazon",
+    url: "https://www.amazon.ca/dp/B0DJ19BXLJ",
+    price: "$15.00",
+    was: "$24.99",
+    blurb:
+      "Here is an easy one for the birthday gift drawer. The LEGO Sonic Campfire Clash set is down to $15 from $24.99, its lowest price in a month, and it comes with four Sonic characters and a little launcher, aimed at ages seven and up. At fifteen bucks it is the kind of thing you keep one or two of on hand for the next kid party invite without thinking about it, and Sonic is a safe bet with most kids that age. One honest note: it is a small set, so it is a stocking stuffer sized gift rather than a big centrepiece build, but for the price that is exactly the point.",
+    category: "Toys",
+    posted: "Jul 16, 2026",
+  },
+  {
     title: "Dyson V15 Detect cordless stick vacuum, refurbished",
     merchant: "Walmart",
     url: "https://www.walmart.ca/en/ip/Dyson-Official-Outlet-V15-Detect-Cordless-Stick-Vacuum-Cleaner-Refurbished-Colour-may-vary/2O3EG212IDV7",
