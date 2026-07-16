@@ -30,6 +30,36 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "aeroplan-world-of-hyatt-partnership",
+    headline: "Aeroplan and World of Hyatt team up, so you can now turn points into hotel nights and Hyatt stays into Air Canada flights",
+    dek: "Air Canada's Aeroplan and World of Hyatt launched a partnership on July 15 that lets you redeem Aeroplan points for Hyatt free nights from 25,000 points, convert Hyatt points to Aeroplan at 2:1, and earn on both sides when you link your accounts.",
+    body:
+      "This is the kind of loyalty tie-up Canadians actually get to use, so it is worth a proper look. Air Canada's Aeroplan and World of Hyatt joined forces on July 15 in a partnership that runs both directions across roughly 1,300 destinations and 1,500 hotels. Once you link your two accounts, the headline is redemption flexibility: Aeroplan members can now cash points in for World of Hyatt Free Night Awards starting at 25,000 Aeroplan points, and going the other way, Hyatt members can turn 30,000 World of Hyatt points into a 30,000-point Aeroplan flight reward certificate good on Air Canada and its partners. You can also convert World of Hyatt points into Aeroplan points at a 2:1 ratio in blocks starting at 5,000. On the earning side, eligible Aeroplan credit cardholders now pick up both World of Hyatt Bonus Points and extra Aeroplan points on their Hyatt stays, and there are some status perks too, including a $20 Air Canada flight credit each year for Hyatt Discoverists, Explorists, and Globalists, plus a path later in 2026 for Hyatt elites to fast-track Aeroplan status. Now the honest part, because the value here is uneven. Redeeming Aeroplan points for hotel nights is usually a weaker use of them than flights, since Aeroplan points shine most in premium-cabin awards, so run the math before you trade 25,000 points for a room you could book cheaper another way. Where this genuinely helps is the other direction, moving a stranded Hyatt balance toward an Air Canada flight, and the account-linking perks that cost you nothing. If you sit on both currencies, link the accounts and pocket the easy benefits, but keep your Aeroplan points aimed at flights.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jul 15, 2026",
+    sourceLabel: "Air Canada",
+    sourceUrl: "https://www.aircanada.com/media/better-in-both-worlds-air-canadas-aeroplan-and-world-of-hyatt-join-forces-bringing-members-more-ways-to-earn-and-redeem/",
+    href: "/travel/aeroplan-sweet-spots",
+    hrefLabel: "Aeroplan sweet-spots guide",
+  },
+  {
+    time: "08:30",
+    slug: "flair-pilots-ratify-three-year-contract",
+    headline: "Flair Airlines pilots ratify a three-year contract, taking labour uncertainty off the table for the discount carrier",
+    dek: "Flair Airlines pilots, represented by ALPA, voted on July 14 to ratify a new three-year collective agreement with 89 percent support, ending more than ten months of negotiations and settling one more piece of Canada's summer airline labour picture.",
+    body:
+      "If you fly Flair for its low fares, this is quietly good news for your bookings. The airline's pilots, represented by the Air Line Pilots Association, voted on July 14 to ratify a new three-year collective agreement, and they did so with a decisive 89 percent in favour after more than ten months of talks. The deal takes effect right away and brings improvements to pay, retirement, scheduling, and career progression that the union says move Flair pilots closer to industry norms. For travellers the takeaway is simple: a ratified contract means there is no looming pilot strike or work stoppage to fret about at Flair this summer, which is a welcome bit of stability at a carrier whose appeal rests on keeping fares cheap. It also rounds out a busy stretch of Canadian airline labour news, alongside Air Canada's recent tentative deal with its maintenance workers and the strike-mandate vote still underway at WestJet. There is nothing for you to do here, and that is the point, but if a stable, predictable operation matters to your plans, one more Canadian carrier just locked in labour peace.",
+    category: "Travel and points",
+    region: "CA",
+    date: "Jul 14, 2026",
+    sourceLabel: "ALPA",
+    sourceUrl: "https://www.alpa.org/press-room/2026/07/flair-pilots-secure-new-three-year-contract-following-successful-ratification-vote",
+    href: "/travel",
+    hrefLabel: "Explore travel and points",
+  },
+  {
+    time: "08:30",
     slug: "marriott-bonvoy-japan-airlines-preferred-partnership",
     headline: "Marriott Bonvoy and Japan Airlines launch a partnership that hands you points just for linking accounts",
     dek: "Marriott Bonvoy and Japan Airlines launched a preferred partnership on July 14 that gives Bonvoy members JAL FLY ON Points, from 2,000 up to 20,000 a year by elite tier, just for linking their accounts, while JAL members get a shortcut to Marriott elite status.",

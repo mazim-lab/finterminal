@@ -350,6 +350,20 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-world-of-hyatt-partnership",
+    title: "Aeroplan and World of Hyatt team up, so you can now turn points into hotel nights and Hyatt stays into Air Canada flights",
+    dek: "Air Canada's Aeroplan and World of Hyatt launched a partnership on July 15 that lets you redeem Aeroplan points for Hyatt free nights from 25,000 points, convert Hyatt points to Aeroplan at 2:1, and earn on both sides when you link your accounts.",
+    section: "News",
+    tags: ["news", "aeroplan", "points", "transfers", "travel"],
+  },
+  {
+    path: "/news/flair-pilots-ratify-three-year-contract",
+    title: "Flair Airlines pilots ratify a three-year contract, taking labour uncertainty off the table for the discount carrier",
+    dek: "Flair Airlines pilots, represented by ALPA, voted on July 14 to ratify a new three-year collective agreement with 89 percent support, ending more than ten months of negotiations and settling one more piece of Canada's summer airline labour picture.",
+    section: "News",
+    tags: ["news", "travel"],
+  },
+  {
     path: "/news/marriott-bonvoy-japan-airlines-preferred-partnership",
     title: "Marriott Bonvoy and Japan Airlines launch a partnership that hands you points just for linking accounts",
     dek: "Marriott Bonvoy and Japan Airlines launched a preferred partnership on July 14 that gives Bonvoy members JAL FLY ON Points, from 2,000 up to 20,000 a year by elite tier, just for linking their accounts, while JAL members get a shortcut to Marriott elite status.",
