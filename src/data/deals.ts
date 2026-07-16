@@ -25,6 +25,61 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "Samsung 27-inch QHD 180Hz IPS gaming monitor (Odyssey G5 G50F)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/samsung-ls27fg500enxza-27-qhd-180hz-ips-black/p/N82E16824027405",
+    price: "$199.99",
+    was: "$349.99",
+    blurb:
+      "If you are still working or gaming on a basic 1080p screen, this is the kind of upgrade you feel every single day. Samsung has its 27 inch Odyssey G5 down to $199.99 from $349.99, a clean $150 off, and the specs punch well above that price. You get sharp QHD 2560x1440 resolution, a fast 180Hz refresh rate, and an IPS panel that keeps colours honest from any angle, so text stays crisp for a work day and motion stays smooth for a game night. One honest note so you buy clear eyed: this is a straightforward gaming and productivity monitor without extras like USB-C charging or built-in speakers, and Newegg gives you a short 15 day return window, so if you want to try it, decide inside that window.",
+    category: "Electronics",
+    posted: "Jul 16, 2026",
+  },
+  {
+    title: "Gigabyte 27-inch QHD 180Hz curved gaming monitor (GS27QCA)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/gigabyte-gs27qca-27-qhd-180hz-gs-series-va-black/p/N82E16824012112",
+    price: "$179.99",
+    was: "$269.99",
+    blurb:
+      "Here is the curved option if that is your thing, and it is genuinely cheap for what you get. Newegg has this Gigabyte 27 inch QHD monitor down to $179.99 from $269.99, a third off. It pairs the same sharp 2560x1440 resolution and quick 180Hz refresh as the flat panels with a gentle 1500R curve and a VA screen, which gives you deeper blacks and more contrast that a lot of people love for movies and darker games, plus Gigabyte backs it with a solid three year warranty. One honest note so you go in knowing: VA panels trade a little of the wide viewing angle and pixel response speed you would get from IPS, and a curve is a personal taste, so if you do detailed colour work or share the screen sideways, the flat IPS option may suit you better.",
+    category: "Electronics",
+    posted: "Jul 16, 2026",
+  },
+  {
+    title: "Cooler Master Elite Liquid 240 AIO CPU cooler",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/cooler-master-liquid-cooling-system/p/N82E16835103322",
+    price: "$85.49",
+    was: "$229.99",
+    blurb:
+      "If you have a desktop PC that runs hot and loud under load, a good all in one liquid cooler is one of the nicer quality of life upgrades, and this one is 62 percent off at $85.49 down from $229.99. A 240mm radiator like this pulls heat off the processor far better than a small stock cooler, which keeps the chip running faster for longer and lets the fans spin down to a whisper instead of roaring during a game or a big export. It is sold and shipped by Newegg with free 30 day returns and a limit of one per customer. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop and your case has room for a 240mm radiator, so check your case clearance and socket support first. It is not a plug and play gadget for a laptop or a non PC household.",
+    category: "Computers",
+    posted: "Jul 16, 2026",
+  },
+  {
+    title: "Corsair Scimitar Elite Wireless SE gaming mouse",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/corsair-scimitar-elite-wireless-se-usb-bluetooth-bluetooth-2-4ghz-wired/p/N82E16826816225",
+    price: "$109.99",
+    was: "$199.99",
+    blurb:
+      "This is Corsair's flagship mouse for people who live in MMOs, MOBAs, or macro heavy work, and it is down to $109.99 from $199.99, a full 45 percent off. The draw is the twelve button side panel that slides to fit your thumb, so all those abilities, hotkeys, or shortcuts sit right under one finger instead of scattered across the keyboard, and it runs wireless over both a 2.4GHz dongle and Bluetooth. One honest note so you buy for the right reason: that side panel is wonderful if you actually use a lot of buttons, but it makes the mouse chunkier and busier than a plain everyday pointer, so if you just want something simple to move a cursor around, a basic mouse will serve you better for a lot less. At this price though, it is a treat for the right kind of gamer.",
+    category: "Electronics",
+    posted: "Jul 16, 2026",
+  },
+  {
+    title: "MSI Versa 300 wireless gaming mouse",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/p/N82E16826554085",
+    price: "$42.99",
+    was: "$69.99",
+    blurb:
+      "For anyone still fighting a cheap office mouse, this is an easy and affordable step up at $42.99, down from $69.99. The MSI Versa 300 is a light wireless mouse with an adjustable sensor up to 8000 DPI and both Bluetooth and a low lag 2.4GHz dongle, so it works nicely for gaming and doubles as a tidy cordless mouse for everyday work at the desk. It is sold and shipped by Newegg with free 30 day returns. One honest note so you buy clear eyed: MSI is a newer name in mice rather than an established Logitech or Razer, and the shape is built for a gaming grip, so it suits someone who wants a responsive wireless mouse on a budget more than someone after a specific ergonomic fit.",
+    category: "Electronics",
+    posted: "Jul 16, 2026",
+  },
+  {
     title: "Ninja Foodi 8-qt 2-basket air fryer, DualZone (DZ201C)",
     merchant: "Amazon",
     url: "https://www.amazon.ca/dp/B08GL1XSH8",
