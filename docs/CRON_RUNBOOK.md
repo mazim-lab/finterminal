@@ -87,8 +87,8 @@ required for most refreshes. Just ask Claude to refresh deals; the steps below a
 1-2 good deals per refresh.
 
 **Automated trial cron `deals-refresh` (owner-approved 2026-07-16, PR-only):** Runs Wed + Sat
-at 06:00 UTC (2:00 AM America/Toronto in summer) on `claude-opus-4-8`. Trigger ID: added
-2026-07-16, see claude.ai/code/routines. This is a deliberate re-test of the 2026-06-29
+at 06:00 UTC (2:00 AM America/Toronto in summer) on `claude-opus-4-8`. Trigger ID:
+trig_01STKYmTcqgaMMPknwQ6aG5S, see claude.ai/code/routines. This is a deliberate re-test of the 2026-06-29
 manual-only call above, made low-risk because the routine only ever opens a **pull request**
 — it never pushes `main` — so a blocked or empty run costs nothing worse than a PR with no
 changes to close.
