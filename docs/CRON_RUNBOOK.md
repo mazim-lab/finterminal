@@ -4,7 +4,7 @@ This document tells an automated agent (or a human) exactly how to refresh each
 section of the site. It is self-contained: a cloud cron agent that has cloned this
 repo should be able to follow any job below without prior context.
 
-Last verified: 2026-07-07.
+Last verified: 2026-07-16.
 
 ---
 
@@ -41,7 +41,7 @@ Last verified: 2026-07-07.
 
 | Job | Cadence | Cloud-cron friendly? | Why |
 |---|---|---|---|
-| Deals | on demand | **No — manual job (decided 2026-06-29)** | RFD now paywalls WebFetch (HTTP 402) and merchant prices need on-page checks, so claude-in-chrome plus a live interactive session are required. Run it manually with Claude, not as a cron. |
+| Deals | manual (workhorse) + Wed/Sat 06:00 UTC trial cron `deals-refresh` (added 2026-07-16) | **Partial — trial** | Manual claude-in-chrome browser session remains the workhorse (2026-06-29 call: RFD paywalls WebFetch with HTTP 402, merchant prices need on-page checks). A PR-only cron is now being trialed alongside it — never pushes `main`, so a blocked/zero-deal run costs nothing. If the first 2-3 trial runs post zero verified deals, it gets retired and this row reverts to manual-only. |
 | News | daily/weekly | **Yes** | WebSearch/WebFetch only |
 | Card data refresh | twice weekly (Sun + Wed) | **Partial** | Issuer pages bot-block `WebFetch`; need the residential/Playwright fetch or the real browser to (re)capture `data/raw/cards/*.md`. The *audit/extraction* over already-captured `.md` files IS cloud-friendly. Every verification run must bump `CARDS_VERIFIED` in `src/data/cards.ts`, or the homepage `VerifiedStamp` (cadenceDays=14) goes stale/red after 14 days. |
 | Portfolio | twice weekly | **No — stays manual** | Needs the user's private Wealthsimple CSVs + all-time return %. A cloud cron has no access to these. Keep manual. |
@@ -65,7 +65,9 @@ Last verified: 2026-07-07.
   new `.md` captures, the cron should STOP and open a task for the user rather than fetch
   with WebFetch.
 
-To ship a data update (the News, Deals, and Sweet-spot crons AUTO-PUBLISH to production):
+To ship a data update (the News and Sweet-spot crons AUTO-PUBLISH to production; the Deals
+trial cron is **PR-only** — it opens a pull request for the owner to review and merge, it
+never pushes `main` directly):
 1. Work on `main`. Pull first (`git pull --rebase origin main`) so you are current.
 2. Stage only intended files (e.g. `git add src/data/deals.ts`). **Never `git add private/`.**
 3. Commit with a clear message; push to main: `git push origin main`.
@@ -74,14 +76,35 @@ To ship a data update (the News, Deals, and Sweet-spot crons AUTO-PUBLISH to pro
 
 ---
 
-## 1. DEALS — manual, browser-verified (run with Claude on demand)
+## 1. DEALS — manual (workhorse) + PR-only cron trial (added 2026-07-16)
 
 **File:** `src/data/deals.ts` (a `Deal[]`). **Page:** `src/app/deals/page.tsx`.
 
-**Not automated (decided 2026-06-29):** Deals run as a MANUAL, interactive job with Claude,
-not a cron. RedFlagDeals now paywalls headless fetches and merchant prices need on-page
-verification, so the claude-in-chrome browser and a live session are required. Just ask
-Claude to refresh deals; the steps below apply. Target 1-2 good deals per refresh.
+**Manual is still the workhorse (decided 2026-06-29):** Deals run primarily as a MANUAL,
+interactive job with Claude, not a cron. RedFlagDeals paywalls headless fetches and merchant
+prices need on-page verification, so the claude-in-chrome browser and a live session are
+required for most refreshes. Just ask Claude to refresh deals; the steps below apply. Target
+1-2 good deals per refresh.
+
+**Automated trial cron `deals-refresh` (owner-approved 2026-07-16, PR-only):** Runs Wed + Sat
+at 06:00 UTC (2:00 AM America/Toronto in summer) on `claude-opus-4-8`. Trigger ID: added
+2026-07-16, see claude.ai/code/routines. This is a deliberate re-test of the 2026-06-29
+manual-only call above, made low-risk because the routine only ever opens a **pull request**
+— it never pushes `main` — so a blocked or empty run costs nothing worse than a PR with no
+changes to close.
+- **Discovery:** RedFlagDeals hot-deals pages first; if RFD 307-redirects the headless fetch
+  to its HTTP 402 paywall (the known failure mode), fall back to first-party merchant sale
+  pages (Costco.ca, Walmart.ca, CanadianTire.ca, BestBuy.ca, Amazon.ca).
+- **Verification is mandatory:** every deal must be confirmed on the merchant's own page via
+  WebFetch; if a price can't be read there, drop the deal. Never fabricate a price or term.
+  Never link RFD or any aggregator — direct merchant URLs only, tracking stripped.
+- **Zero-deal runs are an expected, acceptable outcome** — there is no quota and nothing is
+  forced. A PR only opens when a deal actually verifies end to end.
+- **Kill switch:** if the first 2-3 trial runs come back with zero verified deals (RFD blocked
+  AND merchant pages bot-walled), retire this routine and revert this section to manual-only.
+- **Merge promptly:** the site is fully static (no ISR) — see step 6 below — so a merged Deals
+  PR is also what makes expired deals re-archive on the next build. Letting PRs sit stales the
+  page in both directions (new deals not live, expired ones not archived).
 
 **Scope (do not drift):** real **product/service** deals that save people money — a
 quality item at a deep discount, OR a productive buy that pays for itself over time
@@ -109,17 +132,24 @@ the "Trending Hot Deals" box. Favour high-engagement, on-theme items.
 5. **Add new deals to the top.** Set `expiresAt` (ISO date) on anything time-limited.
 6. The page **auto-archives** expired deals: it splits into "Today's picks" vs a
    collapsible "Archive" by comparing `expiresAt` to today (America/Toronto). A deal
-   stays live through its whole end date and moves to Archive the next day. The page
-   uses `export const revalidate = 3600`, so this happens hourly with **no redeploy**.
-   Old deals self-archive — you only add new ones and occasionally prune the archive.
-7. Commit & push.
+   stays live through its whole end date and moves to Archive the next day. **The site is
+   fully static (no ISR)**, so this split is only recomputed at build time — a deal moves
+   to Archive on the NEXT rebuild (i.e. the next merge to `main`), not automatically at
+   midnight. Old deals self-archive on the next build — you only add new ones and
+   occasionally prune the archive. This is exactly why merging Deals PRs promptly matters
+   (see the cron trial note above): an expired deal keeps showing as "live" until something
+   rebuilds the site.
+7. Commit & push (or, for the `deals-refresh` cron, open a PR — see above).
 
-**Manual, browser-verified (decided 2026-06-29):** RedFlagDeals now 307-redirects `WebFetch`
+**Manual remains the workhorse (decided 2026-06-29):** RedFlagDeals 307-redirects `WebFetch`
 to a tollbit paywall (HTTP 402), and Amazon/Costco prices must be verified on the page, so
-this job needs the **claude-in-chrome browser in a live interactive session**. It is run
-**manually with Claude on demand**, not as an unattended cron (a headless `claude -p` run
-can't reliably drive the browser). Never post a price you could not load on the merchant's
-own page.
+the primary job needs the **claude-in-chrome browser in a live interactive session**, run
+**manually with Claude on demand** (a headless `claude -p` run can't reliably drive the
+browser). The `deals-refresh` PR-only cron (added 2026-07-16, see the top of this section) is
+a supplementary trial that hits the same RFD paywall risk; its per-deal merchant-page WebFetch
+verification and merchant-site fallback are the mitigation, and its PR-only, zero-deal-is-fine
+design make an unattended trial low-risk. Never post a price you could not load on the
+merchant's own page.
 
 ---
 
