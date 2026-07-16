@@ -42,7 +42,7 @@ export const DEALS: Deal[] = [
     price: "$179.99",
     was: "$269.99",
     blurb:
-      "Here is the curved option if that is your thing, and it is genuinely cheap for what you get. Newegg has this Gigabyte 27 inch QHD monitor down to $179.99 from $269.99, a third off. It pairs the same sharp 2560x1440 resolution and quick 180Hz refresh as the flat panels with a gentle 1500R curve and a VA screen, which gives you deeper blacks and more contrast that a lot of people love for movies and darker games, plus Gigabyte backs it with a solid three year warranty. One honest note so you go in knowing: VA panels trade a little of the wide viewing angle and pixel response speed you would get from IPS, and a curve is a personal taste, so if you do detailed colour work or share the screen sideways, the flat IPS option may suit you better.",
+      "Here is the curved option if that is your thing, and it is genuinely cheap for what you get. Newegg has this Gigabyte 27 inch QHD monitor down to $179.99 from $269.99, a third off. It pairs the same sharp 2560x1440 resolution and quick 180Hz refresh as the flat panels with a gentle 1500R curve and a VA screen, which gives you deeper blacks and more contrast that a lot of people love for movies and darker games. One honest note so you go in knowing: VA panels trade a little of the wide viewing angle and pixel response speed you would get from IPS, and a curve is a personal taste, so if you do detailed colour work or share the screen sideways, the flat IPS option may suit you better.",
     category: "Electronics",
     posted: "Jul 16, 2026",
   },
@@ -53,8 +53,8 @@ export const DEALS: Deal[] = [
     price: "$85.49",
     was: "$229.99",
     blurb:
-      "If you have a desktop PC that runs hot and loud under load, a good all in one liquid cooler is one of the nicer quality of life upgrades, and this one is 62 percent off at $85.49 down from $229.99. A 240mm radiator like this pulls heat off the processor far better than a small stock cooler, which keeps the chip running faster for longer and lets the fans spin down to a whisper instead of roaring during a game or a big export. It is sold and shipped by Newegg with free 30 day returns and a limit of one per customer. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop and your case has room for a 240mm radiator, so check your case clearance and socket support first. It is not a plug and play gadget for a laptop or a non PC household.",
-    category: "Computers",
+      "If you have a desktop PC that runs hot and loud under load, a good all in one liquid cooler is one of the nicer quality of life upgrades, and this one is 62 percent off at $85.49 down from $229.99. A 240mm radiator like this pulls heat off the processor far better than a small stock cooler, which keeps the chip running faster for longer and lets the fans spin down to a whisper instead of roaring during a game or a big export. It is sold and shipped by Newegg with free 30 day returns. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop and your case has room for a 240mm radiator, so check your case clearance and socket support first. It is not a plug and play gadget for a laptop or a non PC household.",
+    category: "Electronics",
     posted: "Jul 16, 2026",
   },
   {
