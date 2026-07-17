@@ -24,6 +24,7 @@ export const TAGS: Tag[] = [
   { slug: "united", label: "United MileagePlus", description: "United MileagePlus for Canadians, where the fixed partner Saver chart and no fuel surcharges hide the real value, and how to feed a balance from here." },
   { slug: "westjet", label: "WestJet Rewards", description: "WestJet points and the RBC companion voucher, and how Canadians squeeze value out of both." },
   { slug: "alaska", label: "Alaska Atmos Rewards", description: "Alaska's Atmos Rewards, formerly Mileage Plan, where the fixed distance-based partner charts and no fuel surcharges hide lie-flat value to Asia, and how Canadians feed a balance." },
+  { slug: "flying-blue", label: "Flying Blue", description: "Air France and KLM's Flying Blue for Canadians, where the dynamic pricing hides value in the monthly Promo Rewards, and how Amex feeds a balance from here." },
   { slug: "scene-plus", label: "Scene+", description: "Scotiabank and Empire's Scene+ program: earning at the grocery till and cashing points out at par." },
   { slug: "amex", label: "Amex / Membership Rewards", description: "Amex Membership Rewards, the transfer partners, and the cards that earn them." },
   { slug: "rbc-avion", label: "RBC Avion", description: "RBC's Avion points, one of the few Canadian currencies that actually transfers to airlines." },
@@ -346,6 +347,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     dek: "Alaska's Mileage Plan is now Atmos Rewards, but it still prices partner awards off a fixed distance chart, so the durable sweet spot for Canadians is a lie-flat Japan Airlines seat from Vancouver or Seattle to Tokyo for about 60,000 points one-way, with the fuel surcharges stripped out.",
     section: "Sweet spot",
     tags: ["travel", "alaska", "points", "award-booking", "business-class", "alliances"],
+  },
+
+  {
+    path: "/travel/sweet-spots/flying-blue-promo-rewards-europe-business-50k",
+    title: "Flying Blue sweet spot: business class to Europe from about 50,000 miles in the monthly Promo Rewards",
+    dek: "Flying Blue prices awards dynamically with no fixed chart, so the durable sweet spot is the Promo Rewards it releases on the first of every month, where a North American to Europe business seat on Air France or KLM can drop to roughly 45,000 to 60,000 miles one-way and economy near 20,000.",
+    section: "Sweet spot",
+    tags: ["travel", "flying-blue", "amex", "points", "award-booking", "business-class", "alliances"],
   },
 
   // News items

@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "flying-blue-promo-rewards-europe-business-50k",
+    program: "Flying Blue",
+    title: "Flying Blue sweet spot: business class to Europe from about 50,000 miles in the monthly Promo Rewards",
+    dek: "Flying Blue prices awards dynamically with no fixed chart, so the durable sweet spot is the Promo Rewards it releases on the first of every month, where in a good month a North American to Europe business seat on Air France or KLM drops to roughly 45,000 to 60,000 miles one-way and economy near 20,000, though which routes and cabins are discounted rotates month to month.",
+    read: "5 min read",
+    date: "Jul 2026",
+    lastChecked: "2026-07-17",
+    body:
+      "Flying Blue, the shared program behind Air France, KLM, and their SkyTeam partners, works differently from a fixed-chart program like Aeroplan or Avios, and it is only fair to say so before we talk value. There is no published award chart and no distance bands to memorize. Flying Blue prices awards dynamically, roughly tracking the cash fare, so the same business seat can cost 60,000 miles on a quiet Tuesday and nearly triple that on a peak Friday. The genuine, repeatable sweet spot lives somewhere more reliable: the Promo Rewards that Flying Blue releases on the first of every single month. The figures below are an example of how a good promo month prices, not a quote for any date, so always confirm the live price when you search.\n\nHere is how the promo works. Every route has a minimum rate, and each month Flying Blue takes a rotating set of routes and knocks up to 25 percent off that minimum, publishing the list on the first with a booking deadline and a set travel window. In a strong month, North America to Europe has come down to around 18,750 to 25,000 miles one-way in economy, about 30,000 in premium economy, and roughly 45,000 to 60,000 miles one-way in business, the lie-flat cabin on the Air France and KLM widebodies. Canadian gateways like Toronto and Montreal do rotate into the list, both flown by Air France and KLM, but the honest catch is that which cities and which cabins get discounted changes every month, so the trick is flexibility on both your gateway and your travel month. Treat these as approximate promo bands rather than a fixed quote, and price your specific trip before you assume a number.\n\nHere is the cents-per-mile math on a realistic business booking in a promo month. Say the cash fare is about $3,500 one-way and the award books for 50,000 miles plus taxes and fees. Outbound from a North American city those fees are more modest than on the return, so call it roughly $250 all in to be safe. That works out to (3500 minus 250) divided by 50000, times 100, which is about 6.5 cents per mile. Across the whole program a Flying Blue mile is worth a little over a cent on average, so anything north of about 1.5 cents is a strong use, and a flat bed to Europe at this price is your miles doing real work. Prices move, so confirm the live fare when you book.\n\nA couple of things make it sing for Canadians. As of January 2026, Amex Canada moved its Membership Rewards transfer to Flying Blue to a clean 1 to 1, which is a real improvement and makes Amex the most direct way for a Canadian to build a Flying Blue balance, and Amex Canada has even run the occasional transfer bonus on top. Flying Blue also lets you break a long trip with a stopover on some award routings, turning one redemption into two destinations, and the promo list refreshing every month means there is always a new batch of discounted routes to check rather than one fleeting flash sale. Search a range of dates within the travel window, because promo award space is genuinely limited and the best days go early.\n\nNow the honest caveats, and there are a few. Unlike Aeroplan or Alaska, Flying Blue does pass along carrier-imposed fuel surcharges, so the cash portion is not trivial, especially on the Europe-origin return, where taxes and fees on an Air France or KLM business award can push past $500 in a single direction. Budget for that before you assume the whole round trip is cheap. The promo routes rotate, so your home city may not be discounted in the month you want to fly, which is why gateway flexibility matters so much here. And because non-promo dates are dynamically priced, a seat outside the promo list or travel window can cost two or three times as many miles, so the discount really is the whole game. If Amex is not your currency, Marriott Bonvoy also feeds Flying Blue at 3 to 1 with a 5,000-mile bonus for every 60,000 points moved in one block, so 60,000 Bonvoy points land as 25,000 miles, a slower but workable backup. Confirm the current ratios and any transfer bonus before you move points, since transfers are one-way.",
+    href: "/cards?q=amex",
+    hrefLabel: "Amex cards that feed Flying Blue",
+    shortAnswer:
+      "Flying Blue prices awards dynamically with no fixed chart, so the durable sweet spot for Canadians is the Promo Rewards it releases on the first of every month, up to 25 percent off a route's minimum rate. In a good month, North America to Europe business class on Air France or KLM drops to roughly 45,000 to 60,000 miles one-way, with economy near 18,750 to 25,000, though which cities and cabins are discounted rotates month to month. On a roughly $3,500 one-way business fare booked for 50,000 miles plus about $250 in taxes outbound from North America, that is about 6.5 cents per mile, well above the roughly 1 cent a Flying Blue mile is worth on average. For Canadians the cleanest feed is Amex Membership Rewards, which moved to a clean 1 to 1 transfer in January 2026, with Marriott Bonvoy at 3 to 1 plus a bonus as a backup. Just know that Flying Blue passes fuel surcharges, so taxes run higher than on Aeroplan, and these are approximate promo bands, not a quote for any date, so confirm the live price when you search.",
+    faqs: [
+      {
+        q: "How many Flying Blue miles is North America to Europe in business class?",
+        a: "There is no fixed chart, because Flying Blue prices dynamically, but in a good Promo Rewards month a North America to Europe business seat on Air France or KLM has come down to roughly 45,000 to 60,000 miles one-way, with economy near 18,750 to 25,000 and premium economy about 30,000. Which cities and cabins get the discount rotates every month, so treat these as approximate promo bands and confirm the live price when you search.",
+      },
+      {
+        q: "What are Flying Blue Promo Rewards and how often do they change?",
+        a: "Promo Rewards are Flying Blue's monthly discount, up to 25 percent off a route's minimum rate, released on the first of every single month with a booking deadline and a set travel window. Because the list refreshes monthly, there is always a fresh batch of discounted routes to check rather than one fleeting flash sale, but the routes and cabins that get discounted rotate, so your home city may not be included every month.",
+      },
+      {
+        q: "Is booking business class to Europe on Flying Blue a good value?",
+        a: "In a promo month, yes. On a roughly $3,500 one-way cash fare booked for 50,000 miles plus about $250 in taxes outbound from North America, the math is (3500 minus 250) divided by 50000, times 100, which is about 6.5 cents per mile. A Flying Blue mile is worth a little over a cent on average, so anything north of about 1.5 cents is a strong use, and a flat bed to Europe at this price is your miles doing real work.",
+      },
+      {
+        q: "How do Canadians earn Flying Blue miles?",
+        a: "The cleanest route is Amex Canada Membership Rewards, which moved to a clean 1 to 1 transfer to Flying Blue in January 2026, and Amex has run the occasional transfer bonus on top. Marriott Bonvoy is a backup, moving at 3 to 1 with a 5,000-mile bonus for every 60,000 points transferred in one block, so 60,000 Bonvoy points land as 25,000 miles. Confirm the current ratios and any bonus before you move points, since transfers are one-way.",
+      },
+      {
+        q: "Does Flying Blue charge fuel surcharges on awards?",
+        a: "Yes, and this is the honest catch that sets it apart from Aeroplan or Alaska. Flying Blue passes along carrier-imposed fuel surcharges, so the cash portion is not trivial, especially on the Europe-origin return, where taxes and fees on an Air France or KLM business award can push past $500 in a single direction. Budget for that before you assume the whole round trip is cheap.",
+      },
+      {
+        q: "What if my city is not in the Promo Rewards this month?",
+        a: "That is the main limitation, because the discounted routes and cabins rotate every month, so flexibility on both your gateway and your travel month matters a lot. Non-promo dates are dynamically priced and can cost two or three times as many miles, so the discount really is the whole game. Canadian gateways like Toronto and Montreal do rotate into the list, so it is worth checking each month when the new promo drops.",
+      },
+    ],
+  },
+  {
     slug: "alaska-jal-business-vancouver-tokyo-60k",
     program: "Alaska",
     title: "Alaska sweet spot: Vancouver or Seattle to Tokyo in JAL business for 60,000 Atmos points with no fuel surcharges",
