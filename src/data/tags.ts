@@ -359,6 +359,20 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/rbc-avion-visa-infinite-55k-offer-july-16",
+    title: "RBC's Avion Visa Infinite resets to a 55,000-point offer now that the record 70,000 window has closed",
+    dek: "Following up on our July 10 note, RBC's record-high Avion welcome bonuses closed to new applications on July 15, and a fresh Avion Visa Infinite offer worth up to 55,000 points opened July 16 and runs through August 12.",
+    section: "News",
+    tags: ["news", "rbc-avion", "cards", "welcome-bonuses"],
+  },
+  {
+    path: "/news/westjet-flight-attendants-vote-yes-strike-mandate",
+    title: "WestJet flight attendants vote overwhelmingly for a strike mandate, with a walkout possible from August 2",
+    dek: "Following up on our July 11 note, CUPE announced on July 15 that 99.4 percent of voting WestJet flight attendants backed a strike mandate on a 97.3 percent turnout, though the earliest any legal walkout or lockout could begin is the August long weekend.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/aeroplan-world-of-hyatt-partnership",
     title: "Aeroplan and World of Hyatt team up, so you can now turn points into hotel nights and Hyatt stays into Air Canada flights",
     dek: "Air Canada's Aeroplan and World of Hyatt launched a partnership on July 15 that lets you redeem Aeroplan points for Hyatt free nights from 25,000 points, convert Hyatt points to Aeroplan at 2:1, and earn on both sides when you link your accounts.",

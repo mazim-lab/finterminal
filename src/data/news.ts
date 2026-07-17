@@ -30,6 +30,36 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "rbc-avion-visa-infinite-55k-offer-july-16",
+    headline: "RBC's Avion Visa Infinite resets to a 55,000-point offer now that the record 70,000 window has closed",
+    dek: "Following up on our July 10 note, RBC's record-high Avion welcome bonuses closed to new applications on July 15, and a fresh Avion Visa Infinite offer worth up to 55,000 points opened July 16 and runs through August 12.",
+    body:
+      "Following up on our July 10 note about RBC's record-high Avion welcome bonuses, the clock has turned over and the offer has reset. That all-time-high window, which reached up to 70,000 points on the Avion Visa Infinite and 100,000 on the Privilege, closed to new applications on July 15. In its place, RBC opened a fresh Avion Visa Infinite offer on July 16 worth up to 55,000 points, running through August 12. It comes in two pieces: 35,000 points that post within sixty days of approval, and another 20,000 once you spend $5,000 in the first six months. That is a real step down from the record, but 55,000 Avion points is still a solid haul, and Avion remains one of the few Canadian currencies that actually moves to airlines, transferring to British Airways Avios, American AAdvantage, and WestJet, which is what makes it worth holding for travel rather than cashing out. A couple of honest notes before you apply: the Visa Infinite carries a $120 annual fee and needs a $60,000 personal or $100,000 household income, and that $5,000 spend target is real money, so this pays off only if the card earns its keep after the bonus clears. If you missed the 70,000 window, this is the offer on the table now, and these promotions move in cycles, so a richer one may well come around again later in the year.",
+    category: "Card offers",
+    region: "CA",
+    date: "Jul 16, 2026",
+    sourceLabel: "RBC Royal Bank",
+    sourceUrl: "https://www.rbcroyalbank.com/credit-cards/avion.html",
+    href: "/cards?q=avion",
+    hrefLabel: "Compare RBC Avion cards",
+  },
+  {
+    time: "08:30",
+    slug: "westjet-flight-attendants-vote-yes-strike-mandate",
+    headline: "WestJet flight attendants vote overwhelmingly for a strike mandate, with a walkout possible from August 2",
+    dek: "Following up on our July 11 note, CUPE announced on July 15 that 99.4 percent of voting WestJet flight attendants backed a strike mandate on a 97.3 percent turnout, though the earliest any legal walkout or lockout could begin is the August long weekend.",
+    body:
+      "Following up on our July 11 note about the strike-mandate vote, the results are in and they are emphatic. CUPE Local 8125, which represents about 4,400 WestJet flight attendants, announced on July 15 that 99.4 percent of voting members backed a strike mandate on a 97.3 percent turnout. That hands the union's bargaining team a strong position as talks carry on over wages, unpaid work, and working conditions. Here is the part worth holding onto, though: a strike mandate is authorization, not a strike, and it does not put your next flight at risk today. With the conciliation period wrapped and a mandatory 21-day cooling-off period still to run, the earliest a legal walkout or lockout could begin is August 2, the Saturday of the August long weekend. WestJet has said it would wind its schedule down in the days just before any full stop, so disruption, if it comes at all, would surface shortly ahead of that date rather than out of nowhere. If you are flying WestJet in early August or later, this is worth watching rather than worrying about: keep an eye out for further news as the deadline nears, hold a little flexibility in your dates if you can, and make sure any trip you would struggle to rebook is covered by travel insurance. Both sides say they still want a negotiated deal, and most of these disputes settle before a single flight is cancelled, so there is no need to upend plans today, though it is worth giving early-August travel a little extra thought.",
+    category: "Travel and points",
+    region: "CA",
+    date: "Jul 15, 2026",
+    sourceLabel: "CUPE",
+    sourceUrl: "https://cupe.ca/news/westjet-cabin-crew-overwhelmingly-vote-yes-strike-action",
+    href: "/cards?q=westjet",
+    hrefLabel: "Compare WestJet cards",
+  },
+  {
+    time: "08:30",
     slug: "aeroplan-world-of-hyatt-partnership",
     headline: "Aeroplan and World of Hyatt team up, so you can now turn points into hotel nights and Hyatt stays into Air Canada flights",
     dek: "Air Canada's Aeroplan and World of Hyatt launched a partnership on July 15 that lets you redeem Aeroplan points for Hyatt free nights from 25,000 points, convert Hyatt points to Aeroplan at 2:1, and earn on both sides when you link your accounts.",
