@@ -30,6 +30,21 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "aeroplan-buy-points-110-percent-bonus-july-16-19",
+    headline: "Aeroplan lifts its summer buy-points sale to a 110 percent bonus, now running through July 19",
+    dek: "Following up on our July 12 note, Aeroplan sweetened its summer buy-points sale on July 16 to a targeted bonus of up to 110 percent, a step up from the 100 percent it had been offering, and set the new window to close July 19.",
+    body:
+      "Following up on our July 12 note about Aeroplan's summer buy-points sale, the program has nudged the deal a little richer. On July 16 Aeroplan opened a fresh window running through July 19 with a targeted bonus of up to 110 percent, a notch above the 100 percent it had been running, which at the very top means slightly more than doubling whatever points you buy. As before it is a targeted offer, so the bonus you actually see when you log in may land lower. The base structure gives 40 percent on purchases of 3,000 to 20,000 points, 60 percent from 25,000 to 40,000, and 90 percent at 50,000 or more, with the full 110 percent reserved for members who get picked for it. At the maximum bonus the price works out to roughly 1.79 Canadian cents per point, which is a genuinely good rate for Aeroplan if you have a plan for them. The honest rule has not changed since our last note: only buy when you have already found the specific award seat you want and the cost of the points beats paying cash for the same flight. Points bought on spec tend to sit and lose ground to the next devaluation, and the cap is still 500,000 points per transaction, so a big premium-cabin booking is doable but the bill climbs quickly. Purchased points usually post within about 72 hours, so give yourself a little buffer if a seat is on hold.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jul 16, 2026",
+    sourceLabel: "Aeroplan",
+    sourceUrl: "https://www.aircanada.com/ca/en/aco/home/aeroplan/promotions.html",
+    href: "/travel/aeroplan-sweet-spots",
+    hrefLabel: "Aeroplan sweet-spots guide",
+  },
+  {
+    time: "08:30",
     slug: "rbc-avion-visa-infinite-55k-offer-july-16",
     headline: "RBC's Avion Visa Infinite resets to a 55,000-point offer now that the record 70,000 window has closed",
     dek: "Following up on our July 10 note, RBC's record-high Avion welcome bonuses closed to new applications on July 15, and a fresh Avion Visa Infinite offer worth up to 55,000 points opened July 16 and runs through August 12.",

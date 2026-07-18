@@ -359,6 +359,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-buy-points-110-percent-bonus-july-16-19",
+    title: "Aeroplan lifts its summer buy-points sale to a 110 percent bonus, now running through July 19",
+    dek: "Following up on our July 12 note, Aeroplan sweetened its summer buy-points sale on July 16 to a targeted bonus of up to 110 percent, a step up from the 100 percent it had been offering, and set the new window to close July 19.",
+    section: "News",
+    tags: ["news", "aeroplan", "points"],
+  },
+  {
     path: "/news/rbc-avion-visa-infinite-55k-offer-july-16",
     title: "RBC's Avion Visa Infinite resets to a 55,000-point offer now that the record 70,000 window has closed",
     dek: "Following up on our July 10 note, RBC's record-high Avion welcome bonuses closed to new applications on July 15, and a fresh Avion Visa Infinite offer worth up to 55,000 points opened July 16 and runs through August 12.",
