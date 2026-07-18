@@ -25,6 +25,28 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "AMD Ryzen 5 7600X 6-core desktop processor",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/amd-ryzen-5-7600x-ryzen-5-7000-series-raphael-zen-4-socket-am5/p/N82E16819113770",
+    price: "$209.99",
+    was: "$449.99",
+    blurb:
+      "If you are building or upgrading a gaming PC, this is a genuinely low price on a very capable chip. Newegg has the AMD Ryzen 5 7600X at $209.99, sold and shipped by Newegg with free 30 day returns. You get six fast Zen 4 cores that handle modern games and everyday work without breaking a sweat, and paired with a decent graphics card this is the kind of processor a build stays happy on for years. One honest note so you buy clear eyed: this is an AM5 chip, so unless you are already on that platform you will also need an AM5 motherboard and DDR5 memory, which adds to the real cost. It is a part for a build or an upgrade, not a plug and play gadget. If you are already on AM5 or planning a fresh build though, this is a lot of processor for the money.",
+    category: "Electronics",
+    posted: "Jul 18, 2026",
+  },
+  {
+    title: "Verbatim 8-in-1 USB-C hub with 4K HDMI and 100W passthrough",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/verbatim-vuc-2081d-usb-ethernet/p/N82E16817130333",
+    price: "$14.38",
+    was: "$59.99",
+    blurb:
+      "Here is a cheap and genuinely handy little accessory at $14.38, down from $59.99. It is a Verbatim 8 in 1 USB-C hub that turns a single USB-C port into a 4K HDMI output, two full size USB 3.0 ports, SD and microSD card readers, a headphone jack, and 100W passthrough charging so your laptop keeps topping up while everything else is plugged in. For anyone on a slim laptop or tablet that is short on ports, it is the sort of thing that quietly earns its keep on the desk and in the bag. It is sold and shipped by Newegg with free 30 day returns. One honest note so it works for you: a hub like this only drives an external screen if your device's USB-C port supports video out, which most recent laptops do but some budget and older ones do not, so check your port before you count on the HDMI.",
+    category: "Electronics",
+    posted: "Jul 18, 2026",
+  },
+  {
     title: "Samsung 27-inch QHD 180Hz IPS gaming monitor (Odyssey G5 G50F)",
     merchant: "Newegg",
     url: "https://www.newegg.ca/samsung-ls27fg500enxza-27-qhd-180hz-ips-black/p/N82E16824027405",
