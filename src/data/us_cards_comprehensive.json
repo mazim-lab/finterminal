@@ -1699,7 +1699,7 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "3000"
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Southwest Airlines": "4x",
@@ -1985,9 +1985,7 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "No foreign transaction fee",
-      "Subscription perks",
-      "Food delivery credits"
+      "No foreign transaction fee"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -2267,8 +2265,6 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Food delivery credits",
-      "Subscription perks",
       "Statement credits",
       "No foreign transaction fee",
       "Travel Together Ticket",
