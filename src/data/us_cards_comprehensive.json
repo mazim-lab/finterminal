@@ -1443,7 +1443,7 @@
       "trip_cancellation": "1500"
     },
     "earn_rates": {
-      "United Airlines purchases": "3x",
+      "United Airlines purchases": "2x",
       "Dining": "2x",
       "Hotel stays booked with hotel": "2x",
       "All other purchases": "1x"
@@ -1492,13 +1492,13 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "1500",
+      "purchase_protection": "10000",
       "mobile_insurance": "Yes",
       "trip_cancellation": "1500"
     },
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "4x",
+      "United purchases": "3x",
       "Other travel": "2x",
       "Dining": "2x",
       "Select streaming": "2x",
@@ -1599,7 +1599,7 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "5x",
+      "United purchases": "4x",
       "Other travel": "2x",
       "Dining": "2x",
       "All other purchases": "1x"
@@ -1699,7 +1699,7 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "3000"
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Southwest Airlines": "4x",
@@ -1778,9 +1778,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 95,
-    "signup_bonus": 125000,
-    "signup_bonus_formatted": "125,000 Marriott Bonvoy points",
-    "signup_bonus_value_usd": 125000,
+    "signup_bonus": 250000,
+    "signup_bonus_formatted": "3-5 Free Night Awards (redeemable up to 50,000 points/night, total value up to 250,000 points) plus a $100 airline credit, after spending $3,000 in the first 3 months",
+    "signup_bonus_value_usd": 250000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1806,7 +1806,7 @@
       "Grocery, gas, and dining": "3x",
       "All other purchases": "2x"
     },
-    "welcome_bonus": "125,000 Marriott Bonvoy points",
+    "welcome_bonus": "3-5 Free Night Awards (redeemable up to 50,000 points/night, total value up to 250,000 points) plus a $100 airline credit, after spending $3,000 in the first 3 months",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1875,9 +1875,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 0,
-    "signup_bonus": 60000,
-    "signup_bonus_formatted": "60,000 Marriott Bonvoy points",
-    "signup_bonus_value_usd": 60000,
+    "signup_bonus": 100000,
+    "signup_bonus_formatted": "2 Free Night Awards (redeemable up to 50,000 points/night, total value up to 100,000 points) after spending $1,000 in the first 3 months",
+    "signup_bonus_value_usd": 100000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1905,7 +1905,7 @@
       "Streaming, internet, cable, phone": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "60,000 Marriott Bonvoy points",
+    "welcome_bonus": "2 Free Night Awards (redeemable up to 50,000 points/night, total value up to 100,000 points) after spending $1,000 in the first 3 months",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1985,9 +1985,7 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "No foreign transaction fee",
-      "Subscription perks",
-      "Food delivery credits"
+      "No foreign transaction fee"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -2267,8 +2265,6 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Food delivery credits",
-      "Subscription perks",
       "Statement credits",
       "No foreign transaction fee",
       "Travel Together Ticket",
@@ -2318,7 +2314,7 @@
       "Food delivery credits",
       "Subscription perks",
       "No foreign transaction fee",
-      "Companion Pass",
+      "Companion Ticket",
       "Priority Boarding"
     ],
     "foreign_transaction_fee": false,
@@ -2801,7 +2797,6 @@
     },
     "earn_rates": {
       "Purchases of $5,000 or more": "2.5%",
-      "Chase Travel": "5%",
       "All other purchases": "2%"
     },
     "welcome_bonus": "Earn $1,000 bonus cash back",
