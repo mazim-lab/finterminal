@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { TAGS, tagBySlug, articlesForTag } from "@/data/tags";
+import { TAGS, tagBySlug, articlesForTag, MIN_INDEXABLE_TAG_ARTICLES } from "@/data/tags";
 import { LoadMoreCards } from "@/components/LoadMoreCards";
 
 // Every tag hub is known at build time from the canonical list.
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const tag = tagBySlug(slug);
   if (!tag) return { title: "Topic Not Found | FinTerminal" };
 
-  const thin = articlesForTag(slug).length < 3;
+  const thin = articlesForTag(slug).length < MIN_INDEXABLE_TAG_ARTICLES;
   return {
     title: `${tag.label} | FinTerminal`,
     description: tag.description,

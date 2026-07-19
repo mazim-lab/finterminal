@@ -561,6 +561,11 @@ export function tagCount(slug: string): number {
   return articlesForTag(slug).length;
 }
 
+// A tag page is only indexed (and only listed in the sitemap) once it has at
+// least this many articles. Shared so the sitemap and the tag page's noindex
+// rule can never drift apart. See src/app/tags/[slug]/page.tsx.
+export const MIN_INDEXABLE_TAG_ARTICLES = 3;
+
 // Fallback for data-driven items that may not be in the registry yet.
 export function fallbackTagsForPath(path: string): string[] {
   if (path.startsWith("/travel/sweet-spots/")) return ["travel", "points", "award-booking"];
