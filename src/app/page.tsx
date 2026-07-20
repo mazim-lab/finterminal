@@ -272,6 +272,24 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ── Browse the whole site: quiet index of every section ───────── */}
+        <section className="hp-sec" aria-labelledby="browse-h">
+          <div className="hp-sechead">
+            <span className="hp-mlabel" id="browse-h">BROWSE THE WHOLE SITE</span>
+            <span className="hp-meta">every section, one row</span>
+          </div>
+          <div className="guidestrip">
+            <Link className="guidechip" href="/cards"><span className="gi">&#9656;</span> Cards</Link>
+            <Link className="guidechip" href="/travel"><span className="gi">&#9656;</span> Travel &amp; points</Link>
+            <Link className="guidechip" href="/personal-finance"><span className="gi">&#9656;</span> Personal finance</Link>
+            <Link className="guidechip" href="/rates"><span className="gi">&#9656;</span> Rates</Link>
+            <Link className="guidechip" href="/news"><span className="gi">&#9656;</span> News</Link>
+            <Link className="guidechip" href="/deals"><span className="gi">&#9656;</span> Deals</Link>
+            <Link className="guidechip" href="/tags"><span className="gi">&#9656;</span> Tags</Link>
+            <Link className="guidechip" href="/directory"><span className="gi">&#9656;</span> Directory</Link>
+          </div>
+        </section>
       </main>
     </div>
   );

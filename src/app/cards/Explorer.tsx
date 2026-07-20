@@ -6,7 +6,6 @@ import { useSearchParams } from 'next/navigation';
 import type { Benefits } from '@/data/cards';
 import { CARDS_VERIFIED } from '@/data/cards';
 import { formatCurrency, receiptLines, earnLines, type SlimCard } from '@/data/card-view';
-import { valuationFor } from '@/data/point-valuations';
 import { VerifiedStamp } from '@/components/VerifiedStamp';
 
 type SortKey = 'name' | 'tags' | 'fee' | 'bonus' | 'cpp' | 'value';
@@ -110,8 +109,16 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
   const maxValue = Math.max(...filtered.map((c) => c.first_year_value), 1);
   const top = filtered.reduce<SlimCard | null>((a, c) => (!a || c.first_year_value > a.first_year_value ? c : a), null);
   const noFx = filtered.filter((c) => c.benefits.no_fx_fee).length;
-  let topCpp = 0, topProg = '';
-  filtered.forEach((c) => { const v = valuationFor(c.rewards_program); const m = v.max ?? v.baseline; if (m > topCpp) { topCpp = m; topProg = c.rewards_program; } });
+  // Median est. 12-mo value across the CURRENTLY FILTERED set. Reuses each card's
+  // already-computed first_year_value (no new methodology). Currency is native per
+  // card; like the "Top value" stat we render with the middle card's country
+  // (unambiguous when a single country is filtered; representative when mixed).
+  const byValue = [...filtered].sort((a, b) => a.first_year_value - b.first_year_value);
+  const mid = Math.floor(byValue.length / 2);
+  const medianValue = byValue.length
+    ? (byValue.length % 2 ? byValue[mid].first_year_value : (byValue[mid - 1].first_year_value + byValue[mid].first_year_value) / 2)
+    : 0;
+  const medianCountry = country !== 'all' ? country : (byValue[mid]?.country ?? 'CA');
 
   const onSort = (key: SortKey) => {
     if (key === sortKey) setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'));
@@ -132,6 +139,13 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
         {filtersOpen ? 'Hide filters' : 'Filters'}
       </button>
       <aside className={`rail${filtersOpen ? ' open' : ''}`}>
+        <h4>Country</h4>
+        {(['all', 'CA', 'US'] as const).map((c) => (
+          <label key={c} className={`filt${country === c ? ' on' : ''}`}>
+            <input type="radio" name="country" checked={country === c} onChange={() => setCountry(c)} /> {c === 'all' ? 'All' : c}
+          </label>
+        ))}
+
         <h4>Card type</h4>
         {CARD_TYPES.map((t) => (
           <label key={t} className={`filt${types.includes(t) ? ' on' : ''}`} style={{ textTransform: 'capitalize' }}>
@@ -167,13 +181,6 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
             <span className="ct">{netCounts[n]}</span>
           </label>
         ))}
-
-        <h4>Country</h4>
-        {(['all', 'CA', 'US'] as const).map((c) => (
-          <label key={c} className={`filt${country === c ? ' on' : ''}`}>
-            <input type="radio" name="country" checked={country === c} onChange={() => setCountry(c)} /> {c === 'all' ? 'All' : c}
-          </label>
-        ))}
       </aside>
 
       <main>
@@ -192,7 +199,7 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
         <div className="stats">
           <div className="stat"><div className="l">Cards tracked</div><div className="v">{filtered.length}</div><div className="d">comprehensive data</div></div>
           <div className="stat"><div className="l">Top value</div><div className="v em">{top ? formatCurrency(top.first_year_value, top.country) : '—'}</div><div className="d">{top ? top.name : ''}</div></div>
-          <div className="stat"><div className="l">Top ¢/pt</div><div className="v gd">{topCpp ? `${topCpp.toFixed(1)}¢` : '—'}</div><div className="d">{topProg ? `${topProg} sweet spot` : ''}</div></div>
+          <div className="stat"><div className="l">Median 12-mo value</div><div className="v">{filtered.length ? formatCurrency(medianValue, medianCountry) : '—'}</div><div className="d">midpoint of {filtered.length} filtered</div></div>
           <div className="stat"><div className="l">No-FX options</div><div className="v">{noFx}</div><div className="d">0% foreign txn</div></div>
         </div>
 
@@ -222,7 +229,11 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
                     <tr className={`cardrow${isOpen ? ' rcpt-open' : ''}`}>
                       <td data-label="Card">
                         <a href={`/cards/${c.slug}`}>
-                          <div className="cn">{c.name}</div>
+                          <div className="cn">
+                            <span className={`cc ${c.country.toLowerCase()}`}>{c.country}</span>
+                            {c.name}
+                            {c.network !== 'Unknown' && <span className="netok">{c.network}</span>}
+                          </div>
                           <div className="ci" style={{ textTransform: 'lowercase' }}>{c.issuer} · {c.rewards_program || c.card_type}</div>
                         </a>
                       </td>

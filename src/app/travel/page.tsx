@@ -17,7 +17,12 @@ export default function TravelPage() {
       <main>
         <div className="doc">
           <div className="head"><h1>Travel &amp; Points</h1></div>
+        </div>
 
+        {/* The card list breaks out of the reading column to fill the desktop
+            gutter as a two-up grid; the heading above and prose below stay at
+            reading width. */}
+        <div className="listwide">
           <div className="cd-sec">Guides</div>
           <LoadMoreCards
             cards={[
@@ -37,8 +42,11 @@ export default function TravelPage() {
               })),
             ]}
             pageSize={10}
+            gridClassName="card-grid"
           />
+        </div>
 
+        <div className="doc">
           <p className="lede" style={{ marginTop: 20 }}>
             New worked examples land here a couple of times a week, walking through a real redemption on a
             different program each time.

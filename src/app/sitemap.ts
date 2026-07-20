@@ -9,6 +9,7 @@ const BASE = "https://www.finterminal.ca";
 
 const STATIC_PATHS = [
   "",
+  "/directory",
   "/tags",
   "/rates",
   "/news",

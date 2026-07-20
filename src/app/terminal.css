@@ -92,10 +92,11 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,
 .topbar nav a.on{background:var(--panel-2);color:var(--emerald)}
 .topbar nav a:hover{color:var(--ink)}
 .topbar .right{margin-left:auto;display:flex;align-items:center;gap:16px;flex:none}
-.ticker{font-family:var(--mono);font-size:var(--t-micro);color:var(--ink-soft);display:inline-flex;align-items:center;gap:6px}
+.ticker{font-family:var(--mono);font-size:var(--t-micro);color:var(--ink-soft);display:inline-flex;align-items:center;gap:6px;text-decoration:none;cursor:pointer}
+.ticker:hover .tk{color:var(--emerald)}
 .ticker .tk{color:var(--ink-dim);font-weight:700;letter-spacing:.08em}
 .ticker .sep{color:var(--ink-dim);opacity:.5}
-.ticker .up{color:var(--emerald);font-weight:700}
+.ticker .asof{color:var(--ink-dim);opacity:.7;letter-spacing:.02em;margin-left:2px}
 .miniflap{display:inline-flex;gap:2px}
 .miniflap .mc{display:inline-flex;align-items:center;justify-content:center;min-width:11px;height:18px;
   background:#14130F;color:#EFE8D6;border-radius:2px;font-family:var(--mono);font-size:12px;font-weight:700;
@@ -179,6 +180,12 @@ td.mono{text-overflow:clip}
 .pos{color:var(--emerald)} .negv{color:var(--red)}
 .tag{display:inline-block;font-family:var(--mono);font-size:var(--t-micro);border:1px solid var(--line);border-radius:3px;padding:1px 6px;color:var(--ink-soft);margin-right:3px;white-space:nowrap}
 .tag.em{color:var(--emerald);border-color:color-mix(in srgb, var(--emerald) 35%, transparent);background:var(--emerald-tint)}
+/* country chip (prepended to a card row) + network token (after the card name):
+   compact mono pills that keep mixed-country / cross-network lists unambiguous */
+.cc{display:inline-block;font-family:var(--mono);font-size:var(--t-micro);font-weight:700;letter-spacing:.04em;line-height:1.5;border:1px solid var(--line);border-radius:3px;padding:0 5px;margin-right:6px;color:var(--ink-dim);vertical-align:middle}
+.cc.ca{color:var(--emerald);border-color:color-mix(in srgb, var(--emerald) 35%, transparent);background:var(--emerald-tint)}
+.cc.us{color:var(--gold);border-color:color-mix(in srgb, var(--gold) 35%, transparent);background:var(--gold-tint)}
+.netok{display:inline-block;font-family:var(--mono);font-size:var(--t-micro);font-weight:600;letter-spacing:.03em;line-height:1.5;border:1px solid var(--line);border-radius:3px;padding:0 5px;margin-left:6px;color:var(--ink-dim);vertical-align:middle}
 .vbar{height:6px;width:90px;background:var(--line);border-radius:3px;display:inline-block;position:relative;vertical-align:middle}
 .vbar::after{content:"";position:absolute;left:0;top:0;height:100%;width:var(--w,0);background:linear-gradient(90deg,var(--emerald),var(--gold));border-radius:3px}
 
@@ -460,6 +467,14 @@ details.coll>summary.cd-sec:hover{color:var(--emerald)}
 .arow-card .am .tg{color:var(--emerald);font-weight:700}
 .arow-card .am .sep{opacity:.4}
 .arow-card .am .ext{margin-left:auto;color:var(--emerald);font-weight:700}
+
+/* wide listing (e.g. /travel Guides): the card list breaks out of the reading
+   column to use the desktop gutter, while headings/prose stay at --w-read.
+   Two-up on desktop, single column on narrow screens — mirrors .wire/.proscons. */
+.listwide{max-width:var(--w-data)}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;align-items:start}
+.card-grid .arow-card{margin-bottom:0}
+@media (max-width:680px){.card-grid{grid-template-columns:1fr}}
 
 /* two-up note pair (submission paths, roadmap) */
 .acc-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}

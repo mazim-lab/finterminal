@@ -23,6 +23,8 @@ export function SiteFooter() {
         {" · "}
         <Link href="/contact">Contact</Link>
         {" · "}
+        <Link href="/directory">Directory</Link>
+        {" · "}
         <Link href="/disclosure">Disclosure</Link>
       </span>
 
