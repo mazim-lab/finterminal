@@ -359,6 +359,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-emirates-premium-economy-first-class-restriction-july-18",
+    title: "Aeroplan opens up Emirates Premium Economy awards, while quietly walling off Emirates First Class to its top-tier members",
+    dek: "Air Canada confirmed on July 18 that Aeroplan members can start redeeming points for Emirates Premium Economy from July 21, making Emirates the first Aeroplan partner bookable in all four cabins, but Emirates First Class awards are now limited to members with Aeroplan 35K status or higher.",
+    section: "News",
+    tags: ["news", "aeroplan", "award-booking", "travel"],
+  },
+  {
     path: "/news/aeroplan-buy-points-110-percent-bonus-july-16-19",
     title: "Aeroplan lifts its summer buy-points sale to a 110 percent bonus, now running through July 19",
     dek: "Following up on our July 12 note, Aeroplan sweetened its summer buy-points sale on July 16 to a targeted bonus of up to 110 percent, a step up from the 100 percent it had been offering, and set the new window to close July 19.",

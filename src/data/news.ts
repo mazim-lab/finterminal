@@ -30,6 +30,21 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "aeroplan-emirates-premium-economy-first-class-restriction-july-18",
+    headline: "Aeroplan opens up Emirates Premium Economy awards, while quietly walling off Emirates First Class to its top-tier members",
+    dek: "Air Canada confirmed on July 18 that Aeroplan members can start redeeming points for Emirates Premium Economy from July 21, making Emirates the first Aeroplan partner bookable in all four cabins, but Emirates First Class awards are now limited to members with Aeroplan 35K status or higher.",
+    body:
+      "Air Canada and Emirates keep tightening a partnership that Canadians actually get a lot of use out of, and the latest tweak, confirmed on July 18, cuts both ways. Starting July 21, Aeroplan members can redeem points for Emirates Premium Economy, which makes Emirates the first Aeroplan partner airline you can book in all four cabins, from Economy up through Premium Economy, Business, and First. That is a genuinely nice addition if a lie-flat Business seat feels like more points than you want to spend, since Premium Economy gives you a roomier ride to Dubai and beyond without the top-cabin price tag. The real draw here has not changed either: Aeroplan charges no carrier surcharges on Emirates awards, so you skip the punishing fuel fees that make Emirates First and Business so expensive to book through Emirates' own Skywards program, with Economy and Business rewards still starting at 15,000 points one way. Now the part to be aware of before you get your hopes up on the pointy end. Emirates First Class awards through Aeroplan are now restricted to members who hold Aeroplan 35K Elite Status or higher at the time you book, and every traveller in a First Class seat has to be at least nine years old. Both rules line up with Emirates' own Skywards policies, which tells you Emirates asked for this rather than Air Canada choosing it. For most people this is not much of a loss, since Aeroplan priced Emirates First so steeply that it was rarely the smart redemption anyway, and the vast majority of members do not carry 35K status. The takeaway is an easy one: if you were eyeing Emirates, Business remains the sweet spot with no surcharges, Premium Economy is a welcome new middle option from July 21, and First Class is now a perk reserved for Aeroplan's frequent flyers. As always, confirm the points cost and seat availability live at the time you book, since award pricing and space can shift.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jul 18, 2026",
+    sourceLabel: "Air Canada",
+    sourceUrl: "https://www.aircanada.com/media/air-canada-and-emirates-to-extend-strategic-partnership-with-major-multi-year-expansion-agreement/",
+    href: "/travel/aeroplan-sweet-spots",
+    hrefLabel: "Aeroplan sweet-spots guide",
+  },
+  {
+    time: "08:30",
     slug: "aeroplan-buy-points-110-percent-bonus-july-16-19",
     headline: "Aeroplan lifts its summer buy-points sale to a 110 percent bonus, now running through July 19",
     dek: "Following up on our July 12 note, Aeroplan sweetened its summer buy-points sale on July 16 to a targeted bonus of up to 110 percent, a step up from the 100 percent it had been offering, and set the new window to close July 19.",
