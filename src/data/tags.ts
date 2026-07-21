@@ -356,6 +356,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "flying-blue", "amex", "points", "award-booking", "business-class", "alliances"],
   },
+  {
+    path: "/travel/sweet-spots/aeroplan-south-america-business-bogota-50k",
+    title: "Aeroplan sweet spot: business class to South America from about 50,000 points on Avianca or Copa",
+    dek: "Aeroplan prices its Star Alliance partners off a fixed distance chart, so a quiet, durable sweet spot for Canadians is business class to South America on Avianca or Copa, about 50,000 points one-way to closer cities like Bogota or Lima and 60,000 to deep South America like Buenos Aires, with the fuel surcharges stripped out.",
+    section: "Sweet spot",
+    tags: ["travel", "aeroplan", "points", "award-booking", "business-class", "alliances"],
+  },
 
   // News items
   {

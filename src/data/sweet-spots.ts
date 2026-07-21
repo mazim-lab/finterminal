@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "aeroplan-south-america-business-bogota-50k",
+    program: "Aeroplan",
+    title: "Aeroplan sweet spot: business class to South America from about 50,000 points on Avianca or Copa",
+    dek: "Aeroplan prices its Star Alliance partners off a fixed distance chart, so a quiet, durable sweet spot for Canadians is business class to South America on Avianca or Copa, about 50,000 points one-way to closer cities like Bogota or Lima and 60,000 to deep South America like Buenos Aires, with the fuel surcharges stripped out.",
+    read: "5 min read",
+    date: "Jul 2026",
+    lastChecked: "2026-07-21",
+    body:
+      "Aeroplan is the home currency for most Canadian points collectors, and that is exactly why its quieter sweet spots are worth knowing, not just the famous lie-flat run to Europe. Aeroplan prices flights on its Star Alliance partners off a fixed, distance based chart rather than the floating cash fare, and one of the most underrated corners of that chart is business class down to South America on Avianca and Copa. The figures below are an example of how the chart works, not a quote for any specific date, so always confirm the live price when you search.\n\nThe numbers look like this. Closer, northern South America such as Bogota in Colombia or Lima in Peru sits in the band that prices business class at about 50,000 points one-way, with economy closer to 30,000. Push deeper into the continent, to Buenos Aires, Sao Paulo, or Santiago, and the longer distance moves business to about 60,000 points one-way and economy to roughly 40,000. Avianca flies a nonstop from Toronto to Bogota a few days a week, and Copa threads the rest of the continent through its Panama City hub, so a Canadian has a couple of clean ways in. Treat these as approximate bands rather than a fixed quote, and price your own dates before you assume a number.\n\nHere is the cents-per-point math on a realistic business booking. Say a one-way business fare from Toronto to Bogota would run about $2,000 in cash, and the award books for 50,000 points plus taxes and fees. Because Aeroplan does not pass along fuel surcharges and Avianca and Copa are light on them to begin with, the cash portion stays small, often around $120 to $140 outbound from Canada, so call it $130. That works out to (2000 minus 130) divided by 50000, times 100, which is about 3.7 cents per point. Anything north of 2 cents is a good use of Aeroplan, so this sits comfortably in the range where your points are doing real work, even if the number is more modest than the Europe or Asia business deals. Prices move, so confirm the live fare when you book.\n\nA few things make it sing. The no-surcharge policy keeps the cash low, and Aeroplan lets you add a stopover of up to 45 days for a flat 5,000 points, so you can break the trip in Bogota or Panama City and see two places on one award. There is even a neat quirk worth knowing: Aeroplan treats Panama City as part of its North America zone, so routing through it can sometimes price lower than you would expect. And here is the part that sets this apart from the Delta, United, and Alaska sweet spots we have covered, where earning the miles is the hard part for Canadians. Aeroplan is the easy one. Amex Membership Rewards in Canada transfers to Aeroplan at a clean 1 to 1, and the TD, CIBC, and Amex Aeroplan co-branded cards earn it directly, so most Canadians can build this balance without any exotic manoeuvres.\n\nNow the honest caveats, and there are a few. The biggest one is the cabin: Avianca's Toronto to Bogota flight uses a narrowbody A319 and Copa flies all 737s, so the business seat here is a recliner with extra room, not a lie-flat pod. It is a comfortable step up for a daytime run to South America, but do not walk on expecting the flat bed you would get to Europe. Book the partner, not Air Canada, because Air Canada's own flights on these routes are dynamically priced and can cost far more points than the fixed Avianca or Copa award. Partner business space is genuinely limited and the Toronto to Bogota nonstop only operates a few days a week, so stay flexible and search a range of dates. The good news for a post that lives forever is that Aeroplan left every South America band untouched in its June 2026 chart update, so these numbers are about as durable as award pricing gets, but price your specific trip before you assume a figure.",
+    href: "/cards?q=aeroplan",
+    hrefLabel: "Cards that earn Aeroplan",
+    shortAnswer:
+      "Aeroplan prices Star Alliance partner flights off a fixed distance chart, so the quiet, durable sweet spot for Canadians is business class to South America on Avianca or Copa: about 50,000 points one-way to closer cities such as Bogota or Lima, and 60,000 to deep South America like Buenos Aires or Sao Paulo, with economy near 30,000 to 40,000. On a roughly $2,000 one-way business fare booked for 50,000 points plus about $130 in taxes, that is around 3.7 cents per point, comfortably above the 2 cents that already makes a good Aeroplan redemption. Aeroplan does not pass fuel surcharges and lets you add a stopover for 5,000 points, and unlike the US programs it is easy for Canadians to earn through Amex Membership Rewards at 1 to 1 and the Aeroplan co-branded cards. Just know the business cabin on Avianca's A319 and Copa's 737 is a recliner rather than lie-flat, and South America pricing was left untouched in the June 2026 chart, so these bands are durable, though you should still confirm the live price when you search.",
+    faqs: [
+      {
+        q: "How many Aeroplan points is business class to South America?",
+        a: "About 50,000 points one-way to closer, northern South America such as Bogota in Colombia or Lima in Peru, and about 60,000 to deeper destinations like Buenos Aires, Sao Paulo, or Santiago, with economy closer to 30,000 and 40,000. Aeroplan prices its Star Alliance partners off a fixed distance chart, so treat these as approximate bands and confirm the live price when you search.",
+      },
+      {
+        q: "Is business class to South America a good value on Aeroplan?",
+        a: "Yes. On a roughly $2,000 one-way business fare from Toronto to Bogota booked for 50,000 points plus about $130 in taxes, the math is (2000 minus 130) divided by 50000, times 100, which is about 3.7 cents per point. Anything north of 2 cents is a good use of Aeroplan, so this sits comfortably in the range where your points are doing real work, even if it is more modest than the Europe or Asia business deals.",
+      },
+      {
+        q: "Should I book Air Canada or a partner like Avianca or Copa?",
+        a: "Book the partner. Avianca and Copa price on Aeroplan's fixed distance chart at about 50,000 to 60,000 points in business, while Air Canada's own flights on these routes are dynamically priced and can cost far more points. Avianca flies a nonstop from Toronto to Bogota a few days a week, and Copa threads the rest of the continent through its Panama City hub.",
+      },
+      {
+        q: "Does Aeroplan charge fuel surcharges on these awards?",
+        a: "No. Aeroplan does not pass along carrier-imposed fuel surcharges, and Avianca and Copa are light on them to begin with, so the cash portion stays small, often around $120 to $140 outbound from Canada. Aeroplan also lets you add a stopover of up to 45 days for a flat 5,000 points, so you can see Bogota or Panama City on the same award.",
+      },
+      {
+        q: "How do Canadians earn Aeroplan points for this?",
+        a: "This is the easy part, unlike the US programs where earning is the hard step. Amex Membership Rewards in Canada transfers to Aeroplan at a clean 1 to 1, and the TD, CIBC, and Amex Aeroplan co-branded cards earn it directly, so most Canadians can build this balance without any exotic manoeuvres.",
+      },
+      {
+        q: "Is the business cabin lie-flat?",
+        a: "No. Avianca's Toronto to Bogota flight uses a narrowbody A319 and Copa flies all 737s, so the business seat here is a recliner with extra room, not a lie-flat pod. It is a comfortable step up for a daytime run to South America, but do not expect the flat bed you would get to Europe.",
+      },
+    ],
+  },
+  {
     slug: "flying-blue-promo-rewards-europe-business-50k",
     program: "Flying Blue",
     title: "Flying Blue sweet spot: business class to Europe from about 50,000 miles in the monthly Promo Rewards",
