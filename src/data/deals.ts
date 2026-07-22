@@ -78,6 +78,8 @@ export const DEALS: Deal[] = [
       "If you have a desktop PC that runs hot and loud under load, a good all in one liquid cooler is one of the nicer quality of life upgrades, and this one is 62 percent off at $85.49 down from $229.99. A 240mm radiator like this pulls heat off the processor far better than a small stock cooler, which keeps the chip running faster for longer and lets the fans spin down to a whisper instead of roaring during a game or a big export. It is sold and shipped by Newegg with free 30 day returns. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop and your case has room for a 240mm radiator, so check your case clearance and socket support first. It is not a plug and play gadget for a laptop or a non PC household.",
     category: "Electronics",
     posted: "Jul 16, 2026",
+    expires: "ended Jul 22",
+    expiresAt: "2026-07-22",
   },
   {
     title: "Corsair Scimitar Elite Wireless SE gaming mouse",
@@ -89,6 +91,8 @@ export const DEALS: Deal[] = [
       "This is Corsair's flagship mouse for people who live in MMOs, MOBAs, or macro heavy work, and it is down to $109.99 from $199.99, a full 45 percent off. The draw is the twelve button side panel that slides to fit your thumb, so all those abilities, hotkeys, or shortcuts sit right under one finger instead of scattered across the keyboard, and it runs wireless over both a 2.4GHz dongle and Bluetooth. One honest note so you buy for the right reason: that side panel is wonderful if you actually use a lot of buttons, but it makes the mouse chunkier and busier than a plain everyday pointer, so if you just want something simple to move a cursor around, a basic mouse will serve you better for a lot less. At this price though, it is a treat for the right kind of gamer.",
     category: "Electronics",
     posted: "Jul 16, 2026",
+    expires: "ended Jul 22",
+    expiresAt: "2026-07-22",
   },
   {
     title: "MSI Versa 300 wireless gaming mouse",
