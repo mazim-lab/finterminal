@@ -2002,8 +2002,8 @@
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "100",
-      "trip_cancellation": ""
+      "purchase_protection": "500",
+      "trip_cancellation": "5000"
     },
     "welcome_bonus": "Earn up to 120,000 Bonus Points",
     "last_updated": "2026-06-18",
