@@ -1853,7 +1853,7 @@
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": ""
+      "purchase_protection": "500"
     },
     "benefits": {
       "lounge_access": false,
