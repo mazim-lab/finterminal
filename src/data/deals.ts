@@ -56,6 +56,7 @@ export const DEALS: Deal[] = [
       "If you are still working or gaming on a basic 1080p screen, this is the kind of upgrade you feel every single day. Samsung has its 27 inch Odyssey G5 down to $199.99 from $349.99, a clean $150 off, and the specs punch well above that price. You get sharp QHD 2560x1440 resolution, a fast 180Hz refresh rate, and an IPS panel that keeps colours honest from any angle, so text stays crisp for a work day and motion stays smooth for a game night. One honest note so you buy clear eyed: this is a straightforward gaming and productivity monitor without extras like USB-C charging or built-in speakers, and Newegg gives you a short 15 day return window, so if you want to try it, decide inside that window.",
     category: "Electronics",
     posted: "Jul 16, 2026",
+    expiresAt: "2026-07-22",
   },
   {
     title: "Gigabyte 27-inch QHD 180Hz curved gaming monitor (GS27QCA)",
@@ -198,6 +199,7 @@ export const DEALS: Deal[] = [
       "The Gel-Kayano is Asics' flagship stability shoe, the one runners with flat feet or tired knees quietly swear by, and Altitude Sports has the current version 32 on clearance at $145.19, down from $219.99, simply because the Kayano 33 just landed. Nothing about the shoe changed overnight because a new model number arrived. Sign up for a free Altitude Sports account and another 5 percent comes off at checkout, bringing it to $137.93. If you run, walk a lot, or stand all day, this is a genuine flagship shoe at a mid-tier price. One honest note so you go in clear eyed: clearance means sizes and colours are already thinning out and a few widths are gone, so grab your size sooner rather than later, and buy it because you need good shoes, not because the percent-off looks big.",
     category: "Apparel",
     posted: "Jul 2, 2026",
+    expiresAt: "2026-07-22",
   },
   {
     title: "Milwaukee M12 REDLITHIUM HIGH OUTPUT XC 5.0Ah battery 2-pack with charger",
