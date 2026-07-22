@@ -366,6 +366,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/porter-viporter-reward-flight-fuel-surcharge-back-to-40-july",
+    title: "Porter puts its reward-flight fuel surcharge back up to $40, undoing the cut it made only last month",
+    dek: "Porter Airlines told VIPorter members on July 17 that it is raising the fuel surcharge on reward flight bookings back to $40 each way, doubling the $20 it had trimmed the fee to in June, and pointing to a sharp jump in jet fuel prices. Bookings already made keep their original rate.",
+    section: "News",
+    tags: ["news", "points", "award-booking", "travel"],
+  },
+  {
     path: "/news/aeroplan-emirates-premium-economy-first-class-restriction-july-18",
     title: "Aeroplan opens up Emirates Premium Economy awards, while quietly walling off Emirates First Class to its top-tier members",
     dek: "Air Canada confirmed on July 18 that Aeroplan members can start redeeming points for Emirates Premium Economy from July 21, making Emirates the first Aeroplan partner bookable in all four cabins, but Emirates First Class awards are now limited to members with Aeroplan 35K status or higher.",

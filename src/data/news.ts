@@ -30,6 +30,21 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "porter-viporter-reward-flight-fuel-surcharge-back-to-40-july",
+    headline: "Porter puts its reward-flight fuel surcharge back up to $40, undoing the cut it made only last month",
+    dek: "Porter Airlines told VIPorter members on July 17 that it is raising the fuel surcharge on reward flight bookings back to $40 each way, doubling the $20 it had trimmed the fee to in June, and pointing to a sharp jump in jet fuel prices. Bookings already made keep their original rate.",
+    body:
+      "If you redeem VIPorter points, here is a change worth knowing about before you book your next reward flight. Porter Airlines emailed members on July 17 to say it is putting the fuel surcharge on reward bookings back up to $40 each way, per passenger, which doubles the $20 the airline had cut the fee to in June. It applies only to new bookings made from that point on, and it is charged on reward flights, not on tickets you pay cash for. The reason Porter gives is the same one behind the whole saga: jet fuel is the biggest cost an airline carries, and a fresh, unexpectedly sharp run-up in oil prices pushed the surcharge back up. The airline frames this as temporary and says it still wants to get rid of the fee entirely once fuel pricing settles down, which is the direction the June cut was meant to signal. The bit of good news is that anything you have already booked is protected at the rate you locked in, so this only touches bookings you make going forward. It is a small back-and-forth in the scheme of a trip, but it does chip away at what your Porter points are worth on redemption, so it is worth folding into the math when you compare paying with points against paying cash on a given route. If you were planning to book a Porter reward flight soon, there is no emergency here, just a slightly higher out-of-pocket cost than there was a few weeks ago, and a fee that has proven it can move in either direction as fuel prices swing. As always, confirm the current surcharge and the full cash-plus-points cost at the time you book, since Porter has adjusted this more than once already this year.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jul 20, 2026",
+    sourceLabel: "Porter Airlines",
+    sourceUrl: "https://www.flyporter.com/en-ca/about-porter/viporter",
+    href: "/travel",
+    hrefLabel: "Explore travel and points",
+  },
+  {
+    time: "08:30",
     slug: "aeroplan-emirates-premium-economy-first-class-restriction-july-18",
     headline: "Aeroplan opens up Emirates Premium Economy awards, while quietly walling off Emirates First Class to its top-tier members",
     dek: "Air Canada confirmed on July 18 that Aeroplan members can start redeeming points for Emirates Premium Economy from July 21, making Emirates the first Aeroplan partner bookable in all four cabins, but Emirates First Class awards are now limited to members with Aeroplan 35K status or higher.",
