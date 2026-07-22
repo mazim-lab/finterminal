@@ -2621,7 +2621,7 @@
     "insurance": {
       "baggage_delay": "100",
       "travel_accident": "1000000",
-      "purchase_protection": "120",
+      "purchase_protection": "10000",
       "mobile_insurance": "Yes",
       "trip_cancellation": "10000"
     },
