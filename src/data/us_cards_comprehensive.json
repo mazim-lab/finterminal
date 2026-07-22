@@ -1481,7 +1481,7 @@
       "Travel program credit (NEXUS/Global Entry)",
       "Statement credits",
       "Food delivery credits",
-      "Free first checked bag",
+      "Free first and second checked bags",
       "Concierge service"
     ],
     "foreign_transaction_fee": false,
@@ -1492,13 +1492,13 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "1500",
+      "purchase_protection": "10000",
       "mobile_insurance": "Yes",
       "trip_cancellation": "1500"
     },
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "4x",
+      "United purchases": "3x",
       "Other travel": "2x",
       "Dining": "2x",
       "Select streaming": "2x",
