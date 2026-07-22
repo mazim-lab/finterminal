@@ -1778,9 +1778,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 95,
-    "signup_bonus": 125000,
-    "signup_bonus_formatted": "125,000 Marriott Bonvoy points",
-    "signup_bonus_value_usd": 125000,
+    "signup_bonus": 250000,
+    "signup_bonus_formatted": "Earn 3-5 Free Night Awards (redemption level up to 50,000 points/night; total value up to 250,000 points) plus a $100 Airline Incidental Statement Credit, after spending $3,000 on purchases in the first 3 months from account opening",
+    "signup_bonus_value_usd": 250000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1799,14 +1799,14 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "100"
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Marriott Bonvoy hotels": "6x",
       "Grocery, gas, and dining": "3x",
       "All other purchases": "2x"
     },
-    "welcome_bonus": "125,000 Marriott Bonvoy points",
+    "welcome_bonus": "Earn 3-5 Free Night Awards (redemption level up to 50,000 points/night; total value up to 250,000 points) plus a $100 Airline Incidental Statement Credit, after spending $3,000 on purchases in the first 3 months from account opening",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
