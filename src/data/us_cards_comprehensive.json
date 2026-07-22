@@ -1149,9 +1149,9 @@
     "insurance": {
       "baggage_delay": "100",
       "travel_accident": "1000000",
-      "purchase_protection": "120",
+      "purchase_protection": "10000",
       "mobile_insurance": "Yes",
-      "trip_cancellation": ""
+      "trip_cancellation": "10000"
     },
     "welcome_bonus": "Earn 125,000 points",
     "last_updated": "2026-06-18",
