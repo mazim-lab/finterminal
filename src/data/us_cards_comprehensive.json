@@ -1149,9 +1149,9 @@
     "insurance": {
       "baggage_delay": "100",
       "travel_accident": "1000000",
-      "purchase_protection": "120",
+      "purchase_protection": "10000",
       "mobile_insurance": "Yes",
-      "trip_cancellation": ""
+      "trip_cancellation": "10000"
     },
     "welcome_bonus": "Earn 125,000 points",
     "last_updated": "2026-06-18",
@@ -1202,9 +1202,9 @@
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "",
+      "purchase_protection": "500",
       "mobile_insurance": "Yes",
-      "trip_cancellation": ""
+      "trip_cancellation": "10000"
     },
     "welcome_bonus": "Earn 75,000 bonus points",
     "last_updated": "2026-06-18",
@@ -1252,7 +1252,7 @@
       "All other purchases": "1.5%"
     },
     "insurance": {
-      "purchase_protection": "120",
+      "purchase_protection": "500",
       "trip_cancellation": "1500"
     },
     "welcome_bonus": "$200 cash back",
@@ -1302,7 +1302,7 @@
       "All other purchases": "1%"
     },
     "insurance": {
-      "purchase_protection": "120",
+      "purchase_protection": "500",
       "mobile_insurance": "Yes",
       "trip_cancellation": "1500"
     },
@@ -1349,7 +1349,7 @@
       "All purchases": "1.5%"
     },
     "insurance": {
-      "purchase_protection": "120",
+      "purchase_protection": "500",
       "trip_cancellation": "1500"
     },
     "welcome_bonus": "Earn a $25 statement credit for enrolling in automatic payments",
@@ -1393,7 +1393,7 @@
     "notes_for_canadians": null,
     "apply_url": "https://creditcards.chase.com/balance-transfer-credit-cards/slate",
     "insurance": {
-      "purchase_protection": "120"
+      "purchase_protection": "500"
     },
     "benefits": {
       "lounge_access": false,
@@ -1438,12 +1438,12 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "",
+      "purchase_protection": "10000",
       "mobile_insurance": "Yes",
       "trip_cancellation": "1500"
     },
     "earn_rates": {
-      "United Airlines purchases": "3x",
+      "United Airlines purchases": "2x",
       "Dining": "2x",
       "Hotel stays booked with hotel": "2x",
       "All other purchases": "1x"
@@ -1481,7 +1481,7 @@
       "Travel program credit (NEXUS/Global Entry)",
       "Statement credits",
       "Food delivery credits",
-      "Free first checked bag",
+      "Free first and second checked bags",
       "Concierge service"
     ],
     "foreign_transaction_fee": false,
@@ -1492,13 +1492,13 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "1500",
+      "purchase_protection": "10000",
       "mobile_insurance": "Yes",
       "trip_cancellation": "1500"
     },
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "4x",
+      "United purchases": "3x",
       "Other travel": "2x",
       "Dining": "2x",
       "Select streaming": "2x",
@@ -1545,7 +1545,7 @@
     "notes_for_canadians": null,
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
     "insurance": {
-      "purchase_protection": "120",
+      "purchase_protection": "500",
       "trip_cancellation": "1500"
     },
     "earn_rates": {
@@ -1588,7 +1588,7 @@
       "Travel program credit (NEXUS/Global Entry)",
       "Statement credits",
       "Food delivery credits",
-      "Free first checked bag",
+      "Free first and second checked bags",
       "Concierge service"
     ],
     "foreign_transaction_fee": false,
@@ -1599,16 +1599,16 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "5x",
+      "United purchases": "4x",
       "Other travel": "2x",
       "Dining": "2x",
       "All other purchases": "1x"
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "",
+      "purchase_protection": "10000",
       "mobile_insurance": "Yes",
-      "trip_cancellation": ""
+      "trip_cancellation": "10000"
     },
     "benefits": {
       "lounge_access": true,
@@ -1650,7 +1650,7 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "3000"
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Southwest Airlines": "2x",
@@ -1699,7 +1699,7 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "3000"
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Southwest Airlines": "4x",
@@ -1749,7 +1749,7 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": ""
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Southwest Airlines": "3x",
@@ -1778,9 +1778,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 95,
-    "signup_bonus": 125000,
-    "signup_bonus_formatted": "125,000 Marriott Bonvoy points",
-    "signup_bonus_value_usd": 125000,
+    "signup_bonus": 250000,
+    "signup_bonus_formatted": "Earn 3-5 Free Night Awards (redemption level up to 50,000 points/night; total value up to 250,000 points) plus a $100 Airline Incidental Statement Credit, after spending $3,000 on purchases in the first 3 months from account opening",
+    "signup_bonus_value_usd": 250000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1799,14 +1799,14 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "100"
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Marriott Bonvoy hotels": "6x",
       "Grocery, gas, and dining": "3x",
       "All other purchases": "2x"
     },
-    "welcome_bonus": "125,000 Marriott Bonvoy points",
+    "welcome_bonus": "Earn 3-5 Free Night Awards (redemption level up to 50,000 points/night; total value up to 250,000 points) plus a $100 Airline Incidental Statement Credit, after spending $3,000 on purchases in the first 3 months from account opening",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1853,7 +1853,7 @@
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": ""
+      "purchase_protection": "500"
     },
     "benefits": {
       "lounge_access": false,
@@ -1875,9 +1875,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 0,
-    "signup_bonus": 60000,
-    "signup_bonus_formatted": "60,000 Marriott Bonvoy points",
-    "signup_bonus_value_usd": 60000,
+    "signup_bonus": 100000,
+    "signup_bonus_formatted": "Earn 2 Free Night Awards (redemption level up to 50,000 points/night; total value up to 100,000 points), after spending $1,000 on purchases in the first 3 months from account opening",
+    "signup_bonus_value_usd": 100000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1896,7 +1896,7 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "100"
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Marriott Bonvoy hotels": "3x",
@@ -1905,7 +1905,7 @@
       "Streaming, internet, cable, phone": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "60,000 Marriott Bonvoy points",
+    "welcome_bonus": "Earn 2 Free Night Awards (redemption level up to 50,000 points/night; total value up to 100,000 points), after spending $1,000 on purchases in the first 3 months from account opening",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1948,8 +1948,8 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "100",
-      "trip_cancellation": ""
+      "purchase_protection": "500",
+      "trip_cancellation": "5000"
     },
     "earn_rates": {
       "IHG Hotels and Resorts": "10x",
@@ -2002,8 +2002,8 @@
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "100",
-      "trip_cancellation": ""
+      "purchase_protection": "500",
+      "trip_cancellation": "5000"
     },
     "welcome_bonus": "Earn up to 120,000 Bonus Points",
     "last_updated": "2026-06-18",
@@ -2053,7 +2053,7 @@
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "120"
+      "purchase_protection": "500"
     },
     "welcome_bonus": "$600 Offer: $300 Disney Gift Card eGift upon approval + $300 statement credit",
     "last_updated": "2026-06-18",
@@ -2102,7 +2102,7 @@
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "120"
+      "purchase_protection": "500"
     },
     "benefits": {
       "lounge_access": false,
@@ -2142,7 +2142,7 @@
     "apply_url": "https://creditcards.chase.com/rewards-credit-cards/disney/rewards",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "120"
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "All card purchases": "1%"
@@ -2174,10 +2174,7 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Food delivery credits",
-      "Subscription perks",
-      "No foreign transaction fee",
-      "Concierge service"
+      "No foreign transaction fee"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -2318,7 +2315,7 @@
       "Food delivery credits",
       "Subscription perks",
       "No foreign transaction fee",
-      "Companion Pass",
+      "Economy Companion Ticket",
       "Priority Boarding"
     ],
     "foreign_transaction_fee": false,
@@ -2334,7 +2331,7 @@
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": ""
+      "purchase_protection": "500"
     },
     "benefits": {
       "lounge_access": false,
@@ -2421,7 +2418,7 @@
     "insurance": {
       "baggage_delay": "100",
       "travel_accident": "500000",
-      "purchase_protection": "120"
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Amazon, Whole Foods, Chase Travel": "5%",
@@ -2468,7 +2465,7 @@
     "insurance": {
       "baggage_delay": "100",
       "travel_accident": "500000",
-      "purchase_protection": ""
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Amazon, Whole Foods, Chase Travel": "3%",
@@ -2521,7 +2518,7 @@
       "All other purchases": "1%"
     },
     "insurance": {
-      "purchase_protection": "120",
+      "purchase_protection": "500",
       "mobile_insurance": "Yes",
       "trip_cancellation": "1500"
     },
@@ -2624,7 +2621,7 @@
     "insurance": {
       "baggage_delay": "100",
       "travel_accident": "1000000",
-      "purchase_protection": "120",
+      "purchase_protection": "10000",
       "mobile_insurance": "Yes",
       "trip_cancellation": "10000"
     },
@@ -2801,7 +2798,6 @@
     },
     "earn_rates": {
       "Purchases of $5,000 or more": "2.5%",
-      "Chase Travel": "5%",
       "All other purchases": "2%"
     },
     "welcome_bonus": "Earn $1,000 bonus cash back",
@@ -2859,7 +2855,7 @@
       "Local transit and rideshare": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn up to 110,000 bonus miles + 2,000 Premier qualifying points (PQP)",
+    "welcome_bonus": "Earn 100,000 bonus miles + 2,000 Premier qualifying points (PQP) after qualifying purchases.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -3047,7 +3043,7 @@
     "apply_url": "https://creditcards.chase.com/business-credit-cards/IHG/business-premier",
     "insurance": {
       "purchase_protection": "120",
-      "trip_cancellation": ""
+      "trip_cancellation": "1500"
     },
     "earn_rates": {
       "IHG Hotels and Resorts": "10x",
@@ -3085,9 +3081,6 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Food delivery credits",
-      "Subscription perks",
-      "Statement credits",
       "No foreign transaction fee"
     ],
     "foreign_transaction_fee": false,
