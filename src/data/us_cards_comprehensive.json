@@ -3043,7 +3043,7 @@
     "apply_url": "https://creditcards.chase.com/business-credit-cards/IHG/business-premier",
     "insurance": {
       "purchase_protection": "120",
-      "trip_cancellation": ""
+      "trip_cancellation": "1500"
     },
     "earn_rates": {
       "IHG Hotels and Resorts": "10x",
