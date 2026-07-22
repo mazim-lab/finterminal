@@ -1588,7 +1588,7 @@
       "Travel program credit (NEXUS/Global Entry)",
       "Statement credits",
       "Food delivery credits",
-      "Free first checked bag",
+      "Free first and second checked bags",
       "Concierge service"
     ],
     "foreign_transaction_fee": false,
@@ -1599,16 +1599,16 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "5x",
+      "United purchases": "4x",
       "Other travel": "2x",
       "Dining": "2x",
       "All other purchases": "1x"
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "",
+      "purchase_protection": "10000",
       "mobile_insurance": "Yes",
-      "trip_cancellation": ""
+      "trip_cancellation": "10000"
     },
     "benefits": {
       "lounge_access": true,
