@@ -366,6 +366,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-calm-air-reward-bookings-move-to-air-canada-july-22",
+    title: "Aeroplan reward bookings on Calm Air move to Air Canada, opening up northern flights to combine with 50-plus partners",
+    dek: "As of July 22, Aeroplan members book award flights on Calm Air, the airline that serves Manitoba and Nunavut, directly at aircanada.com or in the Air Canada app rather than through Calm Air itself, and those seats can now be strung together with Aeroplan's 50-plus airline partners on one reward booking.",
+    section: "News",
+    tags: ["news", "aeroplan", "award-booking", "travel"],
+  },
+  {
     path: "/news/porter-viporter-reward-flight-fuel-surcharge-back-to-40-july",
     title: "Porter puts its reward-flight fuel surcharge back up to $40, undoing the cut it made only last month",
     dek: "Porter Airlines told VIPorter members on July 17 that it is raising the fuel surcharge on reward flight bookings back to $40 each way, doubling the $20 it had trimmed the fee to in June, and pointing to a sharp jump in jet fuel prices. Bookings already made keep their original rate.",

@@ -30,6 +30,21 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "aeroplan-calm-air-reward-bookings-move-to-air-canada-july-22",
+    headline: "Aeroplan reward bookings on Calm Air move to Air Canada, opening up northern flights to combine with 50-plus partners",
+    dek: "As of July 22, Aeroplan members book award flights on Calm Air, the airline that serves Manitoba and Nunavut, directly at aircanada.com or in the Air Canada app rather than through Calm Air itself, and those seats can now be strung together with Aeroplan's 50-plus airline partners on one reward booking.",
+    body:
+      "This one is quiet but genuinely useful if you fly into the Canadian North. Calm Air, the regional carrier that connects Winnipeg and Thompson to communities across Manitoba and Nunavut, has moved how you redeem Aeroplan points for its flights. As of July 22, you book Calm Air reward seats the same way you book any other Aeroplan award, at aircanada.com, in the Air Canada app, or by calling Aeroplan at 1-800-361-5373. The old path, phoning Calm Air's own reservations line to redeem points, ends on that date. If you already have a confirmed Calm Air reward booking made before July 22, there is nothing to do: it stays with Calm Air Reservations and they continue to look after any changes to it. The practical win here is that Calm Air seats now live inside the main Aeroplan engine, so they can be combined with Aeroplan's roster of more than fifty airline partners on a single itinerary. For someone piecing together a trip from a southern city up to a place like Rankin Inlet, that means the whole journey can sit on one reward booking instead of a separate call and a separate ticket. One honest caveat worth keeping in mind: Aeroplan prices Calm Air awards dynamically, so the points cost tracks demand rather than a fixed chart, and northern routes are not cheap in cash terms, which tends to push the award price up too. Still, having the booking flow in one place, and the option to link it to partner flights, is a clear step up in convenience. As always, pull up the live points cost at the time you book and compare it against the cash fare before you commit.",
+    category: "Loyalty programs",
+    region: "CA",
+    date: "Jul 22, 2026",
+    sourceLabel: "Calm Air",
+    sourceUrl: "https://www.calmair.com/fly-calm-air/aeroplan",
+    href: "/travel/aeroplan-sweet-spots",
+    hrefLabel: "Aeroplan sweet-spots guide",
+  },
+  {
+    time: "08:30",
     slug: "porter-viporter-reward-flight-fuel-surcharge-back-to-40-july",
     headline: "Porter puts its reward-flight fuel surcharge back up to $40, undoing the cut it made only last month",
     dek: "Porter Airlines told VIPorter members on July 17 that it is raising the fuel surcharge on reward flight bookings back to $40 each way, doubling the $20 it had trimmed the fee to in June, and pointing to a sharp jump in jet fuel prices. Bookings already made keep their original rate.",
