@@ -363,6 +363,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "aeroplan", "points", "award-booking", "business-class", "alliances"],
   },
+  {
+    path: "/travel/sweet-spots/avios-qatar-qsuites-montreal-doha-70k",
+    title: "Avios sweet spot: Qatar Qsuites business class to Doha from about 70,000 points, nonstop from Montreal or Toronto",
+    dek: "Avios is shared with Qatar Airways, so one of its best redemptions is a Qsuites suite-with-a-door to Doha for about 70,000 points one-way off-peak in business, and the quiet bonus for Canadians is that Qatar flies it nonstop from both Montreal and Toronto with modest surcharges.",
+    section: "Sweet spot",
+    tags: ["travel", "avios", "rbc-avion", "points", "award-booking", "business-class", "transfers"],
+  },
 
   // News items
   {

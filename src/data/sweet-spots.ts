@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "avios-qatar-qsuites-montreal-doha-70k",
+    program: "Avios",
+    title: "Avios sweet spot: Qatar Qsuites business class to Doha from about 70,000 points, nonstop from Montreal or Toronto",
+    dek: "Avios is shared with Qatar Airways, so one of its best redemptions is a Qsuites suite-with-a-door to Doha for about 70,000 points one-way off-peak in business, and the quiet bonus for Canadians is that Qatar flies it nonstop from both Montreal and Toronto with modest surcharges.",
+    read: "5 min read",
+    date: "Jul 2026",
+    lastChecked: "2026-07-24",
+    body:
+      "Avios is the shared currency behind British Airways, Aer Lingus, Iberia, and Qatar Airways, and one balance moves freely between them at the same rate. We have already covered the friendly Aer Lingus run to Dublin, so this time the target is the one that turns heads, Qatar Airways Qsuites business class to Doha, and the quiet good news for Canadians is that Qatar flies it nonstop from both Montreal and Toronto. The figures below are an example of how the Qatar distance chart works, not a quote for any specific date, so always confirm the live price when you search.\n\nQatar Airways prices its own awards off a fixed, distance based chart through its Privilege Club, and one Avios balance moves freely between British Airways and Qatar Privilege Club at 1 to 1, so Canadian points land right where you need them. An off-peak Qsuites seat from Montreal or Toronto to Doha prices at about 70,000 Avios one-way in business, and if you want to carry on past Doha to somewhere else in the Middle East or down to Africa, the onward band runs about 75,000. Peak dates cost considerably more, sometimes close to double, so the off-peak calendar is where the value lives. Treat these as approximate bands rather than a fixed quote, because the Avios charts do get adjusted, and price your own dates before you assume a number.\n\nHere is the cents-per-point math on a realistic business booking. Say a one-way Qsuites fare from Toronto or Montreal to Doha would run about $4,000 in cash, and the award books for 70,000 Avios plus taxes and fees. Qatar keeps the carrier surcharges on its own metal modest, so outbound from Canada those fees often land around $150 to $200, call it $180. That works out to (4000 minus 180) divided by 70000, times 100, which is about 5.5 cents per Avios. Anything above about 1.5 cents is a strong use of Avios, so a suite with a door to the Gulf at this price is your points doing real work. Prices move, so confirm the live fare when you book.\n\nA couple of things make it sing. Qsuites is genuinely one of the best business seats flying, a private suite with a closing door, and on the middle pairs the panels fold down into a double bed you can share with a travel partner, which is rare in the air. Qatar also allows a stopover in Doha on many award itineraries, so you can break the trip for a few days and see the city on the same booking, and Doha is a comfortable, easy hub to spend a couple of nights. And for Canadians the earning side is refreshingly doable: RBC Avion transfers to British Airways Avios at 1 to 1 and runs a 30 percent transfer bonus a couple of times a year, and Amex Membership Rewards in Canada feeds Avios as well, so most points collectors here can build a Qsuites balance without anything exotic.\n\nNow the honest caveats, and there are a few. The biggest one is space, because Qatar is famously tight with releasing Qsuites award seats to partners, and the best availability tends to show up either about eleven months out when the schedule first opens or in the last week or two before departure, so this is a trip to plan around the calendar rather than book on a whim. The 70,000 figure is the off-peak band, and peak dates can run close to double, so watch the date grid before you assume the low number. Taxes are modest outbound from Canada, but the Doha origin return carries higher departure fees, so budget for that on a round trip. And transfers are one-way, both from Avion or Amex into Avios and from British Airways over to Qatar Privilege Club, so only move the points once you have found the seat you want. Price your specific trip before you assume a figure, because the Avios charts do get tinkered with.",
+    href: "/travel/avios-sweet-spots-rbc-avion-transfer",
+    hrefLabel: "Full Avios guide",
+    shortAnswer:
+      "One of Avios's marquee sweet spots is Qatar Airways Qsuites business class to Doha, which Qatar flies nonstop from both Montreal and Toronto, priced off a fixed distance chart at about 70,000 Avios one-way off-peak in business, with the onward band past Doha to the Middle East or Africa about 75,000. Qatar keeps surcharges on its own metal modest, so taxes outbound from Canada often land around $150 to $200, and on a roughly $4,000 one-way cash fare that is around 5.5 cents per Avios, well above the 1.5 cents that already counts as a strong use. For Canadians the earning is doable through RBC Avion at 1 to 1 with periodic 30 percent bonuses and through Amex Membership Rewards, with one Avios balance moving freely between British Airways and Qatar Privilege Club at 1 to 1. Just know Qatar is stingy with releasing partner Qsuites space and peak dates cost considerably more, so treat 70,000 as an approximate off-peak band and confirm the live price when you search.",
+    faqs: [
+      {
+        q: "How many Avios is Qatar Qsuites business class to Doha?",
+        a: "About 70,000 Avios one-way off-peak from Montreal or Toronto, priced off Qatar's fixed distance chart, with the onward band past Doha to the Middle East or Africa about 75,000. Peak dates cost considerably more, sometimes close to double, so the off-peak calendar is where the value lives. Treat these as approximate bands and confirm the live price when you search.",
+      },
+      {
+        q: "Is Qsuites to Doha a good value on Avios?",
+        a: "Yes. On a roughly $4,000 one-way cash fare booked for 70,000 Avios plus about $180 in taxes and fees, the math is (4000 minus 180) divided by 70000, times 100, which is about 5.5 cents per Avios. Anything above about 1.5 cents is a strong use of Avios, so a suite with a door to the Gulf at this price is your points doing real work.",
+      },
+      {
+        q: "Does Qatar fly to Canada, or do I have to position to the US?",
+        a: "You do not have to position. Qatar Airways flies nonstop to Doha from both Montreal and Toronto with Qsuites-equipped aircraft, so a Canadian can start the trip at home. The distance chart prices those Canadian departures the same as the US East Coast at about 70,000 Avios off-peak in business.",
+      },
+      {
+        q: "How do Canadians earn the Avios for this?",
+        a: "RBC Avion transfers to British Airways Avios at 1 to 1 and runs a 30 percent transfer bonus a couple of times a year, and Amex Membership Rewards in Canada feeds Avios as well. One Avios balance moves freely between British Airways and Qatar Privilege Club at 1 to 1, so you can book the Qatar award directly. Transfers are one-way, so only move points once you have found the seat you want.",
+      },
+      {
+        q: "Does Qatar charge fuel surcharges on these awards?",
+        a: "Qatar keeps the carrier surcharges on its own metal modest, so the taxes and fees outbound from Canada often land around $150 to $200 one-way. The Doha origin return carries higher departure fees, though, so budget for that on a round trip.",
+      },
+      {
+        q: "How hard is it to find Qsuites award space?",
+        a: "This is the main catch. Qatar is famously tight with releasing Qsuites award seats to partners, and the best availability tends to show up either about eleven months out when the schedule first opens or in the last week or two before departure. Plan this trip around the calendar rather than booking on a whim, and stay flexible on dates.",
+      },
+    ],
+  },
+  {
     slug: "aeroplan-south-america-business-bogota-50k",
     program: "Aeroplan",
     title: "Aeroplan sweet spot: business class to South America from about 50,000 points on Avianca or Copa",
