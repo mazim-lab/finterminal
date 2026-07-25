@@ -394,6 +394,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["news", "aeroplan", "award-booking", "travel"],
   },
   {
+    path: "/news/westjet-flexible-change-policy-strike-threat-july-24",
+    title: "WestJet lets travellers change or cancel late-July and early-August flights for free as the flight-attendant strike threat nears",
+    dek: "Following up on our July 15 note, WestJet posted a travel advisory on July 23 offering guests booked between July 30 and August 4 a one-time change or cancellation with no fee, giving people some breathing room while talks with its 4,400 cabin crew continue and the earliest legal walkout date of August 2 approaches.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/aeroplan-buy-points-110-percent-bonus-july-16-19",
     title: "Aeroplan lifts its summer buy-points sale to a 110 percent bonus, now running through July 19",
     dek: "Following up on our July 12 note, Aeroplan sweetened its summer buy-points sale on July 16 to a targeted bonus of up to 110 percent, a step up from the 100 percent it had been offering, and set the new window to close July 19.",

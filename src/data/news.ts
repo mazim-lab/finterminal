@@ -30,6 +30,21 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "westjet-flexible-change-policy-strike-threat-july-24",
+    headline: "WestJet lets travellers change or cancel late-July and early-August flights for free as the flight-attendant strike threat nears",
+    dek: "Following up on our July 15 note, WestJet posted a travel advisory on July 23 offering guests booked between July 30 and August 4 a one-time change or cancellation with no fee, giving people some breathing room while talks with its 4,400 cabin crew continue and the earliest legal walkout date of August 2 approaches.",
+    body:
+      "Following up on our July 15 note about the overwhelming strike-mandate vote, WestJet has given travellers a real, concrete way to protect their summer plans. On July 23 the airline posted a travel advisory offering anyone booked to fly between July 30 and August 4 a one-time change or cancellation with no fee, so if your dates fall in that window and you would rather not gamble on how the labour talks land, you can move or drop the trip without paying for the privilege. To be clear about what this is and is not: it is a flexibility gesture, not a confirmation that flights will actually stop. Talks between WestJet and CUPE Local 8125, which represents about 4,400 mainline flight attendants, are still going, no strike notice has been filed, and the earliest a legal walkout or lockout could begin is August 2, the Saturday of the long weekend. WestJet says it remains hopeful about reaching a deal, and most of these disputes do settle before a single flight is cancelled. A few practical notes worth folding in. The waiver covers WestJet's mainline flights; WestJet Encore flights on the Q400 and codeshare flights operated by partner airlines are not affected the same way, and if you booked a package through WestJet Vacations, Sunwing Vacations, or Vacances WestJet Quebec, your vacation provider is contacting you directly with your options rather than you handling it through this advisory. If you are flying WestJet in that late-July to early-August stretch, this is a genuine bit of good news: you have a no-cost off-ramp if you want one, and no pressure to use it if your plans are firm. Pull up your specific booking on WestJet's site to confirm it qualifies before you change anything, since the free-change window is tied to those exact travel dates, and keep an eye out as the August 2 date gets closer in case the situation shifts again.",
+    category: "Travel and points",
+    region: "CA",
+    date: "Jul 24, 2026",
+    sourceLabel: "WestJet",
+    sourceUrl: "https://www.westjet.com/en-ca/get-travel-ready/advisories",
+    href: "/cards?q=westjet",
+    hrefLabel: "Compare WestJet cards",
+  },
+  {
+    time: "08:30",
     slug: "aeroplan-calm-air-reward-bookings-move-to-air-canada-july-22",
     headline: "Aeroplan reward bookings on Calm Air move to Air Canada, opening up northern flights to combine with 50-plus partners",
     dek: "As of July 22, Aeroplan members book award flights on Calm Air, the airline that serves Manitoba and Nunavut, directly at aircanada.com or in the Air Canada app rather than through Calm Air itself, and those seats can now be strung together with Aeroplan's 50-plus airline partners on one reward booking.",
