@@ -25,6 +25,28 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "MSI Summit E16 AI Evo 16-inch touchscreen laptop (Core Ultra 7, 32GB, 1TB)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/msi-summit-e16-evo-qhd-yes-intel-core-ultra-7-155h-intel-arc-graphics-32gb-lpddr5-memory-1-tb-nvme-ssd-ink-black/p/N82E16834156890",
+    price: "$1,199",
+    was: "$1,699",
+    blurb:
+      "A properly specced work and study laptop rarely dips this low, so $500 off the MSI Summit E16 AI Evo at $1,199 down from $1,699 is worth a look if you have been putting off an upgrade. You get a sharp 16 inch QHD+ touchscreen, an Intel Core Ultra 7 155H, a generous 32GB of memory and a roomy 1TB SSD, which is the kind of setup that stays quick for years of documents, browser tabs, video calls and light photo work. It comes with the MSI pen, and it is sold and shipped by Newegg with free 30 day returns. One honest note so you buy clear eyed: this runs Intel's built in Arc graphics rather than a discrete gaming card, so it is a lovely everyday and productivity machine, not a rig for demanding games or heavy 3D work. For most people who just want a fast, well built laptop that lasts, that is exactly the right trade.",
+    category: "Electronics",
+    posted: "Jul 25, 2026",
+  },
+  {
+    title: "Intel Core Ultra 5 245K 14-core desktop processor",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/intel-core-ultra-5-245k-arrow-lake-lga-1851-processor/p/N82E16819118508",
+    price: "$299.99",
+    was: "$449.99",
+    blurb:
+      "If you are planning a fresh desktop build, Newegg has Intel's Core Ultra 5 245K down to $299.99 from $449.99, a clean $150 off a current generation chip. You get fourteen cores split into six fast performance cores and eight efficient ones, which is plenty of muscle for gaming and for the everyday multitasking and light content work most people actually do, and it is sold and shipped by Newegg. One honest note so nobody buys wrong: this is an LGA1851 processor, so unless you are already on that platform you will also need a compatible motherboard and DDR5 memory, which adds to the real cost. It is a part for a build or an upgrade, not a plug and play gadget, and while it has basic built in graphics you will still want a separate graphics card for real gaming. If you are putting together a new machine though, this is a solid amount of processor for the money.",
+    category: "Electronics",
+    posted: "Jul 25, 2026",
+  },
+  {
     title: "AMD Ryzen 5 7600X 6-core desktop processor",
     merchant: "Newegg",
     url: "https://www.newegg.ca/amd-ryzen-5-7600x-ryzen-5-7000-series-raphael-zen-4-socket-am5/p/N82E16819113770",
@@ -187,6 +209,7 @@ export const DEALS: Deal[] = [
       "This is a niche one, but a good price if it fits your life: Princess Auto has the RYOBI ONE+ 18V one-gallon electric sprayer, tool only, for $24.99 on surplus. If you already own RYOBI 18V batteries it turns into a genuinely handy thing, misting the garden, spraying down the deck, applying a water based cleaner or disinfectant, all cordless and one handed instead of pumping a manual sprayer. This same tool runs a fair bit more through the regular tool channels, so twenty five dollars is the draw. Two honest notes so nobody buys wrong. It is tool only, no battery or charger, so it only makes sense if you are already in the RYOBI 18V world. And it is meant for thin water based liquids, not paint or thick weed killers that will clog it. Stock is low and it is a surplus buy, so it will not last.",
     category: "Tools",
     posted: "Jul 7, 2026",
+    expiresAt: "2026-07-25",
   },
   {
     title: "ASICS Gel-Kayano 32 running shoes",
@@ -198,6 +221,7 @@ export const DEALS: Deal[] = [
       "The Gel-Kayano is Asics' flagship stability shoe, the one runners with flat feet or tired knees quietly swear by, and Altitude Sports has the current version 32 on clearance at $145.19, down from $219.99, simply because the Kayano 33 just landed. Nothing about the shoe changed overnight because a new model number arrived. Sign up for a free Altitude Sports account and another 5 percent comes off at checkout, bringing it to $137.93. If you run, walk a lot, or stand all day, this is a genuine flagship shoe at a mid-tier price. One honest note so you go in clear eyed: clearance means sizes and colours are already thinning out and a few widths are gone, so grab your size sooner rather than later, and buy it because you need good shoes, not because the percent-off looks big.",
     category: "Apparel",
     posted: "Jul 2, 2026",
+    expiresAt: "2026-07-25",
   },
   {
     title: "Milwaukee M12 REDLITHIUM HIGH OUTPUT XC 5.0Ah battery 2-pack with charger",
