@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "westjet-companion-voucher-domestic-economy-119",
+    program: "WestJet",
+    title: "WestJet sweet spot: fly a companion across Canada or to the US for a fixed $119 base fare",
+    dek: "WestJet points are a flat cent each with no award chart, so the everyday sweet spot for Canadians is the RBC companion voucher used at home, capping a second economy base fare across Canada and to the continental US at a fixed $119 on the World Elite card, or $199 on the no-fee version.",
+    read: "5 min read",
+    date: "Jul 2026",
+    lastChecked: "2026-07-28",
+    body:
+      "WestJet Rewards works differently from the mileage programs, and it helps to say so up front. WestJet points are worth a flat cent each, 100 points knocks $1 off the base fare, surcharges, bags, and seats, with no award chart and no blackout dates, so there is no hidden business class deal buried in the points the way there is with Aeroplan or Avios. The real WestJet sweet spot for Canadians is the annual companion voucher that comes with the WestJet RBC cards. We already walked through the marquee version of that voucher, flying a companion to Europe in Premium for a fixed $499, so this time the target is the everyday version most families will actually use far more often: the same voucher on a domestic or transborder trip. The figures below are an example of how the voucher works, not a quote for any date, so always confirm the live fare when you book.\n\nHere is how it works. Once a year the WestJet RBC card hands you a round-trip companion voucher, and your travel partner books the exact same itinerary as you and pays a fixed base fare instead of the going rate. On the WestJet RBC World Elite Mastercard, that fixed fare for travel within Canada or to and from the continental US is $119 in economy or $219 in Premium. There is also a no-fee card, the WestJet RBC Mastercard, whose voucher caps the same domestic and continental US economy base fare at $199, or $299 in Premium. Either way your companion still owes the taxes and fees on top, and you still pay your own fare in full, but that second base fare is locked no matter how pricey the route gets.\n\nHere is the value math on a realistic booking. Say a peak-summer economy round trip from Toronto to Vancouver prices around $600 all in, of which roughly $450 is the base fare the voucher discounts and the rest is taxes and fees. With the World Elite voucher your companion pays the fixed $119 base fare plus those same taxes and fees, so about $270 instead of $600. That is roughly $330 off the second seat, on a card whose annual fee is $139, so a single voucher more than pays for the card in one trip. Confirm the live fare when you book, because prices move and the example is only there to show the shape of the deal.\n\nA couple of things make it sing. The voucher works on any available WestJet fare on the route, so unlike a fixed award chart there are no capacity controls beyond the seats actually being for sale, and the savings scale with how expensive the route is. That makes the priciest domestic and transborder runs the place to spend it: a long peak-season transcontinental like Toronto or Halifax to Vancouver, or an expensive last-minute trip where the cash fare has ballooned. And if the $139 annual fee gives you pause, the no-fee WestJet RBC Mastercard still hands you a voucher every year, just at the higher $199 domestic economy base fare, which is a genuinely good deal for a card that costs nothing to hold.\n\nNow the honest caveats, and there are a few. You need two people traveling together on the same booking, and the companion still pays the taxes and fees, which on a domestic round trip usually run a bit over a hundred dollars. The bigger catch is that WestJet adds some carrier charges to companion voucher bookings that a plain cash booking would not, the so-called Other ATC fees, so always compare the all-in companion price against the all-in cash price before you commit. On a cheap seat-sale fare, say a $250 round trip, the voucher can actually come out roughly even or even cost a touch more once those fees are counted, so this trick only really wins when the cash fare is high. The voucher is also one per year, and the way you unlock it is changing: starting November 5 2026 the World Elite card asks for $5,000 of annual spend to earn the voucher and the no-fee card asks for $2,500, though vouchers issued before that date carry no minimum spend. Peak-season seats sell out early, so book ahead and stay flexible, and remember the points themselves are worth a flat cent each, handy for shaving cash off any WestJet fare but not the place to hunt for outsized value.",
+    href: "/cards?q=westjet",
+    hrefLabel: "WestJet RBC cards",
+    shortAnswer:
+      "WestJet Rewards points are a flat cent each with no award chart, so the everyday WestJet sweet spot for Canadians is the annual RBC companion voucher used at home. It caps your travel partner's base fare for travel within Canada and to and from the continental US at a fixed $119 in economy on the World Elite card, or $199 on the no-fee WestJet RBC Mastercard. On a peak-summer Toronto to Vancouver round trip that might sell for around $600 all in, the companion pays the fixed $119 base fare plus the same taxes and fees, roughly $270 instead of $600, which is about $330 off the second seat on a card whose annual fee is $139. Just know WestJet adds some Other ATC fees to voucher bookings, so on a cheap seat-sale fare the voucher can come out roughly even, and it only really wins when the cash fare is high, so confirm the live fare before you book.",
+    faqs: [
+      {
+        q: "How much does a companion pay to fly across Canada with the WestJet voucher?",
+        a: "For travel within Canada or to and from the continental US, the companion's base fare is capped at a fixed $119 in economy or $219 in Premium on the WestJet RBC World Elite Mastercard, plus the usual taxes and fees. The no-fee WestJet RBC Mastercard caps the same domestic and continental US economy base fare at $199, or $299 in Premium. You still pay your own fare in full.",
+      },
+      {
+        q: "Is the WestJet companion voucher worth it for a domestic trip?",
+        a: "It can be, on a pricey route. On a peak-summer Toronto to Vancouver round trip that might sell for around $600 all in, the companion pays the fixed $119 base fare plus the same taxes and fees, so about $270 instead of $600. That is roughly $330 off the second seat, on a card whose annual fee is $139, so one voucher more than pays for the card in a single trip.",
+      },
+      {
+        q: "Should I get the World Elite card or the no-fee WestJet card for the voucher?",
+        a: "Both hand you an annual companion voucher. The World Elite card charges a $139 annual fee but caps the domestic economy base fare lower, at $119, while the no-fee WestJet RBC Mastercard costs nothing to hold and caps it at $199. If you will use the voucher on expensive routes every year the World Elite card usually wins, but the no-fee card is a genuinely good deal for someone who wants a voucher without paying an annual fee.",
+      },
+      {
+        q: "Are there extra fees on a WestJet companion voucher booking?",
+        a: "Yes, and this is the honest catch. The companion still owes the taxes and fees, which on a domestic round trip usually run a bit over a hundred dollars, and WestJet adds some carrier charges to voucher bookings, the Other ATC fees, that a plain cash booking would not. Always compare the all-in companion price against the all-in cash price before you commit.",
+      },
+      {
+        q: "When is the WestJet companion voucher not worth using?",
+        a: "On a cheap fare. Because the voucher adds Other ATC fees, a cheap seat-sale round trip of around $250 can come out roughly even or even cost a touch more once those fees are counted. The voucher only really wins when the cash fare is high, so save it for the priciest transcontinental or last-minute trips rather than a discounted seat sale.",
+      },
+      {
+        q: "How do I earn the WestJet companion voucher, and is that changing?",
+        a: "The voucher comes with the WestJet RBC cards, once after your first purchase and then one more each year. Starting November 5 2026 the World Elite card asks for $5,000 of annual spend to unlock the voucher and the no-fee card asks for $2,500, though vouchers issued before that date carry no minimum spend.",
+      },
+    ],
+  },
+  {
     slug: "avios-qatar-qsuites-montreal-doha-70k",
     program: "Avios",
     title: "Avios sweet spot: Qatar Qsuites business class to Doha from about 70,000 points, nonstop from Montreal or Toronto",

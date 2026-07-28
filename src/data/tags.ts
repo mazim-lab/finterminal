@@ -371,6 +371,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "avios", "rbc-avion", "points", "award-booking", "business-class", "transfers"],
   },
 
+  {
+    path: "/travel/sweet-spots/westjet-companion-voucher-domestic-economy-119",
+    title: "WestJet sweet spot: fly a companion across Canada or to the US for a fixed $119 base fare",
+    dek: "WestJet points are a flat cent each with no award chart, so the everyday sweet spot for Canadians is the RBC companion voucher used at home, capping a second economy base fare across Canada and to the continental US at a fixed $119 on the World Elite card, or $199 on the no-fee version.",
+    section: "Sweet spot",
+    tags: ["travel", "westjet", "points", "travel-cards", "cards"],
+  },
+
   // News items
   {
     path: "/news/aeroplan-calm-air-reward-bookings-move-to-air-canada-july-22",
