@@ -2315,7 +2315,7 @@
       "Food delivery credits",
       "Subscription perks",
       "No foreign transaction fee",
-      "Companion Pass",
+      "Economy Companion Ticket",
       "Priority Boarding"
     ],
     "foreign_transaction_fee": false,
@@ -2331,7 +2331,7 @@
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": ""
+      "purchase_protection": "500"
     },
     "benefits": {
       "lounge_access": false,
