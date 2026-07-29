@@ -381,6 +381,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-premium-economy-business-class-basic-fares-july-28",
+    title: "Air Canada adds cheaper Premium Economy Basic and Business Class Basic fares, but they earn fewer Aeroplan points and block eUpgrades",
+    dek: "Air Canada rolled out two new lower-priced premium fares on July 28, Premium Economy Basic and Business Class Basic, that keep the roomy seat and the meal but strip out things like free advance seat selection, some lounge access, and the ability to use eUpgrades, and they earn Aeroplan at the base 1 point per dollar rather than a fare-brand bonus.",
+    section: "News",
+    tags: ["news", "aeroplan", "business-class", "travel"],
+  },
+  {
     path: "/news/aeroplan-calm-air-reward-bookings-move-to-air-canada-july-22",
     title: "Aeroplan reward bookings on Calm Air move to Air Canada, opening up northern flights to combine with 50-plus partners",
     dek: "As of July 22, Aeroplan members book award flights on Calm Air, the airline that serves Manitoba and Nunavut, directly at aircanada.com or in the Air Canada app rather than through Calm Air itself, and those seats can now be strung together with Aeroplan's 50-plus airline partners on one reward booking.",

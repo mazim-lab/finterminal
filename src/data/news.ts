@@ -30,6 +30,21 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "air-canada-premium-economy-business-class-basic-fares-july-28",
+    headline: "Air Canada adds cheaper Premium Economy Basic and Business Class Basic fares, but they earn fewer Aeroplan points and block eUpgrades",
+    dek: "Air Canada rolled out two new lower-priced premium fares on July 28, Premium Economy Basic and Business Class Basic, that keep the roomy seat and the meal but strip out things like free advance seat selection, some lounge access, and the ability to use eUpgrades, and they earn Aeroplan at the base 1 point per dollar rather than a fare-brand bonus.",
+    body:
+      "If you like the idea of stretching out in Premium Economy or a lie-flat Business seat but the price always felt out of reach, Air Canada has quietly given you a cheaper door in, with some strings attached. On July 28 the airline introduced two new fare brands, Premium Economy Basic and Business Class Basic, that sit below its existing premium fares while keeping the parts that matter most about the cabin. You still get the wider premium seat, the onboard meal, priority boarding and priority baggage handling, and one checked bag comes along. What you give up is the flexibility and the extras. Both fares are non-refundable, changes cost a fee, and you now have to pay to pick your seat in advance rather than choosing it for free. Premium Economy Basic comes with no lounge access at all, and while Business Class Basic still lets you into Air Canada's Maple Leaf Lounges, it leaves out the fancier Signature Suites. For anyone earning and burning points, two details are worth folding into the math. First, these Basic fares earn Aeroplan at the base rate of 1 point per dollar on the fare and carrier surcharges, with Aeroplan elites earning between 2 and 6 points per dollar depending on status, so you collect fewer points than you would on a higher fare brand in the same cabin. Second, and this is the one that stings for status holders, eUpgrades cannot be applied to either Basic fare. That is a real quirk, because an Aeroplan award ticket in the same cabin stays eUpgrade eligible, which means a points booking can actually be more flexible than a paid Basic ticket. For now the new fares show up on routes across the Caribbean, Mexico, Latin America, South America, and Air Canada's transatlantic joint-venture markets flown alongside United and the Lufthansa Group, with travel to Iran, Israel, and the United Arab Emirates left out. Domestic, Canada-US, and transpacific flying is not part of the launch. The honest read is that this is a genuinely useful option if your main goal is a comfier seat on a sun or Europe trip and you do not care much about lounges, free seat selection, or upgrades. If you do value those things, or you were hoping to eUpgrade your way up front, the regular fare brands still earn their keep. As always, look at the full fare rules on your specific route before you book, since what is included can vary and Basic is deliberately the stripped-down end of the menu.",
+    category: "Travel and points",
+    region: "CA",
+    date: "Jul 28, 2026",
+    sourceLabel: "Air Canada",
+    sourceUrl: "https://www.aircanada.com/ca/en/aco/home/book/fare-options-and-fees/to-international-destinations.html",
+    href: "/travel",
+    hrefLabel: "Explore travel and points",
+  },
+  {
+    time: "08:30",
     slug: "westjet-flexible-change-policy-strike-threat-july-24",
     headline: "WestJet lets travellers change or cancel late-July and early-August flights for free as the flight-attendant strike threat nears",
     dek: "Following up on our July 15 note, WestJet posted a travel advisory on July 23 offering guests booked between July 30 and August 4 a one-time change or cancellation with no fee, giving people some breathing room while talks with its 4,400 cabin crew continue and the earliest legal walkout date of August 2 approaches.",
