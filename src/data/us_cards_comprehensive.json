@@ -2102,7 +2102,7 @@
     },
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "120"
+      "purchase_protection": "500"
     },
     "benefits": {
       "lounge_access": false,
