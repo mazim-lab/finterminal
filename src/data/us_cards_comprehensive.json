@@ -1948,8 +1948,8 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "100",
-      "trip_cancellation": ""
+      "purchase_protection": "500",
+      "trip_cancellation": "5000"
     },
     "earn_rates": {
       "IHG Hotels and Resorts": "10x",
