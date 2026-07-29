@@ -25,6 +25,39 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "ASUS TUF Gaming 27-inch QHD 180Hz Fast IPS monitor (VG27AQ3A)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asus-vg27aq3a-27-qhd-180-hz-tuf-gaming-fast-ips/p/N82E16824281271",
+    price: "$219.99",
+    was: "$299.99",
+    blurb:
+      "If your desk still has a basic 1080p screen, a jump to a proper QHD gaming panel is the kind of thing you notice every day. Newegg has the ASUS TUF Gaming VG27AQ3A down to $219.99 from $299.99, and it is a genuinely well sorted 27 inch monitor: sharp 2560x1440 resolution, a quick 180Hz refresh, a Fast IPS panel that keeps colours honest from any angle, and both FreeSync Premium and G-Sync compatibility so it plays nicely with either an AMD or an Nvidia card. It has the extras the cheaper panels skip too, including a proper swivel and tilt stand. One honest note so you buy clear eyed: the built in speakers are there for convenience and not much more, so plan on headphones or desk speakers, and Newegg gives you a short 15 day return window on this one, so if you want to try it, decide inside that window.",
+    category: "Electronics",
+    posted: "Jul 29, 2026",
+  },
+  {
+    title: "Creative Outlier Free Pro+ bone conduction headphones",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/creative-labs-51ef1081aa002-behind-the-neck-blue-with-fiery-orange/p/N82E16826158298",
+    price: "$119.99",
+    was: "$209.99",
+    blurb:
+      "If you run, cycle, or walk busy streets and hate sealing your ears off from the world, an open ear bone conduction set is a lovely thing to own, and this Creative pair is down to $119.99 from $209.99, a full 42 percent off. Instead of going in your ears, it rests on your cheekbones and pipes the sound through, so your ears stay open to traffic, footsteps, and the people around you while your music or podcast plays. It is waterproof and sold and shipped by Newegg with free 30 day returns, which makes it easy to try. One honest note so you buy for the right reason: bone conduction will never give you the deep bass or the quiet isolation of a good in ear bud, that is the whole trade you are making for staying aware of your surroundings. If you want to disappear into your music on a plane, this is not that, but for staying safe and connected on a run it is exactly right.",
+    category: "Electronics",
+    posted: "Jul 29, 2026",
+  },
+  {
+    title: "Super Flower Leadex VII XG 1000W ATX 3.1 power supply",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/p/1HU-024C-00056",
+    price: "$159.99",
+    was: "$279.99",
+    blurb:
+      "This one is squarely for the PC builders, but if that is you it is a genuinely strong price on a premium part. Newegg has the Super Flower Leadex VII XG 1000W down to $159.99 from $279.99, about 42 percent off, and this is a proper high end unit: 80 Plus Gold and Cybenetics Platinum efficiency, fully modular cabling, and the newer ATX 3.1 standard with a native 12VHPWR cable for a current graphics card. A good power supply is the quiet foundation a build sits on for a decade, so paying less for a better one is money well spent. Two honest notes before you grab it. It only makes sense if you are building or upgrading a desktop, and 1000W is more headroom than most builds actually need, so a smaller unit may suit you for less. And it is sold through Super Flower's own store and shipped by Newegg, with free 30 day returns.",
+    category: "Electronics",
+    posted: "Jul 29, 2026",
+  },
+  {
     title: "Intel Core Ultra 5 245K 14-core desktop processor",
     merchant: "Newegg",
     url: "https://www.newegg.ca/intel-core-ultra-5-245k-arrow-lake-lga-1851-processor/p/N82E16819118508",
