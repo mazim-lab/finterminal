@@ -2518,7 +2518,7 @@
       "All other purchases": "1%"
     },
     "insurance": {
-      "purchase_protection": "120",
+      "purchase_protection": "500",
       "mobile_insurance": "Yes",
       "trip_cancellation": "1500"
     },
