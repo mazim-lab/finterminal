@@ -2465,7 +2465,7 @@
     "insurance": {
       "baggage_delay": "100",
       "travel_accident": "500000",
-      "purchase_protection": ""
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "Amazon, Whole Foods, Chase Travel": "3%",
