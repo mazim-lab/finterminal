@@ -78,6 +78,8 @@ export const DEALS: Deal[] = [
       "If you have a desktop PC that runs hot and loud under load, a good all in one liquid cooler is one of the nicer quality of life upgrades, and this one is 62 percent off at $85.49 down from $229.99. A 240mm radiator like this pulls heat off the processor far better than a small stock cooler, which keeps the chip running faster for longer and lets the fans spin down to a whisper instead of roaring during a game or a big export. It is sold and shipped by Newegg with free 30 day returns. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop and your case has room for a 240mm radiator, so check your case clearance and socket support first. It is not a plug and play gadget for a laptop or a non PC household.",
     category: "Electronics",
     posted: "Jul 16, 2026",
+    expires: "ended Jul 29",
+    expiresAt: "2026-07-29",
   },
   {
     title: "Corsair Scimitar Elite Wireless SE gaming mouse",
@@ -89,6 +91,8 @@ export const DEALS: Deal[] = [
       "This is Corsair's flagship mouse for people who live in MMOs, MOBAs, or macro heavy work, and it is down to $109.99 from $199.99, a full 45 percent off. The draw is the twelve button side panel that slides to fit your thumb, so all those abilities, hotkeys, or shortcuts sit right under one finger instead of scattered across the keyboard, and it runs wireless over both a 2.4GHz dongle and Bluetooth. One honest note so you buy for the right reason: that side panel is wonderful if you actually use a lot of buttons, but it makes the mouse chunkier and busier than a plain everyday pointer, so if you just want something simple to move a cursor around, a basic mouse will serve you better for a lot less. At this price though, it is a treat for the right kind of gamer.",
     category: "Electronics",
     posted: "Jul 16, 2026",
+    expires: "ended Jul 29",
+    expiresAt: "2026-07-29",
   },
   {
     title: "MSI Versa 300 wireless gaming mouse",
@@ -187,6 +191,8 @@ export const DEALS: Deal[] = [
       "This is a niche one, but a good price if it fits your life: Princess Auto has the RYOBI ONE+ 18V one-gallon electric sprayer, tool only, for $24.99 on surplus. If you already own RYOBI 18V batteries it turns into a genuinely handy thing, misting the garden, spraying down the deck, applying a water based cleaner or disinfectant, all cordless and one handed instead of pumping a manual sprayer. This same tool runs a fair bit more through the regular tool channels, so twenty five dollars is the draw. Two honest notes so nobody buys wrong. It is tool only, no battery or charger, so it only makes sense if you are already in the RYOBI 18V world. And it is meant for thin water based liquids, not paint or thick weed killers that will clog it. Stock is low and it is a surplus buy, so it will not last.",
     category: "Tools",
     posted: "Jul 7, 2026",
+    expires: "ended Jul 29",
+    expiresAt: "2026-07-29",
   },
   {
     title: "ASICS Gel-Kayano 32 running shoes",
