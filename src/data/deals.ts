@@ -25,6 +25,50 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "ASUS TUF Gaming 27-inch QHD 180Hz Fast IPS monitor (VG27AQ3A)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asus-vg27aq3a-27-qhd-180-hz-tuf-gaming-fast-ips/p/N82E16824281271",
+    price: "$219.99",
+    was: "$299.99",
+    blurb:
+      "If your desk still has a basic 1080p screen, a jump to a proper QHD gaming panel is the kind of thing you notice every day. Newegg has the ASUS TUF Gaming VG27AQ3A down to $219.99 from $299.99, and it is a genuinely well sorted 27 inch monitor: sharp 2560x1440 resolution, a quick 180Hz refresh, a Fast IPS panel that keeps colours honest from any angle, and both FreeSync Premium and G-Sync compatibility so it plays nicely with either an AMD or an Nvidia card. It has the extras the cheaper panels skip too, including a proper swivel and tilt stand. One honest note so you buy clear eyed: the built in speakers are there for convenience and not much more, so plan on headphones or desk speakers, and Newegg gives you a short 15 day return window on this one, so if you want to try it, decide inside that window.",
+    category: "Electronics",
+    posted: "Jul 29, 2026",
+  },
+  {
+    title: "Creative Outlier Free Pro+ bone conduction headphones",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/creative-labs-51ef1081aa002-behind-the-neck-blue-with-fiery-orange/p/N82E16826158298",
+    price: "$119.99",
+    was: "$209.99",
+    blurb:
+      "If you run, cycle, or walk busy streets and hate sealing your ears off from the world, an open ear bone conduction set is a lovely thing to own, and this Creative pair is down to $119.99 from $209.99, a full 42 percent off. Instead of going in your ears, it rests on your cheekbones and pipes the sound through, so your ears stay open to traffic, footsteps, and the people around you while your music or podcast plays. It is waterproof and sold and shipped by Newegg with free 30 day returns, which makes it easy to try. One honest note so you buy for the right reason: bone conduction will never give you the deep bass or the quiet isolation of a good in ear bud, that is the whole trade you are making for staying aware of your surroundings. If you want to disappear into your music on a plane, this is not that, but for staying safe and connected on a run it is exactly right.",
+    category: "Electronics",
+    posted: "Jul 29, 2026",
+  },
+  {
+    title: "Super Flower Leadex VII XG 1000W ATX 3.1 power supply",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/p/1HU-024C-00056",
+    price: "$159.99",
+    was: "$279.99",
+    blurb:
+      "This one is squarely for the PC builders, but if that is you it is a genuinely strong price on a premium part. Newegg has the Super Flower Leadex VII XG 1000W down to $159.99 from $279.99, about 42 percent off, and this is a proper high end unit: 80 Plus Gold and Cybenetics Platinum efficiency, fully modular cabling, and the newer ATX 3.1 standard with a native 12VHPWR cable for a current graphics card. A good power supply is the quiet foundation a build sits on for a decade, so paying less for a better one is money well spent. Two honest notes before you grab it. It only makes sense if you are building or upgrading a desktop, and 1000W is more headroom than most builds actually need, so a smaller unit may suit you for less. And it is sold through Super Flower's own store and shipped by Newegg, with free 30 day returns.",
+    category: "Electronics",
+    posted: "Jul 29, 2026",
+  },
+  {
+    title: "Intel Core Ultra 5 245K 14-core desktop processor",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/intel-core-ultra-5-245k-arrow-lake-lga-1851-processor/p/N82E16819118508",
+    price: "$299.99",
+    was: "$449.99",
+    blurb:
+      "If you are planning a fresh desktop build, Newegg has Intel's Core Ultra 5 245K down to $299.99 from $449.99, a clean $150 off a current generation chip. You get fourteen cores split into six fast performance cores and eight efficient ones, which is plenty of muscle for gaming and for the everyday multitasking and light content work most people actually do, and it is sold and shipped by Newegg. One honest note so nobody buys wrong: this is an LGA1851 processor, so unless you are already on that platform you will also need a compatible motherboard and DDR5 memory, which adds to the real cost. It is a part for a build or an upgrade, not a plug and play gadget, and while it has basic built in graphics you will still want a separate graphics card for real gaming. If you are putting together a new machine though, this is a solid amount of processor for the money.",
+    category: "Electronics",
+    posted: "Jul 25, 2026",
+  },
+  {
     title: "AMD Ryzen 5 7600X 6-core desktop processor",
     merchant: "Newegg",
     url: "https://www.newegg.ca/amd-ryzen-5-7600x-ryzen-5-7000-series-raphael-zen-4-socket-am5/p/N82E16819113770",
@@ -56,6 +100,7 @@ export const DEALS: Deal[] = [
       "If you are still working or gaming on a basic 1080p screen, this is the kind of upgrade you feel every single day. Samsung has its 27 inch Odyssey G5 down to $199.99 from $349.99, a clean $150 off, and the specs punch well above that price. You get sharp QHD 2560x1440 resolution, a fast 180Hz refresh rate, and an IPS panel that keeps colours honest from any angle, so text stays crisp for a work day and motion stays smooth for a game night. One honest note so you buy clear eyed: this is a straightforward gaming and productivity monitor without extras like USB-C charging or built-in speakers, and Newegg gives you a short 15 day return window, so if you want to try it, decide inside that window.",
     category: "Electronics",
     posted: "Jul 16, 2026",
+    expiresAt: "2026-07-22",
   },
   {
     title: "Gigabyte 27-inch QHD 180Hz curved gaming monitor (GS27QCA)",
@@ -191,8 +236,7 @@ export const DEALS: Deal[] = [
       "This is a niche one, but a good price if it fits your life: Princess Auto has the RYOBI ONE+ 18V one-gallon electric sprayer, tool only, for $24.99 on surplus. If you already own RYOBI 18V batteries it turns into a genuinely handy thing, misting the garden, spraying down the deck, applying a water based cleaner or disinfectant, all cordless and one handed instead of pumping a manual sprayer. This same tool runs a fair bit more through the regular tool channels, so twenty five dollars is the draw. Two honest notes so nobody buys wrong. It is tool only, no battery or charger, so it only makes sense if you are already in the RYOBI 18V world. And it is meant for thin water based liquids, not paint or thick weed killers that will clog it. Stock is low and it is a surplus buy, so it will not last.",
     category: "Tools",
     posted: "Jul 7, 2026",
-    expires: "ended Jul 29",
-    expiresAt: "2026-07-29",
+    expiresAt: "2026-07-25",
   },
   {
     title: "ASICS Gel-Kayano 32 running shoes",
@@ -204,6 +248,7 @@ export const DEALS: Deal[] = [
       "The Gel-Kayano is Asics' flagship stability shoe, the one runners with flat feet or tired knees quietly swear by, and Altitude Sports has the current version 32 on clearance at $145.19, down from $219.99, simply because the Kayano 33 just landed. Nothing about the shoe changed overnight because a new model number arrived. Sign up for a free Altitude Sports account and another 5 percent comes off at checkout, bringing it to $137.93. If you run, walk a lot, or stand all day, this is a genuine flagship shoe at a mid-tier price. One honest note so you go in clear eyed: clearance means sizes and colours are already thinning out and a few widths are gone, so grab your size sooner rather than later, and buy it because you need good shoes, not because the percent-off looks big.",
     category: "Apparel",
     posted: "Jul 2, 2026",
+    expiresAt: "2026-07-25",
   },
   {
     title: "Milwaukee M12 REDLITHIUM HIGH OUTPUT XC 5.0Ah battery 2-pack with charger",
