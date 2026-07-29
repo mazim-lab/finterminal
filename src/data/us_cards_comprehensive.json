@@ -1252,7 +1252,7 @@
       "All other purchases": "1.5%"
     },
     "insurance": {
-      "purchase_protection": "120",
+      "purchase_protection": "500",
       "trip_cancellation": "1500"
     },
     "welcome_bonus": "$200 cash back",
