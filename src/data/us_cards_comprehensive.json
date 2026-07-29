@@ -2142,7 +2142,7 @@
     "apply_url": "https://creditcards.chase.com/rewards-credit-cards/disney/rewards",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "120"
+      "purchase_protection": "500"
     },
     "earn_rates": {
       "All card purchases": "1%"
