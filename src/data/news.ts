@@ -30,6 +30,21 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     time: "08:30",
+    slug: "westjet-strike-72-hour-notice-window-opens-july-30",
+    headline: "WestJet's flight-attendant strike enters its final countdown as the earliest 72-hour walkout notice can now be filed",
+    dek: "Following up on our July 24 note, WestJet's roughly 4,400 cabin crew reached the point on July 30 where their union can legally file a 72-hour strike notice, putting the earliest possible walkout at August 2, the Saturday of the Civic long weekend, and the airline and CUPE have reportedly worked out a plan to wind operations down in an orderly way if it comes to that.",
+    body:
+      "Following up on our July 24 note about WestJet's free change-and-cancel window, the labour standoff has now reached the stage where things could actually move. As of July 30, the mandated cooling-off period is behind both sides, which means CUPE Local 8125, the union for about 4,400 mainline WestJet flight attendants, is now in a legal position to file a 72-hour strike notice. If it does, the earliest a walkout or lockout could begin is August 2, the Saturday of the Civic Holiday long weekend, which is exactly the stretch when a lot of Canadians are trying to get somewhere. To be clear, as of the last update no strike notice had actually been filed, and the two sides were still at the table in Calgary having agreed on a good chunk of the contract with a smaller list of items still open, so there is a real chance this settles before anyone is stranded. What is new since our last note is that WestJet and the union have reportedly agreed on an orderly wind-down plan, a set of steps for parking aircraft and getting both crew and travellers home safely if a stoppage does happen, rather than flights simply stopping mid-journey. WestJet says it is still operating normally for now and stresses that turning on its flexibility policy does not mean a disruption will happen. That flexibility is the practical thing to hold onto: if you are booked to fly WestJet between July 30 and August 4, you can still make a one-time change or cancellation with no fee, so you can move or drop the trip without paying for the privilege. One honest wrinkle worth knowing is that if you cancel on your own now and WestJet later cancels that same flight, you give up the stronger rebooking and compensation rights you would have had by waiting for the airline to cancel first, so weigh how firm your plans are before you pull the trigger. As before, WestJet Encore flights and codeshares operated by partner airlines are handled a little differently, and if you booked a package through WestJet Vacations, Sunwing Vacations, or Vacances WestJet Quebec, your vacation provider will reach out to you directly. Pull up your specific booking on WestJet's site to confirm it qualifies, and keep an eye on the news as the long weekend approaches, since a 72-hour notice could land at any point now and change the picture quickly.",
+    category: "Travel and points",
+    region: "CA",
+    date: "Jul 30, 2026",
+    sourceLabel: "WestJet",
+    sourceUrl: "https://www.westjet.com/en-ca/guest-updates",
+    href: "/cards?q=westjet",
+    hrefLabel: "Compare WestJet cards",
+  },
+  {
+    time: "08:30",
     slug: "air-canada-premium-economy-business-class-basic-fares-july-28",
     headline: "Air Canada adds cheaper Premium Economy Basic and Business Class Basic fares, but they earn fewer Aeroplan points and block eUpgrades",
     dek: "Air Canada rolled out two new lower-priced premium fares on July 28, Premium Economy Basic and Business Class Basic, that keep the roomy seat and the meal but strip out things like free advance seat selection, some lounge access, and the ability to use eUpgrades, and they earn Aeroplan at the base 1 point per dollar rather than a fare-brand bonus.",

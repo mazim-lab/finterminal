@@ -381,6 +381,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-strike-72-hour-notice-window-opens-july-30",
+    title: "WestJet's flight-attendant strike enters its final countdown as the earliest 72-hour walkout notice can now be filed",
+    dek: "Following up on our July 24 note, WestJet's roughly 4,400 cabin crew reached the point on July 30 where their union can legally file a 72-hour strike notice, putting the earliest possible walkout at August 2, the Saturday of the Civic long weekend, and the airline and CUPE have reportedly worked out a plan to wind operations down in an orderly way if it comes to that.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/air-canada-premium-economy-business-class-basic-fares-july-28",
     title: "Air Canada adds cheaper Premium Economy Basic and Business Class Basic fares, but they earn fewer Aeroplan points and block eUpgrades",
     dek: "Air Canada rolled out two new lower-priced premium fares on July 28, Premium Economy Basic and Business Class Basic, that keep the roomy seat and the meal but strip out things like free advance seat selection, some lounge access, and the ability to use eUpgrades, and they earn Aeroplan at the base 1 point per dollar rather than a fare-brand bonus.",
