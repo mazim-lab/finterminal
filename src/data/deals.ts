@@ -134,6 +134,8 @@ export const DEALS: Deal[] = [
       "This is Corsair's flagship mouse for people who live in MMOs, MOBAs, or macro heavy work, and it is down to $109.99 from $199.99, a full 45 percent off. The draw is the twelve button side panel that slides to fit your thumb, so all those abilities, hotkeys, or shortcuts sit right under one finger instead of scattered across the keyboard, and it runs wireless over both a 2.4GHz dongle and Bluetooth. One honest note so you buy for the right reason: that side panel is wonderful if you actually use a lot of buttons, but it makes the mouse chunkier and busier than a plain everyday pointer, so if you just want something simple to move a cursor around, a basic mouse will serve you better for a lot less. At this price though, it is a treat for the right kind of gamer.",
     category: "Electronics",
     posted: "Jul 16, 2026",
+    expires: "ended Jul 31",
+    expiresAt: "2026-07-31",
   },
   {
     title: "MSI Versa 300 wireless gaming mouse",
