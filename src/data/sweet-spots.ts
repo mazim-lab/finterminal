@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "delta-award-deals-sun-mexico-caribbean-12k",
+    program: "Delta",
+    title: "Delta sweet spot: round-trip economy to the sun near 12,000 SkyMiles in the Award Deals",
+    dek: "Delta SkyMiles has no award chart and prices dynamically, so the durable Delta sweet spot for a winter escape is its standing SkyMiles Award Deals page, where in recent rounds round-trip economy to the Bahamas, Mexico, and the Caribbean has dropped near 12,000 SkyMiles, and a Delta cardholder's discount lower.",
+    read: "5 min read",
+    date: "Jul 2026",
+    lastChecked: "2026-07-31",
+    body:
+      "Delta SkyMiles works differently from Aeroplan or Avios, and it is only fair to say so before we talk value. There is no published award chart and no fixed distance bands, so SkyMiles prices awards dynamically, roughly tracking the cash fare, and across the whole program a mile is worth on average a little over a cent, call it about 1.2 cents. We already walked through one durable Delta sweet spot, the transatlantic flash sale to Europe, so this time the target is the one families reach for in the depths of a Canadian winter: a cheap round trip to the sun. The figures below are an example drawn from recent sales, not a quote for any date, so always confirm the live price when you search.\n\nHere is how it works. Delta keeps a standing SkyMiles Award Deals page on delta.com, a permanent feature where a rotating set of discounted award routes is published, and on top of that it runs shorter unadvertised flash sales a few times a year. The sun destinations are the ones worth watching. In the recent rounds, round-trip economy to the Bahamas, Mexico, and much of the Caribbean has come down to around 12,000 SkyMiles, with the very best dates and shorter hops dipping lower, and Central and South America a step up from there. Because the list rotates and the flash sales are short, this is a book-it-when-you-see-it deal rather than one you plan months ahead, and the cheapest fares are usually the no-frills Main Basic cabin.\n\nHere is the cents-per-mile math on a realistic economy booking. Say a round trip from a Delta hub to Cancun or Nassau would otherwise cost about $450 in cash, and the award books for 12,000 SkyMiles plus roughly $90 in taxes and fees. That works out to (450 minus 90) divided by 12000, times 100, which is about 3 cents per mile. Against a program that averages a little over a cent, that is your SkyMiles doing real work, and if you happen to hold an eligible Delta American Express card, the TakeOff 15 benefit knocks 15 percent off the mileage, dropping the same seat to about 10,200 miles and nudging the value closer to 3.5 cents. Confirm the live fare when you book, because prices move and the example is only there to show the shape of the deal.\n\nOne honest note on TakeOff 15. That 15 percent discount applies only to Delta-operated award flights booked on delta.com, not to partner awards, and it requires an eligible Delta co-branded Amex. Most of those cards are US products that Canadians cannot easily hold, so treat the discount as a nice bonus if you have the card rather than the baseline you should count on.\n\nA couple of things make it sing. A sun destination is exactly the trip a family actually takes in February, so this is a redemption most households will use far more often than a lie-flat seat to Asia, and Delta's network into Mexico, the Bahamas, and the Caribbean is deep. The flights are short enough that the bare Main Basic fare stings much less than it would on a long haul, and because the Award Deals page is a standing feature rather than a single fleeting sale, there is always a fresh batch of discounted routes to check rather than one date you have to catch. Search a range of dates within the travel window, because award space at the sale price is genuinely limited and the best days go early.\n\nNow the honest caveats, and there are a few. Earning the SkyMiles is the hard part for Canadians. Amex Canada Membership Rewards does not transfer to Delta, so the cleanest route is Marriott Bonvoy, which moves to Delta at 3 to 1 with no transfer bonus, meaning 60,000 Bonvoy points become 20,000 SkyMiles. The sale routes also lean on US gateways, so a Canadian often books a Delta flight from Toronto, Montreal, or another home city into a US hub and strings the sun leg onto the same ticket, or positions to the hub separately, so check whether your city is included before you assume the low number. Main Basic is the cheapest bucket for a reason: no advance seat selection, last boarding group, and no changes, so read the fare rules before you commit. And because the deals are dynamically priced and short-lived, there is no date you can plan around in advance, so set an alert on the Award Deals page and pounce when a good one lands.",
+    href: "/cards?q=marriott",
+    hrefLabel: "Bonvoy cards that feed Delta",
+    shortAnswer:
+      "Delta SkyMiles has no award chart and prices dynamically, averaging a little over a cent a mile, so the durable Delta sweet spot for a winter escape is its standing SkyMiles Award Deals page, where in recent rounds round-trip economy to the Bahamas, Mexico, and the Caribbean has dropped near 12,000 SkyMiles, with the best dates lower. On a roughly $450 round-trip cash fare booked for 12,000 SkyMiles plus about $90 in taxes and fees, that is around 3 cents per mile, and an eligible Delta Amex cardholder's 15 percent TakeOff 15 discount trims the seat to about 10,200 miles, closer to 3.5 cents. Earning the miles is the hard part for Canadians, since Amex Canada does not transfer to Delta and the cleanest route is Marriott Bonvoy, which moves 3 to 1 with no bonus, so 60,000 Bonvoy becomes 20,000 SkyMiles. These are example figures from recent sales, not a quote for any date, so confirm the live price when you book.",
+    faqs: [
+      {
+        q: "How many SkyMiles is a round trip to the sun in Delta's Award Deals?",
+        a: "In the recent rounds, round-trip economy to the Bahamas, Mexico, and much of the Caribbean has come down to around 12,000 SkyMiles, with the very best dates and shorter hops dipping lower, and Central and South America a step up from there. Delta prices dynamically with no award chart, and the discounted routes rotate, so confirm the live price when you search because the cheapest fares are usually the no-frills Main Basic cabin.",
+      },
+      {
+        q: "Is a sun-destination Award Deal a good value on Delta?",
+        a: "Yes, for economy it is. On a roughly $450 round-trip cash fare booked for 12,000 SkyMiles plus about $90 in taxes and fees, the math is (450 minus 90) divided by 12000, times 100, which is about 3 cents per mile. Against a program that averages a little over a cent a mile, that is your SkyMiles doing real work.",
+      },
+      {
+        q: "What is TakeOff 15 and can Canadians use it?",
+        a: "TakeOff 15 knocks 15 percent off the mileage on Delta-operated award flights booked on delta.com, so a 12,000-mile seat drops to about 10,200 and nudges the value closer to 3.5 cents. It applies only to Delta's own flights, not partner awards, and it requires an eligible Delta co-branded Amex, most of which are US products Canadians cannot easily hold, so treat it as a bonus rather than the baseline.",
+      },
+      {
+        q: "How do Canadians earn Delta SkyMiles?",
+        a: "Earning is the hard part, because Amex Canada Membership Rewards does not transfer to Delta. The cleanest route is Marriott Bonvoy, which moves to Delta at 3 to 1 with no transfer bonus, so 60,000 Bonvoy points become 20,000 SkyMiles.",
+      },
+      {
+        q: "Can I fly to these sun destinations from Canada?",
+        a: "The sale routes lean on US gateways, so a Canadian often books a Delta flight from Toronto, Montreal, or another home city into a US hub and strings the sun leg onto the same ticket, or positions to the hub separately. Check whether your city is included in the deal before you assume the low number, because the discounted routes rotate.",
+      },
+      {
+        q: "What is Main Basic and what does it not include?",
+        a: "Main Basic is Delta's cheapest economy bucket and usually the one the sale fares book into. It comes with no advance seat selection, the last boarding group, and no changes, so read the fare rules before you commit, though on a short hop to the sun those restrictions sting far less than they would on a long haul.",
+      },
+    ],
+  },
+  {
     slug: "westjet-companion-voucher-domestic-economy-119",
     program: "WestJet",
     title: "WestJet sweet spot: fly a companion across Canada or to the US for a fixed $119 base fare",

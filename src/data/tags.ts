@@ -379,6 +379,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "westjet", "points", "travel-cards", "cards"],
   },
 
+  {
+    path: "/travel/sweet-spots/delta-award-deals-sun-mexico-caribbean-12k",
+    title: "Delta sweet spot: round-trip economy to the sun near 12,000 SkyMiles in the Award Deals",
+    dek: "Delta SkyMiles has no award chart and prices dynamically, so the durable Delta sweet spot for a winter escape is its standing SkyMiles Award Deals page, where round-trip economy to the Bahamas, Mexico, and the Caribbean has dropped near 12,000 SkyMiles, sometimes lower.",
+    section: "Sweet spot",
+    tags: ["travel", "delta", "points", "award-booking", "transfers"],
+  },
+
   // News items
   {
     path: "/news/westjet-strike-72-hour-notice-window-opens-july-30",
