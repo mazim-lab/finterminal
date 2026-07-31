@@ -389,6 +389,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-cabin-crew-strike-notice-filed-lockout-august-2",
+    title: "WestJet's cabin crew file their 72-hour strike notice and the airline answers with a lockout notice, putting the earliest stoppage at 12:01 a.m. on August 2",
+    dek: "Following up on our earlier July 30 note, the window did not stay open long: CUPE served WestJet a formal 72-hour strike notice on July 30 and the airline responded the same day with its own lockout notice, so a work stoppage could begin as early as 12:01 a.m. Mountain Time on August 2, the Saturday of the Civic long weekend, though both sides say talks are continuing.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/westjet-strike-72-hour-notice-window-opens-july-30",
     title: "WestJet's flight-attendant strike enters its final countdown as the earliest 72-hour walkout notice can now be filed",
     dek: "Following up on our July 24 note, WestJet's roughly 4,400 cabin crew reached the point on July 30 where their union can legally file a 72-hour strike notice, putting the earliest possible walkout at August 2, the Saturday of the Civic long weekend, and the airline and CUPE have reportedly worked out a plan to wind operations down in an orderly way if it comes to that.",
