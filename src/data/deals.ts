@@ -25,6 +25,28 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "HP ZBook Firefly 14 G8 laptop, refurbished (i5, 16GB, 256GB, Win 11 Pro)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/hp-zbook-14-0-non-touch-screen-intel-core-i5-1145g7-intel-iris-xe-graphics-16gb-memory-256-gb-nvme-ssd-black/p/N82E16834818403",
+    price: "$349",
+    was: "$799",
+    blurb:
+      "If you or a student in the house just needs a solid everyday laptop, a refurbished business machine is often the smart money, and Newegg has the HP ZBook Firefly 14 G8 down to $349 from $799. This is a real business class 14 inch ultrabook rather than a bargain bin plastic one: a quad core Intel i5, a healthy 16GB of memory, a 256GB SSD, and Windows 11 Pro, which is plenty for browsing, email, documents, video calls, and light work. It is sold and shipped by Newegg rather than a random reseller, which matters a lot on a refurbished buy. Two honest notes so you go in clear eyed: refurbished means it was returned and reconditioned, and it carries a short 90 day warranty and a 15 day return window, so check it over and decide inside that window. And the 11th gen chip is a couple of years old and 256GB fills up fast if you keep a lot of photos or video, so this is the right call for everyday computing rather than heavy creative work.",
+    category: "Electronics",
+    posted: "Aug 1, 2026",
+  },
+  {
+    title: "SIHOO high-back ergonomic mesh office chair with lumbar support",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/p/2T4-028H-00001",
+    price: "$199.99",
+    was: "$249.99",
+    blurb:
+      "If you spend your days at a desk, a proper ergonomic chair is one of those buys your back quietly thanks you for, and this SIHOO is down to $199.99 from $249.99. SIHOO is a well regarded name in affordable ergonomic seating, and this one has the bits that actually matter: adjustable lumbar support, a breathable mesh back that keeps you cool, an adjustable headrest, a 300 pound weight rating, and BIFMA certification for durability. There is also a code, CBTSF95, that takes another $20 off at checkout for $179.99 if it is still live, so it is worth a try. Two honest notes before you buy: it ships from SIHOO's own store on Newegg rather than from Newegg directly, and it arrives flat, so plan on about twenty minutes of assembly with the included tools. For a chair you will sit in every day, it is genuine value.",
+    category: "Home",
+    posted: "Aug 1, 2026",
+  },
+  {
     title: "ASUS TUF Gaming 27-inch QHD 180Hz Fast IPS monitor (VG27AQ3A)",
     merchant: "Newegg",
     url: "https://www.newegg.ca/asus-vg27aq3a-27-qhd-180-hz-tuf-gaming-fast-ips/p/N82E16824281271",
