@@ -389,6 +389,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-begins-parking-737-fleet-strike-deadline-july-31",
+    title: "WestJet starts parking its 737 fleet as talks fail to land a deal, moving the strike from a threat to something you can see on the tarmac",
+    dek: "Following up on our July 30 note about the strike and lockout notices, WestJet said on July 31 that negotiations had not produced an agreement, so it has begun the difficult work of parking its Boeing 737 aircraft ahead of a possible stoppage as early as 12:01 a.m. Mountain Time on August 2. WestJet Encore Q400 flights and partner codeshares are not affected, and the free change-and-cancel window for travel between July 30 and August 4 still stands.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/westjet-cabin-crew-strike-notice-filed-lockout-august-2",
     title: "WestJet's cabin crew file their 72-hour strike notice and the airline answers with a lockout notice, putting the earliest stoppage at 12:01 a.m. on August 2",
     dek: "Following up on our earlier July 30 note, the window did not stay open long: CUPE served WestJet a formal 72-hour strike notice on July 30 and the airline responded the same day with its own lockout notice, so a work stoppage could begin as early as 12:01 a.m. Mountain Time on August 2, the Saturday of the Civic long weekend, though both sides say talks are continuing.",
