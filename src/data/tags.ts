@@ -389,6 +389,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-initiates-flight-cancellations-strike-deadline-august-1",
+    title: "WestJet moves from parking planes to actually cancelling flights, scrubbing hundreds of departures as the August 2 strike deadline arrives",
+    dek: "Following up on our July 31 note about WestJet parking its 737 fleet, the airline began what it calls an organized take-down of its network late on July 31 and through August 1, cancelling hundreds of flights and emailing affected guests directly. Reports had the count climbing past 270 flights by Saturday afternoon, the earliest possible strike or lockout is still set for 12:01 a.m. Mountain Time on August 2, and the free change-and-cancel window for travel between July 30 and August 4 remains in place.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/westjet-begins-parking-737-fleet-strike-deadline-july-31",
     title: "WestJet starts parking its 737 fleet as talks fail to land a deal, moving the strike from a threat to something you can see on the tarmac",
     dek: "Following up on our July 30 note about the strike and lockout notices, WestJet said on July 31 that negotiations had not produced an agreement, so it has begun the difficult work of parking its Boeing 737 aircraft ahead of a possible stoppage as early as 12:01 a.m. Mountain Time on August 2. WestJet Encore Q400 flights and partner codeshares are not affected, and the free change-and-cancel window for travel between July 30 and August 4 still stands.",
