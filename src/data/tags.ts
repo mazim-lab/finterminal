@@ -389,6 +389,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-flight-attendants-strike-begins-work-stoppage-august-2",
+    title: "WestJet's flight attendants are officially on strike, grounding the mainline fleet from just after midnight on August 2 after last-ditch talks collapsed",
+    dek: "Following up on our August 1 note about the mounting cancellations, the deadline came and went without a deal: about 4,400 WestJet cabin crew walked off the job at 12:01 a.m. Mountain Time on August 2, and the airline confirmed a full work stoppage is now in effect, so it cannot fly its scheduled 737 and 787 flights. Reports had cancellations climbing into the hundreds over the long-weekend Sunday, Encore turboprop and partner codeshare flights are not part of the stoppage, and WestJet says affected guests will be refunded or reaccommodated.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/westjet-initiates-flight-cancellations-strike-deadline-august-1",
     title: "WestJet moves from parking planes to actually cancelling flights, scrubbing hundreds of departures as the August 2 strike deadline arrives",
     dek: "Following up on our July 31 note about WestJet parking its 737 fleet, the airline began what it calls an organized take-down of its network late on July 31 and through August 1, cancelling hundreds of flights and emailing affected guests directly. Reports had the count climbing past 270 flights by Saturday afternoon, the earliest possible strike or lockout is still set for 12:01 a.m. Mountain Time on August 2, and the free change-and-cancel window for travel between July 30 and August 4 remains in place.",
