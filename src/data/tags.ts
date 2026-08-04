@@ -387,6 +387,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "delta", "points", "award-booking", "transfers"],
   },
 
+  {
+    path: "/travel/sweet-spots/united-ana-the-room-business-japan-tokyo-100k",
+    title: "United sweet spot: ANA \"The Room\" business class to Tokyo from about 100,000 miles, one-way and surcharge-free",
+    dek: "United prices its own flights dynamically, but partner awards still sit at semi-fixed Saver levels, so the marquee United sweet spot to Asia is ANA's suite-like The Room business class to Tokyo, roughly 90,000 to 110,000 miles one-way with the fuel surcharges stripped out and booked as a one-way.",
+    section: "Sweet spot",
+    tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
+  },
+
   // News items
   {
     path: "/news/westjet-flight-attendants-strike-begins-work-stoppage-august-2",

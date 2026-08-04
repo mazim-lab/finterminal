@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "united-ana-the-room-business-japan-tokyo-100k",
+    program: "United",
+    title: "United sweet spot: ANA \"The Room\" business class to Tokyo from about 100,000 miles, one-way and surcharge-free",
+    dek: "United prices its own flights dynamically, but partner awards still sit at semi-fixed Saver levels, so the marquee United sweet spot to Asia is ANA's suite-like \"The Room\" business class to Tokyo, roughly 90,000 to 110,000 miles one-way with the fuel surcharges stripped out and booked as a one-way, which most programs will not let you do on ANA.",
+    read: "5 min read",
+    date: "Aug 2026",
+    lastChecked: "2026-08-04",
+    body:
+      "United MileagePlus works differently from a fixed-chart program like Aeroplan, and it is worth saying so before we talk value. United prices its own flights dynamically, so a seat on United metal floats with the cash fare, and partner awards are the exception. When you book a Star Alliance partner through United the price still sits at United's semi-fixed Saver levels rather than the floating fare, and United does not pass along the carrier-imposed fuel surcharges its partners are known for. We already walked through the Europe version of that sweet spot on Lufthansa and SWISS, so this time the target is the one people cross the Pacific for, ANA's suite-like business class to Tokyo, the cabin known as The Room. The figures below are an example of how the Saver levels work, not a quote for any date, so always confirm the live price when you search.\n\nThe numbers look like this. North America to North Asia in business on a Star Alliance partner such as ANA prices in a band that has been landing roughly 90,000 to 110,000 miles one-way at the Saver level, with economy on the same partners from around 40,000 miles. United no longer publishes a single fixed partner chart the way it once did, so treat that band as approximate rather than a promise, and price your own dates before you assume a number. The real magic is on the cash side, because United absorbs the fuel surcharges, so an ANA business seat that would carry a few hundred dollars in surcharges through some other programs comes with only modest taxes attached, often under a hundred dollars outbound from a US gateway.\n\nHere is the cents-per-mile math on a realistic business booking. Say a one-way ANA business fare from the US to Tokyo would run about $6,000 in cash, and the award books for 100,000 miles plus roughly $100 in taxes and fees. That works out to (6000 minus 100) divided by 100000, times 100, which is about 5.9 cents per mile. Anything north of about 1.5 cents is a strong use of United miles, so a private suite across the Pacific at this price is your miles doing real work. Prices move, so confirm the live fare when you book.\n\nA couple of things make it sing. The Room really is the draw: an unusually wide business seat with a sliding door for privacy, a proper fully flat bed, and ANA's famously gentle service, and it is widely rated one of the best business cabins flying. United shows most ANA Saver space right on united.com, so you can hunt for a seat and book it online without a phone call, and the surcharge-free, one-way booking is the quiet structural edge here, because ANA's own program leans on round trips and some partner programs will not sell you a one-way on ANA at all. That means you can fly The Room out and come home on points or cash however you like. Search a range of dates, because Saver space in the front cabin is genuinely limited and the best days go early.\n\nNow the honest caveats, and there are a few. Earning the miles is the hard part for Canadians, because no Canadian bank transfers directly to United. The cleanest route is Marriott Bonvoy, which moves to United at 3 to 1 and tacks on a bonus when you transfer in 60,000-point blocks, so a 60,000-point transfer lands as roughly 25,000 United miles rather than 20,000, which means the 100,000 miles for this seat take on the order of 240,000 Bonvoy points to build. Plan the transfer around a real booking and confirm the current ratio first, since transfers are one-way. The cabin is the next catch: The Room only flies on ANA's Boeing 777-300ER, which currently runs to gateways like New York JFK and select San Francisco and Chicago frequencies, while Los Angeles, Seattle, Houston, and Washington are 787s with ANA's older business seat, and ANA's own Vancouver to Tokyo flight is a 787 too, so a Canadian chasing The Room usually positions to JFK, San Francisco, or Chicago and should check the aircraft on the seat map before booking. Because United's partner pricing is a semi-fixed band rather than a published chart, a date can price at the high end or occasionally above, so confirm the live number. And if business space is scarce, that roughly 40,000-mile economy seat on the same partners is the quiet everyday version of this sweet spot, and it prices just as cleanly with the same low surcharges.",
+    href: "/cards?q=marriott",
+    hrefLabel: "Bonvoy cards that feed United",
+    shortAnswer:
+      "United MileagePlus prices its own flights dynamically, but partner awards still sit at semi-fixed Saver levels, and the marquee United sweet spot to Asia is ANA's suite-like The Room business class to Tokyo, which has been landing roughly 90,000 to 110,000 miles one-way, with economy on the same partners from around 40,000. Because United does not pass along fuel surcharges, the cash portion stays small, so on a roughly $6,000 one-way business fare booked for 100,000 miles plus about $100 in taxes that is about 5.9 cents per mile, well above the 1.5 cents that already counts as a strong use. The quiet edge is that United books ANA as a surcharge-free one-way, which ANA's own program and some partners will not do. Earning is the hard part for Canadians, since no Canadian bank transfers directly to United and the cleanest route is Marriott Bonvoy at 3 to 1, so the 100,000 miles take on the order of 240,000 Bonvoy points to build. United no longer publishes a fixed partner chart, so treat the band as approximate and confirm the live price when you search.",
+    faqs: [
+      {
+        q: "How many United miles is ANA business class to Tokyo?",
+        a: "North America to North Asia in business on a Star Alliance partner such as ANA has been landing roughly 90,000 to 110,000 miles one-way at United's Saver level, with economy on the same partners from around 40,000 miles. United no longer publishes a single fixed partner chart, so treat that band as approximate and confirm the live price when you search.",
+      },
+      {
+        q: "Is booking ANA's The Room on United miles a good value?",
+        a: "Yes. On a roughly $6,000 one-way cash fare booked for 100,000 miles plus about $100 in taxes and fees, the math is (6000 minus 100) divided by 100000, times 100, which is about 5.9 cents per mile. Anything north of about 1.5 cents is a strong use of United miles, so a private suite across the Pacific at this price is your miles doing real work.",
+      },
+      {
+        q: "Does United charge fuel surcharges on ANA awards?",
+        a: "No, and that is a big part of the appeal. United does not pass along the carrier-imposed fuel surcharges that an ANA business seat can carry through some other programs, so the cash portion stays to modest taxes, often under a hundred dollars outbound from a US gateway.",
+      },
+      {
+        q: "Why book ANA through United instead of another program?",
+        a: "Two reasons: United absorbs the fuel surcharges, and it will sell you a one-way on ANA. ANA's own program leans on round trips and some partner programs will not book a one-way on ANA at all, so United lets you fly The Room out and come home however you like, on points or cash.",
+      },
+      {
+        q: "How do Canadians earn United miles for this?",
+        a: "It is the hard part, because no Canadian bank transfers directly to United. The cleanest route is Marriott Bonvoy, which moves to United at 3 to 1 and adds a bonus when you transfer in 60,000-point blocks, so 60,000 Bonvoy points land as roughly 25,000 United miles. That means the 100,000 miles for this seat take on the order of 240,000 Bonvoy points to build, so plan the transfer around a real booking and confirm the current ratio first, since transfers are one-way.",
+      },
+      {
+        q: "Which flights actually have The Room?",
+        a: "The Room only flies on ANA's Boeing 777-300ER, which currently runs to gateways like New York JFK and select San Francisco and Chicago frequencies, while Los Angeles, Seattle, Houston, and Washington are 787s with ANA's older business seat, and ANA's own Vancouver to Tokyo flight is a 787 too. A Canadian chasing The Room usually positions to JFK, San Francisco, or Chicago, and should check the aircraft on the seat map before booking.",
+      },
+    ],
+  },
+  {
     slug: "delta-award-deals-sun-mexico-caribbean-12k",
     program: "Delta",
     title: "Delta sweet spot: round-trip economy to the sun near 12,000 SkyMiles in the Award Deals",
