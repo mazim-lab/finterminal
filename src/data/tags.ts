@@ -397,6 +397,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-cupe-tentative-agreement-strike-ends-august-3",
+    title: "WestJet and its cabin crew reach a tentative deal a day into the strike, withdrawing the strike and lockout notices and starting the work of getting the fleet flying again",
+    dek: "Following up on our August 2 note about the walkout that grounded WestJet's mainline jets, the stoppage turned out to be short: WestJet and CUPE reached a tentative agreement on August 3, both the strike and lockout notices were withdrawn, and the airline began restoring service. The deal, which the union says evolves the flight-credit system to recognize more of the ground work cabin crew do, still has to pass a ratification vote, and WestJet is warning that rebuilding the schedule after a network-wide shutdown takes a few days rather than happening all at once.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/westjet-flight-attendants-strike-begins-work-stoppage-august-2",
     title: "WestJet's flight attendants are officially on strike, grounding the mainline fleet from just after midnight on August 2 after last-ditch talks collapsed",
     dek: "Following up on our August 1 note about the mounting cancellations, the deadline came and went without a deal: about 4,400 WestJet cabin crew walked off the job at 12:01 a.m. Mountain Time on August 2, and the airline confirmed a full work stoppage is now in effect, so it cannot fly its scheduled 737 and 787 flights. Reports had cancellations climbing into the hundreds over the long-weekend Sunday, Encore turboprop and partner codeshare flights are not part of the stoppage, and WestJet says affected guests will be refunded or reaccommodated.",
