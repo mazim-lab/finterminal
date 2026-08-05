@@ -1236,10 +1236,9 @@
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
-      "Statement credits",
-      "No foreign transaction fee"
+      "Statement credits"
     ],
-    "foreign_transaction_fee": false,
+    "foreign_transaction_fee": true,
     "country": "US",
     "source": "bank_website",
     "last_verified": "2026-02-23",
@@ -1285,10 +1284,9 @@
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
-      "Statement credits",
-      "No foreign transaction fee"
+      "Statement credits"
     ],
-    "foreign_transaction_fee": false,
+    "foreign_transaction_fee": true,
     "country": "US",
     "source": "bank_website",
     "last_verified": "2026-02-23",
@@ -1336,10 +1334,9 @@
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
-      "Statement credits",
-      "No foreign transaction fee"
+      "Statement credits"
     ],
-    "foreign_transaction_fee": false,
+    "foreign_transaction_fee": true,
     "country": "US",
     "source": "bank_website",
     "last_verified": "2026-02-23",
