@@ -25,6 +25,39 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "ASRock Phantom Gaming 27-inch FHD 180Hz IPS monitor (PG27FFT1A)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asrock-phantom-gaming-pg27fft1a-27-fhd-180-hz-ips/p/N82E16824028009",
+    price: "$139.99",
+    was: "$249.99",
+    blurb:
+      "If you are setting up a first desk, kitting out a student, or just tired of squinting at a small old screen, a fast 27 inch monitor for $139.99 is genuinely good value, down from $249.99. This ASRock Phantom Gaming panel keeps the specs that actually matter: a roomy 27 inch Full HD screen, a quick 180Hz refresh that keeps scrolling and motion smooth, an IPS panel so colours stay honest from any angle, and a proper swivel and tilt stand rather than a wobbly plastic one. It is sold and shipped by Newegg. One honest note so you buy clear eyed: this is 1080p rather than the sharper QHD, which is the sensible trade at this price and plenty for everyday work, browsing, and casual gaming, but if you want crisper text for photos or spreadsheets all day, the QHD panels are worth the step up. For a solid everyday screen though, this is a lot of monitor for the money.",
+    category: "Electronics",
+    posted: "Aug 5, 2026",
+  },
+  {
+    title: "ASRock B650M Pro RS WiFi AM5 micro-ATX motherboard",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asrock-b650m-pro-rs-wifi-micro-atx-motherboard-amd-b650-am5/p/N82E16813162131",
+    price: "$149.99",
+    was: "$214.99",
+    blurb:
+      "This one is for the PC builders, but if you are putting together an AMD system it is a genuinely strong price on a popular board. Newegg has the ASRock B650M Pro RS WiFi down to $149.99 from $214.99, sold and shipped by Newegg. It is a well rounded micro ATX board for AMD's current AM5 socket with built in WiFi, so it pairs naturally with a chip like the Ryzen 5 7600X and gives a fresh build room to grow with DDR5 memory and a modern layout. One honest note so nobody buys wrong: a motherboard is a part for a build or an upgrade, not a plug and play gadget, and it only makes sense if you are on or moving to AM5, since you will also need a compatible AMD chip and DDR5 memory. If that is the machine you are planning though, this is a lot of board for the money.",
+    category: "Electronics",
+    posted: "Aug 5, 2026",
+  },
+  {
+    title: "Lian Li V100 ATX case with four ARGB fans and tempered glass",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/lian-li-atx-mid-tower-steel-tempered-glass-cases-black-v100rx/p/2AM-000Z-000F6",
+    price: "$79.99",
+    was: "$114.99",
+    blurb:
+      "A good case is the quiet foundation a PC build sits in for years, and this Lian Li is down to $79.99 from $114.99, sold and shipped by Newegg. Lian Li is a name builders trust, and this V100 arrives with four 120mm ARGB fans already installed plus a tempered glass side, so a big chunk of the airflow and the lighting is handled before you spend a dollar on extras. It has the room a modern build needs too, with clearance for a long graphics card and a 360mm radiator. One honest note so this fits your plans: a case only makes sense if you are actually building or rebuilding a desktop, so this is one for the builders rather than a gift for a non PC household. If you are putting a machine together though, getting the fans and glass bundled in at this price is real value.",
+    category: "Electronics",
+    posted: "Aug 5, 2026",
+  },
+  {
     title: "HP ZBook Firefly 14 G8 laptop, refurbished (i5, 16GB, 256GB, Win 11 Pro)",
     merchant: "Newegg",
     url: "https://www.newegg.ca/hp-zbook-14-0-non-touch-screen-intel-core-i5-1145g7-intel-iris-xe-graphics-16gb-memory-256-gb-nvme-ssd-black/p/N82E16834818403",
@@ -56,6 +89,7 @@ export const DEALS: Deal[] = [
       "If your desk still has a basic 1080p screen, a jump to a proper QHD gaming panel is the kind of thing you notice every day. Newegg has the ASUS TUF Gaming VG27AQ3A down to $219.99 from $299.99, and it is a genuinely well sorted 27 inch monitor: sharp 2560x1440 resolution, a quick 180Hz refresh, a Fast IPS panel that keeps colours honest from any angle, and both FreeSync Premium and G-Sync compatibility so it plays nicely with either an AMD or an Nvidia card. It has the extras the cheaper panels skip too, including a proper swivel and tilt stand. One honest note so you buy clear eyed: the built in speakers are there for convenience and not much more, so plan on headphones or desk speakers, and Newegg gives you a short 15 day return window on this one, so if you want to try it, decide inside that window.",
     category: "Electronics",
     posted: "Jul 29, 2026",
+    expiresAt: "2026-08-05",
   },
   {
     title: "Creative Outlier Free Pro+ bone conduction headphones",
@@ -67,6 +101,7 @@ export const DEALS: Deal[] = [
       "If you run, cycle, or walk busy streets and hate sealing your ears off from the world, an open ear bone conduction set is a lovely thing to own, and this Creative pair is down to $119.99 from $209.99, a full 42 percent off. Instead of going in your ears, it rests on your cheekbones and pipes the sound through, so your ears stay open to traffic, footsteps, and the people around you while your music or podcast plays. It is waterproof and sold and shipped by Newegg with free 30 day returns, which makes it easy to try. One honest note so you buy for the right reason: bone conduction will never give you the deep bass or the quiet isolation of a good in ear bud, that is the whole trade you are making for staying aware of your surroundings. If you want to disappear into your music on a plane, this is not that, but for staying safe and connected on a run it is exactly right.",
     category: "Electronics",
     posted: "Jul 29, 2026",
+    expiresAt: "2026-08-05",
   },
   {
     title: "Super Flower Leadex VII XG 1000W ATX 3.1 power supply",
@@ -145,6 +180,7 @@ export const DEALS: Deal[] = [
       "If you have a desktop PC that runs hot and loud under load, a good all in one liquid cooler is one of the nicer quality of life upgrades, and this one is 62 percent off at $85.49 down from $229.99. A 240mm radiator like this pulls heat off the processor far better than a small stock cooler, which keeps the chip running faster for longer and lets the fans spin down to a whisper instead of roaring during a game or a big export. It is sold and shipped by Newegg with free 30 day returns. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop and your case has room for a 240mm radiator, so check your case clearance and socket support first. It is not a plug and play gadget for a laptop or a non PC household.",
     category: "Electronics",
     posted: "Jul 16, 2026",
+    expiresAt: "2026-08-05",
   },
   {
     title: "Corsair Scimitar Elite Wireless SE gaming mouse",
@@ -156,6 +192,7 @@ export const DEALS: Deal[] = [
       "This is Corsair's flagship mouse for people who live in MMOs, MOBAs, or macro heavy work, and it is down to $109.99 from $199.99, a full 45 percent off. The draw is the twelve button side panel that slides to fit your thumb, so all those abilities, hotkeys, or shortcuts sit right under one finger instead of scattered across the keyboard, and it runs wireless over both a 2.4GHz dongle and Bluetooth. One honest note so you buy for the right reason: that side panel is wonderful if you actually use a lot of buttons, but it makes the mouse chunkier and busier than a plain everyday pointer, so if you just want something simple to move a cursor around, a basic mouse will serve you better for a lot less. At this price though, it is a treat for the right kind of gamer.",
     category: "Electronics",
     posted: "Jul 16, 2026",
+    expiresAt: "2026-08-05",
   },
   {
     title: "MSI Versa 300 wireless gaming mouse",
