@@ -2642,17 +2642,16 @@
     "network": "Visa",
     "card_type": "business",
     "annual_fee": 0,
-    "signup_bonus": null,
+    "signup_bonus": 750,
     "signup_bonus_formatted": "$750 cash back",
     "signup_bonus_value_usd": 750,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Statement credits",
-      "No foreign transaction fee"
+      "Statement credits"
     ],
-    "foreign_transaction_fee": false,
+    "foreign_transaction_fee": true,
     "country": "US",
     "source": "bank_website",
     "last_verified": "2026-02-23",
@@ -2734,10 +2733,9 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Statement credits",
-      "No foreign transaction fee"
+      "Statement credits"
     ],
-    "foreign_transaction_fee": false,
+    "foreign_transaction_fee": true,
     "country": "US",
     "source": "bank_website",
     "last_verified": "2026-02-23",
@@ -2793,7 +2791,6 @@
     },
     "earn_rates": {
       "Purchases of $5,000 or more": "2.5%",
-      "Chase Travel": "5%",
       "All other purchases": "2%"
     },
     "welcome_bonus": "Earn $1,000 bonus cash back",
