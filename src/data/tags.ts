@@ -397,6 +397,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-operations-gradually-resume-cancellations-taper-august-4",
+    title: "WestJet's planes are coming back: cancellations taper off on August 4 as the airline ramps its network up again, though a full recovery will still take a few days",
+    dek: "Following up on our August 3 note about the tentative deal that ended the cabin-crew strike, the operation is now clawing its way back. WestJet's travel advisory says it is gradually resuming service after reaching a tentative agreement with CUPE, and the cancellation count dropped sharply on August 4 from the hundreds scrubbed on Monday, with only a handful of flights cut on Tuesday. WestJet is warning that fully rebuilding the schedule will take several days as it repositions aircraft and crews, so some flights may still be disrupted, and its free change-and-cancel window for travel through August 6 remains in place.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/westjet-cupe-tentative-agreement-strike-ends-august-3",
     title: "WestJet and its cabin crew reach a tentative deal a day into the strike, withdrawing the strike and lockout notices and starting the work of getting the fleet flying again",
     dek: "Following up on our August 2 note about the walkout that grounded WestJet's mainline jets, the stoppage turned out to be short: WestJet and CUPE reached a tentative agreement on August 3, both the strike and lockout notices were withdrawn, and the airline began restoring service. The deal, which the union says evolves the flight-credit system to recognize more of the ground work cabin crew do, still has to pass a ratification vote, and WestJet is warning that rebuilding the schedule after a network-wide shutdown takes a few days rather than happening all at once.",
