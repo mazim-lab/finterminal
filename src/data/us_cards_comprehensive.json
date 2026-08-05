@@ -1981,9 +1981,7 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "No foreign transaction fee",
-      "Subscription perks",
-      "Food delivery credits"
+      "No foreign transaction fee"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -2001,7 +1999,7 @@
       "purchase_protection": "100",
       "trip_cancellation": ""
     },
-    "welcome_bonus": "Earn up to 120,000 Bonus Points",
+    "welcome_bonus": "Earn 90,000 bonus points after spending $2,000 on purchases in the first 3 months from account opening. Plus, up to 30,000 bonus points by earning an additional 3x on purchases, except at IHG Hotels & Resorts, in the first 6 months from account opening on up to $10,000 spent.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2359,8 +2357,6 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Food delivery credits",
-      "Subscription perks",
       "No foreign transaction fee",
       "$1,000 Airfare Discount Voucher",
       "10% discount on Iberia flights"
