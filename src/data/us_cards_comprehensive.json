@@ -2161,15 +2161,13 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 95,
-    "signup_bonus": 60000,
-    "signup_bonus_formatted": "60,000 World of Hyatt points",
-    "signup_bonus_value_usd": 60000,
-    "signup_bonus_currency": "points",
+    "signup_bonus": null,
+    "signup_bonus_formatted": "Up to 5 free nights: 3 free nights after $5,000 spend in 3 months, plus 2 more free nights after $15,000 spend in 6 months (Category 1-4 hotels)",
+    "signup_bonus_value_usd": null,
+    "signup_bonus_currency": "nights",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Food delivery credits",
-      "Subscription perks",
       "No foreign transaction fee",
       "Concierge service"
     ],
@@ -2187,7 +2185,7 @@
       "Restaurants, airline, transit, gym": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "60,000 World of Hyatt points",
+    "welcome_bonus": "Up to 5 free nights: 3 free nights after $5,000 spend in 3 months, plus 2 more free nights after $15,000 spend in 6 months (Category 1-4 hotels)",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
