@@ -397,6 +397,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-full-schedule-zero-cancellations-recovery-august-5",
+    title: "WestJet closes the book on its strike week, operating a full schedule on August 5 with no cancellations as the recovery essentially lands",
+    dek: "Following up on our August 4 note about cancellations tapering off, WestJet's recovery reached its natural finish line on August 5: the airline operated its full mainline schedule of roughly 460 flights without a single cancellation, a day after trimming only a handful. WestJet has kept its free change-and-cancel window open for travel through August 6 and says it will keep evaluating daily extensions, and the tentative deal that ended the walkout now goes to a ratification vote its cabin crew have about a month to complete.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/westjet-operations-gradually-resume-cancellations-taper-august-4",
     title: "WestJet's planes are coming back: cancellations taper off on August 4 as the airline ramps its network up again, though a full recovery will still take a few days",
     dek: "Following up on our August 3 note about the tentative deal that ended the cabin-crew strike, the operation is now clawing its way back. WestJet's travel advisory says it is gradually resuming service after reaching a tentative agreement with CUPE, and the cancellation count dropped sharply on August 4 from the hundreds scrubbed on Monday, with only a handful of flights cut on Tuesday. WestJet is warning that fully rebuilding the schedule will take several days as it repositions aircraft and crews, so some flights may still be disrupted, and its free change-and-cancel window for travel through August 6 remains in place.",
