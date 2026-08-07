@@ -395,6 +395,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
   },
 
+  {
+    path: "/travel/sweet-spots/alaska-qantas-business-australia-85k",
+    title: "Alaska sweet spot: business class to Australia on Qantas for about 85,000 Atmos points, no fuel surcharges",
+    dek: "Alaska's Mileage Plan is now Atmos Rewards, but it still prices partner awards off a fixed distance chart with no fuel surcharges, so the durable long-haul sweet spot is a lie-flat Qantas seat from the US West Coast to Australia for about 85,000 points one-way, with only a small partner fee and taxes on top.",
+    section: "Sweet spot",
+    tags: ["travel", "alaska", "points", "award-booking", "business-class", "alliances"],
+  },
+
   // News items
   {
     path: "/news/westjet-full-schedule-zero-cancellations-recovery-august-5",

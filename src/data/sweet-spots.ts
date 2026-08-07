@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "alaska-qantas-business-australia-85k",
+    program: "Alaska",
+    title: "Alaska sweet spot: business class to Australia on Qantas for about 85,000 Atmos points, no fuel surcharges",
+    dek: "Alaska's Mileage Plan is now Atmos Rewards, but it still prices partner awards off a fixed distance chart with no fuel surcharges, so the durable long-haul sweet spot is a lie-flat Qantas seat from the US West Coast to Australia for about 85,000 points one-way, with only a small partner fee and taxes on top.",
+    read: "5 min read",
+    date: "Aug 2026",
+    lastChecked: "2026-08-07",
+    body:
+      "Alaska's frequent flyer program was renamed Atmos Rewards in 2026, but the thing that made the old Mileage Plan special is still intact, so it is worth saying up front. In a year when almost every US program has drifted to dynamic pricing, Atmos still prices its partner awards off a fixed, distance based chart, and it still does not pass along the carrier imposed fuel surcharges that some partners are known for. We already walked through the closest version of that idea, Japan Airlines business class from Vancouver to Tokyo, so this time the target is the long haul people save for years to take: a lie-flat seat across the Pacific to Australia on Qantas. The figures below are an example of how the chart works, not a quote for any date, so always confirm the live price when you search.\n\nThe numbers look like this. From the US West Coast, gateways like Los Angeles and San Francisco, Qantas business class to Australia prices at about 85,000 Atmos points one-way, with premium economy around 55,000 and economy lower still. Fiji Airways, which flies the same Pacific through its Nadi hub, sits in the same band, so you have two carriers to hunt across rather than one. This is a distance based chart, so treat 85,000 as an approximate band rather than a fixed quote, and price your own dates before you assume a number, because the 2026 rebrand came with some chart tweaks.\n\nHere is the cents-per-point math on a realistic business booking. Say a one-way Qantas business fare from Los Angeles to Sydney would run about $5,500 in cash, and the award books for 85,000 points plus taxes and fees. Because Atmos strips the fuel surcharges and US departure taxes to Australia are light, the cash portion stays small, often around $60 to $100 all in once you add the partner award fee, so call it $80. That works out to (5500 minus 80) divided by 85000, times 100, which is about 6.4 cents per point. Anything above about 1.5 cents is a strong use of Atmos points, so a flat bed across the Pacific at this price is your points doing real work. Prices move, so confirm the live fare when you book.\n\nTwo things make it sing. The no-surcharge policy is the durable edge, because a Qantas business award booked through some other programs can carry hundreds of dollars in fees, while Atmos keeps the cash portion to modest taxes plus a small partner award fee, which rose to $20 on July 1 2026 and is still a rounding error on a trip like this. Atmos also lets you add a free enroute stopover of up to 14 days on a one-way international partner award, so you can break the trip in, say, Fiji or another Pacific city on the same booking, turning one redemption into two destinations. Alaska shows a good deal of partner space, including Qantas and Fiji Airways, right on alaskaair.com, so you can usually search and book online without a phone call.\n\nNow the honest caveats, and there are a few. The biggest one is availability, because Qantas is famously tight with releasing long-haul business award seats to partners, and the best space tends to show up either about eleven months out when the schedule first opens or in the last week or two before departure, so this is a trip to plan around the calendar rather than book on a whim. Watch for mixed-cabin results too, where only part of the long flight is actually in business, and confirm the whole Pacific leg is the cabin you are paying for before you book. Earning the points is the other hard part for Canadians, because no Canadian bank transfers directly to Atmos. The cleanest route is Marriott Bonvoy, which moves to Atmos at 3 to 1 and adds a 5,000-point bonus for every 60,000 Bonvoy points you transfer in one block, so a 60,000-point transfer lands as 25,000 Atmos points rather than 20,000. That means the 85,000 points for this seat take on the order of 204,000 Bonvoy points to build, so plan the transfer around a real booking and confirm the current ratio first, since transfers are one-way. And the distance based chart means your gateway matters, as you will still need to position from Canada to the West Coast, so price that leg in before you assume the whole trip is cheap. If business space is scarce, that roughly 55,000-point premium economy seat on the same carriers is the quiet fallback, and it prices just as cleanly with the same low fees.",
+    href: "/cards?q=marriott",
+    hrefLabel: "Bonvoy cards that feed Atmos Rewards",
+    shortAnswer:
+      "Alaska's Mileage Plan is now Atmos Rewards, but it still prices partner awards off a fixed distance chart with no fuel surcharges, and the durable long-haul sweet spot is Qantas business class from the US West Coast to Australia for about 85,000 points one-way, with premium economy around 55,000 and Fiji Airways pricing in the same band. On a roughly $5,500 one-way cash fare booked for 85,000 points plus about $80 in taxes and a small partner fee, that is around 6.4 cents per point, well above the 1.5 cents that already counts as a strong use. Earning is the hard part for Canadians, since no Canadian bank transfers directly to Atmos and the cleanest route is Marriott Bonvoy at 3 to 1 with a 5,000-point bonus per 60,000-point block, so 60,000 Bonvoy points land as 25,000 Atmos points and the 85,000 for this seat take on the order of 204,000 Bonvoy. The real catch is availability, because Qantas is stingy with releasing partner business space, so treat 85,000 as an approximate chart band and confirm the live price when you search.",
+    faqs: [
+      {
+        q: "How many Atmos points is Qantas business class to Australia?",
+        a: "About 85,000 points one-way from the US West Coast, gateways like Los Angeles and San Francisco, with premium economy around 55,000 and economy lower still. Fiji Airways sits in the same band through its Nadi hub, so you have two carriers to search. This is a distance based chart, so treat 85,000 as an approximate band and confirm the live price when you search.",
+      },
+      {
+        q: "Is booking Qantas business to Australia on Atmos points a good value?",
+        a: "Yes. On a roughly $5,500 one-way cash fare booked for 85,000 points plus about $80 in taxes and a small partner fee, the math is (5500 minus 80) divided by 85000, times 100, which is about 6.4 cents per point. Anything above about 1.5 cents is a strong use of Atmos points, so a flat bed across the Pacific at this price is your points doing real work.",
+      },
+      {
+        q: "Does Atmos Rewards charge fuel surcharges on Qantas awards?",
+        a: "No, and that is the durable edge of this sweet spot. Atmos does not pass along the carrier imposed fuel surcharges that a Qantas business award can carry through some other programs, so the cash portion stays to modest taxes plus a small partner award fee, which rose to $20 on July 1 2026 and is still a rounding error on a trip like this.",
+      },
+      {
+        q: "How do Canadians earn Atmos Rewards points for this?",
+        a: "It is the hard part, because no Canadian bank transfers directly to Atmos. The cleanest route is Marriott Bonvoy, which moves to Atmos at 3 to 1 and adds a 5,000-point bonus for every 60,000 Bonvoy points transferred in one block, so 60,000 Bonvoy points land as 25,000 Atmos points. That means the 85,000 points for this seat take on the order of 204,000 Bonvoy points to build, so confirm the current ratio first, since transfers are one-way.",
+      },
+      {
+        q: "Can I add a stopover on the way to Australia?",
+        a: "Yes. Atmos lets you add a free enroute stopover of up to 14 days on a one-way international partner award, so you can break the trip in Fiji or another Pacific city on the same booking, turning one redemption into two destinations.",
+      },
+      {
+        q: "How hard is it to find Qantas award space?",
+        a: "This is the main catch. Qantas is famously tight with releasing long-haul business award seats to partners, and the best space tends to show up either about eleven months out when the schedule first opens or in the last week or two before departure. Plan this trip around the calendar rather than booking on a whim, watch for mixed-cabin results, and lean on the roughly 55,000-point premium economy fallback if business is scarce.",
+      },
+    ],
+  },
+  {
     slug: "united-ana-the-room-business-japan-tokyo-100k",
     program: "United",
     title: "United sweet spot: ANA \"The Room\" business class to Tokyo from about 100,000 miles, one-way and surcharge-free",
