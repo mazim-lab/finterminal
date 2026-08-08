@@ -25,6 +25,28 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "MONTECH HyperFlow ARGB 240 all-in-one liquid CPU cooler",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/montech-liquid-cooling-system-intel-lga115x-1200-1700-20xx-amd-am3-am4-am5-black/p/N82E16835988002",
+    price: "$64.99",
+    was: "$109.99",
+    blurb:
+      "If your desktop runs hot and loud when it works hard, a good 240mm liquid cooler is one of the nicer quality of life upgrades, and this MONTECH is down to $64.99 from $109.99, a clean 40 percent off. The larger radiator pulls heat off the processor far better than a small stock cooler, which keeps the chip running fast under load and lets the fans settle to a hush instead of roaring through a game or a big export, and the two ARGB fans give the build a bit of glow if that is your thing. It is sold and shipped by Newegg. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop and your case has room for a 240mm radiator, so check your clearance and socket support first. It is a part for a build, not a plug and play gadget for a laptop or a non PC household.",
+    category: "Electronics",
+    posted: "Aug 8, 2026",
+  },
+  {
+    title: "Corsair K65 PLUS Wireless 75% mechanical keyboard",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/k65-plus-wireless-ch-91d401l-na-mechanical-keyboard-corsair-mlx-red-switches/p/N82E16823816170",
+    price: "$179.99",
+    was: "$239.99",
+    blurb:
+      "If you have been eyeing a proper mechanical keyboard, this Corsair is down to $179.99 from $239.99, a clean 25 percent off. The K65 PLUS is a compact 75 percent board with pre lubricated MLX Red linear switches, so it types smooth and quiet out of the box, and it runs wireless over both a low lag 2.4GHz dongle and Bluetooth, which tidies up the desk and travels well. It is sold and shipped by Newegg. One honest note so you buy for the right reason: a 75 percent layout drops the dedicated number pad to save space, which most people never miss but which matters if you punch in numbers all day, so a full size board may suit you better there. For everyday typing and gaming though, this is a lot of keyboard for the money.",
+    category: "Electronics",
+    posted: "Aug 8, 2026",
+  },
+  {
     title: "ASRock Phantom Gaming 27-inch FHD 180Hz IPS monitor (PG27FFT1A)",
     merchant: "Newegg",
     url: "https://www.newegg.ca/asrock-phantom-gaming-pg27fft1a-27-fhd-180-hz-ips/p/N82E16824028009",
