@@ -2787,14 +2787,13 @@
     },
     "earn_rates": {
       "Purchases of $5,000 or more": "2.5%",
-      "Chase Travel": "5%",
       "All other purchases": "2%"
     },
     "welcome_bonus": "Earn $1,000 bonus cash back",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
-      "no_fx_fee": false,
+      "no_fx_fee": true,
       "car_rental_insurance": true,
       "travel_medical": false,
       "trip_cancellation": false,
