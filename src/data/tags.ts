@@ -405,6 +405,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-cupe-local-8125-launches-ratification-vote-process-august-7",
+    title: "WestJet's cabin crew move to lock the deal in: CUPE launches the ratification process on August 7, with member meetings next week and the bargaining committee unanimously behind it",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/westjet-full-schedule-zero-cancellations-recovery-august-5",
     title: "WestJet closes the book on its strike week, operating a full schedule on August 5 with no cancellations as the recovery essentially lands",
     dek: "Following up on our August 4 note about cancellations tapering off, WestJet's recovery reached its natural finish line on August 5: the airline operated its full mainline schedule of roughly 460 flights without a single cancellation, a day after trimming only a handful. WestJet has kept its free change-and-cancel window open for travel through August 6 and says it will keep evaluating daily extensions, and the tentative deal that ended the walkout now goes to a ratification vote its cabin crew have about a month to complete.",
