@@ -1228,7 +1228,7 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 0,
-    "signup_bonus": null,
+    "signup_bonus": 200,
     "signup_bonus_formatted": "$200 cash back",
     "signup_bonus_value_usd": 200,
     "signup_bonus_currency": "cash",
@@ -1236,10 +1236,9 @@
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
-      "Statement credits",
-      "No foreign transaction fee"
+      "Statement credits"
     ],
-    "foreign_transaction_fee": false,
+    "foreign_transaction_fee": true,
     "country": "US",
     "source": "bank_website",
     "last_verified": "2026-02-23",
