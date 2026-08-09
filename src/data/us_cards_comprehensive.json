@@ -1871,9 +1871,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 0,
-    "signup_bonus": 60000,
-    "signup_bonus_formatted": "60,000 Marriott Bonvoy points",
-    "signup_bonus_value_usd": 60000,
+    "signup_bonus": 100000,
+    "signup_bonus_formatted": "Earn 2 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 100,000 points) after spending $1,000 on purchases in the first 3 months of account opening.",
+    "signup_bonus_value_usd": 100000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1901,7 +1901,7 @@
       "Streaming, internet, cable, phone": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "60,000 Marriott Bonvoy points",
+    "welcome_bonus": "Earn 2 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 100,000 points) after spending $1,000 on purchases in the first 3 months of account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
