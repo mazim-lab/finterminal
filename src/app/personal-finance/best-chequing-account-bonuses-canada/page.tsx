@@ -10,7 +10,7 @@ import { Comments } from "@/components/Comments";
 export const metadata = {
   title: "Best chequing account welcome bonuses in Canada | FinTerminal",
   description:
-    "An honest look at the best chequing account welcome bonuses in Canada, from Scotiabank, CIBC, and TD to National Bank, Simplii, RBC, and Tangerine. Offers as of July 2026, with the direct-deposit conditions you actually have to meet, the monthly fees to watch, and how switching for a bonus really works.",
+    "An honest look at the best chequing account welcome bonuses in Canada, from Scotiabank, CIBC, and TD to National Bank, Simplii, RBC, and Tangerine. Offers as of August 2026, with the direct-deposit conditions you actually have to meet, the monthly fees to watch, and how switching for a bonus really works.",
   ...ogMeta("Best chequing account welcome bonuses in Canada", "Personal finance"),
 };
 
@@ -27,7 +27,7 @@ const TOC = [
 const FAQ = [
   {
     q: "What is the best chequing account welcome bonus in Canada right now?",
-    a: "As of July 2026, the largest verified offers come from the big banks and require bundling. Scotiabank advertises up to $1,000 when you pair an eligible chequing package with a savings account and a credit card, CIBC advertises up to $850 in value on its Smart Account through bundled actions, and TD advertises up to $750 in combined value on its All-Inclusive and Unlimited plans. Among the no-fee online options, Simplii offers $300 for new clients who set up a qualifying direct deposit (see Simplii's page for the exact deposit amount and duration) and Tangerine offers $250 for setting up qualifying direct deposits. Every one of these carries conditions and an end date, so confirm the current offer on the bank's own page before you open anything.",
+    a: "As of August 2026, the largest verified offers come from the big banks and require bundling. Scotiabank advertises up to $1,000 when you pair an eligible chequing package with a savings account and a credit card, CIBC advertises up to $850 in value on its Smart Account through bundled actions, and TD advertises up to $750 in combined value on its All-Inclusive and Unlimited plans. Among the no-fee online options, Simplii offers $300 plus a $50 Skip gift card for new clients who set up recurring direct deposits of at least $100 a month for three consecutive months, and Tangerine offers $250 for setting up qualifying direct deposits. Every one of these carries conditions and an end date, so confirm the current offer on the bank's own page before you open anything.",
   },
   {
     q: "What conditions do I have to meet to actually get paid?",
@@ -47,7 +47,7 @@ const FAQ = [
   },
   {
     q: "How often do these offers change?",
-    a: "Constantly. Chequing bonuses rotate on fixed end dates, and banks raise, lower, or retire them throughout the year. The amounts and conditions in this guide were verified in July 2026 against each bank's own offer page, but a number you see today can be gone or different next month. Use this page to understand the landscape and the conditions to look for, then click through to the bank's own page to confirm the live offer before you apply.",
+    a: "Constantly. Chequing bonuses rotate on fixed end dates, and banks raise, lower, or retire them throughout the year. The amounts and conditions in this guide were verified in August 2026 against each bank's own offer page, but a number you see today can be gone or different next month. Use this page to understand the landscape and the conditions to look for, then click through to the bank's own page to confirm the live offer before you apply.",
   },
 ];
 
@@ -93,15 +93,15 @@ export default function BestChequingBonusesPage() {
           <div className="docmeta">
             <span className="gd">PERSONAL FINANCE</span><span className="sep">·</span>
             <span>about 9 min read</span><span className="sep">·</span>
-            <span>Offers as of July 2026; general info, not advice</span><span className="sep">·</span>
-            <VerifiedStamp date="2026-07-02" cadenceDays={30} />
+            <span>Offers as of August 2026; general info, not advice</span><span className="sep">·</span>
+            <VerifiedStamp date="2026-08-10" cadenceDays={30} />
           </div>
           <ArticleTags path="/personal-finance/best-chequing-account-bonuses-canada" />
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
-              As of July 2026, the biggest verified chequing offers come from the big banks and need bundling:
+              As of August 2026, the biggest verified chequing offers come from the big banks and need bundling:
               Scotiabank advertises up to $1,000, CIBC up to $850 in value, and TD up to $750, each when you pair a
               chequing account with a savings account or credit card and meet direct-deposit and activity
               conditions. Among no-fee online accounts, Simplii offers $300 for new clients who set up a qualifying
@@ -128,7 +128,7 @@ export default function BestChequingBonusesPage() {
             whether you want a full-service bank or a lean no-fee account.
           </p>
           <p>
-            The figures below were checked in July 2026 against each bank&apos;s own offer page. Some bank pages
+            The figures below were checked in August 2026 against each bank&apos;s own offer page. Some bank pages
             load their promotions dynamically or timed out when we tried to read them, so we could not confirm an
             exact live number for every name. Where that is the case we say so plainly and describe the account
             qualitatively rather than guess. A finance site that prints a wrong bonus is worse than useless, so we
@@ -138,15 +138,15 @@ export default function BestChequingBonusesPage() {
           {/* TABLE */}
           <div id="table" className="cd-sec" style={{ scrollMarginTop: 70 }}>The offers, bank by bank</div>
           <p>
-            Here is where the mainstream chequing offers stand as of July 2026. Amounts shown in bold were verified
-            on the bank&apos;s own offer page in July 2026. Most are the maximum possible value, reached only if you
+            Here is where the mainstream chequing offers stand as of August 2026. Amounts shown in bold were verified
+            on the bank&apos;s own offer page in August 2026. Most are the maximum possible value, reached only if you
             meet every condition, so treat the headline as a ceiling and read the specific terms.
           </p>
           <div className="kv" style={{ marginTop: 10 }}>
             <div className="kvrow">
               <div className="kvk">Scotiabank (Ultimate / Preferred Package)</div>
               <div className="kvv">
-                Verified July 2026: earn <strong>up to $1,000</strong> when you bundle an eligible chequing package,
+                Verified August 2026: earn <strong>up to $1,000</strong> when you bundle an eligible chequing package,
                 a Money Master Savings Account, and an eligible credit card. Broadly, about $700 for opening the
                 chequing account and completing a direct deposit plus one more activity (a recurring bill payment,
                 pre-authorized transaction, or Visa Debit purchase), $200 for the savings account, and $100 for the
@@ -158,9 +158,11 @@ export default function BestChequingBonusesPage() {
             <div className="kvrow">
               <div className="kvk">CIBC (Smart Account)</div>
               <div className="kvv">
-                Verified July 2026: earn <strong>up to $850</strong> in value on the CIBC Smart Account through
+                Verified August 2026: earn <strong>up to $850</strong> in value on the CIBC Smart Account through
                 bundled qualifying actions, with &quot;conditions apply.&quot; A separate CIBC Smart Start offer for
-                clients under 25 gives <strong>$125</strong> cash plus 12 months of Skip+ free. The Smart Account
+                clients under 25 gives <strong>$175</strong> cash plus a free Skip+ membership, which CIBC now says
+                stays free for as long as your eligible CIBC card is linked to your Skip account and active, rather
+                than for a fixed 12 months. The Smart Account
                 fee is transaction-tiered, so confirm what you would actually pay for your usage. The page did not
                 state a firm end date, so confirm the live terms.{" "}
                 <a href="https://www.cibc.com/en/personal-banking/bank-accounts.html" target="_blank" rel="noopener noreferrer">CIBC bank accounts</a>.
@@ -169,7 +171,7 @@ export default function BestChequingBonusesPage() {
             <div className="kvrow">
               <div className="kvk">TD (All-Inclusive / Unlimited Chequing)</div>
               <div className="kvv">
-                Verified July 2026: <strong>up to $750</strong> in total value on the TD All-Inclusive Banking Plan
+                Verified August 2026: <strong>up to $750</strong> in total value on the TD All-Inclusive Banking Plan
                 and TD Unlimited Chequing (advertised as roughly $500 cash plus $150 cash plus an estimated $100 in
                 bonus interest), for opening an eligible account and completing qualifying activities such as direct
                 deposit, online bill payments, or pre-authorized debits. Open by October 1, 2026. A separate TD
@@ -181,7 +183,7 @@ export default function BestChequingBonusesPage() {
             <div className="kvrow">
               <div className="kvk">National Bank (Connected / Total)</div>
               <div className="kvv">
-                Verified July 2026: <strong>up to $600</strong> cashback on your first eligible chequing account
+                Verified August 2026: <strong>up to $600</strong> cashback on your first eligible chequing account
                 (The Connected or The Total). The core reward requires, within 120 days, signing up for online
                 banking, making 20 eligible transactions, and receiving 3 automatic deposits of at least $100 each.
                 Additional $100 amounts are available for adding a National Bank Mastercard (with 20 purchases),
@@ -194,18 +196,18 @@ export default function BestChequingBonusesPage() {
             <div className="kvrow">
               <div className="kvk">Simplii Financial (No Fee Chequing)</div>
               <div className="kvv">
-                Verified July 2026: <strong>$300</strong> on the No Fee Chequing Account for new Simplii clients
-                who set up a qualifying direct deposit. The offer page states &quot;terms apply&quot; without listing
-                the deposit amount or duration on the main page, so confirm the exact direct-deposit condition on
-                Simplii&apos;s own terms before you rely on it. No monthly fee and no minimum balance. Offer ends
-                September 30, 2026. Simplii is a division of CIBC and a CDIC member.{" "}
-                <a href="https://www.simplii.com/en/bank-accounts.html" target="_blank" rel="noopener noreferrer">Simplii bank accounts</a>.
+                Verified August 2026: <strong>$300</strong> plus a $50 Skip gift card on the No Fee Chequing Account
+                for new Simplii clients. Simplii&apos;s offer page now spells the condition out: set up recurring
+                direct deposits within 120 days of opening the account and keep at least $100 a month coming in for
+                three consecutive months. No monthly fee and no minimum balance. Offer ends September 30, 2026.
+                Simplii is a division of CIBC and a CDIC member.{" "}
+                <a href="https://www.simplii.com/en/special-offers/no-fee-chequing-account.html" target="_blank" rel="noopener noreferrer">Simplii chequing offer</a>.
               </div>
             </div>
             <div className="kvrow">
               <div className="kvk">Tangerine (Chequing Account)</div>
               <div className="kvv">
-                Verified July 2026: <strong>$250</strong> for opening a Tangerine Chequing Account within 60 days of
+                Verified August 2026: <strong>$250</strong> for opening a Tangerine Chequing Account within 60 days of
                 creating a Client Number and setting up payroll direct deposits of at least $200 a month, with the
                 first deposit within 60 days and deposits continuing for at least two consecutive months. No monthly
                 fee. Offer period runs through October 31, 2026. Tangerine is owned by Scotiabank and is a CDIC
@@ -216,7 +218,7 @@ export default function BestChequingBonusesPage() {
             <div className="kvrow">
               <div className="kvk">RBC (Signature No Limit Banking)</div>
               <div className="kvv">
-                Verified July 2026: RBC&apos;s current chequing promotion is a device rather than cash, advertising a
+                Verified August 2026: RBC&apos;s current chequing promotion is a device rather than cash, advertising a
                 <strong> new iPad</strong> for opening an eligible RBC chequing account (Signature No Limit Banking),
                 plus a student offer of AirPods 4 with three months of Apple Music on RBC Advantage Banking for
                 students. Offer ends November 2, 2026, with qualifying criteria and conditions. The Signature No
@@ -251,7 +253,7 @@ export default function BestChequingBonusesPage() {
           <div className="cd-note">
             <div className="cap">Offers change; this is a snapshot</div>
             <p style={{ margin: 0 }} className="sub">
-              The bold figures above were verified in July 2026 against each bank&apos;s own materials, but bank
+              The bold figures above were verified in August 2026 against each bank&apos;s own materials, but bank
               account promos change and expire often. Confirm the current offer and its conditions on the
               bank&apos;s own page before you open an account. Treat this as a map of the landscape, not a live
               quote.
