@@ -1807,24 +1807,28 @@
     "first_year_fee": null,
     "welcome_bonus": "Get up to 28,000 Avion points (up to $200 of value in gift cards). Apply by November 4, 2026.",
     "welcome_bonus_value_cad": 504,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus_conditions": "7,000 points on approval, 14,000 points after you spend $1,500 in your first 6 months, and 7,000 one-time anniversary bonus points.",
+    "min_spend": 1500,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": 22.99,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "Groceries, gas, rideshare & streaming": "1.5x",
+      "Groceries, dining & food delivery": "3x",
+      "Gas, transit & rideshare": "3x",
+      "Streaming, gaming & subscriptions": "3x",
       "All other purchases": "1x"
     },
     "rewards_program": "rbc rewards",
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
-      "Food delivery credits",
-      "Subscription perks"
+      "6 months of complimentary DashPass",
+      "Mobile device insurance up to $1,000",
+      "Petro-Canada fuel savings",
+      "Annual fee rebate for students"
     ],
     "insurance": {
-      "purchase_protection": "3"
+      "mobile_insurance": "Yes"
     },
     "minimum_income": null,
     "minimum_credit_score": null,
@@ -1848,7 +1852,7 @@
       "travel_medical": false,
       "trip_cancellation": false,
       "flight_delay": false,
-      "mobile_insurance": false,
+      "mobile_insurance": true,
       "purchase_protection": true,
       "extended_warranty": true,
       "free_checked_bags": false
