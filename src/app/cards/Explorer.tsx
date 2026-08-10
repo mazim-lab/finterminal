@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useState, useMemo } from 'react';
+import { Fragment, Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { Benefits } from '@/data/cards';
@@ -50,12 +50,30 @@ const COLUMNS: { key: SortKey; label: string; right?: boolean }[] = [
 const tagsFor = (c: SlimCard) => TAG_DEFS.filter(([k]) => c.benefits[k]);
 const cppFor = (c: SlimCard) => c.cpp_cad ?? 1.0;
 
-export default function Explorer({ cards, networks }: { cards: SlimCard[]; networks: string[] }) {
-  const searchParams = useSearchParams();
-  const query = searchParams.get('q') || '';
+// useLayoutEffect on the client so a client-side navigation to /cards?q=... paints
+// the filtered list in the same frame; useEffect on the server so React never warns.
+const useIsomorphicLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
-  const [country, setCountry] = useState<'CA' | 'US' | 'all'>((searchParams.get('country') as 'CA' | 'US') || 'all');
-  const [types, setTypes] = useState<string[]>(searchParams.get('type') ? searchParams.get('type')!.split(',') : []);
+// Reading useSearchParams() during Explorer's own render made Next bail the whole
+// page out of static prerendering: /cards shipped only the Suspense fallback, so
+// crawlers saw a bare <h1> with no card names and no /cards/<slug> links. The hook
+// now lives in this leaf, isolated behind its own Suspense boundary, so only this
+// null-rendering component is client-only and the entire table prerenders as HTML.
+// It reports the params upward after hydration, which is when the URL is knowable
+// on a statically exported page anyway.
+function SearchParamsSync({ onParams }: { onParams: (params: URLSearchParams) => void }) {
+  const qs = useSearchParams().toString();
+  useIsomorphicLayoutEffect(() => {
+    onParams(new URLSearchParams(qs));
+  }, [qs, onParams]);
+  return null;
+}
+
+export default function Explorer({ cards, networks }: { cards: SlimCard[]; networks: string[] }) {
+  const [query, setQuery] = useState('');
+
+  const [country, setCountry] = useState<'CA' | 'US' | 'all'>('all');
+  const [types, setTypes] = useState<string[]>([]);
   const [networkFilter, setNetworkFilter] = useState<string[]>([]);
   const [benefits, setBenefits] = useState<(keyof Benefits)[]>([]);
   const [family, setFamily] = useState<FamilyKey[]>([]);
@@ -64,6 +82,21 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
   const [sortDir, setSortDir] = useState<SortDir>('desc');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [openReceipt, setOpenReceipt] = useState<string | null>(null);
+
+  // Mirrors the old behaviour exactly: ?q= tracks the URL on every navigation,
+  // while ?country= / ?type= seed the rail once (they used to be useState
+  // initialisers, which only ran on first mount) and never clobber a filter the
+  // reader has since toggled by hand.
+  const seeded = useRef(false);
+  const applyParams = useCallback((params: URLSearchParams) => {
+    setQuery(params.get('q') || '');
+    if (seeded.current) return;
+    seeded.current = true;
+    const c = params.get('country');
+    if (c === 'CA' || c === 'US') setCountry(c);
+    const t = params.get('type');
+    if (t) setTypes(t.split(','));
+  }, []);
 
   const base = useMemo(() => (country === 'all' ? cards : cards.filter((c) => c.country === country)), [country, cards]);
   const typeCounts = useMemo(() => Object.fromEntries(CARD_TYPES.map((t) => [t, base.filter((c) => c.categories.includes(t)).length])), [base]);
@@ -130,6 +163,9 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
 
   return (
     <div className="app">
+      <Suspense fallback={null}>
+        <SearchParamsSync onParams={applyParams} />
+      </Suspense>
       <button
         type="button"
         className="railtoggle"
