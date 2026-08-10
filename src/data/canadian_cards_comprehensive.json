@@ -7,8 +7,8 @@
     "card_type": "rewards",
     "annual_fee": 799,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to 170,000 Membership Rewards® points",
-    "welcome_bonus_value_cad": 3315,
+    "welcome_bonus": "Earn up to 100,000 Membership Rewards points (70,000 after spending $10,000 in first 3 months, plus 30,000 when you make a purchase between 15-17 months of Cardmembership)",
+    "welcome_bonus_value_cad": 1950,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": null,
@@ -25,7 +25,7 @@
     "key_perks": [
       "Statement credits",
       "Access to a $200 Annual Travel Credit6",
-      "Unlock access to more than 1,400 airport lounges worldwide with the Global Lounge Collection.7 Terms and Conditions apply.",
+      "Unlock access to more than 1,550 airport lounges worldwide with the Global Lounge Collection.7 Terms and Conditions apply.",
       "Food delivery credits",
       "Enjoy a $200 Annual Dining Credit at some of Canada’s best restaurants39"
     ],
@@ -43,7 +43,7 @@
     "apply_url": "https://www.americanexpress.com/en-ca/charge-cards/the-platinum-card",
     "is_business": false,
     "cpp_cad": 1.95,
-    "welcome_bonus_points": 170000,
+    "welcome_bonus_points": 100000,
     "first_year_value_cad": 2516,
     "benefits": {
       "car_rental_insurance": true,
@@ -116,7 +116,7 @@
       "mobile_insurance": true,
       "purchase_protection": true,
       "extended_warranty": true,
-      "lounge_access": false,
+      "lounge_access": true,
       "no_fx_fee": false,
       "free_checked_bags": false
     }
@@ -145,10 +145,8 @@
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
       "Receive complimentary Marriott Bonvoy Silver Elite status",
-      "Front of the Line presale tickets",
       "Earn 5 points for every $1 spent in eligible Card purchases at hotels participating in Marriott Bonvoy.5",
-      "Enjoy an Annual Free Night Award3",
-      "Free first checked bag"
+      "Enjoy an Annual Free Night Award3"
     ],
     "insurance": {
       "flight_delay": "4",
@@ -193,9 +191,9 @@
     "card_type": "rewards",
     "annual_fee": 599,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to 150,000 Bonus Aeroplan®* points",
-    "welcome_bonus_value_cad": 3075,
-    "welcome_bonus_conditions": null,
+    "welcome_bonus": "Earn up to 110,000 Bonus Aeroplan®* points (elevated offer: 70,000 after $7,500 spend in 3 months + 40,000 after $2,500 spend in month 13)",
+    "welcome_bonus_value_cad": 2255,
+    "welcome_bonus_conditions": "Spend $7,500 in the first 3 months for 70,000 points, plus $2,500 in month 13 for 40,000 points (total $10,000 spend over 13 months)",
     "min_spend": null,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
@@ -203,6 +201,7 @@
     "earn_rates": {
       "Air Canada": "3x",
       "Dining & food delivery": "2x",
+      "Hyatt": "2x",
       "All other purchases": "1.25x"
     },
     "rewards_program": "aeroplan",
@@ -242,7 +241,7 @@
     "apply_url": "https://www.americanexpress.com/en-ca/credit-cards/aeroplan-reserve",
     "is_business": false,
     "cpp_cad": 2.05,
-    "welcome_bonus_points": 150000,
+    "welcome_bonus_points": 110000,
     "first_year_value_cad": 2476,
     "benefits": {
       "car_rental_insurance": true,
@@ -350,13 +349,11 @@
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
-      "Hotel elite status/collection",
       "Statement credits",
       "With Flexible Payment Option2, you have options when paying your balance",
       "Earn 10,000 bonus points each quarter when you charge $20,000 to your Card5",
       "Maximize cash flow with up to 55 interest-free days3",
-      "Food delivery credits",
-      "Free first checked bag"
+      "Food delivery credits"
     ],
     "insurance": {
       "flight_delay": "4",
@@ -420,8 +417,7 @@
     "key_perks": [
       "Receive 15 Elite Night Credits each calendar year5",
       "Receive an Annual Free Night Award3",
-      "Earn 5X the points on eligible Marriott purchases6",
-      "Free first checked bag"
+      "Earn 5X the points on eligible Marriott purchases6"
     ],
     "insurance": {
       "flight_delay": "4",
@@ -486,10 +482,7 @@
       "You could earn up to $5,600 or more in value within your first 13 months26",
       "Travel program credit (NEXUS/Global Entry)",
       "Get an Annual Worldwide Companion Pass9‡",
-      "Priority Pass lounge access",
-      "Get 1,000 Status Qualifying Credits and more4‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "Get 1,000 Status Qualifying Credits and more4‡"
     ],
     "insurance": {
       "travel_medical": "5000000",
@@ -525,7 +518,7 @@
       "extended_warranty": true,
       "lounge_access": true,
       "no_fx_fee": false,
-      "free_checked_bags": true
+      "free_checked_bags": false
     }
   },
   {
@@ -538,7 +531,7 @@
     "first_year_fee": null,
     "welcome_bonus": "Earn up to 45,000 Welcome Bonus Aeroplan®* points",
     "welcome_bonus_value_cad": 922,
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Earn 35,000 points after spending $7,500 in the first 6 months, plus 10,000 points after spending $1,000 in month 13",
     "min_spend": null,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
@@ -546,6 +539,7 @@
     "earn_rates": {
       "Air Canada": "2x",
       "Dining & food delivery": "1.5x",
+      "Hyatt": "1.5x",
       "All other purchases": "1x"
     },
     "rewards_program": "aeroplan",
@@ -554,8 +548,8 @@
     "key_perks": [
       "Reach Aeroplan EliteTM Status faster6‡",
       "Front of the Line presale tickets",
-      "You could earn up to $1,450 or more in value within your first 13 months!25",
-      "Earn 2X the points on eligible Air Canada®* & Air Canada Vacations®* purchases5",
+      "You could earn up to $1,550 or more in value within your first 13 months!25",
+      "Earn 2X the points on eligible Air Canada®* & Air Canada Vacations®* purchases5",
       "Free first checked bag"
     ],
     "insurance": {
@@ -738,10 +732,7 @@
     "key_perks": [
       "Statement credits",
       "Earn up to 4% cash back on eligible gas and grocery purchases3",
-      "Front of the Line presale tickets",
       "Food delivery credits",
-      "Front Of The Line® Access6",
-      "Free first checked bag",
       "Earn 2% cash back on everything else3"
     ],
     "insurance": {
@@ -1756,10 +1747,10 @@
     "card_type": "rewards",
     "annual_fee": 120,
     "first_year_fee": null,
-    "welcome_bonus": "Get up to 70,000 Avion points (travel value up to $1,500). Apply by July 15, 2026.",
-    "welcome_bonus_value_cad": 1260,
+    "welcome_bonus": "Get up to 55,000 Avion points (max travel value of $1,100): 35,000 Welcome Points on approval + 20,000 bonus points when you spend $5,000 in the first 6 months. Offer valid for applications received July 16 - August 12, 2026.",
+    "welcome_bonus_value_cad": 990,
     "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "min_spend": 5000,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -1771,7 +1762,6 @@
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
-      "Airport lounge access",
       "Subscription perks",
       "Concierge service"
     ],
@@ -1779,7 +1769,7 @@
       "mobile_insurance": "Yes",
       "trip_cancellation": "7"
     },
-    "minimum_income": null,
+    "minimum_income": 60000,
     "minimum_credit_score": null,
     "country": "CA",
     "sources": [],
@@ -1792,8 +1782,8 @@
     "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel/rbc-visa-infinite-avion.html",
     "is_business": false,
     "cpp_cad": 1.8,
-    "welcome_bonus_points": 70000,
-    "first_year_value_cad": 1140,
+    "welcome_bonus_points": 55000,
+    "first_year_value_cad": 870,
     "benefits": {
       "lounge_access": false,
       "no_fx_fee": false,
@@ -1820,7 +1810,7 @@
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
-    "cash_advance_rate": null,
+    "cash_advance_rate": 22.99,
     "balance_transfer_rate": null,
     "earn_rates": {
       "Groceries, gas, rideshare & streaming": "1.5x",
@@ -1846,7 +1836,7 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.rbcroyalbank.com/credit-cards/rewards/rbc-ion-visa.html",
+    "apply_url": "https://www.rbcroyalbank.com/credit-cards/rewards/rbc-ion-plus-visa.html",
     "is_business": false,
     "cpp_cad": 1.8,
     "welcome_bonus_points": 28000,
@@ -1874,8 +1864,8 @@
     "first_year_fee": null,
     "welcome_bonus": "Get up to 70,000 WestJet points - a value of up to $700 off travel.",
     "welcome_bonus_value_cad": 700,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus_conditions": "30,000 points on first purchase, additional 30,000 points require $5,000 spend within first 3 months, plus 10,000 anniversary points after 1 year account open (totaling up to 70,000).",
+    "min_spend": 5000,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -2037,8 +2027,8 @@
     "first_year_fee": null,
     "welcome_bonus": "Get up to 14,000 Avion points (up to $100 of value in gift cards). Apply by November 4, 2026.",
     "welcome_bonus_value_cad": 252,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus_conditions": "7,000 points on approval plus 7,000 bonus points when you spend $500 in your first 3 months (totaling up to 14,000).",
+    "min_spend": 500,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -2107,9 +2097,7 @@
     "rewards_program": "rbc rewards",
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
-    "key_perks": [
-      "Subscription perks"
-    ],
+    "key_perks": [],
     "insurance": {
       "mobile_insurance": "Yes"
     },
@@ -2164,9 +2152,7 @@
     "rewards_program": "rbc rewards",
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
-    "key_perks": [
-      "Subscription perks"
-    ],
+    "key_perks": [],
     "insurance": {
       "mobile_insurance": "Yes"
     },
@@ -2206,10 +2192,10 @@
     "card_type": "rewards",
     "annual_fee": 120,
     "first_year_fee": null,
-    "welcome_bonus": "Get up to 70,000 Avion points (travel value up to $1,500). Apply by July 15, 2026.",
-    "welcome_bonus_value_cad": 1260,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus": "Get up to 55,000 Avion points (max travel value of $1,100): 35,000 Welcome Points on approval + 20,000 bonus points when you spend $5,000 in the first 6 months. Offer valid for applications received July 16 - August 12, 2026.",
+    "welcome_bonus_value_cad": 990,
+    "welcome_bonus_conditions": "Get 35,000 Welcome Points on approval and 20,000 bonus points when you spend $5,000 in your first 6 months.",
+    "min_spend": 5000,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -2234,11 +2220,11 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel-credit-cards/platinum-avion.html",
+    "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel/rbc-visa-platinum-avion.html",
     "is_business": false,
     "cpp_cad": 1.8,
-    "welcome_bonus_points": 70000,
-    "first_year_value_cad": 1140,
+    "welcome_bonus_points": 55000,
+    "first_year_value_cad": 870,
     "benefits": {
       "lounge_access": false,
       "no_fx_fee": false,
@@ -2276,8 +2262,7 @@
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
-      "Subscription perks",
-      "Free first checked bag"
+      "Subscription perks"
     ],
     "insurance": {
       "mobile_insurance": "Yes"
@@ -2307,7 +2292,7 @@
       "mobile_insurance": true,
       "purchase_protection": true,
       "extended_warranty": true,
-      "free_checked_bags": true
+      "free_checked_bags": false
     }
   },
   {
@@ -2318,10 +2303,10 @@
     "card_type": "rewards",
     "annual_fee": 399,
     "first_year_fee": null,
-    "welcome_bonus": "Get up to 100,000 Avion points plus 6 airport lounge passes (value up to $2,375). Apply by July 15, 2026.",
-    "welcome_bonus_value_cad": 1800,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus": "Get up to 70,000 Avion points (travel value up to $1,500): 35,000 on approval + 20,000 for spending $5,000 in the first 6 months + 15,000 one-time anniversary bonus. Offer valid for applications received July 16 - August 12, 2026.",
+    "welcome_bonus_value_cad": 1260,
+    "welcome_bonus_conditions": "Get 35,000 points on approval, 20,000 bonus points when you spend $5,000 in your first 6 months, plus a 15,000 one-time anniversary bonus.",
+    "min_spend": 5000,
     "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -2355,8 +2340,8 @@
     "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel/rbc-avion-visa-infinite-privilege.html",
     "is_business": false,
     "cpp_cad": 1.8,
-    "welcome_bonus_points": 100000,
-    "first_year_value_cad": 1401,
+    "welcome_bonus_points": 70000,
+    "first_year_value_cad": 861,
     "benefits": {
       "lounge_access": true,
       "no_fx_fee": false,
@@ -2451,9 +2436,7 @@
       "Food delivery credits",
       "Subscription perks"
     ],
-    "insurance": {
-      "trip_cancellation": "9"
-    },
+    "insurance": {},
     "minimum_income": null,
     "minimum_credit_score": null,
     "country": "CA",
@@ -2472,8 +2455,8 @@
       "no_fx_fee": false,
       "car_rental_insurance": true,
       "travel_medical": false,
-      "trip_cancellation": true,
-      "flight_delay": true,
+      "trip_cancellation": false,
+      "flight_delay": false,
       "mobile_insurance": false,
       "purchase_protection": true,
       "extended_warranty": true,
@@ -2515,7 +2498,7 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.rbcroyalbank.com/credit-cards/rewards-credit-cards/us-dollar-credit-card.html",
+    "apply_url": "https://www.rbcroyalbank.com/credit-cards/travel/rbc-us-dollar-visa-gold.html",
     "is_business": false,
     "cpp_cad": 1.8,
     "benefits": {
@@ -2596,9 +2579,9 @@
     "card_type": "rewards",
     "annual_fee": 175,
     "first_year_fee": null,
-    "welcome_bonus": "Receive up to 45,000 welcome WestJet points after your first purchase (offer ends June 30, 2026)",
-    "welcome_bonus_value_cad": 450,
-    "welcome_bonus_conditions": null,
+    "welcome_bonus": "Receive 35,000 welcome WestJet points after your first purchase.",
+    "welcome_bonus_value_cad": 350,
+    "welcome_bonus_conditions": "No minimum spend required to earn the 45,000 welcome points; includes instant Silver status with WestJet.",
     "min_spend": null,
     "purchase_interest_rate": 19.99,
     "cash_advance_rate": null,
@@ -2615,7 +2598,7 @@
       "Subscription perks",
       "Airport lounge access",
       "Food delivery credits",
-      "Free first checked bag"
+      "Free first and second checked bags"
     ],
     "insurance": {
       "car_rental": "",
@@ -2636,7 +2619,7 @@
     "apply_url": "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/westjet-rbc-world-elite-mastercard-business.html",
     "is_business": true,
     "cpp_cad": 1,
-    "welcome_bonus_points": 45000,
+    "welcome_bonus_points": 35000,
     "first_year_value_cad": 175,
     "benefits": {
       "lounge_access": true,
@@ -2659,8 +2642,8 @@
     "card_type": "rewards",
     "annual_fee": 175,
     "first_year_fee": null,
-    "welcome_bonus": "Get up to 45,000 welcome Avion points upon enrollment (offer ends June 30, 2026)",
-    "welcome_bonus_value_cad": 810,
+    "welcome_bonus": "Get 35,000 Welcome Avion points upon approval (a value of up to $750).",
+    "welcome_bonus_value_cad": 630,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 19.99,
@@ -2678,12 +2661,11 @@
       "Airport lounge access",
       "Food delivery credits",
       "Subscription perks",
-      "Free first checked bag",
       "Concierge service"
     ],
     "insurance": {
       "flight_delay": "250",
-      "lost_baggage": "10006",
+      "lost_baggage": "1000",
       "travel_accident": "500000",
       "car_rental": "65000",
       "purchase_protection": "",
@@ -2703,7 +2685,7 @@
     "apply_url": "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/avion-visa-infinite-business.html",
     "is_business": true,
     "cpp_cad": 1.8,
-    "welcome_bonus_points": 45000,
+    "welcome_bonus_points": 35000,
     "first_year_value_cad": 455,
     "benefits": {
       "lounge_access": false,
@@ -2949,8 +2931,8 @@
     "card_type": "rewards",
     "annual_fee": 150,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to $1,500Δ in first year welcome offers, rewards and savings, including up to 60,000 bonus Scene+TM points♢.",
-    "welcome_bonus_value_cad": 600,
+    "welcome_bonus": "Earn up to $1,250 in first year welcome offers, rewards and savings, including up to 35,000 bonus Scene+ points: 25,000 points for spending $2,000 in the first 3 months, plus 10,000 annual bonus points for spending $40,000 in the year. Offer valid for accounts opened August 4 - November 1, 2026.",
+    "welcome_bonus_value_cad": 350,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
@@ -2968,7 +2950,6 @@
     "key_perks": [
       "Hotel elite status/collection",
       "Airport lounge access",
-      "Priority Pass lounge access",
       "Premium lounge access",
       "No foreign transaction fee",
       "Concierge service"
@@ -2992,7 +2973,7 @@
     "apply_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-infinite-card.html",
     "is_business": false,
     "cpp_cad": 1,
-    "welcome_bonus_points": 60000,
+    "welcome_bonus_points": 35000,
     "first_year_value_cad": 450,
     "interest_rates": {
       "purchases": 20.99
@@ -3083,11 +3064,11 @@
     "card_type": "rewards",
     "annual_fee": 120,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to $850^ in welcome offers, first year rewards and savings value, including no annual fee in your first year, and up to 45,000 bonus Scene+ points.**",
-    "welcome_bonus_value_cad": 450,
+    "welcome_bonus": "Earn up to $950 in welcome offers, first year rewards and savings value, including up to 50,000 bonus Scene+ points: 30,000 points for spending $2,000 in the first 3 months, plus 20,000 points for spending $7,500 in the first year. Offer valid for accounts opened July 2 - November 1, 2026.",
+    "welcome_bonus_value_cad": 500,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 20.99,
+    "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
@@ -3130,10 +3111,10 @@
     "apply_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/american-express/gold-card.html",
     "is_business": false,
     "cpp_cad": 1,
-    "welcome_bonus_points": 45000,
+    "welcome_bonus_points": 50000,
     "first_year_value_cad": 450,
     "interest_rates": {
-      "purchases": 20.99
+      "purchases": 21.99
     },
     "benefits": {
       "lounge_access": true,
@@ -3160,7 +3141,7 @@
     "welcome_bonus_value_cad": 100,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 20.99,
+    "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
@@ -3191,7 +3172,7 @@
     "welcome_bonus_points": 10000,
     "first_year_value_cad": 100,
     "interest_rates": {
-      "purchases": 20.99
+      "purchases": 21.99
     },
     "benefits": {
       "lounge_access": false,
@@ -3279,7 +3260,7 @@
     "welcome_bonus_value_cad": 200,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 19.99,
+    "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
@@ -3338,7 +3319,7 @@
     "welcome_bonus_value_cad": 100,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 9.99,
+    "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
@@ -3376,7 +3357,7 @@
     "welcome_bonus_points": 10000,
     "first_year_value_cad": 100,
     "interest_rates": {
-      "purchases": 19.99
+      "purchases": 21.99
     },
     "benefits": {
       "lounge_access": false,
@@ -3399,11 +3380,11 @@
     "card_type": "rewards",
     "annual_fee": 399,
     "first_year_fee": null,
-    "welcome_bonus": "Earn up to $2,500* in value in the first 14 months, including up to 80,0004 bonus Scene+ points.",
-    "welcome_bonus_value_cad": 800,
+    "welcome_bonus": "Earn up to $3,000* in value in the first 14 months, including up to 100,000 bonus Scene+ points.",
+    "welcome_bonus_value_cad": 1000,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 20.99,
+    "purchase_interest_rate": 9.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
@@ -3414,7 +3395,6 @@
     "foreign_transaction_fee_pct": null,
     "key_perks": [
       "Airport lounge access",
-      "Statement credits",
       "Front of the Line presale tickets",
       "Priority Pass lounge access",
       "Premium lounge access",
@@ -3439,7 +3419,7 @@
     "apply_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/american-express/platinum-card.html",
     "is_business": false,
     "cpp_cad": 1,
-    "welcome_bonus_points": 80000,
+    "welcome_bonus_points": 100000,
     "first_year_value_cad": 401,
     "interest_rates": {
       "purchases": 9.99
@@ -3531,7 +3511,7 @@
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 19.99,
+    "purchase_interest_rate": 20.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
@@ -3585,7 +3565,7 @@
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 13.99,
+    "purchase_interest_rate": 19.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {},
@@ -3688,7 +3668,7 @@
     "welcome_bonus": "Earn up to 10,000 bonus Scene+ points within your first 3 months.2",
     "welcome_bonus_value_cad": 100,
     "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "min_spend": 1000,
     "purchase_interest_rate": 13.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -3912,7 +3892,7 @@
     "welcome_bonus": "Earn up to 10,000 bonus Scene+ points within your first 3 months (that's up to $100 towards travel)",
     "welcome_bonus_value_cad": 100,
     "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "min_spend": 1000,
     "purchase_interest_rate": 19.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -4176,7 +4156,7 @@
     "welcome_bonus": "Join and earn up to $1,400 in value!",
     "welcome_bonus_value_cad": 1400,
     "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "min_spend": 3000,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -4236,7 +4216,7 @@
     "welcome_bonus": "Apply and earn up to $1,300 in value, which includes up to 50,000 Aeroplan points",
     "welcome_bonus_value_cad": 1025,
     "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "min_spend": 12000,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -4296,7 +4276,7 @@
     "welcome_bonus": "Join and earn up to $2,500 in value.",
     "welcome_bonus_value_cad": 2500,
     "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "min_spend": 25000,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -4357,7 +4337,7 @@
     "welcome_bonus": "Earn up to $3,200 in value including up to 100,000 Aeroplan points",
     "welcome_bonus_value_cad": 2050,
     "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "min_spend": 25000,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -4420,7 +4400,7 @@
     "welcome_bonus": "Join and earn up to $1,400 in value!",
     "welcome_bonus_value_cad": 1400,
     "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "min_spend": 3000,
     "purchase_interest_rate": null,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -4929,7 +4909,7 @@
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
     "insurance": {
-      "purchase_protection": "8"
+      "purchase_protection": ""
     },
     "minimum_income": null,
     "minimum_credit_score": null,
@@ -5085,8 +5065,8 @@
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
-      "Bills, groceries, dining & takeout": "5x",
-      "All other purchases": "1x"
+      "Bills, groceries, dining & takeout": "2.5x",
+      "All other purchases": "0.5x"
     },
     "rewards_program": "bmo rewards",
     "foreign_transaction_fee": true,
@@ -5094,9 +5074,7 @@
     "key_perks": [
       "Food delivery credits"
     ],
-    "insurance": {
-      "trip_cancellation": ""
-    },
+    "insurance": {},
     "minimum_income": null,
     "minimum_credit_score": null,
     "country": "CA",
@@ -5342,7 +5320,7 @@
     "historical_offers": [],
     "apply_url": "https://www.bmo.com/main/personal/credit-cards/bmo-cashback-mastercard/",
     "is_business": false,
-    "cpp_cad": 1.0,
+    "cpp_cad": 1,
     "benefits": {
       "lounge_access": false,
       "no_fx_fee": false,
@@ -5362,7 +5340,7 @@
     "issuer": "BMO",
     "network": "Mastercard",
     "card_type": "cashback",
-    "annual_fee": 120,
+    "annual_fee": 139,
     "first_year_fee": null,
     "welcome_bonus": "Get up to $650 in value and annual fees waived first year",
     "welcome_bonus_value_cad": 650,
@@ -5400,7 +5378,7 @@
     "historical_offers": [],
     "apply_url": "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-cashback-world-elite-mastercard/",
     "is_business": false,
-    "cpp_cad": 1.0,
+    "cpp_cad": 1,
     "welcome_bonus_points": null,
     "first_year_value_cad": 650,
     "benefits": {
@@ -5505,7 +5483,7 @@
     "historical_offers": [],
     "apply_url": "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-cashback-mastercard-for-students/",
     "is_business": false,
-    "cpp_cad": 1.0,
+    "cpp_cad": 1,
     "benefits": {
       "lounge_access": false,
       "no_fx_fee": false,
@@ -5702,8 +5680,8 @@
     "card_type": "rewards",
     "annual_fee": 150,
     "first_year_fee": null,
-    "welcome_bonus": "Up to 35,000 points",
-    "welcome_bonus_value_cad": 332,
+    "welcome_bonus": "",
+    "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
     "purchase_interest_rate": 20.99,
@@ -5737,7 +5715,7 @@
     "apply_url": "https://www.nbc.ca/personal/mastercard-credit-cards/world-elite.html",
     "is_business": false,
     "cpp_cad": 0.95,
-    "welcome_bonus_points": 35000,
+    "welcome_bonus_points": null,
     "first_year_value_cad": 182,
     "benefits": {
       "lounge_access": true,
@@ -5790,10 +5768,10 @@
     "is_business": false,
     "cpp_cad": 0.95,
     "interest_rates": {
-      "purchases": 20.95,
-      "balance_transfer": 111.95
+      "purchases": 8.9,
+      "balance_transfer": 12.9
     },
-    "min_income": 12000,
+    "min_income": null,
     "welcome_bonus_points": null,
     "first_year_value_cad": 70,
     "benefits": {
@@ -5854,10 +5832,10 @@
       "lounge_access": false,
       "no_fx_fee": false,
       "car_rental_insurance": true,
-      "travel_medical": false,
-      "trip_cancellation": false,
+      "travel_medical": true,
+      "trip_cancellation": true,
       "flight_delay": true,
-      "mobile_insurance": false,
+      "mobile_insurance": true,
       "purchase_protection": true,
       "extended_warranty": true,
       "free_checked_bags": false
@@ -6022,7 +6000,7 @@
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 20.99,
+    "purchase_interest_rate": 19.15,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {},
@@ -6167,8 +6145,8 @@
     "first_year_fee": null,
     "welcome_bonus": "Earn up to 10,000 bonus points",
     "welcome_bonus_value_cad": 50,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus_conditions": "Spend $500 within the first 90 days of account opening (5,000 pts) and enroll in paperless e-statements within 90 days (5,000 pts) to earn the full 10,000-point bonus",
+    "min_spend": 500,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -6226,8 +6204,8 @@
     "first_year_fee": null,
     "welcome_bonus": "Earn up to 30,000 bonus MBNA Rewards Points (20,000 after $2,000 spend in 90 days + 10,000 for paperless e-statements)",
     "welcome_bonus_value_cad": 245,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus_conditions": "Spend $2,000 within the first 90 days of account opening (20,000 pts) and enroll in paperless e-statements within 90 days (10,000 pts) to earn the full 30,000-point bonus",
+    "min_spend": 2000,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -6245,7 +6223,7 @@
       "lost_baggage": "1000",
       "mobile_insurance": "Yes"
     },
-    "minimum_income": null,
+    "minimum_income": 80000,
     "minimum_credit_score": null,
     "country": "CA",
     "sources": [],
@@ -6286,9 +6264,9 @@
     "first_year_fee": null,
     "welcome_bonus": "Get $100 cash back when you spend $1,500 in your first 3 months",
     "welcome_bonus_value_cad": 100,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
-    "purchase_interest_rate": 20.99,
+    "welcome_bonus_conditions": "Spend $1,500 within the first 3 months of account opening",
+    "min_spend": 1500,
+    "purchase_interest_rate": 20.95,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
@@ -6321,7 +6299,7 @@
     "welcome_bonus_points": null,
     "first_year_value_cad": 120,
     "benefits": {
-      "lounge_access": false,
+      "lounge_access": true,
       "no_fx_fee": false,
       "car_rental_insurance": true,
       "travel_medical": false,
@@ -6412,7 +6390,7 @@
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
-      "1.5% on non-USD with Rogers service",
+      "2% on non-USD with Rogers service",
       "Statement credits",
       "Lounge access ($32 USD)",
       "3% on USD purchases",
@@ -6439,7 +6417,7 @@
     "is_business": false,
     "cpp_cad": 1,
     "benefits": {
-      "lounge_access": false,
+      "lounge_access": true,
       "no_fx_fee": false,
       "car_rental_insurance": true,
       "travel_medical": true,
@@ -6598,7 +6576,7 @@
       "Min income $50K"
     ],
     "insurance": {},
-    "minimum_income": null,
+    "minimum_income": 50000,
     "minimum_credit_score": null,
     "country": "CA",
     "sources": [],
@@ -6654,7 +6632,6 @@
     "key_perks": [
       "5% grocery",
       "Airport lounge access",
-      "Statement credits",
       "4% recurring payments",
       "3% gas",
       "1% everything else",
@@ -6666,7 +6643,7 @@
       "lost_baggage": "1000",
       "mobile_insurance": "Yes"
     },
-    "minimum_income": null,
+    "minimum_income": 80000,
     "minimum_credit_score": null,
     "country": "CA",
     "sources": [],
@@ -6727,7 +6704,7 @@
     "insurance": {
       "purchase_protection": ""
     },
-    "minimum_income": null,
+    "minimum_income": 15000,
     "minimum_credit_score": null,
     "country": "CA",
     "sources": [],
@@ -6763,10 +6740,10 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 50,000 bonus PC Optimum points when you spend $100+ at participating stores within 60 days (apply by June 30, 2026)",
+    "welcome_bonus": "Earn 50,000 bonus PC Optimum points when you spend $100+ at participating stores within 60 days (apply by August 31, 2026)",
     "welcome_bonus_value_cad": 50,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus_conditions": "Spend $100 or more at participating stores within 60 days of account approval",
+    "min_spend": 100,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -6779,9 +6756,7 @@
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [],
-    "insurance": {
-      "car_rental": "8"
-    },
+    "insurance": {},
     "minimum_income": null,
     "minimum_credit_score": null,
     "country": "CA",
@@ -6818,10 +6793,10 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 50,000 bonus PC Optimum points when you spend $100+ at participating stores within 60 days (apply by June 30, 2026)",
+    "welcome_bonus": "Earn 50,000 bonus PC Optimum points when you spend $100+ at participating stores within 60 days (apply by August 31, 2026)",
     "welcome_bonus_value_cad": 50,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus_conditions": "Spend $100 or more at participating stores within 60 days of account approval",
+    "min_spend": 100,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -6838,7 +6813,7 @@
       "Concierge service"
     ],
     "insurance": {},
-    "minimum_income": null,
+    "minimum_income": 50000,
     "minimum_credit_score": null,
     "country": "CA",
     "sources": [],
@@ -6874,10 +6849,10 @@
     "card_type": "rewards",
     "annual_fee": 0,
     "first_year_fee": null,
-    "welcome_bonus": "Earn 50,000 bonus PC Optimum points when you spend $100+ at participating stores within 60 days (apply by June 30, 2026)",
+    "welcome_bonus": "Earn 50,000 bonus PC Optimum points when you spend $100+ at participating stores within 60 days (apply by August 31, 2026)",
     "welcome_bonus_value_cad": 50,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus_conditions": "Spend $100 or more at participating stores within 60 days of account approval",
+    "min_spend": 100,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -6900,7 +6875,7 @@
     "insurance": {
       "car_rental": "9"
     },
-    "minimum_income": null,
+    "minimum_income": 80000,
     "minimum_credit_score": null,
     "country": "CA",
     "sources": [],
@@ -6935,11 +6910,11 @@
     "network": "Mastercard",
     "card_type": "rewards",
     "annual_fee": 120,
-    "first_year_fee": null,
+    "first_year_fee": 0,
     "welcome_bonus": "Earn 50,000 bonus PC Optimum Points + first year annual fee waived",
     "welcome_bonus_value_cad": 50,
-    "welcome_bonus_conditions": null,
-    "min_spend": null,
+    "welcome_bonus_conditions": "Spend $3,000 in total qualifying purchases within 3 months of account approval to earn the 50,000-point bonus; the $120 annual fee is credited back for the first year",
+    "min_spend": 3000,
     "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
@@ -6958,7 +6933,7 @@
     "insurance": {
       "car_rental": "8"
     },
-    "minimum_income": null,
+    "minimum_income": 80000,
     "minimum_credit_score": null,
     "country": "CA",
     "sources": [],
@@ -6998,8 +6973,8 @@
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 22.99,
-    "cash_advance_rate": null,
+    "purchase_interest_rate": 21.99,
+    "cash_advance_rate": 22.99,
     "balance_transfer_rate": null,
     "earn_rates": {
       "Canadian Tire stores, gas & Mark's": "3%",
@@ -7028,7 +7003,7 @@
     "is_business": false,
     "cpp_cad": 0.5,
     "interest_rates": {
-      "purchases": 10.9
+      "purchases": 21.99
     },
     "benefits": {
       "lounge_access": false,
@@ -7055,7 +7030,7 @@
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 22.99,
+    "purchase_interest_rate": 21.99,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
@@ -7083,7 +7058,7 @@
     "pot_rewards_valuation_cpp": null,
     "pot_url": null,
     "historical_offers": [],
-    "apply_url": "https://www.ctfs.com/content/ctfs3/en/homepage.html",
+    "apply_url": "https://mastercard.triangle.com/content/dsa2/en.html?cardType=OMX&pcid=tr009&utm_source=ctfswebsite&utm_medium=carousel&utm_campaign=bauhomepage&utm_content=enapplynow",
     "is_business": false,
     "cpp_cad": 0.5,
     "benefits": {
@@ -7111,8 +7086,8 @@
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 22.99,
-    "cash_advance_rate": null,
+    "purchase_interest_rate": 21.99,
+    "cash_advance_rate": 22.99,
     "balance_transfer_rate": null,
     "earn_rates": {
       "Canadian Tire family of stores": "4%",
@@ -7172,9 +7147,7 @@
     "rewards_program": "desjardins bonusdollars",
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
-    "key_perks": [
-      "Statement credits"
-    ],
+    "key_perks": [],
     "insurance": {
       "purchase_protection": "1300",
       "trip_cancellation": "1300"
@@ -7248,7 +7221,7 @@
     "is_business": false,
     "cpp_cad": 1,
     "interest_rates": {
-      "purchases": 10.9
+      "purchases": 20.9
     },
     "benefits": {
       "lounge_access": false,
@@ -7405,7 +7378,7 @@
     "foreign_transaction_fee": true,
     "foreign_transaction_fee_pct": 2.5,
     "key_perks": [
-      "Up to 3% cash back"
+      "Up to 4% cash back"
     ],
     "insurance": {},
     "minimum_income": null,
@@ -7422,7 +7395,7 @@
     "is_business": false,
     "cpp_cad": 1,
     "interest_rates": {
-      "purchases": 10.9
+      "purchases": 20.9
     },
     "benefits": {
       "lounge_access": true,
@@ -7482,7 +7455,7 @@
     "is_business": false,
     "cpp_cad": 1,
     "interest_rates": {
-      "purchases": 10.9
+      "purchases": 20.9
     },
     "benefits": {
       "lounge_access": true,
@@ -7543,7 +7516,7 @@
     "is_business": false,
     "cpp_cad": 1,
     "interest_rates": {
-      "purchases": 10.9
+      "purchases": 20.9
     },
     "benefits": {
       "lounge_access": true,
@@ -7570,7 +7543,7 @@
     "welcome_bonus_value_cad": null,
     "welcome_bonus_conditions": null,
     "min_spend": null,
-    "purchase_interest_rate": 20.9,
+    "purchase_interest_rate": 11.9,
     "cash_advance_rate": null,
     "balance_transfer_rate": null,
     "earn_rates": {
@@ -7605,7 +7578,7 @@
     "is_business": false,
     "cpp_cad": 1,
     "interest_rates": {
-      "purchases": 10.9
+      "purchases": 11.9
     },
     "benefits": {
       "lounge_access": true,

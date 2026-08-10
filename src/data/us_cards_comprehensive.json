@@ -10,7 +10,7 @@
     "signup_bonus_formatted": "AS HIGH AS 175,000 Membership Rewards® points",
     "signup_bonus_value_usd": null,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "After you spend $12,000 in purchases on your new Card within the first 6 months of Card Membership.",
     "earn_rates_summary": null,
     "key_perks": [
       "Hotel elite status/collection",
@@ -21,8 +21,7 @@
       "Access to 1,550+ airport lounges worldwide with American Express Global Lounge Collection®. Terms apply.‡",
       "5X points on prepaid hotel bookings and flights booked directly with airlines through Amex Travel, points cap applies.‡",
       "Up to $600 back annually ($300 back semi-annually) on select prepaid hotel bookings through American Express Travel with your Card.‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "Premium lounge access"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -58,17 +57,13 @@
     "signup_bonus_formatted": "AS HIGH AS 100,000 Membership Rewards® points",
     "signup_bonus_value_usd": null,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "After you spend $8,000 in purchases on your new Card within the first 6 months of Card Membership.",
     "earn_rates_summary": null,
     "key_perks": [
-      "Free first checked bag",
       "Hotel elite status/collection",
       "Statement credits",
-      "Airport lounge access",
       "Front of the Line presale tickets",
-      "Priority Pass lounge access",
       "4X points at restaurants worldwide, on up to $50K in purchases‡",
-      "Premium lounge access",
       "3X points on flights booked directly with airlines or on AmexTravel.com‡",
       "4X points at U.S. supermarkets, on up to $25K in purchases‡"
     ],
@@ -108,20 +103,14 @@
     "signup_bonus": 300,
     "signup_bonus_formatted": "AS HIGH AS $300 Cash Back1 after you spend $3,000 in purchases on your new Card within the first 6 months of Card Membership. Welcome offers vary and you may not be eligible for an offer.†",
     "signup_bonus_value_usd": 300,
-    "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "signup_bonus_currency": "cash",
+    "welcome_bonus_conditions": "After you spend $3,000 in purchases on your new Card within the first 6 months of Card Membership.",
     "earn_rates_summary": null,
     "key_perks": [
-      "Hotel elite status/collection",
       "Statement credits",
       "6% cash back on select U.S. streaming subscriptions‡",
       "6% cash back at U.S. supermarkets, on up to $6K in purchases‡",
-      "Airport lounge access",
-      "Front of the Line presale tickets",
-      "Priority Pass lounge access",
-      "Premium lounge access",
-      "3% cash back on transit purchases‡",
-      "Free first checked bag"
+      "3% cash back on transit purchases‡"
     ],
     "foreign_transaction_fee": true,
     "country": "US",
@@ -159,19 +148,13 @@
     "signup_bonus": 200,
     "signup_bonus_formatted": "AS HIGH AS $200 Cash Back1 after you spend $2,000 in purchases on your new Card within the first 6 months of Card Membership. Welcome offers vary and you may not be eligible for an offer.†",
     "signup_bonus_value_usd": 200,
-    "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "signup_bonus_currency": "cash",
+    "welcome_bonus_conditions": "After you spend $2,000 in purchases on your new Card within the first 6 months of Card Membership.",
     "earn_rates_summary": null,
     "key_perks": [
       "3% cash back at U.S. supermarkets on up to $6K in purchases (then 1%)‡",
-      "Free first checked bag",
-      "Hotel elite status/collection",
       "Statement credits",
-      "Airport lounge access",
-      "Front of the Line presale tickets",
-      "Priority Pass lounge access",
       "3% cash back at U.S. gas stations on up to $6K in purchases (then 1%)‡",
-      "Premium lounge access",
       "3% cash back on U.S. online retail purchases, on up to $6K in purchases (then 1%)‡"
     ],
     "foreign_transaction_fee": true,
@@ -206,22 +189,18 @@
     "network": "American Express",
     "card_type": "personal",
     "annual_fee": 150,
-    "signup_bonus": 90000,
-    "signup_bonus_formatted": "Earn Up To 90,000 Bonus Mileswith the Delta SkyMiles® Gold American Express Card. Earn 70,000 Bonus Miles after you spend $3,000 or more in purchases with your new Card within the first 6 months of Card Membership and an additional 20,000 bonus miles after you make an additional $2,000 in purchases within your first 6 months, starting from the date that your account is opened. Offer ends 04/01/26.†",
-    "signup_bonus_value_usd": 90000,
+    "signup_bonus": 80000,
+    "signup_bonus_formatted": "AS HIGH AS 80,000 Bonus Miles after you spend $2,000 in purchases on your new Card within the first 6 months of Card Membership. Welcome offers vary and you may not be eligible for an offer.†",
+    "signup_bonus_value_usd": 80000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $2,000 in purchases within the first 6 months of Card Membership",
     "earn_rates_summary": null,
     "key_perks": [
-      "Hotel elite status/collection",
       "Statement credits",
-      "Airport lounge access",
       "Front of the Line presale tickets",
       "Save 15% (excluding on taxes & fees) when you book Award Travel on Delta and Delta Connection carrier-operated flights*‡ *Discount not applicable to partner-operated flights or to taxes and fees.",
-      "Priority Pass lounge access",
       "Earn a $200 Delta Flight Credit toward your next trip after you spend $10,000 in purchases in a year‡",
       "2X Miles on Delta Purchases, at restaurants and at U.S. supermarkets‡",
-      "Premium lounge access",
       "Free first checked bag"
     ],
     "foreign_transaction_fee": false,
@@ -254,21 +233,17 @@
     "network": "American Express",
     "card_type": "personal",
     "annual_fee": 350,
-    "signup_bonus": 100000,
-    "signup_bonus_formatted": "Earn Up To 100,000 Bonus Mileswith your Delta SkyMiles® Platinum American Express Card. Earn 80,000 bonus miles after you spend $4,000 or more in purchases with your new Card within the first 6 months of Card Membership and an additional 20,000 bonus miles after you make an additional $2,000 in purchases within your first 6 months, starting from the date that your account is opened. Offer ends 04/01/2026.†",
-    "signup_bonus_value_usd": 100000,
+    "signup_bonus": 90000,
+    "signup_bonus_formatted": "AS HIGH AS 90,000 Bonus Miles after you spend $3,000 in purchases on your new Card within the first 6 months of Card Membership. Welcome offers vary and you may not be eligible for an offer.†",
+    "signup_bonus_value_usd": 90000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $3,000 in purchases within the first 6 months of Card Membership",
     "earn_rates_summary": null,
     "key_perks": [
-      "Hotel elite status/collection",
       "Statement credits",
-      "Airport lounge access",
       "Take 15% off Award Travel on Delta flights*‡. *Not applicable to partner operated flights or to taxes and fees.",
       "Front of the Line presale tickets",
       "Get closer to Status with MQD Headstart‡ and MQD Boost‡",
-      "Priority Pass lounge access",
-      "Premium lounge access",
       "Free first checked bag",
       "First checked bag free on Delta flights‡ + Zone 5 Priority Boarding‡"
     ],
@@ -314,14 +289,8 @@
     "key_perks": [
       "4X points at restaurants worldwide & U.S. Supermarkets (up to $15K in combined purchases per calendar year) then 2X points‡",
       "Hotel elite status/collection",
-      "Statement credits",
-      "Airport lounge access",
-      "Front of the Line presale tickets",
       "2X points on all other eligible purchases‡",
-      "Priority Pass lounge access",
-      "6X points at hotels participating in Marriott Bonvoy®‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "6X points at hotels participating in Marriott Bonvoy®‡"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -367,12 +336,10 @@
       "Statement credits",
       "Each calendar year, get up to $300 (up to $25 per month) in statement credits for eligible purchases made on the Card at restaurants worldwide.‡",
       "Airport lounge access",
-      "Front of the Line presale tickets",
       "Priority Pass lounge access",
       "3X points at restaurants worldwide & on flights booked directly with airlines‡",
       "6X points at hotels participating in Marriott Bonvoy®‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "Premium lounge access"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -415,15 +382,9 @@
     "earn_rates_summary": null,
     "key_perks": [
       "Hotel elite status/collection",
-      "Statement credits",
-      "Airport lounge access",
-      "Front of the Line presale tickets",
-      "Priority Pass lounge access",
       "Earn 5X Hilton Honors Bonus Points at U.S. restaurants, U.S. gas stations, and U.S. supermarkets‡",
       "Complimentary Hilton Honors™ Silver Status‡",
-      "Earn 7X Hilton Honors Bonus Points on eligible Hilton purchases‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "Earn 7X Hilton Honors Bonus Points on eligible Hilton purchases‡"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -468,13 +429,8 @@
       "Hotel elite status/collection",
       "Statement credits",
       "Earn 6X Hilton Honors Bonus Points at U.S. restaurants, U.S. gas stations, and U.S. supermarkets.‡",
-      "Airport lounge access",
-      "Front of the Line presale tickets",
       "Earn 4X Hilton Honors Bonus Points on U.S. Online Retail Purchases.‡",
-      "Priority Pass lounge access",
-      "Earn 12X Hilton Honors Bonus Points on eligible Hilton purchases.‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "Earn 12X Hilton Honors Bonus Points on eligible Hilton purchases.‡"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -510,19 +466,17 @@
     "network": "American Express",
     "card_type": "personal",
     "annual_fee": 650,
-    "signup_bonus": 125000,
-    "signup_bonus_formatted": "Earn Up To 125,000 Bonus Mileswith your Delta SkyMiles® Reserve American Express Card. Earn 100,000 bonus miles after you spend $6,000 or more in purchases with your new Card within the first 6 months of Card Membership and an additional 25,000 bonus miles after you make an additional $3,000 in purchases within your first 6 months, starting from the date that your account is opened. Offer ends 04/01/2026.†",
-    "signup_bonus_value_usd": 125000,
+    "signup_bonus": 100000,
+    "signup_bonus_formatted": "AS HIGH AS 100,000 Bonus Miles after you spend $5,000 in purchases on your new Card within the first 6 months of Card Membership. Welcome offers vary and you may not be eligible for an offer.†",
+    "signup_bonus_value_usd": 100000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $5,000 in purchases within the first 6 months of Card Membership",
     "earn_rates_summary": null,
     "key_perks": [
-      "Hotel elite status/collection",
       "Delta Sky Club® Access‡",
       "Statement credits",
       "Airport lounge access",
       "Front of the Line presale tickets",
-      "Priority Pass lounge access",
       "With the $240 Resy Credit, earn up to $20 per month in statement credits on eligible Resy purchases using your enrolled Card‡",
       "Get closer to Medallion Status With MQD Headstart‡ and MQD Boost‡",
       "Premium lounge access",
@@ -565,16 +519,11 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Hotel elite status/collection",
       "Statement credits",
       "3X Membership Rewards® points on Travel‡",
-      "Airport lounge access",
       "Front of the Line presale tickets",
-      "Priority Pass lounge access",
       "3X Membership Rewards® points at Restaurants‡",
-      "3X Membership Rewards® points on Transit‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "3X Membership Rewards® points on Transit‡"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -620,13 +569,8 @@
       "Hotel elite status/collection",
       "Statement credits",
       "Earn 7X Hilton Honors Bonus Points at U.S. Restaurants and on Select Travel Purchases‡",
-      "Airport lounge access",
       "Earn 14X Hilton Honors Bonus Points on eligible Hilton purchases‡",
-      "Front of the Line presale tickets",
-      "Priority Pass lounge access",
-      "Premium lounge access",
-      "Complimentary Hilton Honors™ Diamond Status‡",
-      "Free first checked bag"
+      "Complimentary Hilton Honors™ Diamond Status‡"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -668,15 +612,10 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Free first checked bag",
-      "Hotel elite status/collection",
       "Statement credits",
-      "Airport lounge access",
       "Front of the Line presale tickets",
       "20% Back on In-Flight Purchases‡",
-      "Priority Pass lounge access",
       "No Foreign Transaction Fees‡¤",
-      "Premium lounge access",
       "2X Miles at Restaurants and on Delta Purchases‡"
     ],
     "foreign_transaction_fee": false,
@@ -721,15 +660,12 @@
       "Hotel elite status/collection",
       "Statement credits",
       "Airport lounge access",
-      "Reward Your Growth",
       "Front of the Line presale tickets",
-      "Choose Your Color",
       "Priority Pass lounge access",
       "Earn 5X Membership Rewards Points on Flights and Prepaid Hotels Booked at AmexTravel.com.‡",
       "Get 35% points back after you use Pay with Points for flights booked through Amex Travel with your selected qualifying airline. Terms and cap apply.‡",
       "Up to $600 back annually ($300 back semi-annually) on select prepaid hotel bookings through American Express Travel.‡NEW",
-      "Premium lounge access",
-      "Free first checked bag"
+      "Premium lounge access"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -770,16 +706,9 @@
     "earn_rates_summary": null,
     "key_perks": [
       "$240 Flexible Business Credit (up to $20 per month)‡",
-      "Discover which Card with Flexible Payment Solutions is best for your business",
-      "Hotel elite status/collection",
       "Statement credits",
-      "Airport lounge access",
-      "Front of the Line presale tickets",
-      "Priority Pass lounge access",
       "Walmart+ Monthly Membership Credit‡",
-      "4X Points on Your Top 2 Eligible Categories Each Month. Cap Applies.‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "4X Points on Your Top 2 Eligible Categories Each Month. Cap Applies.‡"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -819,16 +748,9 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Hotel elite status/collection",
-      "Statement credits",
       "1X points on Purchases Thereafter‡",
-      "Airport lounge access",
       "2X points on All Eligible Purchases, up to $50K per calendar year‡",
-      "Front of the Line presale tickets",
-      "Priority Pass lounge access",
-      "Expanded Buying Power‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "Expanded Buying Power‡"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -869,14 +791,11 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Hotel elite status/collection",
       "Statement credits",
       "Airport lounge access",
       "Enjoy Delta Sky Club® Access‡",
-      "Front of the Line presale tickets",
       "Get Closer to Medallion Status with MQD Headstart‡ and MQD Boost‡",
       "Earn 3X Miles on Eligible Delta Purchases‡",
-      "Priority Pass lounge access",
       "Premium lounge access",
       "Free first checked bag"
     ],
@@ -922,16 +841,9 @@
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
-      "Hotel elite status/collection",
-      "Statement credits",
-      "Airport lounge access",
       "Pay Over Time with Interest‡",
-      "Front of the Line presale tickets",
       "2X points on AmexTravel.com‡",
-      "Priority Pass lounge access",
-      "American Express® App ‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "American Express® App ‡"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -969,17 +881,12 @@
     "signup_bonus_formatted": "100,000 SkyMiles bonus miles",
     "signup_bonus_value_usd": 100000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $8,000 in purchases within the first 6 months of Card Membership",
     "earn_rates_summary": null,
     "key_perks": [
-      "Hotel elite status/collection",
       "Statement credits",
-      "Airport lounge access",
-      "Front of the Line presale tickets",
       "Get Closer to Medallion Status with MQD Headstart‡ and MQD Boost‡",
-      "Priority Pass lounge access",
       "3X Miles on Eligible Delta & Hotel Purchases‡",
-      "Premium lounge access",
       "Free first checked bag"
     ],
     "foreign_transaction_fee": false,
@@ -1020,19 +927,14 @@
     "signup_bonus_formatted": "150,000 Marriott Bonvoy bonus points",
     "signup_bonus_value_usd": 150000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $8,000 in purchases within the first 6 months of Card Membership",
     "earn_rates_summary": null,
     "key_perks": [
       "Hotel elite status/collection",
       "Statement credits",
       "Earn 6X Marriott Bonvoy Points at hotels participating in the Marriott Bonvoy® program‡",
-      "Airport lounge access",
-      "Front of the Line presale tickets",
-      "Priority Pass lounge access",
       "Marriott Bonvoy® Room Rate Discount‡",
-      "Marriott Bonvoy Gold Elite Status‡",
-      "Premium lounge access",
-      "Free first checked bag"
+      "Marriott Bonvoy Gold Elite Status‡"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -1071,19 +973,14 @@
     "signup_bonus_formatted": "130,000 Hilton Honors bonus points",
     "signup_bonus_value_usd": 130000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $8,000 in purchases within the first 6 months of Card Membership",
     "earn_rates_summary": null,
     "key_perks": [
       "Get up to $240 Back Per Year on Eligible Hilton Purchases‡",
       "Hotel elite status/collection",
       "Statement credits",
-      "Airport lounge access",
-      "Front of the Line presale tickets",
       "5X Hilton Honors Bonus Points on Other Eligible Purchases (Points cap applies)‡.",
-      "12X Hilton Honors Bonus Points on Eligible Hilton Purchases‡",
-      "Priority Pass lounge access",
-      "Premium lounge access",
-      "Free first checked bag"
+      "12X Hilton Honors Bonus Points on Eligible Hilton Purchases‡"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -1118,11 +1015,11 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 795,
-    "signup_bonus": 125000,
-    "signup_bonus_formatted": "Earn 125,000 points",
-    "signup_bonus_value_usd": 125000,
+    "signup_bonus": 100000,
+    "signup_bonus_formatted": "Earn 100,000 points after you spend $6,000 in purchases in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 100000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $6,000 in purchases in the first 3 months from account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Subscription perks",
@@ -1153,7 +1050,7 @@
       "mobile_insurance": "Yes",
       "trip_cancellation": "10000"
     },
-    "welcome_bonus": "Earn 125,000 points",
+    "welcome_bonus": "Earn 100,000 points after you spend $6,000 in purchases in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -1179,12 +1076,13 @@
     "signup_bonus_formatted": "Earn 75,000 bonus points",
     "signup_bonus_value_usd": 75000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $5,000 in purchases in the first 3 months from account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
       "Statement credits",
-      "No foreign transaction fee"
+      "No foreign transaction fee",
+      "Travel program credit (NEXUS/Global Entry)"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -1195,6 +1093,7 @@
     "earn_rates": {
       "Travel via Chase Travel": "5x",
       "Dining": "3x",
+      "Gas, EV charging, vacation homes": "3x",
       "Online grocery": "3x",
       "Select streaming": "3x",
       "Other travel": "2x",
@@ -1232,7 +1131,7 @@
     "signup_bonus_formatted": "$200 cash back",
     "signup_bonus_value_usd": 200,
     "signup_bonus_currency": "cash",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $500 on purchases in the first 3 months from account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
@@ -1280,7 +1179,7 @@
     "signup_bonus_formatted": "Earn a $200 bonus",
     "signup_bonus_value_usd": 200,
     "signup_bonus_currency": "cash",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $500 on purchases in the first 3 months from account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
@@ -1330,7 +1229,7 @@
     "signup_bonus_formatted": "Earn a $25 statement credit for enrolling in automatic payments",
     "signup_bonus_value_usd": 25,
     "signup_bonus_currency": "cash",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Set up automatic payments within the first 3 months of account opening and remain enrolled for at least 90 consecutive days",
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
@@ -1343,7 +1242,8 @@
     "notes_for_canadians": null,
     "apply_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise",
     "earn_rates": {
-      "All purchases": "1.5%"
+      "Dining, takeout & delivery (6 mo)": "3%",
+      "All other purchases": "1.5%"
     },
     "insurance": {
       "purchase_protection": "500",
@@ -1412,11 +1312,11 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 150,
-    "signup_bonus": 70000,
-    "signup_bonus_formatted": "Earn 70,000 bonus miles after qualifying purchases.",
-    "signup_bonus_value_usd": 70000,
+    "signup_bonus": 50000,
+    "signup_bonus_formatted": "Earn 50,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open.",
+    "signup_bonus_value_usd": 50000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $3,000 in purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "No foreign transaction fee",
@@ -1439,12 +1339,12 @@
       "trip_cancellation": "1500"
     },
     "earn_rates": {
-      "United Airlines purchases": "2x",
+      "United Airlines purchases": "3x",
       "Dining": "2x",
       "Hotel stays booked with hotel": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 70,000 bonus miles after qualifying purchases.",
+    "welcome_bonus": "Earn 50,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -1466,11 +1366,11 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 350,
-    "signup_bonus": 80000,
-    "signup_bonus_formatted": "Earn 80,000 bonus miles + 3,000 Premier qualifying points (PQP) after qualifying purchases.",
-    "signup_bonus_value_usd": 80000,
+    "signup_bonus": 60000,
+    "signup_bonus_formatted": "Earn 60,000 bonus miles + 500 Premier qualifying points (PQP) after you spend $4,000 on purchases in the first 3 months your account is open.",
+    "signup_bonus_value_usd": 60000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $4,000 on purchases in the first 3 months your account is open",
     "earn_rates_summary": null,
     "key_perks": [
       "No foreign transaction fee",
@@ -1494,13 +1394,13 @@
     },
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "3x",
+      "United purchases": "4x",
       "Other travel": "2x",
       "Dining": "2x",
       "Select streaming": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 80,000 bonus miles + 3,000 Premier qualifying points (PQP) after qualifying purchases.",
+    "welcome_bonus": "Earn 60,000 bonus miles + 500 Premier qualifying points (PQP) after you spend $4,000 on purchases in the first 3 months your account is open.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1526,7 +1426,7 @@
     "signup_bonus_formatted": "Earn 30,000 bonus miles after qualifying purchases.",
     "signup_bonus_value_usd": 30000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $1,000 on purchases in the first 3 months your account is open",
     "earn_rates_summary": null,
     "key_perks": [
       "No foreign transaction fee",
@@ -1576,7 +1476,7 @@
     "signup_bonus_formatted": "Earn 90,000 bonus miles after qualifying purchases.",
     "signup_bonus_value_usd": 90000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $5,000 on purchases in the first 3 months from account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "No foreign transaction fee",
@@ -1595,7 +1495,7 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "4x",
+      "United purchases": "5x",
       "Other travel": "2x",
       "Dining": "2x",
       "All other purchases": "1x"
@@ -1626,9 +1526,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 99,
-    "signup_bonus": 20000,
-    "signup_bonus_formatted": "Earn Companion Pass® through 2/28/27 and 20,000 bonus points after you spend $3,000 in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 20000,
+    "signup_bonus": 50000,
+    "signup_bonus_formatted": "Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 50000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1653,7 +1553,7 @@
       "Gas stations and grocery": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 20,000 bonus points after you spend $3,000 in the first 3 months from account opening.",
+    "welcome_bonus": "Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1675,9 +1575,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 229,
-    "signup_bonus": 40000,
-    "signup_bonus_formatted": "Earn Companion Pass® through 2/28/27 and 40,000 bonus points after you spend $5,000 in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 40000,
+    "signup_bonus": 60000,
+    "signup_bonus_formatted": "Earn 60,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 60000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1702,7 +1602,7 @@
       "Gas stations and restaurants": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 40,000 bonus points after you spend $5,000 in the first 3 months from account opening.",
+    "welcome_bonus": "Earn 60,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1724,9 +1624,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 149,
-    "signup_bonus": 30000,
-    "signup_bonus_formatted": "Earn Companion Pass® through 2/28/27 and 30,000 bonus points after you spend $4,000 in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 30000,
+    "signup_bonus": 55000,
+    "signup_bonus_formatted": "Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 55000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1752,7 +1652,7 @@
       "Grocery and restaurants": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 30,000 bonus points after you spend $4,000 in the first 3 months from account opening.",
+    "welcome_bonus": "Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1774,9 +1674,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 95,
-    "signup_bonus": 250000,
-    "signup_bonus_formatted": "Earn 5 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 250,000 points) + a $100 Airline Incidental Statement Credit after spending $3,000 on purchases in the first 3 months of account opening.",
-    "signup_bonus_value_usd": 250000,
+    "signup_bonus": 200000,
+    "signup_bonus_formatted": "Earn 4 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 200,000 points) after spending $3,000 on purchases in the first 3 months of account opening. Plus, through 6/30/2027, get up to $100 in statement credits ($50 semi-annually) after spending $500 on eligible airline purchases.",
+    "signup_bonus_value_usd": 200000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1802,7 +1702,7 @@
       "Grocery, gas, and dining": "3x",
       "All other purchases": "2x"
     },
-    "welcome_bonus": "Earn 5 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 250,000 points) + a $100 Airline Incidental Statement Credit after spending $3,000 on purchases in the first 3 months of account opening.",
+    "welcome_bonus": "Earn 4 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 200,000 points) after spending $3,000 on purchases in the first 3 months of account opening. Plus, through 6/30/2027, get up to $100 in statement credits ($50 semi-annually) after spending $500 on eligible airline purchases.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1871,9 +1771,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 0,
-    "signup_bonus": 100000,
-    "signup_bonus_formatted": "Earn 2 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 100,000 points) after spending $1,000 on purchases in the first 3 months of account opening.",
-    "signup_bonus_value_usd": 100000,
+    "signup_bonus": 45000,
+    "signup_bonus_formatted": "Earn 45,000 Bonus Points after spending $1,000 on eligible purchases within 3 months of account opening.",
+    "signup_bonus_value_usd": 45000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1901,7 +1801,7 @@
       "Streaming, internet, cable, phone": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 2 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 100,000 points) after spending $1,000 on purchases in the first 3 months of account opening.",
+    "welcome_bonus": "Earn 45,000 Bonus Points after spending $1,000 on eligible purchases within 3 months of account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1923,11 +1823,11 @@
     "network": "Mastercard",
     "card_type": "personal",
     "annual_fee": 99,
-    "signup_bonus": 175000,
-    "signup_bonus_formatted": "Earn 175,000 Bonus Points after you spend $5,000 on purchases in the first three months from account opening.",
-    "signup_bonus_value_usd": 175000,
+    "signup_bonus": 140000,
+    "signup_bonus_formatted": "Earn 140,000 Bonus Points after you spend $3,000 on purchases in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 140000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $3,000 on purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Travel program credit (NEXUS/Global Entry)",
@@ -1952,7 +1852,7 @@
       "Travel, dining, gas stations": "5x",
       "All other purchases": "3x"
     },
-    "welcome_bonus": "Earn 175,000 Bonus Points after you spend $5,000 on purchases in the first 3 months from account opening.",
+    "welcome_bonus": "Earn 140,000 Bonus Points after you spend $3,000 on purchases in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1974,9 +1874,9 @@
     "network": "Mastercard",
     "card_type": "personal",
     "annual_fee": 0,
-    "signup_bonus": 90000,
-    "signup_bonus_formatted": "Earn 90,000 bonus points after spending $2,000 on purchases in the first 3 months from account opening. Plus, up to 30,000 bonus points by earning an additional 3x on purchases, except at IHG Hotels & Resorts, in the first 6 months from account opening on up to $10,000 spent.",
-    "signup_bonus_value_usd": 90000,
+    "signup_bonus": 80000,
+    "signup_bonus_formatted": "Earn 80,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening. Plus, earn 10,000 bonus points after you add an authorized user to your account in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 80000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1999,7 +1899,7 @@
       "purchase_protection": "500",
       "trip_cancellation": "5000"
     },
-    "welcome_bonus": "Earn 90,000 bonus points after spending $2,000 on purchases in the first 3 months from account opening. Plus, up to 30,000 bonus points by earning an additional 3x on purchases, except at IHG Hotels & Resorts, in the first 6 months from account opening on up to $10,000 spent.",
+    "welcome_bonus": "Earn 80,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening. Plus, earn 10,000 bonus points after you add an authorized user to your account in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2021,11 +1921,11 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 149,
-    "signup_bonus": 600,
-    "signup_bonus_formatted": "$600 Offer",
-    "signup_bonus_value_usd": 600,
+    "signup_bonus": 500,
+    "signup_bonus_formatted": "$500 Offer",
+    "signup_bonus_value_usd": 500,
     "signup_bonus_currency": "cash",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $1,000 on purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
@@ -2049,7 +1949,7 @@
       "baggage_delay": "100",
       "purchase_protection": "500"
     },
-    "welcome_bonus": "$600 Offer: $300 Disney Gift Card eGift upon approval + $300 statement credit",
+    "welcome_bonus": "$500 Offer: $300 Disney Gift Card eGift upon approval + $200 statement credit after you spend $1,000 on purchases in the first 3 months from account opening",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2075,7 +1975,7 @@
     "signup_bonus_formatted": "$300 Offer",
     "signup_bonus_value_usd": 300,
     "signup_bonus_currency": "cash",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $500 on purchases in the first 3 months from account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
@@ -2121,8 +2021,8 @@
     "signup_bonus": 150,
     "signup_bonus_formatted": "$150 Offer",
     "signup_bonus_value_usd": 150,
-    "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "signup_bonus_currency": "cash",
+    "welcome_bonus_conditions": "Spend $500 on purchases in the first 3 months of account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Food delivery credits",
@@ -2161,13 +2061,16 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 95,
-    "signup_bonus": null,
-    "signup_bonus_formatted": "Earn up to 5 free nights: 3 free nights after spending $5,000 in the first 3 months, plus 2 more free nights after spending $15,000 in the first 6 months (offer ends Feb 26, 2026).",
-    "signup_bonus_value_usd": null,
+    "signup_bonus": 75000,
+    "signup_bonus_formatted": "Earn up to 75,000 Bonus Points: 45,000 Bonus Points after you spend $5,000 on purchases in your first 3 months of account opening, plus up to 30,000 more Bonus Points by earning 2 Bonus Points total per $1 spent in the first 6 months on purchases that normally earn 1 Bonus Point, on up to $15,000 spent.",
+    "signup_bonus_value_usd": 75000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
+      "Annual free night (Category 1-4)",
+      "5 tier qualifying night credits",
+      "Concierge service",
       "No foreign transaction fee"
     ],
     "foreign_transaction_fee": false,
@@ -2184,7 +2087,7 @@
       "Restaurants, airline, transit, gym": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn up to 5 free nights: 3 free nights after spending $5,000 in the first 3 months, plus 2 more free nights after spending $15,000 in the first 6 months (offer ends Feb 26, 2026).",
+    "welcome_bonus": "Earn up to 75,000 Bonus Points: 45,000 Bonus Points after you spend $5,000 on purchases in your first 3 months of account opening, plus up to 30,000 more Bonus Points by earning 2 Bonus Points total per $1 spent in the first 6 months on purchases that normally earn 1 Bonus Point, on up to $15,000 spent.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2254,7 +2157,7 @@
     "signup_bonus_formatted": "Earn 75,000 Avios",
     "signup_bonus_value_usd": 75000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $5,000 on purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Statement credits",
@@ -2348,7 +2251,7 @@
     "signup_bonus_formatted": "Earn 75,000 Bonus Avios",
     "signup_bonus_value_usd": 75000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": null,
+    "welcome_bonus_conditions": "Spend $5,000 on purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "No foreign transaction fee",
@@ -2578,9 +2481,9 @@
     "network": "Visa",
     "card_type": "business",
     "annual_fee": 795,
-    "signup_bonus": 150000,
-    "signup_bonus_formatted": "Earn 150,000 bonus points",
-    "signup_bonus_value_usd": 150000,
+    "signup_bonus": 200000,
+    "signup_bonus_formatted": "Earn 200,000 bonus points after you spend $30,000 on purchases in your first 6 months from account opening.",
+    "signup_bonus_value_usd": 200000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2614,7 +2517,7 @@
       "mobile_insurance": "Yes",
       "trip_cancellation": "10000"
     },
-    "welcome_bonus": "Earn 150,000 bonus points",
+    "welcome_bonus": "Earn 200,000 bonus points after you spend $30,000 on purchases in your first 6 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -2636,9 +2539,9 @@
     "network": "Visa",
     "card_type": "business",
     "annual_fee": 0,
-    "signup_bonus": 750,
-    "signup_bonus_formatted": "$750 cash back",
-    "signup_bonus_value_usd": 750,
+    "signup_bonus": 1000,
+    "signup_bonus_formatted": "$1,000 cash back",
+    "signup_bonus_value_usd": 1000,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2655,9 +2558,9 @@
       "Every purchase": "1.5%"
     },
     "insurance": {
-      "purchase_protection": "120"
+      "purchase_protection": "10000"
     },
-    "welcome_bonus": "$750 cash back",
+    "welcome_bonus": "$1,000 cash back",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2711,6 +2614,11 @@
       "purchase_protection": true,
       "extended_warranty": true,
       "free_checked_bags": false
+    },
+    "insurance": {
+      "purchase_protection": "10000",
+      "trip_cancellation": "5000",
+      "mobile_insurance": "Yes"
     }
   },
   {
@@ -2721,8 +2629,8 @@
     "card_type": "business",
     "annual_fee": 0,
     "signup_bonus": null,
-    "signup_bonus_formatted": "$750 bonus cash back",
-    "signup_bonus_value_usd": 750,
+    "signup_bonus_formatted": "$1,000 bonus cash back",
+    "signup_bonus_value_usd": 1000,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2741,9 +2649,9 @@
       "All other purchases": "1%"
     },
     "insurance": {
-      "purchase_protection": "120"
+      "purchase_protection": "10000"
     },
-    "welcome_bonus": "$750 bonus cash back",
+    "welcome_bonus": "$1,000 bonus cash back",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2781,10 +2689,11 @@
     "notes_for_canadians": null,
     "apply_url": "https://creditcards.chase.com/business-credit-cards/ink/premier",
     "insurance": {
-      "purchase_protection": ""
+      "purchase_protection": "10000"
     },
     "earn_rates": {
       "Purchases of $5,000 or more": "2.5%",
+      "Chase Travel purchases": "5%",
       "All other purchases": "2%"
     },
     "welcome_bonus": "Earn $1,000 bonus cash back",
@@ -2830,7 +2739,7 @@
     "apply_url": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "120",
+      "purchase_protection": "10000",
       "trip_cancellation": "1500"
     },
     "earn_rates": {
@@ -2979,7 +2888,7 @@
     "apply_url": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
     "insurance": {
       "baggage_delay": "100",
-      "purchase_protection": "120"
+      "purchase_protection": "10000"
     },
     "earn_rates": {
       "Southwest Airlines purchases": "3x",
@@ -3027,7 +2936,7 @@
     "notes_for_canadians": null,
     "apply_url": "https://creditcards.chase.com/business-credit-cards/IHG/business-premier",
     "insurance": {
-      "purchase_protection": "120",
+      "purchase_protection": "10000",
       "trip_cancellation": "1500"
     },
     "earn_rates": {
@@ -3059,9 +2968,9 @@
     "network": "Visa",
     "card_type": "business",
     "annual_fee": 199,
-    "signup_bonus": 60000,
-    "signup_bonus_formatted": "60,000 World of Hyatt points",
-    "signup_bonus_value_usd": 60000,
+    "signup_bonus": 70000,
+    "signup_bonus_formatted": "Earn 70,000 Bonus Points after you spend $7,000 on purchases in the first 3 months of account opening.",
+    "signup_bonus_value_usd": 70000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -3084,7 +2993,7 @@
       "Fitness club & gym memberships": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "60,000 World of Hyatt points",
+    "welcome_bonus": "Earn 70,000 Bonus Points after you spend $7,000 on purchases in the first 3 months of account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
