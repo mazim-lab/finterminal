@@ -405,6 +405,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-flight-reward-flash-sale-25-percent-off-points-august-10",
+    title: "Aeroplan opens a flight reward flash sale on August 10, taking up to 25% off the points cost of Air Canada award tickets through August 18",
+    section: "News",
+    tags: ["news", "aeroplan", "travel", "points", "award-booking"],
+  },
+  {
     path: "/news/westjet-cupe-local-8125-launches-ratification-vote-process-august-7",
     title: "WestJet's cabin crew move to lock the deal in: CUPE launches the ratification process on August 7, with member meetings next week and the bargaining committee unanimously behind it",
     section: "News",
