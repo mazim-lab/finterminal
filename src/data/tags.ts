@@ -403,6 +403,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "alaska", "points", "award-booking", "business-class", "alliances"],
   },
 
+  {
+    path: "/travel/sweet-spots/flying-blue-intra-europe-economy-short-haul-10k",
+    title: "Flying Blue sweet spot: hop around Europe in economy from about 10,000 miles one-way with low surcharges",
+    dek: "Flying Blue prices awards dynamically with no fixed chart, but short-haul economy on Air France, KLM, and their SkyTeam partners still starts around 10,000 miles one-way off-peak with only modest surcharges, the quiet, practical way to reach the smaller European cities.",
+    section: "Sweet spot",
+    tags: ["travel", "flying-blue", "amex", "points", "award-booking", "alliances"],
+  },
+
   // News items
   {
     path: "/news/aeroplan-flight-reward-flash-sale-25-percent-off-points-august-10",

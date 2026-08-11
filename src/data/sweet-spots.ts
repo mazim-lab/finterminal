@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "flying-blue-intra-europe-economy-short-haul-10k",
+    program: "Flying Blue",
+    title: "Flying Blue sweet spot: hop around Europe in economy from about 10,000 miles one-way with low surcharges",
+    dek: "Flying Blue prices awards dynamically with no fixed chart, but short-haul economy on Air France, KLM, and their SkyTeam partners still starts around 10,000 miles one-way off-peak with only modest surcharges, which makes it the quiet, practical way to reach the smaller European cities a pricey cash hop or a separate positioning flight would otherwise cost you.",
+    read: "5 min read",
+    date: "Aug 2026",
+    lastChecked: "2026-08-11",
+    body:
+      "Flying Blue, the shared program behind Air France, KLM, and their SkyTeam partners, works differently from a fixed-chart program like Aeroplan or Avios, and it is only fair to say so before we talk value. There is no published award chart and no distance bands to memorize, because Flying Blue prices awards dynamically, roughly tracking the cash fare. We already walked through the marquee Flying Blue sweet spot, a lie-flat seat across the Atlantic to Europe in the monthly Promo Rewards, so this time the target is the quiet everyday version most travellers will actually use more often: getting around Europe cheaply in economy once you have crossed the ocean. The figures below are an example of how the pricing works, not a quote for any date, so always confirm the live price when you search.\n\nHere is how it works. Short-haul economy within Europe on Air France, KLM, and SkyTeam partners such as SAS or ITA starts around 10,000 miles one-way off-peak, with some routes landing closer to 12,500 or 15,000, and the Promo Rewards that drop on the first of every month regularly knock popular hops down to about 7,500 miles each way. The surcharges on these short legs stay low, often around $40 to $70 one-way, which is the part that keeps the value intact. One thing worth knowing up front is that short-haul European business class is not really a cabin worth chasing here, because on these flights it is usually just an economy seat with the middle blocked and lounge access thrown in, so economy is the sensible play and the miles go further there. Treat these as approximate, dynamic figures rather than a fixed quote, and price your specific dates before you assume a number.\n\nHere is the cents-per-mile math on a realistic short-haul booking. Say a peak-summer or last-minute hop like Paris to Nice or Amsterdam to Venice would run about $260 one-way in cash, and the award books for 10,000 miles plus roughly $50 in taxes and fees. That works out to (260 minus 50) divided by 10000, times 100, which is about 2.1 cents per mile. Across the whole program a Flying Blue mile is worth a little over a cent on average, so anything north of about 1.5 cents is a strong use, and on a pricier last-minute leg where the cash fare climbs higher the number only gets better. Prices move, so confirm the live fare when you book.\n\nA couple of things make it sing for Canadians. This is the natural companion to crossing the Atlantic on another program: fly to a Paris or Amsterdam hub on an Aeroplan or Avios business award, then use cheap Flying Blue economy to reach the smaller cities that would otherwise be an expensive fare add-on or a standalone positioning flight, places like Nice, Venice, Lisbon, or Prague. KLM feeds most of the continent out of Amsterdam and Air France out of Paris, so between the two hubs the coverage is deep, and because the Promo Rewards list refreshes every month there is always a fresh batch of discounted short-haul routes to check rather than one fleeting sale. Search a range of dates, because award space at the low price is genuinely limited and the best days go early.\n\nNow the honest caveats, and there are a few. The biggest one is that dynamic pricing cuts both ways, because the miles cost rises with the cash fare, so the real win is redeeming when the cash price is high, on a peak or last-minute leg, while an off-peak route that is already cheap in cash can price under a cent per mile, so always run the cents-per-mile math before you book rather than assuming the low number. Earning the miles is the friendly part: as of January 2026 Amex Canada moved its Membership Rewards transfer to Flying Blue to a clean 1 to 1, which makes Amex the most direct way for a Canadian to build a balance, and Marriott Bonvoy is a backup at 3 to 1 with a 5,000-mile bonus for every 60,000 points moved in one block, so 60,000 Bonvoy points land as 25,000 miles. Transfers are one-way, so only move points once you have found the seat you want. And while surcharges on short-haul economy are light, Flying Blue does pass along carrier-imposed fees on some fares and partners, so check the all-in taxes on your specific flight before you commit.",
+    href: "/cards?q=amex",
+    hrefLabel: "Amex cards that feed Flying Blue",
+    shortAnswer:
+      "Flying Blue prices awards dynamically with no fixed chart, but short-haul economy on Air France, KLM, and their SkyTeam partners still starts around 10,000 miles one-way off-peak, with some routes closer to 12,500 or 15,000 and the monthly Promo Rewards dropping popular hops to about 7,500. Surcharges on these short European legs stay low, often around $40 to $70 one-way, so on a peak-summer or last-minute hop that would sell for about $260 in cash, booking for 10,000 miles plus roughly $50 works out to around 2.1 cents per mile, above the roughly 1 cent a Flying Blue mile is worth on average. The catch is that dynamic pricing means the miles cost rises with the cash fare, so the real win is redeeming when the cash price is high, and an off-peak-cheap route can price under a cent, so run the math before you book. For Canadians the cleanest feed is Amex Membership Rewards, which moved to a clean 1 to 1 transfer in January 2026, with Marriott Bonvoy at 3 to 1 as a backup.",
+    faqs: [
+      {
+        q: "How many Flying Blue miles is a short-haul flight within Europe?",
+        a: "Short-haul economy within Europe on Air France, KLM, and SkyTeam partners starts around 10,000 miles one-way off-peak, with some routes closer to 12,500 or 15,000, and the monthly Promo Rewards regularly knock popular hops down to about 7,500 miles each way. Flying Blue prices dynamically with no award chart, so treat these as approximate figures and confirm the live price when you search.",
+      },
+      {
+        q: "Is using Flying Blue miles to get around Europe a good value?",
+        a: "It can be. On a peak-summer or last-minute hop like Paris to Nice that would run about $260 one-way in cash, booked for 10,000 miles plus roughly $50 in taxes, the math is (260 minus 50) divided by 10000, times 100, which is about 2.1 cents per mile. A Flying Blue mile is worth a little over a cent on average, so anything north of about 1.5 cents is a strong use, and on a pricier last-minute leg the number only gets better.",
+      },
+      {
+        q: "Should I book short-haul European business class with Flying Blue miles?",
+        a: "Usually not. On these short intra-Europe flights, business class is generally just an economy seat with the middle blocked and lounge access thrown in, so it is rarely worth the extra miles. Economy is the sensible play here, and the miles go further there.",
+      },
+      {
+        q: "What are the taxes and surcharges on these short-haul awards?",
+        a: "They stay low, often around $40 to $70 one-way, which is the part that keeps the value intact. That said, Flying Blue does pass along carrier-imposed fees on some fares and partners, so check the all-in taxes on your specific flight before you commit.",
+      },
+      {
+        q: "How do Canadians earn Flying Blue miles for this?",
+        a: "As of January 2026 Amex Canada moved its Membership Rewards transfer to Flying Blue to a clean 1 to 1, which makes Amex the most direct way for a Canadian to build a balance. Marriott Bonvoy is a backup at 3 to 1 with a 5,000-mile bonus for every 60,000 points moved in one block, so 60,000 Bonvoy points land as 25,000 miles. Transfers are one-way, so only move points once you have found the seat you want.",
+      },
+      {
+        q: "When is this sweet spot not worth using?",
+        a: "When the cash fare is already cheap. Because Flying Blue prices dynamically, the miles cost rises with the cash fare, so an off-peak route that is inexpensive in cash can price under a cent per mile. Always run the cents-per-mile math before you book, and save the miles for the peak or last-minute legs where the cash price is high.",
+      },
+    ],
+  },
+  {
     slug: "alaska-qantas-business-australia-85k",
     program: "Alaska",
     title: "Alaska sweet spot: business class to Australia on Qantas for about 85,000 Atmos points, no fuel surcharges",
