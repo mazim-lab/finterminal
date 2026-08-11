@@ -220,10 +220,10 @@ export const DEALS: Deal[] = [
     title: "MSI Versa 300 wireless gaming mouse",
     merchant: "Newegg",
     url: "https://www.newegg.ca/p/N82E16826554085",
-    price: "$42.99",
+    price: "$39.99",
     was: "$69.99",
     blurb:
-      "For anyone still fighting a cheap office mouse, this is an easy and affordable step up at $42.99, down from $69.99. The MSI Versa 300 is a light wireless mouse with an adjustable sensor up to 8000 DPI and both Bluetooth and a low lag 2.4GHz dongle, so it works nicely for gaming and doubles as a tidy cordless mouse for everyday work at the desk. It is sold and shipped by Newegg with free 30 day returns. One honest note so you buy clear eyed: MSI is a newer name in mice rather than an established Logitech or Razer, and the shape is built for a gaming grip, so it suits someone who wants a responsive wireless mouse on a budget more than someone after a specific ergonomic fit.",
+      "For anyone still fighting a cheap office mouse, this is an easy and affordable step up at $39.99, down from $69.99. The MSI Versa 300 is a light wireless mouse with an adjustable sensor up to 8000 DPI and both Bluetooth and a low lag 2.4GHz dongle, so it works nicely for gaming and doubles as a tidy cordless mouse for everyday work at the desk. It is sold and shipped by Newegg with free 30 day returns. One honest note so you buy clear eyed: MSI is a newer name in mice rather than an established Logitech or Razer, and the shape is built for a gaming grip, so it suits someone who wants a responsive wireless mouse on a budget more than someone after a specific ergonomic fit.",
     category: "Electronics",
     posted: "Jul 16, 2026",
   },
