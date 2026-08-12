@@ -413,6 +413,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-sells-25-percent-aeroplan-stake-blackstone-la-caisse-august-11",
+    title: "Air Canada sells a 25% stake in Aeroplan to Blackstone, La Caisse and two big Canadian pension funds for $2.5 billion, and says members will see no change",
+    section: "News",
+    tags: ["news", "aeroplan", "points", "travel"],
+  },
+  {
     path: "/news/aeroplan-flight-reward-flash-sale-25-percent-off-points-august-10",
     title: "Aeroplan opens a flight reward flash sale on August 10, taking up to 25% off the points cost of Air Canada award tickets through August 18",
     section: "News",
