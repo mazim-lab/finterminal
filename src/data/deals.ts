@@ -25,6 +25,39 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "Samsung 32-inch Odyssey G8 4K 240Hz OLED gaming monitor",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/samsung-ls32fg810snxza-32-uhd-240hz-odyssey-g8-oled-silver/p/N82E16824027368",
+    price: "$899.99",
+    was: "$1,699.99",
+    blurb:
+      "A big 4K OLED is the kind of screen you notice the moment you sit down, and Samsung has its 32 inch Odyssey G8 down to $899.99 from $1,699.99, a clean $800 off. OLED gives you the perfect inky blacks and rich colour that make games and movies look genuinely special, and this one pairs that with a roomy 4K panel, a very quick 240Hz refresh, and both FreeSync Premium Pro and G-Sync support so it plays nicely with either graphics card. It is sold and shipped by Newegg with free 15 day returns. Two honest notes so you buy clear eyed: $900 is still real money and this is squarely a want rather than a need, and OLED panels can be prone to burn in over years if you leave the same taskbar or logo parked on screen all day, so it is happiest as a gaming and media screen rather than a static spreadsheet workhorse. For the right desk though, this is a lot of premium panel for the money.",
+    category: "Electronics",
+    posted: "Aug 12, 2026",
+  },
+  {
+    title: "Logitech Brio 100 Full HD 1080p webcam",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/logitech-brio-100-full-hd-webcam/p/N82E16826197634",
+    price: "$34.99",
+    was: "$59.99",
+    blurb:
+      "If you are still stuck with the grainy camera built into an old laptop, or working off a desktop with none at all, this is an easy and cheap fix at $34.99, down from $59.99. The Logitech Brio 100 is a straightforward 1080p webcam with auto light correction that softens a dim home office, a built in mic, and true plug and play over USB, so it just works the moment you clip it on. It is sold and shipped by Newegg. One honest note so you buy for the right reason: this is the entry level Brio, so it is a solid, sharp camera for video calls and meetings rather than a 4K studio piece for serious streaming. For looking clear and professional on a work call though, it is genuine value at this price.",
+    category: "Electronics",
+    posted: "Aug 12, 2026",
+  },
+  {
+    title: "Logitech G413 SE full-size wired mechanical keyboard",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/logitech-g413-se-tactile-black/p/N82E16823126670",
+    price: "$79.99",
+    was: "$119.99",
+    blurb:
+      "A proper mechanical keyboard is one of those upgrades you feel under your fingers every day, and this Logitech is down to $79.99 from $119.99, a third off. The G413 SE is a full size board with real tactile mechanical switches, durable PBT keycaps that will not go shiny in a year, and a brushed aluminum top that keeps it solid on the desk instead of flexing like cheap plastic. It is sold and shipped by Newegg. One honest note so you buy clear eyed: this is a wired board with a simple white backlight rather than the fancy per key RGB, which is exactly why it costs less, and tactile switches have a firm bump that most people love but a few who prefer a smooth linear feel do not. For a well built everyday and gaming keyboard though, this is a lot of keyboard for the money.",
+    category: "Electronics",
+    posted: "Aug 12, 2026",
+  },
+  {
     title: "MONTECH HyperFlow ARGB 240 all-in-one liquid CPU cooler",
     merchant: "Newegg",
     url: "https://www.newegg.ca/montech-liquid-cooling-system-intel-lga115x-1200-1700-20xx-amd-am3-am4-am5-black/p/N82E16835988002",
