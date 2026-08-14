@@ -420,6 +420,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/amex-fine-hotels-resorts-350-new-properties-35th-anniversary-august-12",
+    title: "Amex adds more than 350 hotels to Fine Hotels + Resorts on the program's 35th birthday, widening a perk Canadian Platinum cardholders already pay for",
+    section: "News",
+    tags: ["news", "amex", "travel", "travel-cards"],
+  },
+  {
     path: "/news/air-canada-sells-25-percent-aeroplan-stake-blackstone-la-caisse-august-11",
     title: "Air Canada sells a 25% stake in Aeroplan to Blackstone, La Caisse and two big Canadian pension funds for $2.5 billion, and says members will see no change",
     section: "News",
