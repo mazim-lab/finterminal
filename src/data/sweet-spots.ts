@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "aeroplan-short-haul-north-america-economy-6k",
+    program: "Aeroplan",
+    title: "Aeroplan sweet spot: short hops across North America from 6,000 points one-way, no fuel surcharges",
+    dek: "Aeroplan prices flights within North America off a fixed, distance based chart, so the everyday sweet spot most Canadians will actually use is the short hop, anything under 500 flown miles for just 6,000 points one-way in economy, which turns a pricey last-minute cash fare into a handful of points and modest taxes with no fuel surcharge attached.",
+    read: "5 min read",
+    date: "Aug 2026",
+    lastChecked: "2026-08-14",
+    body:
+      "Aeroplan is the home currency for most Canadian points collectors, and the headlines always go to the lie-flat runs to Europe and Asia. But the redemption a family actually uses over and over is the humble short hop, and Aeroplan quietly does those beautifully. We have already covered the marquee Toronto to Europe business award and the quieter business run down to South America, so this time the target is the everyday one: a short flight across North America for as little as 6,000 points one-way. The figures below are an example of how the chart works, not a quote for any date, so always confirm the live price when you search.\n\nHere is how it works. Aeroplan prices flights within North America off a fixed, distance based chart, and the shortest band, anything under 500 flown miles, sits at just 6,000 points one-way in economy. From there it steps up gently: 501 to 1,500 miles is 10,000 points, 1,501 to 2,750 is 12,500, and only the longest transcontinental hops reach 22,500. Business class on the same short legs runs 10,000, 15,000, 20,000, and 30,000 points by the same bands. Plenty of useful routes live in that bottom 6,000 point tier, short runs like Toronto to New York, Montreal to Boston, Toronto to Chicago, or Vancouver to Seattle. Treat the bands as the framework and price your own dates, because the chart does get adjusted.\n\nOne wrinkle is worth understanding up front, because it is the whole game. On a Star Alliance partner the chart price is fixed, so a qualifying short hop books at the set 6,000 points no matter the cash fare. On Air Canada's own metal, though, the same short flights are priced within a dynamic range, and 6,000 points is the floor of that range rather than a guarantee, so you catch it on lower-demand dates and watch it drift up on busy ones. Either way the trick is the same: search a range of dates and grab the 6,000 point seat when it shows.\n\nHere is the cents-per-point math on a realistic booking. Short-haul cash fares look cheap until you need one last minute, and that is exactly when this shines. Say a one-way Toronto to New York seat a week out would run about $350 in cash, and the award books for 6,000 points plus roughly $45 in taxes and fees, with no fuel surcharge because Aeroplan does not add them. That works out to (350 minus 45) divided by 6000, times 100, which is about 5.1 cents per point. Anything north of 2 cents is a good use of Aeroplan, so a last-minute short hop at this price is your points working hard for something you would otherwise have paid real money for. Prices move, so confirm the live fare when you book.\n\nA couple of things make it sing for Canadians. Earning is the easy part, which sets this apart from the US programs where building a balance is the chore: Amex Membership Rewards transfers to Aeroplan at a clean 1 to 1, and the TD, CIBC, and Amex Aeroplan co-branded cards earn it directly, so almost every points collector here already has a way in. Aeroplan also lets you tack a stopover onto a longer award for a flat 5,000 points, though on a simple point to point short hop that is not usually in play. And because the short-haul bands sit so low, this is the redemption you reach for when a cheap seat sale is not running and a last-minute cash fare has ballooned.\n\nNow the honest caveats, and there are a few. The value only really lands when the cash fare is high, so on a $120 seat-sale hop the 6,000 points plus taxes can come out worse than just paying, which means you should always run the cents-per-point math before you burn points on a cheap route. Award space at the low price is genuinely limited, especially on the fixed-price partner seats, so stay flexible and search a few days on either side. On Air Canada metal remember 6,000 is a floor and not a promise, so a busy date can price higher. And the transborder hops carry small US government fees while purely domestic Canadian ones are cheaper still, so check the all-in taxes on your specific flight before you assume the number.",
+    href: "/travel/aeroplan-sweet-spots",
+    hrefLabel: "Full Aeroplan sweet-spots guide",
+    shortAnswer:
+      "Aeroplan prices flights within North America off a fixed, distance based chart, and the shortest band, anything under 500 flown miles, sits at just 6,000 points one-way in economy, stepping up to 10,000 for 501 to 1,500 miles and 12,500 for 1,501 to 2,750. On a last-minute one-way like Toronto to New York that might run about $350 in cash, booked for 6,000 points plus roughly $45 in taxes and no fuel surcharge, that is about 5.1 cents per point, well above the 2 cents that already makes a good Aeroplan redemption. The one wrinkle is that the price is fixed on Star Alliance partners but only the floor of a dynamic range on Air Canada's own metal, so you catch 6,000 on lower-demand dates and grab it when it shows. Earning is the easy part for Canadians, since Amex Membership Rewards transfers to Aeroplan at 1 to 1 and the co-branded cards earn it directly, though the value only really lands when the cash fare is high, so run the math on cheap routes before you book.",
+    faqs: [
+      {
+        q: "How many Aeroplan points is a short flight within North America?",
+        a: "The shortest band, anything under 500 flown miles, sits at just 6,000 points one-way in economy, stepping up to 10,000 for 501 to 1,500 miles, 12,500 for 1,501 to 2,750, and 22,500 for the longest transcontinental hops. Business class on the same bands runs 10,000, 15,000, 20,000, and 30,000 points. Aeroplan prices these off a fixed distance chart, so price your own dates, because the chart does get adjusted.",
+      },
+      {
+        q: "Is a short-haul hop a good value on Aeroplan points?",
+        a: "It can be, when the cash fare is high. On a last-minute one-way Toronto to New York that might run about $350 in cash, booked for 6,000 points plus roughly $45 in taxes and no fuel surcharge, the math is (350 minus 45) divided by 6000, times 100, which is about 5.1 cents per point. Anything north of 2 cents is a good use of Aeroplan, so a pricey last-minute short hop is where your points work hardest.",
+      },
+      {
+        q: "Why does the 6,000 point price sometimes disappear?",
+        a: "Because the pricing differs by airline. On a Star Alliance partner the chart price is fixed, so a qualifying short hop books at the set 6,000 points, but on Air Canada's own metal the same flights are priced within a dynamic range where 6,000 is only the floor. That means you catch the low price on lower-demand dates and watch it drift up on busy ones, so search a range of dates and grab it when it shows.",
+      },
+      {
+        q: "Does Aeroplan charge fuel surcharges on short-haul North America awards?",
+        a: "No. Aeroplan does not add carrier-imposed fuel surcharges, so a short hop books for the points plus modest taxes, often around $45 on a transborder one-way and less on a purely domestic Canadian flight. Check the all-in taxes on your specific route before you assume the number.",
+      },
+      {
+        q: "How do Canadians earn Aeroplan points for this?",
+        a: "This is the easy part, unlike the US programs where building a balance is the chore. Amex Membership Rewards transfers to Aeroplan at a clean 1 to 1, and the TD, CIBC, and Amex Aeroplan co-branded cards earn it directly, so almost every points collector here already has a way in.",
+      },
+      {
+        q: "When is it not worth using points on a short hop?",
+        a: "When the cash fare is cheap. On a $120 seat-sale hop, 6,000 points plus taxes can come out worse than simply paying, so always run the cents-per-point math before you burn points on a low fare. Save the trick for the pricey last-minute short flights where the cash fare has ballooned.",
+      },
+    ],
+  },
+  {
     slug: "flying-blue-intra-europe-economy-short-haul-10k",
     program: "Flying Blue",
     title: "Flying Blue sweet spot: hop around Europe in economy from about 10,000 miles one-way with low surcharges",

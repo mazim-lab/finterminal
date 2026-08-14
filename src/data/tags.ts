@@ -410,6 +410,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "flying-blue", "amex", "points", "award-booking", "alliances"],
   },
+  {
+    path: "/travel/sweet-spots/aeroplan-short-haul-north-america-economy-6k",
+    title: "Aeroplan sweet spot: short hops across North America from 6,000 points one-way, no fuel surcharges",
+    dek: "Aeroplan prices flights within North America off a fixed, distance based chart, so the everyday sweet spot most Canadians will actually use is the short hop, anything under 500 flown miles for just 6,000 points one-way in economy, with modest taxes and no fuel surcharge attached.",
+    section: "Sweet spot",
+    tags: ["travel", "aeroplan", "points", "award-booking", "alliances"],
+  },
 
   // News items
   {
