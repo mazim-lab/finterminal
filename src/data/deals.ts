@@ -25,6 +25,28 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "ASUS TUF Gaming 34-inch ultrawide QHD 180Hz curved monitor (VG34VQ3B)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asus-vg34vq3b-34-uwqhd-180-hz-tuf-gaming-va/p/N82E16824281324",
+    price: "$349.99",
+    was: "$449.99",
+    blurb:
+      "If your desk is ready for something roomier than a standard screen, a 34 inch ultrawide changes how a work day and a game night both feel, and Newegg has the ASUS TUF Gaming VG34VQ3B down to $349.99 from $449.99, which is ASUS's own list price. The extra width lets you park two documents side by side without squinting, or wrap a racing or strategy game around your view, and it keeps the specs that matter with a sharp 3440x1440 resolution, a quick 180Hz refresh, a gentle 1500R curve, and FreeSync Premium so motion stays smooth. It is sold and shipped by Newegg with free 15 day returns. One honest note so you buy clear eyed: this is a VA panel, which gives lovely deep blacks and contrast but trades away a little of the wide angle colour consistency you would get from IPS, and an ultrawide wants real desk depth to sit back from, so measure your space first. For a big, immersive everyday screen though, this is a lot of monitor for the money.",
+    category: "Electronics",
+    posted: "Aug 15, 2026",
+  },
+  {
+    title: "ASUS ROG Strix 27-inch QHD 240Hz OLED gaming monitor (XG27AQDMGR)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asus-xg27aqdmgr-26-5-qhd-240hz-rog-strix-woled-black/p/N82E16824281408",
+    price: "$569.99",
+    was: "$699.99",
+    blurb:
+      "A good OLED is the kind of screen you notice the moment it lights up, and this is a genuinely strong price on a premium one. Newegg has the ASUS ROG Strix XG27AQDMGR down to $569.99, which undercuts the $649.99 that ASUS's own store and other Canadian shops are asking and sits well below its $799 list. You get a 27 inch QHD OLED with the perfect inky blacks and rich colour that make games and movies look special, a very fast 240Hz refresh for crisp motion, and both FreeSync Premium Pro and G-Sync support so it plays nicely with either graphics card. It is sold and shipped by Newegg. One honest note so you buy clear eyed: OLED panels can be prone to burn in over years if you leave the same taskbar or logo parked on screen all day, so it is happiest as a gaming and media screen rather than a static spreadsheet workhorse, though ASUS does build in screen care features to help with exactly that. For the right desk, this is a lot of premium panel for the money.",
+    category: "Electronics",
+    posted: "Aug 15, 2026",
+  },
+  {
     title: "Samsung 32-inch Odyssey G8 4K 240Hz OLED gaming monitor",
     merchant: "Newegg",
     url: "https://www.newegg.ca/samsung-ls32fg810snxza-32-uhd-240hz-odyssey-g8-oled-silver/p/N82E16824027368",
