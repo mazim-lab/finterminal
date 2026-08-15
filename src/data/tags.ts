@@ -420,6 +420,18 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/nav-canada-service-charge-increase-september-1-august-14",
+    title: "NAV CANADA confirms it will raise its air navigation charges about 1.9% on September 1, a small cost that tends to find its way into Canadian ticket prices",
+    section: "News",
+    tags: ["news", "travel"],
+  },
+  {
+    path: "/news/porter-viporter-earn-points-hawaiian-airlines-flights-august-13",
+    title: "Porter's VIPorter members can now earn points on Hawaiian Airlines flights, a quiet dividend of the Alaska tie-up for Canadians eyeing the islands",
+    section: "News",
+    tags: ["news", "travel", "points", "alaska"],
+  },
+  {
     path: "/news/amex-fine-hotels-resorts-350-new-properties-35th-anniversary-august-12",
     title: "Amex adds more than 350 hotels to Fine Hotels + Resorts on the program's 35th birthday, widening a perk Canadian Platinum cardholders already pay for",
     section: "News",
