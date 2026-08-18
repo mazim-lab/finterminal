@@ -417,6 +417,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "aeroplan", "points", "award-booking", "alliances"],
   },
+  {
+    path: "/travel/sweet-spots/avios-iberia-business-madrid-40k",
+    title: "Avios sweet spot: Iberia business class to Madrid for about 40,500 points one-way off-peak, with very low fees",
+    dek: "Avios is shared with Iberia, whose own award chart still has a peak and off-peak calendar, so the single strongest transatlantic value in the currency is a lie-flat Iberia seat from the US East Coast to Madrid for about 40,500 points one-way off-peak, with taxes that stay tiny when you book on Iberia's own site rather than through British Airways.",
+    section: "Sweet spot",
+    tags: ["travel", "avios", "rbc-avion", "points", "award-booking", "business-class", "transfers"],
+  },
 
   // News items
   {

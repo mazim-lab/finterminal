@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "avios-iberia-business-madrid-40k",
+    program: "Avios",
+    title: "Avios sweet spot: Iberia business class to Madrid for about 40,500 points one-way off-peak, with very low fees",
+    dek: "Avios is shared with Iberia, whose own award chart still has a peak and off-peak calendar, so the single strongest transatlantic value in the currency is a lie-flat Iberia seat from the US East Coast to Madrid for about 40,500 points one-way off-peak, and the reason it sings is the taxes, which stay tiny when you book on Iberia's own site rather than through British Airways.",
+    read: "5 min read",
+    date: "Aug 2026",
+    lastChecked: "2026-08-18",
+    body:
+      "Avios is the shared currency behind British Airways, Iberia, Aer Lingus, Finnair, and Qatar Airways, and one balance moves freely between them at the same rate. We have already walked through the friendly Aer Lingus run to Dublin and the showstopper Qatar Qsuites flight to Doha, so this time the target is the one award nerds have quietly loved for years, Iberia business class across the Atlantic to Madrid. The figures below are an example of how the Iberia chart works, not a quote for any specific date, so always confirm the live price when you search.\n\nHere is how it works. Iberia prices its own long-haul flights off an award chart that still keeps a peak and off-peak calendar, which is increasingly rare in a world of dynamic pricing. Off-peak, a business class seat from the US East Coast gateways Iberia serves, Boston, New York JFK, and Chicago, to Madrid prices at about 40,500 Avios one-way, with economy on the same route around 17,000. Peak dates cost more, into the low 50,000s in business, so the off-peak calendar is where the value lives. Off-peak covers most of the year outside the summer peak and the winter holidays, roughly the January to March and October to November stretches for most dates. This band famously sat at 34,000 Avios for years and moved up to 40,500 in Iberia's March 2026 repricing, so treat it as an approximate figure that can shift again, and price your own dates before you assume a number.\n\nHere is the cents-per-point math on a realistic business booking. Say a one-way Iberia business fare from Boston or New York to Madrid would run about $3,000 in cash, and the award books for 40,500 Avios plus taxes and fees. This is the part that makes the redemption special: Iberia charges very light carrier surcharges, so outbound from the US the all-in taxes often land around $150 rather than the several hundred dollars British Airways would add on the identical seat, so call it $150. That works out to (3000 minus 150) divided by 40500, times 100, which is about 7 cents per Avios. Anything above about 1.5 cents is a strong use of Avios, so a flat bed to Europe at this price is your points doing genuinely excellent work. Prices move, so confirm the live fare when you book.\n\nA couple of things make it sing. The whole trick is to book the Iberia flight through Iberia Plus at iberia.com rather than through British Airways, because the Avios price is identical but BA piles on carrier-imposed surcharges that Iberia does not, and the difference can be a few hundred dollars on the same seat. Iberia's long-haul business is a proper lie-flat cabin in a 1-2-1 layout on its A350 and A330 jets, so everyone gets aisle access, and Madrid is a comfortable, well-connected hub from which cheap onward Avios hops or budget flights reach the rest of Spain and Europe. For Canadians the earning side is refreshingly doable: RBC Avion transfers to British Airways Avios at 1 to 1 and runs a 30 percent transfer bonus a couple of times a year, and Amex Membership Rewards in Canada feeds Avios as well, after which you move the balance into Iberia Plus to book. Iberia even lets you change or cancel an award up to 24 hours before departure for a small fee, which is friendlier than most.\n\nNow the honest caveats, and there are a few. The biggest one for us is that Iberia does not fly to Canada, so this is not a nonstop from home the way the Qatar Qsuites flight is. You position to Boston, New York, or Chicago on a separate ticket or a short Avios hop and start the transatlantic leg there, so price that positioning flight in before you assume the whole trip is cheap. The 40,500 figure is the off-peak number, and peak summer and holiday dates cost noticeably more, so watch the calendar. There is also a quirk worth planning around: to move Avios into Iberia Plus you generally need an Iberia Plus account that has been open and active for a little while, so set one up well ahead of a booking rather than the night you find a seat. Award space in the lie-flat cabin is genuinely limited and the best off-peak dates go early, so stay flexible and search a few days on either side. And transfers are one-way, both from Avion or Amex into Avios and from British Airways over to Iberia Plus, so only move the points once you have found the seat you want, and price your specific trip before you assume a figure, because the Avios charts do get adjusted.",
+    href: "/travel/avios-sweet-spots-rbc-avion-transfer",
+    hrefLabel: "Full Avios guide",
+    shortAnswer:
+      "Avios is shared with Iberia, whose own award chart still keeps a peak and off-peak calendar, so the strongest transatlantic value in the currency is Iberia business class from the US East Coast gateways of Boston, New York JFK, and Chicago to Madrid for about 40,500 Avios one-way off-peak, with economy around 17,000 and peak dates into the low 50,000s. The magic is the fees: Iberia charges very light surcharges, so booked through Iberia Plus at iberia.com rather than British Airways the all-in taxes often land around $150, and on a roughly $3,000 one-way cash fare that is about 7 cents per Avios, well above the 1.5 cents that already counts as a strong use. For Canadians the earning is doable through RBC Avion at 1 to 1 with periodic 30 percent bonuses and through Amex Membership Rewards, after which you move the balance into Iberia Plus. Just know Iberia does not fly to Canada, so you position to a US East Coast gateway, this band moved from 34,000 to 40,500 in March 2026, and off-peak space is limited, so confirm the live price when you search.",
+    faqs: [
+      {
+        q: "How many Avios is Iberia business class to Madrid?",
+        a: "Off-peak, about 40,500 Avios one-way from the US East Coast gateways Iberia serves, Boston, New York JFK, and Chicago, to Madrid, with economy on the same route around 17,000. Peak dates cost more, into the low 50,000s in business. This band sat at 34,000 for years and moved up to 40,500 in Iberia's March 2026 repricing, so treat it as approximate and confirm the live price when you search.",
+      },
+      {
+        q: "Is Iberia business to Madrid a good value on Avios?",
+        a: "Yes, it is one of the best in the whole currency. On a roughly $3,000 one-way cash fare booked for 40,500 Avios plus about $150 in taxes and fees, the math is (3000 minus 150) divided by 40500, times 100, which is about 7 cents per Avios. Anything above about 1.5 cents is a strong use of Avios, so a lie-flat seat to Europe at this price is your points doing genuinely excellent work.",
+      },
+      {
+        q: "Why book the Iberia flight through Iberia and not British Airways?",
+        a: "Because the Avios price is identical but the fees are not. Iberia charges very light carrier surcharges, while British Airways piles on carrier-imposed surcharges that can add a few hundred dollars to the identical seat. Book through Iberia Plus at iberia.com and the all-in taxes outbound from the US often land around $150, which is the whole reason this redemption sings.",
+      },
+      {
+        q: "How do Canadians earn the Avios for this?",
+        a: "RBC Avion transfers to British Airways Avios at 1 to 1 and runs a 30 percent transfer bonus a couple of times a year, and Amex Membership Rewards in Canada feeds Avios as well. One Avios balance moves freely between British Airways and Iberia Plus at 1 to 1, so you then move the points into Iberia Plus to book the Iberia award. Transfers are one-way, so only move points once you have found the seat you want.",
+      },
+      {
+        q: "Can I fly this nonstop from Canada?",
+        a: "No, and that is the main catch. Iberia does not fly to Canada, so unlike the Qatar Qsuites flight this is not a nonstop from home. You position to Boston, New York, or Chicago on a separate ticket or a short Avios hop and start the transatlantic leg there, so price that positioning flight in before you assume the whole trip is cheap.",
+      },
+      {
+        q: "When is this sweet spot not at its best?",
+        a: "On peak dates. The 40,500 figure is the off-peak number, and peak summer and winter-holiday dates cost noticeably more, into the low 50,000s in business, so the off-peak calendar of roughly January to March and October to November is where the value lives. Award space in the lie-flat cabin is also genuinely limited, so stay flexible and search a few days on either side.",
+      },
+    ],
+  },
+  {
     slug: "aeroplan-short-haul-north-america-economy-6k",
     program: "Aeroplan",
     title: "Aeroplan sweet spot: short hops across North America from 6,000 points one-way, no fuel surcharges",
