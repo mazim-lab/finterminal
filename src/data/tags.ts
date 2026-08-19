@@ -427,6 +427,18 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/rbc-avion-triangle-rewards-20-percent-conversion-bonus-august-18",
+    title: "RBC sweetens the Avion-to-Canadian Tire link with a 20% conversion bonus through August 31, a small, easy win for Avion points you were going to cash out at home anyway",
+    section: "News",
+    tags: ["news", "rbc-avion", "points", "transfers"],
+  },
+  {
+    path: "/news/westjet-narrowbody-cabin-transformation-milestone-august-18",
+    title: "WestJet finishes refreshing its old Swoop and Sunwing jets, giving those all-economy planes Premium and Extended Comfort cabins and Wi-Fi as it unifies its narrowbody fleet",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/nav-canada-service-charge-increase-september-1-august-14",
     title: "NAV CANADA confirms it will raise its air navigation charges about 1.9% on September 1, a small cost that tends to find its way into Canadian ticket prices",
     section: "News",
