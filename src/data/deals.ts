@@ -25,6 +25,28 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "ASUS VY249HGR 24-inch Full HD 120Hz IPS monitor",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asus-vy249hgr-27-fhd-120-hz-ips-black/p/N82E16824281334",
+    price: "$94.99",
+    was: "$159.99",
+    blurb:
+      "If you are setting up a first desk, kitting out a student, or replacing a tired old screen on the cheap, a fast 24 inch monitor for under a hundred dollars is genuinely good value. Newegg has the ASUS VY249HGR down to $94.99 from $159.99, sold and shipped by Newegg. It keeps the things that matter at this price with a 24 inch Full HD screen, a quick 120Hz refresh that makes scrolling and motion feel smooth, an IPS panel so colours stay honest from any angle, and Adaptive Sync to keep games from tearing. One honest note so you buy clear eyed: this is 1080p rather than the sharper QHD, and the stand only tilts rather than raising and lowering, which is the sensible trade at this price and plenty for everyday work, browsing, and casual gaming. Newegg also gives you a short 15 day return window, so if you want to try it, decide inside that window.",
+    category: "Electronics",
+    posted: "Aug 19, 2026",
+  },
+  {
+    title: "AMD Ryzen 5 5500 6-core desktop processor with Wraith Stealth cooler",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/amd-ryzen-5-5000-series-ryzen-5-5500-cezanne-socket-am4-desktop-cpu-processor/p/N82E16819113737",
+    price: "$124.99",
+    was: "$229.99",
+    blurb:
+      "If you are putting together a budget gaming PC or breathing new life into an older one, this is a genuinely low price on a capable little chip. Newegg has the AMD Ryzen 5 5500 down to $124.99 from $229.99, sold and shipped by Newegg, and it even comes with a Wraith Stealth cooler in the box so there is no extra cooler to buy. You get six cores and twelve threads of Zen 3 that handle everyday work and most games happily once you pair it with a decent graphics card, which makes it one of the cheapest ways into a real build right now. Two honest notes so nobody buys wrong: this is an AM4 chip, so it needs an AM4 motherboard and DDR4 memory rather than the newer AM5 and DDR5, which is exactly why the whole platform costs less. And it has no integrated graphics, so you will need a separate graphics card to get a picture at all. It is a part for a build or an upgrade, not a plug and play gadget, but if a wallet friendly gaming PC is the plan, this is a lot of processor for the money.",
+    category: "Electronics",
+    posted: "Aug 19, 2026",
+  },
+  {
     title: "ASUS TUF Gaming 34-inch ultrawide QHD 180Hz curved monitor (VG34VQ3B)",
     merchant: "Newegg",
     url: "https://www.newegg.ca/asus-vg34vq3b-34-uwqhd-180-hz-tuf-gaming-va/p/N82E16824281324",
