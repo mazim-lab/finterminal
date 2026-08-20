@@ -427,6 +427,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-rewards-triangle-20-percent-conversion-bonus-august-19",
+    title: "WestJet joins the Triangle conversion-bonus party with 20% extra Canadian Tire Money through August 22, turning 120 WestJet points into $1.20 instead of a dollar",
+    section: "News",
+    tags: ["news", "westjet", "points", "transfers"],
+  },
+  {
     path: "/news/rbc-avion-triangle-rewards-20-percent-conversion-bonus-august-18",
     title: "RBC sweetens the Avion-to-Canadian Tire link with a 20% conversion bonus through August 31, a small, easy win for Avion points you were going to cash out at home anyway",
     section: "News",
