@@ -424,6 +424,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "avios", "rbc-avion", "points", "award-booking", "business-class", "transfers"],
   },
+  {
+    path: "/travel/sweet-spots/westjet-companion-voucher-sun-mexico-caribbean-399",
+    title: "WestJet sweet spot: fly a companion to the sun in Mexico or the Caribbean for a fixed $399 base fare",
+    dek: "WestJet points are a flat cent each with no award chart, so the winter sweet spot for Canadian families is the RBC companion voucher pointed south, capping a second economy base fare to Mexico, the Caribbean, and the rest of the network at a fixed $399.",
+    section: "Sweet spot",
+    tags: ["travel", "westjet", "points", "travel-cards", "cards"],
+  },
 
   // News items
   {
