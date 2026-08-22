@@ -434,6 +434,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-transat-rewards-earn-points-vacation-packages-august-20",
+    title: "Air Transat's new Rewards program now lets you earn points on full vacation packages, not just flights, at one point per dollar on the trip",
+    section: "News",
+    tags: ["news", "travel", "points"],
+  },
+  {
     path: "/news/westjet-rewards-triangle-20-percent-conversion-bonus-august-19",
     title: "WestJet joins the Triangle conversion-bonus party with 20% extra Canadian Tire Money through August 22, turning 120 WestJet points into $1.20 instead of a dollar",
     section: "News",
