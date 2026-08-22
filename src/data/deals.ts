@@ -25,6 +25,50 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "MSI MAG 272QP QD-OLED X24 27-inch QHD 240Hz OLED gaming monitor",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/msi-mag-272qp-qd-oled-x24-27-wqhd-240-hz/p/N82E16824475535",
+    price: "$459.99",
+    was: "$579.99",
+    blurb:
+      "A good QD-OLED is the kind of screen you notice the second it lights up, and this MSI is a genuinely strong price on one at $459.99, down from $579.99. The MAG 272QP is a 27 inch QHD panel with the perfect inky blacks and vivid colour that make games and movies look special, a very fast 240Hz refresh with a near instant response time, and both FreeSync Premium Pro and G-Sync support so it plays nicely with either graphics card. It is sold and shipped by Newegg. One honest note so you buy clear eyed: OLED panels can be prone to burn in over years if you leave the same taskbar or logo parked on screen all day, so it is happiest as a gaming and media screen rather than a static spreadsheet workhorse, though MSI builds in screen care features to help with exactly that. For the right desk, this is a lot of premium panel for the money.",
+    category: "Electronics",
+    posted: "Aug 22, 2026",
+  },
+  {
+    title: "AMD Ryzen 7 9800X3D 8-core desktop processor",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/amd-ryzen-7-9000-series-ryzen-7-9800x3d-granite-ridge-zen-5-socket-am5-desktop-cpu-processor/p/N82E16819113877",
+    price: "$569.99",
+    was: "$799.99",
+    blurb:
+      "If you are building a serious gaming PC, this is the chip people actually dream about, and Newegg has the AMD Ryzen 7 9800X3D down to $569.99 from $799.99, sold and shipped by Newegg. Its 3D V-Cache is what makes it the fastest gaming processor most people can buy, with eight quick Zen 5 cores that also breeze through everyday work and content creation, so a build around it stays fast for years. One honest note so you buy clear eyed: this is an AM5 chip, so unless you are already on that platform you will also need an AM5 motherboard and DDR5 memory, and there is a limit of one per customer. It is a part for a build or an upgrade rather than a plug and play gadget, but if top tier gaming is the goal, this is the processor to build around.",
+    category: "Electronics",
+    posted: "Aug 22, 2026",
+  },
+  {
+    title: "MSI MAG A850GL PCIE5 850W ATX 3.1 fully modular power supply",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/msi-atx12v-850-w-80-plus-gold-certified-power-supplies-black-mag-a850gl-pcie5/p/N82E16817701021",
+    price: "$149.99",
+    was: "$194.99",
+    blurb:
+      "A good power supply is the quiet foundation a build sits on for a decade, so paying a little less for a better one is money well spent, and Newegg has the MSI MAG A850GL down to $149.99 from $194.99, sold and shipped by Newegg. It is a proper modern unit with 80 Plus Gold efficiency, fully modular cabling, the newer ATX 3.1 standard and a native 12V-2x6 cable for a current graphics card, plus a long ten year warranty that tells you MSI expects it to last. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop, and 850W is a sensible amount of headroom for most mid to high end builds but more than a modest system needs, so a smaller unit may suit you for less. If you are putting a machine together though, this is a lot of power supply for the money.",
+    category: "Electronics",
+    posted: "Aug 22, 2026",
+  },
+  {
+    title: "NZXT Kraken Plus 360mm all-in-one liquid CPU cooler with LCD",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/nzxt-aio-radiator-size-401-x-120-x-27-mm-intel-socket-lga-1851-1700-1200-115x-amd-socket-am5-am4/p/N82E16835146170",
+    price: "$159.99",
+    was: "$259.99",
+    blurb:
+      "If your desktop runs hot and loud when it works hard, a big 360mm liquid cooler is one of the nicer quality of life upgrades, and Newegg has the NZXT Kraken Plus 360 down to $159.99 from $259.99, a clean 38 percent off. The large radiator pulls heat off the processor far better than a small stock cooler, which keeps the chip running fast under load and lets the fans settle to a hush instead of roaring through a game or a big export, and NZXT adds a little 1.54 inch LCD on the pump for temperatures or whatever you like to show. Two honest notes so nobody buys wrong: this only makes sense if you are building or upgrading a desktop with room for a 360mm radiator, so check your case clearance and socket support first, and while it is sold and shipped by Newegg this one ships from the United States, so give it a little longer to arrive. If you are putting a machine together though, it is a lot of cooler for the money.",
+    category: "Electronics",
+    posted: "Aug 22, 2026",
+  },
+  {
     title: "ASUS VY249HGR 24-inch Full HD 120Hz IPS monitor",
     merchant: "Newegg",
     url: "https://www.newegg.ca/asus-vy249hgr-27-fhd-120-hz-ips-black/p/N82E16824281334",
