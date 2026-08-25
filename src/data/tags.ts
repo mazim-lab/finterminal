@@ -432,6 +432,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "westjet", "points", "travel-cards", "cards"],
   },
 
+  {
+    path: "/travel/sweet-spots/delta-flash-sale-hawaii-economy-20k",
+    title: "Delta sweet spot: round-trip economy to Hawaii near 20,000 SkyMiles when the flash sales hit",
+    dek: "Delta SkyMiles has no award chart and prices dynamically, so the durable Delta play for a Hawaii trip is its standing SkyMiles Award Deals page and the flash sales it runs a few times a year, where round-trip economy from the US West Coast to the islands has been pricing near 20,000 SkyMiles, sometimes lower.",
+    section: "Sweet spot",
+    tags: ["travel", "delta", "points", "award-booking", "transfers"],
+  },
+
   // News items
   {
     path: "/news/air-transat-rewards-earn-points-vacation-packages-august-20",
