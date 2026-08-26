@@ -25,6 +25,61 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "MSI MAG274UPDF 27-inch 4K 160Hz Mini-LED gaming monitor",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/p/N82E16824475524",
+    price: "$474.99",
+    was: "$649.99",
+    blurb:
+      "A proper 4K gaming monitor with real local dimming is a treat, and Newegg has the MSI MAG274UPDF down to $474.99 from $649.99, sold and shipped by Newegg. This is a genuinely premium 27 inch panel with a sharp 4K screen, Mini LED backlighting and over a thousand dimming zones for deep contrast and bright HDR, a clever dual mode that runs 4K at 160Hz for detail or drops to 1080p at a blistering 320Hz for fast shooters, and both FreeSync Premium and G-Sync support so it plays nicely with either graphics card. It has USB-C and a fully adjustable stand too. One honest note so you buy clear eyed: to actually push 4K at high frame rates you want a strong graphics card behind it, so this shines most on a capable gaming PC or a PS5 and Xbox rather than an older machine. For the right setup though, this is a lot of premium screen for the money.",
+    category: "Electronics",
+    posted: "Aug 26, 2026",
+  },
+  {
+    title: "ASUS TUF Gaming 32-inch QHD 180Hz curved monitor (VG32WQ3B)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asus-vg32wq3b-31-5-qhd-180-hz-tuf-gaming-fast-va-black/p/N82E16824281351",
+    price: "$249.99",
+    was: "$349.99",
+    blurb:
+      "If your desk has room for something bigger, a 32 inch QHD screen makes both a work day and a game night feel roomier, and Newegg has the ASUS TUF Gaming VG32WQ3B down to $249.99 from $349.99, sold and shipped by Newegg with free 15 day returns. You get a sharp 2560x1440 resolution across a large 31.5 inch panel, a quick 180Hz refresh for smooth motion, a gentle 1500R curve that wraps the picture a little toward you, and FreeSync to keep games from tearing. One honest note so you buy clear eyed: this is a VA panel, which gives lovely deep blacks and contrast but trades away a touch of the wide angle colour consistency you would get from IPS, and a curve is a matter of taste, so if you do detailed colour work a flat IPS screen may suit you better. For a big, immersive everyday monitor though, this is a lot of screen for the money.",
+    category: "Electronics",
+    posted: "Aug 26, 2026",
+  },
+  {
+    title: "ASUS TUF Gaming 27-inch QHD 180Hz Fast IPS monitor (VG27AQ3A)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asus-vg27aq3a-27-qhd-180-hz-tuf-gaming-fast-ips/p/N82E16824281271",
+    price: "$159.99",
+    was: "$299.99",
+    blurb:
+      "If your desk still has a basic 1080p screen, jumping to a proper 27 inch QHD gaming panel for $159.99 is genuinely good value, down from $299.99, a clean 46 percent off. Newegg has the ASUS TUF Gaming VG27AQ3A, sold and shipped by Newegg, and it keeps the things that matter with a sharp 2560x1440 resolution, a quick 180Hz refresh, a Fast IPS panel that holds colours honest from any angle, and both FreeSync Premium and G-Sync support so it plays nicely with either graphics card. One honest note so you buy clear eyed: the built in speakers are there for convenience and not much more, so plan on headphones or desk speakers, and Newegg gives you a short 15 day return window, so if you want to try it, decide inside that window. For a crisp everyday and gaming screen though, this is a lot of monitor for the money.",
+    category: "Electronics",
+    posted: "Aug 26, 2026",
+  },
+  {
+    title: "AMD Ryzen 9 7900X 12-core desktop processor (open box)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/p/N82E16819113769R",
+    price: "$349.99",
+    was: "$799.99",
+    blurb:
+      "If you are building a serious desktop and do not mind an open box gamble, this is a striking price on a lot of processor, with Newegg listing an open box AMD Ryzen 9 7900X at $349.99, down from $799.99 and sold and shipped by Newegg. It is a twelve core, twenty four thread Zen 4 chip that chews through gaming, heavy multitasking, and content creation alike, so a build around it stays fast for years. Two honest notes so you buy clear eyed: this one is open box and marked final sale, so it cannot be returned, which is the trade you make for the low price, so buy it only if you are comfortable testing it the day it lands. And like all X series Ryzen chips it comes without a cooler and needs an AM5 motherboard and DDR5 memory, so factor those in if you are not already on the platform. For a builder who wants a lot of cores cheaply and will check it over right away, this is a genuinely strong price.",
+    category: "Electronics",
+    posted: "Aug 26, 2026",
+  },
+  {
+    title: "MSI Force GC300 wireless game controller",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/msi-force-gc300-wireless-white-controller/p/N82E16823167066",
+    price: "$54.99",
+    was: "$89.99",
+    blurb:
+      "A good wireless controller earns its keep whether you game on a PC, a handheld, or the couch, and Newegg has the MSI Force GC300 down to $54.99 from $89.99, sold and shipped by Newegg with free 30 day returns. It connects three ways over a low lag 2.4GHz dongle, Bluetooth, or USB-C, runs about twenty hours on a charge, and uses Hall effect triggers that resist the drift cheaper pads develop over time, plus a pair of rear buttons you can map to shortcuts. One honest note so you buy for the right reason: MSI is a newer name in controllers rather than an established Xbox or PlayStation pad, so if you want guaranteed plug and play with a specific console the first party controller is the safer pick. For PC and everyday play though, this is a well built controller at a friendly price.",
+    category: "Electronics",
+    posted: "Aug 26, 2026",
+  },
+  {
     title: "MSI MAG 272QP QD-OLED X24 27-inch QHD 240Hz OLED gaming monitor",
     merchant: "Newegg",
     url: "https://www.newegg.ca/msi-mag-272qp-qd-oled-x24-27-wqhd-240-hz/p/N82E16824475535",
