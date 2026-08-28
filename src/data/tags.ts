@@ -440,6 +440,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "delta", "points", "award-booking", "transfers"],
   },
 
+  {
+    path: "/travel/sweet-spots/united-star-alliance-business-africa-88k",
+    title: "United sweet spot: Star Alliance business class to Africa from about 88,000 miles, surcharge-free on EgyptAir or Ethiopian",
+    dek: "United prices its own flights dynamically, but partner awards still sit at semi-fixed Saver levels with no fuel surcharges, so a fresh, durable United sweet spot is a lie-flat seat to Africa on EgyptAir to Cairo or Ethiopian toward Addis Ababa, from about 88,000 miles one-way in business, with economy on the same partners from roughly 45,000.",
+    section: "Sweet spot",
+    tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
+  },
+
   // News items
   {
     path: "/news/air-transat-rewards-earn-points-vacation-packages-august-20",
