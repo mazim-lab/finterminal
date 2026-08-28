@@ -450,6 +450,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-5x-points-november-economy-flights-worldwide-august-27",
+    title: "Air Canada opens a 5x Aeroplan points bonus on economy flights taken in November, if you book the trip by September 3",
+    section: "News",
+    tags: ["news", "aeroplan", "points", "travel"],
+  },
+  {
     path: "/news/air-transat-rewards-earn-points-vacation-packages-august-20",
     title: "Air Transat's new Rewards program now lets you earn points on full vacation packages, not just flights, at one point per dollar on the trip",
     section: "News",
