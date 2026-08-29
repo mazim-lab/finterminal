@@ -14,8 +14,14 @@
  *    `null` max = the currency isn't transferable / has a fixed value.
  *  - For cash-back currencies, 1 point = 1 cent by definition.
  *
- * Review quarterly. TODO: if we want hard-sourced numbers, validate against a published
- * valuations table and record the source + date here.
+ * Review quarterly.
+ *
+ * LAST CROSS-CHECK: 2026-08-29, against NerdWallet's 2026 points-and-miles valuation study.
+ * That study is US-centric and quoted in USD, so we treat it as a signal about which
+ * programs moved and by how much, never as a set of numbers to copy across. The only
+ * program it moved for us this round was Marriott Bonvoy. Air Canada Aeroplan, Amex
+ * Membership Rewards, RBC Avion, CIBC Aventura and the Canadian fixed-value programs are
+ * not in the study, so they keep the rates we set from Canadian sources.
  */
 
 export interface Valuation {
@@ -31,7 +37,10 @@ export const POINT_VALUATIONS: Record<string, Valuation> = {
   'rbc avion': { baseline: 1.8, max: 3.0, transferable: true },
   'rbc rewards': { baseline: 1.8, max: 3.0, transferable: true },
   'cibc aventura': { baseline: 1.1, max: 2.3, transferable: true },
-  'marriott bonvoy': { baseline: 0.8, max: 1.0, transferable: true },
+  // Bonvoy cut in 2026: award pricing rose at roughly 95% of properties, so both the
+  // everyday rate and the ceiling come down. Bonvoy has no separate Canadian chart, so
+  // the cut lands on Canadian members the same way.
+  'marriott bonvoy': { baseline: 0.7, max: 0.9, transferable: true },
   // Fixed / quasi-fixed value currencies
   'scene+': { baseline: 1.0, max: null, transferable: false },
   'td rewards': { baseline: 0.5, max: null, transferable: false },
@@ -48,7 +57,9 @@ export const POINT_VALUATIONS: Record<string, Valuation> = {
 export const VALUATION_SOURCE = {
   name: 'FinTerminal estimates',
   url: null,
-  asOf: '2026-06',
+  // Month precision on purpose. The ticker and the methodology page both print this
+  // straight through, and a full date reads oddly in that sentence.
+  asOf: '2026-08',
 };
 
 /** Look up a valuation by rewards-program string (case-insensitive, loose match). */

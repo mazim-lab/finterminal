@@ -58,7 +58,7 @@ const sections = [
   },
   {
     h: 'We keep valuations current',
-    p: `Welcome offers and point values change often. We refresh card offers regularly and review our valuations on an ongoing basis. Figures are estimates to help you compare cards, not guarantees, and not financial advice.`,
+    p: `Welcome offers and point values change often. We refresh card offers regularly and review our valuations on an ongoing basis, including a read of the big published valuation studies to see which programs actually moved. Those studies are mostly American and quoted in US dollars, so we use them to spot the change rather than copy the number. In our August 2026 review the big one was Marriott Bonvoy, where award prices went up at the great majority of hotels, so we lowered our Bonvoy rate. On the US side of the card explorer we also nudged American AAdvantage and Alaska Atmos up, since award prices in those programs have not kept pace with cash fares. Figures are estimates to help you compare cards, not guarantees, and not financial advice.`,
   },
 ];
 

@@ -38,7 +38,7 @@ CPP_VALUATIONS = {
     "viporter":                 1.50,  # PoT only
 
     # Hotel programs
-    "marriott bonvoy":          0.80,  # PoT 0.8
+    "marriott bonvoy":          0.70,  # cut from 0.80 on the 2026 Bonvoy award-pricing increase
     "hilton honors":            0.70,  # PoT 0.7
 
     # Cash back (1 point = 1 cent)

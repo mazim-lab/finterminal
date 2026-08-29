@@ -334,11 +334,18 @@ interface RawUS {
 }
 
 // US rewards valuations: baseline cents-per-point (USD), by program keyword.
-// Source: Frequent Miler / The Points Guy baseline valuations (cross-checked), 2026-06.
+// Source: Frequent Miler / The Points Guy baseline valuations, cross-checked against
+// NerdWallet's 2026 valuation study, 2026-08-29. That round moved Marriott Bonvoy down
+// on a broad award-pricing increase, and moved AAdvantage and Alaska up because award
+// prices there have lagged cash fares. Delta, United, Southwest, Hyatt, Hilton and IHG
+// held, so we left them where they were.
 // US values stay in USD (native) and are labelled USD in the UI: we don't convert.
 const US_PROGRAM_CPP: [string, number][] = [
-  ['ihg', 0.5], ['hilton', 0.5], ['bonvoy', 0.8], ['marriott', 0.8], ['hyatt', 1.7],
+  ['ihg', 0.5], ['hilton', 0.5], ['bonvoy', 0.7], ['marriott', 0.7], ['hyatt', 1.7],
   ['delta', 1.2], ['skymiles', 1.2], ['united', 1.3], ['southwest', 1.4], ['avios', 1.3],
+  // Airline keys below must stay ahead of 'american express' and the generic 'miles'
+  // fallback, or an AAdvantage or Alaska card would match the wrong row.
+  ['aadvantage', 1.7], ['american airlines', 1.7], ['alaska', 1.4], ['atmos', 1.4],
   ['membership rewards', 1.5], ['ultimate rewards', 1.5], ['thankyou', 1.3], ['capital one', 1.3],
   ['american express', 1.5], ['amex', 1.5],
   ['cash', 100], ['miles', 1.3], ['points', 1.3],
