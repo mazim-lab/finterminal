@@ -25,6 +25,50 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "Gigabyte 27-inch QHD 240Hz QD-OLED gaming monitor (GO27Q24A)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/gigabyte-go27q24a-27-qd-oled-240-hz-qd-oled/p/N82E16824012118",
+    price: "$439.99",
+    was: "$649.99",
+    blurb:
+      "A good QD-OLED is the kind of screen you notice the second it lights up, and Gigabyte has this 27 inch one down to $439.99 from $649.99, sold and shipped by Newegg. The GO27Q24A is a sharp QHD panel with the perfect inky blacks and vivid colour that make games and movies look special, a very quick 240Hz refresh with a near instant response time, and both HDMI 2.1 and DisplayPort inputs so it plays nicely with a console or a PC. One honest note so you buy clear eyed: OLED panels can be prone to burn in over years if you leave the same taskbar or logo parked on screen all day, so it is happiest as a gaming and media screen rather than a static spreadsheet workhorse, though Gigabyte builds in screen care features to help with exactly that. For the right desk, this is a lot of premium panel for the money.",
+    category: "Electronics",
+    posted: "Aug 29, 2026",
+  },
+  {
+    title: "ASRock Phantom Gaming PG-750G 750W ATX 3.1 fully modular power supply",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asrock-atx3-1-pcie5-1-750-w-cybenetics-gold-power-supply-black-pg-750g/p/N82E16817955007",
+    price: "$99.99",
+    was: "$179.99",
+    blurb:
+      "A good power supply is the quiet foundation a build sits on for a decade, so paying less for a better one is money well spent, and Newegg has the ASRock Phantom Gaming PG-750G down to $99.99 from $179.99, a clean 44 percent off. It is a proper modern 750W unit with 80 Plus Gold efficiency, fully modular cabling, the newer ATX 3.1 standard and a native 12V-2x6 cable for a current graphics card, plus a long ten year warranty that tells you ASRock expects it to last. Two honest notes so nobody buys wrong: this only makes sense if you are building or upgrading a desktop, and 750W is a sensible amount of power for most mid range builds, so check it suits your graphics card before you commit. And while it is sold and shipped by Newegg this one ships from the United States, so give it a little longer to arrive. If you are putting a machine together though, this is a lot of power supply for the money.",
+    category: "Electronics",
+    posted: "Aug 29, 2026",
+  },
+  {
+    title: "Logitech G PRO X wired gaming headset",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/logitech-g-pro-x-981-000817-black-usb/p/N82E16826197345",
+    price: "$119.99",
+    was: "$159.99",
+    blurb:
+      "A good headset makes games and calls alike feel clearer, and Logitech has its G PRO X down to $119.99 from $159.99, sold and shipped by Newegg with free 30 day returns. It is a well built over ear set with soft memory foam earpads, a detachable boom mic tuned for clear voice chat, and the kind of comfortable fit you can wear through a long session, which is why it sits at the top of Newegg's headset best sellers. One honest note so you buy for the right reason: this is the wired version, so you plug in rather than roam free, which most people at a desk never mind and which is exactly why it costs less than the wireless model. For clear sound on a PC or a console though, it is a lot of headset for the money.",
+    category: "Electronics",
+    posted: "Aug 29, 2026",
+  },
+  {
+    title: "MSI FORGE GK600 TKL wireless hot-swap mechanical keyboard",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/p/N82E16823167074",
+    price: "$84.99",
+    was: "$139.99",
+    blurb:
+      "A proper mechanical keyboard is one of those upgrades you feel under your fingers every day, and MSI has its FORGE GK600 tenkeyless down to $84.99 from $139.99, a clean 39 percent off, sold and shipped by Newegg. It packs a lot for the price with smooth linear switches, a hot swap design so you can change the feel later without any soldering, durable PBT keycaps that will not go shiny in a year, and three ways to connect over a low lag 2.4GHz dongle, Bluetooth, or USB-C. One honest note so you buy for the right reason: a tenkeyless layout drops the dedicated number pad to save desk space, which most people never miss but which matters if you punch in numbers all day, so a full size board may suit you better there. For a wireless everyday and gaming keyboard though, this is a lot of keyboard for the money.",
+    category: "Electronics",
+    posted: "Aug 29, 2026",
+  },
+  {
     title: "MSI MAG274UPDF 27-inch 4K 160Hz Mini-LED gaming monitor",
     merchant: "Newegg",
     url: "https://www.newegg.ca/p/N82E16824475524",
