@@ -448,6 +448,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
   },
 
+  {
+    path: "/travel/sweet-spots/alaska-starlux-business-taipei-75k",
+    title: "Alaska sweet spot: Starlux business class to Taipei from about 75,000 Atmos points, no fuel surcharges",
+    dek: "Alaska's Mileage Plan is now Atmos Rewards, but it still prices partner awards off a fixed distance chart with no fuel surcharges, so a fresh, distinct sweet spot is a lie-flat Starlux suite from the US West Coast to Taipei at a saver floor of about 75,000 points one-way, with economy at 37,500.",
+    section: "Sweet spot",
+    tags: ["travel", "alaska", "points", "award-booking", "business-class", "alliances"],
+  },
+
   // News items
   {
     path: "/news/aeroplan-5x-points-november-economy-flights-worldwide-august-27",
