@@ -25,6 +25,39 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "ASUS ProArt PA278QV 27-inch WQHD IPS monitor",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/asus-pa278qv-27-wqhd/p/N82E16824281062",
+    price: "$259.99",
+    was: "$349.99",
+    blurb:
+      "A colour accurate monitor is a different kind of tool than a fast gaming panel, and Newegg has the ASUS ProArt PA278QV down to $259.99 from $349.99, sold and shipped by Newegg. This is the screen for anyone who edits photos, works in design, or just wants text and colour that stay honest all day: a sharp 27 inch QHD IPS panel that ASUS calibrates at the factory to cover the sRGB and Rec. 709 colour spaces, plus a proper stand that raises, tilts, pivots, and swivels so you can set it exactly where your neck wants it. One honest note so you buy clear eyed: this is a 75Hz panel tuned for accuracy rather than the high refresh rates gamers chase, so if fast motion in shooters is your priority a gaming monitor suits you better, but for creative work and everyday clarity this is a lot of monitor for the money.",
+    category: "Electronics",
+    posted: "Sep 2, 2026",
+  },
+  {
+    title: "MONTECH HyperFlow ARGB 360 white all-in-one liquid CPU cooler",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/montech-liquid-cooling-system-intel-lga115x-1200-1700-20xx-amd-am3-am4-am5-white/p/N82E16835988005",
+    price: "$56.09",
+    was: "$129.99",
+    blurb:
+      "If your desktop runs hot and loud when it works hard, a big 360mm liquid cooler is one of the nicer quality of life upgrades, and Newegg has the MONTECH HyperFlow ARGB 360 in white down to $56.09 from $129.99, a striking 56 percent off. The large radiator pulls heat off the processor far better than a small stock cooler, which keeps the chip running fast under load and lets the fans settle to a hush instead of roaring through a game or a big export, and the three ARGB fans give a bright build a bit of glow. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop and your case has room for a 360mm radiator, so check your clearance and socket support first. It is a part for a build, not a plug and play gadget for a laptop or a non PC household. If you are putting a machine together though, this is a lot of cooler for very little money.",
+    category: "Electronics",
+    posted: "Sep 2, 2026",
+  },
+  {
+    title: "TP-Link Archer TXE72E AXE5400 Wi-Fi 6E PCIe adapter (open box)",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/tp-link-archer-txe72e-pci-express/p/N82E16833704664R",
+    price: "$31.99",
+    was: "$69.99",
+    blurb:
+      "If your desktop still leans on an old wireless card or a slow USB dongle, this is a cheap and genuinely useful upgrade, with Newegg listing the TP-Link Archer TXE72E down to $31.99 from $69.99. It is a Wi-Fi 6E PCIe card that adds the newer, less crowded 6GHz band for faster and steadier wireless on a modern router, plus Bluetooth 5.3 for your headset and controller, and it slots into a spare PCIe lane inside the case. Two honest notes so you buy clear eyed: this one is an open box item marked final sale, so it cannot be returned, which is the trade for the low price, so test it the day it lands. And to actually reach those 6GHz speeds you need a Wi-Fi 6E router, though it still works fine on older routers at their own speeds. For a wired feeling wireless upgrade on a desktop though, it is real value.",
+    category: "Electronics",
+    posted: "Sep 2, 2026",
+  },
+  {
     title: "Gigabyte 27-inch QHD 240Hz QD-OLED gaming monitor (GO27Q24A)",
     merchant: "Newegg",
     url: "https://www.newegg.ca/gigabyte-go27q24a-27-qd-oled-240-hz-qd-oled/p/N82E16824012118",
