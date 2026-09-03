@@ -458,6 +458,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/td-aeroplan-cards-welcome-bonus-increase-september-1",
+    title: "TD raises the welcome bonuses on its Aeroplan cards from September 1, lifting the Visa Infinite to 50,000 points and the Privilege to 100,000",
+    section: "News",
+    tags: ["news", "cards", "welcome-bonuses", "aeroplan", "points"],
+  },
+  {
     path: "/news/aeroplan-5x-points-november-economy-flights-worldwide-august-27",
     title: "Air Canada opens a 5x Aeroplan points bonus on economy flights taken in November, if you book the trip by September 3",
     section: "News",
