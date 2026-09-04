@@ -456,6 +456,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "alaska", "points", "award-booking", "business-class", "alliances"],
   },
 
+  {
+    path: "/travel/sweet-spots/flying-blue-air-france-tahiti-lax-economy-35k",
+    title: "Flying Blue sweet spot: Air France nonstop to Tahiti from about 35,000 miles, plus fixed-price island hops to Bora Bora",
+    dek: "Flying Blue prices awards dynamically with no fixed chart, but Air France's nonstop from Los Angeles to Papeete is the durable way to reach Tahiti on points, from about 35,000 miles one-way in economy and around 90,000 in business, and Air Tahiti's fixed-price inter-island awards run Papeete to Bora Bora for about 15,000 miles plus roughly $22.",
+    section: "Sweet spot",
+    tags: ["travel", "flying-blue", "amex", "points", "award-booking", "business-class"],
+  },
+
   // News items
   {
     path: "/news/td-aeroplan-cards-welcome-bonus-increase-september-1",
