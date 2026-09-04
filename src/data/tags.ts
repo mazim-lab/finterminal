@@ -466,6 +466,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-summer-2027-five-new-destinations-seven-routes-september-3",
+    title: "Air Canada unveils its biggest-ever international expansion for summer 2027, adding Guangzhou, Oslo, Shannon, Nice, Basel, and Dubrovnik across its three hubs",
+    section: "News",
+    tags: ["news", "aeroplan", "travel", "points"],
+  },
+  {
     path: "/news/td-aeroplan-cards-welcome-bonus-increase-september-1",
     title: "TD raises the welcome bonuses on its Aeroplan cards from September 1, lifting the Visa Infinite to 50,000 points and the Privilege to 100,000",
     section: "News",
