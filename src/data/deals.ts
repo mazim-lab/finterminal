@@ -25,6 +25,28 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "Sennheiser Momentum 4 Wireless noise-cancelling headphones",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/sennheiser-momentum-4-black-over-the-ear/p/N82E16826106921",
+    price: "$299.95",
+    was: "$499.99",
+    blurb:
+      "If you have been meaning to buy a proper pair of over ear headphones and keep flinching at the price, this is a comfortable moment to do it, with Newegg listing the Sennheiser Momentum 4 at $299.95 from $499.99, sold and shipped by Newegg with free 30 day returns. Sennheiser is a name people trust for sound, and this pair backs it up with rich, natural audio, adaptive noise cancelling that hushes a busy house or a long flight, and a huge 60 hour battery that means you rarely think about charging. One honest note so you buy clear eyed: the Momentum 4 is tuned first for sound and battery, so its noise cancelling is very good but not quite the last word in silence that the Sony and Bose flagships chase, and the touch controls take a day or two to get used to. For everyday listening, calls, and travel though, this is a lot of premium headphone for the money.",
+    category: "Electronics",
+    posted: "Sep 5, 2026",
+  },
+  {
+    title: "ViewSonic VX3218C-2K 32-inch QHD 180Hz curved gaming monitor",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/viewsonic-32/p/0JC-0015-008K5",
+    price: "$271.99",
+    was: "$399.99",
+    blurb:
+      "If your desk has room for something bigger, a 32 inch QHD screen makes both a work day and a game night feel roomier, and Newegg has the ViewSonic VX3218C-2K down to $271.99 from $399.99, a clean 32 percent off, sold and shipped by Newegg. You get a sharp 2560x1440 resolution across a large 31.5 inch panel, a quick 165Hz refresh that runs up to 180Hz over DisplayPort, a gentle 1500R curve that wraps the picture a little toward you, and FreeSync Premium to keep games from tearing. One honest note so you buy clear eyed: this is a VA panel, which gives lovely deep blacks and contrast but trades away a touch of the wide angle colour consistency you would get from IPS, and Newegg gives you a short 15 day return window, so if you want to try it, decide inside that window. For a big, immersive everyday screen though, this is a lot of monitor for the money.",
+    category: "Electronics",
+    posted: "Sep 5, 2026",
+  },
+  {
     title: "ASUS ProArt PA278QV 27-inch WQHD IPS monitor",
     merchant: "Newegg",
     url: "https://www.newegg.ca/asus-pa278qv-27-wqhd/p/N82E16824281062",
