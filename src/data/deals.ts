@@ -578,6 +578,8 @@ export const DEALS: Deal[] = [
       "If you have been meaning to put a small fridge in the garage, the basement, a dorm, or a kid's rec room, Costco has a Hisense 3.3 cubic foot compact one down to $99.97 from the $149.99 to $169.99 it sold at before. It is Energy Star rated, has a little 2L beverage shelf and adjustable legs, and at a hundred bucks it is about as cheap as a name brand mini fridge gets. Two honest notes before you grab one. This is a Costco Last Chance clearance, which means there is no set end date and once the stock is gone it just disappears, so do not sit on it. And it is a genuinely small 3.3 cubic foot fridge, a spare or a bar fridge, not something to feed a family, and it happens to wear a World Cup Canada design with a trophy sticker in the box if that is your thing.",
     category: "Appliances",
     posted: "Jul 7, 2026",
+    expires: "ended Sep 3",
+    expiresAt: "2026-09-03",
   },
   {
     title: "RYOBI ONE+ 18V 1-gallon electric sprayer (tool only)",
