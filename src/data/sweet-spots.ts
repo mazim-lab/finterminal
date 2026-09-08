@@ -47,6 +47,47 @@ export const ROTATION = [
 // ROTATION. See docs/CRON_RUNBOOK.md section 5.
 export const SWEET_SPOTS: SweetSpot[] = [
   {
+    slug: "aeroplan-vancouver-tokyo-business-55k",
+    program: "Aeroplan",
+    title: "Aeroplan sweet spot: Vancouver to Tokyo in business class for about 55,000 points one-way, nonstop and surcharge-free",
+    dek: "Aeroplan prices flights between North America and the Pacific off a fixed distance chart, so the durable sweet spot for Western Canadians is a lie-flat seat from Vancouver or Calgary to Tokyo for about 55,000 points one-way in business, with economy near 35,000, and the reason it sings is that it is a nonstop from home with no fuel surcharge attached.",
+    read: "5 min read",
+    date: "Sep 2026",
+    lastChecked: "2026-09-08",
+    body:
+      "Aeroplan is the home currency for most Canadian points collectors, and the thing that keeps it there is a fixed, distance based award chart in a world that has mostly gone dynamic, paired with a policy of not passing along the carrier-imposed fuel surcharges that quietly sink the value on some other programs. We have already walked through the marquee Toronto to Europe business award, the quieter business run down to South America, and the everyday short hop across North America, so this time the target is a proper bucket-list trip that Western Canadians can take without ever leaving home to start it: a lie-flat seat from Vancouver to Tokyo. The figures below are an example of how the chart works, not a quote for any date, so always confirm the live price when you search.\n\nHere is how it works. Aeroplan prices flights between the North America and Pacific zones off a distance based chart, and Vancouver or Calgary to Tokyo or Osaka falls in the shortest 0 to 5,000 mile band, which puts a one-way business seat at about 55,000 points and economy at roughly 35,000. Air Canada flies the route nonstop from Vancouver, and ANA, its Star Alliance partner, does too, so Aeroplan can book either one at that chart price. This is one of the sweet spots that survived the June 2026 repricing: Aeroplan surgically raised some longer Europe-to-Asia and US-to-deep-Asia partner bands, but left the Western-Canada-to-Japan short band alone, so 55,000 in business held. Treat the numbers as the framework and price your own dates, because the chart does get adjusted over time.\n\nHere is the cents-per-point math on a realistic business booking. Say a one-way Vancouver to Tokyo business fare would run about $4,000 in cash, a normal price on this long trans-Pacific leg, and the award books for 55,000 points plus roughly $75 in taxes and fees, which stay modest because Aeroplan adds no fuel surcharge and the Canadian and Japanese departure taxes are light. That works out to (4000 minus 75) divided by 55000, times 100, which is about 7.1 cents per point. Anything north of about 2 cents is a good use of Aeroplan, so a flat bed to Japan at this price is your points doing genuinely excellent work. Economy prices cleanly too: on a roughly $800 one-way cash fare booked for 35,000 points plus about $75, that is (800 minus 75) divided by 35000, times 100, or about 2.1 cents per point, which makes economy the more reliably bookable version of the trip. Prices move, so confirm the live fare when you book.\n\nA couple of things make it sing. The best part for Western Canadians is that this is a nonstop from home, so unlike most of the marquee sweet spots there is no positioning flight to a US gateway to price in first. The no-surcharge policy is the durable edge, because the same Tokyo seat booked through some other programs can carry a few hundred dollars in carrier fees, while Aeroplan keeps the cash portion to those light taxes. Both cabins are a proper lie-flat product, Air Canada's Signature Class pods and ANA's business seat, so this is a real bed for the overnight crossing. And the earning is the easy part, which sets Aeroplan apart from the US programs where building a balance is the chore: Amex Membership Rewards transfers to Aeroplan at a clean 1 to 1, and the TD, CIBC, and Amex Aeroplan co-branded cards earn it directly, so almost every points collector here already has a way in.\n\nNow the honest caveats, and there are a few. The 55,000 point price is tied to the distance band, and that band only reaches Tokyo from Western Canada: from Toronto or Montreal the flown distance crosses into the 5,001 to 7,500 mile band, which prices business closer to 85,000 points, so this particular sweet spot rewards a Vancouver or Calgary start and is less of a bargain from the east. Saver business space is genuinely limited on a route this popular, so treat 55,000 as an alert target to pounce on rather than a number you can count on, search a wide range of dates, and lean on the roughly 35,000 point economy seat, which has much better availability and prices just as cleanly. Peak summer, cherry-blossom season, and the year-end holidays see the cheap seats vanish first, so book ahead and stay flexible. And transfers into Aeroplan are one-way, so only move Amex points once you have found the seat you want, and price your specific dates before you assume a figure, because the Aeroplan chart does get adjusted.",
+    href: "/travel/aeroplan-sweet-spots",
+    hrefLabel: "Full Aeroplan sweet spots guide",
+    shortAnswer:
+      "Aeroplan prices flights between North America and the Pacific off a fixed distance chart, so the durable sweet spot for Western Canadians is a lie-flat seat from Vancouver or Calgary to Tokyo, which sits in the shortest 0 to 5,000 mile band at about 55,000 points one-way in business and roughly 35,000 in economy, plus only about $75 in taxes because Aeroplan adds no fuel surcharge. On a roughly $4,000 one-way business cash fare that is about 7.1 cents per point, well above the 2 cents that already counts as a good use of Aeroplan, and it is a nonstop from home on Air Canada or ANA with no positioning flight to price in. Earning is the easy part for Canadians, since Amex Membership Rewards transfers to Aeroplan at a clean 1 to 1 and the TD, CIBC, and Amex Aeroplan cards earn it directly. The main catches are that the 55,000 band only reaches Tokyo from Western Canada, since from Toronto or Montreal the distance prices closer to 85,000, and that saver business space is limited, so treat 55,000 as an alert target and confirm the live price when you search.",
+    faqs: [
+      {
+        q: "How many Aeroplan points is business class to Tokyo?",
+        a: "From Vancouver or Calgary, about 55,000 Aeroplan points one-way in business class, because the route sits in the shortest 0 to 5,000 mile band of the North America to Pacific chart, with economy on the same route around 35,000. Aeroplan prices this off a fixed distance chart, so treat 55,000 as the framework rather than a promise and confirm the live price when you search.",
+      },
+      {
+        q: "Is Vancouver to Tokyo a good value on Aeroplan points?",
+        a: "Yes, it is one of the best trans-Pacific values Aeroplan offers. On a roughly $4,000 one-way business cash fare booked for 55,000 points plus about $75 in taxes, the math is (4000 minus 75) divided by 55000, times 100, which is about 7.1 cents per point. Anything north of about 2 cents is a good use of Aeroplan, so a flat bed to Japan at this price is your points doing genuinely excellent work.",
+      },
+      {
+        q: "Does Aeroplan charge fuel surcharges on flights to Japan?",
+        a: "No, and that is a big part of the appeal. Aeroplan does not pass along carrier-imposed fuel surcharges on Air Canada or its partners, so the cash portion stays to light Canadian and Japanese departure taxes, often around $75 one-way. The same Tokyo seat booked through some other programs can carry a few hundred dollars in fees.",
+      },
+      {
+        q: "Can I fly this nonstop from Canada?",
+        a: "Yes, and that is the quiet win here. Air Canada flies Vancouver to Tokyo nonstop, and its Star Alliance partner ANA does too, so Aeroplan can book either at the chart price with no positioning flight to a US gateway. That sets it apart from most of the marquee sweet spots, which start from the US.",
+      },
+      {
+        q: "How do Canadians earn Aeroplan points for this?",
+        a: "Earning is the easy part, which sets Aeroplan apart from the US programs. Amex Membership Rewards transfers to Aeroplan at a clean 1 to 1, and the TD, CIBC, and Amex Aeroplan co-branded cards earn it directly, so almost every points collector here already has a way in. Transfers are one-way, so only move Amex points once you have found the seat you want.",
+      },
+      {
+        q: "Why is this sweet spot better from Western Canada?",
+        a: "Because it is tied to the distance band. Vancouver or Calgary to Tokyo falls in the 0 to 5,000 mile band at about 55,000 points in business, but from Toronto or Montreal the flown distance crosses into the 5,001 to 7,500 mile band, which prices business closer to 85,000 points. So this particular sweet spot rewards a Vancouver or Calgary start and is less of a bargain from the east.",
+      },
+    ],
+  },
+  {
     slug: "flying-blue-air-france-tahiti-lax-economy-35k",
     program: "Flying Blue",
     title: "Flying Blue sweet spot: Air France nonstop to Tahiti from about 35,000 miles, plus fixed-price island hops to Bora Bora",

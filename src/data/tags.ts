@@ -463,6 +463,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "flying-blue", "amex", "points", "award-booking", "business-class"],
   },
+  {
+    path: "/travel/sweet-spots/aeroplan-vancouver-tokyo-business-55k",
+    title: "Aeroplan sweet spot: Vancouver to Tokyo in business class for about 55,000 points one-way, nonstop and surcharge-free",
+    dek: "Aeroplan prices flights between North America and the Pacific off a fixed distance chart, so the durable sweet spot for Western Canadians is a lie-flat seat from Vancouver or Calgary to Tokyo for about 55,000 points one-way in business, with economy near 35,000, nonstop from home with no fuel surcharge attached.",
+    section: "Sweet spot",
+    tags: ["travel", "aeroplan", "points", "award-booking", "business-class", "alliances"],
+  },
 
   // News items
   {
