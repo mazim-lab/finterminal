@@ -473,6 +473,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-worldwide-seat-sale-4x-aeroplan-points-september-8",
+    title: "Air Canada kicks off a worldwide seat sale on September 8, pairing discounted base fares with up to 4x bonus Aeroplan points on flights taken through next summer",
+    section: "News",
+    tags: ["news", "aeroplan", "travel", "points"],
+  },
+  {
     path: "/news/air-canada-summer-2027-five-new-destinations-seven-routes-september-3",
     title: "Air Canada unveils its biggest-ever international expansion for summer 2027, adding Guangzhou, Oslo, Shannon, Nice, Basel, and Dubrovnik across its three hubs",
     section: "News",
