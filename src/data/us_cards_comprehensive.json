@@ -1523,9 +1523,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 99,
-    "signup_bonus": 50000,
-    "signup_bonus_formatted": "Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 50000,
+    "signup_bonus": 20000,
+    "signup_bonus_formatted": "Earn Companion Pass® through 2/28/27 and 20,000 bonus points after you spend $3,000 in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 20000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1550,7 +1550,7 @@
       "Gas stations and grocery": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening.",
+    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 20,000 bonus points after you spend $3,000 in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
