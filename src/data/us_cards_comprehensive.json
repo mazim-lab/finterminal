@@ -1621,15 +1621,14 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 149,
-    "signup_bonus": 55000,
-    "signup_bonus_formatted": "Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 55000,
+    "signup_bonus": 30000,
+    "signup_bonus_formatted": "Earn Companion Pass® through 2/28/27 and 30,000 bonus points after you spend $4,000 in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 30000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
       "No foreign transaction fee",
-      "Statement credits",
       "Food delivery credits",
       "Subscription perks",
       "Free first checked bag"
@@ -1649,7 +1648,7 @@
       "Grocery and restaurants": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening.",
+    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 30,000 bonus points after you spend $4,000 in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
