@@ -1081,8 +1081,7 @@
     "key_perks": [
       "Food delivery credits",
       "Statement credits",
-      "No foreign transaction fee",
-      "Travel program credit (NEXUS/Global Entry)"
+      "No foreign transaction fee"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -1093,7 +1092,6 @@
     "earn_rates": {
       "Travel via Chase Travel": "5x",
       "Dining": "3x",
-      "Gas, EV charging, vacation homes": "3x",
       "Online grocery": "3x",
       "Select streaming": "3x",
       "Other travel": "2x",
