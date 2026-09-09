@@ -1309,9 +1309,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 150,
-    "signup_bonus": 50000,
-    "signup_bonus_formatted": "Earn 50,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open.",
-    "signup_bonus_value_usd": 50000,
+    "signup_bonus": 70000,
+    "signup_bonus_formatted": "Earn 70,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open.",
+    "signup_bonus_value_usd": 70000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": "Spend $3,000 in purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
@@ -1336,12 +1336,12 @@
       "trip_cancellation": "1500"
     },
     "earn_rates": {
-      "United Airlines purchases": "3x",
+      "United Airlines purchases": "2x",
       "Dining": "2x",
       "Hotel stays booked with hotel": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 50,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open.",
+    "welcome_bonus": "Earn 70,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
