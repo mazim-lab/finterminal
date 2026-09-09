@@ -1670,9 +1670,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 95,
-    "signup_bonus": 200000,
-    "signup_bonus_formatted": "Earn 4 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 200,000 points) after spending $3,000 on purchases in the first 3 months of account opening. Plus, through 6/30/2027, get up to $100 in statement credits ($50 semi-annually) after spending $500 on eligible airline purchases.",
-    "signup_bonus_value_usd": 200000,
+    "signup_bonus": 250000,
+    "signup_bonus_formatted": "Earn 5 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 250,000 points) + a $100 Airline Credit after spending $3,000 on eligible purchases within 3 months of account opening.",
+    "signup_bonus_value_usd": 250000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1698,7 +1698,7 @@
       "Grocery, gas, and dining": "3x",
       "All other purchases": "2x"
     },
-    "welcome_bonus": "Earn 4 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 200,000 points) after spending $3,000 on purchases in the first 3 months of account opening. Plus, through 6/30/2027, get up to $100 in statement credits ($50 semi-annually) after spending $500 on eligible airline purchases.",
+    "welcome_bonus": "Earn 5 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 250,000 points) + a $100 Airline Credit after spending $3,000 on eligible purchases within 3 months of account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
