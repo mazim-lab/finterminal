@@ -1917,9 +1917,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 149,
-    "signup_bonus": 500,
-    "signup_bonus_formatted": "$500 Offer",
-    "signup_bonus_value_usd": 500,
+    "signup_bonus": 600,
+    "signup_bonus_formatted": "$600 Offer",
+    "signup_bonus_value_usd": 600,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": "Spend $1,000 on purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
@@ -1945,7 +1945,7 @@
       "baggage_delay": "100",
       "purchase_protection": "500"
     },
-    "welcome_bonus": "$500 Offer: $300 Disney Gift Card eGift upon approval + $200 statement credit after you spend $1,000 on purchases in the first 3 months from account opening",
+    "welcome_bonus": "$600 Offer: $300 Disney Gift Card eGift upon approval + $300 statement credit after you spend $1,000 on purchases in the first 3 months from account opening",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
