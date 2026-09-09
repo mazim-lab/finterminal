@@ -2366,7 +2366,7 @@
       "car_rental_insurance": true,
       "travel_medical": false,
       "trip_cancellation": false,
-      "flight_delay": true,
+      "flight_delay": false,
       "mobile_insurance": false,
       "purchase_protection": true,
       "extended_warranty": true,
