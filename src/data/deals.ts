@@ -25,6 +25,17 @@ export interface Deal {
 // to the merchant. Prices below were confirmed on the listed date.
 export const DEALS: Deal[] = [
   {
+    title: "Samsung 990 PRO 2TB PCIe 4.0 NVMe M.2 solid state drive",
+    merchant: "Newegg",
+    url: "https://www.newegg.ca/samsung-2tb-990-pro-nvme-2-0/p/N82E16820147861",
+    price: "$559.97",
+    was: "$874.97",
+    blurb:
+      "If you are building or upgrading a PC right now, storage has turned pricey with the memory shortage, so a genuine markdown on a top tier drive is worth grabbing, and Newegg has the Samsung 990 PRO 2TB down to $559.97 from $874.97, a full 36 percent off, sold and shipped by Newegg. This is Samsung's flagship PCIe 4.0 drive with read speeds up to 7,450MB/s, so games load fast, big files copy quickly, and it carries the steady, reliable reputation that makes it an easy pick for a boot drive or a main library drive. One honest note so you buy clear eyed: this is the bare version without a heatsink, so if your motherboard does not already have its own M.2 heat spreader you will want to add a cheap one or choose the heatsink model, and while SSD prices sit high across the board right now thanks to the memory crunch, this is a strong price in today's market rather than the bargain these were a couple of years ago. For a fast, dependable drive though, it is a lot of storage for the money.",
+    category: "Electronics",
+    posted: "Sep 9, 2026",
+  },
+  {
     title: "Sennheiser Momentum 4 Wireless noise-cancelling headphones",
     merchant: "Newegg",
     url: "https://www.newegg.ca/sennheiser-momentum-4-black-over-the-ear/p/N82E16826106921",
@@ -276,6 +287,7 @@ export const DEALS: Deal[] = [
       "A big 4K OLED is the kind of screen you notice the moment you sit down, and Samsung has its 32 inch Odyssey G8 down to $899.99 from $1,699.99, a clean $800 off. OLED gives you the perfect inky blacks and rich colour that make games and movies look genuinely special, and this one pairs that with a roomy 4K panel, a very quick 240Hz refresh, and both FreeSync Premium Pro and G-Sync support so it plays nicely with either graphics card. It is sold and shipped by Newegg with free 15 day returns. Two honest notes so you buy clear eyed: $900 is still real money and this is squarely a want rather than a need, and OLED panels can be prone to burn in over years if you leave the same taskbar or logo parked on screen all day, so it is happiest as a gaming and media screen rather than a static spreadsheet workhorse. For the right desk though, this is a lot of premium panel for the money.",
     category: "Electronics",
     posted: "Aug 12, 2026",
+    expiresAt: "2026-09-09",
   },
   {
     title: "Logitech Brio 100 Full HD 1080p webcam",
