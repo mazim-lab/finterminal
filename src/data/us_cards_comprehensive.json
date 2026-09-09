@@ -2624,9 +2624,9 @@
     "network": "Visa",
     "card_type": "business",
     "annual_fee": 0,
-    "signup_bonus": null,
-    "signup_bonus_formatted": "$1,000 bonus cash back",
-    "signup_bonus_value_usd": 1000,
+    "signup_bonus": 750,
+    "signup_bonus_formatted": "Earn $750 bonus cash back after you spend $6,000 on purchases in the first 3 months after account opening.",
+    "signup_bonus_value_usd": 750,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2647,7 +2647,7 @@
     "insurance": {
       "purchase_protection": "10000"
     },
-    "welcome_bonus": "$1,000 bonus cash back",
+    "welcome_bonus": "Earn $750 bonus cash back after you spend $6,000 on purchases in the first 3 months after account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
