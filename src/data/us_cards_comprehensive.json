@@ -2963,9 +2963,9 @@
     "network": "Visa",
     "card_type": "business",
     "annual_fee": 199,
-    "signup_bonus": 70000,
-    "signup_bonus_formatted": "Earn 70,000 Bonus Points after you spend $7,000 on purchases in the first 3 months of account opening.",
-    "signup_bonus_value_usd": 70000,
+    "signup_bonus": 60000,
+    "signup_bonus_formatted": "Earn 60,000 Bonus Points after you spend $5,000 on purchases in the first 3 months of account opening.",
+    "signup_bonus_value_usd": 60000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2988,7 +2988,7 @@
       "Fitness club & gym memberships": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 70,000 Bonus Points after you spend $7,000 on purchases in the first 3 months of account opening.",
+    "welcome_bonus": "Earn 60,000 Bonus Points after you spend $5,000 on purchases in the first 3 months of account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
