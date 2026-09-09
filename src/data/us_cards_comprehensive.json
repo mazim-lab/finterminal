@@ -1819,11 +1819,11 @@
     "network": "Mastercard",
     "card_type": "personal",
     "annual_fee": 99,
-    "signup_bonus": 140000,
-    "signup_bonus_formatted": "Earn 140,000 Bonus Points after you spend $3,000 on purchases in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 140000,
+    "signup_bonus": 175000,
+    "signup_bonus_formatted": "Earn 175,000 Bonus Points after you spend $5,000 on purchases in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 175000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": "Spend $3,000 on purchases within the first 3 months of account opening",
+    "welcome_bonus_conditions": "Spend $5,000 on purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Travel program credit (NEXUS/Global Entry)",
@@ -1848,7 +1848,7 @@
       "Travel, dining, gas stations": "5x",
       "All other purchases": "3x"
     },
-    "welcome_bonus": "Earn 140,000 Bonus Points after you spend $3,000 on purchases in the first 3 months from account opening.",
+    "welcome_bonus": "Earn 175,000 Bonus Points after you spend $5,000 on purchases in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
