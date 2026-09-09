@@ -1363,9 +1363,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 350,
-    "signup_bonus": 60000,
-    "signup_bonus_formatted": "Earn 60,000 bonus miles + 500 Premier qualifying points (PQP) after you spend $4,000 on purchases in the first 3 months your account is open.",
-    "signup_bonus_value_usd": 60000,
+    "signup_bonus": 80000,
+    "signup_bonus_formatted": "Earn 80,000 bonus miles + 3,000 Premier qualifying points (PQP) after you spend $4,000 on purchases in the first 3 months your account is open.",
+    "signup_bonus_value_usd": 80000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": "Spend $4,000 on purchases in the first 3 months your account is open",
     "earn_rates_summary": null,
@@ -1391,13 +1391,13 @@
     },
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "4x",
+      "United purchases": "3x",
       "Other travel": "2x",
       "Dining": "2x",
       "Select streaming": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 60,000 bonus miles + 500 Premier qualifying points (PQP) after you spend $4,000 on purchases in the first 3 months your account is open.",
+    "welcome_bonus": "Earn 80,000 bonus miles + 3,000 Premier qualifying points (PQP) after you spend $4,000 on purchases in the first 3 months your account is open.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
