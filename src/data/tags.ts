@@ -480,6 +480,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/chase-air-canada-aeroplan-card-refresh-195-fee-september-10",
+    title: "Chase refreshes its US Air Canada Aeroplan card on September 10, adding automatic 25K status and a bigger welcome offer while doubling the annual fee to $195",
+    section: "News",
+    tags: ["news", "cards", "welcome-bonuses", "aeroplan", "points"],
+  },
+  {
     path: "/news/air-canada-worldwide-seat-sale-4x-aeroplan-points-september-8",
     title: "Air Canada kicks off a worldwide seat sale on September 8, pairing discounted base fares with up to 4x bonus Aeroplan points on flights taken through next summer",
     section: "News",
