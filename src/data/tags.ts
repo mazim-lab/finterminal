@@ -470,6 +470,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "aeroplan", "points", "award-booking", "business-class", "alliances"],
   },
+  {
+    path: "/travel/sweet-spots/avios-jetblue-mint-transcon-qatar-38750",
+    title: "Avios sweet spot: lie-flat JetBlue Mint across the US for a flat 38,750 Avios one-way, surcharge-free through Qatar",
+    dek: "JetBlue sits in no alliance, and of all the Avios programs only Qatar Airways Privilege Club can book it, so the freshest value in the currency is a lie-flat JetBlue Mint seat between New York or Boston and Los Angeles or San Francisco for a fixed 38,750 Avios one-way, plus only about $5.60 in tax because JetBlue never adds a fuel surcharge.",
+    section: "Sweet spot",
+    tags: ["travel", "avios", "rbc-avion", "points", "award-booking", "business-class", "transfers"],
+  },
 
   // News items
   {
