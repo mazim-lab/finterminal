@@ -480,6 +480,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-buy-points-110-percent-bonus-september-11-25",
+    title: "Aeroplan reopens its buy-points sale on September 11 with a targeted bonus of up to 110 percent, running through September 25",
+    section: "News",
+    tags: ["news", "aeroplan", "points", "transfers"],
+  },
+  {
     path: "/news/chase-air-canada-aeroplan-card-refresh-195-fee-september-10",
     title: "Chase refreshes its US Air Canada Aeroplan card on September 10, adding automatic 25K status and a bigger welcome offer while doubling the annual fee to $195",
     section: "News",
