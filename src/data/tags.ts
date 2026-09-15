@@ -478,6 +478,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "avios", "rbc-avion", "points", "award-booking", "business-class", "transfers"],
   },
 
+  {
+    path: "/travel/sweet-spots/westjet-companion-voucher-premium-transcontinental-219",
+    title: "WestJet sweet spot: put a companion in the Premium cabin across Canada for a fixed $219, where a peak transcon fare runs four figures",
+    dek: "WestJet points are a flat cent each with no award chart, so the quietly durable Premium play is the RBC World Elite companion voucher used in the Premium cabin within Canada and the continental US, capping a second premium-economy base fare at a fixed $219 on the long transcontinental runs where a peak Premium fare climbs into four figures.",
+    section: "Sweet spot",
+    tags: ["travel", "westjet", "points", "travel-cards", "cards"],
+  },
+
   // News items
   {
     path: "/news/aeroplan-buy-points-110-percent-bonus-september-11-25",
