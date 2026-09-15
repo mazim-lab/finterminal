@@ -488,6 +488,18 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/rbc-avion-cathay-asia-miles-15-percent-transfer-bonus-september-14",
+    title: "RBC Avion opens a 15 percent transfer bonus to Cathay Pacific Asia Miles from September 14, running through October 16",
+    section: "News",
+    tags: ["news", "rbc-avion", "transfers", "points", "business-class"],
+  },
+  {
+    path: "/news/air-canada-signature-suite-toronto-temporary-closure-september-14",
+    title: "Air Canada is temporarily closing its Toronto Signature Suite on September 30 for an expansion, reopening the space in December with the full build finishing in early 2027",
+    section: "News",
+    tags: ["news", "aeroplan", "travel", "lounges"],
+  },
+  {
     path: "/news/aeroplan-buy-points-110-percent-bonus-september-11-25",
     title: "Aeroplan reopens its buy-points sale on September 11 with a targeted bonus of up to 110 percent, running through September 25",
     section: "News",
