@@ -4,7 +4,7 @@ This document tells an automated agent (or a human) exactly how to refresh each
 section of the site. It is self-contained: a cloud cron agent that has cloned this
 repo should be able to follow any job below without prior context.
 
-Last verified: 2026-07-29.
+Last verified: 2026-09-16.
 
 ---
 
@@ -37,13 +37,30 @@ Last verified: 2026-07-29.
     `.next/types` and retry.
 - **Cost.** Use the user's Claude Max plan, not API credits.
 
+### Rules for every PR-opening routine
+
+- **Never schedule a reminder or a self-check-in to babysit a PR.** Once a routine has
+  opened its PR, it is done. The next scheduled run is the only follow-up. Do not set a
+  timer, do not queue a second agent to come back and look at it, and do not open a
+  "check on PR #N" task. The owner merges on their own schedule.
+- **Dedupe before you propose.** Any routine that proposes work on a branch must first
+  list the existing open branches of its own family (for the link sentinel:
+  `link-sentinel-*`) and read what each one already proposes. Never re-propose something
+  an open branch has already proposed. A second branch for the same item is noise, and
+  two branches editing the same lines will conflict on merge.
+- **Link sentinel: never re-propose an already-proposed deal, and always write BOTH
+  `expires` and `expiresAt`.** `expires` is the human label a reader sees (e.g.
+  `"ended Sep 16"`); `expiresAt` is the ISO date (`"2026-09-16"`) the archive split is
+  computed from. One without the other either archives silently with no explanation or
+  prints a label while the deal still shows as live.
+
 ### Cron feasibility (important)
 
 | Job | Cadence | Cloud-cron friendly? | Why |
 |---|---|---|---|
 | Deals | manual (workhorse) + Wed/Sat 06:00 UTC cron `deals-refresh` (added 2026-07-16, direct push since 2026-07-29) | **Yes (cron) + manual** | Manual claude-in-chrome browser session remains the workhorse (2026-06-29 call: RFD paywalls WebFetch with HTTP 402, merchant prices need on-page checks). The `deals-refresh` cron graduated from its PR-only trial (4 runs, Jul 16 to 29) to DIRECT PUSH to `main` on 2026-07-29, like News. Per-deal merchant-page WebFetch verification, drop-on-any-doubt, and zero-deal-is-fine keep unattended production pushes safe; if a push is rejected it falls back to a branch so work is never lost. |
 | News | daily/weekly | **Yes** | WebSearch/WebFetch only |
-| Card data refresh | twice weekly (Sun + Wed) | **Partial** | Issuer pages bot-block `WebFetch`; need the residential/Playwright fetch or the real browser to (re)capture `data/raw/cards/*.md`. The *audit/extraction* over already-captured `.md` files IS cloud-friendly. Every verification run must bump `CARDS_VERIFIED` in `src/data/cards.ts`, or the homepage `VerifiedStamp` (cadenceDays=14) goes stale/red after 14 days. |
+| Card data refresh | twice weekly (Sun + Wed) | **Partial, best-effort, report-only** | Issuer pages bot-block `WebFetch`, and `data/raw/` is gitignored, so the golden sources are simply absent from a cloud checkout. The cloud run can only confirm what it can reach first-party, and it must NOT bump `CARDS_VERIFIED`. A full-deck verification is the owner's periodic local pass. See §3. |
 | Portfolio | twice weekly | **No — stays manual** | Needs the user's private Wealthsimple CSVs + all-time return %. A cloud cron has no access to these. Keep manual. |
 
 ### How to ship a change (every job ends here)
@@ -62,8 +79,8 @@ Last verified: 2026-07-29.
 - **Prerequisites a runner needs:** `python` and Node/`npm` on PATH. The card-page
   recapture step (§3c) needs a real browser (claude-in-chrome) or the Playwright pipeline
   — **a cloud cron has neither**, and issuer pages bot-block `WebFetch`. If a refresh needs
-  new `.md` captures, the cron should STOP and open a task for the user rather than fetch
-  with WebFetch.
+  new `.md` captures, the cron should STOP and say so in its run output rather than fetch
+  with WebFetch. It does not commit a branch, a PR, or a report file to say it stopped (§3).
 
 To ship a data update (the News, Sweet-spot, and Deals crons all AUTO-PUBLISH to production by
 pushing `main` directly; the Deals `deals-refresh` cron graduated from its PR-only trial to
@@ -229,12 +246,23 @@ Two data files: `src/data/canadian_cards_comprehensive.json` (CA, 131 cards) and
 `src/data/us_cards_comprehensive.json` (US, 63 cards). Normalization + display logic is
 in `src/data/cards.ts`; point valuations in `src/data/point-valuations.ts`.
 
-**Runs Sun + Wed, and MUST bump `CARDS_VERIFIED`.** This is a twice-weekly verification
-routine, not a quarterly one. The homepage proof strip renders a public "cards re-verified"
-stamp via `<VerifiedStamp date={CARDS_VERIFIED} cadenceDays={14} ...>` with copy that reads
-"on the twice-weekly playbook". After 14 days that stamp goes stale (renders red), so every
-verification run MUST bump `CARDS_VERIFIED` in `src/data/cards.ts` to the run date, even when
-no card values changed. The stamp is a promise to readers that the data was checked recently.
+**The cloud cron is best-effort and report-only by default.** It runs Sun + Wed, but it is
+not what keeps the stamp fresh. `data/raw/` is gitignored, so the golden `.md` sources are
+absent from a cloud checkout and most of the deck is simply unverifiable there. So the cloud
+run does what it honestly can: confirm whatever it can reach first-party, and stop. A run
+that source-confirms nothing leaves **no trace at all**: no branch, no PR, no report file,
+no commit. An empty run is a correct run, not a failure, and it is better than a paper trail
+that implies work that did not happen.
+
+**`CARDS_VERIFIED` is bumped ONLY on a genuine full-deck verification.** In practice that
+means the owner's periodic LOCAL pass, which has the golden sources and the residential
+fetch (`scrapers/fetch_render.py` plus the targets file). The homepage proof strip renders a
+public "cards re-verified" stamp via `<VerifiedStamp date={CARDS_VERIFIED} cadenceDays={14} ...>`,
+and the `/cards` explorer renders the same constant with the same 14-day window. **An
+unverified bump is forbidden.** Moving the date without having actually re-checked the deck
+turns a promise to readers into a lie, and a stale-looking stamp is far better than a fresh
+one that is not true. If the stamp is going red and no full pass has happened, the fix is to
+run the pass, not to touch the date.
 
 **Golden source per card (use these, NOT the raw scraper dicts):**
 - **CA cards:** `data/raw/cards/<slug>.md` — real issuer pages (markitdown; image-heavy,
@@ -246,6 +274,16 @@ no card values changed. The stamp is a promise to readers that the data was chec
 - **`scrapers/detail_cache/*.txt` has many junk duplicate files** (identical md5/size
   across unrelated cards). Always prefer the `.md` source for CA. Detect dupes by
   grouping files on size/md5 before trusting them.
+
+> **Warning: treat `scrapers/detail_cache/` as a stale, partly-contaminated archive.**
+> Its contents were captured back in Feb-Mar 2026, so every figure in it is months old.
+> Worse, **68 of the 203 files are byte-identical duplicate blobs**: a file named for one
+> card holds a completely different card's page (the biggest group is 23 files sharing a
+> single Amex login wall). Before you trust any file, group the directory by md5 and then
+> read the file and confirm the page text names the card you think you are reading. A
+> filename is not evidence. And **never let this cache overwrite a correction that is
+> newer than the cache**. If the stored value was fixed after these files were captured,
+> the stored value wins and the cache is the thing that is wrong.
 
 ### 3a. Welcome bonuses, annual fees, FX fee, features
 
