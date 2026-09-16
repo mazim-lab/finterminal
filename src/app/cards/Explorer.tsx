@@ -329,7 +329,7 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
                               </div>
                             )}
                             <div className="rl verify">
-                              <VerifiedStamp date={CARDS_VERIFIED} verb="CHECKED" />
+                              <VerifiedStamp date={CARDS_VERIFIED} cadenceDays={14} verb="CHECKED" />
                               <span className="dots" />
                               <span className="note">same formula for every card</span>
                             </div>

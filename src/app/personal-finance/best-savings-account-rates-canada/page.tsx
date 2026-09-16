@@ -10,7 +10,7 @@ import { Comments } from "@/components/Comments";
 export const metadata = {
   title: "Best high-interest savings account (HISA) rates in Canada | FinTerminal",
   description:
-    "A clear, honest look at the best everyday high-interest savings account rates in Canada, from EQ Bank and Wealthsimple to Neo, Saven, and Oaken. Rates as of August 2026, with the CDIC coverage you actually get and the promo-rate traps to watch.",
+    "A clear, honest look at the best everyday high-interest savings account rates in Canada, from EQ Bank and Wealthsimple to Neo, Saven, and Oaken. Rates as of September 2026, with the CDIC coverage you actually get and the promo-rate traps to watch.",
   ...ogMeta("Best high-interest savings account (HISA) rates in Canada", "Personal finance"),
 };
 
@@ -26,7 +26,7 @@ const TOC = [
 const FAQ = [
   {
     q: "What is the best high-interest savings account rate in Canada right now?",
-    a: "As of August 2026, the best everyday (non-promotional) rates from mainstream providers sit roughly in the 2.75 to 2.85 percent range, from names like Saven Financial, Oaken, and Neo, or from EQ Bank if you set up a qualifying direct deposit. Short-term promotional offers for new clients run higher, around 4.5 to 4.6 percent at Simplii and Tangerine, but those drop back to a much lower rate after a few months. Rates change often, so always confirm the current number on the provider's own page before you move money.",
+    a: "As of September 2026, the best everyday (non-promotional) rates from mainstream providers sit roughly in the 2.75 to 2.85 percent range, from names like Saven Financial, Oaken, and Neo, or from EQ Bank if you set up a qualifying direct deposit. Short-term promotional offers for new clients run higher, around 4.5 to 4.6 percent at Simplii and Tangerine, but those drop back to a much lower rate after a few months. Rates change often, so always confirm the current number on the provider's own page before you move money.",
   },
   {
     q: "Are promotional savings rates worth chasing?",
@@ -92,15 +92,15 @@ export default function BestSavingsAccountRatesPage() {
           <div className="docmeta">
             <span className="gd">PERSONAL FINANCE</span><span className="sep">·</span>
             <span>about 9 min read</span><span className="sep">·</span>
-            <span>Rates as of August 2026; general info, not advice</span><span className="sep">·</span>
-            <VerifiedStamp date="2026-08-10" cadenceDays={30} />
+            <span>Rates as of September 2026; general info, not advice</span><span className="sep">·</span>
+            <VerifiedStamp date="2026-09-16" cadenceDays={30} />
           </div>
           <ArticleTags path="/personal-finance/best-savings-account-rates-canada" />
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p style={{ margin: 0 }} className="sub">
-              As of August 2026, the best everyday high-interest savings rates from mainstream Canadian providers
+              As of September 2026, the best everyday high-interest savings rates from mainstream Canadian providers
               land roughly in the 2.75 to 2.85 percent range, from names like Saven Financial, Oaken, and Neo, or
               from EQ Bank if you add a qualifying direct deposit. New-client promotional rates run higher, around
               4.5 to 4.6 percent at Simplii and Tangerine, but they expire after a few months and then fall well
@@ -126,7 +126,7 @@ export default function BestSavingsAccountRatesPage() {
             lower rate. Both are valid, and knowing which game you are playing is most of the decision.
           </p>
           <p>
-            The figures below come from each provider&apos;s own rate pages, checked in August 2026. Where a
+            The figures below come from each provider&apos;s own rate pages, checked in September 2026. Where a
             provider loads its everyday rate dynamically and we could not confirm an exact number, we say so
             plainly rather than guess. A savings site that prints a wrong rate is worse than useless, so we would
             rather describe something qualitatively than invent a digit.
@@ -135,7 +135,7 @@ export default function BestSavingsAccountRatesPage() {
           {/* TABLE */}
           <div id="table" className="cd-sec" style={{ scrollMarginTop: 70 }}>The rates, side by side</div>
           <p>
-            Here is where the mainstream options stand as of August 2026. Everyday means the ongoing rate with no
+            Here is where the mainstream options stand as of September 2026. Everyday means the ongoing rate with no
             strings, unless a condition is noted. Promotional means a temporary rate, usually for new clients
             only, that reverts afterward.
           </p>
@@ -157,9 +157,9 @@ export default function BestSavingsAccountRatesPage() {
             <div className="kvrow">
               <div className="kvk">Oaken Financial, Savings Account</div>
               <div className="kvv">
-                Around <strong>2.80%</strong> everyday at the time of writing. Deposits are held with Home Bank
-                and Home Trust, both CDIC members. Confirm the live figure on Oaken&apos;s savings page, since it
-                loads dynamically.
+                <strong>2.80%</strong> everyday, and the same 2.80% on the TFSA, RSP, and spousal RSP savings
+                accounts. Deposits are held with Home Bank and Home Trust, both CDIC members. Oaken&apos;s own
+                rate page is the place to confirm the live figure before you move money.
               </div>
             </div>
             <div className="kvrow">
@@ -220,9 +220,10 @@ export default function BestSavingsAccountRatesPage() {
           <div className="cd-note">
             <div className="cap">Rates change; this is a snapshot</div>
             <p style={{ margin: 0 }} className="sub">
-              Every number above was checked in August 2026 against the provider&apos;s own materials, but everyday
-              rates move with the Bank of Canada and promotional rates expire on fixed dates. Treat this as a map
-              of the landscape, not a live quote. Before you move a dollar, open the provider&apos;s own rate page
+              Every number above was re-checked in September 2026 against the provider&apos;s own materials, with the
+              single exception of the Tangerine promotional rate, whose page still hides its figures behind
+              placeholders. Everyday rates move with the Bank of Canada and promotional rates expire on fixed
+              dates, so treat this as a map of the landscape, not a live quote. Before you move a dollar, open the provider&apos;s own rate page
               and confirm the current figure.
             </p>
           </div>

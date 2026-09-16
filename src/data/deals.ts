@@ -157,17 +157,6 @@ export const DEALS: Deal[] = [
     posted: "Aug 26, 2026",
   },
   {
-    title: "ASUS TUF Gaming 27-inch QHD 180Hz Fast IPS monitor (VG27AQ3A)",
-    merchant: "Newegg",
-    url: "https://www.newegg.ca/asus-vg27aq3a-27-qhd-180-hz-tuf-gaming-fast-ips/p/N82E16824281271",
-    price: "$159.99",
-    was: "$299.99",
-    blurb:
-      "If your desk still has a basic 1080p screen, jumping to a proper 27 inch QHD gaming panel for $159.99 is genuinely good value, down from $299.99, a clean 46 percent off. Newegg has the ASUS TUF Gaming VG27AQ3A, sold and shipped by Newegg, and it keeps the things that matter with a sharp 2560x1440 resolution, a quick 180Hz refresh, a Fast IPS panel that holds colours honest from any angle, and both FreeSync Premium and G-Sync support so it plays nicely with either graphics card. One honest note so you buy clear eyed: the built in speakers are there for convenience and not much more, so plan on headphones or desk speakers, and Newegg gives you a short 15 day return window, so if you want to try it, decide inside that window. For a crisp everyday and gaming screen though, this is a lot of monitor for the money.",
-    category: "Electronics",
-    posted: "Aug 26, 2026",
-  },
-  {
     title: "AMD Ryzen 9 7900X 12-core desktop processor (open box)",
     merchant: "Newegg",
     url: "https://www.newegg.ca/p/N82E16819113769R",
@@ -177,6 +166,8 @@ export const DEALS: Deal[] = [
       "If you are building a serious desktop and do not mind an open box gamble, this is a striking price on a lot of processor, with Newegg listing an open box AMD Ryzen 9 7900X at $349.99, down from $799.99 and sold and shipped by Newegg. It is a twelve core, twenty four thread Zen 4 chip that chews through gaming, heavy multitasking, and content creation alike, so a build around it stays fast for years. Two honest notes so you buy clear eyed: this one is open box and marked final sale, so it cannot be returned, which is the trade you make for the low price, so buy it only if you are comfortable testing it the day it lands. And like all X series Ryzen chips it comes without a cooler and needs an AM5 motherboard and DDR5 memory, so factor those in if you are not already on the platform. For a builder who wants a lot of cores cheaply and will check it over right away, this is a genuinely strong price.",
     category: "Electronics",
     posted: "Aug 26, 2026",
+    expires: "ended Sep 16",
+    expiresAt: "2026-09-16",
   },
   {
     title: "MSI Force GC300 wireless game controller",
@@ -343,6 +334,8 @@ export const DEALS: Deal[] = [
       "If you are setting up a first desk, kitting out a student, or just tired of squinting at a small old screen, a fast 27 inch monitor for $139.99 is genuinely good value, down from $249.99. This ASRock Phantom Gaming panel keeps the specs that actually matter: a roomy 27 inch Full HD screen, a quick 180Hz refresh that keeps scrolling and motion smooth, an IPS panel so colours stay honest from any angle, and a proper swivel and tilt stand rather than a wobbly plastic one. It is sold and shipped by Newegg. One honest note so you buy clear eyed: this is 1080p rather than the sharper QHD, which is the sensible trade at this price and plenty for everyday work, browsing, and casual gaming, but if you want crisper text for photos or spreadsheets all day, the QHD panels are worth the step up. For a solid everyday screen though, this is a lot of monitor for the money.",
     category: "Electronics",
     posted: "Aug 5, 2026",
+    expires: "ended Sep 16",
+    expiresAt: "2026-09-16",
   },
   {
     title: "ASRock B650M Pro RS WiFi AM5 micro-ATX motherboard",
@@ -376,6 +369,8 @@ export const DEALS: Deal[] = [
       "If you or a student in the house just needs a solid everyday laptop, a refurbished business machine is often the smart money, and Newegg has the HP ZBook Firefly 14 G8 down to $349 from $799. This is a real business class 14 inch ultrabook rather than a bargain bin plastic one: a quad core Intel i5, a healthy 16GB of memory, a 256GB SSD, and Windows 11 Pro, which is plenty for browsing, email, documents, video calls, and light work. It is sold and shipped by Newegg rather than a random reseller, which matters a lot on a refurbished buy. Two honest notes so you go in clear eyed: refurbished means it was returned and reconditioned, and it carries a short 90 day warranty and a 15 day return window, so check it over and decide inside that window. And the 11th gen chip is a couple of years old and 256GB fills up fast if you keep a lot of photos or video, so this is the right call for everyday computing rather than heavy creative work.",
     category: "Electronics",
     posted: "Aug 1, 2026",
+    expires: "ended Sep 16",
+    expiresAt: "2026-09-16",
   },
   {
     title: "SIHOO high-back ergonomic mesh office chair with lumbar support",
