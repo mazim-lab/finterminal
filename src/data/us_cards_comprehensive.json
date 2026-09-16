@@ -1015,9 +1015,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 795,
-    "signup_bonus": 100000,
-    "signup_bonus_formatted": "Earn 100,000 points after you spend $6,000 in purchases in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 100000,
+    "signup_bonus": 125000,
+    "signup_bonus_formatted": "Earn 125,000 points after you spend $6,000 in purchases in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 125000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": "Spend $6,000 in purchases in the first 3 months from account opening",
     "earn_rates_summary": null,
@@ -1050,7 +1050,7 @@
       "mobile_insurance": "Yes",
       "trip_cancellation": "10000"
     },
-    "welcome_bonus": "Earn 100,000 points after you spend $6,000 in purchases in the first 3 months from account opening.",
+    "welcome_bonus": "Earn 125,000 points after you spend $6,000 in purchases in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -1081,8 +1081,7 @@
     "key_perks": [
       "Food delivery credits",
       "Statement credits",
-      "No foreign transaction fee",
-      "Travel program credit (NEXUS/Global Entry)"
+      "No foreign transaction fee"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
@@ -1093,7 +1092,6 @@
     "earn_rates": {
       "Travel via Chase Travel": "5x",
       "Dining": "3x",
-      "Gas, EV charging, vacation homes": "3x",
       "Online grocery": "3x",
       "Select streaming": "3x",
       "Other travel": "2x",
@@ -1242,7 +1240,6 @@
     "notes_for_canadians": null,
     "apply_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise",
     "earn_rates": {
-      "Dining, takeout & delivery (6 mo)": "3%",
       "All other purchases": "1.5%"
     },
     "insurance": {
@@ -1312,9 +1309,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 150,
-    "signup_bonus": 50000,
-    "signup_bonus_formatted": "Earn 50,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open.",
-    "signup_bonus_value_usd": 50000,
+    "signup_bonus": 70000,
+    "signup_bonus_formatted": "Earn 70,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open.",
+    "signup_bonus_value_usd": 70000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": "Spend $3,000 in purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
@@ -1339,12 +1336,12 @@
       "trip_cancellation": "1500"
     },
     "earn_rates": {
-      "United Airlines purchases": "3x",
+      "United Airlines purchases": "2x",
       "Dining": "2x",
       "Hotel stays booked with hotel": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 50,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open.",
+    "welcome_bonus": "Earn 70,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -1366,9 +1363,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 350,
-    "signup_bonus": 60000,
-    "signup_bonus_formatted": "Earn 60,000 bonus miles + 500 Premier qualifying points (PQP) after you spend $4,000 on purchases in the first 3 months your account is open.",
-    "signup_bonus_value_usd": 60000,
+    "signup_bonus": 80000,
+    "signup_bonus_formatted": "Earn 80,000 bonus miles + 3,000 Premier qualifying points (PQP) after you spend $4,000 on purchases in the first 3 months your account is open.",
+    "signup_bonus_value_usd": 80000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": "Spend $4,000 on purchases in the first 3 months your account is open",
     "earn_rates_summary": null,
@@ -1394,13 +1391,13 @@
     },
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "4x",
+      "United purchases": "3x",
       "Other travel": "2x",
       "Dining": "2x",
       "Select streaming": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 60,000 bonus miles + 500 Premier qualifying points (PQP) after you spend $4,000 on purchases in the first 3 months your account is open.",
+    "welcome_bonus": "Earn 80,000 bonus miles + 3,000 Premier qualifying points (PQP) after you spend $4,000 on purchases in the first 3 months your account is open.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1495,7 +1492,7 @@
     "apply_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
     "earn_rates": {
       "Prepaid hotels (Renowned)": "5x",
-      "United purchases": "5x",
+      "United purchases": "4x",
       "Other travel": "2x",
       "Dining": "2x",
       "All other purchases": "1x"
@@ -1526,9 +1523,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 99,
-    "signup_bonus": 50000,
-    "signup_bonus_formatted": "Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 50000,
+    "signup_bonus": 20000,
+    "signup_bonus_formatted": "Earn Companion Pass® through 2/28/27 and 20,000 bonus points after you spend $3,000 in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 20000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1553,7 +1550,7 @@
       "Gas stations and grocery": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 50,000 bonus points after you spend $1,000 on purchases in the first 3 months from account opening.",
+    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 20,000 bonus points after you spend $3,000 in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1575,9 +1572,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 229,
-    "signup_bonus": 60000,
-    "signup_bonus_formatted": "Earn 60,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 60000,
+    "signup_bonus": 40000,
+    "signup_bonus_formatted": "Earn Companion Pass® through 2/28/27 and 40,000 bonus points after you spend $5,000 in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 40000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1602,7 +1599,7 @@
       "Gas stations and restaurants": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 60,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening.",
+    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 40,000 bonus points after you spend $5,000 in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1624,15 +1621,14 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 149,
-    "signup_bonus": 55000,
-    "signup_bonus_formatted": "Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 55000,
+    "signup_bonus": 30000,
+    "signup_bonus_formatted": "Earn Companion Pass® through 2/28/27 and 30,000 bonus points after you spend $4,000 in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 30000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
     "key_perks": [
       "No foreign transaction fee",
-      "Statement credits",
       "Food delivery credits",
       "Subscription perks",
       "Free first checked bag"
@@ -1652,7 +1648,7 @@
       "Grocery and restaurants": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening.",
+    "welcome_bonus": "Earn Companion Pass® through 2/28/27 and 30,000 bonus points after you spend $4,000 in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1674,9 +1670,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 95,
-    "signup_bonus": 200000,
-    "signup_bonus_formatted": "Earn 4 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 200,000 points) after spending $3,000 on purchases in the first 3 months of account opening. Plus, through 6/30/2027, get up to $100 in statement credits ($50 semi-annually) after spending $500 on eligible airline purchases.",
-    "signup_bonus_value_usd": 200000,
+    "signup_bonus": 250000,
+    "signup_bonus_formatted": "Earn 5 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 250,000 points) + a $100 Airline Credit after spending $3,000 on eligible purchases within 3 months of account opening.",
+    "signup_bonus_value_usd": 250000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1702,7 +1698,7 @@
       "Grocery, gas, and dining": "3x",
       "All other purchases": "2x"
     },
-    "welcome_bonus": "Earn 4 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 200,000 points) after spending $3,000 on purchases in the first 3 months of account opening. Plus, through 6/30/2027, get up to $100 in statement credits ($50 semi-annually) after spending $500 on eligible airline purchases.",
+    "welcome_bonus": "Earn 5 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 250,000 points) + a $100 Airline Credit after spending $3,000 on eligible purchases within 3 months of account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1771,9 +1767,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 0,
-    "signup_bonus": 45000,
-    "signup_bonus_formatted": "Earn 45,000 Bonus Points after spending $1,000 on eligible purchases within 3 months of account opening.",
-    "signup_bonus_value_usd": 45000,
+    "signup_bonus": 100000,
+    "signup_bonus_formatted": "Earn 2 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 100,000 points) after spending $1,000 on eligible purchases within 3 months of account opening.",
+    "signup_bonus_value_usd": 100000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1801,7 +1797,7 @@
       "Streaming, internet, cable, phone": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 45,000 Bonus Points after spending $1,000 on eligible purchases within 3 months of account opening.",
+    "welcome_bonus": "Earn 2 Free Night Awards (each good for stays up to 50,000 points/night, combined value up to 100,000 points) after spending $1,000 on eligible purchases within 3 months of account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1823,11 +1819,11 @@
     "network": "Mastercard",
     "card_type": "personal",
     "annual_fee": 99,
-    "signup_bonus": 140000,
-    "signup_bonus_formatted": "Earn 140,000 Bonus Points after you spend $3,000 on purchases in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 140000,
+    "signup_bonus": 175000,
+    "signup_bonus_formatted": "Earn 175,000 Bonus Points after you spend $5,000 on purchases in the first 3 months from account opening.",
+    "signup_bonus_value_usd": 175000,
     "signup_bonus_currency": "points",
-    "welcome_bonus_conditions": "Spend $3,000 on purchases within the first 3 months of account opening",
+    "welcome_bonus_conditions": "Spend $5,000 on purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
     "key_perks": [
       "Travel program credit (NEXUS/Global Entry)",
@@ -1852,7 +1848,7 @@
       "Travel, dining, gas stations": "5x",
       "All other purchases": "3x"
     },
-    "welcome_bonus": "Earn 140,000 Bonus Points after you spend $3,000 on purchases in the first 3 months from account opening.",
+    "welcome_bonus": "Earn 175,000 Bonus Points after you spend $5,000 on purchases in the first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1874,9 +1870,9 @@
     "network": "Mastercard",
     "card_type": "personal",
     "annual_fee": 0,
-    "signup_bonus": 80000,
-    "signup_bonus_formatted": "Earn 80,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening. Plus, earn 10,000 bonus points after you add an authorized user to your account in the first 3 months from account opening.",
-    "signup_bonus_value_usd": 80000,
+    "signup_bonus": 120000,
+    "signup_bonus_formatted": "Earn up to 120,000 Bonus Points: 90,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening, plus up to 30,000 more bonus points by earning an additional 3X points on purchases (except at IHG Hotels & Resorts) in the first 6 months from account opening, on up to $10,000 spent.",
+    "signup_bonus_value_usd": 120000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -1899,7 +1895,7 @@
       "purchase_protection": "500",
       "trip_cancellation": "5000"
     },
-    "welcome_bonus": "Earn 80,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening. Plus, earn 10,000 bonus points after you add an authorized user to your account in the first 3 months from account opening.",
+    "welcome_bonus": "Earn up to 120,000 Bonus Points: 90,000 bonus points after you spend $2,000 on purchases in the first 3 months from account opening, plus up to 30,000 more bonus points by earning an additional 3X points on purchases (except at IHG Hotels & Resorts) in the first 6 months from account opening, on up to $10,000 spent.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -1921,9 +1917,9 @@
     "network": "Visa",
     "card_type": "personal",
     "annual_fee": 149,
-    "signup_bonus": 500,
-    "signup_bonus_formatted": "$500 Offer",
-    "signup_bonus_value_usd": 500,
+    "signup_bonus": 600,
+    "signup_bonus_formatted": "$600 Offer",
+    "signup_bonus_value_usd": 600,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": "Spend $1,000 on purchases within the first 3 months of account opening",
     "earn_rates_summary": null,
@@ -1949,7 +1945,7 @@
       "baggage_delay": "100",
       "purchase_protection": "500"
     },
-    "welcome_bonus": "$500 Offer: $300 Disney Gift Card eGift upon approval + $200 statement credit after you spend $1,000 on purchases in the first 3 months from account opening",
+    "welcome_bonus": "$600 Offer: $300 Disney Gift Card eGift upon approval + $300 statement credit after you spend $1,000 on purchases in the first 3 months from account opening",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2233,7 +2229,7 @@
       "car_rental_insurance": false,
       "travel_medical": false,
       "trip_cancellation": false,
-      "flight_delay": true,
+      "flight_delay": false,
       "mobile_insurance": false,
       "purchase_protection": true,
       "extended_warranty": true,
@@ -2325,7 +2321,7 @@
       "car_rental_insurance": true,
       "travel_medical": false,
       "trip_cancellation": false,
-      "flight_delay": true,
+      "flight_delay": false,
       "mobile_insurance": false,
       "purchase_protection": true,
       "extended_warranty": true,
@@ -2370,7 +2366,7 @@
       "car_rental_insurance": true,
       "travel_medical": false,
       "trip_cancellation": false,
-      "flight_delay": true,
+      "flight_delay": false,
       "mobile_insurance": false,
       "purchase_protection": true,
       "extended_warranty": true,
@@ -2481,9 +2477,9 @@
     "network": "Visa",
     "card_type": "business",
     "annual_fee": 795,
-    "signup_bonus": 200000,
-    "signup_bonus_formatted": "Earn 200,000 bonus points after you spend $30,000 on purchases in your first 6 months from account opening.",
-    "signup_bonus_value_usd": 200000,
+    "signup_bonus": 150000,
+    "signup_bonus_formatted": "Earn 150,000 bonus points after you spend $20,000 on purchases in your first 3 months from account opening.",
+    "signup_bonus_value_usd": 150000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2517,7 +2513,7 @@
       "mobile_insurance": "Yes",
       "trip_cancellation": "10000"
     },
-    "welcome_bonus": "Earn 200,000 bonus points after you spend $30,000 on purchases in your first 6 months from account opening.",
+    "welcome_bonus": "Earn 150,000 bonus points after you spend $20,000 on purchases in your first 3 months from account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": true,
@@ -2525,7 +2521,7 @@
       "car_rental_insurance": true,
       "travel_medical": true,
       "trip_cancellation": true,
-      "flight_delay": true,
+      "flight_delay": false,
       "mobile_insurance": true,
       "purchase_protection": true,
       "extended_warranty": true,
@@ -2539,9 +2535,9 @@
     "network": "Visa",
     "card_type": "business",
     "annual_fee": 0,
-    "signup_bonus": 1000,
-    "signup_bonus_formatted": "$1,000 cash back",
-    "signup_bonus_value_usd": 1000,
+    "signup_bonus": 750,
+    "signup_bonus_formatted": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening.",
+    "signup_bonus_value_usd": 750,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2560,7 +2556,7 @@
     "insurance": {
       "purchase_protection": "10000"
     },
-    "welcome_bonus": "$1,000 cash back",
+    "welcome_bonus": "Earn $750 cash back after you spend $6,000 on purchases in the first 3 months after account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2628,9 +2624,9 @@
     "network": "Visa",
     "card_type": "business",
     "annual_fee": 0,
-    "signup_bonus": null,
-    "signup_bonus_formatted": "$1,000 bonus cash back",
-    "signup_bonus_value_usd": 1000,
+    "signup_bonus": 750,
+    "signup_bonus_formatted": "Earn $750 bonus cash back after you spend $6,000 on purchases in the first 3 months after account opening.",
+    "signup_bonus_value_usd": 750,
     "signup_bonus_currency": "cash",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2651,7 +2647,7 @@
     "insurance": {
       "purchase_protection": "10000"
     },
-    "welcome_bonus": "$1,000 bonus cash back",
+    "welcome_bonus": "Earn $750 bonus cash back after you spend $6,000 on purchases in the first 3 months after account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
@@ -2693,7 +2689,6 @@
     },
     "earn_rates": {
       "Purchases of $5,000 or more": "2.5%",
-      "Chase Travel purchases": "5%",
       "All other purchases": "2%"
     },
     "welcome_bonus": "Earn $1,000 bonus cash back",
@@ -2968,9 +2963,9 @@
     "network": "Visa",
     "card_type": "business",
     "annual_fee": 199,
-    "signup_bonus": 70000,
-    "signup_bonus_formatted": "Earn 70,000 Bonus Points after you spend $7,000 on purchases in the first 3 months of account opening.",
-    "signup_bonus_value_usd": 70000,
+    "signup_bonus": 60000,
+    "signup_bonus_formatted": "Earn 60,000 Bonus Points after you spend $5,000 on purchases in the first 3 months of account opening.",
+    "signup_bonus_value_usd": 60000,
     "signup_bonus_currency": "points",
     "welcome_bonus_conditions": null,
     "earn_rates_summary": null,
@@ -2993,7 +2988,7 @@
       "Fitness club & gym memberships": "2x",
       "All other purchases": "1x"
     },
-    "welcome_bonus": "Earn 70,000 Bonus Points after you spend $7,000 on purchases in the first 3 months of account opening.",
+    "welcome_bonus": "Earn 60,000 Bonus Points after you spend $5,000 on purchases in the first 3 months of account opening.",
     "last_updated": "2026-06-18",
     "benefits": {
       "lounge_access": false,
