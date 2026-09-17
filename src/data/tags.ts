@@ -488,6 +488,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/amex-aspire-lounge-calgary-opens-montreal-transborder-2027-september-16",
+    title: "American Express opens its second Canadian Aspire lounge at Calgary on September 16 and announces a third at Montreal for early 2027",
+    section: "News",
+    tags: ["news", "amex", "lounges", "travel"],
+  },
+  {
     path: "/news/rbc-avion-cathay-asia-miles-15-percent-transfer-bonus-september-14",
     title: "RBC Avion opens a 15 percent transfer bonus to Cathay Pacific Asia Miles from September 14, running through October 16",
     section: "News",
