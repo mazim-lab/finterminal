@@ -530,7 +530,7 @@ export const usCards = allCards.filter(c => c.country === 'US');
 // Date the card table was last re-verified end to end, in the twice-weekly
 // playbook. Single source of truth for the homepage proof strip's gold stamp;
 // bump this string whenever the card data is re-checked. "YYYY-MM-DD".
-export const CARDS_VERIFIED = '2026-08-09';
+export const CARDS_VERIFIED = '2026-09-16';
 
 // ── Helper functions ──────────────────────────────────
 
