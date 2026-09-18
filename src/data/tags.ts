@@ -486,6 +486,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "westjet", "points", "travel-cards", "cards"],
   },
 
+  {
+    path: "/travel/sweet-spots/delta-one-suites-tokyo-business-85k",
+    title: "Delta sweet spot: lie-flat Delta One Suites to Tokyo have been pricing near 85,000 SkyMiles one-way in the flash sales, where Delta usually wants 300,000-plus",
+    dek: "Delta SkyMiles has no award chart and prices dynamically, so the premium-cabin play is the unadvertised flash sale, where Delta One Suites from a US hub to Tokyo Haneda have recently been pricing as low as about 85,000 SkyMiles each way against Delta's usual 300,000-plus, with no fuel surcharge on Delta metal and a further 15 percent off for TakeOff 15 cardholders.",
+    section: "Sweet spot",
+    tags: ["travel", "delta", "points", "award-booking", "business-class", "transfers"],
+  },
+
   // News items
   {
     path: "/news/amex-aspire-lounge-calgary-opens-montreal-transborder-2027-september-16",
