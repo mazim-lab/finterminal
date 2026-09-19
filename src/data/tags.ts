@@ -496,6 +496,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-tim-hortons-flight-roast-onboard-coffee-rewards-linking-2027-september-17",
+    title: "WestJet and Tim Hortons brew up a partnership on September 17, putting a custom Flight Roast coffee onboard from November 30 and linking WestJet Rewards to Tims Rewards in 2027",
+    section: "News",
+    tags: ["news", "westjet", "points", "travel"],
+  },
+  {
     path: "/news/amex-aspire-lounge-calgary-opens-montreal-transborder-2027-september-16",
     title: "American Express opens its second Canadian Aspire lounge at Calgary on September 16 and announces a third at Montreal for early 2027",
     section: "News",
