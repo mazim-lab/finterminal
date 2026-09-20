@@ -496,6 +496,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-skytrax-best-airline-north-america-2026-september-18",
+    title: "Air Canada is named Best Airline in North America at the 2026 Skytrax World Airline Awards on September 18, its tenth time with the title and a nod to the Aeroplan flying many Canadians pay for with points",
+    section: "News",
+    tags: ["news", "aeroplan", "travel"],
+  },
+  {
     path: "/news/westjet-tim-hortons-flight-roast-onboard-coffee-rewards-linking-2027-september-17",
     title: "WestJet and Tim Hortons brew up a partnership on September 17, putting a custom Flight Roast coffee onboard from November 30 and linking WestJet Rewards to Tims Rewards in 2027",
     section: "News",
