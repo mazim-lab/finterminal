@@ -494,6 +494,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "delta", "points", "award-booking", "business-class", "transfers"],
   },
 
+  {
+    path: "/travel/sweet-spots/united-copa-avianca-business-south-america-60k",
+    title: "United sweet spot: business class to Latin America on Copa or Avianca from about 60,000 miles, surcharge-free and often nonstop from Canada",
+    dek: "United prices its own flights dynamically, but Star Alliance partner awards still sit at semi-fixed Saver levels with no fuel surcharges, so a fresh, close-to-home United sweet spot is business class to Latin America on Copa or Avianca, from around 60,000 miles one-way to northern South America and economy from roughly 20,000, with the rare bonus that Copa flies nonstop from Toronto and Montreal.",
+    section: "Sweet spot",
+    tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
+  },
+
   // News items
   {
     path: "/news/air-canada-skytrax-best-airline-north-america-2026-september-18",
