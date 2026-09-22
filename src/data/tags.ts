@@ -504,6 +504,18 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/tangerine-money-back-world-mastercard-120-welcome-bonus-september-21",
+    title: "Tangerine raises the welcome bonus on its Money-Back World Mastercard to $120 cash back, spotted on September 21 and open to applicants through November 30",
+    section: "News",
+    tags: ["news", "cards", "cash-back", "welcome-bonuses"],
+  },
+  {
+    path: "/news/iberia-club-avios-award-discount-sale-toronto-madrid-september-21",
+    title: "Iberia opens an Avios award sale of up to 20 percent off through September 23, with Toronto to Madrid at 15 percent off in economy and 10 percent in business",
+    section: "News",
+    tags: ["news", "avios", "amex", "transfers", "award-booking", "travel"],
+  },
+  {
     path: "/news/air-canada-skytrax-best-airline-north-america-2026-september-18",
     title: "Air Canada is named Best Airline in North America at the 2026 Skytrax World Airline Awards on September 18, its tenth time with the title and a nod to the Aeroplan flying many Canadians pay for with points",
     section: "News",
