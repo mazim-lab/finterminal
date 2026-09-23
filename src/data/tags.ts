@@ -504,6 +504,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/marriott-bonvoy-fall-2026-global-bonus-points-promotion-september-22",
+    title: "Marriott Bonvoy opens its fall global promotion on September 22, worth up to 4,500 bonus points per stay, and it is an easy one for Canadians to register for and forget about",
+    section: "News",
+    tags: ["news", "amex", "transfers", "travel", "points"],
+  },
+  {
     path: "/news/tangerine-money-back-world-mastercard-120-welcome-bonus-september-21",
     title: "Tangerine raises the welcome bonus on its Money-Back World Mastercard to $120 cash back, spotted on September 21 and open to applicants through November 30",
     section: "News",
