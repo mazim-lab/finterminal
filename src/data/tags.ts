@@ -502,6 +502,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
   },
 
+  {
+    path: "/travel/sweet-spots/alaska-cathay-pacific-business-vancouver-hong-kong-75k",
+    title: "Alaska sweet spot: lie-flat Cathay Pacific business class nonstop from Vancouver to Hong Kong for about 75,000 Atmos points, surcharge-free",
+    dek: "Alaska's Mileage Plan is now Atmos Rewards, but it still prices partner awards off a fixed distance chart with no fuel surcharges, so a fresh, close-to-home sweet spot for Canadians is a lie-flat Cathay Pacific seat nonstop from Vancouver to Hong Kong at a starting price of about 75,000 points one-way in business, with economy around 42,500, plus the rare free stopover Alaska allows on a one-way partner award.",
+    section: "Sweet spot",
+    tags: ["travel", "alaska", "points", "award-booking", "business-class", "alliances"],
+  },
+
   // News items
   {
     path: "/news/marriott-bonvoy-fall-2026-global-bonus-points-promotion-september-22",
