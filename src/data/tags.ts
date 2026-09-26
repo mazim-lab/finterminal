@@ -512,6 +512,18 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/tangerine-rewards-world-elite-mastercard-50000-scene-plus-welcome-bonus-september-25",
+    title: "Tangerine sweetens its new Rewards World Elite Mastercard with a 50,000 Scene+ welcome bonus, live as of September 25 and open to applicants through January 31, 2027",
+    section: "News",
+    tags: ["news", "cards", "scene-plus", "welcome-bonuses"],
+  },
+  {
+    path: "/news/blue-rewards-porter-airlines-preferred-partner-viporter-linking-september-24",
+    title: "Blue Rewards names Porter its preferred airline partner on September 24, letting Canadians link VIPorter accounts, earn 20 percent faster, and soon convert points between the two",
+    section: "News",
+    tags: ["news", "points", "travel", "transfers"],
+  },
+  {
     path: "/news/marriott-bonvoy-fall-2026-global-bonus-points-promotion-september-22",
     title: "Marriott Bonvoy opens its fall global promotion on September 22, worth up to 4,500 bonus points per stay, and it is an easy one for Canadians to register for and forget about",
     section: "News",
