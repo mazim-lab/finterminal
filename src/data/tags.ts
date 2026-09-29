@@ -510,6 +510,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     tags: ["travel", "alaska", "points", "award-booking", "business-class", "alliances"],
   },
 
+  {
+    path: "/travel/sweet-spots/flying-blue-premium-economy-europe-promo-30k",
+    title: "Flying Blue sweet spot: fly Air France or KLM Premium to Europe from about 30,000 miles one-way in the monthly Promo Rewards, nonstop from Canada",
+    dek: "Flying Blue prices awards dynamically with no fixed chart, so the quiet high-value cabin most Canadians overlook is premium economy, which sits at a standard floor of about 40,000 miles one-way to Europe and regularly drops to roughly 30,000 in the Promo Rewards released on the first of every month, on Air France and KLM flights that leave nonstop from Montreal, Toronto, and Vancouver.",
+    section: "Sweet spot",
+    tags: ["travel", "flying-blue", "amex", "points", "award-booking", "transfers"],
+  },
+
   // News items
   {
     path: "/news/tangerine-rewards-world-elite-mastercard-50000-scene-plus-welcome-bonus-september-25",
