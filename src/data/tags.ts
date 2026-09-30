@@ -520,6 +520,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/blue-rewards-amazon-prime-big-deal-days-25x-points-contest-september-29",
+    title: "Blue Rewards lines up a 25x Blue Points event for Amazon Prime Big Deal Days on October 6 and 7, plus a contest giving away ten $1,000 Amazon gift cards through October 7",
+    section: "News",
+    tags: ["news", "points", "cards"],
+  },
+  {
     path: "/news/tangerine-rewards-world-elite-mastercard-50000-scene-plus-welcome-bonus-september-25",
     title: "Tangerine sweetens its new Rewards World Elite Mastercard with a 50,000 Scene+ welcome bonus, live as of September 25 and open to applicants through January 31, 2027",
     section: "News",
