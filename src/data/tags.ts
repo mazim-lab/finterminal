@@ -520,6 +520,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-canadian-credit-cards-refresh-15-percent-flight-rewards-discount-september-29",
+    title: "Aeroplan refreshes its Canadian co-branded credit cards on September 29, with a 15 percent discount on Air Canada flight rewards and new travel credits landing January 12, 2027",
+    section: "News",
+    tags: ["news", "aeroplan", "cards", "points", "travel-cards"],
+  },
+  {
     path: "/news/blue-rewards-amazon-prime-big-deal-days-25x-points-contest-september-29",
     title: "Blue Rewards lines up a 25x Blue Points event for Amazon Prime Big Deal Days on October 6 and 7, plus a contest giving away ten $1,000 Amazon gift cards through October 7",
     section: "News",
