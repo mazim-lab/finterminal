@@ -527,6 +527,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/marriott-bonvoy-aeroplan-15-percent-conversion-bonus-october-1",
+    title: "Aeroplan runs a 15 percent conversion bonus on Marriott Bonvoy points moved into Aeroplan, live from October 1 through October 31",
+    section: "News",
+    tags: ["news", "aeroplan", "transfers", "points"],
+  },
+  {
     path: "/news/aeroplan-canadian-credit-cards-refresh-15-percent-flight-rewards-discount-september-29",
     title: "Aeroplan refreshes its Canadian co-branded credit cards on September 29, with a 15 percent discount on Air Canada flight rewards and new travel credits landing January 12, 2027",
     section: "News",
