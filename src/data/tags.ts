@@ -517,6 +517,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "flying-blue", "amex", "points", "award-booking", "transfers"],
   },
+  {
+    path: "/travel/sweet-spots/aeroplan-vancouver-hawaii-economy-12500",
+    title: "Aeroplan sweet spot: Vancouver to Hawaii nonstop from about 12,500 points one-way in economy, surcharge-free, with lie-flat 787 business in peak winter",
+    dek: "Aeroplan prices Air Canada's own flights dynamically, so the durable structure to plan around is its North America distance chart, where Vancouver sits in the 1,501 to 2,750 mile band and a nonstop economy award to Honolulu or Maui starts at about 12,500 points one-way, climbing on busy dates, with the peak-winter 787 adding a lie-flat business cabin from a 25,000-point starting floor, and Air Canada tacks on no fuel surcharge so you pay only taxes of about $45.",
+    section: "Sweet spot",
+    tags: ["travel", "aeroplan", "amex", "points", "award-booking", "business-class"],
+  },
 
   // News items
   {
