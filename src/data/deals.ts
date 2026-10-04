@@ -624,19 +624,6 @@ export const DEALS: Deal[] = [
     expiresAt: "2026-07-18",
   },
   {
-    title: "Helinox Chair One lightweight camping chair, 2-pack",
-    merchant: "Costco",
-    url: "https://www.costco.ca/p/-/helinox-chair-one-original-lightweight-compact-collapsible-camping-chair-2-pack/4000420308",
-    price: "$199.99",
-    was: "$239.99",
-    blurb:
-      "Helinox makes the camping chair that backpackers and patio sitters quietly obsess over, the kind that folds down to the size of a water bottle and still holds you up properly, and Costco has a two pack for $199.99, which is $40 off. Buy these one at a time at an outdoor shop and you are usually looking at well over a hundred each, so getting a matched pair for two hundred is the real draw here, perfect for the cottage, the campsite, or a couple of chairs you can toss in the trunk and forget about. One honest note so you go in clear eyed: this is $40 off Costco's own price rather than some blowout, so think of it as a fair deal on a genuinely good chair, not a fire sale. It is online only and the offer runs through July 5.",
-    category: "Outdoors",
-    posted: "Jun 29, 2026",
-    expires: "ends Jul 5",
-    expiresAt: "2026-07-05",
-  },
-  {
     title: "Savino 10x12 hardtop gazebo with netting",
     merchant: "Costco",
     url: "https://www.costco.ca/savino---gazebo-10x12-black-pc-8mm-with-nylon-net.product.4201000439.html",
