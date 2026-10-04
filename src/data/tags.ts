@@ -527,6 +527,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/ihg-one-rewards-15-percent-off-reward-nights-seven-new-canadian-hotels-october-2",
+    title: "IHG refreshes its new-hotel reward night discount for October, taking 15 percent off points stays at seven newly added Canadian properties",
+    section: "News",
+    tags: ["news", "points", "travel", "award-booking"],
+  },
+  {
     path: "/news/rbc-cash-back-mastercards-refresh-3-percent-earn-rates-october-1",
     title: "RBC overhauls its Cash Back Mastercards on October 1, lifting the Preferred World Elite to an unlimited 3 percent in everyday categories while nudging the annual fee up to $120",
     section: "News",
