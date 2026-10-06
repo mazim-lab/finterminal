@@ -524,6 +524,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "aeroplan", "amex", "points", "award-booking", "business-class"],
   },
+  {
+    path: "/travel/sweet-spots/avios-finnair-business-helsinki-europe-62500",
+    title: "Avios sweet spot: lie-flat Finnair business class to Helsinki and the Nordics for about 62,500 Avios one-way, on a durable zone chart",
+    dek: "Finnair Plus runs on Avios too, and unlike the other Avios programs it still prices its own flights off a fixed zone chart, so a quiet, fresh value is a lie-flat Finnair A350 business seat between the US and Helsinki for about 62,500 Avios one-way plus moderate surcharges, with the honest catch that Finnair does not fly to Canada, so Canadians move Amex or RBC Avion into Avios and position to a US gateway.",
+    section: "Sweet spot",
+    tags: ["travel", "avios", "rbc-avion", "amex", "points", "award-booking", "business-class", "transfers"],
+  },
 
   // News items
   {
