@@ -527,6 +527,18 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/capital-one-launches-quicksilver-no-fx-cash-back-cards-canada-october-5",
+    title: "Capital One brings two no-annual-fee Quicksilver cards to Canada, pairing an uncapped 3 percent on gas and groceries with no foreign transaction fees and a first-year cash back match",
+    section: "News",
+    tags: ["news", "cards", "cash-back", "no-fx-fees"],
+  },
+  {
+    path: "/news/qatar-airways-privilege-club-up-to-35-percent-avios-conversion-bonus-october-5",
+    title: "Qatar Airways Privilege Club runs a tiered Avios conversion bonus of up to 35 percent on hotel points moved in, live through October 31",
+    section: "News",
+    tags: ["news", "avios", "transfers", "points"],
+  },
+  {
     path: "/news/ihg-one-rewards-15-percent-off-reward-nights-seven-new-canadian-hotels-october-2",
     title: "IHG refreshes its new-hotel reward night discount for October, taking 15 percent off points stays at seven newly added Canadian properties",
     section: "News",
