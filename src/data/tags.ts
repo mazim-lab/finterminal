@@ -534,6 +534,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/porter-airlines-five-year-round-domestic-routes-london-ontario-spring-2027-october-6",
+    title: "Porter Airlines adds five year-round domestic routes from London, Ontario, linking YXU to Halifax, Vancouver, Edmonton, Ottawa, and Montreal from spring 2027",
+    section: "News",
+    tags: ["news", "travel"],
+  },
+  {
     path: "/news/capital-one-launches-quicksilver-no-fx-cash-back-cards-canada-october-5",
     title: "Capital One brings two no-annual-fee Quicksilver cards to Canada, pairing an uncapped 3 percent on gas and groceries with no foreign transaction fees and a first-year cash back match",
     section: "News",
