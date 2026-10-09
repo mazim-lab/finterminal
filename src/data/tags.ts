@@ -534,6 +534,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-embarq-business-travel-program-50-percent-bonus-aeroplan-october-8",
+    title: "Air Canada launches Embarq on October 8, a no-cost business travel program for Canadian companies that earns 50 percent more Aeroplan points and trims fares, with launch bonuses running through December 10",
+    section: "News",
+    tags: ["news", "aeroplan", "travel", "points"],
+  },
+  {
     path: "/news/porter-airlines-five-year-round-domestic-routes-london-ontario-spring-2027-october-6",
     title: "Porter Airlines adds five year-round domestic routes from London, Ontario, linking YXU to Halifax, Vancouver, Edmonton, Ottawa, and Montreal from spring 2027",
     section: "News",
