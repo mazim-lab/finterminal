@@ -1011,6 +1011,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Guides",
     tags: ["personal-finance", "cards", "welcome-bonuses", "amex", "newcomers"],
   },
+
+  {
+    path: "/travel/sweet-spots/westjet-companion-voucher-39-dollar-card-canada-us-199",
+    title: "WestJet sweet spot: the $39 RBC card still hands you an annual companion voucher, capping a second seat across Canada and the US at a fixed $199 base fare",
+    dek: "WestJet points are a flat cent each with no award chart, so the quiet value on the cheaper WestJet RBC Mastercard is that its $39 annual fee still buys an annual companion voucher, capping a second economy base fare within Canada and to the continental US at a fixed $199, North America only.",
+    section: "Sweet spot",
+    tags: ["travel", "westjet", "points", "travel-cards", "cards"],
+  },
 ];
 
 export function listTags(): Tag[] {
