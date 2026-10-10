@@ -534,6 +534,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/amex-centurion-lounge-network-expansion-newark-heathrow-october-8",
+    title: "American Express unveils its largest Centurion Lounge expansion yet on October 8, with brand-new lounges coming to Newark and London Heathrow and big rebuilds in Philadelphia and Houston",
+    section: "News",
+    tags: ["news", "amex", "lounges", "travel"],
+  },
+  {
     path: "/news/air-canada-embarq-business-travel-program-50-percent-bonus-aeroplan-october-8",
     title: "Air Canada launches Embarq on October 8, a no-cost business travel program for Canadian companies that earns 50 percent more Aeroplan points and trims fares, with launch bonuses running through December 10",
     section: "News",
