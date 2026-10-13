@@ -531,6 +531,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "avios", "rbc-avion", "amex", "points", "award-booking", "business-class", "transfers"],
   },
+  {
+    path: "/travel/sweet-spots/delta-korean-air-prestige-business-seoul-85k",
+    title: "Delta sweet spot: Korean Air Prestige business class to Seoul has been pricing around 85,000 SkyMiles one-way, nonstop from Vancouver and Toronto",
+    dek: "Delta SkyMiles has no award chart and prices its own flights dynamically, but its SkyTeam partner Korean Air has been far steadier, with a lie-flat Prestige business seat to Seoul pricing around 75,000 to 85,000 SkyMiles one-way, nonstop from Vancouver and Toronto, though TakeOff 15 does not apply to partner awards.",
+    section: "Sweet spot",
+    tags: ["travel", "delta", "points", "award-booking", "business-class", "alliances", "transfers"],
+  },
 
   // News items
   {
