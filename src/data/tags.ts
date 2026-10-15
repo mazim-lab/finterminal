@@ -541,6 +541,24 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-montreal-seville-nonstop-route-september-2027-october-14",
+    title: "Air Canada will fly nonstop from Montreal to Seville starting September 2027, becoming the only airline with a transatlantic link to the Andalusian city",
+    section: "News",
+    tags: ["news", "travel", "aeroplan"],
+  },
+  {
+    path: "/news/aeroplan-status-challenge-world-of-hyatt-elites-october-14",
+    title: "Following up on our July note on the Aeroplan and World of Hyatt tie-up, the promised status challenge is now live, letting Hyatt elites fast-track Aeroplan Elite status within 90 days",
+    section: "News",
+    tags: ["news", "aeroplan", "travel"],
+  },
+  {
+    path: "/news/air-canada-30-dollar-contact-centre-phone-booking-fee-october-13",
+    title: "Air Canada begins charging a $30 phone booking fee on October 15, and it applies to Aeroplan reward bookings made by phone too",
+    section: "News",
+    tags: ["news", "aeroplan", "travel"],
+  },
+  {
     path: "/news/amex-centurion-lounge-network-expansion-newark-heathrow-october-8",
     title: "American Express unveils its largest Centurion Lounge expansion yet on October 8, with brand-new lounges coming to Newark and London Heathrow and big rebuilds in Philadelphia and Houston",
     section: "News",
