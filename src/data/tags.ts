@@ -541,6 +541,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-dinr-premium-dining-reservations-earn-points-october-15",
+    title: "Aeroplan expands its DINR dining partnership on October 15, so paid DINR Premium members now earn Aeroplan points on restaurant reservations, with 1,000 bonus points for joining",
+    section: "News",
+    tags: ["news", "aeroplan", "points"],
+  },
+  {
     path: "/news/air-canada-montreal-seville-nonstop-route-september-2027-october-14",
     title: "Air Canada will fly nonstop from Montreal to Seville starting September 2027, becoming the only airline with a transatlantic link to the Andalusian city",
     section: "News",
