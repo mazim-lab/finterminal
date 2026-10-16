@@ -1050,6 +1050,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "westjet", "points", "travel-cards", "cards"],
   },
+
+  {
+    path: "/travel/sweet-spots/united-business-australia-new-zealand-surcharge-free-110k",
+    title: "United sweet spot: business class to Australia and New Zealand around 90,000 to 110,000 miles one-way, surcharge-free",
+    dek: "United MileagePlus prices dynamically and has no published chart, but its durable edge is zero fuel surcharges on award tickets, so a lie-flat business seat to the South Pacific runs roughly 90,000 to 110,000 miles with only about 100 dollars in taxes.",
+    section: "Sweet spot",
+    tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
+  },
 ];
 
 export function listTags(): Tag[] {
