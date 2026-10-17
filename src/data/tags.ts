@@ -541,6 +541,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-united-joint-business-new-transborder-routes-summer-2027-october-16",
+    title: "Air Canada and United move to renew and expand their cross-border joint venture on October 16, adding new summer 2027 routes like Toronto to Louisville and Edmonton to Newark",
+    section: "News",
+    tags: ["news", "aeroplan", "travel", "alliances"],
+  },
+  {
     path: "/news/aeroplan-dinr-premium-dining-reservations-earn-points-october-15",
     title: "Aeroplan expands its DINR dining partnership on October 15, so paid DINR Premium members now earn Aeroplan points on restaurant reservations, with 1,000 bonus points for joining",
     section: "News",
