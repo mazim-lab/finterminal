@@ -612,18 +612,6 @@ export const DEALS: Deal[] = [
     expiresAt: "2026-07-25",
   },
   {
-    title: "Milwaukee M12 REDLITHIUM HIGH OUTPUT XC 5.0Ah battery 2-pack with charger",
-    merchant: "Home Depot",
-    url: "https://www.homedepot.ca/product/milwaukee-tool-m12-12v-lithium-ion-extended-capacity-xc-5-0-ah-redlithium-battery-with-charger-2-pack-/1001917113",
-    price: "$148",
-    blurb:
-      "If you already live in the Milwaukee M12 cordless world, this is the kind of quiet restock deal worth jumping on. Home Depot has the M12 REDLITHIUM HIGH OUTPUT XC 5.0 Ah battery two-pack, charger included, for $148. A single one of these high-output batteries on its own usually runs close to what this whole kit costs, so getting two of them plus a charger at this price is the real draw, and they power the entire M12 lineup of 125-plus tools. One honest caveat so nobody buys wrong: this is batteries and a charger, not a tool, and it only makes sense if you are already on M12 or about to be. If you have never owned a Milwaukee tool, start with an actual tool kit instead. Stock has moved around by region through this sale, so make sure your local store shows it in stock before you drive over.",
-    category: "Tools",
-    posted: "Jul 2, 2026",
-    expires: "ends Jul 18",
-    expiresAt: "2026-07-18",
-  },
-  {
     title: "Helinox Chair One lightweight camping chair, 2-pack",
     merchant: "Costco",
     url: "https://www.costco.ca/p/-/helinox-chair-one-original-lightweight-compact-collapsible-camping-chair-2-pack/4000420308",
@@ -646,19 +634,6 @@ export const DEALS: Deal[] = [
       "If you have been pricing out a permanent shade structure for the deck or backyard, this one is hard to ignore: Costco has the Savino 10x12 hardtop gazebo down to $849.97 from $1,699.99, a clean half off. It is the proper kind with an 8mm polycarbonate roof and built in netting, so you get real shade that stands up to sun and rain and a screen to keep the bugs out on summer evenings, and at this price it undercuts most of what you will find elsewhere by a wide margin. Two honest notes before you commit. This is a last chance clearance item, which means once the stock is gone it is gone and there is no set end date, so it can disappear quietly. And it is a big build that needs a flat spot and proper anchoring, so plan for an afternoon of assembly and a helper or two.",
     category: "Home & Garden",
     posted: "Jun 29, 2026",
-  },
-  {
-    title: "9.26-inch wireless CarPlay & Android Auto screen",
-    merchant: "Amazon",
-    url: "https://www.amazon.ca/dp/B0DNZMCN1R",
-    price: "~$100",
-    was: "$138.99",
-    blurb:
-      "If you are driving an older car that never came with CarPlay, a portable screen like this is a genuinely productive little buy that drags your dashboard into the modern era for about a hundred dollars. It runs wireless Apple CarPlay and Android Auto on a 9.26 inch display, supports a backup camera, and handles maps, music, and hands free calls without you ever touching your phone. It lists at $138.99 with a 28% off coupon you tick at checkout, which brings it down to roughly $100. One honest catch so you buy with eyes open: this is an off brand unit from a third party seller rather than a name you will recognize, and the price hinges entirely on that checkout coupon, so make sure the 28% is actually showing before you pay. It is also a screen that mounts on your dash, not a built in head unit.",
-    category: "Electronics",
-    posted: "Jun 29, 2026",
-    expires: "ends Jul 18",
-    expiresAt: "2026-07-18",
   },
   {
     title: "DEWALT 20V MAX cordless tire inflator (DCC020IB)",
