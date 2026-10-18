@@ -541,6 +541,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/world-of-hyatt-online-point-transfers-october-16",
+    title: "World of Hyatt turns on an online tool for transferring points between members on October 15, retiring the old paper form and making it easy to pool a household's balances",
+    section: "News",
+    tags: ["news", "points", "travel"],
+  },
+  {
     path: "/news/air-canada-united-joint-business-new-transborder-routes-summer-2027-october-16",
     title: "Air Canada and United move to renew and expand their cross-border joint venture on October 16, adding new summer 2027 routes like Toronto to Louisville and Edmonton to Newark",
     section: "News",
