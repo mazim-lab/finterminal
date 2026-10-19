@@ -541,6 +541,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/more-rewards-save-on-foods-data-breach-october-17",
+    title: "Save-On-Foods confirms a cybersecurity breach of its More Rewards loyalty program on October 17, with members' names, contact details, and dates of birth accessed, though passwords and card data were not",
+    section: "News",
+    tags: ["news", "personal-finance", "points"],
+  },
+  {
     path: "/news/world-of-hyatt-online-point-transfers-october-16",
     title: "World of Hyatt turns on an online tool for transferring points between members on October 15, retiring the old paper form and making it easy to pool a household's balances",
     section: "News",
