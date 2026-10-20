@@ -538,6 +538,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "delta", "points", "award-booking", "business-class", "alliances", "transfers"],
   },
+  {
+    path: "/travel/sweet-spots/alaska-condor-business-toronto-frankfurt-55k",
+    title: "Alaska sweet spot: Condor business class nonstop from Toronto to Frankfurt for about 55,000 Atmos points, no fuel surcharges",
+    dek: "Alaska's Mileage Plan is now Atmos Rewards, but it still prices airline partners off a fixed distance chart with no fuel surcharges, so a fresh, close-to-home European sweet spot is a lie-flat Condor seat nonstop from Toronto to Frankfurt for about 55,000 points one-way in business, with economy around 27,500 and only government taxes plus a small partner fee on top.",
+    section: "Sweet spot",
+    tags: ["travel", "alaska", "points", "award-booking", "business-class"],
+  },
 
   // News items
   {
