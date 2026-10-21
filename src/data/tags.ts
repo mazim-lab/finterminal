@@ -548,6 +548,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/amex-fixed-points-travel-limited-platinum-centurion-january-2027-october-20",
+    title: "American Express Canada will limit its Fixed Points Travel Program to Platinum and Centurion cardmembers beginning January 2027, retiring the online booking option and leaving Cobalt, Gold, and Green cardholders with the lower-value flexible route",
+    section: "News",
+    tags: ["news", "amex", "points", "travel"],
+  },
+  {
     path: "/news/more-rewards-save-on-foods-data-breach-october-17",
     title: "Save-On-Foods confirms a cybersecurity breach of its More Rewards loyalty program on October 17, with members' names, contact details, and dates of birth accessed, though passwords and card data were not",
     section: "News",
