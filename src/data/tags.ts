@@ -548,6 +548,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/discover-airlines-edmonton-frankfurt-nonstop-summer-2027-october-20",
+    title: "Discover Airlines, the Lufthansa Group's leisure carrier, will fly nonstop between Edmonton and Frankfurt from June 2027, becoming the only airline with a direct link between Germany and Edmonton",
+    section: "News",
+    tags: ["news", "aeroplan", "travel", "alliances"],
+  },
+  {
     path: "/news/amex-fixed-points-travel-limited-platinum-centurion-january-2027-october-20",
     title: "American Express Canada will limit its Fixed Points Travel Program to Platinum and Centurion cardmembers beginning January 2027, retiring the online booking option and leaving Cobalt, Gold, and Green cardholders with the lower-value flexible route",
     section: "News",
