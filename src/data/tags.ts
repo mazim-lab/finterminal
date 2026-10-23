@@ -545,6 +545,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "alaska", "points", "award-booking", "business-class"],
   },
+  {
+    path: "/travel/sweet-spots/flying-blue-sas-business-scandinavia-57500",
+    title: "Flying Blue sweet spot: SAS business class to Scandinavia for about 57,500 miles one-way, surcharge-free and fed 1 to 1 by Amex in Canada",
+    dek: "Flying Blue prices Air France and KLM awards dynamically and loads them with steep fuel surcharges, so the durable sweet spot is a SkyTeam partner that passes none of them, a lie-flat SAS seat from the US East Coast to Copenhagen, Stockholm, or Oslo for about 57,500 miles one-way in business with only government taxes on top, and the quiet Canadian win is that Amex Membership Rewards now moves into Flying Blue at 1 to 1.",
+    section: "Sweet spot",
+    tags: ["travel", "flying-blue", "amex", "points", "award-booking", "business-class", "alliances"],
+  },
 
   // News items
   {
