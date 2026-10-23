@@ -548,6 +548,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-app-best-airline-app-world-aviation-festival-october-22",
+    title: "Air Canada's mobile app is named Best Airline App at the 2026 World Aviation Festival in Lisbon, winning the Battle of the Airline Apps and giving the free tool most Canadian flyers already use a nice vote of confidence",
+    section: "News",
+    tags: ["news", "aeroplan", "travel"],
+  },
+  {
     path: "/news/discover-airlines-edmonton-frankfurt-nonstop-summer-2027-october-20",
     title: "Discover Airlines, the Lufthansa Group's leisure carrier, will fly nonstop between Edmonton and Frankfurt from June 2027, becoming the only airline with a direct link between Germany and Edmonton",
     section: "News",
