@@ -555,6 +555,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/rogers-fido-1-6-percent-credit-card-payment-fee-january-2027-october-22",
+    title: "Rogers will add a 1.6 percent processing charge to bills paid by credit card starting January 17, 2027, a fee that also hits Fido customers while Quebec and a few specialized plans are spared",
+    section: "News",
+    tags: ["news", "personal-finance", "cards"],
+  },
+  {
     path: "/news/air-canada-app-best-airline-app-world-aviation-festival-october-22",
     title: "Air Canada's mobile app is named Best Airline App at the 2026 World Aviation Festival in Lisbon, winning the Battle of the Airline Apps and giving the free tool most Canadian flyers already use a nice vote of confidence",
     section: "News",
