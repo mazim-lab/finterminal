@@ -555,6 +555,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-qatar-airways-reciprocal-codeshare-doha-october-26",
+    title: "WestJet and Qatar Airways launch a reciprocal codeshare on October 26, putting WestJet's code on the nonstop Doha flights from Toronto and Montreal and feeding Qatar's passengers onto WestJet across eleven Canadian cities",
+    section: "News",
+    tags: ["news", "westjet", "travel", "points"],
+  },
+  {
     path: "/news/rogers-fido-1-6-percent-credit-card-payment-fee-january-2027-october-22",
     title: "Rogers will add a 1.6 percent processing charge to bills paid by credit card starting January 17, 2027, a fee that also hits Fido customers while Quebec and a few specialized plans are spared",
     section: "News",
