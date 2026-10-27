@@ -552,6 +552,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "flying-blue", "amex", "points", "award-booking", "business-class", "alliances"],
   },
+  {
+    path: "/travel/sweet-spots/aeroplan-economy-europe-nonstop-32500",
+    title: "Aeroplan sweet spot: economy to Europe nonstop from Eastern Canada for about 32,500 points one-way, surcharge-free on Air Canada metal",
+    dek: "Aeroplan prices Air Canada's own flights dynamically but publishes a distance-based chart that sets the floor, and for economy between Eastern Canada and Western Europe, which lands in the 0 to 4,000 mile band, a one-way award starts at about 32,500 points with no fuel surcharge on Air Canada metal, so the cash side out of Canada is just taxes of around 75 dollars.",
+    section: "Sweet spot",
+    tags: ["travel", "aeroplan", "points", "award-booking", "transfers"],
+  },
 
   // News items
   {
