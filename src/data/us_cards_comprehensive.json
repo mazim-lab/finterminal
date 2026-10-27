@@ -2359,8 +2359,7 @@
       "Statement credits",
       "Food delivery credits",
       "Subscription perks",
-      "No foreign transaction fee",
-      "Concierge service"
+      "No foreign transaction fee"
     ],
     "foreign_transaction_fee": false,
     "country": "US",
