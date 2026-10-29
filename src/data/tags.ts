@@ -562,6 +562,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-harbour-air-seaplane-point-redemption-live-october-28",
+    title: "Aeroplan turns on point redemptions for Harbour Air seaplane flights on October 28, so you can now book a British Columbia coastal floatplane hop with Aeroplan points, starting around 9,000 points one way",
+    section: "News",
+    tags: ["news", "aeroplan", "travel", "points"],
+  },
+  {
     path: "/news/westjet-qatar-airways-reciprocal-codeshare-doha-october-26",
     title: "WestJet and Qatar Airways launch a reciprocal codeshare on October 26, putting WestJet's code on the nonstop Doha flights from Toronto and Montreal and feeding Qatar's passengers onto WestJet across eleven Canadian cities",
     section: "News",
