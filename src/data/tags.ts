@@ -559,6 +559,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "aeroplan", "points", "award-booking", "transfers"],
   },
+  {
+    path: "/travel/sweet-spots/avios-short-haul-north-america-american-alaska-9500",
+    title: "Avios sweet spot: short American and Alaska hops across North America from about 9,500 Avios one-way, and the trick is shopping the same seat across every Avios program",
+    dek: "Avios is one currency shared across British Airways, Iberia, Finnair, Aer Lingus, and Qatar Airways, and each program prices the very same partner flight off its own distance chart, so for a short American or Alaska flight of 650 miles or less the move is to shop the identical seat across them and book through the cheapest, lately Qatar Airways Privilege Club at about 9,500 Avios one-way in economy, surcharge-free.",
+    section: "Sweet spot",
+    tags: ["travel", "avios", "rbc-avion", "amex", "points", "award-booking", "transfers", "alaska"],
+  },
 
   // News items
   {
