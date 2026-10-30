@@ -569,6 +569,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/bank-of-canada-raises-policy-rate-to-2-5-percent-october-28",
+    title: "The Bank of Canada raised its policy interest rate by a quarter point to 2.5 percent on October 28, its first rate hike since 2023, so anyone carrying a variable mortgage, a line of credit, or a credit card balance will feel a little more pressure",
+    section: "News",
+    tags: ["news", "personal-finance"],
+  },
+  {
     path: "/news/aeroplan-harbour-air-seaplane-point-redemption-live-october-28",
     title: "Aeroplan turns on point redemptions for Harbour Air seaplane flights on October 28, so you can now book a British Columbia coastal floatplane hop with Aeroplan points, starting around 9,000 points one way",
     section: "News",
