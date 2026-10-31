@@ -569,6 +569,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/hilton-honors-american-express-card-launches-canada-october-29",
+    title: "American Express and Hilton launch Canada's first Hilton Honors credit card on October 29, a 150 dollar card that hands you complimentary Hilton Gold status, earns 6 points per dollar at Hilton hotels, and opens with a welcome offer for a limited time",
+    section: "News",
+    tags: ["news", "amex", "cards", "welcome-bonuses", "travel-cards"],
+  },
+  {
     path: "/news/bank-of-canada-raises-policy-rate-to-2-5-percent-october-28",
     title: "The Bank of Canada raised its policy interest rate by a quarter point to 2.5 percent on October 28, its first rate hike since 2023, so anyone carrying a variable mortgage, a line of credit, or a credit card balance will feel a little more pressure",
     section: "News",
