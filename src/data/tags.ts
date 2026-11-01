@@ -569,6 +569,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/rbc-avion-british-airways-avios-30-percent-transfer-bonus-november-1",
+    title: "RBC Avion Rewards brings back its 30 percent transfer bonus to British Airways Avios for the month of November, so Avion Elite members who move points over get 13 Avios for every 10 points, and it runs through November 30",
+    section: "News",
+    tags: ["news", "avios", "rbc-avion", "transfers", "points"],
+  },
+  {
     path: "/news/hilton-honors-american-express-card-launches-canada-october-29",
     title: "American Express and Hilton launch Canada's first Hilton Honors credit card on October 29, a 150 dollar card that hands you complimentary Hilton Gold status, earns 6 points per dollar at Hilton hotels, and opens with a welcome offer for a limited time",
     section: "News",
