@@ -569,6 +569,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-transat-staria-loyalty-program-launches-november-2",
+    title: "Air Transat's loyalty program fully launches on November 2 as Staria, opening both points earning and redemption to all members, with a feature that lets up to nine people pool their points and earn rates that run from 3 to 7 points per dollar by fare type",
+    section: "News",
+    tags: ["news", "travel", "points"],
+  },
+  {
     path: "/news/rbc-avion-british-airways-avios-30-percent-transfer-bonus-november-1",
     title: "RBC Avion Rewards brings back its 30 percent transfer bonus to British Airways Avios for the month of November, so Avion Elite members who move points over get 13 Avios for every 10 points, and it runs through November 30",
     section: "News",
