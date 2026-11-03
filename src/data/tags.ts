@@ -1164,6 +1164,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
   },
+
+  {
+    path: "/travel/sweet-spots/westjet-points-full-fare-no-blackouts-peak-sun",
+    title: "WestJet sweet spot: the points are a flat cent, so hoard them for the peak-season and sun seats that break every mileage program, where they cover the whole fare with no blackouts",
+    dek: "WestJet points are a flat cent each with no award chart, so a point pays for the entire fare, taxes, surcharges, bags, and seats included, on any public seat for sale with no blackouts, which is exactly the certainty you want on a peak sun run where a mileage award would show no space or add a surcharge.",
+    section: "Sweet spot",
+    tags: ["travel", "westjet", "points", "award-booking"],
+  },
 ];
 
 export function listTags(): Tag[] {
