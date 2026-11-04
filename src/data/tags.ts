@@ -569,6 +569,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/bmo-eclipse-visa-infinite-privilege-refresh-no-fx-fees-november-2",
+    title: "BMO refreshes its eclipse Visa Infinite Privilege card on November 2, dropping foreign transaction fees on purchases abroad, lifting lounge access to ten visits a year, and turning its old lifestyle credit into a 200 dollar annual travel credit",
+    section: "News",
+    tags: ["news", "cards", "travel-cards", "no-fx-fees", "lounges"],
+  },
+  {
     path: "/news/air-transat-staria-loyalty-program-launches-november-2",
     title: "Air Transat's loyalty program fully launches on November 2 as Staria, opening both points earning and redemption to all members, with a feature that lets up to nine people pool their points and earn rates that run from 3 to 7 points per dollar by fare type",
     section: "News",
