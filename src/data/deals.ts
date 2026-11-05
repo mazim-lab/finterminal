@@ -713,19 +713,6 @@ export const DEALS: Deal[] = [
     expiresAt: "2026-06-26",
   },
   {
-    title: "Benchmark 173cc 2-in-1 gas lawn mower, 21 inch",
-    merchant: "Home Hardware",
-    url: "https://www.homehardware.ca/en/173cc-2-in-1-grasscycler-gas-lawn-mower-21/p/5124070",
-    price: "$149.97",
-    was: "$299.99",
-    blurb:
-      "Half price on a straightforward gas mower, $149.97 down from $299.99, and Home Hardware backs it with a five year warranty. If you have a small or medium yard and you are tired of paying someone to cut it, a mower like this pays for itself in a season or two. One honest heads up so you buy with eyes open: this is a basic 173cc engine, happiest on dry grass that you keep up with weekly. Let the lawn get tall or soggy and it can bog down, so it is not the one for a big or rough property. Shipping to your local store is free with plenty of stock on hand, and the sale runs through July 29.",
-    category: "Home & Garden",
-    posted: "Jun 21, 2026",
-    expires: "ends Jul 29",
-    expiresAt: "2026-07-29",
-  },
-  {
     title: "Roborock Q7 M5+ robot vacuum and mop",
     merchant: "Best Buy",
     url: "https://www.bestbuy.ca/en-ca/product/roborock-q7-m5-robot-vacuum-mop-for-pet-hair-carpet-with-self-empty-dock-10000pa-suction-dual-anti-tangle-lidar-app-control/19815215",
