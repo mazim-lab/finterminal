@@ -569,6 +569,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/rbc-cash-back-mastercard-redeem-from-1-dollar-anytime-december-2",
+    title: "Following up on our October note, RBC has made its Cash Back Mastercard overhaul official and added the part cardholders were waiting for: starting December 2 you can redeem cash back any time your balance hits one dollar, instead of waiting for a 25 dollar balance and a phone call",
+    section: "News",
+    tags: ["news", "cards", "cash-back"],
+  },
+  {
     path: "/news/bmo-eclipse-visa-infinite-privilege-refresh-no-fx-fees-november-2",
     title: "BMO refreshes its eclipse Visa Infinite Privilege card on November 2, dropping foreign transaction fees on purchases abroad, lifting lounge access to ten visits a year, and turning its old lifestyle credit into a 200 dollar annual travel credit",
     section: "News",
