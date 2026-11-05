@@ -589,29 +589,6 @@ export const DEALS: Deal[] = [
     expiresAt: "2026-08-14",
   },
   {
-    title: "RYOBI ONE+ 18V 1-gallon electric sprayer (tool only)",
-    merchant: "Princess Auto",
-    url: "https://www.princessauto.com/en/product/1-gallon-18v-electric-sprayer-tool-only/PA0009626011/9626011",
-    price: "$24.99",
-    blurb:
-      "This is a niche one, but a good price if it fits your life: Princess Auto has the RYOBI ONE+ 18V one-gallon electric sprayer, tool only, for $24.99 on surplus. If you already own RYOBI 18V batteries it turns into a genuinely handy thing, misting the garden, spraying down the deck, applying a water based cleaner or disinfectant, all cordless and one handed instead of pumping a manual sprayer. This same tool runs a fair bit more through the regular tool channels, so twenty five dollars is the draw. Two honest notes so nobody buys wrong. It is tool only, no battery or charger, so it only makes sense if you are already in the RYOBI 18V world. And it is meant for thin water based liquids, not paint or thick weed killers that will clog it. Stock is low and it is a surplus buy, so it will not last.",
-    category: "Tools",
-    posted: "Jul 7, 2026",
-    expiresAt: "2026-07-25",
-  },
-  {
-    title: "ASICS Gel-Kayano 32 running shoes",
-    merchant: "Altitude Sports",
-    url: "https://www.altitude-sports.com/p/asics-gelkayano-32-running-shoes-mens-acs-1011c052",
-    price: "$145.19",
-    was: "$219.99",
-    blurb:
-      "The Gel-Kayano is Asics' flagship stability shoe, the one runners with flat feet or tired knees quietly swear by, and Altitude Sports has the current version 32 on clearance at $145.19, down from $219.99, simply because the Kayano 33 just landed. Nothing about the shoe changed overnight because a new model number arrived. Sign up for a free Altitude Sports account and another 5 percent comes off at checkout, bringing it to $137.93. If you run, walk a lot, or stand all day, this is a genuine flagship shoe at a mid-tier price. One honest note so you go in clear eyed: clearance means sizes and colours are already thinning out and a few widths are gone, so grab your size sooner rather than later, and buy it because you need good shoes, not because the percent-off looks big.",
-    category: "Apparel",
-    posted: "Jul 2, 2026",
-    expiresAt: "2026-07-25",
-  },
-  {
     title: "Milwaukee M12 REDLITHIUM HIGH OUTPUT XC 5.0Ah battery 2-pack with charger",
     merchant: "Home Depot",
     url: "https://www.homedepot.ca/product/milwaukee-tool-m12-12v-lithium-ion-extended-capacity-xc-5-0-ah-redlithium-battery-with-charger-2-pack-/1001917113",
