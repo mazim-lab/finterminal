@@ -1202,6 +1202,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "westjet", "points", "award-booking"],
   },
+
+  {
+    path: "/travel/sweet-spots/delta-latam-business-south-america-67k",
+    title: "Delta sweet spot: lie-flat LATAM business class to South America has been pricing from about 67,000 SkyMiles one-way, one of the few long-haul business seats Delta books with no fuel surcharge",
+    dek: "Delta SkyMiles has no award chart and prices dynamically, so the durable edge is structural: Delta's growing LATAM joint venture books a lie-flat LATAM business seat from a US gateway like Miami, New York, or Los Angeles to Santiago, Lima, or Sao Paulo, and because LATAM passes no fuel surcharge the cash side is just government taxes of roughly 25 dollars, with recent searches showing the seat from about 67,000 SkyMiles one-way.",
+    section: "Sweet spot",
+    tags: ["travel", "delta", "points", "award-booking", "business-class", "alliances", "transfers"],
+  },
 ];
 
 export function listTags(): Tag[] {
