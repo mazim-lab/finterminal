@@ -569,6 +569,18 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/wealthsimple-business-credit-card-no-fx-fees-november-5",
+    title: "Wealthsimple is building its first business credit card, a no-fee-category 1 percent cash back card that charges no foreign transaction fees, with a waitlist open now and a wider launch planned for early 2027",
+    section: "News",
+    tags: ["news", "cards", "cash-back", "no-fx-fees"],
+  },
+  {
+    path: "/news/amex-platinum-all-accor-gold-status-enrollment-canada-november-5",
+    title: "Canadian Amex Platinum and Business Platinum cardholders can now enrol in complimentary ALL Accor Gold status, a free add-on that stacks a third hotel status onto the Marriott Bonvoy and Hilton Honors Gold the cards already carry",
+    section: "News",
+    tags: ["news", "amex", "travel", "points"],
+  },
+  {
     path: "/news/rbc-cash-back-mastercard-redeem-from-1-dollar-anytime-december-2",
     title: "Following up on our October note, RBC has made its Cash Back Mastercard overhaul official and added the part cardholders were waiting for: starting December 2 you can redeem cash back any time your balance hits one dollar, instead of waiting for a 25 dollar balance and a phone call",
     section: "News",
