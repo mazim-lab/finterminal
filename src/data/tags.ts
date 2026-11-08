@@ -569,6 +569,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/wealthsimple-business-chequing-sole-proprietors-no-fx-prepaid-card-november-6",
+    title: "Wealthsimple opens its no-fee business chequing account to sole proprietors on November 6, and it comes with a prepaid business Visa that pays 1 percent cash back, charges no foreign transaction fees, and works the day you open the account",
+    section: "News",
+    tags: ["news", "personal-finance", "chequing", "no-fx-fees", "cash-back"],
+  },
+  {
     path: "/news/wealthsimple-business-credit-card-no-fx-fees-november-5",
     title: "Wealthsimple is building its first business credit card, a no-fee-category 1 percent cash back card that charges no foreign transaction fees, with a waitlist open now and a wider launch planned for early 2027",
     section: "News",
