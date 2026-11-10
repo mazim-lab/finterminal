@@ -566,6 +566,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "avios", "rbc-avion", "amex", "points", "award-booking", "transfers", "alaska"],
   },
+  {
+    path: "/travel/sweet-spots/united-eva-royal-laurel-business-vancouver-taipei-88k",
+    title: "United sweet spot: lie-flat EVA Air Royal Laurel business class nonstop from Vancouver to Taipei from about 88,000 miles one-way, with the fuel surcharges stripped out",
+    dek: "United prices its own flights dynamically, but it passes no fuel surcharge on partner awards, so a fresh, close-to-home sweet spot for Western Canadians is a lie-flat EVA Air Royal Laurel seat nonstop from Vancouver to Taipei from about 88,000 miles one-way in business, with only modest government taxes and no carrier surcharge on top.",
+    section: "Sweet spot",
+    tags: ["travel", "united", "points", "award-booking", "business-class", "alliances"],
+  },
 
   // News items
   {
