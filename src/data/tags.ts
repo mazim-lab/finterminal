@@ -576,6 +576,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/marriott-bonvoy-amex-canada-new-bright-card-gold-status-november-10",
+    title: "American Express and Marriott Bonvoy are reshaping their Canadian card lineup on February 9, adding a no-annual-fee Marriott Bonvoy Bright card, upgrading the two existing cards from Silver to Gold elite status, and tying their annual free night to a new 3,000 dollar spend",
+    section: "News",
+    tags: ["news", "amex", "cards", "travel-cards", "welcome-bonuses"],
+  },
+  {
     path: "/news/wealthsimple-business-chequing-sole-proprietors-no-fx-prepaid-card-november-6",
     title: "Wealthsimple opens its no-fee business chequing account to sole proprietors on November 6, and it comes with a prepaid business Visa that pays 1 percent cash back, charges no foreign transaction fees, and works the day you open the account",
     section: "News",
