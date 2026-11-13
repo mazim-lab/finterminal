@@ -5,11 +5,11 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "FinTerminal",
     short_name: "FinTerminal",
     description:
-      "The terminal for Canadian money: compare credit cards, maximize travel points, and track a real portfolio with verified, dated data.",
+      "Canadian credit cards, travel points and everyday money, sorted out at the kitchen table by one dad, with a date on every number.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0e1110",
-    theme_color: "#0e1110",
+    background_color: "#ffffff",
+    theme_color: "#4338ca",
     icons: [
       {
         src: "/icons/icon-192.png",

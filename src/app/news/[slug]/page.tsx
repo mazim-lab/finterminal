@@ -143,7 +143,7 @@ export default async function NewsStoryPage({ params }: { params: Promise<{ slug
           <div className="docmeta">
             <time dateTime={isoDay ?? undefined}>{item.date}</time>
             <span className="sep" aria-hidden="true">/</span>
-            <span className="gd">{item.category.toUpperCase()}</span>
+            <span className="gd">{item.category}</span>
             <span className="sep" aria-hidden="true">/</span>
             <span>{region}</span>
             {item.exclusive ? (

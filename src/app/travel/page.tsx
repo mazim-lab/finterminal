@@ -6,6 +6,7 @@ import { ogMeta } from "@/lib/og";
 import { programGroups, spotHref } from "./programs";
 import s from "./travel.module.css";
 
+import { WindowArt } from "@/components/illustrations/HomeArt";
 export const metadata: Metadata = {
   title: "Travel & Points | FinTerminal",
   description:
@@ -73,19 +74,22 @@ export default function TravelPage() {
   return (
     <main className="wrap tone-travel">
       <div className="page">
-      <header className="page-head">
-        <span className="eyebrow">Travel &amp; points</span>
-        <h1>Turn your points into actual trips</h1>
-        <p className="dek">
-          Most Canadian points are worth far more as a plane seat than as a statement credit, if you know where to
-          aim them. Start with a program guide, then steal ideas from the worked
-          examples, each dated so you know how fresh it is.
-        </p>
-        <div className={s.headStats}>
-          <span><b>{TRAVEL_GUIDES.length}</b> guides</span>
-          <span><b>{SWEET_SPOTS.length}</b> worked sweet spots</span>
-          <span><b>{programs.length}</b> programs covered</span>
+      <header className="page-head has-art">
+        <div>
+          <span className="eyebrow">Travel &amp; points</span>
+          <h1>Turn your points into actual trips</h1>
+          <p className="dek">
+            Most Canadian points are worth far more as a plane seat than as a statement credit, if you know where to
+            aim them. Start with a program guide, then steal ideas from the worked
+            examples, each dated so you know how fresh it is.
+          </p>
+          <div className={s.headStats}>
+            <span><b>{TRAVEL_GUIDES.length}</b> guides</span>
+            <span><b>{SWEET_SPOTS.length}</b> worked sweet spots</span>
+            <span><b>{programs.length}</b> programs covered</span>
+          </div>
         </div>
+        <WindowArt className="head-art" />
       </header>
 
       <section className="section" aria-labelledby="guides-h">

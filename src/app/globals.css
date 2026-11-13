@@ -6,7 +6,7 @@
 
 /* Tailwind plumbing for the few pages that still use utilities (the US cards
    guide, compare). Every colour points at a site.css token, so utilities can
-   never drift from the FAEConf palette. The hard-coded Tailwind emerald, red
+   never drift from the site palette. The hard-coded Tailwind emerald, red
    and amber ramps are remapped onto the status tokens for the same reason. */
 @theme {
   --color-background: var(--bg);
@@ -16,14 +16,14 @@
   --color-foreground: var(--text);
   --color-card-foreground: var(--text);
   --color-muted-foreground: var(--text-2);
-  --color-primary: var(--accent);
-  --color-primary-light: var(--accent);
-  --color-primary-dark: var(--accent);
+  --color-primary: var(--fin);
+  --color-primary-light: var(--fin);
+  --color-primary-dark: var(--fin);
   --color-accent: var(--fin);
   --color-accent-light: var(--fin);
-  --color-gold: var(--accent);
-  --color-gold-light: var(--accent);
-  --color-gold-dark: var(--accent);
+  --color-gold: var(--fin);
+  --color-gold-light: var(--fin);
+  --color-gold-dark: var(--fin);
   --color-gold-text: var(--text);
 
   --color-emerald-50: var(--green-bg);
@@ -53,20 +53,22 @@
   --color-amber-600: var(--amber-ink);
   --color-amber-700: var(--amber-ink);
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-plex), ui-monospace, monospace;
+  --font-sans: var(--font-source), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  /* No monospace face on this site: "font-mono" utilities get tabular figures in the text face. */
+  --font-mono: var(--font-source), ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Tailwind preflight resets lists and headings; site.css owns the rest. */
-input[type="range"] { accent-color: var(--accent); }
-input[type="checkbox"] { accent-color: var(--accent); }
+input[type="range"] { accent-color: var(--fin); }
+input[type="checkbox"] { accent-color: var(--fin); }
+.font-mono { font-variant-numeric: tabular-nums; }
 
 .card-hover { transition: border-color .15s, box-shadow .14s, transform .14s; }
 .card-hover:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
-.btn-gold, .btn-primary-legacy { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:7px; background:var(--accent); color:var(--on-accent); padding:10px 18px; font-size:13.5px; font-weight:600; }
-.btn-ghost { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:7px; border:1px solid var(--border); background:var(--surface); color:var(--text-2); padding:10px 18px; font-size:13.5px; font-weight:600; }
+.btn-gold, .btn-primary-legacy { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:999px; background:var(--fin); color:var(--on-accent); padding:12px 22px; font-size:16px; font-weight:600; }
+.btn-ghost { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:999px; border:1.5px solid var(--border-strong); background:var(--surface); color:var(--text); padding:12px 22px; font-size:16px; font-weight:600; }
 .btn-ghost:hover { color: var(--text); border-color: var(--border-strong); }
 
 @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
@@ -80,4 +82,4 @@ input[type="checkbox"] { accent-color: var(--accent); }
 .prose-guide ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--text-2); }
 .prose-guide li { font-size: var(--fs-body); margin-bottom: 0.5rem; line-height: 1.65; }
 .prose-guide strong { color: var(--text); }
-.prose-guide h4 { color: var(--text); font-size: var(--fs-h3); font-weight: 650; }
+.prose-guide h4 { color: var(--text); font-size: var(--fs-h3); font-weight: 600; font-family: var(--font-display); }

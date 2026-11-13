@@ -4,8 +4,8 @@
 .line{fill:none;stroke:var(--fin-d);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
 .dotUp{fill:var(--surface);stroke:var(--green);stroke-width:2}
 .dotDown{fill:var(--surface);stroke:var(--red);stroke-width:2}
-.axis{font-family:var(--font-mono);fill:var(--text-3);font-variant-numeric:tabular-nums}
-.endLabel{font-family:var(--font-mono);font-weight:600;font-variant-numeric:tabular-nums}
+.axis{font-family:var(--font-sans);font-variant-numeric:tabular-nums;fill:var(--text-3);font-variant-numeric:tabular-nums}
+.endLabel{font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-weight:600;font-variant-numeric:tabular-nums}
 .up{fill:var(--green-ink)}
 .down{fill:var(--red)}
 

@@ -7,6 +7,7 @@ import CompareClient, { type CompareCard } from './CompareClient';
 import s from './compare.module.css';
 import { formatBonusText } from '@/lib/bonusText';
 
+import { BasketArt } from "@/components/illustrations/HomeArt";
 export const metadata: Metadata = {
   title: 'Compare credit cards side by side | FinTerminal',
   description: 'Put up to four Canadian or US credit cards head to head: fees, welcome bonuses, first-year value, earn rates and perks, side by side.',
@@ -64,13 +65,16 @@ export default function ComparePage() {
         <Link href="/cards">Cards</Link><span className="sep" aria-hidden="true">/</span>
         <span className="cur" aria-current="page">Compare</span>
       </nav>
-      <header className="page-head">
-        <p className="eyebrow">Credit cards</p>
-        <h1>Compare cards side by side</h1>
-        <p className="dek">
-          Pick up to four cards from the {allCards.length} we track. You get fees, welcome bonuses, our first-year
-          estimate, earn rates and perks in one table, and the link updates so you can share it.
-        </p>
+      <header className="page-head has-art">
+        <div>
+          <p className="eyebrow">Credit cards</p>
+          <h1>Compare cards side by side</h1>
+          <p className="dek">
+            Pick up to four cards from the {allCards.length} we track. You get fees, welcome bonuses, our first-year
+            estimate, earn rates and perks in one table, and the link updates so you can share it.
+          </p>
+        </div>
+        <BasketArt className="head-art" />
       </header>
       <CompareClient cards={cards} benefitLabels={benefitLabels} picks={picks} />
     </main>

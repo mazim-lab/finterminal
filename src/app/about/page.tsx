@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ogMeta } from "@/lib/og";
 import s from "./about.module.css";
 
+import { TableArt } from "@/components/illustrations/HomeArt";
 export const metadata: Metadata = {
   title: "About | FinTerminal",
   description:
@@ -14,13 +15,16 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="wrap page tone-neutral">
-      <header className="page-head">
-        <span className="eyebrow">About</span>
-        <h1>One dad, one notebook, read over my shoulder</h1>
-        <p className="dek">
-          I run FinTerminal by myself. I&apos;m one dad in Ontario, and I built this the way I keep track of my
-          own family&apos;s money, then left the door open so you can read over my shoulder.
-        </p>
+      <header className="page-head has-art">
+        <div>
+          <span className="eyebrow">About</span>
+          <h1>One dad, one notebook, read over my shoulder</h1>
+          <p className="dek">
+            I run FinTerminal by myself. I&apos;m one dad in Ontario, and I built this the way I keep track of my
+            own family&apos;s money, then left the door open so you can read over my shoulder.
+          </p>
+        </div>
+        <TableArt className="head-art" />
       </header>
 
       <div className={s.layout}>
@@ -99,7 +103,7 @@ export default function AboutPage() {
               </div>
               <div className={s.item}>
                 <dt>
-                  <span className="verified-stamp verified-stamp--stale" aria-hidden="true">last checked</span>
+                  <span className="verified-stamp verified-stamp--stale" aria-hidden="true">Last checked</span>
                   <span className="sr-only">Amber stamp</span>
                 </dt>
                 <dd>

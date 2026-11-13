@@ -2,7 +2,7 @@
 .body{max-width:var(--w-read);margin:0}
 .body :global(.cd-sec):first-child{margin-top:0}
 .panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);padding:var(--s5);margin:0 0 var(--s5)}
-.panelTitle{font-size:var(--fs-h3);font-weight:650;letter-spacing:-.01em;color:var(--text);margin-bottom:var(--s2)}
+.panelTitle{font-size:var(--fs-h3);font-weight: 600;letter-spacing:-.01em;color:var(--text);margin-bottom:var(--s2)}
 .fine{font-size:var(--fs-small) !important;line-height:1.6 !important;color:var(--text-2) !important;margin:var(--s4) 0 0 !important}
 .perks{margin-top:var(--s5) !important}
 .closing{margin-top:var(--s6) !important;padding-top:var(--s4);border-top:1px solid var(--border)}

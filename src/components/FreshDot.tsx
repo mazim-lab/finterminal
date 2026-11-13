@@ -34,7 +34,7 @@ function parseDay(date: string | undefined): number | null {
 }
 
 /**
- * A tiny mono "NEW" chip shown beside returning-reader items that are dated after
+ * A tiny "New" chip shown beside returning-reader items that are dated after
  * their previous visit. Renders nothing on the server and until mounted (so there
  * is no hydration mismatch), nothing without JS, and nothing on a first-ever
  * visit or when the item date can't be parsed.
@@ -52,6 +52,6 @@ export function FreshDot({ date }: { date?: string }) {
 
   if (!fresh) return null;
   return (
-    <span className="freshchip" aria-label="new since your last visit">NEW</span>
+    <span className="freshchip" aria-label="new since your last visit">New</span>
   );
 }

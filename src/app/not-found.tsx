@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DoorArt } from "@/components/illustrations/HomeArt";
 import s from "./status-page.module.css";
 
 export const metadata = {
@@ -18,10 +19,11 @@ export default function NotFound() {
   return (
     <main className="wrap page">
       <div className={s.box}>
-        <p className={s.code}>404</p>
-        <h1 className={s.title}>Sorry, I couldn&apos;t find that page</h1>
+        <DoorArt className={s.art} />
+        <p className={s.code}>Page not found (404)</p>
+        <h1 className={s.title}>Come on in, but that page isn&apos;t here</h1>
         <p className={s.copy}>
-          It may have moved, or the link has a typo. The search box at the top of every page (press{" "}
+          Sorry about that. It may have moved, or the link has a typo. The search box at the top of every page (press{" "}
           <kbd className={s.kbd}>Ctrl</kbd> <kbd className={s.kbd}>K</kbd>) is the quickest way to find it again.
         </p>
 

@@ -9,7 +9,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { SearchBox } from "./SearchBox";
 
 // Primary sections. Routes are frozen; only labels are ours to choose.
-// Each pillar carries its FAEConf identity hue in the mobile menu dot.
+// Each pillar carries its own hue in the mobile menu dot.
 export const PRIMARY_NAV = [
   { label: "Cards", href: "/cards", match: ["/cards", "/compare", "/how-we-value-points", "/guides"], dot: "var(--fin-d)" },
   { label: "Travel", href: "/travel", match: ["/travel"], dot: "var(--acct-d)" },
@@ -82,7 +82,7 @@ export function SiteHeader() {
             <div className="mnav" id="mnav">
               {open && <SearchBox />}
               <nav className="mnav-group" aria-label="Sections">
-                <div className="mnav-label">Sections</div>
+                <div className="mnav-label">Find your way</div>
                 {PRIMARY_NAV.map((n) => (
                   <Link key={n.href} href={n.href} aria-current={isActive(n.match) ? "page" : undefined}>
                     {n.label}
@@ -91,7 +91,7 @@ export function SiteHeader() {
                 ))}
               </nav>
               <nav className="mnav-group mnav-sub" aria-label="More">
-                <div className="mnav-label">More</div>
+                <div className="mnav-label">More around the house</div>
                 {MORE_NAV.map((n) => (
                   <Link key={n.href} href={n.href}>{n.label}</Link>
                 ))}

@@ -5,6 +5,7 @@ import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { RATE_PAGES, RATE_CADENCE_DAYS } from "@/components/money/ratePages";
 import s from "./hub.module.css";
 
+import { GardenArt } from "@/components/illustrations/HomeArt";
 const BASE = "https://www.finterminal.ca";
 
 export const metadata = {
@@ -147,20 +148,26 @@ export default function PersonalFinancePage() {
     <main className="wrap page tone-money">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <header className="page-head">
-        <span className="eyebrow">Money</span>
-        <h1>Personal finance, sorted by the moment you&apos;re in</h1>
-        <p className="dek">
-          Plain-language guides for Canadians, grouped by the moment you are actually in. Pick the one that sounds like
-          your life right now.
-        </p>
-        <div className="meta">
-          <span>{articles.length} guides</span>
-          <span className="sep">/</span>
-          <span>{groups.length} life moments</span>
-          <span className="sep">/</span>
-          <span>general info, not advice</span>
+      <header className="page-head has-art">
+
+        <div>
+          <span className="eyebrow">Money</span>
+          <h1>Personal finance, sorted by the moment you&apos;re in</h1>
+          <p className="dek">
+            Plain-language guides for Canadians, grouped by the moment you are actually in. Pick the one that sounds like
+            your life right now.
+          </p>
+          <div className="meta">
+            <span>{articles.length} guides</span>
+            <span className="sep">/</span>
+            <span>{groups.length} life moments</span>
+            <span className="sep">/</span>
+            <span>general info, not advice</span>
+          </div>
+
         </div>
+
+        <GardenArt className="head-art" />
       </header>
 
       <section className={s.rates} aria-labelledby="rates-strip">

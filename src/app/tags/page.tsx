@@ -5,6 +5,7 @@ import { ogMeta } from "@/lib/og";
 import { groupTags } from "./groups";
 import s from "./tags.module.css";
 
+import { ShelfArt } from "@/components/illustrations/HomeArt";
 export const metadata: Metadata = {
   title: "Browse by topic | FinTerminal",
   description:
@@ -27,17 +28,23 @@ export default function TagsIndexPage() {
         <span className="cur" aria-current="page">Topics</span>
       </nav>
 
-      <header className="page-head">
-        <span className="eyebrow">Topics</span>
-        <h1>Browse by topic</h1>
-        <p className="dek">
-          Every FinTerminal topic in one place. Pick a tag to pull up every article that touches it, whether that is
-          Aeroplan sweet spots, cash back cards, or where to park your emergency fund.
-        </p>
-        <div className={s.headStats}>
-          <span><b>{withCounts.length}</b> topics</span>
-          <span><b>{TAGGED_ARTICLES.length}</b> tagged articles</span>
+      <header className="page-head has-art">
+
+        <div>
+          <span className="eyebrow">Topics</span>
+          <h1>Browse by topic</h1>
+          <p className="dek">
+            Every FinTerminal topic in one place. Pick a tag to pull up every article that touches it, whether that is
+            Aeroplan sweet spots, cash back cards, or where to park your emergency fund.
+          </p>
+          <div className={s.headStats}>
+            <span><b>{withCounts.length}</b> topics</span>
+            <span><b>{TAGGED_ARTICLES.length}</b> tagged articles</span>
+          </div>
+
         </div>
+
+        <ShelfArt className="head-art" />
       </header>
 
       {groups.length > 0 ? (
@@ -74,6 +81,7 @@ export default function TagsIndexPage() {
         </>
       ) : (
         <div className="empty">
+          <ShelfArt className="empty-art" />
           <h2 className={s.emptyH}>No tagged articles yet</h2>
           <p>Check back soon.</p>
         </div>

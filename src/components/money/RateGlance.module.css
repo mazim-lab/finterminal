@@ -1,14 +1,14 @@
 /* At-a-glance rate table for the rate pages. Tokens only. */
 .glance{margin:var(--s5) 0 var(--s5)}
 .glance :global(.cd-sec){margin-top:var(--s6)}
-.intro{font-size:15px !important;line-height:1.6 !important;color:var(--text-2) !important;margin:0 0 var(--s3) !important}
+.intro{font-size: 16px !important;line-height:1.6 !important;color:var(--text-2) !important;margin:0 0 var(--s3) !important}
 
 .wrap{margin:0;box-shadow:var(--shadow)}
 .scroll{-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
-.scroll:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:var(--radius-card)}
+.scroll:focus-visible{outline:2px solid var(--fin);outline-offset:-2px;border-radius:var(--radius-card)}
 
-.table{font-size:14px;min-width:100%}
-.table thead th{padding:10px 12px;font-family:var(--font-mono);letter-spacing:.07em}
+.table{font-size: 15px;min-width:100%}
+.table thead th{padding:10px 12px;font-family:var(--font-sans);font-variant-numeric:tabular-nums;}
 .table thead th:first-child{position:sticky;left:0;z-index:2;background:var(--surface-2)}
 .table tbody td{padding:11px 12px;vertical-align:top;white-space:nowrap}
 .table tbody tr:hover>th{background:var(--featured-bg)}
@@ -18,26 +18,26 @@
   padding:11px 12px;border-top:1px solid var(--border);vertical-align:top;min-width:150px;max-width:210px;
   box-shadow:1px 0 0 var(--border)}
 .table tbody tr:first-child .name{border-top:none}
-.nameText{display:block;font-weight:650;color:var(--text);line-height:1.35;font-size:14px}
-.nameSub{display:block;margin-top:2px;font-family:var(--font-mono);font-size:var(--fs-micro);color:var(--text-3);line-height:1.4;white-space:normal}
+.nameText{display:block;font-weight: 600;color:var(--text);line-height:1.35;font-size: 15px}
+.nameSub{display:block;margin-top:2px;font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size:var(--fs-micro);color:var(--text-3);line-height:1.4;white-space:normal}
 
-.num{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.num{font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-variant-numeric:tabular-nums}
 .val{font-weight:600;color:var(--text);position:relative}
-.num .val{font-size:14px}
+.num .val{font-size: 15px}
 .txt{white-space:normal !important;min-width:150px;color:var(--text-2);line-height:1.5}
 .txt .val{font-weight:500;color:var(--text)}
-.cellSub{display:block;margin-top:2px;font-size:12.5px;color:var(--text-2);font-weight:400;font-family:var(--font-sans);line-height:1.45;white-space:normal}
-.num .cellSub{font-family:var(--font-mono);font-size:var(--fs-micro)}
+.cellSub{display:block;margin-top:2px;font-size: 14px;color:var(--text-2);font-weight:400;font-family:var(--font-sans);line-height:1.45;white-space:normal}
+.num .cellSub{font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size:var(--fs-micro)}
 
 .best{background:var(--tone-bg) !important}
 .best .val{color:var(--tone)}
-.check{font-family:var(--font-mono);font-size:12px;color:var(--text-2);white-space:nowrap}
+.check{font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size: 13.5px;color:var(--text-2);white-space:nowrap}
 .dash{color:var(--text-3)}
-.ended{margin-left:6px;font-size:10px;padding:3px 6px;vertical-align:1px}
+.ended{margin-left:6px;font-size: 12.5px;padding:3px 6px;vertical-align:1px}
 
 .foot{padding:var(--s3) var(--s4);border-top:1px solid var(--border);background:var(--surface-2);
   display:flex;flex-direction:column;gap:4px}
-.foot p{margin:0 !important;font-size:12.5px !important;line-height:1.55 !important;color:var(--text-2) !important}
+.foot p{margin:0 !important;font-size: 14px !important;line-height:1.55 !important;color:var(--text-2) !important}
 .legend{display:flex;align-items:center;gap:8px}
 .swatch{width:12px;height:12px;border-radius:3px;background:var(--tone-bg);border:1px solid var(--tone-bd);flex:none}
 

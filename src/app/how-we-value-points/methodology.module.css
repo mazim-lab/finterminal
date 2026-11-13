@@ -5,7 +5,7 @@
 .formula {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; margin: 0 0 var(--s5);
   padding: var(--s4) var(--s5); border: 1px solid var(--border); border-radius: var(--radius-card);
-  background: var(--gradient-card); font-family: var(--font-mono); font-size: 14px; line-height: 1.5;
+  background: var(--gradient-card); font-family:var(--font-sans);font-variant-numeric:tabular-nums; font-size: 15px; line-height: 1.5;
 }
 .fLab { font-weight: 600; color: var(--text); }
 .fEq { color: var(--text-3); }
@@ -14,17 +14,17 @@
 .tw { margin: var(--s4) 0 var(--s3); }
 .table tbody th, .table tbody td { padding: 11px 16px; border-top: 1px solid var(--border); }
 .table tbody tr:first-child th, .table tbody tr:first-child td { border-top: none; }
-.prog { text-align: left; font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--text); }
-.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 15px; color: var(--text-2); white-space: nowrap; }
+.prog { text-align: left; font-family: var(--font-sans); font-size: 16px; font-weight: 600; color: var(--text); }
+.num { font-family:var(--font-sans);font-variant-numeric:tabular-nums; font-variant-numeric: tabular-nums; font-size: 16px; color: var(--text-2); white-space: nowrap; }
 .base { color: var(--text); font-weight: 600; }
-.fixed { font-family: var(--font-sans); font-size: 13px; color: var(--text-3); }
-.source { font-size: 13.5px !important; line-height: 1.6 !important; color: var(--text-2) !important; }
+.fixed { font-family: var(--font-sans); font-size: 14px; color: var(--text-3); }
+.source { font-size: 14.5px !important; line-height: 1.6 !important; color: var(--text-2) !important; }
 
 .next { margin-top: var(--s7); padding-top: var(--s5); border-top: 1px solid var(--border); }
 .next p { margin-bottom: var(--s2); }
 
 @media (max-width: 680px) {
   .table tbody th, .table tbody td, .table thead th { padding-left: 12px; padding-right: 12px; }
-  .prog { font-size: 14.5px; }
-  .formula { padding: var(--s3) var(--s4); font-size: 13px; }
+  .prog { font-size: 15.5px; }
+  .formula { padding: var(--s3) var(--s4); font-size: 14px; }
 }

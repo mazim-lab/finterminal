@@ -1,12 +1,14 @@
-// FinTerminal mark: an ink rounded square (FAEConf's logo shape) holding three
-// ascending bars in the three pillar hues, Cards, Travel and Money.
+// FinTerminal mark: "Homestead sprout". A soft-cornered house with a two-leaf
+// sprout growing from its floor, cut out as negative space (even-odd fill), so
+// the mark works in one colour and needs no mask ids. Home and things that grow.
+export const MARK_PATH =
+  "M14.4 4.3Q16 3 17.6 4.3L28 12.6Q29 13.4 29 14.8V25.6Q29 28.2 26.4 28.2H5.6Q3 28.2 3 25.6V14.8Q3 13.4 4 12.6Z" +
+  "M14.9 25.4V21.6C12.2 21.4 10.4 19.7 10 16.9 12.6 16.9 14.4 18.2 14.9 19.9V18.2C15.3 14.8 17.8 12.9 22 12.8 21.8 16.6 19.6 18.8 17.1 19.1V25.4Q17.1 26.4 16 26.4 14.9 26.4 14.9 25.4Z";
+
 export function BrandMark({ className = "brand-mark" }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 28 28" aria-hidden="true" focusable="false">
-      <rect width="28" height="28" rx="6.5" fill="var(--mark-bg)" />
-      <rect x="6.5" y="15" width="4" height="7" rx="1.2" fill="var(--mark-1)" />
-      <rect x="12" y="10.5" width="4" height="11.5" rx="1.2" fill="var(--mark-2)" />
-      <rect x="17.5" y="6" width="4" height="16" rx="1.2" fill="var(--mark-3)" />
+    <svg className={className} viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path d={MARK_PATH} fill="var(--fin)" fillRule="evenodd" />
     </svg>
   );
 }
@@ -15,9 +17,7 @@ export function Logo() {
   return (
     <a href="/" className="brand" aria-label="FinTerminal home">
       <BrandMark />
-      <span className="brand-word">
-        Fin<b>Terminal</b>
-      </span>
+      <span className="brand-word">FinTerminal</span>
     </a>
   );
 }
