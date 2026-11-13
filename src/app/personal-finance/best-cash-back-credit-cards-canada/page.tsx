@@ -12,7 +12,7 @@ export const metadata = {
   title: "The best cash-back credit cards in Canada | FinTerminal",
   description:
     "Our pick of the best cash-back credit cards in Canada, organized by how you actually spend: best no-annual-fee, best for groceries, best flat-rate everyday, and best premium. Every fee, earn rate, and value figure comes straight from our own card data. Our view as of July 2026, not advice.",
-  ...ogMeta("The best cash-back credit cards in Canada", "Personal finance"),
+  ...ogMeta("The best cash-back credit cards in Canada", "Personal finance", "/personal-finance/best-cash-back-credit-cards-canada", "article"),
 };
 
 // ── Pull every figure from OUR card data, by slug, so the page stays accurate ──

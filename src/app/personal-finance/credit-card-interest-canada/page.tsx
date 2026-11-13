@@ -11,7 +11,7 @@ export const metadata = {
   title: "How Credit Card Interest Works in Canada (and How to Never Pay It) | FinTerminal",
   description:
     "A plain-language guide to credit card interest in Canada: what the purchase APR really is, how the grace period works, why carrying a balance costs you the interest-free window, how cash advances differ, and why paying the statement balance in full every month means zero interest. General info as of July 2026, not advice.",
-  ...ogMeta("How Credit Card Interest Works in Canada (and How to Never Pay It)", "Personal finance"),
+  ...ogMeta("How Credit Card Interest Works in Canada (and How to Never Pay It)", "Personal finance", "/personal-finance/credit-card-interest-canada", "article"),
 };
 
 const TOC = [

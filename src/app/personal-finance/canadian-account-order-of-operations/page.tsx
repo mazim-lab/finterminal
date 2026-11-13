@@ -13,7 +13,7 @@ export const metadata = {
   title: "Where your next dollar should go: the Canadian account order | FinTerminal",
   description:
     "Employer match, RESP, FHSA, TFSA, RRSP, or taxable? A clear order of operations for where a Canadian should put the next dollar, with the marginal-rate logic that decides when an RRSP beats a TFSA.",
-  ...ogMeta("Where your next dollar should go: the Canadian account order", "Personal finance"),
+  ...ogMeta("Where your next dollar should go: the Canadian account order", "Personal finance", "/personal-finance/canadian-account-order-of-operations", "article"),
 };
 
 const TOC = [

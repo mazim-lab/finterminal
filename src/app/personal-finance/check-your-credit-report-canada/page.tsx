@@ -11,7 +11,7 @@ export const metadata = {
   title: "Check Your Credit Report and Score in Canada, Free | FinTerminal",
   description:
     "How to read your Canadian credit report, check both your report and score for free from Equifax Canada and TransUnion Canada, understand why your number moves, spot and dispute errors, and see through common credit myths. General info as of July 2026, not credit advice.",
-  ...ogMeta("Check Your Credit Report and Score in Canada, Free", "Personal finance"),
+  ...ogMeta("Check Your Credit Report and Score in Canada, Free", "Personal finance", "/personal-finance/check-your-credit-report-canada", "article"),
 };
 
 const TOC = [

@@ -13,7 +13,7 @@ export const metadata = {
   title: "Are credit card points and cash back taxable in Canada? | FinTerminal",
   description:
     "For everyday personal spending, the CRA treats credit card points and cash back as a discount, not income, so they are not taxable. Here is the clear version, plus the real nuances around business, employment, and referral rewards.",
-  ...ogMeta("Are credit card points and cash back taxable in Canada?", "Personal finance"),
+  ...ogMeta("Are credit card points and cash back taxable in Canada?", "Personal finance", "/personal-finance/are-credit-card-points-taxable-canada", "article"),
 };
 
 const TOC = [

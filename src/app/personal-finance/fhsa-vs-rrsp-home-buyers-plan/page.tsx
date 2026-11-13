@@ -12,7 +12,7 @@ export const metadata = {
   title: "FHSA vs the RRSP Home Buyers' Plan: which to use for a first home | FinTerminal",
   description:
     "A plain-language head-to-head on funding a first home in Canada. The FHSA gives a tax-free withdrawal you never repay; the Home Buyers' Plan is a loan from your own RRSP you repay over 15 years. Which to prioritize, and how to use both. General info as of July 2026, not advice.",
-  ...ogMeta("FHSA vs the RRSP Home Buyers' Plan: which to use for a first home", "Personal finance"),
+  ...ogMeta("FHSA vs the RRSP Home Buyers' Plan: which to use for a first home", "Personal finance", "/personal-finance/fhsa-vs-rrsp-home-buyers-plan", "article"),
 };
 
 const TOC = [

@@ -15,7 +15,7 @@ export const metadata = {
   title: "RESP and the 20% CESG grant: the easiest guaranteed return in Canada | FinTerminal",
   description:
     "The government adds 20 percent to what you put in an RESP, up to $500 a year per child, through the Canada Education Savings Grant. Here is how the grant works, how not to leave money on the table, and how to invest it wisely.",
-  ...ogMeta("RESP and the 20% CESG grant: the easiest guaranteed return in Canada", "Personal finance"),
+  ...ogMeta("RESP and the 20% CESG grant: the easiest guaranteed return in Canada", "Personal finance", "/personal-finance/resp-cesg-grant-canada", "article"),
 };
 
 const TOC = [

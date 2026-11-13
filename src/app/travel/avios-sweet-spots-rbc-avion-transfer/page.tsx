@@ -11,7 +11,7 @@ export const metadata = {
   title: "Avios sweet spots, and converting RBC Avion to Avios | FinTerminal",
   description:
     "Where Avios deliver real value for Canadians (short-haul and surcharge-free partners), the British Airways surcharge trap to avoid, and how to move RBC Avion points into Avios.",
-  ...ogMeta("Avios sweet spots, and converting RBC Avion to Avios", "Travel & points"),
+  ...ogMeta("Avios sweet spots, and converting RBC Avion to Avios", "Travel & points", "/travel/avios-sweet-spots-rbc-avion-transfer", "article"),
 };
 
 const TOC = [

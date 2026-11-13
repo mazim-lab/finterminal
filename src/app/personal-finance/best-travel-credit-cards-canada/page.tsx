@@ -12,7 +12,7 @@ export const metadata = {
   title: "The best travel and rewards credit cards in Canada | FinTerminal",
   description:
     "Our pick of the best travel and rewards credit cards in Canada, organized by how you actually travel: best premium card, best no-annual-fee, best for Aeroplan, best for flexible transferable points, best for lounge access, and best for no foreign transaction fees. Every fee, earn rate, and value figure comes straight from our own card data. Our view as of July 2026, not advice.",
-  ...ogMeta("The best travel and rewards credit cards in Canada", "Personal finance"),
+  ...ogMeta("The best travel and rewards credit cards in Canada", "Personal finance", "/personal-finance/best-travel-credit-cards-canada", "article"),
 };
 
 // ── Pull every figure from OUR card data, by slug, so the page stays accurate ──

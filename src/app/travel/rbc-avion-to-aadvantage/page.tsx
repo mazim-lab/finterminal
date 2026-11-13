@@ -11,7 +11,7 @@ export const metadata = {
   title: "How to transfer RBC Avion points to American Airlines AAdvantage | FinTerminal",
   description:
     "A plain-English walkthrough for Canadians: which RBC Avion cards can transfer to American Airlines, the real 1 to 0.7 ratio and 5,000 point minimum, how to do it in Avion Rewards, timing, and why to wait for a transfer bonus.",
-  ...ogMeta("How to transfer RBC Avion points to American Airlines AAdvantage", "Travel & points"),
+  ...ogMeta("How to transfer RBC Avion points to American Airlines AAdvantage", "Travel & points", "/travel/rbc-avion-to-aadvantage", "article"),
 };
 
 const TOC = [

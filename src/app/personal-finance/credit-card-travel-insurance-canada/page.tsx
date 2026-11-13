@@ -11,7 +11,7 @@ export const metadata = {
   title: "What Your Credit Card's Travel Insurance Actually Covers in Canada | FinTerminal",
   description:
     "What credit-card travel insurance in Canada actually covers: emergency medical, trip cancellation, delays and rental cars, plus the age caps and day limits that catch people out. General info as of July 2026, not insurance advice.",
-  ...ogMeta("What Your Credit Card's Travel Insurance Actually Covers in Canada", "Personal finance"),
+  ...ogMeta("What Your Credit Card's Travel Insurance Actually Covers in Canada", "Personal finance", "/personal-finance/credit-card-travel-insurance-canada", "article"),
 };
 
 const TOC = [

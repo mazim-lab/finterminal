@@ -11,7 +11,7 @@ export const metadata = {
   title: "How to Build (or Rebuild) Credit in Canada: A Plain-Language Guide | FinTerminal",
   description:
     "How credit scores work in Canada, who tracks them (Equifax and TransUnion, roughly 300 to 900), the factors that move them, and a practical playbook to build credit from scratch, from thin credit, or after missed payments. General info as of July 2026, not credit advice.",
-  ...ogMeta("How to Build (or Rebuild) Credit in Canada: A Plain-Language Guide", "Personal finance"),
+  ...ogMeta("How to Build (or Rebuild) Credit in Canada: A Plain-Language Guide", "Personal finance", "/personal-finance/how-to-build-credit-canada", "article"),
 };
 
 const TOC = [

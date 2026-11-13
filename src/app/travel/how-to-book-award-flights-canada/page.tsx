@@ -11,7 +11,7 @@ export const metadata = {
   title: "How to search for and book award flights from Canada: the method | FinTerminal",
   description:
     "A plain-English method for booking award flights from Canada: decide the trip, search award availability at the source (the airline or program site) and with award-search tools, treat availability as the real constraint, hold the seat, then transfer points in only once you can book. Aeroplan for Star, Avios and AAdvantage for oneworld. As of July 2026.",
-  ...ogMeta("How to search for and book award flights from Canada: the method", "Travel & points"),
+  ...ogMeta("How to search for and book award flights from Canada: the method", "Travel & points", "/travel/how-to-book-award-flights-canada", "article"),
 };
 
 const TOC = [

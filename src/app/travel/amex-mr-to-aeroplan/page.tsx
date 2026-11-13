@@ -11,7 +11,7 @@ export const metadata = {
   title: "How to convert Amex Membership Rewards to Aeroplan | FinTerminal",
   description:
     "Step-by-step guide for transferring Amex Membership Rewards points to Air Canada Aeroplan at 1 to 1, including timing, transfer bonuses, and the mistakes to avoid.",
-  ...ogMeta("How to convert Amex Membership Rewards to Aeroplan", "Travel & points"),
+  ...ogMeta("How to convert Amex Membership Rewards to Aeroplan", "Travel & points", "/travel/amex-mr-to-aeroplan", "article"),
 };
 
 const TOC = [

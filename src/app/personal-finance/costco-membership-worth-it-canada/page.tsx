@@ -11,7 +11,7 @@ export const metadata = {
   title: "Does a Costco membership pay for itself? | FinTerminal",
   description:
     "A clear, no-hype look at Costco Canada's fees, the 2% Executive reward, and where the savings really come from, so you can run the breakeven math for your own household.",
-  ...ogMeta("Does a Costco membership pay for itself?", "Personal finance"),
+  ...ogMeta("Does a Costco membership pay for itself?", "Personal finance", "/personal-finance/costco-membership-worth-it-canada", "article"),
 };
 
 const TOC = [

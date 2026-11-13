@@ -13,7 +13,7 @@ export const metadata = {
   title: "Points vs cash back: which actually wins for your household | FinTerminal",
   description:
     "Travel points can be worth more per dollar, but only if you redeem them well. Here is the honest cents-per-point threshold where simple, frictionless cash back is the smarter, lower-effort choice for a Canadian household.",
-  ...ogMeta("Points vs cash back: which actually wins for your household", "Personal finance"),
+  ...ogMeta("Points vs cash back: which actually wins for your household", "Personal finance", "/personal-finance/points-vs-cash-back-canada", "article"),
 };
 
 const TOC = [
