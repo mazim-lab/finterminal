@@ -1,0 +1,59 @@
+/* /news/[slug]: a single wire story on the shared .doc template */
+
+.story :global(.eyebrow) {
+  margin-bottom: var(--s2);
+}
+.story .head h1 {
+  font-size: clamp(23px, 2.5vw, 30px);
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+}
+.story :global(.lede) {
+  font-size: 17px;
+  line-height: 1.65;
+}
+.story :global(.crumb .cur) {
+  max-width: 34ch;
+}
+.body {
+  margin-top: var(--s5);
+}
+.more {
+  margin-top: var(--s2);
+}
+.moreRow {
+  align-items: baseline;
+}
+.moreRow:hover {
+  background: var(--surface-2);
+}
+.moreTitle {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+.moreTitle a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.moreTitle a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .story :global(.lede) {
+    font-size: 16px;
+  }
+  .story :global(.crumb .cur) {
+    max-width: 22ch;
+  }
+  .moreRow {
+    flex-direction: column;
+    gap: 2px;
+    padding-top: var(--s3);
+    padding-bottom: var(--s3);
+  }
+}

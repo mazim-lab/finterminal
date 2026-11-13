@@ -1,0 +1,237 @@
+/* /news index: ticker of the 5 newest + month-grouped archive */
+
+.layout {
+  max-width: 860px;
+}
+
+/* ticker */
+.tickerSec {
+  margin-bottom: var(--s7);
+}
+.tickerTitle {
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--text-2);
+}
+.tickerList {
+  list-style: none;
+}
+.tline:first-child {
+  border-top: none;
+}
+.tline :global(.ndate) {
+  min-width: 44px;
+}
+.ttext {
+  text-wrap: pretty;
+}
+@media (max-width: 560px) {
+  .tline {
+    flex-wrap: wrap;
+    gap: 2px 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .tline :global(.ndate) {
+    min-width: 0;
+  }
+  .ttext {
+    flex-basis: 100%;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tline {
+    animation: tIn 0.42s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+}
+@keyframes tIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* archive */
+.archiveSec {
+  margin-top: 0;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--s3);
+}
+.fbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+}
+.fbtn:hover {
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+.fbtn[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+.fct {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.75;
+}
+.count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--text-3);
+  margin-bottom: var(--s4);
+}
+
+.month {
+  margin-bottom: var(--s5);
+}
+.month[hidden],
+.story[hidden] {
+  display: none;
+}
+.monthLabel {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 2;
+  background: var(--bg);
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding: var(--s2) 0;
+  border-bottom: 1px solid var(--border);
+}
+.stories {
+  list-style: none;
+}
+.story {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: var(--s4);
+  padding: var(--s4) 0 var(--s5);
+  border-bottom: 1px solid var(--border);
+}
+.story:last-child {
+  border-bottom: none;
+}
+.when {
+  padding-top: 3px;
+}
+.whenDay {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-2);
+  white-space: nowrap;
+}
+.storyBody {
+  min-width: 0;
+}
+.chipsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--s2);
+}
+.title {
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  color: var(--text);
+  text-wrap: pretty;
+}
+.title a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.dek {
+  margin-top: 6px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-2);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+.src {
+  margin-top: var(--s2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--text-3);
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin-top: var(--s2);
+}
+.act {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+.act:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.actAlt {
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .tickerSec {
+    margin-bottom: var(--s6);
+  }
+  .fbtn {
+    height: 44px;
+  }
+  .act {
+    min-height: 44px;
+  }
+}
+@media (max-width: 560px) {
+  .story {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  .when {
+    padding-top: 0;
+  }
+  .dek {
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+}
