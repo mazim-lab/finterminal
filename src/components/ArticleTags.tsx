@@ -11,9 +11,9 @@ export function ArticleTags({ path }: { path: string }) {
   if (tags.length === 0) return null;
 
   return (
-    <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "10px 0 14px" }}>
+    <div className="chips doc-tags" aria-label="Topics">
       {tags.map((t) => (
-        <Link key={t.slug} href={`/tags/${t.slug}`} className="tag em">
+        <Link key={t.slug} href={`/tags/${t.slug}`} className="chip">
           {t.label}
         </Link>
       ))}

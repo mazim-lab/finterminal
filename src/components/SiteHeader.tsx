@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
-import { Ticker } from "./Ticker";
 import { ThemeToggle } from "./ThemeToggle";
 import { SearchBox } from "./SearchBox";
 
@@ -58,7 +57,6 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hdr-right">
-          <Ticker />
           <SearchBox />
           <ThemeToggle />
           <button
