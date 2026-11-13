@@ -23,18 +23,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "FinTerminal",
-    description: "Canadian cards, points, travel and personal finance, explained plainly and dated.",
+    description: "Canadian cards, points, travel and everyday money, talked through at the kitchen table, with a date on every number.",
     type: "website",
     siteName: "FinTerminal",
     locale: "en_CA",
     url: "https://www.finterminal.ca",
-    images: [{ url: "/api/og?title=The+terminal+for+Canadian+money&kicker=Cards%2C+points+%26+personal+finance", width: 1200, height: 630, alt: "FinTerminal" }],
+    images: [{ url: "/api/og?title=Canadian+money%2C+sorted+out+at+the+kitchen+table&kicker=Cards%2C+points+%26+personal+finance", width: 1200, height: 630, alt: "FinTerminal" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "FinTerminal",
-    description: "Canadian cards, points, travel and personal finance, explained plainly and dated.",
-    images: ["/api/og?title=The+terminal+for+Canadian+money&kicker=Cards%2C+points+%26+personal+finance"],
+    description: "Canadian cards, points, travel and everyday money, talked through at the kitchen table, with a date on every number.",
+    images: ["/api/og?title=Canadian+money%2C+sorted+out+at+the+kitchen+table&kicker=Cards%2C+points+%26+personal+finance"],
   },
 };
 

@@ -196,8 +196,9 @@
   .toolbar { gap: var(--s2); }
   .search { flex-basis: 100%; }
   .searchInput { height: 44px; font-size: 16px; }
-  .seg { flex: 1; }
-  .seg button { flex: 1; justify-content: center; min-height: 44px; }
+  .seg.seg { flex: 1; flex-wrap: nowrap; min-width: 0; }
+  .seg.seg button { flex: 1; justify-content: center; min-height: 44px; min-width: 0; padding: 8px 6px; gap: 4px; font-size: 14.5px; }
+  .segCt { font-size: 12px; }
   .filterBtn { height: 46px; }
   .tableHint { display: none; }
 

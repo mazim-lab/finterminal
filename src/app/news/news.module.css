@@ -99,11 +99,11 @@
   top: var(--header-h);
   z-index: 2;
   background: var(--bg);
-  font-family:var(--font-sans);font-variant-numeric:tabular-nums;
-  font-size: var(--fs-micro);
+  font-family: var(--font-display);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-size: 18px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--text-3);
+  color: var(--text-2);
   padding: var(--s2) 0;
   border-bottom: 1px solid var(--border);
 }

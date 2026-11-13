@@ -238,7 +238,7 @@ export default function Home() {
       {/* ── What's fresh ──────────────────────────────────────────────────── */}
       <section className="section" aria-labelledby="new-h">
         <div className="section-head">
-          <h2 id="new-h">Fresh on the table</h2>
+          <h2 id="new-h">Newest on the table</h2>
           <Link className="more" href="/news">
             All news &rarr;
           </Link>

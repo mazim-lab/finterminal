@@ -161,5 +161,6 @@
 
 /* touch layout: the small "All" links get a 44px tall hit area */
 @media (max-width:980px){
-  .colMore,.startMore{display:inline-flex;align-items:center;min-height:44px}
+  .colMore,.startMore,.signed a{display:inline-flex;align-items:center;min-height:44px}
+  .startList a::after{content:"";position:absolute;inset:0}
 }
