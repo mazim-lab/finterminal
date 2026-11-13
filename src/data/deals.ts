@@ -481,6 +481,8 @@ export const DEALS: Deal[] = [
       "If a bag has ever popped open on you mid trip, a solid hardside set at half price is worth a look. Costco has the Ricardo Beverly Hills Huntington two piece hardside set down to $99.97 from the $199.99 it sold at before, and shipping is free. Ricardo is a real luggage name rather than a no name, and you get a carry on plus a larger checked size, both with spinner wheels and hard shells, which is enough to cover a family that travels a couple of times a year. Two honest notes before you grab it. This is a Costco Last Chance clearance, so there is no set end date and once the stock is gone it just quietly disappears. And a hardside shell scuffs and shows scratches more than soft luggage does, so if you need it to stay showroom clean forever this is not the one, but for getting your stuff there in one piece it does the job.",
     category: "Travel",
     posted: "Jul 16, 2026",
+    expires: "ended Nov 11",
+    expiresAt: "2026-11-11",
   },
   {
     title: "LEGO Icons Ferrari F2004 & Michael Schumacher (11375)",
