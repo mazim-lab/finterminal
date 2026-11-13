@@ -538,7 +538,7 @@ tr.rcpt td{background:var(--surface-2);padding:var(--s4) var(--s5)}
 .kvrow:first-child{border-top:none}
 .kvrow .kvk{font-size:15px;font-weight:650;color:var(--text);margin-bottom:4px;letter-spacing:-.005em}
 .kvrow .kvv{font-size:15px;color:var(--text-2);line-height:1.65}
-.kvrow .kvv strong{color:var(--text);font-family:var(--font-mono);font-weight:600;font-size:14px;font-variant-numeric:tabular-nums}
+.kvrow .kvv strong{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
 
 .fld{font-family:var(--font-mono);font-size:12px;background:var(--surface-2);color:var(--text);border:1px solid var(--border);border-radius:4px;padding:1px 6px;white-space:nowrap}
 
@@ -780,3 +780,6 @@ select.finput,.fselect{cursor:pointer;appearance:none;-webkit-appearance:none;pa
 .cta-row{display:flex;flex-wrap:wrap;gap:8px;margin:var(--s2) 0 var(--s4)}
 .cta-row .cd-apply{margin-top:0}
 .doc-tags{margin:var(--s2) 0 var(--s4)}
+.step .sn{position:absolute;left:0;top:0;width:27px;height:27px;border-radius:8px;background:var(--surface-2);border:1px solid var(--border-strong);
+  color:var(--text);font-family:var(--font-mono);font-weight:600;font-size:12px;display:flex;align-items:center;justify-content:center}
+.step .sh{font-size:16.5px;font-weight:650;letter-spacing:-.01em;color:var(--text);line-height:1.35;padding-top:3px}
