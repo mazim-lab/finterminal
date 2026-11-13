@@ -452,18 +452,6 @@ export const DEALS: Deal[] = [
     posted: "Jul 18, 2026",
   },
   {
-    title: "Samsung 27-inch QHD 180Hz IPS gaming monitor (Odyssey G5 G50F)",
-    merchant: "Newegg",
-    url: "https://www.newegg.ca/samsung-ls27fg500enxza-27-qhd-180hz-ips-black/p/N82E16824027405",
-    price: "$199.99",
-    was: "$349.99",
-    blurb:
-      "If you are still working or gaming on a basic 1080p screen, this is the kind of upgrade you feel every single day. Samsung has its 27 inch Odyssey G5 down to $199.99 from $349.99, a clean $150 off, and the specs punch well above that price. You get sharp QHD 2560x1440 resolution, a fast 180Hz refresh rate, and an IPS panel that keeps colours honest from any angle, so text stays crisp for a work day and motion stays smooth for a game night. One honest note so you buy clear eyed: this is a straightforward gaming and productivity monitor without extras like USB-C charging or built-in speakers, and Newegg gives you a short 15 day return window, so if you want to try it, decide inside that window.",
-    category: "Electronics",
-    posted: "Jul 16, 2026",
-    expiresAt: "2026-07-22",
-  },
-  {
     title: "Gigabyte 27-inch QHD 180Hz curved gaming monitor (GS27QCA)",
     merchant: "Newegg",
     url: "https://www.newegg.ca/gigabyte-gs27qca-27-qhd-180hz-gs-series-va-black/p/N82E16824012112",
