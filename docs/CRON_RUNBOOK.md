@@ -391,6 +391,25 @@ The CA bonus value displayed = `points × baseline / 100`, so a wrong cpp inflat
 card on that program. Sanity-check after any change (e.g. **PC Optimum = 0.1¢**, 1,000
 pts = $1 — it was wrongly 0.7¢ and inflated PC cards 7×).
 
+**Deliberate `rewards_program` values (set 2026-11-13, do not revert).** These 8 cards
+earn their own currency, not the issuer's umbrella program. A card pass must keep these
+values and must not "correct" them back to `rbc rewards`, `cibc aventura` or `bmo rewards`:
+
+| Card slug | `rewards_program` | Valuation |
+|---|---|---|
+| `more-rewards-rbc-visa`, `more-rewards-rbc-visa-infinite` | `more rewards` | 0.15¢ (10,000 pts = $15) |
+| `moi-rbc-visa` | `moi` | 0.8¢ (500 pts = $4) |
+| `cibc-adapta-mastercard`, `cibc-adapta-mastercard-for-students` | `cibc adapta` | 0.667¢, up to 0.83¢ |
+| `bmo-viporter-mastercard`, `bmo-viporter-world-elite-mastercard` | `viporter points` | not valued |
+| `rbc-british-airways-visa-infinite` | `avios` | not valued |
+
+"Not valued" means the program is in `UNVALUED_PROGRAMS` in `point-valuations.ts`: the
+card shows its bonus in points, keeps `cpp_cad: null`, and reads "Not valued" on the site.
+Do not give it a cpp to "fill the gap". Watch the older scripts: `scrapers/enrich_cpp.py`
+picks the program from the issuer name and would put all 8 back on the umbrella program,
+and `scrapers/recompute_values.py` falls back to 1.0¢ when `cpp_cad` is null. Do not run
+them over these cards, or restore the values above afterwards.
+
 ### 3e. Card-data validation checklist (run after any refresh)
 
 1. JSON valid: `python -c "import json; json.load(open('src/data/canadian_cards_comprehensive.json',encoding='utf-8'))"` (and the US file).
