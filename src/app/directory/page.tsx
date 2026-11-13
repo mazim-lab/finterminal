@@ -94,7 +94,7 @@ export default function DirectoryPage() {
         <section id="rates" className={s.box} aria-labelledby="rates-h">
           <BoxHead id="rates" title="Rates" href="/rates" more="Dashboard" />
           <ul className={s.list}>
-            <li><Link href="/rates">Live rates dashboard</Link></li>
+            <li><Link href="/rates">Rates dashboard</Link></li>
             <li><Link href="/personal-finance/best-savings-account-rates-canada">Best high-interest savings account rates</Link></li>
             <li><Link href="/personal-finance/best-gic-rates-canada">Best GIC rates in Canada</Link></li>
             <li><Link href="/personal-finance/best-chequing-account-bonuses-canada">Best chequing account welcome bonuses</Link></li>

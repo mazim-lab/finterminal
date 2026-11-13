@@ -9,7 +9,7 @@ import s from "./travel.module.css";
 export const metadata: Metadata = {
   title: "Travel & Points | FinTerminal",
   description:
-    "Guides for turning Canadian credit card points into real trips: Aeroplan, Avios, AAdvantage and the transfer partners that feed them, plus a worked sweet-spot example twice a week.",
+    "Guides for turning Canadian credit card points into real trips: Aeroplan, Avios, AAdvantage and the transfer partners that feed them, plus worked sweet-spot examples you can copy.",
   alternates: { canonical: "/travel" },
   ...ogMeta("Travel & Points", "Travel & points", "/travel"),
 };
@@ -78,8 +78,8 @@ export default function TravelPage() {
         <h1>Turn your points into actual trips</h1>
         <p className="dek">
           Most Canadian points are worth far more as a plane seat than as a statement credit, if you know where to
-          aim them. Start with a program guide, then steal ideas from the worked examples we post a couple of times
-          a week.
+          aim them. Start with a program guide, then steal ideas from the worked
+          examples, each dated so you know how fresh it is.
         </p>
         <div className={s.headStats}>
           <span><b>{TRAVEL_GUIDES.length}</b> guides</span>
@@ -170,8 +170,7 @@ export default function TravelPage() {
       ) : null}
 
       <p className={s.footNote}>
-        New worked examples land here a couple of times a week, each one walking through a real redemption on the
-        next program in the rotation. Want the math behind our point values?{" "}
+        Each worked example walks through a real redemption on one program, with the date we last checked it. Want the math behind our point values?{" "}
         <Link href="/how-we-value-points">Here is how we value points</Link>.
       </p>
       </div>

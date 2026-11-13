@@ -9,7 +9,7 @@ const BASE = "https://www.finterminal.ca";
 export const metadata = {
   title: "Best rates in Canada: savings, GICs, and chequing | FinTerminal",
   description:
-    "A simple hub for the best rates in Canada. Where to find live high-interest savings rates, GIC rates by term, and chequing account bonuses, plus a quick framework for how to think about parking your cash. General info as of July 2026, not advice.",
+    "A simple hub for the best rates in Canada. Where to find high-interest savings rates, GIC rates by term, and chequing account bonuses, plus a quick framework for how to think about parking your cash. General info as of July 2026, not advice.",
   alternates: { canonical: "/rates" },
   ...ogMeta("Best rates in Canada: savings, GICs, and chequing", "Rates", "/rates"),
 };
@@ -19,12 +19,12 @@ const COVERS: Record<string, { best: string; body: string; cta: string }> = {
   "/personal-finance/best-savings-account-rates-canada": {
     best: "Emergency fund, short-term cash",
     body: "Variable rates you can withdraw from any time, ideal for an emergency fund or any short-term cash. Fully liquid and, at a CDIC member, insured.",
-    cta: "See the live savings rates",
+    cta: "See the savings rates",
   },
   "/personal-finance/best-gic-rates-canada": {
     best: "Known-date goals, like a down payment",
     body: "A fixed, guaranteed rate in exchange for locking the money up for a set term. Best for a known-date goal like a down payment, and laddering lets you keep some maturing along the way.",
-    cta: "See the live GIC rates",
+    cta: "See the GIC rates",
   },
   "/personal-finance/best-chequing-account-bonuses-canada": {
     best: "A one-time cash boost",
@@ -83,7 +83,7 @@ export default function RatesHubPage() {
         <span className="eyebrow">Rates</span>
         <h1>Best rates in Canada: savings, GICs and chequing</h1>
         <p className="dek">
-          Your jumping-off point. Instead of scattering numbers across a dozen pages, we keep the live figures on a few
+          Your jumping-off point. Instead of scattering numbers across a dozen pages, we keep the figures on a few
           focused pages and use this hub to send you to the right one for the job in front of you.
         </p>
         <div className="meta">
@@ -138,7 +138,7 @@ export default function RatesHubPage() {
             </div>
           ))}
         </div>
-        <p className={s.after}>Match the vehicle to the job first, then chase the rate. The pages above have the live numbers.</p>
+        <p className={s.after}>Match the vehicle to the job first, then chase the rate. The pages above have the numbers, each with the date we checked them.</p>
       </section>
 
       <section className="section" aria-labelledby="boc">
