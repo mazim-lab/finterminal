@@ -1,24 +1,59 @@
-import type { CSSProperties, ReactNode } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { getTopCardsByValue, formatCurrency, CARDS_VERIFIED } from "@/data/cards";
-import { POSITIONS } from "@/data/portfolio";
+import { getTopCardsByValue, formatCurrency, CARDS_VERIFIED, canadianCards } from "@/data/cards";
+import { POSITIONS, LAST_UPDATED } from "@/data/portfolio";
 import { livePFArticles, isPFPublished, PF_ARTICLES } from "@/data/personal-finance";
+import { TRAVEL_GUIDES } from "@/data/travel-guides";
+import { SWEET_SPOTS } from "@/data/sweet-spots";
 import { NEWS } from "@/data/news";
 import { DEALS, dealsTodayISO, isDealExpired } from "@/data/deals";
-import { HomeHero } from "@/components/HomeHero";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
-import { GrowthMotif, MOTIFS, type MotifKey } from "@/components/heroes/motifs";
 import { FreshDot } from "@/components/FreshDot";
+import { Ticker } from "@/components/Ticker";
+import { GrowthMotif, MOTIFS, type MotifKey } from "@/components/heroes/motifs";
+import { ogMeta } from "@/lib/og";
+import s from "./page.module.css";
 
-// ── Computed, honest figures (spec 3.5) ─────────────────────────────────────
+const TITLE = "FinTerminal | Cards, Points & Personal Finance for Canadians";
+const DESCRIPTION = `Canadian credit cards, travel points and personal finance, explained plainly by one dad. Compare ${canadianCards.length} Canadian cards, find the points sweet spots and check the rates, with a date on every number.`;
 
-// Best first-year value on the board right now, computed from the real card data.
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  ...ogMeta("Canadian money, explained plainly", "Cards, points & personal finance"),
+};
+
+const SITE = "https://www.finterminal.ca";
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE}/#website`,
+      name: "FinTerminal",
+      url: SITE,
+      inLanguage: "en-CA",
+      description: DESCRIPTION,
+      publisher: { "@id": `${SITE}/#organization` },
+    },
+    {
+      "@type": "Organization",
+      "@id": `${SITE}/#organization`,
+      name: "FinTerminal",
+      url: SITE,
+      logo: `${SITE}/icons/apple-icon-180.png`,
+    },
+  ],
+};
+
+// ── Computed figures. Everything below comes straight from the data files. ──
+
+// Best first-year value right now, named and linked to its own page.
 const topCard = getTopCardsByValue(1, "CA")[0];
 const bestValue = topCard ? formatCurrency(topCard.first_year_value, "CA") : "";
-const bestCardHref = topCard ? `/cards?q=${encodeURIComponent(topCard.name)}` : "/cards";
 
-// Portfolio: N positions and the BEST performer, in percent terms only. Never a
-// dollar figure. The standing privacy rule holds everywhere.
+// Portfolio in percent terms only. Never a dollar figure.
 const rated = POSITIONS.filter((p) => typeof p.returnPct === "number");
 const best = rated.reduce<(typeof POSITIONS)[number] | null>(
   (hi, p) => (hi === null || (p.returnPct as number) > (hi.returnPct as number) ? p : hi),
@@ -29,268 +64,410 @@ const bestPct =
     ? `${best.returnPct >= 0 ? "+" : ""}${best.returnPct.toFixed(1)}%`
     : "";
 
-// RESP row: link the RESP guide once it is live, else the Money index (spec 3.5).
+// Snapshot date straight from portfolio.ts, shown as is (no freshness claim).
+function isoToLabel(iso: string | null): string | null {
+  const m = iso ? /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso) : null;
+  if (!m) return null;
+  return `${["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][Number(m[2]) - 1]} ${Number(m[3])}, ${m[1]}`;
+}
+const portfolioAsOf = isoToLabel(LAST_UPDATED);
+
+const livePF = livePFArticles();
+
+// Featured guide: the RESP guide once live, else RRSP vs TFSA, else the newest live guide.
 const RESP_SLUG = "resp-cesg-grant-canada";
-const respHref = isPFPublished(RESP_SLUG) ? `/personal-finance/${RESP_SLUG}` : "/personal-finance";
-
-// ── Featured guide: flagship RRSP/TFSA or RESP if live, else newest live ─────
-
 function pickFeatured() {
-  const live = livePFArticles();
   const flagship =
     (isPFPublished(RESP_SLUG) && PF_ARTICLES.find((a) => a.slug === RESP_SLUG)) ||
-    live.find((a) => a.slug === "rrsp-vs-tfsa-canada") ||
-    live.find((a) => /resp|tfsa|rrsp/i.test(a.slug));
-  return flagship || live[0];
+    livePF.find((a) => a.slug === "rrsp-vs-tfsa-canada") ||
+    livePF.find((a) => /resp|tfsa|rrsp/i.test(a.slug));
+  return flagship || livePF[0];
 }
 const featured = pickFeatured();
-// One motif per topic, demoted to a small stamp beside the title (spec 3.6).
 const FEATURED_MOTIF: Record<string, MotifKey> = {
   "resp-cesg-grant-canada": "growth",
   "rrsp-vs-tfsa-canada": "decision",
 };
-const FeaturedMotif = featured
-  ? MOTIFS[FEATURED_MOTIF[featured.slug] ?? "growth"] ?? GrowthMotif
-  : GrowthMotif;
+const FeaturedMotif = featured ? MOTIFS[FEATURED_MOTIF[featured.slug] ?? "growth"] ?? GrowthMotif : GrowthMotif;
 
-// ── Departures: the reader's jobs, not the site's furniture (spec 3.5) ───────
+// What's new: newest news first (the file is newest at the top).
+const latestNews = NEWS.slice(0, 5);
+const newSpots = SWEET_SPOTS.slice(0, 3);
 
-interface Departure {
-  dest: string[]; // flap-in clusters
-  gate: string;
-  href: string;
-  num: ReactNode;
-  status: ReactNode;
-}
-const DEPARTURES: Departure[] = [
-  {
-    dest: ["PICK THE", "FAMILY", "CARD"],
-    gate: "CARDS",
-    href: bestCardHref,
-    num: (
-      <>
-        Best first-year value on the board right now: <b>{bestValue}</b> after the annual fee, at a normal
-        family&apos;s spend.
-      </>
-    ),
-    status: (
-      <>
-        <span className="dot">&#9679;</span> UPDATED <span className="dt">THIS WEEK</span>
-      </>
-    ),
-  },
-  {
-    dest: ["START THE", "RESP"],
-    gate: "MONEY",
-    href: respHref,
-    num: (
-      <>
-        The government adds a guaranteed <b>20%</b> to what you put in. One account, one evening.
-      </>
-    ),
-    status: (
-      <>
-        <span className="dot">&#9679;</span> GUIDE
-      </>
-    ),
-  },
-  {
-    dest: ["FLY FOUR", "ON", "POINTS"],
-    gate: "TRAVEL",
-    href: "/travel",
-    num: <>Get the whole family across the country and back on points, without touching the vacation fund.</>,
-    status: (
-      <>
-        <span className="dot">&#9679;</span> GUIDE
-      </>
-    ),
-  },
-  {
-    dest: ["KILL A", "BANK", "FEE"],
-    gate: "MONEY",
-    href: "/personal-finance/best-chequing-account-bonuses-canada",
-    num: <>The monthly chequing fee, ended in one afternoon. A no-fee account does the same job for free.</>,
-    status: (
-      <>
-        <span className="dot">&#9679;</span> GUIDE
-      </>
-    ),
-  },
-  {
-    dest: ["SEE MY", "REAL", "MONEY"],
-    gate: "PORTFOLIO",
-    href: "/portfolio",
-    num: (
-      <>
-        <b>{POSITIONS.length} positions</b>, each with a written thesis. Losses shown, on purpose.
-      </>
-    ),
-    status: (
-      <>
-        <span className="dot live">&#9679;</span> <span className="live">LIVE</span>
-      </>
-    ),
-  },
+// Deals: live only (same expiry rule as /deals), newest posted first.
+const today = dealsTodayISO();
+const liveDeals = [...DEALS]
+  .filter((d) => !isDealExpired(d, today))
+  .sort((a, b) => new Date(b.posted).getTime() - new Date(a.posted).getTime());
+const DEAL_STALE_DAYS = 21;
+const newestDealMs = liveDeals.length ? new Date(liveDeals[0].posted).getTime() : NaN;
+const dealAgeDays = Number.isNaN(newestDealMs)
+  ? Infinity
+  : (new Date(`${today}T12:00:00`).getTime() - newestDealMs) / 86_400_000;
+const dealsStale = dealAgeDays > DEAL_STALE_DAYS;
+const shownDeals = liveDeals.slice(0, dealsStale ? 3 : 4);
+
+// Start here: a few top guides per pillar.
+const START_MONEY = [
+  "rrsp-vs-tfsa-canada",
+  "canadian-account-order-of-operations",
+  "how-to-build-credit-canada",
+  "fhsa-playbook-canada",
+]
+  .map((slug) => livePF.find((a) => a.slug === slug))
+  .filter((a): a is (typeof livePF)[number] => !!a && a.slug !== featured?.slug)
+  .slice(0, 3);
+const START_CARDS = [
+  "points-vs-cash-back-canada",
+  "two-player-mode-couples-welcome-bonuses",
+  "foreign-transaction-fee-cards-canada",
+  "how-to-hit-minimum-spend-canada",
+]
+  .map((slug) => livePF.find((a) => a.slug === slug))
+  .filter((a): a is (typeof livePF)[number] => !!a)
+  .slice(0, 3);
+const START_TRAVEL = TRAVEL_GUIDES.slice(0, 4);
+const RATES = [
+  { href: "/personal-finance/best-savings-account-rates-canada", label: "High-interest savings rates" },
+  { href: "/personal-finance/best-gic-rates-canada", label: "GIC rates" },
+  { href: "/personal-finance/best-chequing-account-bonuses-canada", label: "Chequing account bonuses" },
 ];
 
-// ── The wire: newest news + deals (spec 3.5) ────────────────────────────────
-
-const wireNews = NEWS.slice(0, 4);
-// Newest live deals first, by posted date. Expired deals are filtered out
-// (same expiry logic as the Deals page) so the wire never surfaces a dead offer.
-const today = dealsTodayISO();
-const wireDeals = [...DEALS]
-  .filter((d) => !isDealExpired(d, today))
-  .sort((a, b) => new Date(b.posted).getTime() - new Date(a.posted).getTime())
-  .slice(0, 4);
-
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 function shortDate(d: string): string {
-  const parsed = new Date(d);
-  if (isNaN(parsed.getTime())) return d;
-  const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-  return `${months[parsed.getMonth()]} ${String(parsed.getDate()).padStart(2, "0")}`;
+  const p = new Date(d);
+  if (Number.isNaN(p.getTime())) return d;
+  return `${MONTHS[p.getMonth()]} ${p.getDate()}`;
+}
+
+function Arrow() {
+  return (
+    <svg className={s.arrow} viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
 }
 
 export default function Home() {
   return (
-    <div className="app norail">
-      <main>
-        <HomeHero variant="graphic" />
+    <div className={`wrap ${s.home}`}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
 
-        {/* ── Departures: five reader jobs ─────────────────────────────── */}
-        <section className="hp-sec" aria-labelledby="dep-h">
-          <div className="hp-sechead">
-            <span className="hp-mlabel" id="dep-h">DEPARTURES</span>
-            <span className="hp-meta">five things worth doing with your money this week</span>
+      {/* ── Hero: what this is, who runs it, where to go ─────────────────── */}
+      <section className={s.hero} aria-labelledby="home-h1">
+        <div className={s.heroCopy}>
+          <p className={`eyebrow ${s.kick}`}>Canadian money, explained plainly</p>
+          <h1 id="home-h1" className={s.h1}>
+            Credit cards, points and personal finance for Canadians.
+          </h1>
+          <p className={s.dek}>
+            I&apos;m a dad in Ontario who runs these numbers for my own family first. I compare Canadian cards on what
+            they actually put back in your pocket, turn points into real trips, and write plain guides to the accounts
+            that matter. Every number carries the date I last checked it.
+          </p>
+          <div className={s.ctas}>
+            <Link className="btn btn-primary btn-lg" href="/cards">
+              Explore the cards <Arrow />
+            </Link>
+            <Link className="btn btn-lg" href="/personal-finance">
+              Start with the money guides
+            </Link>
           </div>
-          <div className="board">
-            <div className="board-cols" aria-hidden="true">
-              <span>Destination</span>
-              <span>Gate</span>
-              <span>The number</span>
-              <span className="r">Status</span>
-            </div>
-            {DEPARTURES.map((d, i) => (
-              <Link key={d.dest.join(" ")} className="brow" href={d.href} style={{ "--d": `${i * 0.07}s` } as CSSProperties}>
-                <span className="dest">
-                  {d.dest.map((w) => (
-                    <span key={w} className="fw">{w}</span>
-                  ))}
-                </span>
-                <span className="gate">{d.gate}</span>
-                <span className="num">{d.num}</span>
-                <span className="status">{d.status}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
+          <p className={s.signed}>
+            <Link href="/about">Who runs this site</Link>
+          </p>
+        </div>
 
-        {/* ── Tonight's read: one featured guide, given room ───────────── */}
-        {featured && (
-          <section className="hp-sec" aria-labelledby="read-h">
-            <div className="hp-sechead">
-              <span className="hp-mlabel" id="read-h">TONIGHT&apos;S READ</span>
-              <span className="hp-meta">one guide, given room</span>
+        {/* Proof panel: honest, computed, dated */}
+        <aside className={s.proof} aria-labelledby="proof-h">
+          <h2 id="proof-h" className={s.proofHead}>
+            The numbers right now
+          </h2>
+          {topCard && (
+            <Link className={`${s.pItem} ${s.pLink}`} href={`/cards/${topCard.slug}`}>
+              <span className={s.pLabel}>
+                Best first-year value <Arrow />
+              </span>
+              <span className={s.pBig}>{bestValue}</span>
+              <span className={s.pSub}>
+                <b>{topCard.name}</b>, after the annual fee at a normal family&apos;s spend
+              </span>
+            </Link>
+          )}
+          <div className={s.pItem}>
+            <span className={s.pLabel}>Card data</span>
+            <span className={s.pStamp}>
+              <VerifiedStamp date={CARDS_VERIFIED} cadenceDays={14} verb="CHECKED" />
+            </span>
+            <span className={s.pSub}>Fees, offers and earn rates across {canadianCards.length} Canadian cards</span>
+          </div>
+          <Link className={`${s.pItem} ${s.pLink}`} href="/portfolio">
+            <span className={s.pLabel}>
+              My own portfolio <Arrow />
+            </span>
+            <span className={s.pMid}>
+              {POSITIONS.length} positions
+              {best && bestPct && (
+                <>
+                  {" "}
+                  <span className={s.pGain}>
+                    best {best.ticker} {bestPct}
+                  </span>
+                </>
+              )}
+            </span>
+            <span className={s.pSub}>
+              Percent terms only, losses shown
+              {portfolioAsOf && <> · snapshot {portfolioAsOf}</>}
+            </span>
+          </Link>
+          <div className={`${s.pItem} ${s.pTicker}`}>
+            <span className={s.pLabel}>What a point is worth to us</span>
+            <Ticker />
+          </div>
+        </aside>
+      </section>
+
+      {/* ── Three pillars ─────────────────────────────────────────────────── */}
+      <section className={s.pillars} aria-label="Sections of the site">
+        <div className={`tone-cards ${s.pillar}`}>
+          <span className="eyebrow">Cards</span>
+          <h2 className={s.pTitle}>
+            <Link href="/cards">Find the right card</Link>
+          </h2>
+          <p className={s.pDek}>Ranked on first-year value after the fee, with the math shown for every card.</p>
+          <p className={s.pFact}>
+            <b>{canadianCards.length}</b> Canadian cards compared
+          </p>
+        </div>
+        <div className={`tone-travel ${s.pillar}`}>
+          <span className="eyebrow">Travel &amp; points</span>
+          <h2 className={s.pTitle}>
+            <Link href="/travel">Turn points into trips</Link>
+          </h2>
+          <p className={s.pDek}>Transfer partners, award booking and worked redemptions you can copy.</p>
+          <p className={s.pFact}>
+            <b>{TRAVEL_GUIDES.length}</b> guides · <b>{SWEET_SPOTS.length}</b> sweet spots
+          </p>
+        </div>
+        <div className={`tone-money ${s.pillar}`}>
+          <span className="eyebrow">Money</span>
+          <h2 className={s.pTitle}>
+            <Link href="/personal-finance">Sort out the accounts</Link>
+          </h2>
+          <p className={s.pDek}>RRSP, TFSA, FHSA, RESP, credit and bank fees, in plain words.</p>
+          <p className={s.pFact}>
+            <b>{livePF.length}</b> guides · <b>{RATES.length}</b> rate tables
+          </p>
+        </div>
+      </section>
+
+      {/* ── What's new ────────────────────────────────────────────────────── */}
+      <section className="section" aria-labelledby="new-h">
+        <div className="section-head">
+          <h2 id="new-h">What&apos;s new</h2>
+          <Link className="more" href="/news">
+            All news &rarr;
+          </Link>
+        </div>
+        <div className={s.newGrid}>
+          <div>
+            <h3 className={s.colHead}>Latest news</h3>
+            <ol className={`rows ${s.news}`}>
+              {latestNews.map((n) => (
+                <li key={n.slug} className="row is-link">
+                  <time className="r-date" dateTime={new Date(n.date).toISOString().slice(0, 10)}>
+                    {shortDate(n.date)}
+                  </time>
+                  <div className="r-main">
+                    <p className={`r-title ${s.clamp2}`}>
+                      <Link href={`/news/${n.slug}`}>{n.headline}</Link>
+                      <FreshDot date={n.date} />
+                    </p>
+                    <p className={`r-sub ${s.clamp2}`}>{n.dek}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className={s.side}>
+            <div className="tone-travel">
+              <h3 className={s.colHead}>
+                New sweet spots
+                <Link className={s.colMore} href="/travel/sweet-spots">
+                  All &rarr;
+                </Link>
+              </h3>
+              <ul className={`rows ${s.spots}`}>
+                {newSpots.map((sp) => (
+                  <li key={sp.slug} className="row is-link">
+                    <div className="r-main">
+                      <p className={s.spotMeta}>
+                        <span className="dot" aria-hidden="true" />
+                        {sp.program} · {sp.date}
+                        <FreshDot date={sp.date} />
+                      </p>
+                      <p className={`r-title ${s.clamp2} ${s.spotTitle}`}>
+                        <Link href={`/travel/sweet-spots/${sp.slug}`}>{sp.title}</Link>
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="featured">
-              <div className="featured-motif" aria-hidden="true">
-                <FeaturedMotif />
-              </div>
-              <div className="featured-body">
-                <h3 className="featured-title">
-                  <Link href={`/personal-finance/${featured.slug}`}>{featured.title}</Link>
-                </h3>
-                <p className="featured-dek">{featured.dek}</p>
-                <p className="featured-meta">
-                  {featured.read} <span className="sep">·</span> {featured.tag}{" "}
-                  <span className="sep">·</span>{" "}
-                  <VerifiedStamp date={`${featured.date}`} cadenceDays={120} />
-                  <FreshDot date={featured.date} />
+
+            <div>
+              <h3 className={s.colHead}>
+                Deals
+                <Link className={s.colMore} href="/deals">
+                  All &rarr;
+                </Link>
+              </h3>
+              {dealsStale && (
+                <p className={s.dealNote}>
+                  No new picks lately. Older picks may have changed price, so check before you buy.
                 </p>
-              </div>
+              )}
+              {shownDeals.length > 0 ? (
+                <ul className={`rows ${s.deals}`}>
+                  {shownDeals.map((d) => (
+                    <li key={d.url} className="row is-link">
+                      <div className="r-main">
+                        <p className={`r-title ${s.clamp2} ${s.dealTitle}`}>
+                          <a href={d.url} target="_blank" rel="noopener noreferrer">
+                            {d.title}
+                          </a>
+                        </p>
+                        <p className={s.dealMeta}>
+                          {d.price && <b>{d.price}</b>}
+                          <span>{d.merchant}</span>
+                          <span>posted {d.posted}</span>
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className={s.dealNote}>No live picks right now.</p>
+              )}
             </div>
-          </section>
-        )}
+          </div>
+        </div>
+      </section>
 
-        {/* ── Proof strip: reader-stakes numbers, not site plumbing ─────── */}
-        <section className="hp-sec" aria-label="Proof strip">
-          <div className="proofstrip">
-            <Link className="proof-item" href={bestCardHref}>
-              <span className="pl">Best first-year value</span>
-              <span className="pv em">{bestValue}</span>
-              <span className="pd">after the fee, computed</span>
-            </Link>
-            <div className="proof-item">
-              <span className="pl">Cards last re-verified</span>
-              <span className="pv gd">
-                <VerifiedStamp date={CARDS_VERIFIED} cadenceDays={14} verb="CHECKED" />
-              </span>
-              <span className="pd">on the twice-weekly playbook</span>
-            </div>
-            <Link className="proof-item" href="/portfolio">
-              <span className="pl">My portfolio</span>
-              <span className="pv">
-                {POSITIONS.length} positions <span className="best">best {bestPct}</span>
-              </span>
-              <span className="pd">percent terms only, losses shown</span>
+      {/* ── Featured guide ────────────────────────────────────────────────── */}
+      {featured && (
+        <section className="section tone-money" aria-labelledby="feat-h">
+          <div className="section-head">
+            <h2 id="feat-h">Worth an evening</h2>
+            <Link className="more" href="/personal-finance">
+              All money guides &rarr;
             </Link>
           </div>
+          <article className={s.feature}>
+            <div className={s.featMotif} aria-hidden="true">
+              <FeaturedMotif />
+            </div>
+            <div className={s.featBody}>
+              <span className="eyebrow">{featured.tag}</span>
+              <h3 className={s.featTitle}>
+                <Link href={`/personal-finance/${featured.slug}`}>{featured.title}</Link>
+              </h3>
+              <p className={s.featDek}>{featured.dek}</p>
+              <p className={s.featMeta}>
+                <span>{featured.read}</span>
+                <VerifiedStamp date={`${featured.date}`} cadenceDays={120} />
+                <FreshDot date={featured.date} />
+              </p>
+            </div>
+          </article>
         </section>
+      )}
 
-        {/* ── The wire: news + deals, two columns in one data frame ─────── */}
-        <section className="hp-sec" aria-labelledby="wire-h">
-          <div className="hp-sechead">
-            <span className="hp-mlabel" id="wire-h">THE WIRE</span>
-            <span className="hp-meta">what changed, and whether you should care</span>
+      {/* ── Start here: an index by pillar ────────────────────────────────── */}
+      <section className="section" aria-labelledby="start-h">
+        <div className="section-head">
+          <h2 id="start-h">Start here</h2>
+          <p>The guides I&apos;d hand a friend first.</p>
+        </div>
+        <div className={s.startGrid}>
+          <div className={`tone-cards ${s.startCol}`}>
+            <h3 className={s.startHead}>
+              <span className="dot" aria-hidden="true" />
+              Cards
+            </h3>
+            <ul className={s.startList}>
+              <li>
+                <Link href="/cards">The card explorer</Link>
+                <span>Every Canadian card, ranked and filterable</span>
+              </li>
+              {START_CARDS.map((a) => (
+                <li key={a.slug}>
+                  <Link href={`/personal-finance/${a.slug}`}>{a.title}</Link>
+                  <span>
+                    {a.read} · {a.date}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <Link className={s.startMore} href="/cards">
+              All cards &rarr;
+            </Link>
           </div>
-          <div className="wire">
-            <div className="wirecol">
-              <div className="wt">
-                <span className="hp-mlabel em">NEWS</span>
-                <Link className="wt-all" href="/news">all news &rarr;</Link>
-              </div>
-              {wireNews.map((n) => (
-                <Link key={n.slug} className="wireitem" href={`/news/${n.slug}`}>
-                  <span className="ts">{shortDate(n.date)}<FreshDot date={n.date} /></span>
-                  <h4>{n.headline}</h4>
-                  <p className="wd">{n.dek}</p>
+
+          <div className={`tone-travel ${s.startCol}`}>
+            <h3 className={s.startHead}>
+              <span className="dot" aria-hidden="true" />
+              Travel &amp; points
+            </h3>
+            <ul className={s.startList}>
+              {START_TRAVEL.map((g) => (
+                <li key={g.slug}>
+                  <Link href={`/travel/${g.slug}`}>{g.title}</Link>
+                  <span>
+                    {g.read} · {g.date}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <Link className={s.startMore} href="/travel">
+              All travel guides &rarr;
+            </Link>
+          </div>
+
+          <div className={`tone-money ${s.startCol}`}>
+            <h3 className={s.startHead}>
+              <span className="dot" aria-hidden="true" />
+              Money
+            </h3>
+            <ul className={s.startList}>
+              {START_MONEY.map((a) => (
+                <li key={a.slug}>
+                  <Link href={`/personal-finance/${a.slug}`}>{a.title}</Link>
+                  <span>
+                    {a.read} · {a.date}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className={s.rateLabel}>Rates</p>
+            <div className={s.rateChips}>
+              {RATES.map((r) => (
+                <Link key={r.href} className="chip chip-tone" href={r.href}>
+                  {r.label}
                 </Link>
               ))}
+              <Link className="chip" href="/rates">
+                All rates
+              </Link>
             </div>
-            <div className="wirecol">
-              <div className="wt">
-                <span className="hp-mlabel em">DEALS</span>
-                <Link className="wt-all" href="/deals">all deals &rarr;</Link>
-              </div>
-              {wireDeals.map((d) => (
-                <a key={d.url} className="wireitem" href={d.url} target="_blank" rel="noopener noreferrer">
-                  <span className="ts">{d.expires ? d.expires.toUpperCase() : shortDate(d.posted)}<FreshDot date={d.posted} /></span>
-                  <h4>{d.title}</h4>
-                  <p className="wd">{d.price ? `${d.price} at ${d.merchant}` : d.merchant}</p>
-                </a>
-              ))}
-            </div>
+            <Link className={s.startMore} href="/personal-finance">
+              All money guides &rarr;
+            </Link>
           </div>
-        </section>
-
-        {/* ── Browse the whole site: quiet index of every section ───────── */}
-        <section className="hp-sec" aria-labelledby="browse-h">
-          <div className="hp-sechead">
-            <span className="hp-mlabel" id="browse-h">BROWSE THE WHOLE SITE</span>
-            <span className="hp-meta">every section, one row</span>
-          </div>
-          <div className="guidestrip">
-            <Link className="guidechip" href="/cards"><span className="gi">&#9656;</span> Cards</Link>
-            <Link className="guidechip" href="/travel"><span className="gi">&#9656;</span> Travel &amp; points</Link>
-            <Link className="guidechip" href="/personal-finance"><span className="gi">&#9656;</span> Personal finance</Link>
-            <Link className="guidechip" href="/rates"><span className="gi">&#9656;</span> Rates</Link>
-            <Link className="guidechip" href="/news"><span className="gi">&#9656;</span> News</Link>
-            <Link className="guidechip" href="/deals"><span className="gi">&#9656;</span> Deals</Link>
-            <Link className="guidechip" href="/tags"><span className="gi">&#9656;</span> Tags</Link>
-            <Link className="guidechip" href="/directory"><span className="gi">&#9656;</span> Directory</Link>
-          </div>
-        </section>
-      </main>
+        </div>
+      </section>
     </div>
   );
 }
