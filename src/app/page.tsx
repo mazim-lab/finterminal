@@ -273,7 +273,7 @@ export default function Home() {
                   All &rarr;
                 </Link>
               </h3>
-              <ul className={`rows ${s.spots}`}>
+              <ul className="rows">
                 {newSpots.map((sp) => (
                   <li key={sp.slug} className="row is-link">
                     <div className="r-main">
@@ -304,7 +304,7 @@ export default function Home() {
                 </p>
               )}
               {shownDeals.length > 0 ? (
-                <ul className={`rows ${s.deals}`}>
+                <ul className="rows">
                   {shownDeals.map((d) => (
                     <li key={d.url} className="row is-link">
                       <div className="r-main">
