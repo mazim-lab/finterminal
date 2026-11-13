@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import type { Benefits } from '@/data/cards';
 import { formatCurrency, receiptLines, earnLines, programName, type SlimCard } from '@/data/card-view';
 import { VerifiedStamp } from '@/components/VerifiedStamp';
+import { unpackCard, type PackedCard } from './packed';
 import s from './cards.module.css';
 
 type SortKey = 'name' | 'fee' | 'bonus' | 'cpp' | 'value';
@@ -73,8 +74,9 @@ function SearchParamsSync({ onParams }: { onParams: (params: URLSearchParams) =>
 }
 
 export default function Explorer({
-  cards, networks, head, verified,
-}: { cards: SlimCard[]; networks: string[]; head: ReactNode; verified: string }) {
+  packed, networks, head, verified,
+}: { packed: PackedCard[]; networks: string[]; head: ReactNode; verified: string }) {
+  const cards = useMemo(() => packed.map(unpackCard), [packed]);
   const [query, setQuery] = useState('');
   const [country, setCountry] = useState<Country>('all');
   const [types, setTypes] = useState<string[]>([]);
@@ -273,7 +275,7 @@ export default function Explorer({
 
         <div className={s.tableHead}>
           <span>Showing {filtered.length} of {cards.length} · sorted by {sortLabel} {arrow}</span>
-          <span className={s.tableHint}>Tap a value to open its receipt</span>
+          <span className={s.tableHint}>Tap a value for the math, perks and earn rates</span>
         </div>
 
         <div className={`tablewrap ${s.tablewrap}`}>
@@ -299,101 +301,48 @@ export default function Explorer({
               </thead>
               <tbody>
                 {filtered.map((c) => {
-                  const perks = perksFor(c);
                   const isOpen = openReceipt === c.slug;
-                  const lines = isOpen ? receiptLines(c) : [];
-                  const earn = isOpen ? earnLines(c) : [];
                   const max = c.country === 'CA' ? stats.maxCA : stats.maxUS;
-                  const pct = Math.max(0, Math.min(100, (c.first_year_value / max) * 100));
+                  const pct = Math.round(Math.max(0, Math.min(100, (c.first_year_value / max) * 100)));
                   const rid = `rcpt-${c.slug}`;
+                  const sub = [c.issuer, programName(c.rewards_program), c.network !== 'Unknown' ? c.network : ''].filter(Boolean).join(' · ');
+                  const value = formatCurrency(c.first_year_value, c.country);
+                  // Compact row: name, issuer line and the four numbers. Perks,
+                  // the value math and earn rates live in the detail row that
+                  // opens from the value button, so the list stays scannable and
+                  // the prerendered HTML stays light. Short global class names are
+                  // scoped under .table in cards.module.css.
                   return (
                     <Fragment key={c.slug}>
-                      <tr className={`cardrow ${s.row}${isOpen ? ' rcpt-open' : ''}`}>
-                        <td data-label="Card" className={s.cardCell}>
-                          <div className={s.cardTop}>
-                            <span className={`cc ${c.country.toLowerCase()}`} title={c.country === 'CA' ? 'Canadian card' : 'US card'}>{c.country}</span>
-                            <a href={`/cards/${c.slug}`} className={`cn ${s.cardName}`}>{c.name}</a>
-                          </div>
-                          <div className={s.cardSub}>
-                            {c.issuer}
-                            {c.rewards_program && <> · <span>{programName(c.rewards_program)}</span></>}
-                            {c.network !== 'Unknown' && <> · {c.network}</>}
-                          </div>
-                          {perks.length > 0 && (
-                            <div className={s.perks} title={perks.map(([, , t]) => t).join(', ')}>
-                              {perks.slice(0, 3).map(([k, label]) => <span key={k} className={s.perk}>{label}</span>)}
-                              {perks.length > 3 && <span className={s.perkMore}>+{perks.length - 3} more</span>}
-                            </div>
-                          )}
+                      <tr className={`R${isOpen ? ' rcpt-open' : ''}`}>
+                        <th scope="row" className="N">
+                          <span className={`cc ${c.country === 'CA' ? 'ca' : 'us'}`}>{c.country}</span>
+                          <a href={`/cards/${c.slug}`}>{c.name}</a>
+                          <small>{sub}</small>
+                        </th>
+                        <td className="F">
+                          {c.annual_fee === 0 ? <span className="fr">No fee</span> : formatCurrency(c.annual_fee, c.country)}
                         </td>
-                        <td className={`r ${s.num}`} data-label="Annual fee">
-                          {c.annual_fee === 0 ? <span className={s.free}>No fee</span> : formatCurrency(c.annual_fee, c.country)}
-                        </td>
-                        <td className={`r ${s.num}`} data-label="Welcome bonus">
+                        <td className="B">
                           {c.welcome_bonus_points
-                            ? <span>{num(c.welcome_bonus_points)} <span className={s.unit}>pts</span></span>
-                            : c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country) : <span className={s.none}>none listed</span>}
+                            ? <>{num(c.welcome_bonus_points)}<small> pts</small></>
+                            : c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country) : <span className="no">none listed</span>}
                         </td>
-                        <td className={`r col-cpp ${s.num}`} data-label="Base ¢/pt">{cppFor(c).toFixed(2)}</td>
-                        <td className={`r ${s.valCell}`} data-label="Est. first-year value">
+                        <td className="P col-cpp">{cppFor(c).toFixed(2)}</td>
+                        <td className="V">
                           <button
                             type="button"
                             className={`valbtn ${c.first_year_value < 0 ? 'negv' : 'pos'}`}
                             aria-expanded={isOpen}
                             aria-controls={isOpen ? rid : undefined}
-                            aria-label={`${formatCurrency(c.first_year_value, c.country)}, show the math for ${c.name}`}
                             onClick={() => setOpenReceipt((x) => (x === c.slug ? null : c.slug))}
                           >
-                            {formatCurrency(c.first_year_value, c.country)}
+                            {value}
                           </button>
-                          <span className={s.bar} aria-hidden="true" style={{ '--w': `${pct}%` } as CSSProperties} />
+                          <i style={{ '--w': `${pct}%` } as CSSProperties} />
                         </td>
                       </tr>
-                      {isOpen && (
-                        <tr className="rcpt" id={rid}>
-                          <td colSpan={COLUMNS.length}>
-                            <div className={`receipt ${s.receipt}`}>
-                              <div className={s.receiptCap}>How we got {formatCurrency(c.first_year_value, c.country)}</div>
-                              {lines.map((l, i) => (
-                                <div className="rl" key={i}>
-                                  <span className="lab">{l.label}</span>
-                                  <span className="dots" />
-                                  <span className={`amt${l.neg ? ' neg' : ''}`}>
-                                    {l.neg ? '−' : ''}{formatCurrency(Math.abs(l.amount), c.country)}
-                                  </span>
-                                </div>
-                              ))}
-                              <div className="rl total">
-                                <span className="lab">EST. FIRST-YEAR VALUE</span>
-                                <span className="dots" />
-                                <span className={`amt${c.first_year_value < 0 ? ' neg' : ''}`}>{formatCurrency(c.first_year_value, c.country)}</span>
-                              </div>
-                              {earn.length > 0 && (
-                                <div className={s.earn}>
-                                  <div className={`rl ${s.dim}`}>
-                                    <span className="lab">earn on your spend</span>
-                                    <span className="dots" />
-                                    <span className="note">rates only, not in the total above</span>
-                                  </div>
-                                  {earn.map((e, i) => (
-                                    <div className={`rl ${s.dim}`} key={i}>
-                                      <span className={`lab ${s.earnCat}`}>{e.category}</span>
-                                      <span className="dots" />
-                                      <span className="mono">{e.rate}</span>
-                                    </div>
-                                  ))}
-                                </div>
-                              )}
-                              <div className="rl verify">
-                                <VerifiedStamp date={verified} cadenceDays={14} verb="CHECKED" />
-                                <span className="dots" />
-                                <span className="note">same formula for every card</span>
-                              </div>
-                              <a className={s.receiptLink} href={`/cards/${c.slug}`}>Full card details <span aria-hidden="true">→</span></a>
-                            </div>
-                          </td>
-                        </tr>
-                      )}
+                      {isOpen && <DetailRow c={c} id={rid} value={value} verified={verified} />}
                     </Fragment>
                   );
                 })}
@@ -473,5 +422,66 @@ export default function Explorer({
 
       {filtersOpen && <div className={s.scrim} onClick={() => setFiltersOpen(false)} aria-hidden="true" />}
     </div>
+  );
+}
+
+// The expanded detail for one card: perks, the first-year value math line by
+// line, and the illustrative earn rates. Rendered only for the open row.
+function DetailRow({ c, id, value, verified }: { c: SlimCard; id: string; value: string; verified: string }) {
+  const lines = receiptLines(c);
+  const earn = earnLines(c);
+  const perks = perksFor(c);
+  return (
+    <tr className="rcpt" id={id}>
+      <td colSpan={COLUMNS.length}>
+        <div className={`receipt ${s.receipt}`}>
+          {perks.length > 0 && (
+            <div className={s.perksBlock}>
+              <div className={s.receiptCap}>Perks we track</div>
+              <ul className={s.perks}>
+                {perks.map(([k, label, title]) => <li key={k} className={s.perk} title={title}>{label}</li>)}
+              </ul>
+            </div>
+          )}
+          <div className={s.receiptCap}>How we got {value}</div>
+          {lines.map((l, i) => (
+            <div className="rl" key={i}>
+              <span className="lab">{l.label}</span>
+              <span className="dots" />
+              <span className={`amt${l.neg ? ' neg' : ''}`}>
+                {l.neg ? '−' : ''}{formatCurrency(Math.abs(l.amount), c.country)}
+              </span>
+            </div>
+          ))}
+          <div className="rl total">
+            <span className="lab">EST. FIRST-YEAR VALUE</span>
+            <span className="dots" />
+            <span className={`amt${c.first_year_value < 0 ? ' neg' : ''}`}>{value}</span>
+          </div>
+          {earn.length > 0 && (
+            <div className={s.earn}>
+              <div className={`rl ${s.dim}`}>
+                <span className="lab">earn on your spend</span>
+                <span className="dots" />
+                <span className="note">rates only, not in the total above</span>
+              </div>
+              {earn.map((e, i) => (
+                <div className={`rl ${s.dim}`} key={i}>
+                  <span className={`lab ${s.earnCat}`}>{e.category}</span>
+                  <span className="dots" />
+                  <span className="mono">{e.rate}</span>
+                </div>
+              ))}
+            </div>
+          )}
+          <div className="rl verify">
+            <VerifiedStamp date={verified} cadenceDays={14} verb="CHECKED" />
+            <span className="dots" />
+            <span className="note">same formula for every card</span>
+          </div>
+          <a className={s.receiptLink} href={`/cards/${c.slug}`}>Full card details <span aria-hidden="true">→</span></a>
+        </div>
+      </td>
+    </tr>
   );
 }

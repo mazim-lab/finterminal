@@ -91,39 +91,45 @@
 .sortAr { color: var(--text); min-width: 10px; font-size: 9px; }
 .table thead th[aria-sort="none"] .sortAr { min-width: 0; }
 
-.row td { padding-top: 14px; padding-bottom: 14px; }
-.cardCell { min-width: 0; }
-.cardTop { display: flex; align-items: baseline; gap: 0; }
-.cardTop :global(.cc) { flex: none; transform: translateY(-1px); }
-.cardName { line-height: 1.35; }
-.cardName:hover { text-decoration: underline; text-underline-offset: 3px; }
-.cardSub {
-  margin-top: 3px; font-size: 12.5px; color: var(--text-2); line-height: 1.45;
+/* compact rows. Short global class names keep the 194 prerendered rows light;
+   every one of them is scoped under .table so nothing leaks out of this page. */
+.table tbody th {
+  position: relative; text-align: left; font-weight: 400; padding: 12px 16px; border-top: 1px solid var(--border);
+  vertical-align: middle; min-width: 0;
 }
-.prog { text-transform: capitalize; }
-.perks { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 6px; }
-.perk {
-  display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text-2); line-height: 1.4;
-}
-.perk::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--fin-d); flex: none; }
-.perkMore { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-3); }
-.num {
-  font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 14px;
+.table tbody tr:first-child th { border-top: none; }
+.table tbody tr:hover > th, .table tbody tr:global(.rcpt-open) > th { background: var(--featured-bg); }
+.table :global(.N) a { font-weight: 600; font-size: 14.5px; color: var(--text); line-height: 1.35; }
+.table :global(.N) a:hover { text-decoration: underline; text-underline-offset: 3px; }
+/* the whole name cell is the link's tap area */
+.table :global(.N) a::after { content: ""; position: absolute; inset: 0; }
+.table :global(.N) :global(.cc) { transform: translateY(-1px); }
+.table :global(.N) small { display: block; margin-top: 2px; font-size: 12.5px; color: var(--text-2); line-height: 1.45; }
+.table :global(.F), .table :global(.B), .table :global(.P) {
+  text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 14px;
   white-space: nowrap; color: var(--text);
 }
-.unit { font-size: 11px; color: var(--text-3); }
-.free { color: var(--green-ink); font-weight: 600; }
-.none { color: var(--text-3); font-size: 12px; }
-.valCell { white-space: nowrap; }
-.valCell :global(.valbtn) { min-height: 32px; }
-.bar {
+.table :global(.B) small { font-size: 11px; color: var(--text-3); }
+.table :global(.fr) { color: var(--green-ink); font-weight: 600; }
+.table :global(.no) { color: var(--text-3); font-size: 12px; }
+.table :global(.V) { text-align: right; white-space: nowrap; }
+.table :global(.V) :global(.valbtn) { min-height: 32px; }
+.table :global(.V) i {
   display: block; width: 96px; height: 4px; margin: 6px 0 0 auto; border-radius: 2px;
   background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--border); position: relative; overflow: hidden;
 }
-.bar::after {
+.table :global(.V) i::after {
   content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: var(--w, 0);
   background: var(--fin-d); border-radius: 2px;
 }
+
+/* perks, shown in the open detail row */
+.perksBlock { margin-bottom: var(--s3); padding-bottom: var(--s3); border-bottom: 1px solid var(--border); }
+.perks { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.perk {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text); line-height: 1.5;
+}
+.perk::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--fin-d); flex: none; }
 
 /* receipt */
 .receipt { max-width: 600px; }
@@ -162,6 +168,9 @@
 
 /* ── tablet and phone ── */
 @media (max-width: 1000px) {
+  .searchInput, .filterBtn, .seg button, .sortBtn { min-height: 44px; }
+  .table :global(.V) :global(.valbtn) { min-height: 44px; }
+  .tablewrap :global(.foot) a { display: inline-flex; align-items: center; min-height: 44px; }
   .shell > main, .shell > aside { grid-column: 1; }
   .filterBtn { display: inline-flex; }
   .shell aside.drawer { display: none; }
@@ -189,21 +198,38 @@
   .search { flex-basis: 100%; }
   .searchInput { height: 44px; font-size: 16px; }
   .seg { flex: 1; }
-  .seg button { flex: 1; justify-content: center; min-height: 40px; }
+  .seg button { flex: 1; justify-content: center; min-height: 44px; }
   .filterBtn { height: 46px; }
   .tableHint { display: none; }
 
-  /* card rows collapse to a stacked record */
-  .table tr.row { padding: var(--s4); }
-  .table tr.row td { padding: 3px 0; }
-  .table tr.row td[data-label="Card"] { margin-bottom: var(--s2); }
-  .table tr.row td:not([data-label="Card"])::before {
-    content: attr(data-label); font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
-    letter-spacing: .06em; color: var(--text-3); font-weight: 600; white-space: nowrap; text-align: left;
+  /* card rows collapse to a compact record: name on top, then fee, bonus and
+     value side by side with small labels. Offscreen rows skip layout and paint
+     until they scroll near the viewport. */
+  .table tr:global(.R) {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px var(--s3);
+    padding: var(--s3) var(--s4) var(--s4); border-top: 1px solid var(--border);
+    content-visibility: auto; contain-intrinsic-size: auto 132px;
   }
-  .table tr.row td[data-label="Est. first-year value"] { align-items: center; flex-wrap: wrap; }
-  .table tr.row td[data-label="Est. first-year value"] .bar { display: none; }
-  .table tr.row td :global(.valbtn) { min-height: 40px; }
+  .table tbody tr:global(.R):first-child { border-top: none; }
+  .table tr:global(.R) > th, .table tr:global(.R) > td {
+    display: block; padding: 0; border-top: none; text-align: left; background: none;
+  }
+  .table tr:global(.R) > th { grid-column: 1 / -1; }
+  .table tr:global(.R) > :global(.P) { display: none; }
+  .table tr:global(.R) > :global(.V) { text-align: right; }
+  .table tr:global(.R) > td::before {
+    display: block; font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--text-3); font-weight: 600; white-space: nowrap; margin-bottom: 2px;
+  }
+  .table tr:global(.R) > :global(.F)::before { content: "Annual fee"; }
+  .table tr:global(.R) > :global(.B)::before { content: "Bonus"; }
+  .table tr:global(.R) > :global(.V)::before { content: "1st-year value"; }
+  .table tr:global(.R) > :global(.V) i { display: none; }
+  .table tr:global(.R) :global(.valbtn) { min-height: 44px; margin-right: -4px; }
+  /* labels share one baseline row; values sit on the 44px line of the value button */
+  .table tr:global(.R) > td { align-self: start; }
+  .table tr:global(.R) > :global(.F), .table tr:global(.R) > :global(.B) { line-height: 44px; }
+  .table tr:global(.R) > td::before { line-height: 1.4; }
   .receipt :global(.rl) { flex-wrap: wrap; }
   .receipt :global(.rl .lab) { white-space: normal; flex: 1 1 60%; }
   .receipt :global(.rl .dots) { display: none; }

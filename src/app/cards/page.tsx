@@ -5,6 +5,7 @@ import type { SlimCard } from '@/data/card-view';
 import { VerifiedStamp } from '@/components/VerifiedStamp';
 import { ogMeta } from '@/lib/og';
 import Explorer from './Explorer';
+import { packCard } from './packed';
 import s from './cards.module.css';
 
 export const metadata: Metadata = {
@@ -15,8 +16,9 @@ export const metadata: Metadata = {
 };
 
 // Server component: the full card data + normalization stay on the server. We
-// ship only the lean SlimCard list the explorer table/filters need, so the
-// browser never downloads the raw card JSON or re-runs normalization.
+// ship only the lean SlimCard list the explorer table/filters need, packed into
+// short arrays (see ./packed), so the browser never downloads the raw card JSON
+// or re-runs normalization and the page payload stays small.
 export default function CardsPage() {
   const cards: SlimCard[] = allCards.map((c) => ({
     slug: c.slug,
@@ -78,7 +80,7 @@ export default function CardsPage() {
 
   return (
     <>
-      <Explorer cards={cards} networks={networks} head={head} verified={CARDS_VERIFIED} />
+      <Explorer packed={cards.map(packCard)} networks={networks} head={head} verified={CARDS_VERIFIED} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
     </>
   );
