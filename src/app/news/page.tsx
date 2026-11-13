@@ -89,7 +89,6 @@ export default function NewsPage() {
               {ticker.map((n, i) => (
                 <li key={n.slug} className={`nline ${s.tline}`} style={{ ["--i" as string]: i }}>
                   <time className="ndate" dateTime={humanToISO(n.date) ?? undefined}>{n.date.split(",")[0]}</time>
-                  <span className="nts" aria-hidden="true">{n.time}</span>
                   <Link href={`/news/${n.slug}`} className={`ntext ${s.ttext}`}>{n.headline}</Link>
                 </li>
               ))}

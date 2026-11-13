@@ -85,3 +85,8 @@
 .more>li::before{display:none !important}
 .crumbCur{max-width:min(42ch,100%) !important}
 .lead :global(.lc-title){font-size:21px}
+
+/* touch layout: 44px tall hit areas for the program links */
+@media (max-width:980px){
+  .progLinks a{display:inline-flex;align-items:center;min-height:44px}
+}

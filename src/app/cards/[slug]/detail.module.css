@@ -161,6 +161,7 @@
   .layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "side" "main"; gap: var(--s5); }
   .side { position: static; }
   .hero { margin-bottom: var(--s5); }
+  .toc a { min-height: 44px; }
 }
 @media (max-width: 680px) {
   .h1 { font-size: 30px; }
@@ -171,6 +172,6 @@
   .endActions { display: block; margin-top: var(--s6); }
   .endActions .actions { padding: 0; border-top: none; }
   .toc { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
-  .toc a { flex: none; min-height: 40px; }
+  .toc a { flex: none; min-height: 44px; }
   .offer { padding: var(--s4); }
 }

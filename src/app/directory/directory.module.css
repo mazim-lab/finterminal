@@ -24,7 +24,7 @@
 .list li{font-size:14.5px;line-height:1.45;color:var(--text-2)}
 .list a{display:inline-block;padding:5px 0;color:var(--text);font-weight:500}
 .list a:hover{text-decoration:underline;text-decoration-color:var(--border-strong);text-underline-offset:3px}
-.list a.clamp{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;padding:0;margin:5px 0}
+.list a.clamp{min-height:44px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;padding:0;margin:5px 0}
 .list .note{color:var(--text-3);font-size:13px}
 
 /* long lists flow into columns */
@@ -38,3 +38,10 @@
   font-size:13px;color:var(--text-2);background:var(--surface)}
 .chips a:hover{border-color:var(--border-strong);color:var(--text)}
 @media (max-width:768px){.list a{padding:9px 0}.chips a{min-height:44px}}
+
+/* touch layout: 44px tall hit areas */
+@media (max-width:980px){
+  .boxHead a{display:inline-flex;align-items:center;min-height:44px}
+  .list a{min-height:44px;display:inline-flex;align-items:center}
+  .list a.clamp{display:-webkit-box;padding:12px 0;margin:0}
+}

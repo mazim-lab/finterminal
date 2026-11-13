@@ -116,7 +116,7 @@ export function SearchBox() {
         onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
         onFocus={() => setOpen(true)}
         onKeyDown={onKeyDown}
-        placeholder="Search cards, guides, news"
+        placeholder="Search the site"
       />
       {!q && <kbd className="search-kbd" aria-hidden="true">Ctrl K</kbd>}
       {showList && (

@@ -47,3 +47,8 @@
 .related{margin-top:var(--s7)}
 
 .emptyH{font-size:16px;font-weight:650;color:var(--text);margin-bottom:6px}
+
+/* touch layout: 44px tall hit area for the header link */
+@media (max-width:980px){
+  .headLink{display:inline-flex;align-items:center;min-height:44px}
+}

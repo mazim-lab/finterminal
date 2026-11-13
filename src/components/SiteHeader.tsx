@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
@@ -32,6 +32,7 @@ const MORE_NAV = [
 export function SiteHeader() {
   const path = usePathname() || "/";
   const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDetailsElement>(null);
 
   // Close the mobile menu on route change and lock page scroll while open.
   useEffect(() => setOpen(false), [path]);
@@ -44,6 +45,15 @@ export function SiteHeader() {
   }, [open]);
 
   const isActive = (match: string[]) => match.some((m) => path === m || path.startsWith(m + "/"));
+
+  // The phone menu is a native <details> disclosure, so it opens and closes
+  // with JavaScript off. With JavaScript on, React mirrors its open state to
+  // add the extras: close on navigation and Escape, lock page scroll, and
+  // mount the search box only while the menu is open.
+  useEffect(() => {
+    const el = menuRef.current;
+    if (el && el.open !== open) el.open = open;
+  }, [open]);
 
   return (
     <header className="site-header">
@@ -59,35 +69,36 @@ export function SiteHeader() {
         <div className="hdr-right">
           <SearchBox />
           <ThemeToggle />
-          <button
-            type="button"
-            className="icon-btn menu-btn"
-            aria-expanded={open}
-            aria-controls="mnav"
-            aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((o) => !o)}
+          <details
+            ref={menuRef}
+            className="menu"
+            onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open)}
           >
-            {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
-          </button>
+            <summary className="icon-btn menu-btn" aria-controls="mnav">
+              <Menu aria-hidden="true" className="menu-ico-open" />
+              <X aria-hidden="true" className="menu-ico-close" />
+              <span className="sr-only">Menu</span>
+            </summary>
+            <div className="mnav" id="mnav">
+              {open && <SearchBox />}
+              <nav className="mnav-group" aria-label="Sections">
+                <div className="mnav-label">Sections</div>
+                {PRIMARY_NAV.map((n) => (
+                  <Link key={n.href} href={n.href} aria-current={isActive(n.match) ? "page" : undefined}>
+                    {n.label}
+                    <span className="mnav-dot" style={{ background: n.dot }} aria-hidden="true" />
+                  </Link>
+                ))}
+              </nav>
+              <nav className="mnav-group mnav-sub" aria-label="More">
+                <div className="mnav-label">More</div>
+                {MORE_NAV.map((n) => (
+                  <Link key={n.href} href={n.href}>{n.label}</Link>
+                ))}
+              </nav>
+            </div>
+          </details>
         </div>
-      </div>
-      <div className="mnav" id="mnav" hidden={!open}>
-        {open && <SearchBox />}
-        <nav className="mnav-group" aria-label="Sections">
-          <div className="mnav-label">Sections</div>
-          {PRIMARY_NAV.map((n) => (
-            <Link key={n.href} href={n.href} aria-current={isActive(n.match) ? "page" : undefined}>
-              {n.label}
-              <span className="mnav-dot" style={{ background: n.dot }} aria-hidden="true" />
-            </Link>
-          ))}
-        </nav>
-        <nav className="mnav-group mnav-sub" aria-label="More">
-          <div className="mnav-label">More</div>
-          {MORE_NAV.map((n) => (
-            <Link key={n.href} href={n.href}>{n.label}</Link>
-          ))}
-        </nav>
       </div>
     </header>
   );
