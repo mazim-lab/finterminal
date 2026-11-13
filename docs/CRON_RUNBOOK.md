@@ -280,6 +280,20 @@ turns a promise to readers into a lie, and a stale-looking stamp is far better t
 one that is not true. If the stamp is going red and no full pass has happened, the fix is to
 run the pass, not to touch the date.
 
+**Browser limit for local capture passes (hard rule, owner's instruction 2026-11-13).**
+Run ONE `scrapers/fetch_render.py` at a time and let it walk the whole targets file in
+sequence. At most 3 browser instances may be open at once. Never split the deck into
+parallel issuer waves, and never run a capture alongside other agents that build, test or
+drive browsers. The script enforces this: `MAX_BROWSERS = 3` (the
+`FETCH_RENDER_MAX_BROWSERS` env var can lower it, never raise it), one page open at a time,
+a lock file at `data/raw/fetch_render.lock` that makes a second invocation refuse to start
+(stale locks from dead processes are replaced), and every browser closed in a `finally`
+block. On 2026-11-13 eleven parallel waves left about 55 headless Chrome and 16 Firefox
+processes running and starved the machine for other agents. A sequential full-deck pass is
+slower (roughly 194 cards at 30 to 60 seconds each) and that is fine. Engines: `cr`
+chromium, `ff` firefox with keyboard scroll (Amex), `ffjs` firefox with JS scroll (BMO,
+PC Financial, Simplii, Triangle). CIBC still needs plain HTTP with browser headers.
+
 **Golden source per card (use these, NOT the raw scraper dicts):**
 - **CA cards:** `data/raw/cards/<slug>.md` — real issuer pages (markitdown; image-heavy,
   so `grep` for "earn"/"cash back"/"points"/"%"/"fee"/"welcome").
