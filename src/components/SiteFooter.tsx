@@ -69,8 +69,8 @@ export function SiteFooter() {
         </div>
         <div className="foot-legal">
           <p>
-            Some links on FinTerminal are affiliate links. If you buy through them we may earn a
-            commission, at no extra cost to you. It never changes our rankings or what we recommend.{" "}
+            FinTerminal has no affiliate links right now. If that changes, the disclosure page will
+            say so first, and it will never change our rankings or what we recommend.{" "}
             <Link href="/disclosure">Learn more</Link>. General information, not financial advice.
           </p>
           <span>© {year} FinTerminal</span>

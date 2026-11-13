@@ -274,7 +274,7 @@ export default function CompareClient({
                         <div className={s.links}>
                           <a href={`/cards/${c.slug}`} className="btn btn-sm">Full details</a>
                           {c.apply_url && (
-                            <a href={c.apply_url} target="_blank" rel="noopener noreferrer sponsored" className="btn btn-sm btn-primary">Apply <span aria-hidden="true">↗</span></a>
+                            <a href={c.apply_url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">Apply <span aria-hidden="true">↗</span></a>
                           )}
                         </div>
                       </td>

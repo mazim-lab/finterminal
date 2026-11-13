@@ -5,31 +5,34 @@ import s from "../simple-page.module.css";
 
 export const metadata: Metadata = {
   title: "Affiliate Disclosure | FinTerminal",
-  description: "How FinTerminal uses affiliate links, and our promise that they never change our rankings or recommendations.",
+  description: "Where FinTerminal stands on affiliate links today, what would change if we ever add them, and our promise that they never change our rankings or recommendations.",
   alternates: { canonical: "/disclosure" },
   ...ogMeta("Affiliate Disclosure", "FinTerminal", "/disclosure"),
 };
 
 export default function DisclosurePage() {
   return (
-    <div className="wrap page tone-neutral">
+    <main className="wrap page tone-neutral">
       <header className="page-head">
         <span className="eyebrow">Disclosure</span>
         <h1>Affiliate Disclosure</h1>
         <p className="dek">
-          The short version: some of the links on FinTerminal are affiliate links. If you click one
-          and sign up or buy something, we may earn a commission. It costs you nothing extra, and it
-          never changes what we rank first or what we recommend.
+          The short version: FinTerminal has no affiliate links right now. We may add some one day.
+          If we do, this page will say so first, and they will never change what we rank first or
+          what we recommend.
         </p>
       </header>
 
       <div className={`doc ${s.body}`}>
         <h2 className="cd-sec">How it works</h2>
         <p>
-          Running a site like this costs money, and we would rather be paid by the banks and retailers
-          than wall everything off behind ads or a paywall. So when a card issuer, store, or travel
-          partner has an affiliate program, we sometimes use their tracking links. If you go on to open
-          an account or make a purchase, they pay us a referral fee.
+          Today, the Apply buttons and deal links go to the bank&apos;s or store&apos;s own page, and
+          no one pays FinTerminal when you click them. Running a site like this does cost money, so we
+          may join some affiliate programs in the future. If we do, a bank or store would pay us a
+          referral fee when you open an account or buy through one of those links, at no extra cost to
+          you, and we will update this page before any such link goes live. Separately, if you ask
+          through the contact page for one of my personal card referral links, the issuer may pay me a
+          referral bonus if you are approved, and I will tell you that when I send it.
         </p>
 
         <h2 className="cd-sec">What it does not do</h2>
@@ -53,6 +56,6 @@ export default function DisclosurePage() {
           than a quick click.
         </p>
       </div>
-    </div>
+    </main>
   );
 }

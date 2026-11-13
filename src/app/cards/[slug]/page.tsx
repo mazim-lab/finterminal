@@ -311,7 +311,7 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
   const applyRow = (
     <div className={s.actions}>
       {card.apply_url && (
-        <a href={card.apply_url} target="_blank" rel="noopener noreferrer sponsored" className="btn btn-primary btn-lg">
+        <a href={card.apply_url} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">
           Apply on the issuer site <span aria-hidden="true">↗</span>
         </a>
       )}
@@ -320,7 +320,7 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
   );
 
   return (
-    <div className={`wrap page tone-cards ${s.page}`}>
+    <main className={`wrap page tone-cards ${s.page}`}>
       <nav className="crumb" aria-label="Breadcrumb">
         <Link href="/">Home</Link><span className="sep" aria-hidden="true">/</span>
         <Link href="/cards">Cards</Link><span className="sep" aria-hidden="true">/</span>
@@ -620,6 +620,6 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
           }}
         />
       )}
-    </div>
+    </main>
   );
 }

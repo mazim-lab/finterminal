@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="wrap page tone-neutral">
+    <main className="wrap page tone-neutral">
       <header className="page-head">
         <span className="eyebrow">About</span>
         <h1>One dad, one notebook, read over my shoulder</h1>
@@ -62,8 +62,10 @@ export default function AboutPage() {
 
           <h2 className="cd-sec">How the site pays for itself</h2>
           <p>
-            Some of the links here are affiliate links, which means a bank or retailer may pay me a referral fee
-            if you sign up through one. That fee never moves a card up or down the list. The rankings come from
+            Right now it mostly doesn&apos;t: there are no affiliate links on FinTerminal today. I may add some
+            later, which would mean a bank or retailer could pay me a referral fee if you sign up through one. If
+            that happens, the disclosure page will say so first, and a fee will never move a card up or down the
+            list. The rankings come from
             the same formula every time, affiliate link or not, and if the best option has no link to pay me, I
             still tell you it&apos;s the best option. You can read the full{" "}
             <Link href="/disclosure">disclosure</Link> any time.
@@ -117,6 +119,6 @@ export default function AboutPage() {
           </div>
         </aside>
       </div>
-    </div>
+    </main>
   );
 }
