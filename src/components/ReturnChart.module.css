@@ -4,14 +4,16 @@
 .line{fill:none;stroke:var(--fin-d);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
 .dotUp{fill:var(--surface);stroke:var(--green);stroke-width:2}
 .dotDown{fill:var(--surface);stroke:var(--red);stroke-width:2}
-.yl,.xl{font-family:var(--font-mono);font-size:12px;fill:var(--text-3);font-variant-numeric:tabular-nums}
-.endLabel{font-family:var(--font-mono);font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+.axis{font-family:var(--font-mono);fill:var(--text-3);font-variant-numeric:tabular-nums}
+.endLabel{font-family:var(--font-mono);font-weight:600;font-variant-numeric:tabular-nums}
 .up{fill:var(--green-ink)}
 .down{fill:var(--red)}
 
-/* The SVG scales to ~40% on a phone; bump the type so it lands near 10px. */
+/* One layout at a time. The compact one is drawn at roughly phone width, so its
+   text renders at true size instead of shrinking with the SVG. */
+.compact{display:none}
 @media (max-width:640px){
-  .yl,.xl{font-size:24px}
-  .endLabel{font-size:28px}
-  .xlAlt{display:none}
+  .wide{display:none}
+  .compact{display:block}
+  .compact .line{stroke-width:2}
 }

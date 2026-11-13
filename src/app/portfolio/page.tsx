@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
-import { POSITIONS, CLOSED_POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, ALLTIME_RETURN_PCT, OPEN_BOOK_RETURN_PCT, PORTFOLIO_HISTORY, TOP_PROFIT, TOP_LOSS } from "@/data/portfolio";
+import { POSITIONS, CLOSED_POSITIONS, LAST_UPDATED, SNAPSHOT_PENDING, ALLTIME_RETURN_PCT, OPEN_BOOK_RETURN_PCT, PORTFOLIO_HISTORY } from "@/data/portfolio";
 import { ReturnChart } from "@/components/ReturnChart";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { ogMeta } from "@/lib/og";
@@ -37,8 +37,11 @@ export default function PortfolioPage() {
   // Until the first snapshot, show positions in a stable, readable order.
   const rows = SNAPSHOT_PENDING ? POSITIONS : (ranked.length ? ranked : POSITIONS);
 
-  // Best and worst open holding, in percent terms only. Showing both keeps the
-  // spotlight honest: the table shows losses plainly in red too.
+  // Best and worst open holding, in percent terms only, computed from the same
+  // rows the table renders, so every tile agrees with the table below it.
+  // (TOP_PROFIT / TOP_LOSS in the data file rank names by total profit across
+  // closed and open trades, a different measure the table cannot show, so the
+  // tiles no longer use them.)
   const best = withNums.reduce<(typeof POSITIONS)[number] | null>(
     (hi, p) => (hi === null || (p.returnPct as number) > (hi.returnPct as number) ? p : hi),
     null,
@@ -92,20 +95,24 @@ export default function PortfolioPage() {
           </div>
           <div className="stat-d">current positions vs book cost</div>
         </div>
-        <div>
-          <div className="stat-l">Highest profit</div>
-          <div className="stat-v pos">{pct(TOP_PROFIT.returnPct)}</div>
-          <div className="stat-d">{TOP_PROFIT.ticker} &middot; {TOP_PROFIT.label}</div>
-        </div>
-        <div>
-          <div className="stat-l">Highest loss</div>
-          <div className="stat-v neg">{pct(TOP_LOSS.returnPct)}</div>
-          <div className="stat-d">{TOP_LOSS.ticker} &middot; {TOP_LOSS.label}</div>
-        </div>
+        {best && typeof best.returnPct === "number" ? (
+          <div>
+            <div className="stat-l">Best open position</div>
+            <div className={`stat-v ${tone(best.returnPct)}`}>{pct(best.returnPct)}</div>
+            <div className="stat-d">{best.ticker} &middot; {best.name}</div>
+          </div>
+        ) : null}
+        {worst && worst !== best && typeof worst.returnPct === "number" ? (
+          <div>
+            <div className="stat-l">Worst open position</div>
+            <div className={`stat-v ${tone(worst.returnPct)}`}>{pct(worst.returnPct)}</div>
+            <div className="stat-d">{worst.ticker} &middot; {worst.name}</div>
+          </div>
+        ) : null}
         <div>
           <div className="stat-l">Holdings</div>
           <div className="stat-v">{POSITIONS.length}</div>
-          <div className="stat-d">{withNums.length ? `${upCount} up, ${withNums.length - upCount} down` : "each with a thesis"}</div>
+          <div className="stat-d">{withNums.length ? `${upCount} up, ${withNums.length - upCount} down${withNums.length < POSITIONS.length ? `, ${POSITIONS.length - withNums.length} not priced` : ""}` : "each with a thesis"}</div>
         </div>
       </div>
 
