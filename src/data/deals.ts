@@ -518,19 +518,6 @@ export const DEALS: Deal[] = [
     posted: "Jul 7, 2026",
   },
   {
-    title: "Hisense 3.3 cu ft compact fridge",
-    merchant: "Costco",
-    url: "https://www.costco.ca/hisense-19-in.-3.3-cu-ft.-world-cup-canada-refrigerator.product.4201000053.html",
-    price: "$99.97",
-    was: "$149.99",
-    blurb:
-      "If you have been meaning to put a small fridge in the garage, the basement, a dorm, or a kid's rec room, Costco has a Hisense 3.3 cubic foot compact one down to $99.97 from the $149.99 to $169.99 it sold at before. It is Energy Star rated, has a little 2L beverage shelf and adjustable legs, and at a hundred bucks it is about as cheap as a name brand mini fridge gets. Two honest notes before you grab one. This is a Costco Last Chance clearance, which means there is no set end date and once the stock is gone it just disappears, so do not sit on it. And it is a genuinely small 3.3 cubic foot fridge, a spare or a bar fridge, not something to feed a family, and it happens to wear a World Cup Canada design with a trophy sticker in the box if that is your thing.",
-    category: "Appliances",
-    posted: "Jul 7, 2026",
-    expires: "ended Aug 14",
-    expiresAt: "2026-08-14",
-  },
-  {
     title: "Savino 10x12 hardtop gazebo with netting",
     merchant: "Costco",
     url: "https://www.costco.ca/savino---gazebo-10x12-black-pc-8mm-with-nylon-net.product.4201000439.html",
