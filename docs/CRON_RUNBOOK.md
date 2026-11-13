@@ -428,6 +428,30 @@ most recent `SWEET_SPOTS` entry, looping back to the start.
 
 ---
 
+## 5b. RATE PAGES (GIC, savings, chequing): where things live
+
+The rate watchdog and the link sentinel read these three files, and every rate, offer and
+issuer link still lives in them:
+
+- `src/app/personal-finance/best-gic-rates-canada/page.tsx`
+- `src/app/personal-finance/best-savings-account-rates-canada/page.tsx`
+- `src/app/personal-finance/best-chequing-account-bonuses-canada/page.tsx`
+
+Since the November 2026 redesign each page states its key figures TWICE in the same file:
+once in the `GLANCE` constant near the top (the "At a glance" table) and once in the prose
+rundown below it. When a figure changes, update both, then grep the file for the old value
+to confirm none is left. The "Ended" chips in the glance tables are computed at build time
+from the end dates printed on the page; nothing else drives them.
+
+**Stamp dates are single-source.** Each page's `VerifiedStamp` date and its "Rates as of ..."
+docmeta line are NOT in the page file. They live in `RATE_STAMPS` in
+`src/components/money/ratePages.ts`, which the page, the Money hub (`/personal-finance`) and
+`/rates` all read. After a genuine re-verification, change that page's `RATE_STAMPS` entry and
+nothing else for the stamp. Never bump it without re-verifying (same rule as `CARDS_VERIFIED`).
+Cadence for all three is `RATE_CADENCE_DAYS` (30) in the same file.
+
+---
+
 ## 6. Quick file map
 
 | What | Where |
@@ -439,6 +463,8 @@ most recent `SWEET_SPOTS` entry, looping back to the start.
 | Deals | `src/data/deals.ts` + `src/app/deals/page.tsx` |
 | News | `src/data/news.ts` + `src/app/news/page.tsx` |
 | Sweet-spot posts | `src/data/sweet-spots.ts` + `src/app/travel/sweet-spots/[slug]/page.tsx` |
+| Rate pages (figures + issuer links) | `src/app/personal-finance/best-{gic-rates,savings-account-rates,chequing-account-bonuses}-canada/page.tsx` |
+| Rate page stamp dates (single source) | `src/components/money/ratePages.ts` (`RATE_STAMPS`) |
 | Portfolio (% only) | `src/data/portfolio.ts` |
 | CA card source pages | `data/raw/cards/<slug>.md` |
 | US Amex source | `data/raw/md/american-express-us.md` |

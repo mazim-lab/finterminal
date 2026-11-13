@@ -5,6 +5,7 @@ import { GrowthMotif } from "@/components/heroes/motifs";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
+import { RATE_STAMPS, RATE_CADENCE_DAYS } from "@/components/money/ratePages";
 import { Comments } from "@/components/Comments";
 import { RateGlance, isPastDate, type GlanceRow } from "@/components/money/RateGlance";
 
@@ -111,8 +112,9 @@ export default function BestSavingsAccountRatesPage() {
           <div className="docmeta">
             <span className="gd">PERSONAL FINANCE</span><span className="sep">·</span>
             <span>about 9 min read</span><span className="sep">·</span>
-            <span>Rates as of September 2026; general info, not advice</span><span className="sep">·</span>
-            <VerifiedStamp date="2026-09-16" cadenceDays={30} />
+            <span>{RATE_STAMPS.savings.asOf}; general info, not advice</span><span className="sep">·</span>
+            {/* Stamp date and "as of" line live in RATE_STAMPS (src/components/money/ratePages.ts), shared with the hubs. Rates and links stay in this file. */}
+            <VerifiedStamp date={RATE_STAMPS.savings.verified} cadenceDays={RATE_CADENCE_DAYS} />
           </div>
           <ArticleTags path="/personal-finance/best-savings-account-rates-canada" />
 
