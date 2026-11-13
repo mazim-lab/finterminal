@@ -384,30 +384,6 @@ export const DEALS: Deal[] = [
     posted: "Aug 1, 2026",
   },
   {
-    title: "ASUS TUF Gaming 27-inch QHD 180Hz Fast IPS monitor (VG27AQ3A)",
-    merchant: "Newegg",
-    url: "https://www.newegg.ca/asus-vg27aq3a-27-qhd-180-hz-tuf-gaming-fast-ips/p/N82E16824281271",
-    price: "$219.99",
-    was: "$299.99",
-    blurb:
-      "If your desk still has a basic 1080p screen, a jump to a proper QHD gaming panel is the kind of thing you notice every day. Newegg has the ASUS TUF Gaming VG27AQ3A down to $219.99 from $299.99, and it is a genuinely well sorted 27 inch monitor: sharp 2560x1440 resolution, a quick 180Hz refresh, a Fast IPS panel that keeps colours honest from any angle, and both FreeSync Premium and G-Sync compatibility so it plays nicely with either an AMD or an Nvidia card. It has the extras the cheaper panels skip too, including a proper swivel and tilt stand. One honest note so you buy clear eyed: the built in speakers are there for convenience and not much more, so plan on headphones or desk speakers, and Newegg gives you a short 15 day return window on this one, so if you want to try it, decide inside that window.",
-    category: "Electronics",
-    posted: "Jul 29, 2026",
-    expiresAt: "2026-08-05",
-  },
-  {
-    title: "Creative Outlier Free Pro+ bone conduction headphones",
-    merchant: "Newegg",
-    url: "https://www.newegg.ca/creative-labs-51ef1081aa002-behind-the-neck-blue-with-fiery-orange/p/N82E16826158298",
-    price: "$119.99",
-    was: "$209.99",
-    blurb:
-      "If you run, cycle, or walk busy streets and hate sealing your ears off from the world, an open ear bone conduction set is a lovely thing to own, and this Creative pair is down to $119.99 from $209.99, a full 42 percent off. Instead of going in your ears, it rests on your cheekbones and pipes the sound through, so your ears stay open to traffic, footsteps, and the people around you while your music or podcast plays. It is waterproof and sold and shipped by Newegg with free 30 day returns, which makes it easy to try. One honest note so you buy for the right reason: bone conduction will never give you the deep bass or the quiet isolation of a good in ear bud, that is the whole trade you are making for staying aware of your surroundings. If you want to disappear into your music on a plane, this is not that, but for staying safe and connected on a run it is exactly right.",
-    category: "Electronics",
-    posted: "Jul 29, 2026",
-    expiresAt: "2026-08-05",
-  },
-  {
     title: "Super Flower Leadex VII XG 1000W ATX 3.1 power supply",
     merchant: "Newegg",
     url: "https://www.newegg.ca/p/1HU-024C-00056",
@@ -461,30 +437,6 @@ export const DEALS: Deal[] = [
       "Here is the curved option if that is your thing, and it is genuinely cheap for what you get. Newegg has this Gigabyte 27 inch QHD monitor down to $179.99 from $269.99, a third off. It pairs the same sharp 2560x1440 resolution and quick 180Hz refresh as the flat panels with a gentle 1500R curve and a VA screen, which gives you deeper blacks and more contrast that a lot of people love for movies and darker games. One honest note so you go in knowing: VA panels trade a little of the wide viewing angle and pixel response speed you would get from IPS, and a curve is a personal taste, so if you do detailed colour work or share the screen sideways, the flat IPS option may suit you better.",
     category: "Electronics",
     posted: "Jul 16, 2026",
-  },
-  {
-    title: "Cooler Master Elite Liquid 240 AIO CPU cooler",
-    merchant: "Newegg",
-    url: "https://www.newegg.ca/cooler-master-liquid-cooling-system/p/N82E16835103322",
-    price: "$85.49",
-    was: "$229.99",
-    blurb:
-      "If you have a desktop PC that runs hot and loud under load, a good all in one liquid cooler is one of the nicer quality of life upgrades, and this one is 62 percent off at $85.49 down from $229.99. A 240mm radiator like this pulls heat off the processor far better than a small stock cooler, which keeps the chip running faster for longer and lets the fans spin down to a whisper instead of roaring during a game or a big export. It is sold and shipped by Newegg with free 30 day returns. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop and your case has room for a 240mm radiator, so check your case clearance and socket support first. It is not a plug and play gadget for a laptop or a non PC household.",
-    category: "Electronics",
-    posted: "Jul 16, 2026",
-    expiresAt: "2026-08-05",
-  },
-  {
-    title: "Corsair Scimitar Elite Wireless SE gaming mouse",
-    merchant: "Newegg",
-    url: "https://www.newegg.ca/corsair-scimitar-elite-wireless-se-usb-bluetooth-bluetooth-2-4ghz-wired/p/N82E16826816225",
-    price: "$109.99",
-    was: "$199.99",
-    blurb:
-      "This is Corsair's flagship mouse for people who live in MMOs, MOBAs, or macro heavy work, and it is down to $109.99 from $199.99, a full 45 percent off. The draw is the twelve button side panel that slides to fit your thumb, so all those abilities, hotkeys, or shortcuts sit right under one finger instead of scattered across the keyboard, and it runs wireless over both a 2.4GHz dongle and Bluetooth. One honest note so you buy for the right reason: that side panel is wonderful if you actually use a lot of buttons, but it makes the mouse chunkier and busier than a plain everyday pointer, so if you just want something simple to move a cursor around, a basic mouse will serve you better for a lot less. At this price though, it is a treat for the right kind of gamer.",
-    category: "Electronics",
-    posted: "Jul 16, 2026",
-    expiresAt: "2026-08-05",
   },
   {
     title: "MSI Versa 300 wireless gaming mouse",
