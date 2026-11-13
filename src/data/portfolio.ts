@@ -5,7 +5,7 @@
  * and editorial theses. No share/contract counts, strike prices, or dollar amounts
  * ever go here. Those live in the gitignored private/ folder.
  *
- * UPDATE CADENCE (twice a week): the owner drops a current-value snapshot
+ * UPDATE CADENCE (manual, on demand; no fixed schedule and no cron): the owner drops a current-value snapshot
  * (private/holdings-report-YYYY-MM-DD.csv) into private/. Run private/compute_holdings.py
  * to get returnPct + weightPct per underlying and TOTAL_RETURN_PCT, paste them below,
  * append a PORTFOLIO_HISTORY point, and bump LAST_UPDATED.

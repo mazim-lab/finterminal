@@ -4,7 +4,7 @@ This document tells an automated agent (or a human) exactly how to refresh each
 section of the site. It is self-contained: a cloud cron agent that has cloned this
 repo should be able to follow any job below without prior context.
 
-Last verified: 2026-09-16.
+Last verified: 2026-11-13.
 
 ---
 
@@ -37,19 +37,21 @@ Last verified: 2026-09-16.
     `.next/types` and retry.
 - **Cost.** Use the user's Claude Max plan, not API credits.
 
-### Rules for every PR-opening routine
+### Rules for every routine
 
-- **Never schedule a reminder or a self-check-in to babysit a PR.** Once a routine has
-  opened its PR, it is done. The next scheduled run is the only follow-up. Do not set a
-  timer, do not queue a second agent to come back and look at it, and do not open a
-  "check on PR #N" task. The owner merges on their own schedule.
-- **Dedupe before you propose.** Any routine that proposes work on a branch must first
-  list the existing open branches of its own family (for the link sentinel:
-  `link-sentinel-*`) and read what each one already proposes. Never re-propose something
-  an open branch has already proposed. A second branch for the same item is noise, and
-  two branches editing the same lines will conflict on merge.
-- **Link sentinel: never re-propose an already-proposed deal, and always write BOTH
-  `expires` and `expiresAt`.** `expires` is the human label a reader sees (e.g.
+- **No routine opens pull requests.** Routines commit narrow, verified edits directly to
+  `main`, or write a report under `reports/` and commit that. Nothing else. This replaced the
+  old PR-only model on 2026-11-13, because unmerged PRs left correct work unpublished for two
+  months. If a push to `main` is rejected, rebase once and retry; if it still fails, stop and
+  say so in the run output rather than opening a branch or PR.
+- **Never schedule a reminder or a self-check-in.** Once a routine has committed (or found
+  nothing to do), it is done. The next scheduled run is the only follow-up. Do not set a
+  timer or queue a second agent to come back and look.
+- **Dedupe before you write.** A report-writing routine reads the newest report of its own
+  family under `reports/` first and only commits a new one when its findings differ. An
+  editing routine re-reads the current file on `main` and never re-applies a change that is
+  already there.
+- **Link sentinel: always write BOTH `expires` and `expiresAt`.** `expires` is the human label a reader sees (e.g.
   `"ended Sep 16"`); `expiresAt` is the ISO date (`"2026-09-16"`) the archive split is
   computed from. One without the other either archives silently with no explanation or
   prints a label while the deal still shows as live.
@@ -58,10 +60,14 @@ Last verified: 2026-09-16.
 
 | Job | Cadence | Cloud-cron friendly? | Why |
 |---|---|---|---|
-| Deals | manual (workhorse) + Wed/Sat 06:00 UTC cron `deals-refresh` (added 2026-07-16, direct push since 2026-07-29) | **Yes (cron) + manual** | Manual claude-in-chrome browser session remains the workhorse (2026-06-29 call: RFD paywalls WebFetch with HTTP 402, merchant prices need on-page checks). The `deals-refresh` cron graduated from its PR-only trial (4 runs, Jul 16 to 29) to DIRECT PUSH to `main` on 2026-07-29, like News. Per-deal merchant-page WebFetch verification, drop-on-any-doubt, and zero-deal-is-fine keep unattended production pushes safe; if a push is rejected it falls back to a branch so work is never lost. |
+| Deals | manual only; `deals-refresh` cron **PAUSED since 2026-11-13** | **No (cron paused)** | Every merchant and RedFlagDeals now bot-walls cloud IPs, and the cron published nothing after Sep 9, 2026. Deals are a manual job from a residential connection (claude-in-chrome or real browser headers). |
 | News | daily/weekly | **Yes** | WebSearch/WebFetch only |
-| Card data refresh | twice weekly (Sun + Wed) | **Partial, best-effort, report-only** | Issuer pages bot-block `WebFetch`, and `data/raw/` is gitignored, so the golden sources are simply absent from a cloud checkout. The cloud run can only confirm what it can reach first-party, and it must NOT bump `CARDS_VERIFIED`. A full-deck verification is the owner's periodic local pass. See §3. |
-| Portfolio | twice weekly | **No — stays manual** | Needs the user's private Wealthsimple CSVs + all-time return %. A cloud cron has no access to these. Keep manual. |
+| Card data refresh | **PAUSED since 2026-11-13** | **No (paused)** | Its only cloud source was the stale `scrapers/detail_cache`, which produced a wrong fee edit. Card accuracy and the `CARDS_VERIFIED` stamp now come only from local full-deck passes. See §3. |
+| Link-rot sentinel | daily | **Yes** | Direct commits to `main`, `deals.ts` only; everything else goes to a report. See §5c. |
+| Sweet-spot freshness | Thursdays | **Yes** | Re-verifies stale sweet-spot posts; direct to `main`. See §5c. |
+| Rate-page watchdog | Mondays | **Report-only** | Writes `reports/rate-drift-<date>.md`; never edits page copy. See §5c. |
+| Community intel digest | **PAUSED since 2026-11-13** | **No (paused)** | Reddit forces login from cloud IPs. See §5c. |
+| Portfolio | manual, on demand | **No, stays manual** | Needs the user's private Wealthsimple CSVs + all-time return %. A cloud cron has no access to these. Keep manual. |
 
 ### How to ship a change (every job ends here)
 
@@ -82,10 +88,8 @@ Last verified: 2026-09-16.
   new `.md` captures, the cron should STOP and say so in its run output rather than fetch
   with WebFetch. It does not commit a branch, a PR, or a report file to say it stopped (§3).
 
-To ship a data update (the News, Sweet-spot, and Deals crons all AUTO-PUBLISH to production by
-pushing `main` directly; the Deals `deals-refresh` cron graduated from its PR-only trial to
-direct push on 2026-07-29, and if its push is rejected it falls back to opening a branch so no
-work is lost):
+To ship a data update (every active routine publishes by pushing `main` directly or by
+committing a report under `reports/`; no routine opens pull requests):
 1. Work on `main`. Pull first (`git pull --rebase origin main`) so you are current.
 2. Stage only intended files (e.g. `git add src/data/deals.ts`). **Never `git add private/`.**
 3. Commit with a clear message; push to main: `git push origin main`.
@@ -98,18 +102,24 @@ work is lost):
 
 **File:** `src/data/deals.ts` (a `Deal[]`). **Page:** `src/app/deals/page.tsx`.
 
+**Status (2026-11-13): the `deals-refresh` cron is PAUSED.** Every merchant and RedFlagDeals
+bot-walls cloud IPs, and it published nothing after Sep 9, 2026. Deals are manual only, from a
+residential connection. The cron notes below are kept as history. Expiry housekeeping for dead
+links is handled by the link-rot sentinel (§5c).
+
 **Manual is still the workhorse (decided 2026-06-29):** Deals run primarily as a MANUAL,
 interactive job with Claude, not a cron. RedFlagDeals paywalls headless fetches and merchant
 prices need on-page verification, so the claude-in-chrome browser and a live session are
 required for most refreshes. Just ask Claude to refresh deals; the steps below apply. Target
 1-2 good deals per refresh.
 
-**Automated cron `deals-refresh` (owner-approved 2026-07-16; DIRECT PUSH to `main` since 2026-07-29):** Runs Wed + Sat
+**Automated cron `deals-refresh` (owner-approved 2026-07-16; DIRECT PUSH to `main` from 2026-07-29; PAUSED since 2026-11-13, history only):** Ran Wed + Sat
 at 06:00 UTC (2:00 AM America/Toronto in summer) on `claude-opus-4-8`. Trigger ID:
 trig_01STKYmTcqgaMMPknwQ6aG5S, see claude.ai/code/routines. It began 2026-07-16 as a deliberate re-test of the 2026-06-29
 manual-only call above, run PR-only to keep it low-risk. After a clean 4-run trial (Jul 16 to 29) it graduated to pushing
 `main` directly, like News, so verified deals go live on the next Cloudflare build without waiting on a manual merge. If a
-push is rejected (non-fast-forward) it retries once after a rebase, then falls back to a branch so work is never lost.
+push is rejected (non-fast-forward) it retries once after a rebase; if that also fails it stops and says so in the run
+output. It never opens a branch or a PR.
 Because pushes now land straight in production, any deal with the slightest uncertainty gets dropped rather than shipped,
 and a run with zero verified deals and no expiry housekeeping pushes nothing at all.
 - **Discovery:** RedFlagDeals hot-deals pages first; if RFD 307-redirects the headless fetch
@@ -124,8 +134,8 @@ and a run with zero verified deals and no expiry housekeeping pushes nothing at 
 - **Kill switch (retained):** the PR-only trial's bar was that if the first 2-3 runs came back
   with zero verified deals (RFD blocked AND merchant pages bot-walled) the routine would be
   retired. It cleared that bar over 4 runs (Jul 16 to 29) and graduated to direct push on
-  2026-07-29; if direct-push runs start shipping bad or unverifiable deals, revert this section
-  to PR-only or manual-only.
+  2026-07-29. As of 2026-11-13 it is paused (see the status note above) because cloud IPs are
+  now bot-walled; if it is ever resumed it must push to `main` directly, never open a PR.
 - **Freshness is automatic now:** the site is fully static (no ISR), see step 6 below, so this
   routine's own push to `main` is what makes expired deals re-archive on the next build. Because
   the cron pushes directly there is no PR to sit and stale the page; a normal run keeps both new
@@ -163,18 +173,19 @@ the "Trending Hot Deals" box. Favour high-engagement, on-theme items.
    midnight. Old deals self-archive on the next build — you only add new ones and
    occasionally prune the archive. This is exactly why a Deals push should land promptly
    (see the cron note above): an expired deal keeps showing as "live" until something
-   rebuilds the site. The `deals-refresh` cron handles this on its own now by pushing `main`
-   directly; for a manual refresh, push when you are done.
-7. Commit & push to `main` (the `deals-refresh` cron does the same, pushing directly; see above).
+   rebuilds the site. With the `deals-refresh` cron paused, the daily link-rot sentinel's
+   push to `main` is what rebuilds the site most days; for a manual refresh, push when you
+   are done. To retire a dead deal immediately, stamp `expiresAt` with the day before today.
+7. Commit & push to `main` directly. No routine or manual pass opens a PR.
 
 **Manual remains the workhorse (decided 2026-06-29):** RedFlagDeals 307-redirects `WebFetch`
 to a tollbit paywall (HTTP 402), and Amazon/Costco prices must be verified on the page, so
 the primary job needs the **claude-in-chrome browser in a live interactive session**, run
 **manually with Claude on demand** (a headless `claude -p` run can't reliably drive the
 browser). The `deals-refresh` cron (added 2026-07-16, direct push to `main` since 2026-07-29,
-see the top of this section) is a supplementary automated job that hits the same RFD paywall
-risk; its per-deal merchant-page WebFetch verification and merchant-site fallback are the
-mitigation, and its drop-on-any-doubt plus zero-deal-is-fine design keep unattended production
+PAUSED since 2026-11-13, see the top of this section) was a supplementary automated job that hit the same RFD paywall
+risk; its per-deal merchant-page WebFetch verification and merchant-site fallback were the
+mitigation, and its drop-on-any-doubt plus zero-deal-is-fine design kept unattended production
 pushes low-risk. Never post a price you could not load on the merchant's own page.
 
 ---
@@ -240,14 +251,19 @@ thread, so the dedupe key (new headline, new source URL) will correctly let it t
 
 ---
 
-## 3. CARD DATA REFRESH — twice weekly (Sun + Wed)
+## 3. CARD DATA REFRESH: local passes only (cloud routine PAUSED since 2026-11-13)
+
+**Status (2026-11-13): the cloud Card data refresh routine is PAUSED.** Its only cloud source
+was the stale `scrapers/detail_cache/`, which produced a wrong fee edit. Card accuracy and the
+`CARDS_VERIFIED` stamp come only from local full-deck passes. The cloud notes below are kept as
+history.
 
 Two data files: `src/data/canadian_cards_comprehensive.json` (CA, 131 cards) and
 `src/data/us_cards_comprehensive.json` (US, 63 cards). Normalization + display logic is
 in `src/data/cards.ts`; point valuations in `src/data/point-valuations.ts`.
 
-**The cloud cron is best-effort and report-only by default.** It runs Sun + Wed, but it is
-not what keeps the stamp fresh. `data/raw/` is gitignored, so the golden `.md` sources are
+**The cloud cron was best-effort and report-only by default.** It ran Sun + Wed until it was
+paused on 2026-11-13, and it was never what kept the stamp fresh. `data/raw/` is gitignored, so the golden `.md` sources are
 absent from a cloud checkout and most of the deck is simply unverifiable there. So the cloud
 run does what it honestly can: confirm whatever it can reach first-party, and stop. A run
 that source-confirms nothing leaves **no trace at all**: no branch, no PR, no report file,
@@ -375,7 +391,7 @@ pts = $1 — it was wrongly 0.7¢ and inflated PC cards 7×).
 
 ---
 
-## 4. PORTFOLIO — twice weekly (MANUAL, not a cron)
+## 4. PORTFOLIO: manual, on demand (not a cron)
 
 Documented in full in the `finterminal-update-playbook` memory. Summary: positions are
 mostly long-dated **options (LEAPS)** that free price APIs don't quote, so values come
@@ -449,6 +465,38 @@ docmeta line are NOT in the page file. They live in `RATE_STAMPS` in
 `/rates` all read. After a genuine re-verification, change that page's `RATE_STAMPS` entry and
 nothing else for the stamp. Never bump it without re-verifying (same rule as `CARDS_VERIFIED`).
 Cadence for all three is `RATE_CADENCE_DAYS` (30) in the same file.
+
+**Local verification pass (manual, nothing automates it).** Banks and card issuers block
+cloud IPs, so the rate pages and the card data both need a periodic LOCAL verification pass
+from a residential connection (real browser headers, or claude-in-chrome for pages that render
+with JavaScript). The rate-page watchdog (§5c) only reports drift; it never edits the pages,
+and no routine bumps `RATE_STAMPS` or `CARDS_VERIFIED`. Use the newest
+`reports/rate-drift-*.md` as a lead list, then verify every figure first-party before you
+change it or move a stamp.
+
+---
+
+## 5c. Monitoring routines (current contracts)
+
+**Link-rot sentinel (daily).** Commits directly to `main`, and only ever edits
+`src/data/deals.ts`. For a dead deal it stamps BOTH `expires` and `expiresAt`, and it removes
+archive entries more than 90 days past their expiry. Set `expiresAt` to the day BEFORE the run
+date (on a Nov 13 run: `expiresAt: "2026-11-12"`, `expires: "ended by Nov 13"`). A deal stays live
+through its whole `expiresAt` day and the site is static, so a same-day stamp would keep the dead
+deal showing as live until the next build. Dead links in news items or on the rate pages are not edited; they go to
+`reports/link-rot-<date>.md`. It never opens pull requests.
+
+**Sweet-spot freshness (Thursdays).** Re-verifies up to 8 stale sweet-spot posts per run and
+bumps a post's `lastChecked` only when that post was genuinely re-verified. Drift it cannot
+fix with confidence goes to `reports/sweetspot-drift-<date>.md`. Commits directly to `main`.
+
+**Rate-page watchdog (Mondays).** Report-only. It checks the three rate pages against each
+provider's own page and commits a complete, standalone `reports/rate-drift-<date>.md` to
+`main` only when its findings differ from the newest existing report. It never edits page
+copy and never touches `RATE_STAMPS`.
+
+**Community intel digest: PAUSED since 2026-11-13.** Reddit forces a login from cloud IPs,
+so the routine cannot read its sources. It needs Reddit API credentials to resume.
 
 ---
 
