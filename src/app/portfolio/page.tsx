@@ -56,7 +56,7 @@ export default function PortfolioPage() {
   const firstMonth = PORTFOLIO_HISTORY[0]?.date;
 
   return (
-    <div className="wrap page tone-neutral">
+    <main className="wrap page tone-neutral">
       <header className={`page-head ${s.head}`}>
         <span className="eyebrow">Portfolio</span>
         <h1>My portfolio, open book</h1>
@@ -241,6 +241,6 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

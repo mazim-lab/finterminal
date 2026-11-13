@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="wrap page tone-neutral">
+    <main className="wrap page tone-neutral">
       <header className="page-head">
         <span className="eyebrow">Contact</span>
         <h1>Contact</h1>
@@ -33,6 +33,6 @@ export default function ContactPage() {
           </p>
         </section>
       </div>
-    </div>
+    </main>
   );
 }

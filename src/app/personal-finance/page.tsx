@@ -144,7 +144,7 @@ export default function PersonalFinancePage() {
   ];
 
   return (
-    <div className="wrap page tone-money">
+    <main className="wrap page tone-money">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <header className="page-head">
@@ -221,6 +221,6 @@ export default function PersonalFinancePage() {
           ))}
         </ul>
       </section>
-    </div>
+    </main>
   );
 }

@@ -142,7 +142,7 @@ export default async function DealsPage() {
   const stale = newestAge === null || newestAge > STALE_DAYS;
 
   return (
-    <div className="wrap">
+    <main className="wrap">
     <div className="page tone-neutral">
       <header className="page-head">
         <span className="eyebrow">Deals</span>
@@ -244,6 +244,6 @@ export default async function DealsPage() {
         always confirm the details on their page before you buy.
       </p>
     </div>
-    </div>
+    </main>
   );
 }

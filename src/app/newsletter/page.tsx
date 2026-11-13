@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function NewsletterPage() {
   return (
-    <div className="wrap page tone-neutral">
+    <main className="wrap page tone-neutral">
       <header className="page-head">
         <span className="eyebrow">Newsletter</span>
         <h1>The FinTerminal Brief</h1>
@@ -40,6 +40,6 @@ export default function NewsletterPage() {
           <li>Plain-language personal-finance notes made for Canadians.</li>
         </ul>
       </div>
-    </div>
+    </main>
   );
 }

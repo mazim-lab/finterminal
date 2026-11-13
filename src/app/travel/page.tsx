@@ -71,7 +71,7 @@ export default function TravelPage() {
   const recent = others.slice(0, 5);
 
   return (
-    <div className="wrap tone-travel">
+    <main className="wrap tone-travel">
       <div className="page">
       <header className="page-head">
         <span className="eyebrow">Travel &amp; points</span>
@@ -174,6 +174,6 @@ export default function TravelPage() {
         <Link href="/how-we-value-points">Here is how we value points</Link>.
       </p>
       </div>
-    </div>
+    </main>
   );
 }

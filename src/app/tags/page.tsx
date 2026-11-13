@@ -20,7 +20,7 @@ export default function TagsIndexPage() {
   const groups = groupTags(withCounts);
 
   return (
-    <div className="wrap tone-neutral">
+    <main className="wrap tone-neutral">
       <div className="page">
       <nav className="crumb" aria-label="Breadcrumb">
         <Link href="/">Home</Link><span className="sep">/</span>
@@ -79,6 +79,6 @@ export default function TagsIndexPage() {
         </div>
       )}
       </div>
-    </div>
+    </main>
   );
 }

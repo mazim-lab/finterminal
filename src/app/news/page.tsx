@@ -52,7 +52,7 @@ export default function NewsPage() {
   };
 
   return (
-    <div className="wrap">
+    <main className="wrap">
     <div className="page tone-neutral">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
 
@@ -113,6 +113,6 @@ export default function NewsPage() {
         </section>
       </div>
     </div>
-    </div>
+    </main>
   );
 }

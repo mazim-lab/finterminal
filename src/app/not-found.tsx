@@ -16,7 +16,7 @@ const ROUTES = [
 
 export default function NotFound() {
   return (
-    <div className="wrap page">
+    <main className="wrap page">
       <div className={s.box}>
         <p className={s.code}>404</p>
         <h1 className={s.title}>Sorry, I couldn&apos;t find that page</h1>
@@ -38,6 +38,6 @@ export default function NotFound() {
           <Link href="/" className="btn btn-primary">Back to the home page</Link>
         </p>
       </div>
-    </div>
+    </main>
   );
 }

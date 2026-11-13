@@ -150,7 +150,7 @@ function Arrow() {
 
 export default function Home() {
   return (
-    <div className={`wrap ${s.home}`}>
+    <main className={`wrap ${s.home}`}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
 
       {/* ── Hero: what this is, who runs it, where to go ─────────────────── */}
@@ -468,6 +468,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

@@ -72,7 +72,7 @@ export default function RatesHubPage() {
   ];
 
   return (
-    <div className="wrap page tone-money">
+    <main className="wrap page tone-money">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav className="crumb" aria-label="Breadcrumb">
         <Link href="/">Home</Link><span className="sep">/</span>
@@ -145,12 +145,7 @@ export default function RatesHubPage() {
         <div className="section-head">
           <h2 id="boc">Rates move with the Bank of Canada</h2>
         </div>
-        <div className={s.bocGrid}>
-          <div className={s.bocStat}>
-            <div className="stat-l">BoC overnight rate</div>
-            <div className={s.bocV}>2.25%</div>
-            <div className="stat-d">as of July 2026, a snapshot</div>
-          </div>
+        <div>
           <p className={s.prose}>
             One thing worth keeping in the back of your mind: savings and GIC rates are not fixed features of a bank, they
             move with the Bank of Canada&apos;s overnight rate. When the central bank raises or cuts, savings rates and new GIC
@@ -187,6 +182,6 @@ export default function RatesHubPage() {
           GIC, a new account might come with a bonus, and the framework page helps you decide when you are not sure.
         </p>
       </section>
-    </div>
+    </main>
   );
 }

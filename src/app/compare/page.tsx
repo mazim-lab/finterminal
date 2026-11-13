@@ -56,7 +56,7 @@ export default function ComparePage() {
     .map((c) => c.slug);
 
   return (
-    <div className={`wrap page tone-cards ${s.page}`}>
+    <main className={`wrap page tone-cards ${s.page}`}>
       <nav className="crumb" aria-label="Breadcrumb">
         <Link href="/">Home</Link><span className="sep" aria-hidden="true">/</span>
         <Link href="/cards">Cards</Link><span className="sep" aria-hidden="true">/</span>
@@ -71,6 +71,6 @@ export default function ComparePage() {
         </p>
       </header>
       <CompareClient cards={cards} benefitLabels={benefitLabels} picks={picks} />
-    </div>
+    </main>
   );
 }

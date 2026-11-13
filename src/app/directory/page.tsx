@@ -57,7 +57,7 @@ export default function DirectoryPage() {
   const programs = programGroups();
 
   return (
-    <div className="wrap tone-neutral">
+    <main className="wrap tone-neutral">
       <div className="page">
       <header className="page-head">
         <span className="eyebrow">Directory</span>
@@ -186,6 +186,6 @@ export default function DirectoryPage() {
         </ul>
       </section>
       </div>
-    </div>
+    </main>
   );
 }

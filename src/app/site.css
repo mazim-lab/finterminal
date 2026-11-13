@@ -190,6 +190,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   border:1px solid transparent;background:none;color:var(--text-2);cursor:pointer;transition:color .15s,background-color .15s,border-color .15s}
 .icon-btn:hover{color:var(--text);background:var(--surface-2)}
 .icon-btn svg{width:18px;height:18px}
+@media (max-width:620px){.icon-btn{width:44px;height:44px}}
 .menu-btn{display:none}
 .mnav{display:none}
 @media (max-width:980px){
@@ -197,6 +198,9 @@ button,input,select,textarea{font:inherit;color:inherit}
   .menu-btn{display:inline-flex}
   .mnav{display:block;position:fixed;inset:var(--header-h) 0 0;z-index:49;background:var(--bg);overflow-y:auto;
     padding:var(--s4) var(--gutter) var(--s7)}
+  /* .site-header has backdrop-filter, which makes it the containing block for this fixed panel,
+     so "bottom:0" would stop at the header's own bottom edge. Give the panel an explicit height. */
+  .mnav{bottom:auto;height:calc(100vh - var(--header-h));height:calc(100dvh - var(--header-h))}
   .mnav[hidden]{display:none}
   .mnav-group+.mnav-group{margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--border)}
   .mnav-label{font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin-bottom:var(--s2)}
@@ -283,6 +287,7 @@ a.chip:hover,a.tag:hover{color:var(--text);border-color:var(--text-3)}
   letter-spacing:.04em;white-space:nowrap;font-variant-numeric:tabular-nums;line-height:1;padding:5px 8px;border-radius:99px;border:1px solid}
 .verified-stamp::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
 .verified-stamp--fresh{color:var(--green-ink);background:var(--green-bg);border-color:var(--green-border);text-transform:uppercase}
+.verified-stamp--fresh::before{display:none} /* the label already starts with a check mark */
 .verified-stamp--stale{color:var(--amber-ink);background:var(--amber-bg);border-color:var(--amber-border);font-weight:500}
 
 /* ── surfaces ─────────────────────────────────────────────────────────── */
@@ -484,6 +489,7 @@ tr.rcpt td{background:var(--surface-2);padding:var(--s4) var(--s5)}
 @media (max-width:560px){.docmeta .sep{display:none}.docmeta{gap:6px 14px}}
 .doc p{font-size:var(--fs-body);line-height:1.72;color:var(--text);margin:0 0 1.1em;text-wrap:pretty}
 .doc p.sub{color:var(--text-2)}
+.doc .eyebrow{font-size:var(--fs-micro);line-height:1.4;color:var(--tone);margin:0 0 var(--s3)}
 .doc strong,.doc b{font-weight:650;color:var(--text)}
 .doc em{font-style:italic}
 .doc h2:not(.cd-sec),.doc h3:not(.cd-sec){font-weight:650;letter-spacing:-.015em;color:var(--text);line-height:1.3}
@@ -541,6 +547,7 @@ tr.rcpt td{background:var(--surface-2);padding:var(--s4) var(--s5)}
 .kvrow .kvv strong{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
 
 .fld{font-family:var(--font-mono);font-size:12px;background:var(--surface-2);color:var(--text);border:1px solid var(--border);border-radius:4px;padding:1px 6px;white-space:nowrap}
+@media (max-width:620px){.fld{white-space:normal;overflow-wrap:anywhere}}
 
 /* accordion */
 .acc{border:1px solid var(--border);border-radius:var(--radius-card);background:var(--surface);margin:var(--s3) 0;overflow:hidden}

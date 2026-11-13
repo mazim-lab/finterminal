@@ -43,7 +43,7 @@ export default function SweetSpotsIndexPage() {
   };
 
   return (
-    <div className="wrap tone-travel">
+    <main className="wrap tone-travel">
       <div className="page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
@@ -121,6 +121,6 @@ export default function SweetSpotsIndexPage() {
         );
       })}
       </div>
-    </div>
+    </main>
   );
 }

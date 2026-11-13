@@ -115,7 +115,7 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
   };
 
   return (
-    <div className="wrap tone-neutral">
+    <main className="wrap tone-neutral">
       <div className="page">
       {!thin && articles.length > 0 ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
@@ -205,6 +205,6 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
         </section>
       ) : null}
       </div>
-    </div>
+    </main>
   );
 }

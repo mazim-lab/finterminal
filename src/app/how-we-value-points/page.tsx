@@ -135,8 +135,6 @@ export default function HowWeValuePoints() {
           </p>
           <div className="docmeta">
             <span>Valuations as of {VALUATION_SOURCE.asOf}</span>
-            <span className="sep">/</span>
-            <span>Reviewed quarterly</span>
           </div>
 
           <div className="cd-note short">
