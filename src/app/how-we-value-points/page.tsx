@@ -31,6 +31,9 @@ const PROGRAM_LABELS: Record<string, string> = {
   'pc optimum': 'PC Optimum',
   'triangle rewards': 'Triangle Rewards',
   'westjet rewards': 'WestJet Rewards',
+  'more rewards': 'More Rewards',
+  'moi': 'Moi',
+  'cibc adapta': 'CIBC Adapta',
 };
 
 const valuationRows = Object.entries(POINT_VALUATIONS)
@@ -196,6 +199,9 @@ export default function HowWeValuePoints() {
             </div>
             <p className={s.source}>
               Source: {VALUATION_SOURCE.name}, as of {VALUATION_SOURCE.asOf}. Reviewed quarterly. &quot;Fixed value&quot; means the currency is not transferable to airline or hotel partners.
+            </p>
+            <p>
+              More Rewards, Moi and CIBC Adapta are valued at the redemption rate each program publishes itself: 10,000 More Rewards points for $15, 500 Moi points for $4, and 1,500 Adapta Points for $10 (or 1,200 for $10 toward select CIBC products). On the Canadian side, two currencies have no fixed rate we can point to, so we don&apos;t put a cents-per-point figure on them: VIPorter points and Avios. Canadian cards that earn those show their welcome bonus in points and are marked &quot;not valued&quot; rather than ranked on a dollar figure.
             </p>
           </section>
 

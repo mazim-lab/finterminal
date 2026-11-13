@@ -22,6 +22,11 @@
  * program it moved for us this round was Marriott Bonvoy. Air Canada Aeroplan, Amex
  * Membership Rewards, RBC Avion, CIBC Aventura and the Canadian fixed-value programs are
  * not in the study, so they keep the rates we set from Canadian sources.
+ *
+ * 2026-11-13: program-mapping fix. More Rewards, Moi and CIBC Adapta cards had been
+ * valued at the RBC Avion or CIBC Aventura rate. They now carry their own fixed rates,
+ * taken from each program's own redemption terms (sources inline below). VIPorter
+ * points and Avios have no fixed rate, so they are listed in UNVALUED_PROGRAMS.
  */
 
 export interface Valuation {
@@ -51,20 +56,51 @@ export const POINT_VALUATIONS: Record<string, Valuation> = {
   'pc optimum': { baseline: 0.1, max: null, transferable: false },
   'triangle rewards': { baseline: 0.5, max: null, transferable: false },
   'westjet rewards': { baseline: 1.0, max: null, transferable: false },
+  // Store and co-brand currencies with a fixed, first-party redemption rate (checked
+  // 2026-11-13). Each one is its own currency, NOT RBC Avion or CIBC Aventura points.
+  //  - More Rewards (More Rewards RBC Visa cards): "10,000 points = $15" with Pay With
+  //    Points at partner grocers, per morerewards.ca/rewards and the RBC card page.
+  //    $15 / 10,000 = 0.15 cents.
+  'more rewards': { baseline: 0.15, max: null, transferable: false },
+  //  - Moi (Moi RBC Visa): "the moi program redemption rate of 500 moi points for
+  //    $4.00", per the RBC card page. $4 / 500 = 0.8 cents.
+  'moi': { baseline: 0.8, max: null, transferable: false },
+  //  - CIBC Adapta: "1,500 Adapta Points are worth $10 when applied to your credit card
+  //    balance or a recent purchase" (baseline, $10 / 1,500 = 0.667 cents) and "1,200
+  //    Adapta Points are worth $10 when used toward select CIBC financial products"
+  //    (ceiling, $10 / 1,200 = 0.83 cents), per cibc.com.
+  'cibc adapta': { baseline: 0.667, max: 0.83, transferable: false },
   'cash back': { baseline: 1.0, max: null, transferable: false },
 };
+
+/**
+ * Currencies we deliberately do NOT put a cents-per-point figure on, because the
+ * program publishes no fixed redemption rate we can cite. Cards earning these show
+ * their bonus in points with no dollar figure. Checked against first-party pages
+ * 2026-11-13:
+ *  - VIPorter points (BMO VIPorter Mastercards): flyporter.com says points pay for all
+ *    or part of a base fare, with no fixed rate stated.
+ *  - Avios (RBC British Airways Visa Infinite): award pricing is dynamic, and RBC's
+ *    terms say Avios "have no cash value".
+ * Matched before POINT_VALUATIONS so a loose match can never hand them another rate.
+ */
+export const UNVALUED_PROGRAMS: string[] = ['viporter', 'avios'];
+
+/** A baseline of 0 means "no valuation". cards.ts then shows the bonus in points only. */
+export const NO_VALUATION: Valuation = { baseline: 0, max: null, transferable: false };
 
 export const VALUATION_SOURCE = {
   name: 'FinTerminal estimates',
   url: null,
   // Month precision on purpose. The ticker and the methodology page both print this
   // straight through, and a full date reads oddly in that sentence.
-  asOf: '2026-08',
+  asOf: '2026-11',
 };
 
 /** Look up a valuation by rewards-program string (case-insensitive, loose match). */
 export function valuationFor(program: string | null | undefined): Valuation {
   const p = (program || '').toLowerCase().trim();
+  if (p && UNVALUED_PROGRAMS.some(k => p.includes(k))) return NO_VALUATION;
   if (POINT_VALUATIONS[p]) return POINT_VALUATIONS[p];
   for (const key of Object.keys(POINT_VALUATIONS)) {
     if (p.includes(key) || key.includes(p)) return POINT_VALUATIONS[key];
