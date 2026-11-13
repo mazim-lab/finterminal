@@ -1,0 +1,17 @@
+.chart{width:100%;height:auto;display:block;overflow:visible}
+.grid{stroke:var(--border);stroke-width:1}
+.zero{stroke:var(--border-strong);stroke-width:1.2}
+.line{fill:none;stroke:var(--fin-d);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.dotUp{fill:var(--surface);stroke:var(--green);stroke-width:2}
+.dotDown{fill:var(--surface);stroke:var(--red);stroke-width:2}
+.yl,.xl{font-family:var(--font-mono);font-size:12px;fill:var(--text-3);font-variant-numeric:tabular-nums}
+.endLabel{font-family:var(--font-mono);font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+.up{fill:var(--green-ink)}
+.down{fill:var(--red)}
+
+/* The SVG scales to ~40% on a phone; bump the type so it lands near 10px. */
+@media (max-width:640px){
+  .yl,.xl{font-size:24px}
+  .endLabel{font-size:28px}
+  .xlAlt{display:none}
+}

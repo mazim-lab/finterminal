@@ -6,6 +6,7 @@ import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { Comments } from "@/components/Comments";
+import { RateGlance, isPastDate, type GlanceRow } from "@/components/money/RateGlance";
 
 export const metadata = {
   alternates: { canonical: "/personal-finance/best-savings-account-rates-canada" },
@@ -16,6 +17,7 @@ export const metadata = {
 };
 
 const TOC = [
+  { id: "glance", label: "At a glance" },
   { id: "short", label: "What is the best rate right now?" },
   { id: "table", label: "The rates, side by side" },
   { id: "everyday", label: "Everyday vs promotional rates" },
@@ -49,6 +51,22 @@ const FAQ = [
     q: "How often do savings rates change?",
     a: "Often. Everyday HISA rates tend to move with the Bank of Canada's overnight rate, so they can shift within days of a rate decision. Promotional rates are set by each provider and expire on fixed dates. That is exactly why we do not want you to trust any single number for long. Use this page to see the landscape, then click through to the provider's own rate page to confirm the live figure before you act.",
   },
+];
+
+// At-a-glance grid. Every figure here is the bold number printed in "The rates,
+// side by side" below, with the same conditions. Nothing new is stated.
+// Sorted everyday rates first, then tiered, then promos, so a promo never
+// reads as the "best" ongoing rate.
+const GLANCE: GlanceRow[] = [
+  { name: "Saven Financial", sub: "HISA", cells: { rate: "2.85%", kind: { text: "Everyday", sub: "No minimum balance" }, ins: "FSRA (Ontario CU)" } },
+  { name: "Oaken Financial", sub: "Savings Account", cells: { rate: "2.80%", kind: { text: "Everyday", sub: "Same 2.80% on TFSA, RSP and spousal RSP savings" }, ins: "CDIC" } },
+  { name: "EQ Bank", sub: "Personal Account", cells: { rate: { text: "2.75%", sub: "1.00% base" }, kind: { text: "Everyday, with a condition", sub: "Recurring direct deposit of at least $2,000 a month" }, ins: "CDIC" } },
+  { name: "Neo Financial", sub: "Neo Savings", cells: { rate: "2.75%", kind: { text: "Everyday, with a condition", sub: "Minimum combined balance across Neo accounts" }, ins: "CDIC partners (in trust)" } },
+  { name: "Achieva Financial", sub: "Daily Interest Savings", cells: { rate: "1.80%", kind: "Everyday", ins: "DGCM (Manitoba CU)" } },
+  { name: "Wealthsimple", sub: "Cash", cells: { rate: { text: "1.25%", sub: "1.75% over $100k, 2.25% at $500k+" }, kind: { text: "Tiered by balance", sub: "Extra boost with a $2,000 direct deposit" }, ins: "CDIC partners (in trust)" } },
+  { name: "Simplii Financial", sub: "High Interest Savings", cells: { rate: { text: "4.60%", ended: isPastDate("2026-10-31") }, kind: { text: "Promo, new clients", sub: "153 days, up to $200,000; window Aug 1 to Oct 31, 2026" }, ins: "CDIC" } },
+  { name: "Tangerine", sub: "Savings Account", cells: { rate: { text: "4.50%", sub: "confirmed Aug 2026" }, kind: { text: "Promo, new clients", sub: "153 days; check the current window in the fine print" }, ins: "CDIC" } },
+  { name: "motusbank", sub: "No longer available", cells: { rate: { text: "Closed", check: true }, kind: "Winding down", ins: null } },
 ];
 
 export default function BestSavingsAccountRatesPage() {
@@ -109,6 +127,20 @@ export default function BestSavingsAccountRatesPage() {
               the current rate on the provider&apos;s own page before you move money.
             </p>
           </div>
+
+          <RateGlance
+            caption="High-interest savings rates by provider, as of September 2026"
+            intro={<>Rates as of September 2026, from each provider&apos;s own rate page. Everyday rates are the ongoing rate; promos are temporary and revert. Details are in <a href="#table">the full rundown</a> below.</>}
+            columns={[
+              { key: "rate", label: "Rate", numeric: true },
+              { key: "kind", label: "Type and condition" },
+              { key: "ins", label: "Deposit insurance" },
+            ]}
+            rows={GLANCE}
+            notes={[
+              <>Promo rates drop to a much lower everyday rate when the window ends. The Tangerine promo was confirmed live in August 2026; its page hid the start and end dates.</>,
+            ]}
+          />
 
           <div className="toc">
             <div className="tt">In this guide</div>

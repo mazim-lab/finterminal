@@ -6,6 +6,7 @@ import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { Comments } from "@/components/Comments";
+import { RateGlance, isPastDate, type GlanceRow } from "@/components/money/RateGlance";
 
 export const metadata = {
   alternates: { canonical: "/personal-finance/best-chequing-account-bonuses-canada" },
@@ -16,6 +17,7 @@ export const metadata = {
 };
 
 const TOC = [
+  { id: "glance", label: "At a glance" },
   { id: "short", label: "What is the best bonus right now?" },
   { id: "table", label: "The offers, bank by bank" },
   { id: "how", label: "How these bonuses actually work" },
@@ -50,6 +52,21 @@ const FAQ = [
     q: "How often do these offers change?",
     a: "Constantly. Chequing bonuses rotate on fixed end dates, and banks raise, lower, or retire them throughout the year. The amounts and conditions in this guide were verified in September 2026 against each bank's own offer page, but a number you see today can be gone or different next month. Use this page to understand the landscape and the conditions to look for, then click through to the bank's own page to confirm the live offer before you apply.",
   },
+];
+
+// At-a-glance grid. Every amount and date here is printed in "The offers, bank
+// by bank" below. "Ended" is computed at build time from the printed deadline.
+const CHECK = { text: "Check site", check: true } as const;
+const GLANCE: GlanceRow[] = [
+  { name: "Scotiabank", sub: "Ultimate / Preferred Package", cells: { bonus: { text: "Up to $1,000", sub: "Bundle chequing, savings and a credit card" }, fee: "Yes, waivable with a minimum balance", ends: { text: "Oct 29, 2026", ended: isPastDate("2026-10-29") } } },
+  { name: "CIBC", sub: "Smart Account", cells: { bonus: { text: "Up to $850", sub: "In value, through bundled actions" }, fee: "Tiered by transactions", ends: { text: "Not stated", check: true } } },
+  { name: "TD", sub: "All-Inclusive / Unlimited", cells: { bonus: { text: "Up to $750", sub: "Total value; student offer $150 cash" }, fee: "Yes, waived with a minimum balance", ends: { text: "Open by Oct 1, 2026", ended: isPastDate("2026-10-01") } } },
+  { name: "National Bank", sub: "Connected / Total", cells: { bonus: { text: "Up to $600", sub: "Cashback; 3 deposits of $100+ and 20 transactions in 120 days" }, fee: CHECK, ends: { text: "Nov 3, 2026", ended: isPastDate("2026-11-03") } } },
+  { name: "Simplii Financial", sub: "No Fee Chequing", cells: { bonus: { text: "$300", sub: "Plus a $50 Skip gift card; $100+ a month in direct deposits for 3 months" }, fee: "None", ends: { text: "Sep 30, 2026", ended: isPastDate("2026-09-30") } } },
+  { name: "Tangerine", sub: "Chequing Account", cells: { bonus: { text: "$250", sub: "Payroll direct deposits of $200+ a month for 2 months" }, fee: "None", ends: { text: "Oct 31, 2026", ended: isPastDate("2026-10-31") } } },
+  { name: "RBC", sub: "Signature No Limit Banking", cells: { bonus: { text: "New iPad", sub: "A device, not cash" }, fee: "Yes, waivable with a minimum balance", ends: { text: "Nov 2, 2026", ended: isPastDate("2026-11-02") } } },
+  { name: "BMO", sub: "Performance / Plus Chequing", cells: { bonus: CHECK, fee: "Yes, typically waived with a minimum balance", ends: CHECK } },
+  { name: "EQ Bank", sub: "Everyday account", cells: { bonus: CHECK, fee: "None", ends: CHECK } },
 ];
 
 export default function BestChequingBonusesPage() {
@@ -110,6 +127,21 @@ export default function BestChequingBonusesPage() {
               the current offer and its conditions on the bank&apos;s own page before you open an account.
             </p>
           </div>
+
+          <RateGlance
+            caption="Chequing account welcome offers by bank, as of September 2026"
+            firstColLabel="Bank"
+            intro={<>Offers as of September 2026, verified on each bank&apos;s own offer page. Most are the maximum possible value, so read the conditions in <a href="#table">the full rundown</a> below.</>}
+            columns={[
+              { key: "bonus", label: "Welcome offer" },
+              { key: "fee", label: "Monthly fee" },
+              { key: "ends", label: "Offer deadline" },
+            ]}
+            rows={GLANCE}
+            notes={[
+              <>&ldquo;Check site&rdquo; means the bank&apos;s page did not load or did not state it, so we could not verify it. &ldquo;Ended&rdquo; means the deadline printed here has passed; the bank may have a new offer.</>,
+            ]}
+          />
 
           <div className="toc">
             <div className="tt">In this guide</div>

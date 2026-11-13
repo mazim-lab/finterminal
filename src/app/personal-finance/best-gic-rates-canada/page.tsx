@@ -6,6 +6,7 @@ import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
 import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { Comments } from "@/components/Comments";
+import { RateGlance, type GlanceRow } from "@/components/money/RateGlance";
 
 export const metadata = {
   alternates: { canonical: "/personal-finance/best-gic-rates-canada" },
@@ -16,6 +17,7 @@ export const metadata = {
 };
 
 const TOC = [
+  { id: "glance", label: "At a glance" },
   { id: "short", label: "What is the best GIC rate right now?" },
   { id: "table", label: "The rates, term by term" },
   { id: "cashable", label: "Cashable vs non-redeemable" },
@@ -50,6 +52,21 @@ const FAQ = [
     q: "How often do GIC rates change?",
     a: "Often. GIC rates move with the Bank of Canada and with each provider's own funding needs, so a rate you see today can be different next week. Once you buy a GIC your rate is locked for the whole term, which is the point, but the rate on offer for new purchases changes regularly. Use this page to understand the landscape, then click through to the provider's own rate page to confirm the live figure before you commit.",
   },
+];
+
+// At-a-glance grid. Every figure here is the bold, verified number printed in
+// "The rates, term by term" below; providers we could not verify say "Check site".
+const CHECK = { text: "Check site", check: true } as const;
+const GLANCE: GlanceRow[] = [
+  { name: "EQ Bank", sub: "CDIC", cells: { y1: "3.70%", y2: "3.85%", y3: "4.10%", y4: "4.15%", y5: "4.25%" } },
+  { name: "Saven Financial", sub: "FSRA (Ontario CU)", cells: { y1: "3.70%", y2: "3.90%", y3: "4.00%", y4: "4.05%", y5: "4.25%" } },
+  { name: "Oaken Financial", sub: "CDIC", cells: { y1: "3.55%", y2: "4.05%", y3: "4.10%", y4: "4.15%", y5: "4.25%" } },
+  { name: "Achieva Financial", sub: "DGCM (Manitoba CU)", cells: { y1: "3.65%", y2: "3.75%", y3: "3.95%", y4: "3.90%", y5: "4.10%" } },
+  { name: "Peoples Trust", sub: "CDIC", cells: { y1: "3.25%", y2: "3.00%", y3: "3.25%", y4: "3.25%", y5: "3.45%" } },
+  { name: "Wealthsimple", sub: "CDIC partners", cells: { y1: CHECK, y2: CHECK, y3: CHECK, y4: CHECK, y5: CHECK } },
+  { name: "Simplii Financial", sub: "CDIC", cells: { y1: CHECK, y2: CHECK, y3: CHECK, y4: CHECK, y5: CHECK } },
+  { name: "Tangerine", sub: "CDIC", cells: { y1: CHECK, y2: CHECK, y3: CHECK, y4: CHECK, y5: CHECK } },
+  { name: "Big banks", sub: "RBC, TD, Scotia, BMO, CIBC", cells: { y1: CHECK, y2: CHECK, y3: CHECK, y4: CHECK, y5: CHECK } },
 ];
 
 export default function BestGicRatesPage() {
@@ -111,6 +128,24 @@ export default function BestGicRatesPage() {
               provider&apos;s own page before you lock in.
             </p>
           </div>
+
+          <RateGlance
+            caption="Non-redeemable GIC rates by provider and term, verified September 2026"
+            intro={<>Non-redeemable rates by term, verified in September 2026 on each provider&apos;s own rate page. Details and links are in <a href="#table">the full rundown</a> below.</>}
+            columns={[
+              { key: "y1", label: "1 yr", numeric: true, markBest: true },
+              { key: "y2", label: "2 yr", numeric: true, markBest: true },
+              { key: "y3", label: "3 yr", numeric: true, markBest: true },
+              { key: "y4", label: "4 yr", numeric: true, markBest: true },
+              { key: "y5", label: "5 yr", numeric: true, markBest: true },
+            ]}
+            rows={GLANCE}
+            legendBest
+            notes={[
+              <>Oaken also pays 3.65% for 18 months, and its cashable one-year sits around 2.25% after the holding period.</>,
+              <>&ldquo;Check site&rdquo; means the provider loads its rates dynamically or behind a sign-in, so we could not confirm a live number.</>,
+            ]}
+          />
 
           <div className="toc">
             <div className="tt">In this guide</div>
