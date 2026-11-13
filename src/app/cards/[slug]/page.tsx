@@ -430,8 +430,8 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
                   <span className={`amt${!unvalued && card.first_year_value < 0 ? ' neg' : ''}`}>{unvalued ? 'Not valued' : formatCurrency(card.first_year_value, cur)}</span>
                 </div>
               </div>
-              {unvalued && programLabel && (
-                <p className={s.formula}>{programLabel} has no fixed redemption rate we can cite, so we show the bonus in points and leave it out of the dollar estimate.</p>
+              {unvalued && (
+                <p className={s.formula}>This program publishes no fixed redemption rate we can cite, so we show the bonus in points and leave it out of the dollar estimate.</p>
               )}
               {card.first_year_value_formula && (
                 <p className={s.formula}>Source math: {stripDashes(card.first_year_value_formula)}</p>

@@ -170,6 +170,7 @@ export default function Explorer({
       topCA: top(ca), topUS: top(us),
       medCA: median(valued(ca).map((c) => c.first_year_value)),
       medUS: median(valued(us).map((c) => c.first_year_value)),
+      valuedCA: valued(ca).length, valuedUS: valued(us).length,
       noFx: filtered.filter((c) => c.benefits.no_fx_fee).length,
       maxCA: Math.max(1, ...valued(ca).map((c) => c.first_year_value)),
       maxUS: Math.max(1, ...valued(us).map((c) => c.first_year_value)),
@@ -258,7 +259,7 @@ export default function Explorer({
           {country === 'all' ? (
             <>
               {statCell('Top value · CA$', stats.topCA ? formatCurrency(stats.topCA.first_year_value, 'CA') : '–', stats.topCA?.name ?? 'no Canadian cards in view', valueTone(stats.topCA?.first_year_value))}
-              {statCell('Median value · CA$', stats.medCA != null ? formatCurrency(stats.medCA, 'CA') : '–', stats.ca.length ? `middle of ${stats.ca.length} Canadian cards` : 'no Canadian cards in view')}
+              {statCell('Median value · CA$', stats.medCA != null ? formatCurrency(stats.medCA, 'CA') : '–', stats.valuedCA ? `middle of ${stats.valuedCA} valued Canadian cards` : 'no Canadian cards in view')}
               {statCell('Top value · US$', stats.topUS ? formatCurrency(stats.topUS.first_year_value, 'US') : '–', stats.topUS?.name ?? 'no US cards in view', valueTone(stats.topUS?.first_year_value))}
             </>
           ) : (
@@ -266,11 +267,12 @@ export default function Explorer({
               {(() => {
                 const top = country === 'CA' ? stats.topCA : stats.topUS;
                 const med = country === 'CA' ? stats.medCA : stats.medUS;
+                const valuedN = country === 'CA' ? stats.valuedCA : stats.valuedUS;
                 const cur = country === 'CA' ? 'CA$' : 'US$';
                 return (
                   <>
                     {statCell(`Top value · ${cur}`, top ? formatCurrency(top.first_year_value, country) : '–', top?.name ?? 'no cards in view', valueTone(top?.first_year_value))}
-                    {statCell(`Median value · ${cur}`, med != null ? formatCurrency(med, country) : '–', filtered.length ? `middle of ${filtered.length} cards` : 'no cards in view')}
+                    {statCell(`Median value · ${cur}`, med != null ? formatCurrency(med, country) : '–', valuedN ? `middle of ${valuedN} valued cards` : 'no cards in view')}
                   </>
                 );
               })()}
