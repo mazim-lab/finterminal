@@ -1,6 +1,7 @@
 import canadianCardsRaw from './canadian_cards_comprehensive.json';
 import usCardsRaw from './us_cards_comprehensive.json';
 import { valuationFor } from './point-valuations';
+import { isUnvalued } from './card-view';
 
 // ── Types ──────────────────────────────────────────────
 
@@ -226,11 +227,15 @@ function normalizeCA(raw: RawCA): Card {
   const earnSummary = earnRates.map(e => `${e.rate} ${e.category}`).join(', ');
   // Value the bonus at OUR baseline cpp (points × baseline), consistent across the site;
   // fall back to the stored CAD value only for cards we have no points count for (e.g. cashback).
+  // A points bonus in a currency we don't value (baseline 0, see UNVALUED_PROGRAMS) gets no
+  // dollar figure at all, rather than a stale stored one.
   const baselineCpp = valuationFor(raw.rewards_program || raw.name || '').baseline;
   const wbPoints = raw.welcome_bonus_points || null;
   const bonusValue = (wbPoints && baselineCpp)
     ? Math.round(wbPoints * baselineCpp / 100)
-    : (raw.welcome_bonus_value_cad || raw.pot_first_year_value || 0);
+    : wbPoints
+      ? 0
+      : (raw.welcome_bonus_value_cad || raw.pot_first_year_value || 0);
   const firstYearFee = typeof raw.first_year_fee === 'number' ? raw.first_year_fee : null;
   const fee = raw.annual_fee || 0;
 
@@ -553,7 +558,8 @@ export function getCardTypes(): string[] {
 export function getTopCardsByValue(count: number, country?: 'CA' | 'US'): Card[] {
   let cards = allCards;
   if (country) cards = cards.filter(c => c.country === country);
-  return [...cards].sort((a, b) => b.first_year_value - a.first_year_value).slice(0, count);
+  // Cards we don't value (see isUnvalued) never rank on a dollar figure.
+  return cards.filter(c => !isUnvalued(c)).sort((a, b) => b.first_year_value - a.first_year_value).slice(0, count);
 }
 
 // formatCurrency lives in the JSON-free card-view module so client components

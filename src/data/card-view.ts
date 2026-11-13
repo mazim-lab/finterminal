@@ -31,6 +31,23 @@ export interface SlimCard {
   earn_rates: EarnRate[];
 }
 
+/** A points welcome bonus in a currency we don't value (cpp_cad null: VIPorter
+ *  points, Avios on the Canadian side). Such a card reads and ranks as "not
+ *  valued": never as a $0 or negative first-year value. */
+export function isUnvalued(c: { welcome_bonus_points: number | null; cpp_cad: number | null }): boolean {
+  return !!c.welcome_bonus_points && c.welcome_bonus_points > 0 && c.cpp_cad == null;
+}
+
+/** Sort helper: unvalued cards go after every valued card, whatever the sort
+ *  direction, so "not valued" never ranks as the worst (or best) value. */
+export function compareByValue<T extends { welcome_bonus_points: number | null; cpp_cad: number | null }>(
+  a: T, b: T, value: (c: T) => number, dir: 1 | -1 = -1,
+): number {
+  const ua = isUnvalued(a), ub = isUnvalued(b);
+  if (ua !== ub) return ua ? 1 : -1;
+  return (value(a) - value(b)) * dir;
+}
+
 export function formatCurrency(value: number, country: 'CA' | 'US' = 'CA'): string {
   const prefix = country === 'US' ? 'US$' : 'CA$';
   // Display only: the sign goes in front of the currency ("-US$50", never
@@ -64,7 +81,8 @@ export function receiptLines(c: SlimCard): ReceiptLine[] {
   const cpp = c.cpp_cad ?? 1.0;
 
   if (c.welcome_bonus_points && c.welcome_bonus_points > 0) {
-    lines.push({
+    // No cpp means a currency we don't value (VIPorter, Avios): no dollar line for it.
+    if (c.cpp_cad != null) lines.push({
       label: `welcome bonus  ${c.welcome_bonus_points.toLocaleString()} pts × ${cpp}¢`,
       amount: c.welcome_bonus_value,
     });
@@ -107,10 +125,12 @@ export function earnLines(c: SlimCard): { category: string; rate: string }[] {
 /** Display name for a rewards program string from the data ("rbc avion" reads
  *  "RBC Avion"). Formatting only; the stored value is unchanged. */
 const PROGRAM_ACRONYMS = new Set(['rbc', 'td', 'bmo', 'cibc', 'mbna', 'pc', 'hsbc', 'amex', 'ihg', 'aa', 'cba']);
+const PROGRAM_WORDS: Record<string, string> = { viporter: 'VIPorter' };
 export function programName(program: string | null | undefined): string {
   if (!program) return '';
   return program
     .split(/(\s+)/)
-    .map((w) => (PROGRAM_ACRONYMS.has(w.toLowerCase()) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1)))
+    .map((w) => PROGRAM_WORDS[w.toLowerCase()]
+      ?? (PROGRAM_ACRONYMS.has(w.toLowerCase()) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1)))
     .join('');
 }

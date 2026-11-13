@@ -4,7 +4,7 @@ import { Fragment, Suspense, useCallback, useEffect, useLayoutEffect, useMemo, u
 import type { CSSProperties, ReactNode } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { Benefits } from '@/data/cards';
-import { formatCurrency, receiptLines, earnLines, programName, type SlimCard } from '@/data/card-view';
+import { formatCurrency, receiptLines, earnLines, programName, isUnvalued, compareByValue, type SlimCard } from '@/data/card-view';
 import { VerifiedStamp } from '@/components/VerifiedStamp';
 import { unpackCard, type PackedCard } from './packed';
 import s from './cards.module.css';
@@ -45,7 +45,7 @@ const COLUMNS: { key: SortKey; label: string; right?: boolean; className?: strin
 ];
 
 const perksFor = (c: SlimCard) => PERKS.filter(([k]) => c.benefits[k]);
-const cppFor = (c: SlimCard) => c.cpp_cad ?? 1.0;
+const cppFor = (c: SlimCard) => c.cpp_cad ?? 0; // null = currency we don't value
 const num = (n: number) => n.toLocaleString('en-CA');
 const FEE_MAX = 1000;
 
@@ -147,6 +147,10 @@ export default function Explorer({
       }
     };
     return [...list].sort((a, b) => {
+      // Value-based sorts put "not valued" cards last in either direction.
+      if (sortKey === 'bonus' || sortKey === 'cpp' || sortKey === 'value') {
+        return compareByValue(a, b, (c) => val(c) as number, dir);
+      }
       const av = val(a), bv = val(b);
       if (typeof av === 'string' || typeof bv === 'string') return String(av).localeCompare(String(bv)) * dir;
       return (av - bv) * dir;
@@ -157,16 +161,18 @@ export default function Explorer({
   // country and labelled with its currency.
   const stats = useMemo(() => {
     const by = (cc: 'CA' | 'US') => filtered.filter((c) => c.country === cc);
-    const top = (list: SlimCard[]) => list.reduce<SlimCard | null>((a, c) => (!a || c.first_year_value > a.first_year_value ? c : a), null);
+    // Money stats cover valued cards only; a "not valued" card has no dollar figure to rank.
+    const valued = (list: SlimCard[]) => list.filter((c) => !isUnvalued(c));
+    const top = (list: SlimCard[]) => valued(list).reduce<SlimCard | null>((a, c) => (!a || c.first_year_value > a.first_year_value ? c : a), null);
     const ca = by('CA'), us = by('US');
     return {
       ca, us,
       topCA: top(ca), topUS: top(us),
-      medCA: median(ca.map((c) => c.first_year_value)),
-      medUS: median(us.map((c) => c.first_year_value)),
+      medCA: median(valued(ca).map((c) => c.first_year_value)),
+      medUS: median(valued(us).map((c) => c.first_year_value)),
       noFx: filtered.filter((c) => c.benefits.no_fx_fee).length,
-      maxCA: Math.max(1, ...ca.map((c) => c.first_year_value)),
-      maxUS: Math.max(1, ...us.map((c) => c.first_year_value)),
+      maxCA: Math.max(1, ...valued(ca).map((c) => c.first_year_value)),
+      maxUS: Math.max(1, ...valued(us).map((c) => c.first_year_value)),
     };
   }, [filtered]);
 
@@ -303,10 +309,11 @@ export default function Explorer({
                 {filtered.map((c) => {
                   const isOpen = openReceipt === c.slug;
                   const max = c.country === 'CA' ? stats.maxCA : stats.maxUS;
-                  const pct = Math.round(Math.max(0, Math.min(100, (c.first_year_value / max) * 100)));
+                  const unvalued = isUnvalued(c);
+                  const pct = unvalued ? 0 : Math.round(Math.max(0, Math.min(100, (c.first_year_value / max) * 100)));
                   const rid = `rcpt-${c.slug}`;
                   const sub = [c.issuer, programName(c.rewards_program), c.network !== 'Unknown' ? c.network : ''].filter(Boolean).join(' · ');
-                  const value = formatCurrency(c.first_year_value, c.country);
+                  const value = unvalued ? 'Not valued' : formatCurrency(c.first_year_value, c.country);
                   // Compact row: name, issuer line and the four numbers. Perks,
                   // the value math and earn rates live in the detail row that
                   // opens from the value button, so the list stays scannable and
@@ -328,11 +335,11 @@ export default function Explorer({
                             ? <>{num(c.welcome_bonus_points)}<small> pts</small></>
                             : c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country) : <span className="no">none listed</span>}
                         </td>
-                        <td className="P col-cpp">{cppFor(c).toFixed(2)}</td>
+                        <td className="P col-cpp">{c.cpp_cad != null ? cppFor(c).toFixed(2) : 'n/a'}</td>
                         <td className="V">
                           <button
                             type="button"
-                            className={`valbtn ${c.first_year_value < 0 ? 'negv' : 'pos'}`}
+                            className={`valbtn ${unvalued ? '' : c.first_year_value < 0 ? 'negv' : 'pos'}`}
                             aria-expanded={isOpen}
                             aria-controls={isOpen ? rid : undefined}
                             onClick={() => setOpenReceipt((x) => (x === c.slug ? null : c.slug))}
@@ -431,6 +438,7 @@ function DetailRow({ c, id, value, verified }: { c: SlimCard; id: string; value:
   const lines = receiptLines(c);
   const earn = earnLines(c);
   const perks = perksFor(c);
+  const unvalued = isUnvalued(c);
   return (
     <tr className="rcpt" id={id}>
       <td colSpan={COLUMNS.length}>
@@ -443,7 +451,14 @@ function DetailRow({ c, id, value, verified }: { c: SlimCard; id: string; value:
               </ul>
             </div>
           )}
-          <div className={s.receiptCap}>How we got {value}</div>
+          <div className={s.receiptCap}>{unvalued ? 'Why there is no dollar figure' : <>How we got {value}</>}</div>
+          {unvalued && c.welcome_bonus_points && (
+            <div className="rl">
+              <span className="lab">welcome bonus  {c.welcome_bonus_points.toLocaleString()} pts</span>
+              <span className="dots" />
+              <span className="note">no fixed rate, not valued</span>
+            </div>
+          )}
           {lines.map((l, i) => (
             <div className="rl" key={i}>
               <span className="lab">{l.label}</span>
@@ -456,7 +471,7 @@ function DetailRow({ c, id, value, verified }: { c: SlimCard; id: string; value:
           <div className="rl total">
             <span className="lab">EST. FIRST-YEAR VALUE</span>
             <span className="dots" />
-            <span className={`amt${c.first_year_value < 0 ? ' neg' : ''}`}>{value}</span>
+            <span className={`amt${!unvalued && c.first_year_value < 0 ? ' neg' : ''}`}>{value}</span>
           </div>
           {earn.length > 0 && (
             <div className={s.earn}>

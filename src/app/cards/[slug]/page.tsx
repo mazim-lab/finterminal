@@ -1,5 +1,5 @@
 import { allCards, Card, BENEFIT_LABELS, Benefits, formatCurrency } from '@/data/cards';
-import { receiptLines, programName } from '@/data/card-view';
+import { receiptLines, programName, isUnvalued, compareByValue } from '@/data/card-view';
 import { valuationFor } from '@/data/point-valuations';
 import { ogMeta } from '@/lib/og';
 import { formatBonusText } from '@/lib/bonusText';
@@ -142,7 +142,10 @@ function buildBottomLine(card: Card): string {
     const bonusPhrase = card.welcome_bonus_points
       ? `a welcome bonus of ${card.welcome_bonus_points.toLocaleString()} points`
       : `a welcome bonus worth about ${formatCurrency(card.welcome_bonus_value, cur)}`;
-    if (card.first_year_value > 0) {
+    if (isUnvalued(card)) {
+      // Currency we don't value (VIPorter, Avios): state the points, claim no dollar figure.
+      s2 = `It offers ${bonusPhrase}. We don't put a dollar value on these points, because the program publishes no fixed redemption rate.`;
+    } else if (card.first_year_value > 0) {
       s2 = `It offers ${bonusPhrase}, which we estimate at roughly ${formatCurrency(card.first_year_value, cur)} of value in your first year after the fee.`;
     } else if (card.annual_fee > 0) {
       s2 = `It offers ${bonusPhrase}, though the annual fee offsets most of that in the first year.`;
@@ -226,6 +229,11 @@ function buildCardFaqs(card: Card): Faq[] {
     if (card.first_year_value_formula) a += ` That is based on ${stripDashes(card.first_year_value_formula)}.`;
     else a += ` That estimate values the welcome bonus at our baseline redemption rate and subtracts the annual fee.`;
     faqs.push({ q: `What is the ${card.name} worth in the first year?`, a });
+  } else if (isUnvalued(card) && card.welcome_bonus_points) {
+    faqs.push({
+      q: `What is the ${card.name} worth in the first year?`,
+      a: `We don't put a dollar figure on it. The welcome bonus is ${card.welcome_bonus_points.toLocaleString()} points in a program that publishes no fixed redemption rate, so we leave those points unvalued rather than guess.`,
+    });
   }
 
   // Who it is best for.
@@ -273,6 +281,7 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
   const benefitEntries = Object.entries(card.benefits) as [keyof Benefits, boolean][];
   const active = benefitEntries.filter(([, v]) => v);
   const cpp = card.cpp_cad ?? 1.0;
+  const unvalued = isUnvalued(card);
   const val = valuationFor(card.rewards_program);
   const maxCpp = val.max ?? null;
   const fxLabel = card.foreign_transaction_fee === false
@@ -297,7 +306,7 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
 
   const similar = allCards
     .filter(c => c.slug !== card.slug && c.card_type === card.card_type && c.country === card.country)
-    .sort((a, b) => b.first_year_value - a.first_year_value)
+    .sort((a, b) => compareByValue(a, b, (c) => c.first_year_value))
     .slice(0, 4);
 
   const programLabel = programName(card.rewards_program) || null;
@@ -396,10 +405,17 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
 
             <div className={s.ledger}>
               <div className={s.ledgerCap}>Est. first-year value</div>
-              <div className={`${s.ledgerNum} ${card.first_year_value < 0 ? s.neg : s.pos}`}>
-                {formatCurrency(card.first_year_value, cur)}
+              <div className={`${s.ledgerNum}${unvalued ? '' : card.first_year_value < 0 ? ` ${s.neg}` : ` ${s.pos}`}`}>
+                {unvalued ? 'Not valued' : formatCurrency(card.first_year_value, cur)}
               </div>
               <div className={`receipt ${s.receipt}`}>
+                {unvalued && card.welcome_bonus_points && (
+                  <div className="rl">
+                    <span className="lab">welcome bonus  {card.welcome_bonus_points.toLocaleString()} pts</span>
+                    <span className="dots" />
+                    <span className="amt">not valued</span>
+                  </div>
+                )}
                 {lines.map((l, i) => (
                   <div className="rl" key={i}>
                     <span className="lab">{l.label}</span>
@@ -410,9 +426,12 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
                 <div className="rl total">
                   <span className="lab">TOTAL</span>
                   <span className="dots" />
-                  <span className={`amt${card.first_year_value < 0 ? ' neg' : ''}`}>{formatCurrency(card.first_year_value, cur)}</span>
+                  <span className={`amt${!unvalued && card.first_year_value < 0 ? ' neg' : ''}`}>{unvalued ? 'Not valued' : formatCurrency(card.first_year_value, cur)}</span>
                 </div>
               </div>
+              {unvalued && programLabel && (
+                <p className={s.formula}>{programLabel} has no fixed redemption rate we can cite, so we show the bonus in points and leave it out of the dollar estimate.</p>
+              )}
               {card.first_year_value_formula && (
                 <p className={s.formula}>Source math: {stripDashes(card.first_year_value_formula)}</p>
               )}
@@ -570,7 +589,9 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
                       <div className="r-title"><Link href={`/cards/${c.slug}`}>{c.name}</Link></div>
                       <div className="r-sub">{c.issuer} · {c.annual_fee === 0 ? 'no annual fee' : `${formatCurrency(c.annual_fee, c.country)} a year`}</div>
                     </div>
-                    <span className={`r-end ${c.first_year_value < 0 ? s.neg : s.pos}`}>{formatCurrency(c.first_year_value, c.country)}</span>
+                    {isUnvalued(c)
+                      ? <span className="r-end">Not valued</span>
+                      : <span className={`r-end ${c.first_year_value < 0 ? s.neg : s.pos}`}>{formatCurrency(c.first_year_value, c.country)}</span>}
                   </li>
                 ))}
               </ul>

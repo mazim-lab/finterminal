@@ -4,7 +4,7 @@ import { Fragment, Suspense, useCallback, useEffect, useMemo, useRef, useState }
 import type { ReactNode } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { Benefits, EarnRate } from '@/data/cards';
-import { formatCurrency, programName } from '@/data/card-view';
+import { formatCurrency, programName, isUnvalued } from '@/data/card-view';
 import s from './compare.module.css';
 
 export interface CompareCard {
@@ -108,7 +108,12 @@ export default function CompareClient({
     return vals.map((v) => v === target && winners < vals.length);
   };
   const feeWin = best(selected.map((c) => c.annual_fee), 'min');
-  const valueWin = best(selected.map((c) => c.first_year_value), 'max');
+  // "Highest value" is judged only among valued cards; a card we don't value
+  // never wins or loses on a dollar figure, and needs two valued cards to compare.
+  const valuedCount = selected.filter((c) => !isUnvalued(c)).length;
+  const valueWin = valuedCount > 1
+    ? best(selected.map((c) => (isUnvalued(c) ? -Infinity : c.first_year_value)), 'max')
+    : selected.map(() => false);
 
   const fx = (c: CompareCard) => (c.foreign_transaction_fee === false ? '0%'
     : c.foreign_transaction_fee_pct != null ? `${c.foreign_transaction_fee_pct}%` : 'Not listed');
@@ -146,13 +151,18 @@ export default function CompareClient({
         {c.welcome_bonus_points && c.welcome_bonus_value > 0 ? <span className={s.sub}>worth about {formatCurrency(c.welcome_bonus_value, c.country)}</span> : null}
       </span>
     ) },
-    { label: 'Est. first-year value', cells: (c, i) => (
+    { label: 'Est. first-year value', cells: (c, i) => (isUnvalued(c) ? (
+      <span className={s.num}>
+        <span className={s.none}>Not valued</span>
+        <span className={s.sub}>bonus is in points with no fixed rate</span>
+      </span>
+    ) : (
       <span className={`${s.num} ${s.big} ${c.first_year_value < 0 ? s.neg : s.pos}`}>
         {formatCurrency(c.first_year_value, c.country)}
         {valueWin[i] && <span className="chip chip-green">Highest</span>}
       </span>
-    ) },
-    { label: 'Base value per point', cells: (c) => <span className={s.num}>{(c.cpp_cad ?? 1).toFixed(2)}¢</span> },
+    )) },
+    { label: 'Base value per point', cells: (c) => (c.cpp_cad != null ? <span className={s.num}>{c.cpp_cad.toFixed(2)}¢</span> : <span className={s.none}>Not valued</span>) },
     { label: 'Foreign transaction fee', cells: (c) => <span className={`${s.num}${fx(c) === '0%' ? ` ${s.pos}` : ''}`}>{fx(c)}</span> },
     { group: 'Earning', label: 'Earn rates', cells: earn },
     { label: 'Welcome offer', cells: (c) => (c.welcome_bonus ? <span className={s.text}>{c.welcome_bonus}</span> : <span className={s.none}>Not listed</span>) },
@@ -235,7 +245,7 @@ export default function CompareClient({
               <button key={c!.slug} type="button" className={s.quickBtn} onClick={() => add(c!.slug)}>
                 <span className={s.quickPlus} aria-hidden="true">+</span>
                 <span className={s.quickName}>{c!.name}</span>
-                <span className={s.quickVal}>{formatCurrency(c!.first_year_value, c!.country)} first year</span>
+                <span className={s.quickVal}>{isUnvalued(c!) ? 'Not valued' : `${formatCurrency(c!.first_year_value, c!.country)} first year`}</span>
               </button>
             ))}
           </div>

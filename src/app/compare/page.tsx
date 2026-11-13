@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { allCards, BENEFIT_LABELS, type Benefits } from '@/data/cards';
+import { isUnvalued } from '@/data/card-view';
 import { ogMeta } from '@/lib/og';
 import CompareClient, { type CompareCard } from './CompareClient';
 import s from './compare.module.css';
@@ -51,7 +52,7 @@ export default function ComparePage() {
   // Quick picks: the top three Canadian cards by our own first-year estimate,
   // so the empty state has a one-tap way to start.
   const picks = [...allCards]
-    .filter((c) => c.country === 'CA')
+    .filter((c) => c.country === 'CA' && !isUnvalued(c))
     .sort((a, b) => b.first_year_value - a.first_year_value)
     .slice(0, 3)
     .map((c) => c.slug);
