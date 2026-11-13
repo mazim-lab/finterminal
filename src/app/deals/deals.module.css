@@ -20,8 +20,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family:var(--font-sans);font-variant-numeric:tabular-nums;
+  font-size: 13.5px;
   font-weight: 700;
   color: var(--amber-ink);
   border: 1.5px solid var(--amber);
@@ -34,7 +34,7 @@
   margin-top: 0;
 }
 .sectionNote {
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.6;
   color: var(--text-2);
   max-width: 72ch;
@@ -64,13 +64,13 @@
 }
 .cardTitle {
   font-size: 17px;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.35;
   text-wrap: pretty;
 }
 .blurb {
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.6;
   color: var(--text-2);
 }
@@ -87,7 +87,7 @@
 }
 
 .merchant {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-2);
 }
@@ -97,16 +97,14 @@
   align-items: baseline;
   flex-wrap: wrap;
   gap: 4px 8px;
-  font-family: var(--font-mono);
+  font-family:var(--font-sans);font-variant-numeric:tabular-nums;
   font-variant-numeric: tabular-nums;
 }
 .priceLabel {
   flex-basis: 100%;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
+  font-family:var(--font-sans);font-variant-numeric:tabular-nums;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: var(--text-3);
 }
 .rowEnd .priceLabel {
@@ -125,7 +123,7 @@
   letter-spacing: -0.01em;
 }
 .was {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-3);
 }
 .was s {
@@ -133,8 +131,8 @@
 }
 
 .posted {
-  font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-family:var(--font-sans);font-variant-numeric:tabular-nums;
+  font-size: 14px;
   font-variant-numeric: tabular-nums;
   color: var(--text-2);
 }
@@ -176,8 +174,8 @@
   min-width: 0;
 }
 .rowTitle {
-  font-size: 15.5px;
-  font-weight: 650;
+  font-size: 16.5px;
+  font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.005em;
   text-wrap: pretty;
@@ -200,7 +198,7 @@
   justify-content: flex-end;
 }
 .endedLabel {
-  font-family: var(--font-mono);
+  font-family:var(--font-sans);font-variant-numeric:tabular-nums;
   font-size: var(--fs-micro);
   color: var(--text-3);
 }
@@ -223,7 +221,7 @@
   min-height: 28px;
   cursor: pointer;
   list-style: none;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-2);
 }
@@ -232,7 +230,7 @@
 }
 .note summary::before {
   content: "+";
-  font-family: var(--font-mono);
+  font-family:var(--font-sans);font-variant-numeric:tabular-nums;
   color: var(--text-3);
   width: 10px;
 }
@@ -244,7 +242,7 @@
 }
 .note p {
   margin-top: 4px;
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.6;
   color: var(--text-2);
   max-width: 72ch;
@@ -256,12 +254,12 @@
 }
 .archiveTitle {
   font-size: var(--fs-h3);
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 .archiveCount {
   margin-left: auto;
-  font-family: var(--font-mono);
+  font-family:var(--font-sans);font-variant-numeric:tabular-nums;
   font-size: var(--fs-micro);
   font-weight: 500;
   color: var(--text-3);

@@ -1,22 +1,22 @@
 /* /tags and /tags/[slug] */
 .clamp2{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden}
 
-.headStats{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:var(--s4);font-family:var(--font-mono);font-size:var(--fs-small);color:var(--text-2)}
+.headStats{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:var(--s4);font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size:var(--fs-small);color:var(--text-2)}
 .headStats b{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
 
 .jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 var(--s6)}
 .jump a{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 12px;border:1px solid var(--border);border-radius:var(--radius);
-  background:var(--surface);font-size:13.5px;font-weight:600;color:var(--text)}
+  background:var(--surface);font-size: 14.5px;font-weight:600;color:var(--text)}
 .jump a:hover{border-color:var(--border-strong);background:var(--surface-2)}
-.jump a span{font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:500;color:var(--text-3);font-variant-numeric:tabular-nums}
+.jump a span{font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size:var(--fs-micro);font-weight:500;color:var(--text-3);font-variant-numeric:tabular-nums}
 @media (max-width:768px){.jump a{min-height:44px}}
 
 .group{margin-top:var(--s7);scroll-margin-top:calc(var(--header-h) + 16px)}
 .group:first-of-type{margin-top:0}
 .groupHead{display:flex;align-items:baseline;flex-wrap:wrap;gap:var(--s2) var(--s4);margin-bottom:var(--s3);padding-bottom:var(--s2);border-bottom:1px solid var(--border)}
-.groupHead h2{font-size:var(--fs-h3);font-weight:650;letter-spacing:-.01em;display:inline-flex;align-items:center;gap:10px}
+.groupHead h2{font-size:var(--fs-h3);font-weight: 600;letter-spacing:-.01em;display:inline-flex;align-items:center;gap:10px}
 .groupHead h2::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--tone-d)}
-.groupHead .ct{font-family:var(--font-mono);font-size:var(--fs-small);color:var(--text-3)}
+.groupHead .ct{font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size:var(--fs-small);color:var(--text-3)}
 
 /* topic tiles */
 .tiles{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));list-style:none}
@@ -24,18 +24,18 @@
   padding:var(--s3) var(--s4) var(--s4);transition:border-color .15s,box-shadow .14s}
 .tile:hover{border-color:var(--border-strong);box-shadow:var(--shadow-lg)}
 .tileTop{display:flex;align-items:baseline;justify-content:space-between;gap:var(--s3)}
-.tileName{font-size:15.5px;font-weight:650;letter-spacing:-.01em;color:var(--text);line-height:1.35}
+.tileName{font-size: 16.5px;font-weight: 600;letter-spacing:-.01em;color:var(--text);line-height:1.35}
 .tileName a::after{content:"";position:absolute;inset:0;border-radius:inherit}
-.count{flex:none;font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:600;color:var(--tone);background:var(--tone-bg);
+.count{flex:none;font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size:var(--fs-micro);font-weight:600;color:var(--tone);background:var(--tone-bg);
   border:1px solid var(--tone-bd);border-radius:var(--radius-pill);padding:2px 8px;font-variant-numeric:tabular-nums}
-.tileDek{font-size:13.5px;line-height:1.5;color:var(--text-2)}
+.tileDek{font-size: 14.5px;line-height:1.5;color:var(--text-2)}
 
 /* tag hub rows */
 .row{align-items:flex-start !important}
-.row :global(.r-title){font-size:15.5px;line-height:1.4;text-wrap:pretty}
+.row :global(.r-title){font-size: 16.5px;line-height:1.4;text-wrap:pretty}
 .row :global(.r-sub){margin-top:4px}
 .row :global(.r-date){padding-top:3px;min-width:84px}
-.kicker{font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:600;letter-spacing:.04em;color:var(--acct);margin-bottom:2px}
+.kicker{font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size:var(--fs-micro);font-weight:600;color:var(--acct);margin-bottom:2px}
 @media (max-width:640px){
   .row{flex-direction:column;gap:2px !important}
   .row :global(.r-date){padding-top:0}
@@ -46,7 +46,7 @@
 
 .related{margin-top:var(--s7)}
 
-.emptyH{font-size:16px;font-weight:650;color:var(--text);margin-bottom:6px}
+.emptyH{font-size: 16px;font-weight:650;color:var(--text);margin-bottom:6px}
 
 /* touch layout: 44px tall hit area for the header link */
 @media (max-width:980px){

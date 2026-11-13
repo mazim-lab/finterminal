@@ -3,6 +3,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ogMeta } from "@/lib/og";
 import s from "../simple-page.module.css";
 
+import { DoorArt } from "@/components/illustrations/HomeArt";
 export const metadata: Metadata = {
   title: "Contact | FinTerminal",
   description:
@@ -14,14 +15,17 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="wrap page tone-neutral">
-      <header className="page-head">
-        <span className="eyebrow">Contact</span>
-        <h1>Contact</h1>
-        <p className="dek">
-          One actual person runs FinTerminal, and that person reads every message. Use this to ask a question about
-          cards or points, to request one of my exclusive credit-card referral links, to send feedback, or to talk
-          partnerships and data. Pick a reason so I know how to help, and I&apos;ll get back to you.
-        </p>
+      <header className="page-head has-art">
+        <div>
+          <span className="eyebrow">Contact</span>
+          <h1>Contact</h1>
+          <p className="dek">
+            One actual person runs FinTerminal, and that person reads every message. Use this to ask a question about
+            cards or points, to request one of my exclusive credit-card referral links, to send feedback, or to talk
+            partnerships and data. Pick a reason so I know how to help, and I&apos;ll get back to you.
+          </p>
+        </div>
+        <DoorArt className="head-art" />
       </header>
 
       <div className={`doc ${s.body}`}>

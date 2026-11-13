@@ -4,6 +4,7 @@ import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { RATE_PAGES, RATE_CADENCE_DAYS } from "@/components/money/ratePages";
 import s from "./rates.module.css";
 
+import { PantryArt } from "@/components/illustrations/HomeArt";
 const BASE = "https://www.finterminal.ca";
 
 export const metadata = {
@@ -79,16 +80,22 @@ export default function RatesHubPage() {
         <span className="cur" aria-current="page">Rates</span>
       </nav>
 
-      <header className="page-head">
-        <span className="eyebrow">Rates</span>
-        <h1>Best rates in Canada: savings, GICs and chequing</h1>
-        <p className="dek">
-          Your jumping-off point. Instead of scattering numbers across a dozen pages, we keep the figures on a few
-          focused pages and use this hub to send you to the right one for the job in front of you.
-        </p>
-        <div className="meta">
-          <span>General info as of July 2026; rules and limits change, not advice</span>
+      <header className="page-head has-art">
+
+        <div>
+          <span className="eyebrow">Rates</span>
+          <h1>Best rates in Canada: savings, GICs and chequing</h1>
+          <p className="dek">
+            Your jumping-off point. Instead of scattering numbers across a dozen pages, we keep the figures on a few
+            focused pages and use this hub to send you to the right one for the job in front of you.
+          </p>
+          <div className="meta">
+            <span>General info as of July 2026; rules and limits change, not advice</span>
+          </div>
+
         </div>
+
+        <PantryArt className="head-art" />
       </header>
 
       <section className="section" aria-labelledby="rate-pages">

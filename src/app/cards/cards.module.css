@@ -8,7 +8,7 @@
 /* ── head ── */
 .head { margin-bottom: var(--s5); }
 .h1 {
-  font-size: var(--fs-h1); font-weight: 700; letter-spacing: -.025em; line-height: 1.15;
+  font-size: var(--fs-h1); font-weight: 600; letter-spacing: -.01em; line-height: 1.15;
   margin-top: var(--s2); text-wrap: balance;
 }
 .dek {
@@ -18,7 +18,7 @@
 .headMeta {
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: var(--s4);
 }
-.formula { font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--text-3); }
+.formula { font-family:var(--font-sans);font-variant-numeric:tabular-nums; font-size: var(--fs-micro); color: var(--text-3); }
 .formula b { color: var(--text); font-weight: 600; }
 .headLinks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--s4); }
 
@@ -33,26 +33,26 @@
   width: 16px; height: 16px; color: var(--text-3); pointer-events: none;
 }
 .searchInput {
-  width: 100%; height: 40px; padding: 0 12px 0 36px; font-size: 14.5px;
+  width: 100%; height: 40px; padding: 0 12px 0 36px; font-size: 15.5px;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   color: var(--text); transition: border-color .15s, box-shadow .15s;
 }
 .searchInput::placeholder { color: var(--text-3); }
 .searchInput:hover { border-color: var(--border-strong); }
-.searchInput:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-weak); }
+.searchInput:focus { outline: none; border-color: var(--fin); box-shadow: 0 0 0 3px var(--fin-bg); }
 .seg { flex: none; }
 .seg button { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; }
-.segCt { font-family: var(--font-mono); font-size: 11px; color: var(--text-3); }
+.segCt { font-family:var(--font-sans);font-variant-numeric:tabular-nums; font-size: 13px; color: var(--text-3); }
 .filterBtn {
   display: none; align-items: center; gap: 8px; height: 40px; padding: 0 14px;
   border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
-  color: var(--text); font-weight: 600; font-size: 13.5px; cursor: pointer;
+  color: var(--text); font-weight: 600; font-size: 14.5px; cursor: pointer;
 }
 .filterBtn:hover { border-color: var(--border-strong); }
 .filterCt {
   display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px;
-  padding: 0 6px; border-radius: 99px; background: var(--accent); color: var(--on-accent);
-  font-family: var(--font-mono); font-size: 11px;
+  padding: 0 6px; border-radius: 99px; background: var(--fin); color: var(--on-accent);
+  font-family:var(--font-sans);font-variant-numeric:tabular-nums; font-size: 13px;
 }
 
 /* active filter chips */
@@ -60,11 +60,11 @@
 .activeChip {
   display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 10px;
   border-radius: 99px; border: 1px solid var(--fin-bd); background: var(--fin-bg); color: var(--fin);
-  font-size: 12.5px; font-weight: 600; cursor: pointer;
+  font-size: 14px; font-weight: 600; cursor: pointer;
 }
 .activeChip:hover { border-color: var(--fin); }
 .clearLink {
-  background: none; border: none; cursor: pointer; font-size: 12.5px; font-weight: 600;
+  background: none; border: none; cursor: pointer; font-size: 14px; font-weight: 600;
   color: var(--text-2); text-decoration: underline; text-underline-offset: 3px; padding: 6px;
 }
 .clearLink:hover { color: var(--text); }
@@ -74,7 +74,7 @@
 
 .tableHead {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px;
-  font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--text-3); margin: 0 0 var(--s2);
+  font-family:var(--font-sans);font-variant-numeric:tabular-nums; font-size: var(--fs-micro); color: var(--text-3); margin: 0 0 var(--s2);
 }
 
 /* ── table ── */
@@ -99,19 +99,19 @@
 }
 .table tbody tr:first-child th { border-top: none; }
 .table tbody tr:hover > th, .table tbody tr:global(.rcpt-open) > th { background: var(--featured-bg); }
-.table :global(.N) a { font-weight: 600; font-size: 14.5px; color: var(--text); line-height: 1.35; }
+.table :global(.N) a { font-weight: 600; font-size: 15.5px; color: var(--text); line-height: 1.35; }
 .table :global(.N) a:hover { text-decoration: underline; text-underline-offset: 3px; }
 /* the whole name cell is the link's tap area */
 .table :global(.N) a::after { content: ""; position: absolute; inset: 0; }
 .table :global(.N) :global(.cc) { transform: translateY(-1px); }
-.table :global(.N) small { display: block; margin-top: 2px; font-size: 12.5px; color: var(--text-2); line-height: 1.45; }
+.table :global(.N) small { display: block; margin-top: 2px; font-size: 14px; color: var(--text-2); line-height: 1.45; }
 .table :global(.F), .table :global(.B), .table :global(.P) {
-  text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 14px;
+  text-align: right; font-family:var(--font-sans);font-variant-numeric:tabular-nums; font-variant-numeric: tabular-nums; font-size: 15px;
   white-space: nowrap; color: var(--text);
 }
-.table :global(.B) small { font-size: 11px; color: var(--text-3); }
+.table :global(.B) small { font-size: 13px; color: var(--text-3); }
 .table :global(.fr) { color: var(--green-ink); font-weight: 600; }
-.table :global(.no) { color: var(--text-3); font-size: 12px; }
+.table :global(.no) { color: var(--text-3); font-size: 13.5px; }
 .table :global(.V) { text-align: right; white-space: nowrap; }
 .table :global(.V) :global(.valbtn) { min-height: 32px; }
 .table :global(.V) i {
@@ -127,32 +127,31 @@
 .perksBlock { margin-bottom: var(--s3); padding-bottom: var(--s3); border-bottom: 1px solid var(--border); }
 .perks { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 12px; }
 .perk {
-  display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text); line-height: 1.5;
+  display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--text); line-height: 1.5;
 }
 .perk::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--fin-d); flex: none; }
 
 /* receipt */
 .receipt { max-width: 600px; }
 .receiptCap {
-  font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--text-3); margin-bottom: var(--s2);
+  font-family:var(--font-sans);font-variant-numeric:tabular-nums; font-size: 13px; font-weight: 600;; color: var(--text-3); margin-bottom: var(--s2);
 }
 .earn { border-top: 1px solid var(--border); margin-top: var(--s2); padding-top: var(--s2); }
 .dim { color: var(--text-3); }
 .earnCat { color: var(--text) !important; white-space: normal !important; }
 .receiptLink {
   display: inline-flex; align-items: center; gap: 6px; margin-top: var(--s3); min-height: 32px;
-  font-size: 13px; font-weight: 600; color: var(--text); text-decoration: underline;
+  font-size: 14px; font-weight: 600; color: var(--text); text-decoration: underline;
   text-decoration-color: var(--border-strong); text-underline-offset: 3px;
 }
 .receiptLink:hover { text-decoration-color: currentColor; }
 
 .emptyCell { text-align: center; padding: 56px 16px !important; }
-.emptyTitle { font-size: 16px; font-weight: 650; color: var(--text); }
-.emptyText { font-size: 14px; color: var(--text-2); margin: 4px 0 var(--s4); }
+.emptyTitle { font-size: 16px; font-weight: 600; color: var(--text); }
+.emptyText { font-size: 15px; color: var(--text-2); margin: 4px 0 var(--s4); }
 
 .rangeLabel {
-  display: block; font-size: 13px; color: var(--text-2); padding: 10px 8px 0;
+  display: block; font-size: 14px; color: var(--text-2); padding: 10px 8px 0;
 }
 
 /* drawer chrome is mobile only */
@@ -184,7 +183,7 @@
     display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1;
     background: var(--bg); padding: var(--s4) 0 var(--s3); margin-bottom: var(--s2); border-bottom: 1px solid var(--border);
   }
-  .drawerTitle { font-size: 17px; font-weight: 700; }
+  .drawerTitle { font-size: 17px; font-weight: 600; }
   .drawerOpen .drawerFoot {
     display: flex; gap: var(--s2); position: sticky; bottom: 0; background: var(--bg);
     padding: var(--s3) 0 var(--s4); margin-top: var(--s5); border-top: 1px solid var(--border);
@@ -197,8 +196,9 @@
   .toolbar { gap: var(--s2); }
   .search { flex-basis: 100%; }
   .searchInput { height: 44px; font-size: 16px; }
-  .seg { flex: 1; }
-  .seg button { flex: 1; justify-content: center; min-height: 44px; }
+  .seg.seg { flex: 1; flex-wrap: nowrap; min-width: 0; }
+  .seg.seg button { flex: 1; justify-content: center; min-height: 44px; min-width: 0; padding: 8px 6px; gap: 4px; font-size: 14.5px; }
+  .segCt { font-size: 12px; }
   .filterBtn { height: 46px; }
   .tableHint { display: none; }
 
@@ -218,8 +218,7 @@
   .table tr:global(.R) > :global(.P) { display: none; }
   .table tr:global(.R) > :global(.V) { text-align: right; }
   .table tr:global(.R) > td::before {
-    display: block; font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase;
-    letter-spacing: .06em; color: var(--text-3); font-weight: 600; white-space: nowrap; margin-bottom: 2px;
+    display: block; font-family:var(--font-sans);font-variant-numeric:tabular-nums; font-size: 13px;; color: var(--text-3); font-weight: 600; white-space: nowrap; margin-bottom: 2px;
   }
   .table tr:global(.R) > :global(.F)::before { content: "Annual fee"; }
   .table tr:global(.R) > :global(.B)::before { content: "Bonus"; }

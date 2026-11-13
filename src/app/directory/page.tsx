@@ -10,6 +10,7 @@ import { TAGS, tagCount, MIN_INDEXABLE_TAG_ARTICLES } from "@/data/tags";
 import { programGroups } from "../travel/programs";
 import s from "./directory.module.css";
 
+import { ShelfArt } from "@/components/illustrations/HomeArt";
 export const metadata: Metadata = {
   title: "Directory | FinTerminal",
   description:
@@ -59,14 +60,17 @@ export default function DirectoryPage() {
   return (
     <main className="wrap tone-neutral">
       <div className="page">
-      <header className="page-head">
-        <span className="eyebrow">Directory</span>
-        <h1>Every page on FinTerminal</h1>
-        <p className="dek">
-          Every section and page, laid out in one place. It is the human-readable companion to the{" "}
-          <Link className="lnk" href="/sitemap.xml">XML sitemap</Link>, and it reads from the same data, so new posts
-          show up here on their own.
-        </p>
+      <header className="page-head has-art">
+        <div>
+          <span className="eyebrow">Directory</span>
+          <h1>Every page on FinTerminal</h1>
+          <p className="dek">
+            Every section and page, laid out in one place. It is the human-readable companion to the{" "}
+            <Link className="lnk" href="/sitemap.xml">XML sitemap</Link>, and it reads from the same data, so new posts
+            show up here on their own.
+          </p>
+        </div>
+        <ShelfArt className="head-art" />
       </header>
 
       <nav className={s.jump} aria-label="Jump to a section">

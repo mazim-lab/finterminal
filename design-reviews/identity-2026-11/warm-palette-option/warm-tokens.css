@@ -1,0 +1,27 @@
+/* Warm palette OPTION (not shipped). Same token names as src/app/site.css, so
+   switching later is a values-only swap. Cream / oat neutrals, terracotta leads
+   (Cards), sage (Travel), honey (Money). Status colours keep their meaning. */
+:root{
+  --bg:#fbf7f0; --surface:#fffdf8; --surface-2:#f3ece0; --featured-bg:#f7f1e6;
+  --border:#e6dccb; --border-strong:#d6c8b2;
+  --text:#2b2420; --text-2:#5c5148; --text-3:#6f6254;
+  --on-accent:#ffffff;
+  --fin:#a4472a; --fin-bg:#f8e6dc; --fin-bd:#ecc3ae; --fin-d:#c8603e;
+  --acct:#4a6a4c; --acct-bg:#e7efe2; --acct-bd:#c3d6bb; --acct-d:#6f8f6b;
+  --econ:#855610; --econ-bg:#fbefd2; --econ-bd:#efd49a; --econ-d:#d49a2a;
+  --green:#3f7a3a; --green-ink:#356a31; --green-bg:#eef5e6; --green-border:#c7deb9;
+  --amber:#9a5b0a; --amber-ink:#8a520a; --amber-bg:#fdf3df; --amber-border:#f0d29a;
+  --red:#a8321f; --red-bg:#fbeae5; --red-border:#f0c3b8;
+}
+:root[data-theme="dark"]{
+  --bg:#1a1512; --surface:#221c18; --surface-2:#2b241f; --featured-bg:#251f1b;
+  --border:#3a3029; --border-strong:#4a3e35;
+  --text:#f3ebe0; --text-2:#cdbfae; --text-3:#a89a89;
+  --on-accent:#1a1512;
+  --fin:#f0a483; --fin-bg:#3a2219; --fin-bd:#6b3a28; --fin-d:#e07f5a;
+  --acct:#a9c7a3; --acct-bg:#1f2a1e; --acct-bd:#3c5239; --acct-d:#8fb089;
+  --econ:#f0c46a; --econ-bg:#33270f; --econ-bd:#6a4f1c; --econ-d:#e0aa45;
+  --green:#8fd18a; --green-ink:#8fd18a; --green-bg:#1c2a19; --green-border:#35502f;
+  --amber:#f2b85a; --amber-ink:#f2b85a; --amber-bg:#30230e; --amber-border:#5e4517;
+  --red:#f19580; --red-bg:#331a14; --red-border:#62302a;
+}

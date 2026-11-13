@@ -8,6 +8,7 @@ import { ogMeta } from "@/lib/og";
 import { SECTION_ORDER } from "../groups";
 import s from "../tags.module.css";
 
+import { ShelfArt } from "@/components/illustrations/HomeArt";
 const BASE = "https://www.finterminal.ca";
 // Long groups show this many rows up front; the rest sit in an open-on-click
 // <details>, which is still in the prerendered HTML.
@@ -153,6 +154,7 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
 
       {groups.length === 0 ? (
         <div className="empty">
+          <ShelfArt className="empty-art" />
           <h2 className={s.emptyH}>Nothing tagged here yet</h2>
           <p>We have not filed anything under this topic so far.</p>
           <Link className="btn" href="/tags">Browse other topics</Link>

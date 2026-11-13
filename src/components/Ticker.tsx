@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { POINT_VALUATIONS, VALUATION_SOURCE } from "@/data/point-valuations";
 
-// Point-value strip for the header. These are FinTerminal's own baseline
+// Point-value strip (home page pantry). These are FinTerminal's own baseline
 // estimates (cents per point), not a live market feed, so they render as
 // plain static text and link to the methodology. Values come straight from
 // point-valuations.ts, so the strip can never drift from the method page.
@@ -27,7 +27,7 @@ export function Ticker() {
   if (!items.length) return null;
   return (
     <Link
-      className="pv-ticker"
+      className="pv-strip"
       href="/how-we-value-points"
       title="Our baseline point values. How we value points"
     >

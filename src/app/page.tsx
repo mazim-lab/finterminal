@@ -11,6 +11,7 @@ import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { FreshDot } from "@/components/FreshDot";
 import { Ticker } from "@/components/Ticker";
 import { GrowthMotif, MOTIFS, type MotifKey } from "@/components/heroes/motifs";
+import { TableArt, BasketArt, WindowArt, GardenArt, ShelfArt, PantryArt } from "@/components/illustrations/HomeArt";
 import { ogMeta } from "@/lib/og";
 import s from "./page.module.css";
 
@@ -143,7 +144,7 @@ function shortDate(d: string): string {
 function Arrow() {
   return (
     <svg className={s.arrow} viewBox="0 0 16 16" aria-hidden="true">
-      <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -153,17 +154,21 @@ export default function Home() {
     <main className={`wrap ${s.home}`}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
 
-      {/* ── Hero: what this is, who runs it, where to go ─────────────────── */}
-      <section className={s.hero} aria-labelledby="home-h1">
+      {/* ── Front door: who this is for and a warm hello ─────────────────── */}
+      <section className={`tone-cards ${s.hero}`} aria-labelledby="home-h1">
         <div className={s.heroCopy}>
           <p className={`eyebrow ${s.kick}`}>Canadian money, explained plainly</p>
           <h1 id="home-h1" className={s.h1}>
-            Credit cards, points and personal finance for Canadians.
+            Credit cards, points and personal finance for Canadians, sorted out at the kitchen table.
           </h1>
           <p className={s.dek}>
-            I&apos;m a dad in Ontario who runs these numbers for my own family first. I compare Canadian cards on what
-            they actually put back in your pocket, turn points into real trips, and write plain guides to the accounts
-            that matter. Every number carries the date I last checked it.
+            Pull up a chair. I&apos;m a dad in Ontario who runs these numbers for my own family first. I compare
+            Canadian cards on what they actually put back in your pocket, turn points into real trips, and write plain
+            guides to the accounts that matter. Every number carries the date I last checked it.
+          </p>
+          <p className={s.forWho}>
+            <b>Who it&apos;s for:</b> Canadian households who want their everyday spending to give a little back,
+            without turning it into a second job.
           </p>
           <div className={s.ctas}>
             <Link className="btn btn-primary btn-lg" href="/cards">
@@ -177,98 +182,67 @@ export default function Home() {
             <Link href="/about">Who runs this site</Link>
           </p>
         </div>
-
-        {/* Proof panel: honest, computed, dated */}
-        <aside className={s.proof} aria-labelledby="proof-h">
-          <h2 id="proof-h" className={s.proofHead}>
-            The numbers right now
-          </h2>
-          {topCard && (
-            <Link className={`${s.pItem} ${s.pLink}`} href={`/cards/${topCard.slug}`}>
-              <span className={s.pLabel}>
-                Best first-year value <Arrow />
-              </span>
-              <span className={s.pBig}>{bestValue}</span>
-              <span className={s.pSub}>
-                <b>{topCard.name}</b>, after the annual fee at a normal family&apos;s spend
-              </span>
-            </Link>
-          )}
-          <div className={s.pItem}>
-            <span className={s.pLabel}>Card data</span>
-            <span className={s.pStamp}>
-              <VerifiedStamp date={CARDS_VERIFIED} cadenceDays={14} verb="CHECKED" />
-            </span>
-            <span className={s.pSub}>Fees, offers and earn rates across {canadianCards.length} Canadian cards</span>
-          </div>
-          <Link className={`${s.pItem} ${s.pLink}`} href="/portfolio">
-            <span className={s.pLabel}>
-              My own portfolio <Arrow />
-            </span>
-            <span className={s.pMid}>
-              {POSITIONS.length} positions
-              {best && bestPct && (
-                <>
-                  {" "}
-                  <span className={s.pGain}>
-                    best {best.ticker} {bestPct}
-                  </span>
-                </>
-              )}
-            </span>
-            <span className={s.pSub}>
-              Percent terms only, losses shown
-              {portfolioAsOf && <> · snapshot {portfolioAsOf}</>}
-            </span>
-          </Link>
-          <div className={`${s.pItem} ${s.pTicker}`}>
-            <span className={s.pLabel}>What a point is worth to us</span>
-            <Ticker />
-          </div>
-        </aside>
-      </section>
-
-      {/* ── Three pillars ─────────────────────────────────────────────────── */}
-      <section className={s.pillars} aria-label="Sections of the site">
-        <div className={`tone-cards ${s.pillar}`}>
-          <span className="eyebrow">Cards</span>
-          <h2 className={s.pTitle}>
-            <Link href="/cards">Find the right card</Link>
-          </h2>
-          <p className={s.pDek}>Ranked on first-year value after the fee, with the math shown for every card.</p>
-          <p className={s.pFact}>
-            <b>{canadianCards.length}</b> Canadian cards compared
-          </p>
-        </div>
-        <div className={`tone-travel ${s.pillar}`}>
-          <span className="eyebrow">Travel &amp; points</span>
-          <h2 className={s.pTitle}>
-            <Link href="/travel">Turn points into trips</Link>
-          </h2>
-          <p className={s.pDek}>Transfer partners, award booking and worked redemptions you can copy.</p>
-          <p className={s.pFact}>
-            <b>{TRAVEL_GUIDES.length}</b> guides · <b>{SWEET_SPOTS.length}</b> sweet spots
-          </p>
-        </div>
-        <div className={`tone-money ${s.pillar}`}>
-          <span className="eyebrow">Money</span>
-          <h2 className={s.pTitle}>
-            <Link href="/personal-finance">Sort out the accounts</Link>
-          </h2>
-          <p className={s.pDek}>RRSP, TFSA, FHSA, RESP, credit and bank fees, in plain words.</p>
-          <p className={s.pFact}>
-            <b>{livePF.length}</b> guides · <b>{RATES.length}</b> rate tables
-          </p>
+        <div className={s.heroArt}>
+          <TableArt />
         </div>
       </section>
 
-      {/* ── What's new ────────────────────────────────────────────────────── */}
+      {/* ── Three doors ───────────────────────────────────────────────────── */}
+      <section className={s.doorsSec} aria-labelledby="doors-h">
+        <h2 id="doors-h" className={s.secTitle}>
+          Three things you can do here
+        </h2>
+        <div className={s.doors}>
+          <div className={`tone-cards ${s.door}`}>
+            <BasketArt className={s.doorArt} />
+            <h3 className={s.doorTitle}>
+              <Link href="/cards">Pick a card</Link>
+            </h3>
+            <p className={s.doorDek}>Ranked on first-year value after the fee, with the math shown for every card.</p>
+            <p className={s.doorFact}>
+              <b>{canadianCards.length}</b> Canadian cards compared
+            </p>
+            <span className={s.doorGo} aria-hidden="true">
+              Find yours <Arrow />
+            </span>
+          </div>
+          <div className={`tone-travel ${s.door}`}>
+            <WindowArt className={s.doorArt} />
+            <h3 className={s.doorTitle}>
+              <Link href="/travel">Plan a trip on points</Link>
+            </h3>
+            <p className={s.doorDek}>Transfer partners, award booking and worked redemptions you can copy.</p>
+            <p className={s.doorFact}>
+              <b>{TRAVEL_GUIDES.length}</b> guides and <b>{SWEET_SPOTS.length}</b> sweet spots
+            </p>
+            <span className={s.doorGo} aria-hidden="true">
+              Start planning <Arrow />
+            </span>
+          </div>
+          <div className={`tone-money ${s.door}`}>
+            <GardenArt className={s.doorArt} />
+            <h3 className={s.doorTitle}>
+              <Link href="/personal-finance">Sort out your money</Link>
+            </h3>
+            <p className={s.doorDek}>RRSP, TFSA, FHSA, RESP, credit and bank fees, in plain words.</p>
+            <p className={s.doorFact}>
+              <b>{livePF.length}</b> guides and <b>{RATES.length}</b> rate tables
+            </p>
+            <span className={s.doorGo} aria-hidden="true">
+              Get settled <Arrow />
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* ── What's fresh ──────────────────────────────────────────────────── */}
       <section className="section" aria-labelledby="new-h">
         <div className="section-head">
-          <h2 id="new-h">What&apos;s new</h2>
+          <h2 id="new-h">Newest on the table</h2>
           <Link className="more" href="/news">
             All news &rarr;
           </Link>
+          <p>The newest stories, sweet spots and deals, each with the date it went up.</p>
         </div>
         <div className={s.newGrid}>
           <div>
@@ -299,7 +273,7 @@ export default function Home() {
                   All &rarr;
                 </Link>
               </h3>
-              <ul className={`rows ${s.spots}`}>
+              <ul className="rows">
                 {newSpots.map((sp) => (
                   <li key={sp.slug} className="row is-link">
                     <div className="r-main">
@@ -330,7 +304,7 @@ export default function Home() {
                 </p>
               )}
               {shownDeals.length > 0 ? (
-                <ul className={`rows ${s.deals}`}>
+                <ul className="rows">
                   {shownDeals.map((d) => (
                     <li key={d.url} className="row is-link">
                       <div className="r-main">
@@ -352,6 +326,65 @@ export default function Home() {
                 <p className={s.dealNote}>No live picks right now.</p>
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── The pantry: the numbers worth knowing, each with its date ────── */}
+      <section className={`section ${s.pantry}`} aria-labelledby="proof-h">
+        <div className={s.pantryHead}>
+          <PantryArt className={s.pantryArt} />
+          <div>
+            <h2 id="proof-h" className={s.secTitle}>
+              What&apos;s in the pantry
+            </h2>
+            <p className={s.pantryDek}>The numbers I lean on, worked out from the data on this site and dated.</p>
+          </div>
+        </div>
+        <div className={s.jars}>
+          {topCard && (
+            <Link className={`${s.jar} ${s.jarLink} tone-cards`} href={`/cards/${topCard.slug}`}>
+              <span className={s.jarLabel}>
+                Best first-year value <Arrow />
+              </span>
+              <span className={s.jarBig}>{bestValue}</span>
+              <span className={s.jarSub}>
+                <b>{topCard.name}</b>, after the annual fee at a normal family&apos;s spend
+              </span>
+            </Link>
+          )}
+          <div className={`${s.jar} tone-cards`}>
+            <span className={s.jarLabel}>Card data</span>
+            <span className={s.jarStamp}>
+              <VerifiedStamp date={CARDS_VERIFIED} cadenceDays={14} verb="CHECKED" />
+            </span>
+            <span className={s.jarSub}>Fees, offers and earn rates across {canadianCards.length} Canadian cards</span>
+          </div>
+          <Link className={`${s.jar} ${s.jarLink} tone-money`} href="/portfolio">
+            <span className={s.jarLabel}>
+              My own portfolio <Arrow />
+            </span>
+            <span className={s.jarMid}>
+              {POSITIONS.length} positions
+              {best && bestPct && (
+                <>
+                  {" "}
+                  <span className={s.jarGain}>
+                    best {best.ticker} {bestPct}
+                  </span>
+                </>
+              )}
+            </span>
+            <span className={s.jarSub}>
+              Percent terms only, losses shown
+              {portfolioAsOf && <> · snapshot {portfolioAsOf}</>}
+            </span>
+          </Link>
+          <div className={`${s.jar} tone-travel`}>
+            <span className={s.jarLabel}>What a point is worth to us</span>
+            <span className={s.jarPoints}>
+              <Ticker />
+            </span>
           </div>
         </div>
       </section>
@@ -385,18 +418,20 @@ export default function Home() {
         </section>
       )}
 
-      {/* ── Start here: an index by pillar ────────────────────────────────── */}
+      {/* ── Where to start: a shelf of guides per room ────────────────────── */}
       <section className="section" aria-labelledby="start-h">
-        <div className="section-head">
-          <h2 id="start-h">Start here</h2>
-          <p>The guides I&apos;d hand a friend first.</p>
+        <div className={s.startHeadRow}>
+          <ShelfArt className={s.startArt} />
+          <div>
+            <h2 id="start-h" className={s.secTitle}>
+              Where to start
+            </h2>
+            <p className={s.pantryDek}>The guides I&apos;d hand a friend first.</p>
+          </div>
         </div>
         <div className={s.startGrid}>
           <div className={`tone-cards ${s.startCol}`}>
-            <h3 className={s.startHead}>
-              <span className="dot" aria-hidden="true" />
-              Cards
-            </h3>
+            <h3 className={s.startHead}>Cards</h3>
             <ul className={s.startList}>
               <li>
                 <Link href="/cards">The card explorer</Link>
@@ -417,10 +452,7 @@ export default function Home() {
           </div>
 
           <div className={`tone-travel ${s.startCol}`}>
-            <h3 className={s.startHead}>
-              <span className="dot" aria-hidden="true" />
-              Travel &amp; points
-            </h3>
+            <h3 className={s.startHead}>Travel and points</h3>
             <ul className={s.startList}>
               {START_TRAVEL.map((g) => (
                 <li key={g.slug}>
@@ -437,10 +469,7 @@ export default function Home() {
           </div>
 
           <div className={`tone-money ${s.startCol}`}>
-            <h3 className={s.startHead}>
-              <span className="dot" aria-hidden="true" />
-              Money
-            </h3>
+            <h3 className={s.startHead}>Money</h3>
             <ul className={s.startList}>
               {START_MONEY.map((a) => (
                 <li key={a.slug}>

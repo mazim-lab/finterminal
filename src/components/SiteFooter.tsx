@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { NewsletterSignup } from "./NewsletterSignup";
+import { KettleArt } from "./illustrations/HomeArt";
 
 const COLS = [
   {
-    title: "Sections",
+    title: "Around the house",
     links: [
       { label: "Credit cards", href: "/cards" },
       { label: "Travel and points", href: "/travel" },
@@ -42,15 +43,17 @@ export function SiteFooter() {
   return (
     <footer className="site-foot">
       <div className="wrap">
+        <KettleArt className="foot-art" />
         <div className="foot-grid">
           <div className="foot-brand">
             <Logo />
             <p>
-              Canadian cards, points, travel and everyday money, written by one dad in Ontario.
-              Numbers carry the date we last checked them.
+              Canadian cards, points, travel and everyday money, talked through like we&apos;re
+              at the kitchen table. Written by one dad in Ontario. Numbers carry the date we
+              last checked them.
             </p>
             <div className="foot-nl">
-              <span className="nl-label">A short cards and points email. No spam.</span>
+              <span className="nl-label">A short cards and points letter, now and then. No spam.</span>
               <NewsletterSignup compact />
             </div>
           </div>

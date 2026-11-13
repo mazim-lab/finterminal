@@ -75,7 +75,7 @@ export default async function NewsStoryPage({ params }: { params: Promise<{ slug
           <div className="doc">
             <div className="head"><h1>We could not find that story</h1></div>
             <p className="lede">
-              It isn&apos;t on the wire. <Link href="/news">Head back to the newswire</Link>.
+              It may have moved, or the link has a typo. <Link href="/news">Head back to all the news</Link>.
             </p>
           </div>
         </main>
@@ -143,7 +143,7 @@ export default async function NewsStoryPage({ params }: { params: Promise<{ slug
           <div className="docmeta">
             <time dateTime={isoDay ?? undefined}>{item.date}</time>
             <span className="sep" aria-hidden="true">/</span>
-            <span className="gd">{item.category.toUpperCase()}</span>
+            <span className="gd">{item.category}</span>
             <span className="sep" aria-hidden="true">/</span>
             <span>{region}</span>
             {item.exclusive ? (
@@ -162,7 +162,7 @@ export default async function NewsStoryPage({ params }: { params: Promise<{ slug
           <p className="sub">
             {item.sourceUrl
               ? "Go straight to the source, or jump to what it affects on FinTerminal."
-              : "Jump to what it affects on FinTerminal, or keep reading the wire."}
+              : "Jump to what it affects on FinTerminal, or keep reading the news."}
           </p>
           <div className="cta-row">
             {item.sourceUrl ? (
@@ -176,7 +176,7 @@ export default async function NewsStoryPage({ params }: { params: Promise<{ slug
               </Link>
             ) : null}
             <Link href="/news" className="cd-apply">
-              <span aria-hidden="true">&larr;</span> Back to the newswire
+              <span aria-hidden="true">&larr;</span> Back to all the news
             </Link>
           </div>
 

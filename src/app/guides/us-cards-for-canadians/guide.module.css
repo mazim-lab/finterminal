@@ -1,17 +1,17 @@
 .h1{margin-top:var(--s2)}
 .sub{font-size:var(--fs-h3);font-weight:650;letter-spacing:-.01em;margin:var(--s5) 0 var(--s2)}
 .tight{margin:4px 0 0 !important}
-.tight li{font-size:15.5px !important}
+.tight li{font-size: 16.5px !important}
 .tablerow{padding-bottom:var(--s2) !important}
 .tscroll{overflow-x:auto;margin-top:var(--s2)}
 .tscroll :global(.dtable){margin-bottom:var(--s2);min-width:320px}
-.tnote{display:block;font-family:var(--font-mono);font-size:var(--fs-micro);color:var(--text-2);line-height:1.5}
+.tnote{display:block;font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size:var(--fs-micro);color:var(--text-2);line-height:1.5}
 .fine{font-size:var(--fs-small) !important;line-height:1.6 !important;color:var(--text-2) !important;margin-top:var(--s4) !important}
 
 /* first-year sequence: a vertical timeline instead of a 2-up note grid */
 .timeline{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:var(--radius-card);background:var(--surface);overflow:hidden;margin:var(--s3) 0 var(--s5)}
 .timeline>:global(.cd-note){margin:0;border:none;border-top:1px solid var(--border);border-radius:0;background:none;
-  display:grid;grid-template-columns:120px minmax(0,1fr);column-gap:var(--s4);padding:var(--s3) var(--s5);font-size:15.5px;line-height:1.6}
+  display:grid;grid-template-columns:120px minmax(0,1fr);column-gap:var(--s4);padding:var(--s3) var(--s5);font-size: 16.5px;line-height:1.6}
 .timeline>:global(.cd-note):first-child{border-top:none}
 .timeline :global(.cap){grid-row:1/span 3;margin:3px 0 0;color:var(--fin)}
 @media (max-width:560px){

@@ -2,8 +2,9 @@ import { ImageResponse } from "next/og";
 
 // Branded social/OG image generator. One endpoint renders a share card for any
 // page: /api/og?title=...&kicker=...
-// Styled to the FAEConf palette the site uses: white page, ink text, the 3px
-// tricolor bar, an ink logo mark with three ascending bars, and a mono kicker.
+// Styled to the site identity: a soft indigo "room", the Homestead sprout mark,
+// the title in Fraunces, a sentence-case kicker in Source Sans 3, and the
+// kitchen-table drawing. Colours are the site's own token values.
 // Rendered at request time and cached hard at the CDN.
 export const runtime = "nodejs";
 
@@ -11,32 +12,66 @@ const WIDTH = 1200;
 const HEIGHT = 630;
 
 const C = {
-  bg: "#ffffff",
-  text: "#18181b",
-  text2: "#52525b",
-  text3: "#6b6b75",
-  border: "#e4e4e7",
-  ink: "#18181b",
-  fin: "#4f46e5",
-  acct: "#0891b2",
-  econ: "#c026d3",
-  mark1: "#8f97ff",
-  mark2: "#3fd2ea",
-  mark3: "#ee8afa",
+  room: "#eef0ff", // --fin-bg
+  card: "#ffffff", // --surface
+  text: "#18181b", // --text
+  text2: "#52525b", // --text-2
+  fin: "#4338ca", // --fin
+  finBd: "#c9cdfa", // --fin-bd
+  acctBg: "#e4f5f9", // --acct-bg
+  acctBd: "#a8d8e4", // --acct-bd
+  econBg: "#fbeafd", // --econ-bg
+  surface2: "#f4f4f5", // --surface-2
+  leaf: "#bbf7d0", // --green-border
+  line: "#52525b", // --text-2
 };
+
+const MARK =
+  "M14.4 4.3Q16 3 17.6 4.3L28 12.6Q29 13.4 29 14.8V25.6Q29 28.2 26.4 28.2H5.6Q3 28.2 3 25.6V14.8Q3 13.4 4 12.6Z" +
+  "M14.9 25.4V21.6C12.2 21.4 10.4 19.7 10 16.9 12.6 16.9 14.4 18.2 14.9 19.9V18.2C15.3 14.8 17.8 12.9 22 12.8 21.8 16.6 19.6 18.8 17.1 19.1V25.4Q17.1 26.4 16 26.4 14.9 26.4 14.9 25.4Z";
+
+// The kitchen-table drawing from src/components/illustrations/HomeArt.tsx,
+// with the CSS classes resolved to the light-theme hex values. Inline SVG
+// elements, because satori renders those directly.
+const LN = { fill: "none", stroke: C.line, strokeWidth: 2.5, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+function TableDrawing() {
+  return (
+    <svg viewBox="0 0 240 150" width="300" height="188">
+      <rect x="70" y="6" width="100" height="62" rx="12" fill={C.acctBg} />
+      <rect x="70" y="6" width="100" height="62" rx="12" {...LN} />
+      <path d="M120 6v62M70 37h100" {...LN} />
+      <path d="M30 104q-8 0-8-10v-8q0-18 24-18t24 18v8q0 10-8 10Z" fill={C.room} />
+      <path d="M30 104q-8 0-8-10v-8q0-18 24-18t24 18v8q0 10-8 10ZM70 82q12 0 8 14M22 84 10 76" {...LN} />
+      <circle cx="46" cy="64" r="4" fill={C.finBd} />
+      <circle cx="108" cy="80" r="10" fill={C.econBg} />
+      <circle cx="126" cy="78" r="11" fill={C.room} />
+      <ellipse cx="117" cy="72" rx="10" ry="7" fill={C.acctBg} />
+      <path d="M118 68C119.6 61.6 124.4 58.4 130.8 58.4 130 64.8 125.2 68 118 68Z" fill={C.leaf} />
+      <path d="M92 84h52q-2 20-26 20t-26-20Z" fill={C.surface2} />
+      <path d="M92 84h52q-2 20-26 20t-26-20Z" {...LN} />
+      <path d="M160 88h20v10q0 6-6 6h-8q-6 0-6-6Z" fill={C.econBg} />
+      <path d="M160 88h20v10q0 6-6 6h-8q-6 0-6-6ZM180 91q7 0 5 6t-6 4" {...LN} />
+      <rect x="194" y="96" width="30" height="8" rx="3" fill={C.room} />
+      <rect x="196" y="88" width="28" height="8" rx="3" fill={C.acctBg} />
+      <rect x="194" y="96" width="30" height="8" rx="3" {...LN} />
+      <rect x="196" y="88" width="28" height="8" rx="3" {...LN} />
+      <path d="M6 104h228M24 104v40M216 104v40" {...LN} />
+      <path d="M40 116h160" {...LN} strokeWidth={2} />
+    </svg>
+  );
+}
 
 type Font = { name: string; data: ArrayBuffer; weight: 400 | 600 | 700; style: "normal" };
 
-// Inter for words, IBM Plex Mono for the kicker and footer, as on the site.
+// Fraunces for the title, Source Sans 3 for everything else, as on the site.
 // If a fetch fails we fall back to satori's built-in font so an OG image is
 // never broken.
 async function loadFonts(): Promise<Font[]> {
   const base = "https://cdn.jsdelivr.net/npm/@fontsource";
   const urls: { name: string; url: string; weight: 400 | 600 | 700 }[] = [
-    { name: "Inter", url: `${base}/inter@5.0.18/files/inter-latin-700-normal.woff`, weight: 700 },
-    { name: "Inter", url: `${base}/inter@5.0.18/files/inter-latin-400-normal.woff`, weight: 400 },
-    { name: "Plex Mono", url: `${base}/ibm-plex-mono@5.0.13/files/ibm-plex-mono-latin-600-normal.woff`, weight: 600 },
-    { name: "Plex Mono", url: `${base}/ibm-plex-mono@5.0.13/files/ibm-plex-mono-latin-400-normal.woff`, weight: 400 },
+    { name: "Fraunces", url: `${base}/fraunces@5.0.21/files/fraunces-latin-600-normal.woff`, weight: 600 },
+    { name: "Source Sans 3", url: `${base}/source-sans-3@5.0.12/files/source-sans-3-latin-400-normal.woff`, weight: 400 },
+    { name: "Source Sans 3", url: `${base}/source-sans-3@5.0.12/files/source-sans-3-latin-600-normal.woff`, weight: 600 },
   ];
   const results = await Promise.all(
     urls.map(async ({ name, url, weight }) => {
@@ -54,15 +89,13 @@ async function loadFonts(): Promise<Font[]> {
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
-  const rawTitle = (searchParams.get("title") || "The terminal for Canadian money").trim();
+  const rawTitle = (searchParams.get("title") || "Canadian money, explained plainly").trim();
   const title = rawTitle.length > 130 ? `${rawTitle.slice(0, 127)}...` : rawTitle;
-  const kicker = (searchParams.get("kicker") || "Cards, points & personal finance").trim().slice(0, 48).toUpperCase();
+  const kicker = (searchParams.get("kicker") || "Cards, points & personal finance").trim().slice(0, 48);
 
   const fonts = await loadFonts();
-  const hasInter = fonts.some((f) => f.name === "Inter");
-  const hasMono = fonts.some((f) => f.name === "Plex Mono");
-  const sans = hasInter ? "Inter" : "sans-serif";
-  const mono = hasMono ? "Plex Mono" : "monospace";
+  const serif = fonts.some((f) => f.name === "Fraunces") ? "Fraunces" : "serif";
+  const sans = fonts.some((f) => f.name === "Source Sans 3") ? "Source Sans 3" : "sans-serif";
 
   return new ImageResponse(
     (
@@ -71,77 +104,58 @@ export async function GET(req: Request) {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          background: C.bg,
+          background: C.room,
+          padding: "36px",
           fontFamily: sans,
         }}
       >
-        {/* tricolor bar */}
-        <div style={{ display: "flex", height: "12px", width: "100%" }}>
-          <div style={{ flex: 1, background: C.fin }} />
-          <div style={{ flex: 1, background: C.acct }} />
-          <div style={{ flex: 1, background: C.econ }} />
-        </div>
-
         <div
           style={{
             flex: 1,
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            padding: "56px 72px 52px",
+            background: C.card,
+            borderRadius: "40px",
+            padding: "48px 56px 44px",
+            position: "relative",
           }}
         >
           {/* brand */}
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "flex-end",
-                justifyContent: "center",
-                gap: "5px",
-                width: "52px",
-                height: "52px",
-                borderRadius: "12px",
-                background: C.ink,
-                padding: "0 0 12px",
-              }}
-            >
-              <div style={{ width: "8px", height: "12px", borderRadius: "2px", background: C.mark1 }} />
-              <div style={{ width: "8px", height: "20px", borderRadius: "2px", background: C.mark2 }} />
-              <div style={{ width: "8px", height: "28px", borderRadius: "2px", background: C.mark3 }} />
-            </div>
-            <div style={{ display: "flex", fontSize: "34px", fontWeight: 700, color: C.text, letterSpacing: "-0.02em" }}>
-              Fin<span style={{ color: C.text3 }}>Terminal</span>
+            <svg width="56" height="56" viewBox="0 0 32 32">
+              <path d={MARK} fill={C.fin} fillRule="evenodd" />
+            </svg>
+            <div style={{ display: "flex", fontFamily: serif, fontSize: "38px", fontWeight: 600, color: C.text }}>
+              FinTerminal
             </div>
           </div>
 
           {/* kicker + headline */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "22px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "18px", maxWidth: "720px" }}>
             <div
               style={{
                 display: "flex",
-                alignItems: "center",
-                gap: "14px",
-                fontFamily: mono,
-                color: C.text2,
-                fontSize: "24px",
+                alignSelf: "flex-start",
+                color: C.fin,
+                background: C.room,
+                borderRadius: "999px",
+                padding: "8px 20px",
+                fontSize: "26px",
                 fontWeight: 600,
-                letterSpacing: "0.08em",
               }}
             >
-              <div style={{ width: "14px", height: "14px", borderRadius: "3px", background: C.fin }} />
               {kicker}
             </div>
             <div
               style={{
                 display: "flex",
+                fontFamily: serif,
                 color: C.text,
-                fontSize: title.length > 72 ? "56px" : "70px",
-                fontWeight: 700,
-                lineHeight: 1.12,
-                letterSpacing: "-0.025em",
-                maxWidth: "1040px",
+                fontSize: title.length > 60 ? "52px" : "64px",
+                fontWeight: 600,
+                lineHeight: 1.1,
+                maxWidth: "680px",
               }}
             >
               {title}
@@ -149,19 +163,13 @@ export async function GET(req: Request) {
           </div>
 
           {/* footer */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              paddingTop: "22px",
-              borderTop: `2px solid ${C.border}`,
-              fontFamily: mono,
-              fontSize: "22px",
-            }}
-          >
+          <div style={{ display: "flex", alignItems: "center", gap: "14px", fontSize: "24px", color: C.text2 }}>
             <div style={{ display: "flex", color: C.text, fontWeight: 600 }}>finterminal.ca</div>
-            <div style={{ display: "flex", color: C.text3, fontWeight: 400 }}>Dated numbers, checked by hand</div>
+            <div style={{ display: "flex" }}>Sorted out at the kitchen table, with a date on every number</div>
+          </div>
+
+          <div style={{ display: "flex", position: "absolute", right: "44px", top: "48px" }}>
+            <TableDrawing />
           </div>
         </div>
       </div>

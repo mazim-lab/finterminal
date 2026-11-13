@@ -5,6 +5,7 @@ import { ogMeta } from "@/lib/og";
 import { ageLabel, daysBetween, humanToISO, isoToHuman } from "@/app/news/humanDate";
 import s from "./deals.module.css";
 
+import { BasketArt } from "@/components/illustrations/HomeArt";
 export const metadata: Metadata = {
   title: "Deals | FinTerminal",
   description: "A short, hand-picked list of genuinely good deals for Canadians. Links go straight to the merchant.",
@@ -144,25 +145,28 @@ export default async function DealsPage() {
   return (
     <main className="wrap">
     <div className="page tone-neutral">
-      <header className="page-head">
-        <span className="eyebrow">Deals</span>
-        <h1>Deals worth passing along</h1>
-        <p className="dek">
-          A short, hand-picked list of things that save you real money: good gear at a proper discount, or buys that pay
-          for themselves. Every link goes straight to the merchant, and we checked each price on their own page the day
-          we posted it.
-        </p>
-        <div className="meta">
-          <span>{active.length} listed</span>
-          <span className="sep" aria-hidden="true">/</span>
-          <span>{recent.length} posted in the last {RECENT_DAYS} days</span>
-          <span className="sep" aria-hidden="true">/</span>
-          <span>{archived.length} in the archive</span>
-          <span className="sep" aria-hidden="true">/</span>
-          <span>
-            ages as of <time dateTime={today}>{isoToHuman(today)}</time>
-          </span>
+      <header className="page-head has-art">
+        <div>
+          <span className="eyebrow">Deals</span>
+          <h1>Deals worth passing along</h1>
+          <p className="dek">
+            A short, hand-picked list of things that save you real money: good gear at a proper discount, or buys that pay
+            for themselves. Every link goes straight to the merchant, and we checked each price on their own page the day
+            we posted it.
+          </p>
+          <div className="meta">
+            <span>{active.length} listed</span>
+            <span className="sep" aria-hidden="true">/</span>
+            <span>{recent.length} posted in the last {RECENT_DAYS} days</span>
+            <span className="sep" aria-hidden="true">/</span>
+            <span>{archived.length} in the archive</span>
+            <span className="sep" aria-hidden="true">/</span>
+            <span>
+              ages as of <time dateTime={today}>{isoToHuman(today)}</time>
+            </span>
+          </div>
         </div>
+        <BasketArt className="head-art" />
       </header>
 
       {stale && active.length > 0 ? (
@@ -194,6 +198,7 @@ export default async function DealsPage() {
           </div>
         ) : (
           <div className="empty">
+            <BasketArt className="empty-art" />
             <h3>Nothing new in the last {RECENT_DAYS} days</h3>
             <p>
               We only post a deal after checking it on the merchant&apos;s own page, and we haven&apos;t added one

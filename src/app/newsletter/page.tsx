@@ -3,6 +3,7 @@ import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { ogMeta } from "@/lib/og";
 import s from "../simple-page.module.css";
 
+import { KettleArt } from "@/components/illustrations/HomeArt";
 export const metadata: Metadata = {
   title: "Newsletter | FinTerminal",
   description:
@@ -14,14 +15,17 @@ export const metadata: Metadata = {
 export default function NewsletterPage() {
   return (
     <main className="wrap page tone-neutral">
-      <header className="page-head">
-        <span className="eyebrow">Newsletter</span>
-        <h1>The FinTerminal Brief</h1>
-        <p className="dek">
-          Canada&apos;s no-fluff cards and points brief. Every so often I send one short, honest email: the best
-          current offers, a points tip worth using, and a personal-finance note or two. No daily spam, and you can
-          leave any time.
-        </p>
+      <header className="page-head has-art">
+        <div>
+          <span className="eyebrow">Newsletter</span>
+          <h1>The FinTerminal Brief</h1>
+          <p className="dek">
+            Canada&apos;s no-fluff cards and points brief. Every so often I send one short, honest email: the best
+            current offers, a points tip worth using, and a personal-finance note or two. No daily spam, and you can
+            leave any time.
+          </p>
+        </div>
+        <KettleArt className="head-art" />
       </header>
 
       <div className={`doc ${s.body}`}>

@@ -5,6 +5,7 @@ import { ogMeta } from "@/lib/og";
 import { programGroups, programGuide, programTag, spotHref } from "../programs";
 import s from "../travel.module.css";
 
+import { WindowArt } from "@/components/illustrations/HomeArt";
 const BASE = "https://www.finterminal.ca";
 const TITLE = "Every sweet spot, by program";
 
@@ -54,18 +55,24 @@ export default function SweetSpotsIndexPage() {
         <span className="cur" aria-current="page">Sweet spots</span>
       </nav>
 
-      <header className="page-head">
-        <span className="eyebrow">Sweet spots</span>
-        <h1>{TITLE}</h1>
-        <p className="dek">
-          Each post walks through one real redemption: the route, the points price, the taxes, and the cents-per-point
-          math, plus the catches. Pick a program to jump to its examples, newest first.
-        </p>
-        <div className={s.headStats}>
-          <span><b>{SWEET_SPOTS.length}</b> posts</span>
-          <span><b>{groups.length}</b> programs</span>
-          {latest ? <span>latest <b>{latest.date}</b></span> : null}
+      <header className="page-head has-art">
+
+        <div>
+          <span className="eyebrow">Sweet spots</span>
+          <h1>{TITLE}</h1>
+          <p className="dek">
+            Each post walks through one real redemption: the route, the points price, the taxes, and the cents-per-point
+            math, plus the catches. Pick a program to jump to its examples, newest first.
+          </p>
+          <div className={s.headStats}>
+            <span><b>{SWEET_SPOTS.length}</b> posts</span>
+            <span><b>{groups.length}</b> programs</span>
+            {latest ? <span>latest <b>{latest.date}</b></span> : null}
+          </div>
+
         </div>
+
+        <WindowArt className="head-art" />
       </header>
 
       {groups.length > 0 ? (
@@ -78,6 +85,7 @@ export default function SweetSpotsIndexPage() {
         </nav>
       ) : (
         <div className="empty">
+          <WindowArt className="empty-art" />
           <h2 className={s.emptyH}>No sweet spots yet</h2>
           <p>The first worked example is on its way.</p>
         </div>
