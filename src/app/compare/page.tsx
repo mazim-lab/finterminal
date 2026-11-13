@@ -4,6 +4,7 @@ import { allCards, BENEFIT_LABELS, type Benefits } from '@/data/cards';
 import { ogMeta } from '@/lib/og';
 import CompareClient, { type CompareCard } from './CompareClient';
 import s from './compare.module.css';
+import { formatBonusText } from '@/lib/bonusText';
 
 export const metadata: Metadata = {
   title: 'Compare credit cards side by side | FinTerminal',
@@ -24,7 +25,7 @@ export default function ComparePage() {
     rewards_program: c.rewards_program,
     annual_fee: c.annual_fee,
     first_year_fee: c.first_year_fee,
-    welcome_bonus: c.welcome_bonus,
+    welcome_bonus: formatBonusText(c.welcome_bonus),
     welcome_bonus_points: c.welcome_bonus_points,
     welcome_bonus_value: c.welcome_bonus_value,
     first_year_value: c.first_year_value,

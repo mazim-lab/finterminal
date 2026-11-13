@@ -2,6 +2,7 @@ import { allCards, Card, BENEFIT_LABELS, Benefits, formatCurrency } from '@/data
 import { receiptLines, programName } from '@/data/card-view';
 import { valuationFor } from '@/data/point-valuations';
 import { ogMeta } from '@/lib/og';
+import { formatBonusText } from '@/lib/bonusText';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!card) notFound();
   return {
     title: `${card.name} | FinTerminal`,
-    description: stripDashes(`${card.name} by ${card.issuer}. Annual fee: ${formatCurrency(card.annual_fee, card.country)}. ${card.welcome_bonus || 'Compare and learn more.'}`),
+    description: stripDashes(`${card.name} by ${card.issuer}. Annual fee: ${formatCurrency(card.annual_fee, card.country)}. ${bonusProse(card.welcome_bonus) || 'Compare and learn more.'}`),
     alternates: { canonical: `/cards/${card.slug}` },
     ...ogMeta(card.name, 'Credit card', `/cards/${card.slug}`),
   };
@@ -30,10 +31,13 @@ const TAG_DEFS: [keyof Benefits, string][] = [
   ['mobile_insurance', 'Mobile insurance'], ['purchase_protection', 'Purchase protection'], ['extended_warranty', 'Extended warranty'], ['flight_delay', 'Flight delay'],
 ];
 
-// Insurance rows arrive as raw key/value pairs with no units. We give each a
-// readable name and a one-line note on what that coverage is for, and print the
-// value exactly as our data lists it (thousands separators only). We do not
-// guess units the data does not state.
+// Insurance rows arrive as raw key/value pairs with no units, and the stored
+// values are not coverage amounts we can stand behind: the same coverage reads
+// "16" on one card and "500000" on another, and several look like footnote or
+// section numbers picked up by the scraper. So we never print the number as a
+// dollar or day amount. A non-empty value only tells us the issuer lists that
+// coverage, which we show as "Included"; a word value (other than yes/no) is
+// shown as the label itself. Each row gets a readable name and a one-line note.
 const INSURANCE_INFO: Record<string, [string, string]> = {
   travel_medical: ['Emergency travel medical', 'Medical emergencies while travelling outside your home province or state'],
   trip_cancellation: ['Trip cancellation and interruption', 'Prepaid trip costs if you have to cancel or cut a trip short for a covered reason'],
@@ -48,9 +52,11 @@ const INSURANCE_INFO: Record<string, [string, string]> = {
 };
 function insuranceValue(v: string): string {
   const t = v.trim();
-  if (/^yes$/i.test(t)) return 'Included';
-  if (/^\d{4,}$/.test(t)) return Number(t).toLocaleString('en-CA');
-  return t;
+  if (!t) return 'Not listed';
+  if (/^no$/i.test(t)) return 'Not included';
+  // "Yes", or any bare number or code (no stated unit): the coverage is listed.
+  if (/^yes$/i.test(t) || /^[\d.,$%\s]+$/.test(t)) return 'Included';
+  return formatBonusText(t);
 }
 function prettyKey(k: string): string {
   const w = k.replace(/_/g, ' ').trim();
@@ -73,6 +79,14 @@ function stripDashes(s: string): string {
     .replace(/\s*[—–]\s*/g, ', ')
     .replace(/,\s*,/g, ',')
     .replace(/,(\s*[.;])/g, '$1');
+}
+
+// Scraped welcome-bonus copy used inside our own sentences (FAQ answers, the
+// meta description): a number range keeps its meaning ("5 to 10"), any other
+// dash becomes a comma, and footnote markers go (see lib/bonusText).
+function bonusProse(s: string): string {
+  const ranged = s.replace(/(\d)\s*[\u2013\u2014]\s*(?=\$?\d)/g, '$1 to ');
+  return stripDashes(formatBonusText(ranged)).replace(/\s+-\s+/g, ', ');
 }
 
 // Trim trailing punctuation/whitespace so we can safely append our own sentence.
@@ -182,13 +196,13 @@ function buildCardFaqs(card: Card): Faq[] {
   if (card.welcome_bonus || card.welcome_bonus_points || card.welcome_bonus_value > 0) {
     let a: string;
     if (card.welcome_bonus) {
-      a = stripTrailingPunct(card.welcome_bonus) + '.';
+      a = stripTrailingPunct(bonusProse(card.welcome_bonus)) + '.';
     } else if (card.welcome_bonus_points) {
       a = `The ${card.name} offers a welcome bonus of ${card.welcome_bonus_points.toLocaleString()} points.`;
     } else {
       a = `The ${card.name} offers a welcome bonus worth about ${formatCurrency(card.welcome_bonus_value, cur)}.`;
     }
-    if (card.welcome_bonus_conditions) a += ` ${stripTrailingPunct(card.welcome_bonus_conditions)}.`;
+    if (card.welcome_bonus_conditions) a += ` ${stripTrailingPunct(bonusProse(card.welcome_bonus_conditions))}.`;
     faqs.push({ q: `What welcome bonus does the ${card.name} offer?`, a });
   }
 
@@ -337,7 +351,7 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
           {programLabel && <> · {programLabel}</>}
         </p>
         <div className={`chips ${s.chips}`}>
-          <span className={`chip ${cur === 'CA' ? 'chip-red' : 'chip-cards'}`}>{countryName}</span>
+          <span className="chip">{countryName}</span>
           {card.card_type && <span className={`chip ${s.cap}`}>{card.card_type}</span>}
           {card.is_business && <span className="chip">Business</span>}
           {tags.map(t => <span key={t} className={`chip chip-tone ${s.perkChip}`}>{t}</span>)}
@@ -432,9 +446,9 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
             <section id="offer" className={s.sec}>
               <h2 className={s.h2}>Welcome offer</h2>
               <div className={s.offer}>
-                <p className={s.offerText}>{card.welcome_bonus}</p>
+                <p className={s.offerText}>{formatBonusText(card.welcome_bonus)}</p>
                 {card.welcome_bonus_conditions && (
-                  <p className={s.offerFine}><span className={s.fineCap}>Conditions</span>{card.welcome_bonus_conditions}</p>
+                  <p className={s.offerFine}><span className={s.fineCap}>Conditions</span>{formatBonusText(card.welcome_bonus_conditions)}</p>
                 )}
               </div>
             </section>
@@ -499,7 +513,7 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
               <div className="tablewrap">
                 <table className={s.insTable}>
                   <thead>
-                    <tr><th scope="col">Coverage</th><th scope="col" className="r">As listed</th></tr>
+                    <tr><th scope="col">Coverage</th><th scope="col" className="r">On this card</th></tr>
                   </thead>
                   <tbody>
                     {insurance.map(([k, v]) => {
@@ -518,8 +532,9 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
                 </table>
               </div>
               <p className={s.fine}>
-                Figures are shown as our data source lists them, without units. Limits, waiting periods and
-                eligibility live in the issuer&apos;s certificate of insurance, so read that before you count on a coverage.
+                This shows which coverages the issuer lists for this card, not how much each one pays. Amounts, limits,
+                waiting periods and eligibility are in the issuer&apos;s certificate of insurance, so read that before you
+                count on a coverage.
               </p>
             </section>
           )}

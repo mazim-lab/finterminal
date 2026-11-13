@@ -6,6 +6,7 @@ import { allCards, formatCurrency, type Card } from "@/data/cards";
 import { ogMeta } from "@/lib/og";
 import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
+import { formatBonusText } from "@/lib/bonusText";
 
 export const metadata = {
   alternates: { canonical: "/personal-finance/best-cash-back-credit-cards-canada" },
@@ -318,7 +319,7 @@ export default function BestCashBackCardsPage() {
                         )}
                         {c.welcome_bonus && (
                           <div>
-                            <strong>Welcome bonus:</strong> {c.welcome_bonus}.
+                            <strong>Welcome bonus:</strong> {formatBonusText(c.welcome_bonus).replace(/[.\s]+$/, '')}.
                           </div>
                         )}
                         {c.first_year_value > 0 ? (
