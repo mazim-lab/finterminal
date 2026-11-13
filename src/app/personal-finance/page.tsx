@@ -11,7 +11,7 @@ export const metadata = {
   title: "Personal Finance | FinTerminal",
   description: "Practical, plain-language personal finance guides for Canadians, from tax-efficient borrowing to building real wealth.",
   alternates: { canonical: "/personal-finance" },
-  ...ogMeta("Personal Finance", "Personal finance"),
+  ...ogMeta("Personal Finance", "Personal finance", "/personal-finance"),
 };
 
 // Life-moment grouping (spec 3.7): the index is organized by the moment a reader

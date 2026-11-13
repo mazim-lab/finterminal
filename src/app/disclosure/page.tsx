@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Affiliate Disclosure | FinTerminal",
   description: "How FinTerminal uses affiliate links, and our promise that they never change our rankings or recommendations.",
   alternates: { canonical: "/disclosure" },
-  ...ogMeta("Affiliate Disclosure", "FinTerminal"),
+  ...ogMeta("Affiliate Disclosure", "FinTerminal", "/disclosure"),
 };
 
 export default function DisclosurePage() {

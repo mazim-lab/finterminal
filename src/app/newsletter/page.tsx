@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Canada's no-fluff cards and points brief. One short, honest email with the best current offers, a points tip worth using, and a personal-finance note or two.",
   alternates: { canonical: "/newsletter" },
-  ...ogMeta("Newsletter", "Newsletter"),
+  ...ogMeta("Newsletter", "Newsletter", "/newsletter"),
 };
 
 export default function NewsletterPage() {

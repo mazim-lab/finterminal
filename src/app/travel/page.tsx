@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Guides for turning Canadian credit card points into real trips: Aeroplan, Avios, AAdvantage and the transfer partners that feed them, plus a worked sweet-spot example twice a week.",
   alternates: { canonical: "/travel" },
-  ...ogMeta("Travel & Points", "Travel & points"),
+  ...ogMeta("Travel & Points", "Travel & points", "/travel"),
 };
 
 // How the long-form guides are grouped on the hub. Any guide not listed here

@@ -13,7 +13,7 @@ export const metadata = {
   title: "Best GIC rates in Canada | FinTerminal",
   description:
     "An honest look at the best GIC rates in Canada across terms, from Oaken and Achieva to EQ Bank, Wealthsimple, and the big banks. Rates as of September 2026, with cashable vs non-redeemable, the ladder strategy, registered GICs, and the CDIC vs credit-union coverage you really get.",
-  ...ogMeta("Best GIC rates in Canada", "Personal finance"),
+  ...ogMeta("Best GIC rates in Canada", "Personal finance", "/personal-finance/best-gic-rates-canada", "article"),
 };
 
 const TOC = [

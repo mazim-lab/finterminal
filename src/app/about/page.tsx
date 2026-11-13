@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Who runs FinTerminal and why. One dad in Ontario who runs every number for his own family first, values every card with the same formula, and shows his real portfolio, losses and all.",
   alternates: { canonical: "/about" },
-  ...ogMeta("About", "About"),
+  ...ogMeta("About", "About", "/about"),
 };
 
 export default function AboutPage() {

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Current Portfolio | FinTerminal",
   description: "My real positions and the thesis behind each. Personal positions, not advice.",
   alternates: { canonical: "/portfolio" },
-  ...ogMeta("Current Portfolio", "Portfolio"),
+  ...ogMeta("Current Portfolio", "Portfolio", "/portfolio"),
 };
 
 // Percentages only, everywhere on this page (standing privacy rule).

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Every worked sweet-spot example on FinTerminal, grouped by loyalty program: Aeroplan, Avios, WestJet, Delta, United, Alaska, Flying Blue and more, each with the points price and the cents-per-point math.",
   alternates: { canonical: "/travel/sweet-spots" },
-  ...ogMeta(TITLE, "Travel · Sweet spots"),
+  ...ogMeta(TITLE, "Travel · Sweet spots", "/travel/sweet-spots"),
 };
 
 export default function SweetSpotsIndexPage() {

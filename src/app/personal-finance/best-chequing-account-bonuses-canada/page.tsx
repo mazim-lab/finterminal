@@ -13,7 +13,7 @@ export const metadata = {
   title: "Best chequing account welcome bonuses in Canada | FinTerminal",
   description:
     "An honest look at the best chequing account welcome bonuses in Canada, from Scotiabank, CIBC, and TD to National Bank, Simplii, RBC, and Tangerine. Offers as of September 2026, with the direct-deposit conditions you actually have to meet, the monthly fees to watch, and how switching for a bonus really works.",
-  ...ogMeta("Best chequing account welcome bonuses in Canada", "Personal finance"),
+  ...ogMeta("Best chequing account welcome bonuses in Canada", "Personal finance", "/personal-finance/best-chequing-account-bonuses-canada", "article"),
 };
 
 const TOC = [

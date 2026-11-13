@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/" },
-  ...ogMeta("Canadian money, explained plainly", "Cards, points & personal finance"),
+  ...ogMeta("Canadian money, explained plainly", "Cards, points & personal finance", "/"),
 };
 
 const SITE = "https://www.finterminal.ca";

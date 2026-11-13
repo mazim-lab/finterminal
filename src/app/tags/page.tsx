@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Every FinTerminal topic in one place. Pick a tag to see every article on points, travel, cards, and personal finance that touches it.",
   alternates: { canonical: "/tags" },
-  ...ogMeta("Browse by topic", "Topics"),
+  ...ogMeta("Browse by topic", "Topics", "/tags"),
 };
 
 export default function TagsIndexPage() {

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Reach the person behind FinTerminal: questions about cards or points, a request for an exclusive credit-card referral link, feedback, or a partnership and data enquiry.",
   alternates: { canonical: "/contact" },
-  ...ogMeta("Contact", "Contact"),
+  ...ogMeta("Contact", "Contact", "/contact"),
 };
 
 export default function ContactPage() {

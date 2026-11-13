@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${tag.label}: every article on this topic | FinTerminal`,
     description: tag.description,
     alternates: { canonical: `/tags/${tag.slug}` },
-    ...ogMeta(tag.label, "Topic"),
+    ...ogMeta(tag.label, "Topic", `/tags/${tag.slug}`),
     ...(thin ? { robots: { index: false, follow: true } } : {}),
   };
 }

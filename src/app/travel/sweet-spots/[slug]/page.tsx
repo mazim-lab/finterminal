@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${spot.title} | FinTerminal`,
     description: spot.dek,
     alternates: { canonical: `/travel/sweet-spots/${spot.slug}` },
-    ...ogMeta(spot.title, "Travel · Sweet spot"),
+    ...ogMeta(spot.title, "Travel · Sweet spot", `/travel/sweet-spots/${spot.slug}`, "article"),
   };
 }
 

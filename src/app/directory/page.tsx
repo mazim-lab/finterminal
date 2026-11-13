@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "The full site directory for FinTerminal: every section and page in one place, from the card explorer and travel guides to personal-finance articles, rates, news, deals, and topic tags.",
   alternates: { canonical: "/directory" },
-  ...ogMeta("Directory", "Directory"),
+  ...ogMeta("Directory", "Directory", "/directory"),
 };
 
 // Human-readable companion to /sitemap.xml. Every dynamic list here reads from

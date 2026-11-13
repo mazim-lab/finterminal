@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "News | FinTerminal",
   description: "Canadian credit-card and points news, in plain language.",
   alternates: { canonical: "/news" },
-  ...ogMeta("News", "News"),
+  ...ogMeta("News", "News", "/news"),
 };
 
 // The ticker shows the 5 newest items (array order, newest first). The full

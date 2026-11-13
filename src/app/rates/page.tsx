@@ -11,7 +11,7 @@ export const metadata = {
   description:
     "A simple hub for the best rates in Canada. Where to find live high-interest savings rates, GIC rates by term, and chequing account bonuses, plus a quick framework for how to think about parking your cash. General info as of July 2026, not advice.",
   alternates: { canonical: "/rates" },
-  ...ogMeta("Best rates in Canada: savings, GICs, and chequing", "Rates"),
+  ...ogMeta("Best rates in Canada: savings, GICs, and chequing", "Rates", "/rates"),
 };
 
 // What each rate page is for. Copy kept from the original hub list.

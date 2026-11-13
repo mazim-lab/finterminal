@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Deals | FinTerminal",
   description: "A short, hand-picked list of genuinely good deals for Canadians. Links go straight to the merchant.",
   alternates: { canonical: "/deals" },
-  ...ogMeta("Deals", "Deals"),
+  ...ogMeta("Deals", "Deals", "/deals"),
 };
 
 // Live deals posted within this many days count as "Recent picks"; older live

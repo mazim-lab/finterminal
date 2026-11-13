@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${item.headline} | FinTerminal`,
     description: item.dek,
     alternates: { canonical: `/news/${item.slug}` },
-    ...ogMeta(item.headline, "News"),
+    ...ogMeta(item.headline, "News", `/news/${item.slug}`, "article"),
   };
 }
 
