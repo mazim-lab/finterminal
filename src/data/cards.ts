@@ -361,6 +361,19 @@ function usCpp(text: string): number {
   return 1.3;
 }
 
+// Chase Ultimate Rewards cards never name their currency in the fields usCpp
+// reads (name, issuer, signup_bonus_currency is just "points"), so the
+// 'ultimate rewards' key above could never match and they fell through to the
+// generic 'points' row. Tag them with the currency name here. Matching is still
+// first key in table order, so appending the tag cannot change any other card.
+// The cash-bonus UR cards (Freedom, Ink Unlimited and Ink Cash) are valued from
+// their dollar bonus, so the tag only moves the points-bonus ones.
+const CHASE_UR_CARD = /\b(sapphire|freedom|ink business (preferred|unlimited|cash))\b/i;
+function usProgramText(raw: RawUS): string {
+  const text = `${raw.name} ${raw.issuer || ''} ${raw.signup_bonus_currency || ''}`;
+  return /\bchase\b/i.test(raw.issuer || '') && CHASE_UR_CARD.test(raw.name) ? `${text} ultimate rewards` : text;
+}
+
 // Pull the welcome-bonus points/miles out of the marketing text. The numeric signup_bonus
 // fields are unreliable (often null, or the *spend* threshold), so the headline figure in
 // signup_bonus_formatted is the source of truth. Take the largest number tied to a
@@ -418,7 +431,7 @@ function parseUsEarnRates(raw: RawUS): EarnRate[] {
 
 function normalizeUS(raw: RawUS): Card {
   // Value the signup bonus with a program-specific baseline cpp, then convert USD→CAD.
-  const cppUsd = usCpp(`${raw.name} ${raw.issuer || ''} ${raw.signup_bonus_currency || ''}`);
+  const cppUsd = usCpp(usProgramText(raw));
   const sfRaw = raw.signup_bonus_formatted || '';
   const curRaw = (raw.signup_bonus_currency || '').toLowerCase();
   // A "$X bonus cash back" / "statement credit" phrasing is a cash bonus even when the
