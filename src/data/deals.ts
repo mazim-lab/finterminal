@@ -747,18 +747,6 @@ export const DEALS: Deal[] = [
     category: "Electronics",
     posted: "Jun 20, 2026",
   },
-  {
-    title: "Apple AirPods Pro 3",
-    merchant: "Shoppers Drug Mart",
-    url: "https://www.shoppersdrugmart.ca/apple-airpods-pro3-active-noise-cancellation-earbuds/p/BB_195950543612?variantCode=195950543612",
-    price: "$329.99",
-    blurb:
-      "Shoppers has the newest AirPods Pro at $329.99 and is stacking points offers that hand back roughly 148,000 PC Optimum points, which is about $148 you can put toward groceries or gas down the road. Net it out and you are closer to $182 to $224 for the best earbuds Apple makes for an iPhone. Buy online and sign in first so both point offers actually show up at checkout, a few people found they had to refresh their login. This one wraps up June 21, so it is a short window.",
-    category: "Electronics",
-    posted: "Jun 20, 2026",
-    expires: "ends Jun 21",
-    expiresAt: "2026-06-21",
-  },
 ];
 
 // Today's date in Canadian time, as "YYYY-MM-DD" (en-CA formats this way).
