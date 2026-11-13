@@ -1,81 +1,83 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+/* Theme is driven by next-themes writing data-theme="light|dark" on <html>.
+   Tailwind's dark: variant follows the same attribute. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-/* Tailwind theme plumbing for the legacy/secondary pages (blog, compare, guides,
-   card detail). terminal.css is the single color source of truth: every color
-   token here points at a terminal.css variable, so the parallel hex palette that
-   used to live here (and drift) is gone. Both files re-theme together from the
-   same :root / html.light definitions.
-   Note: the secondary pages use the "gold" utility family as their green points
-   accent (it was green here historically, never amber). To preserve those pages
-   unchanged while killing the duplicate palette, the gold utilities map to the
-   emerald vars. Real amber (--gold) means verification only and lives in
-   terminal.css, applied via CSS vars, not these Tailwind utilities. */
+/* Tailwind plumbing for the few pages that still use utilities (the US cards
+   guide, compare). Every colour points at a site.css token, so utilities can
+   never drift from the FAEConf palette. The hard-coded Tailwind emerald, red
+   and amber ramps are remapped onto the status tokens for the same reason. */
 @theme {
-  --color-background: var(--paper);
-  --color-card: var(--panel);
-  --color-muted: var(--panel-2);
-  --color-border: var(--line);
-  --color-foreground: var(--ink);
-  --color-card-foreground: var(--ink);
-  --color-muted-foreground: var(--ink-soft);
-  --color-primary: var(--emerald);
-  --color-primary-light: var(--emerald);
-  --color-primary-dark: var(--emerald-d);
-  --color-accent: var(--emerald);
-  --color-accent-light: var(--emerald);
-  --color-gold: var(--emerald);
-  --color-gold-light: var(--emerald);
-  --color-gold-dark: var(--emerald-d);
-  --color-gold-text: var(--emerald);
+  --color-background: var(--bg);
+  --color-card: var(--surface);
+  --color-muted: var(--surface-2);
+  --color-border: var(--border);
+  --color-foreground: var(--text);
+  --color-card-foreground: var(--text);
+  --color-muted-foreground: var(--text-2);
+  --color-primary: var(--accent);
+  --color-primary-light: var(--accent);
+  --color-primary-dark: var(--accent);
+  --color-accent: var(--fin);
+  --color-accent-light: var(--fin);
+  --color-gold: var(--accent);
+  --color-gold-light: var(--accent);
+  --color-gold-dark: var(--accent);
+  --color-gold-text: var(--text);
+
+  --color-emerald-50: var(--green-bg);
+  --color-emerald-100: var(--green-bg);
+  --color-emerald-200: var(--green-border);
+  --color-emerald-300: var(--green);
+  --color-emerald-400: var(--green);
+  --color-emerald-500: var(--green);
+  --color-emerald-600: var(--green-ink);
+  --color-emerald-700: var(--green-ink);
+  --color-emerald-800: var(--green-ink);
+  --color-emerald-900: var(--green-ink);
+  --color-red-50: var(--red-bg);
+  --color-red-100: var(--red-bg);
+  --color-red-200: var(--red-border);
+  --color-red-300: var(--red-border);
+  --color-red-400: var(--red);
+  --color-red-500: var(--red);
+  --color-red-600: var(--red);
+  --color-red-700: var(--red);
+  --color-amber-50: var(--amber-bg);
+  --color-amber-100: var(--amber-bg);
+  --color-amber-200: var(--amber-border);
+  --color-amber-300: var(--amber);
+  --color-amber-400: var(--amber);
+  --color-amber-500: var(--amber);
+  --color-amber-600: var(--amber-ink);
+  --color-amber-700: var(--amber-ink);
+
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-serif), Georgia, serif;
-  --font-display: var(--font-jetbrains), ui-monospace, monospace;
-  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-serif: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex), ui-monospace, monospace;
 }
 
-/* Theme is toggled by next-themes putting .light on <html>; it follows the OS
-   prefers-color-scheme unless the visitor overrides it. Dark is the default
-   (.dark and the no-JS fallback). The actual color values live in terminal.css. */
-html { color-scheme: dark; }
-html.light { color-scheme: light; }
+/* Tailwind preflight resets lists and headings; site.css owns the rest. */
+input[type="range"] { accent-color: var(--accent); }
+input[type="checkbox"] { accent-color: var(--accent); }
 
-/* Custom range slider (secondary pages) */
-input[type="range"] { @apply appearance-none h-2 rounded-full bg-border; }
-input[type="range"]::-webkit-slider-thumb { @apply appearance-none w-4 h-4 rounded-full bg-primary cursor-pointer; }
+.card-hover { transition: border-color .15s, box-shadow .14s, transform .14s; }
+.card-hover:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+.btn-gold, .btn-primary-legacy { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:7px; background:var(--accent); color:var(--on-accent); padding:10px 18px; font-size:13.5px; font-weight:600; }
+.btn-ghost { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:7px; border:1px solid var(--border); background:var(--surface); color:var(--text-2); padding:10px 18px; font-size:13.5px; font-weight:600; }
+.btn-ghost:hover { color: var(--text); border-color: var(--border-strong); }
 
-/* Custom checkbox (secondary pages) */
-input[type="checkbox"] { @apply appearance-none w-4 h-4 rounded border-2 border-border bg-background cursor-pointer transition-all duration-150; }
-input[type="checkbox"]:checked {
-  @apply bg-gold border-gold;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%230e1110' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
-  background-size: 100% 100%; background-position: center; background-repeat: no-repeat;
-}
-
-/* Card hover (secondary pages) */
-.card-hover { @apply transition-all duration-300 ease-out; box-shadow: 0 1px 3px rgba(0,0,0,0.25), 0 1px 2px rgba(0,0,0,0.15); }
-.card-hover:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.35), 0 4px 12px rgba(0,0,0,0.2); }
-
-/* Buttons (secondary pages) */
-.btn-primary { @apply rounded-md bg-primary px-6 py-2.5 text-sm font-semibold text-background hover:bg-primary-light transition-all duration-200 shadow-sm hover:shadow-md active:scale-[0.98]; }
-.btn-gold { @apply rounded-md bg-primary px-6 py-2.5 text-sm font-semibold text-background hover:bg-primary-light transition-all duration-200 shadow-sm active:scale-[0.98]; }
-.btn-ghost { @apply rounded-md border border-border px-6 py-2.5 text-sm font-medium hover:bg-muted transition-all duration-200; }
-
-/* Skeleton */
 @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
-.skeleton { background: linear-gradient(90deg, var(--color-muted) 25%, var(--color-border) 50%, var(--color-muted) 75%); background-size: 200% 100%; animation: shimmer 1.5s ease-in-out infinite; border-radius: 0.5rem; }
-
+.skeleton { background: linear-gradient(90deg, var(--surface-2) 25%, var(--border) 50%, var(--surface-2) 75%); background-size: 200% 100%; animation: shimmer 1.5s ease-in-out infinite; border-radius: 0.5rem; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 .animate-fade-in { animation: fadeIn 0.3s ease-out forwards; }
+.atlas-rule { height: 1px; background: var(--border); }
 
-.atlas-rule { height: 1px; background: linear-gradient(to right, transparent, color-mix(in srgb, var(--color-primary) 55%, transparent), transparent); }
-
-/* Guide prose (secondary pages) — long-form reads in the serif at the body size,
-   680px measure; mono leaks out of sentences (spec 3.2/3.3). */
 .prose-guide { max-width: var(--w-read); }
-.prose-guide p { font-family: var(--font-serif); font-size: var(--t-body); color: var(--color-muted-foreground); margin-bottom: 1rem; line-height: 1.65; }
-.prose-guide ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--color-muted-foreground); }
-.prose-guide li { font-family: var(--font-serif); font-size: var(--t-body); margin-bottom: 0.5rem; line-height: 1.6; }
-.prose-guide strong { color: var(--color-foreground); }
-.prose-guide h4 { color: var(--color-foreground); font-family: var(--font-serif); font-size: var(--t-h3); font-weight: 600; }
+.prose-guide p { font-size: var(--fs-body); color: var(--text-2); margin-bottom: 1rem; line-height: 1.7; }
+.prose-guide ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--text-2); }
+.prose-guide li { font-size: var(--fs-body); margin-bottom: 0.5rem; line-height: 1.65; }
+.prose-guide strong { color: var(--text); }
+.prose-guide h4 { color: var(--text); font-size: var(--fs-h3); font-weight: 650; }

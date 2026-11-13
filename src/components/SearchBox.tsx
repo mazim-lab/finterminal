@@ -116,8 +116,9 @@ export function SearchBox() {
         onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
         onFocus={() => setOpen(true)}
         onKeyDown={onKeyDown}
-        placeholder="⌘K  search cards & guides"
+        placeholder="Search cards, guides, news"
       />
+      {!q && <kbd className="search-kbd" aria-hidden="true">Ctrl K</kbd>}
       {showList && (
         <div className="search-pop" id="search-results" role="listbox">
           {grouped.flat.length === 0 ? (

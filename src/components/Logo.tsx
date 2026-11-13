@@ -1,14 +1,23 @@
-/** FinTerminal mark: a compass / navigation star (maps + charting a course). */
-export function Logo({ className = '' }: { className?: string }) {
+// FinTerminal mark: an ink rounded square (FAEConf's logo shape) holding three
+// ascending bars in the three pillar hues, Cards, Travel and Money.
+export function BrandMark({ className = "brand-mark" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden className={className}>
-      <circle cx="12" cy="12" r="10.25" stroke="currentColor" strokeWidth="1.5" opacity="0.45" />
-      {/* compass star */}
-      <path
-        d="M12 2.75 L13.7 10.3 L21.25 12 L13.7 13.7 L12 21.25 L10.3 13.7 L2.75 12 L10.3 10.3 Z"
-        fill="currentColor"
-      />
-      <circle cx="12" cy="12" r="1.6" className="fill-background" />
+    <svg className={className} viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+      <rect width="28" height="28" rx="6.5" fill="var(--mark-bg)" />
+      <rect x="6.5" y="15" width="4" height="7" rx="1.2" fill="var(--mark-1)" />
+      <rect x="12" y="10.5" width="4" height="11.5" rx="1.2" fill="var(--mark-2)" />
+      <rect x="17.5" y="6" width="4" height="16" rx="1.2" fill="var(--mark-3)" />
     </svg>
+  );
+}
+
+export function Logo() {
+  return (
+    <a href="/" className="brand" aria-label="FinTerminal home">
+      <BrandMark />
+      <span className="brand-word">
+        Fin<b>Terminal</b>
+      </span>
+    </a>
   );
 }
