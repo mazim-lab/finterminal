@@ -1,7 +1,11 @@
 import { allCards, Card, BENEFIT_LABELS, Benefits, formatCurrency } from '@/data/cards';
+import { receiptLines, programName } from '@/data/card-view';
 import { valuationFor } from '@/data/point-valuations';
-import { Metadata } from 'next';
+import { ogMeta } from '@/lib/og';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import s from './detail.module.css';
 
 export function generateStaticParams() {
   return allCards.map(card => ({ slug: card.slug }));
@@ -10,18 +14,48 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const card = allCards.find(c => c.slug === slug);
-  if (!card) return { title: 'Card Not Found' };
+  if (!card) notFound();
   return {
     title: `${card.name} | FinTerminal`,
-    description: `${card.name} by ${card.issuer}. Annual fee: ${formatCurrency(card.annual_fee, card.country)}. ${card.welcome_bonus || 'Compare and learn more.'}`,
+    description: stripDashes(`${card.name} by ${card.issuer}. Annual fee: ${formatCurrency(card.annual_fee, card.country)}. ${card.welcome_bonus || 'Compare and learn more.'}`),
+    alternates: { canonical: `/cards/${card.slug}` },
+    ...ogMeta(card.name, 'Credit card', `/cards/${card.slug}`),
   };
 }
 
+// Plain-language perk names, shared with the explorer so one benefit never has two names.
 const TAG_DEFS: [keyof Benefits, string][] = [
-  ['lounge_access', 'lounge'], ['no_fx_fee', 'no-fx'], ['car_rental_insurance', 'car-ins'],
-  ['free_checked_bags', 'free-bag'], ['travel_medical', 'travel-med'], ['trip_cancellation', 'trip-cancel'],
-  ['mobile_insurance', 'mobile'], ['purchase_protection', 'purchase'], ['extended_warranty', 'warranty'], ['flight_delay', 'flight-delay'],
+  ['lounge_access', 'Lounge access'], ['no_fx_fee', 'No foreign fees'], ['car_rental_insurance', 'Rental car insurance'],
+  ['free_checked_bags', 'Free checked bag'], ['travel_medical', 'Travel medical'], ['trip_cancellation', 'Trip cancellation'],
+  ['mobile_insurance', 'Mobile insurance'], ['purchase_protection', 'Purchase protection'], ['extended_warranty', 'Extended warranty'], ['flight_delay', 'Flight delay'],
 ];
+
+// Insurance rows arrive as raw key/value pairs with no units. We give each a
+// readable name and a one-line note on what that coverage is for, and print the
+// value exactly as our data lists it (thousands separators only). We do not
+// guess units the data does not state.
+const INSURANCE_INFO: Record<string, [string, string]> = {
+  travel_medical: ['Emergency travel medical', 'Medical emergencies while travelling outside your home province or state'],
+  trip_cancellation: ['Trip cancellation and interruption', 'Prepaid trip costs if you have to cancel or cut a trip short for a covered reason'],
+  flight_delay: ['Flight delay', 'Meals, hotel and essentials when a flight is delayed'],
+  baggage_delay: ['Baggage delay', 'Essentials you buy while your checked bags are delayed'],
+  lost_baggage: ['Lost or damaged baggage', 'Bags and personal items lost or damaged in transit'],
+  travel_accident: ['Travel accident', 'Accidental death or dismemberment while travelling on a common carrier'],
+  car_rental: ['Rental car collision and damage', 'Damage to or theft of a rental car when you decline the agency coverage'],
+  mobile_insurance: ['Mobile device', 'Loss, theft or damage to a phone bought with the card'],
+  purchase_protection: ['Purchase protection', 'Theft or damage to new purchases for a period after you buy'],
+  extended_warranty: ['Extended warranty', 'Extends the manufacturer warranty on eligible purchases'],
+};
+function insuranceValue(v: string): string {
+  const t = v.trim();
+  if (/^yes$/i.test(t)) return 'Included';
+  if (/^\d{4,}$/.test(t)) return Number(t).toLocaleString('en-CA');
+  return t;
+}
+function prettyKey(k: string): string {
+  const w = k.replace(/_/g, ' ').trim();
+  return w.charAt(0).toUpperCase() + w.slice(1);
+}
 
 // ── Answer-first generated copy ─────────────────────────
 // Everything below is derived from a card's real fields so all ~195 cards (and any
@@ -219,280 +253,373 @@ function buildCardFaqs(card: Card): Faq[] {
 export default async function CardDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const card = allCards.find(c => c.slug === slug);
+  if (!card) notFound();
 
-  if (!card) {
-    return (
-      <div className="app norail">
-        <main>
-          <div className="head"><h1>404 · No Such Card</h1></div>
-          <p className="cd-empty">That card isn’t in the registry. <Link href="/cards" style={{ color: 'var(--emerald)', fontWeight: 700 }}>← back to explorer</Link></p>
-        </main>
-      </div>
-    );
-  }
-
+  const cur = card.country;
   const benefitEntries = Object.entries(card.benefits) as [keyof Benefits, boolean][];
   const active = benefitEntries.filter(([, v]) => v);
   const cpp = card.cpp_cad ?? 1.0;
   const val = valuationFor(card.rewards_program);
   const maxCpp = val.max ?? null;
-  const bonusDisplay = card.welcome_bonus_points
-    ? card.welcome_bonus_points.toLocaleString()
-    : (card.welcome_bonus_value > 0 ? formatCurrency(card.welcome_bonus_value, card.country) : 'none');
   const fxLabel = card.foreign_transaction_fee === false
     ? '0%'
-    : (card.foreign_transaction_fee_pct != null ? `${card.foreign_transaction_fee_pct}%` : 'n/a');
-
+    : (card.foreign_transaction_fee_pct != null ? `${card.foreign_transaction_fee_pct}%` : 'Not listed');
+  const countryName = cur === 'CA' ? 'Canada' : 'United States';
   const tags = TAG_DEFS.filter(([k]) => card.benefits[k]).map(([, l]) => l);
 
   const bottomLine = buildBottomLine(card);
   const faqs = buildCardFaqs(card);
+  const lines = receiptLines(card);
 
-  // Drop APR/interest-rate rows that leaked into earn_rates (no card earns >10× base).
+  // Drop APR/interest-rate rows that leaked into earn_rates (no card earns >10x base).
   const earnRates = [...card.earn_rates]
     .filter(er => { const n = parseFloat(er.rate); return isNaN(n) || n <= 10; })
     .sort((a, b) => (parseFloat(b.rate) || 0) - (parseFloat(a.rate) || 0));
+
+  const insurance = Object.entries(card.insurance).filter(([, v]) => v != null && String(v).trim() !== '');
+  const keyPerks = card.key_perks.filter(p => p && p.trim());
+  const pros = card.pros.filter(p => p && p.trim());
+  const cons = card.cons.filter(p => p && p.trim());
 
   const similar = allCards
     .filter(c => c.slug !== card.slug && c.card_type === card.card_type && c.country === card.country)
     .sort((a, b) => b.first_year_value - a.first_year_value)
     .slice(0, 4);
 
+  const programLabel = programName(card.rewards_program) || null;
+
+  const toc: [string, string][] = [
+    ['verdict', 'The bottom line'],
+    ...(card.welcome_bonus ? [['offer', 'Welcome offer'] as [string, string]] : []),
+    ...(earnRates.length || card.earn_rates_summary ? [['earn', 'Earn rates'] as [string, string]] : []),
+    ['benefits', 'Benefits'],
+    ...(insurance.length ? [['insurance', 'Insurance'] as [string, string]] : []),
+    ...(pros.length || cons.length ? [['assessment', 'Pros and cons'] as [string, string]] : []),
+    ...(faqs.length ? [['faq', 'Questions'] as [string, string]] : []),
+  ];
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.finterminal.ca/' },
+      { '@type': 'ListItem', position: 2, name: 'Cards', item: 'https://www.finterminal.ca/cards' },
+      { '@type': 'ListItem', position: 3, name: card.name, item: `https://www.finterminal.ca/cards/${card.slug}` },
+    ],
+  };
+
+  const applyRow = (
+    <div className={s.actions}>
+      {card.apply_url && (
+        <a href={card.apply_url} target="_blank" rel="noopener noreferrer sponsored" className="btn btn-primary btn-lg">
+          Apply on the issuer site <span aria-hidden="true">↗</span>
+        </a>
+      )}
+      <Link href={`/compare?cards=${card.slug}`} className="btn btn-lg">Compare with other cards</Link>
+    </div>
+  );
+
   return (
-    <div className="app norail">
-      <main>
-        <nav className="crumb">
-          <Link href="/">home</Link><span className="sep">/</span>
-          <Link href="/cards">cards</Link><span className="sep">/</span>
-          <span className="cur">{card.slug}</span>
-        </nav>
+    <div className={`wrap page tone-cards ${s.page}`}>
+      <nav className="crumb" aria-label="Breadcrumb">
+        <Link href="/">Home</Link><span className="sep" aria-hidden="true">/</span>
+        <Link href="/cards">Cards</Link><span className="sep" aria-hidden="true">/</span>
+        <span className="cur" aria-current="page">{card.name}</span>
+      </nav>
 
-        <div className="head">
-          <h1>{card.name}</h1>
-          <span className="meta">{card.issuer} · {card.rewards_program || card.card_type} · {card.network}</span>
+      {/* ── hero ── */}
+      <header className={s.hero}>
+        <p className="eyebrow">{card.is_business ? 'Business credit card' : 'Credit card'}</p>
+        <h1 className={s.h1}>{card.name}</h1>
+        <p className={s.byline}>
+          {card.issuer}
+          {card.network && card.network !== 'Unknown' && <> · {card.network}</>}
+          {programLabel && <> · {programLabel}</>}
+        </p>
+        <div className={`chips ${s.chips}`}>
+          <span className={`chip ${cur === 'CA' ? 'chip-red' : 'chip-cards'}`}>{countryName}</span>
+          {card.card_type && <span className={`chip ${s.cap}`}>{card.card_type}</span>}
+          {card.is_business && <span className="chip">Business</span>}
+          {tags.map(t => <span key={t} className={`chip chip-tone ${s.perkChip}`}>{t}</span>)}
         </div>
+      </header>
 
-        <div className="cd-tags">
-          <span className="tag em">{card.country === 'CA' ? 'Canada' : 'United States'}</span>
-          <span className="tag">{card.card_type}</span>
-          {card.is_business && <span className="tag">business</span>}
-          {tags.map(t => <span key={t} className="tag">{t}</span>)}
-        </div>
-
-        {/* answer-first verdict */}
-        {bottomLine && (
-          <div className="cd-note">
-            <div className="cap">The bottom line</div>
-            <p style={{ margin: 0 }} className="sub">{bottomLine}</p>
-          </div>
-        )}
-
-        {/* headline vitals */}
-        <div className="vitals">
-          <div className="vital">
-            <div className="k">Annual fee</div>
-            <div className={`val${card.annual_fee > 0 ? ' neg' : ''}`}>{card.annual_fee === 0 ? 'Free' : formatCurrency(card.annual_fee, card.country)}</div>
-            {card.first_year_fee != null && card.first_year_fee !== card.annual_fee && (
-              <div className="sub">{card.first_year_fee === 0 ? 'first year free' : `first year ${formatCurrency(card.first_year_fee, card.country)}`}</div>
-            )}
-          </div>
-          <div className="vital">
-            <div className="k">Welcome bonus</div>
-            <div className="val">{bonusDisplay}</div>
-            <div className="sub">{card.welcome_bonus_points ? 'points' : (card.welcome_bonus_value > 0 ? 'est. value' : 'none listed')}</div>
-          </div>
-          <div className="vital">
-            <div className="k">Est. 12-mo value</div>
-            <div className={`val ${card.first_year_value < 0 ? 'neg' : 'pos'}`}>{formatCurrency(card.first_year_value, card.country)}</div>
-            <div className="sub">bonus × ¢/pt − fee</div>
-          </div>
-          {card.cpp_cad != null && (
-            <div className="vital">
-              <div className="k">Base ¢/pt</div>
-              <div className="val">{cpp.toFixed(2)}</div>
-              {maxCpp && <div className="sub">up to {maxCpp.toFixed(1)}¢ sweet spot</div>}
-            </div>
-          )}
-          <div className="vital">
-            <div className="k">Foreign txn</div>
-            <div className={`val sm${fxLabel === '0%' ? ' pos' : ''}`}>{fxLabel}</div>
-          </div>
-          <div className="vital">
-            <div className="k">Benefits</div>
-            <div className="val sm">{active.length} / {benefitEntries.length}</div>
-          </div>
-        </div>
-
-        {card.first_year_value_formula && (
-          <p className="cd-formula">// {card.first_year_value_formula} = <b>{formatCurrency(card.first_year_value, card.country)}</b></p>
-        )}
-
-        {/* welcome bonus detail */}
-        {card.welcome_bonus && (
-          <>
-            <div className="cd-sec">Welcome Offer</div>
-            <div className="cd-note">
-              {card.welcome_bonus}
-              {card.welcome_bonus_conditions && <div className="fine">{card.welcome_bonus_conditions}</div>}
-            </div>
-          </>
-        )}
-
-        {/* notes for canadians */}
-        {card.notes_for_canadians && (
-          <>
-            <div className="cd-sec">Note · For Canadians</div>
-            <div className="cd-note red">{card.notes_for_canadians}</div>
-          </>
-        )}
-
-        {/* earn rates */}
-        <div className="cd-sec">Earn Rates</div>
-        {earnRates.length > 0 ? (
-          <div>
-            {earnRates.map((er, i) => (
-              <div key={i} className="erow">
-                <span className="erate">{er.rate.match(/^[\d.]+x?/)?.[0] || er.rate}</span>
-                <span className="ecat">{er.category}</span>
+      <div className={s.layout}>
+        {/* ── at a glance (right column on desktop, right after the hero on mobile) ── */}
+        <aside className={s.side} aria-label="At a glance">
+          <div className={s.glance}>
+            <dl className={s.vitals}>
+              <div className={s.vital}>
+                <dt>Annual fee</dt>
+                <dd className={`${s.vv}${card.annual_fee === 0 ? ` ${s.pos}` : ''}`}>
+                  {card.annual_fee === 0 ? 'No fee' : formatCurrency(card.annual_fee, cur)}
+                </dd>
+                {card.first_year_fee != null && card.first_year_fee !== card.annual_fee && (
+                  <dd className={s.vs}>{card.first_year_fee === 0 ? 'First year free' : `First year ${formatCurrency(card.first_year_fee, cur)}`}</dd>
+                )}
               </div>
-            ))}
-          </div>
-        ) : card.earn_rates_summary ? (
-          <p className="cd-empty">{card.earn_rates_summary}</p>
-        ) : (
-          <p className="cd-empty">no earn-rate data on file</p>
-        )}
-
-        {/* benefits */}
-        <div className="cd-sec">Benefits &amp; Insurance</div>
-        {card.benefits_incomplete ? (
-          <p className="cd-empty">benefits data pending verification</p>
-        ) : (
-          <div className="benlist">
-            {benefitEntries.map(([key, on]) => (
-              <div key={key} className={`ben ${on ? 'on' : 'off'}`}>
-                <span className="mk">{on ? '✓' : '·'}</span>{BENEFIT_LABELS[key]}
+              <div className={s.vital}>
+                <dt>Welcome bonus</dt>
+                <dd className={s.vv}>
+                  {card.welcome_bonus_points
+                    ? card.welcome_bonus_points.toLocaleString('en-CA')
+                    : card.welcome_bonus_value > 0 ? formatCurrency(card.welcome_bonus_value, cur) : 'None listed'}
+                </dd>
+                <dd className={s.vs}>{card.welcome_bonus_points ? 'points' : card.welcome_bonus_value > 0 ? 'estimated value' : ' '}</dd>
               </div>
-            ))}
-          </div>
-        )}
-
-        {/* key perks */}
-        {card.key_perks.length > 0 && (
-          <>
-            <div className="cd-sec">Key Perks</div>
-            <div className="cd-list">
-              {card.key_perks.map((p, i) => <div key={i} className="cd-li">{p}</div>)}
-            </div>
-          </>
-        )}
-
-        {/* insurance detail */}
-        {Object.keys(card.insurance).length > 0 && (
-          <>
-            <div className="cd-sec">Insurance Detail</div>
-            <div className="kv">
-              {Object.entries(card.insurance).map(([k, v]) => (
-                <div key={k} className="kvrow">
-                  <div className="kvk">{k.replace(/_/g, ' ')}</div>
-                  <div className="kvv">{v}</div>
+              {card.cpp_cad != null && (
+                <div className={s.vital}>
+                  <dt>Base value per point</dt>
+                  <dd className={s.vv}>{cpp.toFixed(2)}¢</dd>
+                  {maxCpp && <dd className={s.vs}>up to {maxCpp.toFixed(1)}¢ on sweet spots</dd>}
                 </div>
-              ))}
-            </div>
-          </>
-        )}
-
-        {/* pros / cons */}
-        {(card.pros.length > 0 || card.cons.length > 0) && (
-          <>
-            <div className="cd-sec">Assessment</div>
-            <div className="proscons">
-              <div>
-                {card.pros.map((p, i) => <div key={i} className="pc-li pro"><span className="s">+</span>{p}</div>)}
+              )}
+              <div className={s.vital}>
+                <dt>Foreign transaction fee</dt>
+                <dd className={`${s.vv}${fxLabel === '0%' ? ` ${s.pos}` : ''}`}>{fxLabel}</dd>
               </div>
-              <div>
-                {card.cons.map((p, i) => <div key={i} className="pc-li con"><span className="s">−</span>{p}</div>)}
+            </dl>
+
+            <div className={s.ledger}>
+              <div className={s.ledgerCap}>Est. first-year value</div>
+              <div className={`${s.ledgerNum} ${card.first_year_value < 0 ? s.neg : s.pos}`}>
+                {formatCurrency(card.first_year_value, cur)}
               </div>
-            </div>
-          </>
-        )}
-
-        {/* apply */}
-        {card.apply_url && (
-          <div style={{ marginTop: 18 }}>
-            <a href={card.apply_url} target="_blank" rel="noopener noreferrer" className="cd-apply">APPLY →</a>
-          </div>
-        )}
-
-        {/* similar */}
-        {similar.length > 0 && (
-          <>
-            <div className="cd-sec">Similar Cards</div>
-            <div>
-              {similar.map(c => (
-                <div key={c.slug} className="simrow">
-                  <div style={{ minWidth: 0 }}>
-                    <Link href={`/cards/${c.slug}`} className="sn">{c.name}</Link>
-                    <div className="si">{c.issuer} · {c.annual_fee === 0 ? 'no fee' : `${formatCurrency(c.annual_fee, c.country)}/yr`}</div>
+              <div className={`receipt ${s.receipt}`}>
+                {lines.map((l, i) => (
+                  <div className="rl" key={i}>
+                    <span className="lab">{l.label}</span>
+                    <span className="dots" />
+                    <span className={`amt${l.neg ? ' neg' : ''}`}>{l.neg ? '−' : ''}{formatCurrency(Math.abs(l.amount), cur)}</span>
                   </div>
-                  <span className="sv" style={c.first_year_value < 0 ? { color: 'var(--red)' } : undefined}>{formatCurrency(c.first_year_value, c.country)}</span>
+                ))}
+                <div className="rl total">
+                  <span className="lab">TOTAL</span>
+                  <span className="dots" />
+                  <span className={`amt${card.first_year_value < 0 ? ' neg' : ''}`}>{formatCurrency(card.first_year_value, cur)}</span>
                 </div>
-              ))}
-            </div>
-          </>
-        )}
-
-        {/* FAQ */}
-        {faqs.length > 0 && (
-          <>
-            <div className="cd-sec">Frequently asked questions</div>
-            {faqs.map((f, i) => (
-              <div key={i}>
-                <h4>{f.q}</h4>
-                <p className="sub" style={{ marginTop: 4 }}>{f.a}</p>
               </div>
-            ))}
-          </>
-        )}
+              {card.first_year_value_formula && (
+                <p className={s.formula}>Source math: {stripDashes(card.first_year_value_formula)}</p>
+              )}
+              <p className={s.ledgerNote}>
+                Values are in {cur === 'CA' ? 'Canadian' : 'US'} dollars. <Link href="/how-we-value-points">How we value points</Link>
+              </p>
+            </div>
 
-        <p className="cd-formula" style={{ marginTop: 22 }}>// last updated {card.last_updated || 'n/a'} · est. value = welcome bonus × base ¢/pt − annual fee</p>
+            {applyRow}
+          </div>
+        </aside>
 
+        {/* ── the record ── */}
+        <div className={s.main}>
+          <nav className={s.toc} aria-label="On this page">
+            {toc.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
+          </nav>
+
+          <section id="verdict" className={s.sec}>
+            <h2 className={s.h2}>The bottom line</h2>
+            <div className={`cd-note short ${s.verdict}`}><p>{bottomLine}</p></div>
+            {card.notes_for_canadians && (
+              <div className={s.canNote}>
+                <div className={s.canCap}>Note for Canadians</div>
+                <p>{card.notes_for_canadians}</p>
+              </div>
+            )}
+          </section>
+
+          {card.welcome_bonus && (
+            <section id="offer" className={s.sec}>
+              <h2 className={s.h2}>Welcome offer</h2>
+              <div className={s.offer}>
+                <p className={s.offerText}>{card.welcome_bonus}</p>
+                {card.welcome_bonus_conditions && (
+                  <p className={s.offerFine}><span className={s.fineCap}>Conditions</span>{card.welcome_bonus_conditions}</p>
+                )}
+              </div>
+            </section>
+          )}
+
+          {(earnRates.length > 0 || card.earn_rates_summary) && (
+            <section id="earn" className={s.sec}>
+              <h2 className={s.h2}>Earn rates</h2>
+              {earnRates.length > 0 ? (
+                <div className="tablewrap">
+                  <table className={s.earnTable}>
+                    <thead>
+                      <tr><th scope="col">Rate</th><th scope="col">On</th></tr>
+                    </thead>
+                    <tbody>
+                      {earnRates.map((er, i) => (
+                        <tr key={i}>
+                          <td className={s.rate}>{er.rate.match(/^[\d.]+x?/)?.[0] || er.rate}</td>
+                          <td>{er.category}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <p className={s.p}>{card.earn_rates_summary}</p>
+              )}
+            </section>
+          )}
+
+          <section id="benefits" className={s.sec}>
+            <h2 className={s.h2}>Benefits</h2>
+            {card.benefits_incomplete ? (
+              <p className={s.muted}>We are still verifying this card&apos;s benefit list. Check the issuer&apos;s terms before you apply.</p>
+            ) : (
+              <>
+                <p className={s.secSub}>{active.length} of {benefitEntries.length} benefits we track</p>
+                <ul className={s.benlist}>
+                  {benefitEntries.map(([key, on]) => (
+                    <li key={key} className={on ? s.benOn : s.benOff}>
+                      <span className={s.mk} aria-hidden="true">{on ? '✓' : '–'}</span>
+                      {TAG_DEFS.find(([k]) => k === key)?.[1] ?? BENEFIT_LABELS[key]}
+                      <span className="sr-only">{on ? ': included' : ': not included'}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+            {keyPerks.length > 0 && (
+              <>
+                <h3 className={s.h3}>Key perks</h3>
+                <ul className={s.perkList}>
+                  {keyPerks.map((p, i) => <li key={i}>{p}</li>)}
+                </ul>
+              </>
+            )}
+          </section>
+
+          {insurance.length > 0 && (
+            <section id="insurance" className={s.sec}>
+              <h2 className={s.h2}>Insurance</h2>
+              <div className="tablewrap">
+                <table className={s.insTable}>
+                  <thead>
+                    <tr><th scope="col">Coverage</th><th scope="col" className="r">As listed</th></tr>
+                  </thead>
+                  <tbody>
+                    {insurance.map(([k, v]) => {
+                      const info = INSURANCE_INFO[k];
+                      return (
+                        <tr key={k}>
+                          <td>
+                            <div className={s.insName}>{info ? info[0] : prettyKey(k)}</div>
+                            {info && <div className={s.insWhat}>{info[1]}</div>}
+                          </td>
+                          <td className={`r ${s.insVal}`}>{insuranceValue(String(v))}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+              <p className={s.fine}>
+                Figures are shown as our data source lists them, without units. Limits, waiting periods and
+                eligibility live in the issuer&apos;s certificate of insurance, so read that before you count on a coverage.
+              </p>
+            </section>
+          )}
+
+          {(pros.length > 0 || cons.length > 0) && (
+            <section id="assessment" className={s.sec}>
+              <h2 className={s.h2}>Pros and cons</h2>
+              <div className={s.proscons}>
+                {pros.length > 0 && (
+                  <div className={s.pcCol}>
+                    <h3 className={s.pcHead}>What we like</h3>
+                    <ul>{pros.map((p, i) => <li key={i} className={s.pro}><span aria-hidden="true">+</span>{p}</li>)}</ul>
+                  </div>
+                )}
+                {cons.length > 0 && (
+                  <div className={s.pcCol}>
+                    <h3 className={s.pcHead}>Watch out for</h3>
+                    <ul>{cons.map((p, i) => <li key={i} className={s.con}><span aria-hidden="true">−</span>{p}</li>)}</ul>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {similar.length > 0 && (
+            <section className={s.sec}>
+              <h2 className={s.h2}>Similar cards</h2>
+              <p className={s.secSub}>Other {cur === 'CA' ? 'Canadian' : 'US'} {cardTypeWord(card)} cards, by estimated first-year value</p>
+              <ul className="rows">
+                {similar.map(c => (
+                  <li key={c.slug} className="row is-link">
+                    <div className="r-main">
+                      <div className="r-title"><Link href={`/cards/${c.slug}`}>{c.name}</Link></div>
+                      <div className="r-sub">{c.issuer} · {c.annual_fee === 0 ? 'no annual fee' : `${formatCurrency(c.annual_fee, c.country)} a year`}</div>
+                    </div>
+                    <span className={`r-end ${c.first_year_value < 0 ? s.neg : s.pos}`}>{formatCurrency(c.first_year_value, c.country)}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {faqs.length > 0 && (
+            <section id="faq" className={s.sec}>
+              <h2 className={s.h2}>Questions people ask</h2>
+              <div className={s.faq}>
+                {faqs.map((f, i) => (
+                  <div key={i} className={s.faqItem}>
+                    <h3 className={s.faqQ}>{f.q}</h3>
+                    <p className={s.p}>{f.a}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <div className={s.endActions}>{applyRow}</div>
+
+          <p className={s.updated}>
+            Card details last updated {card.last_updated || 'n/a'} · est. value = welcome bonus × base ¢/pt − annual fee
+          </p>
+        </div>
+      </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          // A credit card is a financial product, not a retail Product. Using
+          // schema.org/CreditCard (no offers/price) avoids Google's Merchant-listing
+          // and Product-snippet requirements (image, availability, reviews, etc.),
+          // which do not apply to cards and which we will not fabricate.
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'CreditCard',
+            name: card.name,
+            description: `${card.name} by ${card.issuer}. ${card.card_type} credit card.`,
+            provider: { '@type': 'Organization', name: card.issuer },
+          }),
+        }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+
+      {/* FAQPage schema, built from the SAME faqs array as the visible FAQ so
+          they can never drift. Rendered only when at least one FAQ exists. */}
+      {faqs.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            // A credit card is a financial product, not a retail Product. Using
-            // schema.org/CreditCard (no offers/price) avoids Google's Merchant-listing
-            // and Product-snippet requirements (image, availability, reviews, etc.),
-            // which do not apply to cards and which we will not fabricate.
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'CreditCard',
-              name: card.name,
-              description: `${card.name} by ${card.issuer}. ${card.card_type} credit card.`,
-              provider: { '@type': 'Organization', name: card.issuer },
+              '@type': 'FAQPage',
+              mainEntity: faqs.map(f => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
             }),
           }}
         />
-
-        {/* FAQPage schema, built from the SAME faqs array as the visible FAQ so
-            they can never drift. Rendered only when at least one FAQ exists. */}
-        {faqs.length > 0 && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: faqs.map(f => ({
-                  '@type': 'Question',
-                  name: f.q,
-                  acceptedAnswer: { '@type': 'Answer', text: f.a },
-                })),
-              }),
-            }}
-          />
-        )}
-      </main>
+      )}
     </div>
   );
 }

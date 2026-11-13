@@ -1,66 +1,69 @@
 'use client';
 
 import { Fragment, Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import type { CSSProperties } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { Benefits } from '@/data/cards';
-import { CARDS_VERIFIED } from '@/data/cards';
-import { formatCurrency, receiptLines, earnLines, type SlimCard } from '@/data/card-view';
+import { formatCurrency, receiptLines, earnLines, programName, type SlimCard } from '@/data/card-view';
 import { VerifiedStamp } from '@/components/VerifiedStamp';
+import s from './cards.module.css';
 
-type SortKey = 'name' | 'tags' | 'fee' | 'bonus' | 'cpp' | 'value';
+type SortKey = 'name' | 'fee' | 'bonus' | 'cpp' | 'value';
 type SortDir = 'asc' | 'desc';
+type Country = 'CA' | 'US' | 'all';
 
-const CARD_TYPES = ['travel', 'cashback', 'airline', 'hotel', 'business'];
-
-// Tag chips now carry human words (spec 3.7): "no-fx" reads "no foreign fees".
-// [benefit key, short chip label, full tooltip].
-const TAG_DEFS: [keyof Benefits, string, string][] = [
-  ['lounge_access', 'lounge access', 'Airport lounge access'],
-  ['no_fx_fee', 'no foreign fees', 'No foreign transaction fees'],
-  ['car_rental_insurance', 'rental car insurance', 'Rental car collision/damage insurance'],
-  ['free_checked_bags', 'free checked bag', 'Free checked bag on the co-brand airline'],
-  ['travel_medical', 'travel medical', 'Emergency travel medical coverage'],
-  ['trip_cancellation', 'trip cancellation', 'Trip cancellation / interruption coverage'],
-  ['mobile_insurance', 'mobile insurance', 'Cell phone / mobile device insurance'],
-  ['purchase_protection', 'purchase protection', 'Purchase protection on new buys'],
-  ['extended_warranty', 'extended warranty', 'Extended manufacturer warranty'],
-  ['flight_delay', 'flight delay', 'Flight / baggage delay coverage'],
-];
-const RAIL_BENEFITS: [keyof Benefits, string][] = [
-  ['lounge_access', 'Lounge access'], ['no_fx_fee', 'No FX fee'], ['car_rental_insurance', 'Car rental ins.'], ['free_checked_bags', 'Free checked bag'],
+// Card types offered as filters. "cashback" is the data key; people read "Cash back".
+const CARD_TYPES: [string, string][] = [
+  ['travel', 'Travel'], ['cashback', 'Cash back'], ['airline', 'Airline'], ['hotel', 'Hotel'], ['business', 'Business'],
 ];
 
-// Family & everyday lens (spec 3.7). Built ONLY from data that actually exists
-// on the slim card: no annual fee, cash-back category, no foreign fees, rental
-// car insurance. No invented groceries/gas fields — earn categories aren't in
-// this payload, so we don't pretend they are.
-type FamilyKey = 'nofee' | 'cashback' | 'nofx' | 'carins';
-const FAMILY_DEFS: { key: FamilyKey; label: string; test: (c: SlimCard) => boolean }[] = [
-  { key: 'nofee', label: 'No annual fee', test: (c) => c.annual_fee === 0 },
-  { key: 'cashback', label: 'Cash back', test: (c) => c.categories.includes('cashback') },
-  { key: 'nofx', label: 'No foreign fees', test: (c) => c.benefits.no_fx_fee },
-  { key: 'carins', label: 'Rental car insurance', test: (c) => c.benefits.car_rental_insurance },
+// Perk labels used everywhere on this page (rail filters, row perks line,
+// tooltips), so one benefit never shows up under two different names.
+const PERKS: [keyof Benefits, string, string][] = [
+  ['lounge_access', 'Lounge access', 'Airport lounge access'],
+  ['no_fx_fee', 'No foreign fees', 'No foreign transaction fees'],
+  ['car_rental_insurance', 'Rental car insurance', 'Rental car collision and damage insurance'],
+  ['free_checked_bags', 'Free checked bag', 'Free checked bag on the co-brand airline'],
+  ['travel_medical', 'Travel medical', 'Emergency travel medical coverage'],
+  ['trip_cancellation', 'Trip cancellation', 'Trip cancellation and interruption coverage'],
+  ['mobile_insurance', 'Mobile insurance', 'Cell phone and mobile device insurance'],
+  ['purchase_protection', 'Purchase protection', 'Purchase protection on new buys'],
+  ['extended_warranty', 'Extended warranty', 'Extended manufacturer warranty'],
+  ['flight_delay', 'Flight delay', 'Flight and baggage delay coverage'],
+];
+// The rail offers the four perks people filter on most.
+const RAIL_PERKS: (keyof Benefits)[] = ['lounge_access', 'no_fx_fee', 'car_rental_insurance', 'free_checked_bags'];
+const perkLabel = (k: keyof Benefits) => PERKS.find(([key]) => key === k)![1];
+
+const COLUMNS: { key: SortKey; label: string; right?: boolean; className?: string }[] = [
+  { key: 'name', label: 'Card' },
+  { key: 'fee', label: 'Annual fee', right: true },
+  { key: 'bonus', label: 'Welcome bonus', right: true },
+  { key: 'cpp', label: 'Base ¢/pt', right: true, className: 'col-cpp' },
+  { key: 'value', label: 'Est. first-year value', right: true },
 ];
 
-const COLUMNS: { key: SortKey; label: string; right?: boolean }[] = [
-  { key: 'name', label: 'Card' }, { key: 'tags', label: 'Tags' }, { key: 'fee', label: 'Annual fee', right: true },
-  { key: 'bonus', label: 'Bonus', right: true }, { key: 'cpp', label: 'Base ¢/pt', right: true }, { key: 'value', label: 'Est. 12-mo value', right: true },
-];
-const tagsFor = (c: SlimCard) => TAG_DEFS.filter(([k]) => c.benefits[k]);
+const perksFor = (c: SlimCard) => PERKS.filter(([k]) => c.benefits[k]);
 const cppFor = (c: SlimCard) => c.cpp_cad ?? 1.0;
+const num = (n: number) => n.toLocaleString('en-CA');
+const FEE_MAX = 1000;
+
+function median(values: number[]): number | null {
+  if (!values.length) return null;
+  const v = [...values].sort((a, b) => a - b);
+  const mid = Math.floor(v.length / 2);
+  return v.length % 2 ? v[mid] : (v[mid - 1] + v[mid]) / 2;
+}
 
 // useLayoutEffect on the client so a client-side navigation to /cards?q=... paints
 // the filtered list in the same frame; useEffect on the server so React never warns.
 const useIsomorphicLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
-// Reading useSearchParams() during Explorer's own render made Next bail the whole
-// page out of static prerendering: /cards shipped only the Suspense fallback, so
-// crawlers saw a bare <h1> with no card names and no /cards/<slug> links. The hook
-// now lives in this leaf, isolated behind its own Suspense boundary, so only this
-// null-rendering component is client-only and the entire table prerenders as HTML.
-// It reports the params upward after hydration, which is when the URL is knowable
-// on a statically exported page anyway.
+// Reading useSearchParams() during Explorer's own render would bail the whole page
+// out of static prerendering (crawlers would see no card names and no
+// /cards/<slug> links). The hook lives in this null-rendering leaf, isolated
+// behind its own Suspense boundary, so the entire table still prerenders as HTML.
+// It reports the params upward after hydration.
 function SearchParamsSync({ onParams }: { onParams: (params: URLSearchParams) => void }) {
   const qs = useSearchParams().toString();
   useIsomorphicLayoutEffect(() => {
@@ -69,24 +72,22 @@ function SearchParamsSync({ onParams }: { onParams: (params: URLSearchParams) =>
   return null;
 }
 
-export default function Explorer({ cards, networks }: { cards: SlimCard[]; networks: string[] }) {
+export default function Explorer({
+  cards, networks, head, verified,
+}: { cards: SlimCard[]; networks: string[]; head: ReactNode; verified: string }) {
   const [query, setQuery] = useState('');
-
-  const [country, setCountry] = useState<'CA' | 'US' | 'all'>('all');
+  const [country, setCountry] = useState<Country>('all');
   const [types, setTypes] = useState<string[]>([]);
   const [networkFilter, setNetworkFilter] = useState<string[]>([]);
   const [benefits, setBenefits] = useState<(keyof Benefits)[]>([]);
-  const [family, setFamily] = useState<FamilyKey[]>([]);
-  const [maxFee, setMaxFee] = useState(1000);
+  const [maxFee, setMaxFee] = useState(FEE_MAX);
   const [sortKey, setSortKey] = useState<SortKey>('value');
   const [sortDir, setSortDir] = useState<SortDir>('desc');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [openReceipt, setOpenReceipt] = useState<string | null>(null);
 
-  // Mirrors the old behaviour exactly: ?q= tracks the URL on every navigation,
-  // while ?country= / ?type= seed the rail once (they used to be useState
-  // initialisers, which only ran on first mount) and never clobber a filter the
-  // reader has since toggled by hand.
+  // ?q= tracks the URL on every navigation, while ?country= / ?type= seed the
+  // filters once and never clobber a filter the reader has since changed.
   const seeded = useRef(false);
   const applyParams = useCallback((params: URLSearchParams) => {
     setQuery(params.get('q') || '');
@@ -98,18 +99,31 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
     if (t) setTypes(t.split(','));
   }, []);
 
+  // Close the mobile filter sheet with Escape.
+  useEffect(() => {
+    if (!filtersOpen) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setFiltersOpen(false); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [filtersOpen]);
+
+  const countryCounts = useMemo(() => ({
+    all: cards.length,
+    CA: cards.filter((c) => c.country === 'CA').length,
+    US: cards.filter((c) => c.country === 'US').length,
+  }), [cards]);
   const base = useMemo(() => (country === 'all' ? cards : cards.filter((c) => c.country === country)), [country, cards]);
-  const typeCounts = useMemo(() => Object.fromEntries(CARD_TYPES.map((t) => [t, base.filter((c) => c.categories.includes(t)).length])), [base]);
+  const typeCounts = useMemo(() => Object.fromEntries(CARD_TYPES.map(([t]) => [t, base.filter((c) => c.categories.includes(t)).length])), [base]);
   const netCounts = useMemo(() => Object.fromEntries(networks.map((n) => [n, base.filter((c) => c.network === n).length])), [base, networks]);
-  const benefitCounts = useMemo(() => Object.fromEntries(RAIL_BENEFITS.map(([k]) => [k, base.filter((c) => c.benefits[k]).length])), [base]);
-  const familyCounts = useMemo(() => Object.fromEntries(FAMILY_DEFS.map((f) => [f.key, base.filter(f.test).length])), [base]);
+  const perkCounts = useMemo(() => Object.fromEntries(RAIL_PERKS.map((k) => [k, base.filter((c) => c.benefits[k]).length])), [base]);
+  const noFeeCount = useMemo(() => base.filter((c) => c.annual_fee === 0).length, [base]);
 
   const filtered = useMemo(() => {
     let list = base;
     if (query) {
       const words = query.toLowerCase().split(/\s+/).filter(Boolean).map((w) => (w === 'amex' ? 'american express' : w));
       list = list.filter((c) => {
-        let t = `${c.name} ${c.issuer} ${c.rewards_program} ${c.card_type}`.toLowerCase();
+        let t = `${c.name} ${c.issuer} ${c.rewards_program} ${c.card_type} ${c.network}`.toLowerCase();
         if (t.includes('american express')) t += ' amex';
         if (t.includes('mastercard')) t += ' mc';
         return words.every((w) => t.includes(w));
@@ -118,14 +132,12 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
     if (types.length) list = list.filter((c) => types.some((t) => c.categories.includes(t)));
     if (networkFilter.length) list = list.filter((c) => networkFilter.includes(c.network));
     if (benefits.length) list = list.filter((c) => benefits.every((b) => c.benefits[b]));
-    if (family.length) list = list.filter((c) => family.every((f) => FAMILY_DEFS.find((d) => d.key === f)!.test(c)));
-    if (maxFee < 1000) list = list.filter((c) => c.annual_fee <= maxFee);
+    if (maxFee < FEE_MAX) list = list.filter((c) => c.annual_fee <= maxFee);
 
     const dir = sortDir === 'asc' ? 1 : -1;
     const val = (c: SlimCard): number | string => {
       switch (sortKey) {
         case 'name': return c.name.toLowerCase();
-        case 'tags': return tagsFor(c).length;
         case 'fee': return c.annual_fee;
         case 'bonus': return c.welcome_bonus_value;
         case 'cpp': return cppFor(c);
@@ -137,21 +149,24 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
       if (typeof av === 'string' || typeof bv === 'string') return String(av).localeCompare(String(bv)) * dir;
       return (av - bv) * dir;
     });
-  }, [base, query, types, networkFilter, benefits, family, maxFee, sortKey, sortDir]);
+  }, [base, query, types, networkFilter, benefits, maxFee, sortKey, sortDir]);
 
-  const maxValue = Math.max(...filtered.map((c) => c.first_year_value), 1);
-  const top = filtered.reduce<SlimCard | null>((a, c) => (!a || c.first_year_value > a.first_year_value ? c : a), null);
-  const noFx = filtered.filter((c) => c.benefits.no_fx_fee).length;
-  // Median est. 12-mo value across the CURRENTLY FILTERED set. Reuses each card's
-  // already-computed first_year_value (no new methodology). Currency is native per
-  // card; like the "Top value" stat we render with the middle card's country
-  // (unambiguous when a single country is filtered; representative when mixed).
-  const byValue = [...filtered].sort((a, b) => a.first_year_value - b.first_year_value);
-  const mid = Math.floor(byValue.length / 2);
-  const medianValue = byValue.length
-    ? (byValue.length % 2 ? byValue[mid].first_year_value : (byValue[mid - 1].first_year_value + byValue[mid].first_year_value) / 2)
-    : 0;
-  const medianCountry = country !== 'all' ? country : (byValue[mid]?.country ?? 'CA');
+  // Stats never mix currencies: every money figure is computed within one
+  // country and labelled with its currency.
+  const stats = useMemo(() => {
+    const by = (cc: 'CA' | 'US') => filtered.filter((c) => c.country === cc);
+    const top = (list: SlimCard[]) => list.reduce<SlimCard | null>((a, c) => (!a || c.first_year_value > a.first_year_value ? c : a), null);
+    const ca = by('CA'), us = by('US');
+    return {
+      ca, us,
+      topCA: top(ca), topUS: top(us),
+      medCA: median(ca.map((c) => c.first_year_value)),
+      medUS: median(us.map((c) => c.first_year_value)),
+      noFx: filtered.filter((c) => c.benefits.no_fx_fee).length,
+      maxCA: Math.max(1, ...ca.map((c) => c.first_year_value)),
+      maxUS: Math.max(1, ...us.map((c) => c.first_year_value)),
+    };
+  }, [filtered]);
 
   const onSort = (key: SortKey) => {
     if (key === sortKey) setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'));
@@ -161,195 +176,302 @@ export default function Explorer({ cards, networks }: { cards: SlimCard[]; netwo
   const arrow = sortDir === 'asc' ? '▲' : '▼';
   const sortLabel = COLUMNS.find((c) => c.key === sortKey)?.label.toLowerCase() ?? 'value';
 
+  const activeFilters: { key: string; label: string; clear: () => void }[] = [
+    ...types.map((t) => ({ key: `t-${t}`, label: CARD_TYPES.find(([k]) => k === t)?.[1] ?? t, clear: () => setTypes(types.filter((x) => x !== t)) })),
+    ...(maxFee === 0
+      ? [{ key: 'fee', label: 'No annual fee', clear: () => setMaxFee(FEE_MAX) }]
+      : maxFee < FEE_MAX ? [{ key: 'fee', label: `Fee up to $${maxFee}`, clear: () => setMaxFee(FEE_MAX) }] : []),
+    ...benefits.map((b) => ({ key: `b-${b}`, label: perkLabel(b), clear: () => setBenefits(benefits.filter((x) => x !== b)) })),
+    ...networkFilter.map((n) => ({ key: `n-${n}`, label: n, clear: () => setNetworkFilter(networkFilter.filter((x) => x !== n)) })),
+  ];
+  const clearAll = () => { setTypes([]); setMaxFee(FEE_MAX); setBenefits([]); setNetworkFilter([]); setQuery(''); };
+
+  const statCell = (label: string, value: ReactNode, detail: ReactNode, tone?: 'pos' | 'neg') => (
+    <div className="stat">
+      <div className="l">{label}</div>
+      <div className={`v${tone === 'pos' ? ' em' : tone === 'neg' ? ' rd' : ''}`}>{value}</div>
+      <div className="d">{detail}</div>
+    </div>
+  );
+  const valueTone = (v: number | null | undefined) => (v == null ? undefined : v < 0 ? 'neg' : 'pos');
+
   return (
-    <div className="app">
+    <div className={`app tone-cards ${s.shell}`}>
       <Suspense fallback={null}>
         <SearchParamsSync onParams={applyParams} />
       </Suspense>
-      <button
-        type="button"
-        className="railtoggle"
-        onClick={() => setFiltersOpen((o) => !o)}
-        aria-expanded={filtersOpen}
-      >
-        {filtersOpen ? 'Hide filters' : 'Filters'}
-      </button>
-      <aside className={`rail${filtersOpen ? ' open' : ''}`}>
-        <h4>Country</h4>
-        {(['all', 'CA', 'US'] as const).map((c) => (
-          <label key={c} className={`filt${country === c ? ' on' : ''}`}>
-            <input type="radio" name="country" checked={country === c} onChange={() => setCountry(c)} /> {c === 'all' ? 'All' : c}
-          </label>
-        ))}
 
-        <h4>Card type</h4>
-        {CARD_TYPES.map((t) => (
-          <label key={t} className={`filt${types.includes(t) ? ' on' : ''}`} style={{ textTransform: 'capitalize' }}>
-            <input type="checkbox" checked={types.includes(t)} onChange={() => toggle(types, t, setTypes)} /> {t}
+
+      <main>
+        {head}
+
+        <div className={s.toolbar}>
+          <div className={s.search}>
+            <label htmlFor="card-search" className="sr-only">Search cards</label>
+            <svg aria-hidden="true" viewBox="0 0 24 24" className={s.searchIcon}><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="2" /><path d="m20 20-3.5-3.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+            <input
+              id="card-search" type="search" className={s.searchInput} placeholder="Search by card, bank or program"
+              value={query} onChange={(e) => setQuery(e.target.value)} autoComplete="off"
+            />
+          </div>
+          <div className={`seg ${s.seg}`} role="group" aria-label="Country">
+            {(['all', 'CA', 'US'] as const).map((c) => (
+              <button key={c} type="button" aria-pressed={country === c} onClick={() => setCountry(c)}>
+                {c === 'all' ? 'All' : c === 'CA' ? 'Canada' : 'US'} <span className={s.segCt}>{countryCounts[c]}</span>
+              </button>
+            ))}
+          </div>
+          <button
+            type="button" className={s.filterBtn} onClick={() => setFiltersOpen(true)}
+            aria-expanded={filtersOpen} aria-controls="card-filters"
+          >
+            Filters{activeFilters.length > 0 && <span className={s.filterCt}>{activeFilters.length}</span>}
+          </button>
+        </div>
+
+        {(activeFilters.length > 0 || query) && (
+          <div className={s.active} aria-label="Active filters">
+            {query && (
+              <button type="button" className={s.activeChip} onClick={() => setQuery('')}>
+                “{query}” <span aria-hidden="true">×</span><span className="sr-only">remove search</span>
+              </button>
+            )}
+            {activeFilters.map((f) => (
+              <button key={f.key} type="button" className={s.activeChip} onClick={f.clear}>
+                {f.label} <span aria-hidden="true">×</span><span className="sr-only">remove filter</span>
+              </button>
+            ))}
+            <button type="button" className={s.clearLink} onClick={clearAll}>Clear all</button>
+          </div>
+        )}
+
+        <div className={`stats ${s.stats}`} aria-live="polite">
+          {statCell('Cards shown', filtered.length, `${stats.ca.length} Canadian · ${stats.us.length} US`)}
+          {country === 'all' ? (
+            <>
+              {statCell('Top value · CA$', stats.topCA ? formatCurrency(stats.topCA.first_year_value, 'CA') : '–', stats.topCA?.name ?? 'no Canadian cards in view', valueTone(stats.topCA?.first_year_value))}
+              {statCell('Median value · CA$', stats.medCA != null ? formatCurrency(stats.medCA, 'CA') : '–', stats.ca.length ? `middle of ${stats.ca.length} Canadian cards` : 'no Canadian cards in view')}
+              {statCell('Top value · US$', stats.topUS ? formatCurrency(stats.topUS.first_year_value, 'US') : '–', stats.topUS?.name ?? 'no US cards in view', valueTone(stats.topUS?.first_year_value))}
+            </>
+          ) : (
+            <>
+              {(() => {
+                const top = country === 'CA' ? stats.topCA : stats.topUS;
+                const med = country === 'CA' ? stats.medCA : stats.medUS;
+                const cur = country === 'CA' ? 'CA$' : 'US$';
+                return (
+                  <>
+                    {statCell(`Top value · ${cur}`, top ? formatCurrency(top.first_year_value, country) : '–', top?.name ?? 'no cards in view', valueTone(top?.first_year_value))}
+                    {statCell(`Median value · ${cur}`, med != null ? formatCurrency(med, country) : '–', filtered.length ? `middle of ${filtered.length} cards` : 'no cards in view')}
+                  </>
+                );
+              })()}
+              {statCell('No foreign fees', stats.noFx, 'cards with 0% foreign transaction fee')}
+            </>
+          )}
+        </div>
+
+        <div className={s.tableHead}>
+          <span>Showing {filtered.length} of {cards.length} · sorted by {sortLabel} {arrow}</span>
+          <span className={s.tableHint}>Tap a value to open its receipt</span>
+        </div>
+
+        <div className={`tablewrap ${s.tablewrap}`}>
+          <div className="tablescroll">
+            <table className={s.table}>
+              <caption className="sr-only">Credit cards, {filtered.length} shown, sorted by {sortLabel}</caption>
+              <thead>
+                <tr>
+                  {COLUMNS.map((col) => (
+                    <th
+                      key={col.key}
+                      scope="col"
+                      className={`${col.right ? 'r' : ''} ${col.className ?? ''}`}
+                      aria-sort={sortKey === col.key ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}
+                    >
+                      <button type="button" className={s.sortBtn} onClick={() => onSort(col.key)}>
+                        {col.label}
+                        <span className={s.sortAr} aria-hidden="true">{sortKey === col.key ? arrow : ''}</span>
+                      </button>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {filtered.map((c) => {
+                  const perks = perksFor(c);
+                  const isOpen = openReceipt === c.slug;
+                  const lines = isOpen ? receiptLines(c) : [];
+                  const earn = isOpen ? earnLines(c) : [];
+                  const max = c.country === 'CA' ? stats.maxCA : stats.maxUS;
+                  const pct = Math.max(0, Math.min(100, (c.first_year_value / max) * 100));
+                  const rid = `rcpt-${c.slug}`;
+                  return (
+                    <Fragment key={c.slug}>
+                      <tr className={`cardrow ${s.row}${isOpen ? ' rcpt-open' : ''}`}>
+                        <td data-label="Card" className={s.cardCell}>
+                          <div className={s.cardTop}>
+                            <span className={`cc ${c.country.toLowerCase()}`} title={c.country === 'CA' ? 'Canadian card' : 'US card'}>{c.country}</span>
+                            <a href={`/cards/${c.slug}`} className={`cn ${s.cardName}`}>{c.name}</a>
+                          </div>
+                          <div className={s.cardSub}>
+                            {c.issuer}
+                            {c.rewards_program && <> · <span>{programName(c.rewards_program)}</span></>}
+                            {c.network !== 'Unknown' && <> · {c.network}</>}
+                          </div>
+                          {perks.length > 0 && (
+                            <div className={s.perks} title={perks.map(([, , t]) => t).join(', ')}>
+                              {perks.slice(0, 3).map(([k, label]) => <span key={k} className={s.perk}>{label}</span>)}
+                              {perks.length > 3 && <span className={s.perkMore}>+{perks.length - 3} more</span>}
+                            </div>
+                          )}
+                        </td>
+                        <td className={`r ${s.num}`} data-label="Annual fee">
+                          {c.annual_fee === 0 ? <span className={s.free}>No fee</span> : formatCurrency(c.annual_fee, c.country)}
+                        </td>
+                        <td className={`r ${s.num}`} data-label="Welcome bonus">
+                          {c.welcome_bonus_points
+                            ? <span>{num(c.welcome_bonus_points)} <span className={s.unit}>pts</span></span>
+                            : c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country) : <span className={s.none}>none listed</span>}
+                        </td>
+                        <td className={`r col-cpp ${s.num}`} data-label="Base ¢/pt">{cppFor(c).toFixed(2)}</td>
+                        <td className={`r ${s.valCell}`} data-label="Est. first-year value">
+                          <button
+                            type="button"
+                            className={`valbtn ${c.first_year_value < 0 ? 'negv' : 'pos'}`}
+                            aria-expanded={isOpen}
+                            aria-controls={isOpen ? rid : undefined}
+                            aria-label={`${formatCurrency(c.first_year_value, c.country)}, show the math for ${c.name}`}
+                            onClick={() => setOpenReceipt((x) => (x === c.slug ? null : c.slug))}
+                          >
+                            {formatCurrency(c.first_year_value, c.country)}
+                          </button>
+                          <span className={s.bar} aria-hidden="true" style={{ '--w': `${pct}%` } as CSSProperties} />
+                        </td>
+                      </tr>
+                      {isOpen && (
+                        <tr className="rcpt" id={rid}>
+                          <td colSpan={COLUMNS.length}>
+                            <div className={`receipt ${s.receipt}`}>
+                              <div className={s.receiptCap}>How we got {formatCurrency(c.first_year_value, c.country)}</div>
+                              {lines.map((l, i) => (
+                                <div className="rl" key={i}>
+                                  <span className="lab">{l.label}</span>
+                                  <span className="dots" />
+                                  <span className={`amt${l.neg ? ' neg' : ''}`}>
+                                    {l.neg ? '−' : ''}{formatCurrency(Math.abs(l.amount), c.country)}
+                                  </span>
+                                </div>
+                              ))}
+                              <div className="rl total">
+                                <span className="lab">EST. FIRST-YEAR VALUE</span>
+                                <span className="dots" />
+                                <span className={`amt${c.first_year_value < 0 ? ' neg' : ''}`}>{formatCurrency(c.first_year_value, c.country)}</span>
+                              </div>
+                              {earn.length > 0 && (
+                                <div className={s.earn}>
+                                  <div className={`rl ${s.dim}`}>
+                                    <span className="lab">earn on your spend</span>
+                                    <span className="dots" />
+                                    <span className="note">rates only, not in the total above</span>
+                                  </div>
+                                  {earn.map((e, i) => (
+                                    <div className={`rl ${s.dim}`} key={i}>
+                                      <span className={`lab ${s.earnCat}`}>{e.category}</span>
+                                      <span className="dots" />
+                                      <span className="mono">{e.rate}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                              <div className="rl verify">
+                                <VerifiedStamp date={verified} cadenceDays={14} verb="CHECKED" />
+                                <span className="dots" />
+                                <span className="note">same formula for every card</span>
+                              </div>
+                              <a className={s.receiptLink} href={`/cards/${c.slug}`}>Full card details <span aria-hidden="true">→</span></a>
+                            </div>
+                          </td>
+                        </tr>
+                      )}
+                    </Fragment>
+                  );
+                })}
+                {filtered.length === 0 && (
+                  <tr>
+                    <td colSpan={COLUMNS.length} className={s.emptyCell}>
+                      <p className={s.emptyTitle}>No cards match these filters</p>
+                      <p className={s.emptyText}>Try removing a filter or two.</p>
+                      <button type="button" className="btn btn-sm" onClick={clearAll}>Clear all filters</button>
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+          <div className="foot">
+            <span>Values in each card&apos;s own currency · bars compare cards within the same currency</span>
+            <span><a href="/how-we-value-points">How we value points</a> · <a href="/compare">Compare side by side</a></span>
+          </div>
+        </div>
+      </main>
+
+      <aside
+        id="card-filters"
+        className={`rail ${s.drawer}${filtersOpen ? ` open ${s.drawerOpen}` : ''}`}
+        aria-label="Card filters"
+      >
+        <div className={s.drawerHead}>
+          <span className={s.drawerTitle}>Filters</span>
+          <button type="button" className="btn btn-sm" onClick={() => setFiltersOpen(false)}>Close</button>
+        </div>
+
+        <h2 className="rail-h">Card type</h2>
+        {CARD_TYPES.map(([t, label]) => (
+          <label key={t} className={`filt${types.includes(t) ? ' on' : ''}`}>
+            <input type="checkbox" checked={types.includes(t)} onChange={() => toggle(types, t, setTypes)} /> {label}
             <span className="ct">{typeCounts[t]}</span>
           </label>
         ))}
 
-        <h4>Family &amp; everyday</h4>
-        {FAMILY_DEFS.map((f) => (
-          <label key={f.key} className={`filt${family.includes(f.key) ? ' on' : ''}`}>
-            <input type="checkbox" checked={family.includes(f.key)} onChange={() => toggle(family, f.key, setFamily)} /> {f.label}
-            <span className="ct">{familyCounts[f.key]}</span>
-          </label>
-        ))}
+        <h2 className="rail-h">Annual fee</h2>
+        <label className={`filt${maxFee === 0 ? ' on' : ''}`}>
+          <input type="checkbox" checked={maxFee === 0} onChange={() => setMaxFee(maxFee === 0 ? FEE_MAX : 0)} /> No annual fee
+          <span className="ct">{noFeeCount}</span>
+        </label>
+        <label className={s.rangeLabel} htmlFor="maxfee">Max annual fee</label>
+        <input
+          id="maxfee" type="range" min={0} max={FEE_MAX} step={25} value={maxFee}
+          onChange={(e) => setMaxFee(Number(e.target.value))}
+          aria-valuetext={maxFee >= FEE_MAX ? 'Any fee' : `Up to $${maxFee}`}
+        />
+        <div className="range">{maxFee >= FEE_MAX ? 'Any fee' : maxFee === 0 ? 'No fee only' : `Up to $${maxFee}`}</div>
 
-        <h4>Max annual fee</h4>
-        <input type="range" min={0} max={1000} step={25} value={maxFee} onChange={(e) => setMaxFee(Number(e.target.value))} />
-        <div className="range">{maxFee >= 1000 ? 'Any' : `$0 to $${maxFee}`}</div>
-
-        <h4>Benefits</h4>
-        {RAIL_BENEFITS.map(([k, label]) => (
+        <h2 className="rail-h">Perks</h2>
+        {RAIL_PERKS.map((k) => (
           <label key={k} className={`filt${benefits.includes(k) ? ' on' : ''}`}>
-            <input type="checkbox" checked={benefits.includes(k)} onChange={() => toggle(benefits, k, setBenefits)} /> {label}
-            <span className="ct">{benefitCounts[k]}</span>
+            <input type="checkbox" checked={benefits.includes(k)} onChange={() => toggle(benefits, k, setBenefits)} /> {perkLabel(k)}
+            <span className="ct">{perkCounts[k]}</span>
           </label>
         ))}
 
-        <h4>Network</h4>
+        <h2 className="rail-h">Network</h2>
         {networks.map((n) => (
           <label key={n} className={`filt${networkFilter.includes(n) ? ' on' : ''}`}>
             <input type="checkbox" checked={networkFilter.includes(n)} onChange={() => toggle(networkFilter, n, setNetworkFilter)} /> {n}
             <span className="ct">{netCounts[n]}</span>
           </label>
         ))}
+
+        <div className={s.drawerFoot}>
+          <button type="button" className="btn" onClick={clearAll} disabled={!activeFilters.length && !query}>Clear all</button>
+          <button type="button" className="btn btn-primary" onClick={() => setFiltersOpen(false)}>
+            Show {filtered.length} {filtered.length === 1 ? 'card' : 'cards'}
+          </button>
+        </div>
       </aside>
 
-      <main>
-        <div className="head">
-          <h1>Card Explorer</h1>
-          <span className="meta">showing {filtered.length} / {cards.length} · sorted by {sortLabel} {arrow}</span>
-        </div>
-        {/* the formula, promoted from the table footer to a subtitle (spec 3.7) */}
-        <p className="subhead">
-          Est. 12-month value = <b>welcome bonus × base ¢/pt − annual fee</b>, in each card&apos;s native currency. Tap any value to see the math.
-        </p>
-        <div className="guidestrip">
-          <a className="guidechip" href="/guides/us-cards-for-canadians"><span className="gi">▸</span> US Cards for Canadians: the ITIN guide</a>
-        </div>
-
-        <div className="stats">
-          <div className="stat"><div className="l">Cards tracked</div><div className="v">{filtered.length}</div><div className="d">comprehensive data</div></div>
-          <div className="stat"><div className="l">Top value</div><div className="v em">{top ? formatCurrency(top.first_year_value, top.country) : '—'}</div><div className="d">{top ? top.name : ''}</div></div>
-          <div className="stat"><div className="l">Median 12-mo value</div><div className="v">{filtered.length ? formatCurrency(medianValue, medianCountry) : '—'}</div><div className="d">midpoint of {filtered.length} filtered</div></div>
-          <div className="stat"><div className="l">No-FX options</div><div className="v">{noFx}</div><div className="d">0% foreign txn</div></div>
-        </div>
-
-        <div className="tablewrap">
-          <div className="tablescroll">
-            <table>
-              <thead>
-                <tr>
-                  {COLUMNS.map((col) => (
-                    <th key={col.key} className={`${col.right ? 'r' : ''}${col.key === 'cpp' ? ' col-cpp' : ''}`} onClick={() => onSort(col.key)}>
-                      {col.label}{sortKey === col.key && <span className="ar"> {arrow}</span>}
-                    </th>
-                  ))}
-                  {/* Value index is a visual guide, not sortable: no cursor, no onClick,
-                      and a plain-language title so the header explains itself (spec 3.7). */}
-                  <th className="r col-vindex nosort" title="A bar showing each card's estimated value relative to the strongest card in this list. Visual only, not a sort.">Value index</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filtered.map((c) => {
-                  const tags = tagsFor(c);
-                  const isOpen = openReceipt === c.slug;
-                  const lines = isOpen ? receiptLines(c) : [];
-                  const earn = isOpen ? earnLines(c) : [];
-                  return (
-                    <Fragment key={c.slug}>
-                    <tr className={`cardrow${isOpen ? ' rcpt-open' : ''}`}>
-                      <td data-label="Card">
-                        <a href={`/cards/${c.slug}`}>
-                          <div className="cn">
-                            <span className={`cc ${c.country.toLowerCase()}`}>{c.country}</span>
-                            {c.name}
-                            {c.network !== 'Unknown' && <span className="netok">{c.network}</span>}
-                          </div>
-                          <div className="ci" style={{ textTransform: 'lowercase' }}>{c.issuer} · {c.rewards_program || c.card_type}</div>
-                        </a>
-                      </td>
-                      <td data-label="Tags">
-                        {tags.slice(0, 3).map(([k, label, title]) => <span key={k} className="tag em" title={title}>{label}</span>)}
-                        {tags.length > 3 && <span className="tag em" title={tags.slice(3).map(([, l]) => l).join(', ')}>+{tags.length - 3}</span>}
-                      </td>
-                      <td className={`r mono${c.annual_fee > 0 ? ' negv' : ''}`} data-label="Annual fee">{formatCurrency(c.annual_fee, c.country)}</td>
-                      <td className="r mono" data-label="Bonus">{c.welcome_bonus_points ? c.welcome_bonus_points.toLocaleString() : (c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country) : '—')}</td>
-                      <td className="r mono col-cpp" data-label="Base ¢/pt">{cppFor(c).toFixed(2)}</td>
-                      <td className="r" data-label="Est. 12-mo value">
-                        {/* THE RECEIPT (spec 3.6): the value is a button that expands the
-                            row into a mono ledger of the real math. Keyboard accessible. */}
-                        <button
-                          type="button"
-                          className={`valbtn big ${c.first_year_value < 0 ? 'negv' : 'pos'}`}
-                          aria-expanded={isOpen}
-                          onClick={() => setOpenReceipt((s) => (s === c.slug ? null : c.slug))}
-                        >
-                          {formatCurrency(c.first_year_value, c.country)}
-                        </button>
-                      </td>
-                      <td className="r col-vindex" data-label="Value index"><span className="vbar" style={{ '--w': `${Math.max(0, (c.first_year_value / maxValue) * 100)}%` } as CSSProperties} /></td>
-                    </tr>
-                    {isOpen && (
-                      <tr className="rcpt">
-                        <td colSpan={7}>
-                          <div className="receipt">
-                            {lines.map((l, i) => (
-                              <div className="rl" key={i}>
-                                <span className="lab">{l.label}</span>
-                                <span className="dots" />
-                                <span className={`amt${l.neg ? ' neg' : ''}`}>
-                                  {l.neg ? '−' : ''}{formatCurrency(Math.abs(l.amount), c.country)}
-                                </span>
-                              </div>
-                            ))}
-                            <div className="rl total">
-                              <span className="lab">EST. FIRST-YEAR VALUE</span>
-                              <span className="dots" />
-                              <span className={`amt${c.first_year_value < 0 ? ' neg' : ''}`}>{formatCurrency(c.first_year_value, c.country)}</span>
-                            </div>
-                            {earn.length > 0 && (
-                              <div className="rl-earn" style={{ borderTop: '1px solid var(--line)', marginTop: '8px', paddingTop: '8px' }}>
-                                <div className="rl" style={{ color: 'var(--ink-dim)' }}>
-                                  <span className="lab">earn on your spend</span>
-                                  <span className="dots" />
-                                  <span className="note">rates only, not in the total above</span>
-                                </div>
-                                {earn.map((e, i) => (
-                                  <div className="rl" key={i} style={{ color: 'var(--ink-dim)' }}>
-                                    <span className="lab" style={{ color: 'var(--ink)' }}>{e.category}</span>
-                                    <span className="dots" />
-                                    <span className="mono">{e.rate}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            )}
-                            <div className="rl verify">
-                              <VerifiedStamp date={CARDS_VERIFIED} cadenceDays={14} verb="CHECKED" />
-                              <span className="dots" />
-                              <span className="note">same formula for every card</span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    )}
-                    </Fragment>
-                  );
-                })}
-                {filtered.length === 0 && <tr><td colSpan={7} style={{ textAlign: 'center', padding: '60px', color: 'var(--ink-dim)' }} className="mono">no cards match these filters</td></tr>}
-              </tbody>
-            </table>
-          </div>
-          <div className="foot">
-            <span>same formula for every card · native currency</span>
-            <span>click a column to sort · <a href="/how-we-value-points">methodology →</a></span>
-          </div>
-        </div>
-      </main>
+      {filtersOpen && <div className={s.scrim} onClick={() => setFiltersOpen(false)} aria-hidden="true" />}
     </div>
   );
 }

@@ -2,11 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { POINT_VALUATIONS, VALUATION_SOURCE } from '@/data/point-valuations';
 import { ogMeta } from "@/lib/og";
+import s from './methodology.module.css';
 
 export const metadata: Metadata = {
   title: 'How we value points | FinTerminal',
-  description: 'How FinTerminal estimates the first-year value of a credit card welcome bonus.',
-  ...ogMeta("How we value points", "Methodology"),
+  description: 'How FinTerminal estimates the first-year value of a credit card welcome bonus, with the baseline cents-per-point rate we use for every rewards program.',
+  alternates: { canonical: '/how-we-value-points' },
+  ...ogMeta("How we value points", "Methodology", "/how-we-value-points"),
 };
 
 // Program display names for the valuations table. We drive the table straight
@@ -98,76 +100,126 @@ const faqJsonLd = {
   })),
 };
 
+const sid = (h: string) => h.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.finterminal.ca/' },
+    { '@type': 'ListItem', position: 2, name: 'Cards', item: 'https://www.finterminal.ca/cards' },
+    { '@type': 'ListItem', position: 3, name: 'How we value points', item: 'https://www.finterminal.ca/how-we-value-points' },
+  ],
+};
+
 export default function HowWeValuePoints() {
   return (
-    <div className="mx-auto max-w-2xl px-4 sm:px-6 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <p className="text-xs uppercase tracking-[0.2em] text-gold-text dark:text-gold font-semibold mb-3">Methodology</p>
-      <h1 className="font-[family-name:var(--font-display)] text-4xl font-semibold mb-4">How we value points</h1>
-      <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-        So you can trust the numbers, here&apos;s exactly how we estimate what a card is worth.
-      </p>
-      <div className="rounded-lg border border-border bg-muted/40 p-5 mb-12">
-        <p className="text-xs uppercase tracking-[0.15em] text-gold-text dark:text-gold font-semibold mb-2">Bottom line</p>
-        <p className="text-muted-foreground leading-relaxed">
-          FinTerminal&apos;s first-year value is the welcome bonus, valued at conservative baseline point rates, minus the annual fee. We use everyday redemption rates (not best-case ones), value cash back at face value, and keep Canadian and US cards in their own currency. The figures are honest estimates to help you compare cards, not guarantees.
-        </p>
-      </div>
-      <div className="space-y-10">
-        {sections.map(s => (
-          <section key={s.h}>
-            <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold mb-2">{s.h}</h2>
-            <p className="text-muted-foreground leading-relaxed">{s.p}</p>
-          </section>
-        ))}
-      </div>
+    <div className="app norail tone-cards">
+      <main>
+        <article className="doc">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      <div className="atlas-rule my-12" />
-      <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold mb-4">Our point valuations by program</h2>
-      <p className="text-muted-foreground leading-relaxed mb-6">
-        Here are the baseline rates we use for the headline first-year value, plus the upper-end &quot;up to&quot; rate you can reach on premium transfer-partner sweet spots. These are estimates to help you compare cards, not guarantees. Cash back is always valued at 1 cent per point.
-      </p>
-      <div className="overflow-x-auto rounded-lg border border-border mb-4">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-border bg-muted/40 text-left">
-              <th className="px-4 py-2 font-semibold">Program</th>
-              <th className="px-4 py-2 font-semibold text-right">Baseline (¢/pt)</th>
-              <th className="px-4 py-2 font-semibold text-right">Up to (¢/pt)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {valuationRows.map(row => (
-              <tr key={row.program} className="border-b border-border last:border-0">
-                <td className="px-4 py-2">{row.program}</td>
-                <td className="px-4 py-2 text-right tabular-nums">{row.baseline.toFixed(2)}</td>
-                <td className="px-4 py-2 text-right tabular-nums text-muted-foreground">{row.max != null ? row.max.toFixed(1) : 'fixed value'}</td>
-              </tr>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep" aria-hidden="true">/</span>
+            <Link href="/cards">Cards</Link><span className="sep" aria-hidden="true">/</span>
+            <span className="cur" aria-current="page">How we value points</span>
+          </nav>
+
+          <header className="head">
+            <p className="eyebrow">Methodology</p>
+            <h1 className={s.h1}>How we value points</h1>
+          </header>
+          <p className="lede">
+            So you can trust the numbers, here&apos;s exactly how we estimate what a card is worth.
+          </p>
+          <div className="docmeta">
+            <span>Valuations as of {VALUATION_SOURCE.asOf}</span>
+            <span className="sep">/</span>
+            <span>Reviewed quarterly</span>
+          </div>
+
+          <div className="cd-note short">
+            <div className="cap">Bottom line</div>
+            <p>
+              FinTerminal&apos;s first-year value is the welcome bonus, valued at conservative baseline point rates, minus the annual fee. We use everyday redemption rates (not best-case ones), value cash back at face value, and keep Canadian and US cards in their own currency. The figures are honest estimates to help you compare cards, not guarantees.
+            </p>
+          </div>
+
+          <div className={s.formula}>
+            <span className={s.fLab}>First-year value</span>
+            <span className={s.fEq}>=</span>
+            <span className={s.fTerm}>welcome bonus × baseline ¢/pt</span>
+            <span className={s.fEq}>−</span>
+            <span className={s.fTerm}>annual fee (or first-year fee)</span>
+          </div>
+
+          <nav className="toc" aria-label="On this page">
+            <div className="tt">On this page</div>
+            <div className="toc-grid">
+              {sections.map(sec => <a key={sec.h} href={`#${sid(sec.h)}`}>{sec.h}</a>)}
+              <a href="#valuations">Our point valuations by program</a>
+              <a href="#faq">Frequently asked questions</a>
+            </div>
+          </nav>
+
+          {sections.map(sec => (
+            <section key={sec.h} id={sid(sec.h)} className={s.sec}>
+              <h2 className="cd-sec">{sec.h}</h2>
+              <p>{sec.p}</p>
+            </section>
+          ))}
+
+          <section id="valuations" className={s.sec}>
+            <h2 className="cd-sec">Our point valuations by program</h2>
+            <p>
+              Here are the baseline rates we use for the headline first-year value, plus the upper-end &quot;up to&quot; rate you can reach on premium transfer-partner sweet spots. These are estimates to help you compare cards, not guarantees. Cash back is always valued at 1 cent per point.
+            </p>
+            <div className={`tablewrap ${s.tw}`}>
+              <table className={s.table}>
+                <caption className="sr-only">Baseline and upper-end cents-per-point valuations by rewards program</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Program</th>
+                    <th scope="col" className="r">Baseline ¢/pt</th>
+                    <th scope="col" className="r">Up to ¢/pt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {valuationRows.map(row => (
+                    <tr key={row.program}>
+                      <th scope="row" className={s.prog}>{row.program}</th>
+                      <td className={`r ${s.num} ${s.base}`}>{row.baseline.toFixed(2)}</td>
+                      <td className={`r ${s.num}`}>{row.max != null ? row.max.toFixed(1) : <span className={s.fixed}>fixed value</span>}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className={s.source}>
+              Source: {VALUATION_SOURCE.name}, as of {VALUATION_SOURCE.asOf}. Reviewed quarterly. &quot;Fixed value&quot; means the currency is not transferable to airline or hotel partners.
+            </p>
+          </section>
+
+          <section id="faq" className={s.sec}>
+            <h2 className="cd-sec">Frequently asked questions</h2>
+            {faqs.map(f => (
+              <div key={f.q}>
+                <h3 className="faq-q">{f.q}</h3>
+                <p>{f.a}</p>
+              </div>
             ))}
-          </tbody>
-        </table>
-      </div>
-      <p className="text-xs text-muted-foreground mb-2">
-        Source: {VALUATION_SOURCE.name}, as of {VALUATION_SOURCE.asOf}. Reviewed quarterly. &quot;Fixed value&quot; means the currency is not transferable to airline or hotel partners.
-      </p>
-
-      <div className="atlas-rule my-12" />
-      <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold mb-6">Frequently asked questions</h2>
-      <div className="space-y-8">
-        {faqs.map(f => (
-          <section key={f.q}>
-            <h3 className="font-semibold mb-2">{f.q}</h3>
-            <p className="text-muted-foreground leading-relaxed">{f.a}</p>
           </section>
-        ))}
-      </div>
-      <div className="atlas-rule my-12" />
-      <p className="text-sm text-muted-foreground">
-        Questions about a specific card&apos;s valuation? <Link href="/cards" className="text-gold-text dark:text-gold font-medium hover:underline">Browse the card explorer →</Link>
-      </p>
+
+          <div className={s.next}>
+            <p>Questions about a specific card&apos;s valuation?</p>
+            <div className="cta-row">
+              <Link href="/cards" className="cd-apply primary">Browse the Card Explorer <span aria-hidden="true">→</span></Link>
+              <Link href="/compare" className="cd-apply">Compare cards side by side</Link>
+            </div>
+          </div>
+        </article>
+      </main>
     </div>
   );
 }

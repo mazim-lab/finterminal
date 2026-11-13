@@ -33,7 +33,11 @@ export interface SlimCard {
 
 export function formatCurrency(value: number, country: 'CA' | 'US' = 'CA'): string {
   const prefix = country === 'US' ? 'US$' : 'CA$';
-  return `${prefix}${Math.round(value).toLocaleString()}`;
+  // Display only: the sign goes in front of the currency ("-US$50", never
+  // "US$-50"). The number itself is unchanged.
+  const rounded = Math.round(value);
+  const sign = rounded < 0 ? '-' : '';
+  return `${sign}${prefix}${Math.abs(rounded).toLocaleString('en-CA')}`;
 }
 
 /** One line of the Receipt: a human label, an amount, and whether it subtracts. */
@@ -98,4 +102,15 @@ export function receiptLines(c: SlimCard): ReceiptLine[] {
 export function earnLines(c: SlimCard): { category: string; rate: string }[] {
   if (!c.earn_rates || c.earn_rates.length === 0) return [];
   return c.earn_rates.map((r) => ({ category: r.category, rate: r.rate }));
+}
+
+/** Display name for a rewards program string from the data ("rbc avion" reads
+ *  "RBC Avion"). Formatting only; the stored value is unchanged. */
+const PROGRAM_ACRONYMS = new Set(['rbc', 'td', 'bmo', 'cibc', 'mbna', 'pc', 'hsbc', 'amex', 'ihg', 'aa', 'cba']);
+export function programName(program: string | null | undefined): string {
+  if (!program) return '';
+  return program
+    .split(/(\s+)/)
+    .map((w) => (PROGRAM_ACRONYMS.has(w.toLowerCase()) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1)))
+    .join('');
 }
