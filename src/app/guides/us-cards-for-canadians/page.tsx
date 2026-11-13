@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArticleTags } from "@/components/ArticleTags";
 import { Comments } from "@/components/Comments";
+import s from './guide.module.css';
 
 const FAQ = [
   {
@@ -46,16 +47,19 @@ const TOC = [
 
 export default function USCardsGuidePage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-cards">
       <main>
         <div className="doc">
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/cards">cards</Link><span className="sep">/</span>
-            <span className="cur">itin-guide</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep" aria-hidden="true">/</span>
+            <Link href="/cards">Cards</Link><span className="sep" aria-hidden="true">/</span>
+            <span className="cur" aria-current="page">US cards guide</span>
           </nav>
 
-          <div className="head"><h1>US Cards for Canadians</h1></div>
+          <div className="head">
+            <span className="eyebrow">Cards guide</span>
+            <h1 className={s.h1}>US Cards for Canadians</h1>
+          </div>
           <p className="lede">
             A complete, plain-language walkthrough for getting a US mailing address, an ITIN, and a real
             US credit history, so you can reach the best rewards cards in the world. It takes some patience,
@@ -64,12 +68,13 @@ export default function USCardsGuidePage() {
           <div className="docmeta">
             <span className="gd">GUIDE</span><span className="sep">·</span>
             <span>about 25 min read</span><span className="sep">·</span>
-            <span>covers ITIN, US credit, Chase 5/24</span>
+            <span>covers ITIN, US credit, Chase 5/24</span><span className="sep">·</span>
+            <Link href="/guides/us-cards-for-canadians/interactive" className="lnk-quiet">prefer a step-by-step checklist? try the interactive version</Link>
           </div>
 
           <ArticleTags path="/guides/us-cards-for-canadians" />
 
-          <div className="cd-note" style={{ marginTop: 14 }}>
+          <div className="cd-note short">
             <div className="cap">Short answer</div>
             Yes, a Canadian can get US credit cards. You need a US mailing address, a US bank account, and a US credit history, plus an ITIN for most issuers. The usual path is to get your first US Amex through Amex Global Transfer (no ITIN or US credit needed), apply for an ITIN in parallel, build a few months of history, then move on to Chase and other banks. Expect the full sequence to reach Chase to take roughly 12 to 18 months.
           </div>
@@ -82,7 +87,7 @@ export default function USCardsGuidePage() {
           </div>
 
           {/* WHY */}
-          <div id="why" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why do Canadians get US credit cards?</div>
+          <h2 id="why" className="cd-sec">Why do Canadians get US credit cards?</h2>
           <p>
             If you care about travel rewards, the US credit card market is a different league. The welcome
             bonuses are bigger, there are far more transfer partners, and some cards hand you hotel elite
@@ -101,13 +106,13 @@ export default function USCardsGuidePage() {
           </p>
 
           {/* STEPS */}
-          <div className="cd-sec">The step-by-step process</div>
+          <h2 className="cd-sec">The step-by-step process</h2>
           <div className="steps">
 
             {/* Step 1 */}
-            <div id="step-1" className="step" style={{ scrollMarginTop: 70 }}>
+            <div id="step-1" className="step">
               <div className="num">1</div>
-              <div className="st">Get a US mailing address</div>
+              <h3 className="st">Get a US mailing address</h3>
               <div className="stm">cost: about $70 to $90 USD per year</div>
               <p>
                 Before anything else you need a US residential address. This is where your cards, statements,
@@ -122,9 +127,9 @@ export default function USCardsGuidePage() {
             </div>
 
             {/* Step 2 */}
-            <div id="step-2" className="step" style={{ scrollMarginTop: 70 }}>
+            <div id="step-2" className="step">
               <div className="num">2</div>
-              <div className="st">Open a US bank account</div>
+              <h3 className="st">Open a US bank account</h3>
               <div className="stm">timeline: 1 to 2 weeks</div>
               <p>
                 A US bank account does two jobs for you. It lets you pay your card bills in US dollars, and it
@@ -144,9 +149,9 @@ export default function USCardsGuidePage() {
             </div>
 
             {/* Step 3 */}
-            <div id="step-3" className="step" style={{ scrollMarginTop: 70 }}>
+            <div id="step-3" className="step">
               <div className="num">3</div>
-              <div className="st">Get your first card via Amex Global Transfer</div>
+              <h3 className="st">Get your first card via Amex Global Transfer</h3>
               <div className="stm">timeline: 2 to 4 weeks</div>
               <p>
                 This is the clever part. Amex Global Transfer lets you use your existing Canadian Amex
@@ -177,9 +182,9 @@ export default function USCardsGuidePage() {
             </div>
 
             {/* Step 4: ITIN */}
-            <div id="step-4" className="step" style={{ scrollMarginTop: 70 }}>
+            <div id="step-4" className="step">
               <div className="num">4</div>
-              <div className="st">Apply for an ITIN</div>
+              <h3 className="st">Apply for an ITIN</h3>
               <div className="stm">timeline: about 7 weeks, or 9 to 11 weeks if you apply during tax season (mid-January to late April) or from outside the US</div>
               <p>
                 An Individual Taxpayer Identification Number (ITIN) is a tax ID the IRS issues to people who
@@ -210,7 +215,7 @@ export default function USCardsGuidePage() {
               <div className="acc-pair">
                 <div className="cd-note">
                   <div className="cap">Path A, in person (recommended)</div>
-                  <ul style={{ margin: '4px 0 0' }}>
+                  <ul className={s.tight}>
                     <li>Book an appointment at an IRS Taxpayer Assistance Center. Bring your passport, nothing gets mailed, and they stamp your application as received.</li>
                     <li>Call <span className="fld">844-545-5640</span> to book, up to two months ahead. Backup line: <span className="fld">267-941-1000</span> (not toll free, works from Canadian numbers).</li>
                     <li>Bring the completed W-7, 1040-NR, Schedule 1, Schedule OI, your passport, and duplicate copies of everything.</li>
@@ -219,7 +224,7 @@ export default function USCardsGuidePage() {
                 </div>
                 <div className="cd-note red">
                   <div className="cap">Path B, mail in</div>
-                  <ul style={{ margin: '4px 0 0' }}>
+                  <ul className={s.tight}>
                     <li>Mail to: Internal Revenue Service, ITIN Operation, P.O. Box 149342, Austin, TX 78714-9342, USA.</li>
                     <li>Use Canada Post registered mail (about $15) so you have tracking and proof.</li>
                     <li>You can include either your original passport or a copy certified by Passport Canada, the issuing agency. A notarized copy is not enough. If you mail the original, it can take up to 60 days to come back, and passports have occasionally been lost in transit.</li>
@@ -263,9 +268,9 @@ export default function USCardsGuidePage() {
                   <div className="arow"><strong>Address:</strong> your Canadian mailing address.</div>
                   <div className="arow"><strong>Virtual currency question:</strong> answer Yes or No. You are not reporting crypto income here.</div>
                   <div className="arow"><strong>Dependents:</strong> leave blank.</div>
-                  <div className="arow" style={{ paddingBottom: 0 }}>
+                  <div className={`arow ${s.tablerow}`}>
                     <strong>Income and tax lines</strong> (using $85 of gambling income as the example):
-                    <table className="dtable">
+                    <div className={s.tscroll}><table className="dtable">
                       <thead><tr><th>Line</th><th>Amount</th><th>Line</th><th>Amount</th></tr></thead>
                       <tbody>
                         <tr><td>8</td><td className="r">$85</td><td>22</td><td className="r">$9</td></tr>
@@ -275,8 +280,8 @@ export default function USCardsGuidePage() {
                         <tr><td>16</td><td className="r">$9</td><td>33</td><td className="r">$0</td></tr>
                         <tr><td>18</td><td className="r">$9</td><td>37</td><td className="r">$9</td></tr>
                       </tbody>
-                    </table>
-                    <span style={{ fontSize: 11.5, color: 'var(--ink-dim)', fontFamily: 'var(--mono)' }}>Line 16 ($9) comes from the IRS tax table for income between $75 and $99. Pick any amount in that range.</span>
+                    </table></div>
+                    <span className={s.tnote}>Line 16 ($9) comes from the IRS tax table for income between $75 and $99. Pick any amount in that range.</span>
                   </div>
                   <div className="arow"><strong>Line 38:</strong> leave blank. Income under $1,000 means no penalty.</div>
                   <div className="arow"><strong>Third party designee:</strong> No.</div>
@@ -325,15 +330,15 @@ export default function USCardsGuidePage() {
                 <div className="cap">You do not have to wait</div>
                 This is exactly why we got the Amex card first. Your credit is already building through Global Transfer while your ITIN works its way through the IRS in parallel.
               </div>
-              <p className="sub" style={{ fontSize: 12 }}>
+              <p className={s.fine}>
                 This guide is educational and is not tax advice. For your specific situation, talk to a cross-border tax professional, and always report your income accurately.
               </p>
             </div>
 
             {/* Step 5 */}
-            <div id="step-5" className="step" style={{ scrollMarginTop: 70 }}>
+            <div id="step-5" className="step">
               <div className="num">5</div>
-              <div className="st">Build your US credit history</div>
+              <h3 className="st">Build your US credit history</h3>
               <div className="stm">timeline: 3 to 12 months</div>
               <p>
                 Now comes the patient part. Your first Amex is reporting to the US bureaus, and you want enough
@@ -352,9 +357,9 @@ export default function USCardsGuidePage() {
             </div>
 
             {/* Step 6 */}
-            <div id="step-6" className="step" style={{ scrollMarginTop: 70 }}>
+            <div id="step-6" className="step">
               <div className="num">6</div>
-              <div className="st">Apply for Chase cards</div>
+              <h3 className="st">Apply for Chase cards</h3>
               <div className="stm">timeline: 12 to 18 months after your first card</div>
               <p>
                 Chase is the goal for most people. Ultimate Rewards points are wonderfully flexible and the
@@ -383,9 +388,9 @@ export default function USCardsGuidePage() {
             </div>
 
             {/* Step 7 */}
-            <div id="step-7" className="step" style={{ scrollMarginTop: 70 }}>
+            <div id="step-7" className="step">
               <div className="num">7</div>
-              <div className="st">Expand to other issuers</div>
+              <h3 className="st">Expand to other issuers</h3>
               <div className="stm">timeline: 18 months and beyond</div>
               <p>Once Chase is on board and your history is solid, the rest of the market opens up.</p>
               <ul>
@@ -401,16 +406,16 @@ export default function USCardsGuidePage() {
           </div>
 
           {/* MANAGING */}
-          <div id="managing" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you manage US cards from Canada?</div>
-          <h4>Paying your bills</h4>
+          <h2 id="managing" className="cd-sec">How do you manage US cards from Canada?</h2>
+          <h3 className={s.sub}>Paying your bills</h3>
           <p>Skip your bank&apos;s exchange rate, since you will lose 2 to 2.5 percent on every transfer. Use a dedicated FX service like Wise, VBCE, or Knightsbridge FX instead. They typically run about 1 percent above the spot rate, which adds up to real savings over a year.</p>
-          <h4>Using US cards in Canada</h4>
+          <h3 className={s.sub}>Using US cards in Canada</h3>
           <p>Here is a nice perk. Most US premium cards have no foreign transaction fee, so you can use them for everyday Canadian spending and earn US points without the 2.5 percent surcharge you would pay abroad on a Canadian card. Just keep the double conversion in mind.</p>
-          <h4>Two-player mode</h4>
+          <h3 className={s.sub}>Two-player mode</h3>
           <p>If you have a spouse or partner, set them up alongside you. Two players means double the welcome bonuses, double the points, and the ability to pool points between accounts. It is the single biggest force multiplier in this hobby.</p>
 
           {/* MISTAKES */}
-          <div id="mistakes" className="cd-sec" style={{ scrollMarginTop: 70 }}>What mistakes should you avoid?</div>
+          <h2 id="mistakes" className="cd-sec">What mistakes should you avoid?</h2>
           <ul>
             <li><strong>Getting too many cards too fast.</strong> Five or more personal cards in 24 months locks you out of Chase. Plan your sequence.</li>
             <li><strong>Forgetting to link your ITIN to existing Amex accounts.</strong> Without it, your history may be invisible to other issuers. Call Amex the day your ITIN arrives.</li>
@@ -421,23 +426,23 @@ export default function USCardsGuidePage() {
           </ul>
 
           {/* ROADMAP */}
-          <div id="roadmap" className="cd-sec" style={{ scrollMarginTop: 70 }}>A realistic first-year sequence</div>
+          <h2 id="roadmap" className="cd-sec">A realistic first-year sequence</h2>
           <p className="sub">Every situation is different, but this is a solid framework for your first 18 months and beyond.</p>
-          <div className="acc-pair">
-            <div className="cd-note"><div className="cap">Month 0</div><strong>Amex Hilton Honors (no-fee keeper).</strong> Your anchor card, kept forever as your oldest account.</div>
-            <div className="cd-note"><div className="cap">Month 1 to 2</div><strong>Apply for your ITIN.</strong> Submit the W-7 through a service or DIY. About 7 weeks to process, or 9 to 11 weeks if you apply during tax season (mid-January to late April) or from outside the US.</div>
-            <div className="cd-note"><div className="cap">Month 3</div><strong>Amex Hilton Aspire or Amex Gold.</strong> A second personal card to deepen your file, chosen on current offers.</div>
-            <div className="cd-note"><div className="cap">Month 3 to 6</div><strong>Amex Business Platinum and Business Gold.</strong> Business cards do not count toward 5/24, so grab them for the bonuses.</div>
-            <div className="cd-note"><div className="cap">Month 4</div><strong>ITIN arrives, link it everywhere.</strong> Call Amex to link your ITIN to every US account.</div>
-            <div className="cd-note"><div className="cap">Month 12 to 18</div><strong>Chase Sapphire Preferred and Ink Business Preferred.</strong> You now have the history Chase wants.</div>
-            <div className="cd-note"><div className="cap">Month 18+</div><strong>Chase United, IHG, Hyatt, then Capital One and Citi.</strong> Keep expanding, spacing applications a few months apart.</div>
+          <div className={s.timeline}>
+            <div className="cd-note"><div className="cap">Month 0</div><div><strong>Amex Hilton Honors (no-fee keeper).</strong> Your anchor card, kept forever as your oldest account.</div></div>
+            <div className="cd-note"><div className="cap">Month 1 to 2</div><div><strong>Apply for your ITIN.</strong> Submit the W-7 through a service or DIY. About 7 weeks to process, or 9 to 11 weeks if you apply during tax season (mid-January to late April) or from outside the US.</div></div>
+            <div className="cd-note"><div className="cap">Month 3</div><div><strong>Amex Hilton Aspire or Amex Gold.</strong> A second personal card to deepen your file, chosen on current offers.</div></div>
+            <div className="cd-note"><div className="cap">Month 3 to 6</div><div><strong>Amex Business Platinum and Business Gold.</strong> Business cards do not count toward 5/24, so grab them for the bonuses.</div></div>
+            <div className="cd-note"><div className="cap">Month 4</div><div><strong>ITIN arrives, link it everywhere.</strong> Call Amex to link your ITIN to every US account.</div></div>
+            <div className="cd-note"><div className="cap">Month 12 to 18</div><div><strong>Chase Sapphire Preferred and Ink Business Preferred.</strong> You now have the history Chase wants.</div></div>
+            <div className="cd-note"><div className="cap">Month 18+</div><div><strong>Chase United, IHG, Hyatt, then Capital One and Citi.</strong> Keep expanding, spacing applications a few months apart.</div></div>
           </div>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map(item => (
             <div key={item.q}>
-              <h4>{item.q}</h4>
+              <h3 className="faq-q">{item.q}</h3>
               <p>{item.a}</p>
             </div>
           ))}
@@ -461,11 +466,12 @@ export default function USCardsGuidePage() {
           />
 
           {/* CTA */}
-          <div className="cd-sec">Ready to start</div>
+          <h2 className="cd-sec">Ready to start</h2>
           <p>Browse the US cards in our explorer to see current welcome bonuses and plan your sequence.</p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 6 }}>
-            <Link href="/cards?country=US" className="cd-apply">Browse US cards →</Link>
-            <Link href="/cards?country=CA" className="cd-apply" style={{ borderColor: 'var(--line-strong)', color: 'var(--ink)' }}>Canadian cards →</Link>
+          <div className="cta-row">
+            <Link href="/cards?country=US" className="cd-apply primary">Browse US cards &rarr;</Link>
+            <Link href="/cards?country=CA" className="cd-apply">Canadian cards &rarr;</Link>
+            <Link href="/guides/us-cards-for-canadians/interactive" className="cd-apply">Interactive checklist &rarr;</Link>
           </div>
           <Comments path="/guides/us-cards-for-canadians" />
         </div>
@@ -482,6 +488,20 @@ export default function USCardsGuidePage() {
               dateModified: '2026-06-20',
               author: { '@type': 'Organization', name: 'FinTerminal' },
               publisher: { '@type': 'Organization', name: 'FinTerminal' },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.finterminal.ca/' },
+                { '@type': 'ListItem', position: 2, name: 'Cards', item: 'https://www.finterminal.ca/cards' },
+                { '@type': 'ListItem', position: 3, name: 'US cards guide', item: 'https://www.finterminal.ca/guides/us-cards-for-canadians' },
+              ],
             }),
           }}
         />

@@ -37,7 +37,7 @@ export function NewsletterSignup({ compact = false }: { compact?: boolean }) {
 
   if (status === "ok") {
     return (
-      <p className="nlok">
+      <p className="nlok" role="status">
         Almost there. Check your inbox and click the confirmation link to finish signing up.
       </p>
     );
@@ -57,7 +57,7 @@ export function NewsletterSignup({ compact = false }: { compact?: boolean }) {
       <button className="fbtn nlbtn" type="submit" disabled={status === "sending"}>
         {status === "sending" ? "…" : "Subscribe"}
       </button>
-      {status === "err" && <span className="ferr">Could not sign you up. Try again shortly.</span>}
+      {status === "err" && <span className="ferr" role="alert">Could not sign you up. Try again shortly.</span>}
     </form>
   );
 }

@@ -11,9 +11,9 @@ import { SearchBox } from "./SearchBox";
 // Primary sections. Routes are frozen; only labels are ours to choose.
 // Each pillar carries its FAEConf identity hue in the mobile menu dot.
 export const PRIMARY_NAV = [
-  { label: "Cards", href: "/cards", match: ["/cards", "/compare", "/how-we-value-points"], dot: "var(--fin-d)" },
+  { label: "Cards", href: "/cards", match: ["/cards", "/compare", "/how-we-value-points", "/guides"], dot: "var(--fin-d)" },
   { label: "Travel", href: "/travel", match: ["/travel"], dot: "var(--acct-d)" },
-  { label: "Money", href: "/personal-finance", match: ["/personal-finance", "/guides"], dot: "var(--econ-d)" },
+  { label: "Money", href: "/personal-finance", match: ["/personal-finance"], dot: "var(--econ-d)" },
   { label: "Rates", href: "/rates", match: ["/rates"], dot: "var(--econ-d)" },
   { label: "News", href: "/news", match: ["/news"], dot: "var(--neutral-mix)" },
   { label: "Deals", href: "/deals", match: ["/deals"], dot: "var(--neutral-mix)" },

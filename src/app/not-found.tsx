@@ -1,33 +1,43 @@
 import Link from "next/link";
+import s from "./status-page.module.css";
 
 export const metadata = {
-  title: "404, page not found | FinTerminal",
-  description: "That page is not on the board. Head back to the terminal or jump to cards, points, or personal finance.",
+  title: "Page not found | FinTerminal",
+  description: "That page is not here. Try the search, or jump to cards, travel, money or news.",
+  robots: { index: false },
 };
+
+const ROUTES = [
+  { href: "/cards", label: "Cards", dek: "Compare every card with the same formula", tone: "tone-cards" },
+  { href: "/travel", label: "Travel", dek: "Points sweet spots and how to book them", tone: "tone-travel" },
+  { href: "/personal-finance", label: "Money", dek: "Personal finance guides for Canadians", tone: "tone-money" },
+  { href: "/news", label: "News", dek: "What changed in cards and points lately", tone: "tone-neutral" },
+];
 
 export default function NotFound() {
   return (
-    <div className="app norail">
-      <main>
-        <div className="doc">
-          <div className="head"><h1>404 · Signal Lost</h1></div>
-          <p className="lede">
-            That page is not on the board. It may have moved, or the link was mistyped. No harm done, here is the way back.
-          </p>
-          <div className="cd-note">
-            <div className="cap">Where to go next</div>
-            <p style={{ margin: 0 }} className="sub">
-              Head back to the terminal, or jump straight to what you were probably after.
-            </p>
-          </div>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 14 }}>
-            <Link href="/" className="cd-apply">The board &rarr;</Link>
-            <Link href="/cards" className="cd-apply">Compare cards &rarr;</Link>
-            <Link href="/personal-finance" className="cd-apply">Personal finance &rarr;</Link>
-            <Link href="/travel" className="cd-apply">Travel &amp; points &rarr;</Link>
-          </div>
-        </div>
-      </main>
+    <div className="wrap page">
+      <div className={s.box}>
+        <p className={s.code}>404</p>
+        <h1 className={s.title}>Sorry, I couldn&apos;t find that page</h1>
+        <p className={s.copy}>
+          It may have moved, or the link has a typo. The search box at the top of every page (press{" "}
+          <kbd className={s.kbd}>Ctrl</kbd> <kbd className={s.kbd}>K</kbd>) is the quickest way to find it again.
+        </p>
+
+        <ul className={`grid-2 ${s.routes}`}>
+          {ROUTES.map((r) => (
+            <li key={r.href} className={`link-card has-stripe ${r.tone}`}>
+              <span className="lc-kicker">{r.label}</span>
+              <span className="lc-title"><Link href={r.href}>{r.dek}</Link></span>
+            </li>
+          ))}
+        </ul>
+
+        <p className={s.home}>
+          <Link href="/" className="btn btn-primary">Back to the home page</Link>
+        </p>
+      </div>
     </div>
   );
 }

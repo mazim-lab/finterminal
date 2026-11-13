@@ -1,13 +1,9 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import {
-  Lightbulb, AlertTriangle, Clock, MapPin, Building2, CreditCard,
-  FileText, TrendingUp, ShieldCheck, Rocket, ArrowRight, ArrowLeft,
-  DollarSign, Globe, CheckCircle2, ChevronRight, ChevronDown, ChevronUp,
-} from 'lucide-react';
+import { useState, useEffect, useCallback, useRef, Suspense } from 'react';
+import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Suspense } from 'react';
+import s from './wizard.module.css';
 
 // ── Types ────────────────────────────────────────────────
 
@@ -17,7 +13,6 @@ interface ChecklistItem {
 }
 
 interface StepData {
-  icon: React.ElementType;
   title: string;
   time?: string;
   cost?: string;
@@ -29,28 +24,27 @@ interface StepData {
 
 function TipBox({ children }: { children: React.ReactNode }) {
   return (
-    <div className="my-5 flex gap-3 rounded-xl border border-gold/30 bg-gold/[0.06] dark:bg-gold/[0.08] p-4">
-      <Lightbulb className="w-5 h-5 text-gold-dark dark:text-gold mt-0.5 shrink-0" />
-      <div className="text-sm leading-relaxed text-foreground/80">{children}</div>
+    <div className={`cd-note ${s.tip}`}>
+      <div className="cap">Tip</div>
+      <div>{children}</div>
     </div>
   );
 }
 
 function WarningBox({ children }: { children: React.ReactNode }) {
   return (
-    <div className="my-5 flex gap-3 rounded-xl border border-red-300/40 dark:border-red-500/30 bg-red-50/60 dark:bg-red-500/[0.08] p-4">
-      <AlertTriangle className="w-5 h-5 text-red-500 dark:text-red-400 mt-0.5 shrink-0" />
-      <div className="text-sm leading-relaxed text-foreground/80">{children}</div>
+    <div className={`cd-note red ${s.tip}`}>
+      <div className="cap">Watch out</div>
+      <div>{children}</div>
     </div>
   );
 }
 
 function CardRec({ name, note }: { name: string; note?: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-sm font-medium">
-      <CreditCard className="w-3.5 h-3.5 text-accent" />
-      <span>{name}</span>
-      {note && <span className="text-muted-foreground font-normal">{' '}{note}</span>}
+    <span className={s.rec}>
+      <span className={s.recName}>{name}</span>
+      {note && <span className={s.recNote}>{note}</span>}
     </span>
   );
 }
@@ -59,7 +53,6 @@ function CardRec({ name, note }: { name: string; note?: string }) {
 
 const STEPS: StepData[] = [
   {
-    icon: MapPin,
     title: 'Get a US Mailing Address',
     time: '1-2 days',
     cost: '~$70-90 USD/year',
@@ -83,7 +76,6 @@ const STEPS: StepData[] = [
     ],
   },
   {
-    icon: Building2,
     title: 'Open a US Bank Account',
     time: '1-2 weeks',
     cost: 'Free',
@@ -109,7 +101,6 @@ const STEPS: StepData[] = [
     ],
   },
   {
-    icon: CreditCard,
     title: 'Get Your First US Credit Card',
     time: '2-4 weeks',
     cost: 'Varies',
@@ -127,7 +118,7 @@ const STEPS: StepData[] = [
           <strong>Start with a personal card, not a business card.</strong> Business cards do <em>not</em> build personal credit history in the US. Your first card must be personal.
         </WarningBox>
         <p><strong>Best starter cards:</strong></p>
-        <div className="flex flex-wrap gap-2 my-3">
+        <div className={s.recs}>
           <CardRec name="Amex Hilton Honors" note="no annual fee, great keeper" />
           <CardRec name="Amex Gold Card" note="strong earning" />
         </div>
@@ -143,7 +134,6 @@ const STEPS: StepData[] = [
     ],
   },
   {
-    icon: FileText,
     title: 'Apply for an ITIN',
     time: 'about 7 weeks (9 to 11 in tax season or from abroad)',
     cost: '$0-300',
@@ -151,30 +141,29 @@ const STEPS: StepData[] = [
       <>
         <p>An <strong>Individual Taxpayer Identification Number (ITIN)</strong> is a tax ID from the IRS for people who aren&apos;t eligible for an SSN. You need this for Chase, Citi, Capital One, and most non-Amex issuers.</p>
 
-        <h4 className="font-semibold mt-4 mb-2">Method 1: Use a Tax Service (Hands-off)</h4>
+        <h3 className={s.sub}>Method 1: Use a Tax Service (Hands-off)</h3>
         <p>Services like <strong>US Tax Resources</strong> handle the entire process for $150–300. They prepare your W-7 form and file a 1040-NR tax return on your behalf.</p>
 
-        <h4 className="font-semibold mt-4 mb-2">Method 2: DIY with Gambling Income (~$10)</h4>
+        <h3 className={s.sub}>Method 2: DIY with Gambling Income (~$10)</h3>
         <TipBox>
           <strong>The DIY approach is straightforward.</strong> File a 1040-NR declaring $75 to $100 of US-source gambling income (from US online casinos, self-declared, no proof needed). You&apos;ll owe ~$9 in taxes, and this creates a valid reason for an ITIN.
         </TipBox>
         <p>You&apos;ll need: <strong>Form W-7</strong>, <strong>Form 1040-NR</strong>, <strong>Schedule 1</strong>, <strong>Schedule OI</strong>, your Canadian SIN, and a list of dates you were in the US during the tax year.</p>
 
         {/* ── Submission Paths ─────────────────── */}
-        <div className="mt-6 mb-4">
-          <h4 className="font-bold mb-3">How to Submit</h4>
-          <div className="space-y-3">
-            <div className="rounded-xl border-2 border-primary/30 bg-primary/[0.03] dark:bg-primary/[0.06] p-4">
-              <p className="text-sm font-bold mb-1">✅ Path A: In-Person at IRS TAC <span className="text-xs font-normal text-accent">(Recommended)</span></p>
-              <ul className="text-sm space-y-1 text-foreground/80">
+        <h3 className={s.sub}>How to Submit</h3>
+        <div className={s.paths}>
+            <div className={`${s.box} ${s.boxRec}`}>
+              <p className={s.boxTitle}>Path A: In-Person at IRS TAC <span className="chip chip-green">Recommended</span></p>
+              <ul className={s.small}>
                 <li>Call <strong>844-545-5640</strong> to book (up to 2 months ahead). Backup: <strong>267-941-1000</strong></li>
                 <li>Bring passport + completed W-7, 1040-NR, Schedule 1, Schedule OI + copies</li>
                 <li>20 min–1 hour. Clerk checks completeness only.</li>
               </ul>
             </div>
-            <div className="rounded-xl border border-border bg-card p-4">
-              <p className="text-sm font-bold mb-1">📬 Path B: Mail-In</p>
-              <ul className="text-sm space-y-1 text-foreground/80">
+            <div className={s.box}>
+              <p className={s.boxTitle}>Path B: Mail-In</p>
+              <ul className={s.small}>
                 <li>Mail to: IRS ITIN Operation, P.O. Box 149342, Austin, TX 78714-9342, USA</li>
                 <li>Canada Post registered mail (~$15) for tracking</li>
                 <li>Include either your <strong>original passport</strong> or a copy certified by Passport Canada (the issuing agency). A notarized copy is not enough.</li>
@@ -182,43 +171,42 @@ const STEPS: StepData[] = [
               </ul>
               <WarningBox>If you mail the original passport, it can take up to 60 days to return. Some have been lost in transit. Have upcoming travel? Use Path A.</WarningBox>
             </div>
-          </div>
         </div>
 
         {/* ── Form Instructions ────────────────── */}
-        <div className="mt-6 mb-4 rounded-2xl border border-primary/20 bg-gradient-to-b from-primary/[0.03] to-transparent dark:from-primary/[0.06] p-5">
-          <h4 className="text-base font-bold text-center mb-2">📝 Line-by-Line Form Instructions</h4>
-          <p className="text-xs text-center text-muted-foreground mb-4">Most fields are left blank. Click each form to expand.</p>
+        <div className={s.forms}>
+          <h3 className={s.sub}>Line-by-Line Form Instructions</h3>
+          <p className={s.note}>Most fields are left blank. Click each form to expand.</p>
 
           <TipBox>
             <strong>Don&apos;t be intimidated!</strong> The key entries are your name, address, SIN, passport info, and a small gambling income number. That&apos;s it.
           </TipBox>
 
-          <p className="text-xs text-muted-foreground italic mb-4">⚠️ Form line numbers may change year to year, so verify against current forms from <a href="https://www.irs.gov/forms-instructions" className="underline hover:text-accent" target="_blank" rel="noopener noreferrer">irs.gov</a>.</p>
+          <p className={s.note}>Form line numbers may change year to year, so verify against current forms from <a href="https://www.irs.gov/forms-instructions" target="_blank" rel="noopener noreferrer">irs.gov</a>.</p>
 
           {/* W-7 */}
-          <details className="mb-3 rounded-xl border border-border bg-card overflow-hidden">
-            <summary className="cursor-pointer p-3 font-bold text-sm hover:bg-primary/[0.03] transition-colors flex items-center gap-2">
-              <span className="w-6 h-6 rounded bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0">1</span>
+          <details className="acc">
+            <summary>
+              <span className={s.fnum}>1</span>
               Form W-7, ITIN Application
             </summary>
-            <div className="px-3 pb-3 space-y-2 text-sm">
-              <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>Top right:</strong> Check <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">&quot;Apply for a New ITIN&quot;</span>
+            <div className={`accbody ${s.formBody}`}>
+              <div className={s.key}>
+                <strong>Top right:</strong> Check <span className="fld">&quot;Apply for a New ITIN&quot;</span>
               </div>
-              <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>Reason:</strong> Check box <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">(b) filing a tax return</span>
+              <div className={s.key}>
+                <strong>Reason:</strong> Check box <span className="fld">(b) filing a tax return</span>
               </div>
               <p><strong>Name:</strong> Must match passport exactly</p>
               <p><strong>Mailing address:</strong> Canadian address is fine</p>
               <p><strong>Foreign address:</strong> Write again even if same as mailing</p>
               <p><strong>Birth info:</strong> As on passport. Unrecognized birth country → use recognized one.</p>
-              <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>6a:</strong> All countries of citizenship &nbsp;|&nbsp; <strong>6b:</strong> <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">Your Canadian SIN</span> (REQUIRED)
+              <div className={s.key}>
+                <strong>6a:</strong> All countries of citizenship &nbsp;|&nbsp; <strong>6b:</strong> <span className="fld">Your Canadian SIN</span> (REQUIRED)
               </div>
               <p><strong>US Visa type:</strong> Leave blank</p>
-              <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>ID Document:</strong> Check <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">&quot;Passport&quot;</span> → Canada, passport #, expiry. Leave &quot;date of entry&quot; blank.
+              <div className={s.key}>
+                <strong>ID Document:</strong> Check <span className="fld">&quot;Passport&quot;</span> → Canada, passport #, expiry. Leave &quot;date of entry&quot; blank.
               </div>
               <p><strong>6e:</strong> No &nbsp;|&nbsp; <strong>6f, 6g:</strong> Blank</p>
               <p><strong>Sign:</strong> In ink (not digital), date, phone (Canadian OK)</p>
@@ -227,35 +215,35 @@ const STEPS: StepData[] = [
           </details>
 
           {/* 1040-NR */}
-          <details className="mb-3 rounded-xl border border-border bg-card overflow-hidden">
-            <summary className="cursor-pointer p-3 font-bold text-sm hover:bg-primary/[0.03] transition-colors flex items-center gap-2">
-              <span className="w-6 h-6 rounded bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0">2</span>
+          <details className="acc">
+            <summary>
+              <span className={s.fnum}>2</span>
               Form 1040-NR, Non-Resident Tax Return
             </summary>
-            <div className="px-3 pb-3 space-y-2 text-sm">
+            <div className={`accbody ${s.formBody}`}>
               <p><strong>Filing status:</strong> Single (or Married Filing Separately)</p>
               <p><strong>Name:</strong> Match W-7 exactly</p>
-              <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>Identifying number:</strong> <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">Leave blank</span>, you&apos;re applying for one!
+              <div className={s.key}>
+                <strong>Identifying number:</strong> <span className="fld">Leave blank</span>, you&apos;re applying for one!
               </div>
               <p><strong>Address:</strong> Canadian mailing address</p>
               <p><strong>Virtual currency:</strong> Yes or No &nbsp;|&nbsp; <strong>Dependents:</strong> Blank</p>
 
-              <div className="p-3 rounded-xl bg-emerald-50/60 dark:bg-emerald-500/[0.08] border border-emerald-200/50 dark:border-emerald-500/20">
-                <p className="font-bold text-emerald-700 dark:text-emerald-300 mb-2 text-xs">💰 Income &amp; Tax Lines (e.g. $85 gambling income):</p>
-                <div className="grid grid-cols-2 gap-1.5 text-xs">
+              <div className={s.key}>
+                <p className={s.linesTitle}>Income &amp; Tax Lines (e.g. $85 gambling income):</p>
+                <div className={s.lines}>
                   {[
                     ['Line 8', '$85'], ['Line 9', '$85'], ['Line 11', '$85'], ['Line 15', '$85'],
                     ['Line 16', '$9'], ['Line 18', '$9'], ['Line 22', '$9'], ['Line 24', '$9'],
                     ['Line 26', '$0'], ['Line 32', '$0'], ['Line 33', '$0'], ['Line 37', '$9'],
                   ].map(([line, val]) => (
-                    <div key={line} className="flex justify-between bg-white/60 dark:bg-white/5 rounded px-2 py-1">
-                      <span className="font-semibold">{line}</span>
-                      <span className="font-mono text-emerald-700 dark:text-emerald-300">{val}</span>
+                    <div key={line} className={s.line}>
+                      <span>{line}</span>
+                      <span className={s.lineVal}>{val}</span>
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-muted-foreground mt-2">$9 tax from IRS Tax Table for $75–$99 income.</p>
+                <p className={s.note}>$9 tax from IRS Tax Table for $75–$99 income.</p>
               </div>
 
               <p><strong>Line 38:</strong> Blank (under $1,000 = no penalty)</p>
@@ -266,22 +254,22 @@ const STEPS: StepData[] = [
           </details>
 
           {/* Schedule OI */}
-          <details className="mb-3 rounded-xl border border-border bg-card overflow-hidden">
-            <summary className="cursor-pointer p-3 font-bold text-sm hover:bg-primary/[0.03] transition-colors flex items-center gap-2">
-              <span className="w-6 h-6 rounded bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0">3</span>
+          <details className="acc">
+            <summary>
+              <span className={s.fnum}>3</span>
               Schedule OI, Other Information
             </summary>
-            <div className="px-3 pb-3 space-y-2 text-sm">
+            <div className={`accbody ${s.formBody}`}>
               <p><strong>Name:</strong> At top of page</p>
-              <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>A:</strong> Country of citizenship &nbsp;|&nbsp; <strong>B:</strong> <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">Canada</span>
+              <div className={s.key}>
+                <strong>A:</strong> Country of citizenship &nbsp;|&nbsp; <strong>B:</strong> <span className="fld">Canada</span>
               </div>
               <p><strong>C, D:</strong> &quot;No&quot;</p>
-              <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>E:</strong> <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">&quot;Not present in U.S., no U.S. immigration status&quot;</span>
+              <div className={s.key}>
+                <strong>E:</strong> <span className="fld">&quot;Not present in U.S., no U.S. immigration status&quot;</span>
               </div>
               <p><strong>F:</strong> No</p>
-              <p><strong>G:</strong> Dates entered/left USA (check <a href="https://i94.cbp.dhs.gov" className="underline hover:text-accent" target="_blank" rel="noopener noreferrer">i94.cbp.dhs.gov</a>). Blank if not in US.</p>
+              <p><strong>G:</strong> Dates entered/left USA (check <a href="https://i94.cbp.dhs.gov" target="_blank" rel="noopener noreferrer">i94.cbp.dhs.gov</a>). Blank if not in US.</p>
               <p><strong>H:</strong> Days in USA for each of 3 tax years</p>
               <WarningBox>
                 <strong>Substantial Presence Test:</strong> If (current year × 1) + (prior year × ⅓) + (2 years ago × ⅙) ≥ 183, get professional help.
@@ -291,14 +279,14 @@ const STEPS: StepData[] = [
           </details>
 
           {/* Schedule 1 */}
-          <details className="mb-3 rounded-xl border border-border bg-card overflow-hidden">
-            <summary className="cursor-pointer p-3 font-bold text-sm hover:bg-primary/[0.03] transition-colors flex items-center gap-2">
-              <span className="w-6 h-6 rounded bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0">4</span>
+          <details className="acc">
+            <summary>
+              <span className={s.fnum}>4</span>
               Schedule 1, Additional Income
             </summary>
-            <div className="px-3 pb-3 space-y-2 text-sm">
-              <div className="rounded-lg bg-emerald-50/50 dark:bg-emerald-500/[0.06] border border-emerald-200/40 dark:border-emerald-500/20 p-2.5">
-                <strong>Line 8b:</strong> <span className="font-mono bg-emerald-100 dark:bg-emerald-500/20 px-1 py-0.5 rounded text-emerald-700 dark:text-emerald-300">Your gambling income (e.g. $85)</span>
+            <div className={`accbody ${s.formBody}`}>
+              <div className={s.key}>
+                <strong>Line 8b:</strong> <span className="fld">Your gambling income (e.g. $85)</span>
               </div>
               <p><strong>Everything else:</strong> Blank or $0</p>
             </div>
@@ -306,14 +294,14 @@ const STEPS: StepData[] = [
         </div>
 
         {/* Payment & After */}
-        <div className="rounded-xl border border-border bg-card p-4 mb-3">
-          <p className="text-sm font-bold mb-2">💰 Payment (~$9 USD)</p>
-          <p className="text-sm text-foreground/80">Pay by check to &quot;United States Treasury&quot; or online at <a href="https://www.irs.gov/payments" className="underline hover:text-accent" target="_blank" rel="noopener noreferrer">irs.gov/payments</a>. Late penalty caps at ~$9 + minimal interest.</p>
+        <div className={s.box}>
+          <p className={s.boxTitle}>Payment (~$9 USD)</p>
+          <p className={s.smallP}>Pay by check to &quot;United States Treasury&quot; or online at <a href="https://www.irs.gov/payments" target="_blank" rel="noopener noreferrer">irs.gov/payments</a>. Late penalty caps at ~$9 + minimal interest.</p>
         </div>
 
-        <div className="rounded-xl border border-border bg-card p-4 mb-3">
-          <p className="text-sm font-bold mb-2">📬 After Submission</p>
-          <ul className="text-sm space-y-1 text-foreground/80">
+        <div className={s.box}>
+          <p className={s.boxTitle}>After Submission</p>
+          <ul className={s.small}>
             <li>Processing: about 7 weeks, or 9 to 11 weeks if you apply during tax season (mid-January to late April) or from outside the US, then you receive a letter with your 9-digit ITIN</li>
             <li><strong>Immediately</strong> link ITIN to your Amex US account</li>
             <li>Expires if unused for 3 years, so file periodically</li>
@@ -325,7 +313,7 @@ const STEPS: StepData[] = [
           You don&apos;t need to wait for your ITIN to start building credit, and that&apos;s why we get the Amex card first. Apply for your ITIN in parallel while your card builds history.
         </TipBox>
 
-        <p className="text-xs text-muted-foreground italic mt-3">⚖️ This guide is for informational purposes only and does not constitute tax advice. Talk to a cross-border tax professional for your specific situation, and always report your income accurately.</p>
+        <p className={s.note}>This guide is for informational purposes only and does not constitute tax advice. Talk to a cross-border tax professional for your specific situation, and always report your income accurately.</p>
       </>
     ),
     checklist: [
@@ -336,7 +324,6 @@ const STEPS: StepData[] = [
     ],
   },
   {
-    icon: TrendingUp,
     title: 'Build Your Credit History',
     time: '3-12 months',
     cost: 'Varies',
@@ -361,7 +348,6 @@ const STEPS: StepData[] = [
     ],
   },
   {
-    icon: ShieldCheck,
     title: 'Apply for Chase Cards',
     time: 'Month 12-18',
     cost: 'Varies',
@@ -374,10 +360,10 @@ const STEPS: StepData[] = [
           <li>A credit score above ~700</li>
           <li>Ideally, a Chase banking relationship</li>
         </ul>
-        <h4 className="font-semibold mt-4 mb-2">The 5/24 Rule</h4>
+        <h3 className={s.sub}>The 5/24 Rule</h3>
         <p>Chase will deny you if you&apos;ve opened <strong>5 or more personal credit cards</strong> across all issuers in the past 24 months. That&apos;s why we get Amex business cards first, since they don&apos;t count.</p>
         <p><strong>Recommended first Chase cards:</strong></p>
-        <div className="flex flex-wrap gap-2 my-3">
+        <div className={s.recs}>
           <CardRec name="Chase Sapphire Preferred" note="great starter" />
           <CardRec name="Ink Business Preferred" note="doesn't count for 5/24" />
           <CardRec name="Chase Aeroplan Card" note="useful for Canadians" />
@@ -394,7 +380,6 @@ const STEPS: StepData[] = [
     ],
   },
   {
-    icon: Rocket,
     title: 'Expand to Other Issuers',
     time: '18+ months',
     cost: 'Varies',
@@ -419,7 +404,9 @@ const STEPS: StepData[] = [
   },
 ];
 
+
 const TOTAL_STEPS = STEPS.length;
+const BASE = '/guides/us-cards-for-canadians/interactive';
 
 // ── Checklist Hook (localStorage) ────────────────────────
 
@@ -444,64 +431,66 @@ function useChecklist() {
   return { checked, toggle };
 }
 
-// ── Step Indicator Dots ──────────────────────────────────
+// ── URL sync (null-rendering leaf, so the page itself prerenders) ──
+
+function StepFromUrl({ onStep }: { onStep: (step: number) => void }) {
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const param = searchParams.get('step');
+    if (param === 'summary') {
+      onStep(TOTAL_STEPS + 1);
+    } else if (param) {
+      const n = parseInt(param, 10);
+      if (n >= 1 && n <= TOTAL_STEPS) onStep(n);
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  return null;
+}
+
+// ── Step Indicator ───────────────────────────────────────
 
 function StepIndicator({ current, onNavigate }: { current: number; onNavigate: (step: number) => void }) {
   return (
-    <div className="flex items-center justify-center gap-2 flex-wrap">
-      {STEPS.map((_, i) => {
+    <ol className={s.dots}>
+      {STEPS.map((step, i) => {
         const stepNum = i + 1;
         const isCurrent = current === stepNum;
         const isCompleted = current > stepNum;
         return (
-          <button
-            key={i}
-            onClick={() => onNavigate(stepNum)}
-            className={`w-8 h-8 rounded-full text-xs font-bold transition-all duration-300 ${
-              isCurrent
-                ? 'bg-gold text-primary-dark scale-110 ring-2 ring-gold/40'
-                : isCompleted
-                ? 'bg-primary text-white'
-                : 'bg-border/40 text-muted-foreground hover:bg-border/60'
-            }`}
-            aria-label={`Go to step ${stepNum}`}
-          >
-            {stepNum}
-          </button>
+          <li key={i}>
+            <button
+              type="button"
+              onClick={() => onNavigate(stepNum)}
+              className={`${s.dot} ${isCurrent ? s.dotOn : isCompleted ? s.dotDone : ''}`}
+              aria-label={`Go to step ${stepNum}: ${step.title}`}
+              aria-current={isCurrent ? 'step' : undefined}
+            >
+              {stepNum}
+            </button>
+          </li>
         );
       })}
-    </div>
+    </ol>
   );
 }
 
-// ── Checklist Component ──────────────────────────────────
+// ── Checklist ────────────────────────────────────────────
+
+function CheckItem({ item, checked, toggle }: { item: ChecklistItem; checked: Record<string, boolean>; toggle: (id: string) => void }) {
+  return (
+    <label className={`${s.check} ${checked[item.id] ? s.checkOn : ''}`}>
+      <input type="checkbox" checked={!!checked[item.id]} onChange={() => toggle(item.id)} />
+      <span>{item.label}</span>
+    </label>
+  );
+}
 
 function Checklist({ items, checked, toggle }: { items: ChecklistItem[]; checked: Record<string, boolean>; toggle: (id: string) => void }) {
   return (
-    <div className="mt-6 rounded-xl border border-border bg-card p-4 space-y-3">
-      <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">Checklist</h4>
-      {items.map(item => (
-        <label key={item.id} className="flex items-start gap-3 cursor-pointer group">
-          <div
-            className={`mt-0.5 w-5 h-5 rounded border-2 flex items-center justify-center shrink-0 transition-all duration-200 ${
-              checked[item.id]
-                ? 'bg-gold border-gold text-primary-dark'
-                : 'border-border group-hover:border-primary/40'
-            }`}
-            onClick={() => toggle(item.id)}
-          >
-            {checked[item.id] && (
-              <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M2 6l3 3 5-5" />
-              </svg>
-            )}
-          </div>
-          <span className={`text-sm leading-relaxed transition-all ${checked[item.id] ? 'text-muted-foreground line-through' : 'text-foreground/80'}`}>
-            {item.label}
-          </span>
-        </label>
-      ))}
-    </div>
+    <fieldset className={s.checklist}>
+      <legend className={s.checklistTitle}>Checklist</legend>
+      {items.map(item => <CheckItem key={item.id} item={item} checked={checked} toggle={toggle} />)}
+    </fieldset>
   );
 }
 
@@ -509,41 +498,23 @@ function Checklist({ items, checked, toggle }: { items: ChecklistItem[]; checked
 
 function IntroScreen({ onStart }: { onStart: () => void }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
-      <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.05] px-4 py-1.5 text-sm mb-8">
-        <span>🇨🇦</span>
-        <ArrowRight className="w-3.5 h-3.5 text-accent" />
-        <span>🇺🇸</span>
-        <span className="ml-1 text-muted-foreground">Step-by-step guide</span>
-      </div>
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-5 font-[family-name:var(--font-display)]">
-        The Complete Guide to{' '}
-        <span className="text-accent">US Credit Cards</span>{' '}
-        for Canadians
-      </h1>
-      <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-4">
-        Everything you need to know about getting an ITIN, building US credit, and accessing the world&apos;s best rewards cards, in 7 simple steps.
-      </p>
-      <p className="text-sm text-muted-foreground mb-10">Last updated February 2026</p>
-
-      <div className="grid sm:grid-cols-2 gap-3 max-w-lg w-full mb-10 text-left">
+    <div className={s.intro}>
+      <ol className={s.overview}>
         {STEPS.map((step, i) => (
-          <div key={i} className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3">
-            <div className="w-7 h-7 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0">
-              {i + 1}
-            </div>
-            <span className="text-sm font-medium">{step.title}</span>
-          </div>
+          <li key={i}>
+            <span className={s.ovNum}>{i + 1}</span>
+            <span className={s.ovTitle}>{step.title}</span>
+            {step.time && <span className={s.ovMeta}>{step.time}</span>}
+          </li>
         ))}
-      </div>
+      </ol>
 
-      <button
-        onClick={onStart}
-        className="rounded-full bg-primary text-white px-10 py-4 font-semibold text-lg hover:bg-primary-dark transition-colors flex items-center gap-2 shadow-lg shadow-primary/20"
-      >
-        Start Guide
-        <ArrowRight className="w-5 h-5" />
-      </button>
+      <div className={s.introCta}>
+        <button type="button" onClick={onStart} className="btn btn-primary btn-lg">
+          Start Guide &rarr;
+        </button>
+        <span className={s.hint}>Your checklist saves in this browser as you go.</span>
+      </div>
     </div>
   );
 }
@@ -555,106 +526,63 @@ function SummaryScreen({ checked, toggle, onBack }: { checked: Record<string, bo
     step.checklist.map(item => ({ ...item, stepNum: i + 1, stepTitle: step.title }))
   );
   const completedCount = allItems.filter(item => checked[item.id]).length;
+  const pct = allItems.length > 0 ? (completedCount / allItems.length) * 100 : 0;
 
   return (
-    <div className="max-w-2xl mx-auto px-4">
-      <div className="text-center mb-10">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-          <CheckCircle2 className="w-8 h-8 text-accent" />
-        </div>
-        <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-display)] mb-2">
-          Your Master Checklist
-        </h2>
-        <p className="text-muted-foreground">
-          {completedCount} of {allItems.length} tasks completed
-        </p>
-        <div className="mt-3 h-2 rounded-full bg-border/30 max-w-xs mx-auto overflow-hidden">
-          <div
-            className="h-full bg-gradient-to-r from-primary to-gold transition-all duration-500 rounded-full"
-            style={{ width: `${allItems.length > 0 ? (completedCount / allItems.length) * 100 : 0}%` }}
-          />
-        </div>
+    <div>
+      <p className={s.kicker}>Summary</p>
+      <h2 className={s.stepTitle}>Your Master Checklist</h2>
+      <p className={s.count}>
+        <span className="num">{completedCount}</span> of <span className="num">{allItems.length}</span> tasks completed
+      </p>
+      <div className={s.bar} role="progressbar" aria-valuemin={0} aria-valuemax={allItems.length} aria-valuenow={completedCount} aria-label="Tasks completed">
+        <div className={s.barFill} style={{ width: `${pct}%` }} />
       </div>
 
-      <div className="space-y-6 mb-10">
-        {STEPS.map((step, i) => {
-          const Icon = step.icon;
-          return (
-            <div key={i} className="rounded-xl border border-border bg-card p-5">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center shrink-0">
-                  {i + 1}
-                </div>
-                <Icon className="w-4 h-4 text-accent" />
-                <h3 className="font-semibold text-sm">{step.title}</h3>
-              </div>
-              <div className="space-y-2 pl-11">
-                {step.checklist.map(item => (
-                  <label key={item.id} className="flex items-start gap-3 cursor-pointer group">
-                    <div
-                      className={`mt-0.5 w-5 h-5 rounded border-2 flex items-center justify-center shrink-0 transition-all ${
-                        checked[item.id] ? 'bg-gold border-gold text-primary-dark' : 'border-border group-hover:border-primary/40'
-                      }`}
-                      onClick={() => toggle(item.id)}
-                    >
-                      {checked[item.id] && (
-                        <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M2 6l3 3 5-5" />
-                        </svg>
-                      )}
-                    </div>
-                    <span className={`text-sm ${checked[item.id] ? 'text-muted-foreground line-through' : 'text-foreground/80'}`}>
-                      {item.label}
-                    </span>
-                  </label>
-                ))}
-              </div>
+      <div className={s.sumList}>
+        {STEPS.map((step, i) => (
+          <section key={i} className={s.sumStep}>
+            <h3 className={s.sumHead}>
+              <span className={s.ovNum}>{i + 1}</span>
+              {step.title}
+            </h3>
+            <div className={s.sumItems}>
+              {step.checklist.map(item => <CheckItem key={item.id} item={item} checked={checked} toggle={toggle} />)}
             </div>
-          );
-        })}
+          </section>
+        ))}
       </div>
 
       {/* Recommended Timeline */}
-      <div className="rounded-xl border border-border bg-card p-6 mb-10">
-        <h3 className="font-bold font-[family-name:var(--font-display)] mb-4">Recommended First-Year Timeline</h3>
-        <div className="space-y-3 text-sm">
-          {[
-            { month: 'Month 0', text: 'Get US address + bank account → Apply for first Amex via Global Transfer' },
-            { month: 'Month 1-2', text: 'Submit ITIN application (process in parallel)' },
-            { month: 'Month 3-6', text: 'Get 1-2 more Amex personal cards + business cards freely' },
-            { month: 'Month 4', text: 'Receive ITIN → Link to all Amex accounts immediately' },
-            { month: 'Month 12-18', text: 'Apply for Chase Sapphire Preferred + Ink Business Preferred' },
-            { month: 'Month 18+', text: 'Expand to Capital One, Citi, Bank of America' },
-          ].map(item => (
-            <div key={item.month} className="flex gap-3">
-              <span className="shrink-0 rounded-md bg-primary/10 text-primary px-2 py-0.5 font-bold text-xs w-24 text-center">{item.month}</span>
-              <span className="text-muted-foreground">{item.text}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      <section className={s.timeline}>
+        <h3 className={s.blockTitle}>Recommended First-Year Timeline</h3>
+        {[
+          { month: 'Month 0', text: 'Get US address + bank account → Apply for first Amex via Global Transfer' },
+          { month: 'Month 1-2', text: 'Submit ITIN application (process in parallel)' },
+          { month: 'Month 3-6', text: 'Get 1-2 more Amex personal cards + business cards freely' },
+          { month: 'Month 4', text: 'Receive ITIN → Link to all Amex accounts immediately' },
+          { month: 'Month 12-18', text: 'Apply for Chase Sapphire Preferred + Ink Business Preferred' },
+          { month: 'Month 18+', text: 'Expand to Capital One, Citi, Bank of America' },
+        ].map(item => (
+          <div key={item.month} className={s.tlRow}>
+            <span className={s.tlMonth}>{item.month}</span>
+            <span className={s.tlText}>{item.text}</span>
+          </div>
+        ))}
+      </section>
 
       {/* CTA */}
-      <div className="rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white p-8 text-center mb-8">
-        <h3 className="text-xl font-bold font-[family-name:var(--font-display)] mb-3">Ready to Start?</h3>
-        <p className="text-white/70 max-w-md mx-auto mb-6 text-sm">
-          Browse our US cards database to find the best current welcome bonuses.
-        </p>
-        <div className="flex flex-wrap justify-center gap-3">
-          <a href="/cards?country=US&sort=value" className="rounded-full bg-gold px-6 py-2.5 font-semibold text-primary-dark hover:bg-gold-light transition-colors text-sm">
-            Browse US Cards
-          </a>
-          <a href="/cards?country=CA" className="rounded-full border border-white/20 bg-white/10 px-6 py-2.5 font-semibold hover:bg-white/20 transition-colors text-sm">
-            Canadian Cards
-          </a>
+      <section className={s.cta}>
+        <h3 className={s.blockTitle}>Ready to Start?</h3>
+        <p className={s.ctaText}>Browse our US cards database to find the best current welcome bonuses.</p>
+        <div className="cta-row">
+          <Link href="/cards?country=US&sort=value" className="cd-apply primary">Browse US Cards &rarr;</Link>
+          <Link href="/cards?country=CA" className="cd-apply">Canadian Cards &rarr;</Link>
         </div>
-      </div>
+      </section>
 
-      <div className="flex justify-start mb-8">
-        <button onClick={onBack} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors">
-          <ArrowLeft className="w-4 h-4" />
-          Back to Step 7
-        </button>
+      <div className={s.nav}>
+        <button type="button" onClick={onBack} className="btn">&larr; Back to Step 7</button>
       </div>
     </div>
   );
@@ -663,33 +591,19 @@ function SummaryScreen({ checked, toggle, onBack }: { checked: Record<string, bo
 // ── Main Page ────────────────────────────────────────────
 
 export default function USCardsGuidePage() {
-  return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-pulse text-muted-foreground">Loading guide...</div></div>}>
-      <USCardsGuideWizard />
-    </Suspense>
-  );
+  return <USCardsGuideWizard />;
 }
 
 function USCardsGuideWizard() {
-  const searchParams = useSearchParams();
   const router = useRouter();
   const { checked, toggle } = useChecklist();
+  const focusRef = useRef<HTMLDivElement>(null);
+  const moved = useRef(false);
 
   // step: 0 = intro, 1-7 = steps, 8 = summary
   const [currentStep, setCurrentStep] = useState(0);
   const [direction, setDirection] = useState<'left' | 'right'>('right');
   const [animating, setAnimating] = useState(false);
-
-  // Sync from URL on mount
-  useEffect(() => {
-    const param = searchParams.get('step');
-    if (param === 'summary') {
-      setCurrentStep(TOTAL_STEPS + 1);
-    } else if (param) {
-      const n = parseInt(param, 10);
-      if (n >= 1 && n <= TOTAL_STEPS) setCurrentStep(n);
-    }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const navigateTo = useCallback((step: number) => {
     if (animating) return;
@@ -697,16 +611,22 @@ function USCardsGuideWizard() {
     setAnimating(true);
 
     // Update URL
-    if (step === 0) router.replace('/guides/us-cards-for-canadians/interactive', { scroll: false });
-    else if (step > TOTAL_STEPS) router.replace('/guides/us-cards-for-canadians/interactive?step=summary', { scroll: false });
-    else router.replace(`/guides/us-cards-for-canadians/interactive?step=${step}`, { scroll: false });
+    if (step === 0) router.replace(BASE, { scroll: false });
+    else if (step > TOTAL_STEPS) router.replace(`${BASE}?step=summary`, { scroll: false });
+    else router.replace(`${BASE}?step=${step}`, { scroll: false });
 
     setTimeout(() => {
+      moved.current = true;
       setCurrentStep(step);
       setAnimating(false);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 200);
   }, [currentStep, animating, router]);
+
+  // Move keyboard focus to the new screen after a user-driven step change.
+  useEffect(() => {
+    if (moved.current) focusRef.current?.focus({ preventScroll: true });
+  }, [currentStep]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -718,139 +638,135 @@ function USCardsGuideWizard() {
     return () => window.removeEventListener('keydown', handler);
   }, [currentStep, navigateTo]);
 
-  // Determine what to render
   const isIntro = currentStep === 0;
   const isSummary = currentStep > TOTAL_STEPS;
   const stepData = !isIntro && !isSummary ? STEPS[currentStep - 1] : null;
+  const anim = animating ? (direction === 'right' ? s.outRight : s.outLeft) : '';
 
   return (
-    <>
-      {/* Article toggle banner */}
-      <div className="mx-auto max-w-3xl px-4 pt-6">
-        <a
-          href="/guides/us-cards-for-canadians"
-          className="flex items-center justify-between gap-3 rounded-xl border border-gold/20 bg-gold/[0.04] dark:bg-gold/[0.08] px-5 py-3.5 group hover:border-gold/40 transition-colors"
-        >
-          <span className="text-sm text-foreground/80">
-            <strong className="text-gold-dark dark:text-gold">Prefer to read everything at once?</strong>{' '}View the full article →
-          </span>
-          <ArrowRight className="w-4 h-4 text-gold-dark dark:text-gold shrink-0 group-hover:translate-x-0.5 transition-transform" />
-        </a>
-      </div>
+    <div className="app norail tone-cards">
+      <main>
+        <div className={`doc ${s.wiz}`}>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep" aria-hidden="true">/</span>
+            <Link href="/cards">Cards</Link><span className="sep" aria-hidden="true">/</span>
+            <Link href="/guides/us-cards-for-canadians">US cards guide</Link><span className="sep" aria-hidden="true">/</span>
+            <span className="cur" aria-current="page">Interactive</span>
+          </nav>
 
-      <div className="min-h-screen">
-        {/* Progress bar (hidden on intro) */}
-        {!isIntro && (
-          <div className="sticky top-16 z-40 bg-background/80 backdrop-blur-md border-b border-border/50">
-            <div className="max-w-3xl mx-auto px-4 py-3">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold text-muted-foreground">
+          <div className="head">
+            <span className="eyebrow">Interactive guide</span>
+            <h1 className={isIntro ? s.h1 : s.h1Small}>The Complete Guide to US Credit Cards for Canadians</h1>
+          </div>
+          {isIntro && (
+            <>
+              <p className="lede">
+                Everything you need to know about getting an ITIN, building US credit, and accessing the world&apos;s best rewards cards, in 7 simple steps.
+              </p>
+              <div className="docmeta">
+                <span className="gd">7 STEPS</span><span className="sep">·</span>
+                <span>Last updated February 2026</span>
+              </div>
+            </>
+          )}
+
+          <Link href="/guides/us-cards-for-canadians" className={s.toggle}>
+            <span><strong>Prefer to read everything at once?</strong> View the full article</span>
+            <span aria-hidden="true">&rarr;</span>
+          </Link>
+
+          {/* Progress bar (hidden on intro) */}
+          {!isIntro && (
+            <div className={s.progress}>
+              <div className={s.progRow}>
+                <span className={s.progStep}>
                   {isSummary ? 'Summary' : `Step ${currentStep} of ${TOTAL_STEPS}`}
                 </span>
-                <span className="text-xs text-muted-foreground">
-                  {isSummary ? '✓ Complete' : stepData?.title}
+                <span className={s.progName}>
+                  {isSummary ? 'Complete' : stepData?.title}
                 </span>
               </div>
-              <div className="h-1.5 rounded-full bg-border/30 overflow-hidden mb-3">
-                <div
-                  className="h-full bg-gradient-to-r from-primary to-gold transition-all duration-500 rounded-full"
-                  style={{ width: `${isSummary ? 100 : (currentStep / TOTAL_STEPS) * 100}%` }}
-                />
+              <div className={s.bar}>
+                <div className={s.barFill} style={{ width: `${isSummary ? 100 : (currentStep / TOTAL_STEPS) * 100}%` }} />
               </div>
               <StepIndicator current={currentStep} onNavigate={navigateTo} />
             </div>
-          </div>
-        )}
-
-        {/* Content with slide animation */}
-        <div className={`transition-all duration-200 ease-out ${animating ? (direction === 'right' ? 'opacity-0 translate-x-8' : 'opacity-0 -translate-x-8') : 'opacity-100 translate-x-0'}`}>
-          {isIntro && (
-            <div className="py-16">
-              <IntroScreen onStart={() => navigateTo(1)} />
-            </div>
           )}
 
-          {stepData && (
-            <div className="max-w-2xl mx-auto px-4 py-10">
-              {/* Step header */}
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-4">
-                  <stepData.icon className="w-7 h-7 text-accent" />
-                </div>
-                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Step {currentStep}</p>
-                <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-display)]">
-                  {stepData.title}
-                </h2>
+          {/* Content with slide animation */}
+          <div ref={focusRef} tabIndex={-1} className={`${s.stage} ${anim}`}>
+            {isIntro && <IntroScreen onStart={() => navigateTo(1)} />}
+
+            {stepData && (
+              <div>
+                <p className={s.kicker}>Step {currentStep}</p>
+                <h2 className={s.stepTitle}>{stepData.title}</h2>
                 {(stepData.time || stepData.cost) && (
-                  <div className="flex items-center justify-center gap-4 mt-3 text-sm text-muted-foreground">
-                    {stepData.time && (
-                      <span className="flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5" />
-                        {stepData.time}
-                      </span>
-                    )}
-                    {stepData.cost && (
-                      <span className="flex items-center gap-1.5">
-                        <DollarSign className="w-3.5 h-3.5" />
-                        {stepData.cost}
-                      </span>
-                    )}
-                  </div>
+                  <dl className={s.facts}>
+                    {stepData.time && (<div><dt>Time</dt><dd>{stepData.time}</dd></div>)}
+                    {stepData.cost && (<div><dt>Cost</dt><dd>{stepData.cost}</dd></div>)}
+                  </dl>
                 )}
+
+                <div className={s.content}>
+                  {stepData.content}
+                </div>
+
+                <Checklist items={stepData.checklist} checked={checked} toggle={toggle} />
+
+                <div className={s.nav}>
+                  <button type="button" onClick={() => navigateTo(currentStep - 1)} className="btn">
+                    &larr; {currentStep === 1 ? 'Overview' : 'Previous'}
+                  </button>
+                  <button type="button" onClick={() => navigateTo(currentStep + 1)} className="btn btn-primary">
+                    {currentStep === TOTAL_STEPS ? 'View Summary' : 'Next Step'} &rarr;
+                  </button>
+                </div>
               </div>
+            )}
 
-              {/* Step content */}
-              <div className="prose-guide">
-                {stepData.content}
-              </div>
-
-              {/* Checklist */}
-              <Checklist items={stepData.checklist} checked={checked} toggle={toggle} />
-
-              {/* Navigation */}
-              <div className="flex items-center justify-between mt-10 pt-6 border-t border-border/50">
-                <button
-                  onClick={() => navigateTo(currentStep - 1)}
-                  className="flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium hover:bg-card transition-colors"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                  {currentStep === 1 ? 'Overview' : 'Previous'}
-                </button>
-                <button
-                  onClick={() => navigateTo(currentStep + 1)}
-                  className="flex items-center gap-2 rounded-full bg-primary text-white px-6 py-2.5 text-sm font-semibold hover:bg-primary-dark transition-colors"
-                >
-                  {currentStep === TOTAL_STEPS ? 'View Summary' : 'Next Step'}
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          )}
-
-          {isSummary && (
-            <div className="py-10">
+            {isSummary && (
               <SummaryScreen checked={checked} toggle={toggle} onBack={() => navigateTo(TOTAL_STEPS)} />
-            </div>
-          )}
+            )}
+          </div>
         </div>
-      </div>
 
-      {/* JSON-LD structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'The Complete Guide to US Credit Cards for Canadians',
-            description: 'Step-by-step guide to getting an ITIN, building US credit, and accessing the best US rewards cards as a Canadian.',
-            datePublished: '2026-02-22',
-            dateModified: '2026-02-22',
-            author: { '@type': 'Organization', name: 'FinTerminal' },
-            publisher: { '@type': 'Organization', name: 'FinTerminal' },
-          }),
-        }}
-      />
-    </>
+        <Suspense fallback={null}>
+          <StepFromUrl onStep={setCurrentStep} />
+        </Suspense>
+
+        {/* JSON-LD structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Article',
+              headline: 'The Complete Guide to US Credit Cards for Canadians',
+              description: 'Step-by-step guide to getting an ITIN, building US credit, and accessing the best US rewards cards as a Canadian.',
+              datePublished: '2026-02-22',
+              dateModified: '2026-02-22',
+              author: { '@type': 'Organization', name: 'FinTerminal' },
+              publisher: { '@type': 'Organization', name: 'FinTerminal' },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.finterminal.ca/' },
+                { '@type': 'ListItem', position: 2, name: 'Cards', item: 'https://www.finterminal.ca/cards' },
+                { '@type': 'ListItem', position: 3, name: 'US cards guide', item: 'https://www.finterminal.ca/guides/us-cards-for-canadians' },
+                { '@type': 'ListItem', position: 4, name: 'Interactive', item: 'https://www.finterminal.ca/guides/us-cards-for-canadians/interactive' },
+              ],
+            }),
+          }}
+        />
+      </main>
+    </div>
   );
 }

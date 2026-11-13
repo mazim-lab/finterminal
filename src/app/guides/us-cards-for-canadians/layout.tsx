@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { ogMeta } from '@/lib/og';
+
+const og = ogMeta('US credit cards for Canadians: the ITIN guide', 'Cards guide');
 
 export const metadata: Metadata = {
   title: 'ITIN Guide: How Canadians Can Get US Credit Cards (2026 Step-by-Step) | FinTerminal',
@@ -9,7 +12,10 @@ export const metadata: Metadata = {
     description:
       'Everything you need to know about getting an ITIN, building US credit, and accessing the world\'s best rewards cards.',
     type: 'article',
+    images: og.openGraph?.images,
   },
+  twitter: og.twitter,
+  alternates: { canonical: '/guides/us-cards-for-canadians' },
 };
 
 export default function USCardsGuideLayout({ children }: { children: React.ReactNode }) {

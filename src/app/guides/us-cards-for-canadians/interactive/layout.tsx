@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { ogMeta } from '@/lib/og';
+
+const og = ogMeta('US credit cards for Canadians: interactive guide', 'Cards guide');
 
 export const metadata: Metadata = {
   title: 'Interactive Guide: US Credit Cards for Canadians (Step-by-Step Wizard) | FinTerminal',
@@ -9,7 +12,10 @@ export const metadata: Metadata = {
     description:
       'Walk through 7 steps to get US credit cards as a Canadian, with checklists and progress tracking.',
     type: 'article',
+    images: og.openGraph?.images,
   },
+  twitter: og.twitter,
+  alternates: { canonical: '/guides/us-cards-for-canadians/interactive' },
 };
 
 export default function InteractiveGuideLayout({ children }: { children: React.ReactNode }) {

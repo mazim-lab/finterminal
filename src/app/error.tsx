@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
+import s from "./status-page.module.css";
 
 export default function Error({
   error,
@@ -15,26 +16,20 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="app norail">
-      <main>
-        <div className="doc">
-          <div className="head"><h1>Fault on the board</h1></div>
-          <p className="lede">
-            Something on our end tripped up while loading this page. Give it another go, and if it keeps happening, one of the usual routes below will get you where you were headed.
-          </p>
-          <div className="cd-note">
-            <div className="cap">Where to go next</div>
-            <p style={{ margin: 0 }} className="sub">
-              Retry the page, or head back to the terminal and pick up from there.
-            </p>
-          </div>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 14 }}>
-            <button type="button" onClick={() => reset()} className="cd-apply">Try again</button>
-            <Link href="/" className="cd-apply">The board &rarr;</Link>
-            <Link href="/cards" className="cd-apply">Compare cards &rarr;</Link>
-          </div>
-        </div>
-      </main>
+    <div className="wrap page">
+      <div className={s.box}>
+        <p className={s.code}>Something went wrong</p>
+        <h1 className={s.title}>This page didn&apos;t load properly</h1>
+        <p className={s.copy}>
+          Something on my end tripped up while loading this page. Give it another go, and if it keeps
+          happening, one of the usual routes below will get you where you were headed.
+        </p>
+        <p className={s.home}>
+          <button type="button" onClick={() => reset()} className="btn btn-primary">Try again</button>
+          <Link href="/" className="btn">Home page</Link>
+          <Link href="/cards" className="btn">Compare cards</Link>
+        </p>
+      </div>
     </div>
   );
 }

@@ -98,7 +98,7 @@ export function ContactForm() {
           {status === "sending" ? "Sending…" : "Send message"}
         </button>
         {status === "err" && (
-          <span className="ferr">Something went wrong sending that. Please try again in a moment.</span>
+          <span className="ferr" role="alert">Something went wrong sending that. Please try again in a moment.</span>
         )}
       </div>
     </form>
