@@ -183,7 +183,7 @@ export default function AirportLoungeAccessCanadaPage() {
           <h2 id="airline" className="cd-sec">Route 2: airline lounges via status, fare, or a card</h2>
           <p>
             The second route is the airline&apos;s own lounge, and for most Canadians that means Air Canada&apos;s{" "}
-            <a href="https://www.aircanada.com/ca/en/aco/home/fly/airport/maple-leaf-lounge.html" target="_blank" rel="noopener noreferrer">Maple Leaf Lounges</a>.
+            <a href="https://www.aircanada.com/ca/en/aco/home/fly/premium-services/maple-leaf-lounges.html" target="_blank" rel="noopener noreferrer">Maple Leaf Lounges</a>.
             These are different from a network membership, because you generally do not buy your way in with a card
             membership, you earn or qualify your way in. There are three usual doors: holding Aeroplan Elite status, flying
             a same-day Air Canada business or premium fare that includes lounge access, or a lounge benefit attached to

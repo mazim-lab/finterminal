@@ -150,8 +150,10 @@ export default function RatesHubPage() {
             One thing worth keeping in the back of your mind: savings and GIC rates are not fixed features of a bank, they
             move with the Bank of Canada&apos;s overnight rate. When the central bank raises or cuts, savings rates and new GIC
             offers tend to follow, sometimes quickly and sometimes with a lag. That is why we do not pin specific
-            per-provider numbers on this hub. As of July 2026 the overnight rate sits at 2.25 percent and everyday
-            high-interest savings rates were broadly in the mid-2 percent range, but that is a snapshot, not a promise.
+            per-provider numbers on this hub. At its October 28, 2026 decision the Bank of Canada raised its target for
+            the overnight rate by a quarter point to 2.50 percent, and its next scheduled decision is December 9, 2026.
+            In mid-November 2026 the best everyday high-interest savings rates sat at about 3 percent, but that is a
+            snapshot, not a promise.
             Always confirm the live figure on the linked page before you move money, and confirm current limits or product
             rules with the provider or the CRA where they matter to you.
           </p>

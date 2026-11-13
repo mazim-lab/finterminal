@@ -13,7 +13,7 @@ export const metadata = {
   alternates: { canonical: "/personal-finance/best-gic-rates-canada" },
   title: "Best GIC rates in Canada | FinTerminal",
   description:
-    "An honest look at the best GIC rates in Canada across terms, from Oaken and Achieva to EQ Bank, Wealthsimple, and the big banks. Rates as of September 2026, with cashable vs non-redeemable, the ladder strategy, registered GICs, and the CDIC vs credit-union coverage you really get.",
+    "An honest look at the best GIC rates in Canada across terms, from Oaken and Achieva to EQ Bank, Wealthsimple, and the big banks. Rates as of November 2026, with cashable vs non-redeemable, the ladder strategy, registered GICs, and the CDIC vs credit-union coverage you really get.",
   ...ogMeta("Best GIC rates in Canada", "Personal finance", "/personal-finance/best-gic-rates-canada", "article"),
 };
 
@@ -31,11 +31,11 @@ const TOC = [
 const FAQ = [
   {
     q: "What is the best GIC rate in Canada right now?",
-    a: "As of September 2026, the strongest verified non-redeemable GIC rates from mainstream providers sit around 3.55 to 3.70 percent for a one-year term and around 4.10 to 4.25 percent for five years, from names like Oaken, Achieva, and Saven. Big banks usually post lower posted rates and expect you to negotiate. Cashable GICs pay less, often around the low-two-percent range, because you are paying for the flexibility to break the term early. GIC rates change often, so confirm the current rate on the provider's own page before you lock in.",
+    a: "As of November 2026, the strongest verified non-redeemable GIC rates from mainstream providers sit around 3.70 to 4.00 percent for a one-year term and around 4.30 to 4.50 percent for five years, from names like Saven, Oaken, and Achieva. Big banks usually post lower posted rates and expect you to negotiate. Cashable GICs pay less, often around the low-two-percent range, because you are paying for the flexibility to break the term early. GIC rates change often, so confirm the current rate on the provider's own page before you lock in.",
   },
   {
     q: "Do longer GIC terms always pay more?",
-    a: "Not always. The yield curve moves around, and there are stretches where a one-year GIC pays more than a two-year, or where the five-year barely beats the one-year. As of September 2026 the curve is fairly flat and even slightly humped at some providers, meaning a mid-length term can out-pay both shorter and longer ones. That is exactly why laddering, spreading money across several terms, tends to beat guessing which single term will win.",
+    a: "Not always. The yield curve moves around, and there are stretches where a one-year GIC pays more than a two-year, or where the five-year barely beats the one-year. As of November 2026 most providers pay a little more for each extra year, but the curve is humped at some, Peoples Trust for one, where the one-year out-pays every longer term. That is exactly why laddering, spreading money across several terms, tends to beat guessing which single term will win.",
   },
   {
     q: "What is the difference between a cashable and a non-redeemable GIC?",
@@ -59,11 +59,11 @@ const FAQ = [
 // "The rates, term by term" below; providers we could not verify say "Check site".
 const CHECK = { text: "Check site", check: true } as const;
 const GLANCE: GlanceRow[] = [
-  { name: "EQ Bank", sub: "CDIC", cells: { y1: "3.70%", y2: "3.85%", y3: "4.10%", y4: "4.15%", y5: "4.25%" } },
-  { name: "Saven Financial", sub: "FSRA (Ontario CU)", cells: { y1: "3.70%", y2: "3.90%", y3: "4.00%", y4: "4.05%", y5: "4.25%" } },
-  { name: "Oaken Financial", sub: "CDIC", cells: { y1: "3.55%", y2: "4.05%", y3: "4.10%", y4: "4.15%", y5: "4.25%" } },
-  { name: "Achieva Financial", sub: "DGCM (Manitoba CU)", cells: { y1: "3.65%", y2: "3.75%", y3: "3.95%", y4: "3.90%", y5: "4.10%" } },
-  { name: "Peoples Trust", sub: "CDIC", cells: { y1: "3.25%", y2: "3.00%", y3: "3.25%", y4: "3.25%", y5: "3.45%" } },
+  { name: "EQ Bank", sub: "CDIC", cells: { y1: "3.70%", y2: "4.15%", y3: "4.15%", y4: "4.20%", y5: "4.30%" } },
+  { name: "Saven Financial", sub: "FSRA (Ontario CU)", cells: { y1: "4.00%", y2: "4.25%", y3: "4.30%", y4: "4.35%", y5: "4.50%" } },
+  { name: "Oaken Financial", sub: "CDIC", cells: { y1: "3.90%", y2: "4.30%", y3: "4.35%", y4: "4.40%", y5: "4.50%" } },
+  { name: "Achieva Financial", sub: "DGCM (Manitoba CU)", cells: { y1: "3.95%", y2: "4.10%", y3: "4.15%", y4: "4.20%", y5: "4.35%" } },
+  { name: "Peoples Trust", sub: "CDIC", cells: { y1: "3.70%", y2: "3.00%", y3: "3.25%", y4: "3.25%", y5: "3.45%" } },
   { name: "Wealthsimple", sub: "CDIC partners", cells: { y1: CHECK, y2: CHECK, y3: CHECK, y4: CHECK, y5: CHECK } },
   { name: "Simplii Financial", sub: "CDIC", cells: { y1: CHECK, y2: CHECK, y3: CHECK, y4: CHECK, y5: CHECK } },
   { name: "Tangerine", sub: "CDIC", cells: { y1: CHECK, y2: CHECK, y3: CHECK, y4: CHECK, y5: CHECK } },
@@ -122,9 +122,9 @@ export default function BestGicRatesPage() {
           <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p className="sub">
-              As of September 2026, the strongest verified non-redeemable GIC rates from mainstream providers land
-              around 3.55 to 3.70 percent for one year and around 4.10 to 4.25 percent for five years, from names like
-              Oaken, Achieva, and Saven. Cashable GICs pay less, often in the low-two-percent range, because you are paying for
+              As of November 2026, the strongest verified non-redeemable GIC rates from mainstream providers land
+              around 3.70 to 4.00 percent for one year and around 4.30 to 4.50 percent for five years, from names like
+              Saven, Oaken, and Achieva. Cashable GICs pay less, often in the low-two-percent range, because you are paying for
               the freedom to break the term early. Big banks usually post lower rates and expect negotiation. GIC
               rates change often and once you buy, your rate is locked, so confirm the current rate on the
               provider&apos;s own page before you lock in.
@@ -132,8 +132,8 @@ export default function BestGicRatesPage() {
           </div>
 
           <RateGlance
-            caption="Non-redeemable GIC rates by provider and term, verified September 2026"
-            intro={<>Non-redeemable rates by term, verified in September 2026 on each provider&apos;s own rate page. Details and links are in <a href="#table">the full rundown</a> below.</>}
+            caption="Non-redeemable GIC rates by provider and term, verified November 2026"
+            intro={<>Non-redeemable rates by term, verified in November 2026 on each provider&apos;s own rate page. Details and links are in <a href="#table">the full rundown</a> below.</>}
             columns={[
               { key: "y1", label: "1 yr", numeric: true, markBest: true },
               { key: "y2", label: "2 yr", numeric: true, markBest: true },
@@ -144,7 +144,7 @@ export default function BestGicRatesPage() {
             rows={GLANCE}
             legendBest
             notes={[
-              <>Oaken also pays 3.65% for 18 months, and its cashable one-year sits around 2.25% after the holding period.</>,
+              <>Oaken also pays 3.95% for 18 months, and its cashable one-year pays 2.25% after a 30- or 90-day holding period. EQ Bank also offers 15-month (3.80%) and 27-month (4.10%) terms.</>,
               <>&ldquo;Check site&rdquo; means the provider loads its rates dynamically or behind a sign-in, so we could not confirm a live number.</>,
             ]}
           />
@@ -161,13 +161,13 @@ export default function BestGicRatesPage() {
           <p>
             There is no single winner, because the best GIC depends on your term and on whether you need the option
             to cash out early. For a locked, non-redeemable GIC, the online banks and credit unions consistently
-            beat the big banks&apos; posted rates. As of September 2026 the leaders we could verify pay in the
-            mid-to-high three percent range for one year and in the low four percent range for five years. If you want the flexibility to break
+            beat the big banks&apos; posted rates. As of November 2026 the leaders we could verify pay from the
+            high three percent range up to four percent for one year, and in the mid four percent range for five years. If you want the flexibility to break
             the term, a cashable GIC will pay noticeably less, and for money you genuinely might need soon, a
             high-interest savings account can be the better home.
           </p>
           <p>
-            The figures below come from each provider&apos;s own rate pages, checked in September 2026. Some providers,
+            The figures below come from each provider&apos;s own rate pages, checked on November 13, 2026. Some providers,
             including several big banks and a few online banks, load their rates dynamically or only display them
             after you sign in, so we could not confirm an exact live number for every name. Where that is the case
             we say so plainly and describe the rate qualitatively rather than guess. A finance site that prints a
@@ -177,30 +177,29 @@ export default function BestGicRatesPage() {
           {/* TABLE */}
           <h2 id="table" className="cd-sec">The rates, term by term</h2>
           <p>
-            Here is where the mainstream options stand as of September 2026. Rates shown in bold were verified live on
-            the provider&apos;s own rate page in September 2026. Where a provider does not expose its rates to a simple
+            Here is where the mainstream options stand as of November 2026. Rates shown in bold were verified live on
+            the provider&apos;s own rate page on November 13, 2026. Where a provider does not expose its rates to a simple
             page read, we describe the level and link you to the source to confirm.
           </p>
           <div className="kv" style={{ marginTop: 10 }}>
             <div className="kvrow">
               <div className="kvk">Oaken Financial (Home Bank / Home Trust)</div>
               <div className="kvv">
-                Verified September 2026, annual-pay non-redeemable: <strong>1yr 3.55%</strong>,{" "}
-                <strong>18mo 3.65%</strong>, <strong>2yr 4.05%</strong>, <strong>3yr 4.10%</strong>,{" "}
-                <strong>4yr 4.15%</strong>, <strong>5yr 4.25%</strong>. Cashable one-year around{" "}
-                <strong>2.25%</strong> after the holding period. Registered (RSP/TFSA) GICs currently match the
+                Verified November 13, 2026, annual-pay non-redeemable, in effect since November 6, 2026:{" "}
+                <strong>1yr 3.90%</strong>, <strong>18mo 3.95%</strong>, <strong>2yr 4.30%</strong>,{" "}
+                <strong>3yr 4.35%</strong>, <strong>4yr 4.40%</strong>, <strong>5yr 4.50%</strong>. Cashable one-year{" "}
+                <strong>2.25%</strong> after a 30- or 90-day holding period. Registered (RSP/TFSA) GICs currently match the
                 non-registered rates. Each deposit is issued by either Home Bank or Home Trust, both separate CDIC
-                members. Minimum $1,000.{" "}
-                <a href="https://www.oaken.com/gic-rates/" target="_blank" rel="noopener noreferrer">Oaken rate page</a>.
+                members. Minimum $100 online, or $1,000 through Oaken&apos;s contact centre or stores.{" "}
+                <a href="https://www.oaken.com/en/rates" target="_blank" rel="noopener noreferrer">Oaken rate page</a>.
               </div>
             </div>
             <div className="kvrow">
               <div className="kvk">Achieva Financial</div>
               <div className="kvv">
-                Verified September 2026, non-redeemable: <strong>1yr 3.65%</strong>, <strong>2yr 3.75%</strong>,{" "}
-                <strong>3yr 3.95%</strong>, <strong>4yr 3.90%</strong>, <strong>5yr 4.10%</strong>, in effect
-                since August 27, 2026. Note the four-year sits slightly below the three-year here, another
-                reminder that longer does not always pay more. A Manitoba
+                Verified November 13, 2026, non-redeemable: <strong>1yr 3.95%</strong>, <strong>2yr 4.10%</strong>,{" "}
+                <strong>3yr 4.15%</strong>, <strong>4yr 4.20%</strong>, <strong>5yr 4.35%</strong>, in effect
+                since October 29, 2026. A Manitoba
                 credit union, so deposits are guaranteed without a dollar limit by the Deposit Guarantee
                 Corporation of Manitoba, not CDIC. GICs are not redeemable before maturity.{" "}
                 <a href="https://www.achieva.mb.ca/rates" target="_blank" rel="noopener noreferrer">Achieva rate page</a>.
@@ -209,9 +208,10 @@ export default function BestGicRatesPage() {
             <div className="kvrow">
               <div className="kvk">Peoples Trust (Peoples Bank of Canada)</div>
               <div className="kvv">
-                Verified September 2026, annual-pay non-registered: <strong>1yr 3.25%</strong>, <strong>2yr 3.00%</strong>,{" "}
-                <strong>3yr 3.25%</strong>, <strong>4yr 3.25%</strong>, <strong>5yr 3.45%</strong>. Note the flat,
-                slightly humped curve here, a good reminder that longer does not always pay more. Peoples Trust
+                Verified November 13, 2026, non-registered: <strong>1yr 3.70%</strong>, <strong>2yr 3.00%</strong>,{" "}
+                <strong>3yr 3.25%</strong>, <strong>4yr 3.25%</strong>, <strong>5yr 3.45%</strong>. Note the humped
+                curve here, where the one-year pays more than any longer term, a good reminder that longer does not
+                always pay more. Peoples Trust
                 Company and Peoples Bank of Canada are CDIC members.{" "}
                 <a href="https://www.peoplesgroup.com/personal/resources/account-rates" target="_blank" rel="noopener noreferrer">Peoples Group rate page</a>.
               </div>
@@ -221,8 +221,8 @@ export default function BestGicRatesPage() {
               <div className="kvv">
                 A long-standing GIC leader among online banks, offering non-redeemable GICs across terms from a few
                 months to five years, plus registered (TFSA/RRSP/FHSA) versions at the same rates. Verified
-                September 2026, non-registered: <strong>1yr 3.70%</strong>, <strong>2yr 3.85%</strong>,{" "}
-                <strong>3yr 4.10%</strong>, <strong>4yr 4.15%</strong>, <strong>5yr 4.25%</strong>. EQ Bank is a
+                November 13, 2026, non-registered: <strong>1yr 3.70%</strong>, <strong>2yr 4.15%</strong>,{" "}
+                <strong>3yr 4.15%</strong>, <strong>4yr 4.20%</strong>, <strong>5yr 4.30%</strong>. EQ Bank is a
                 trade name of Equitable Bank, a CDIC member.{" "}
                 <a href="https://www.eqbank.ca/rates" target="_blank" rel="noopener noreferrer">EQ Bank rate page</a>.
               </div>
@@ -259,9 +259,9 @@ export default function BestGicRatesPage() {
               <div className="kvk">Saven Financial</div>
               <div className="kvv">
                 A digital brand of FirstOntario Credit Union that focuses on competitive GICs and savings, and it
-                sits right near the top of the credit-union pack. Verified September 2026, non-redeemable:{" "}
-                <strong>1yr 3.70%</strong>, <strong>2yr 3.90%</strong>, <strong>3yr 4.00%</strong>,{" "}
-                <strong>4yr 4.05%</strong>, <strong>5yr 4.25%</strong>, with the same rates on the TFSA, FHSA, RRSP,
+                sits right near the top of the credit-union pack. Verified November 13, 2026, non-redeemable:{" "}
+                <strong>1yr 4.00%</strong>, <strong>2yr 4.25%</strong>, <strong>3yr 4.30%</strong>,{" "}
+                <strong>4yr 4.35%</strong>, <strong>5yr 4.50%</strong>, with the same rates on the TFSA, FHSA, RRSP,
                 and RRIF versions. Minimum $1,000. Deposits are covered by Ontario credit union insurance through
                 FSRA, not CDIC.{" "}
                 <a href="https://savenfinancial.ca/en/on-rates" target="_blank" rel="noopener noreferrer">Saven rate page</a>.
@@ -282,7 +282,7 @@ export default function BestGicRatesPage() {
           <div className="cd-note">
             <div className="cap">Rates change; this is a snapshot</div>
             <p className="sub">
-              The bold figures above were verified in September 2026 against each provider&apos;s own materials, but GIC
+              The bold figures above were verified on November 13, 2026 against each provider&apos;s own materials, but GIC
               rates move with the Bank of Canada and with each provider&apos;s funding needs. Once you buy, your
               rate is locked for the term, which is the whole point, but the rate on offer for new purchases keeps
               changing. Treat this as a map of the landscape, not a live quote, and confirm the current figure on
@@ -345,7 +345,7 @@ export default function BestGicRatesPage() {
           </div>
           <p>
             The ladder shines exactly when the yield curve is flat or humped, like it is at some providers as of
-            September 2026, because you stop needing to predict whether short or long terms will pay more. You simply
+            November 2026, because you stop needing to predict whether short or long terms will pay more. You simply
             hold a bit of each and let the average work for you.
           </p>
 

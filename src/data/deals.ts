@@ -34,6 +34,8 @@ export const DEALS: Deal[] = [
       "If you are building or upgrading a PC right now, storage has turned pricey with the memory shortage, so a genuine markdown on a top tier drive is worth grabbing, and Newegg has the Samsung 990 PRO 2TB down to $559.97 from $874.97, a full 36 percent off, sold and shipped by Newegg. This is Samsung's flagship PCIe 4.0 drive with read speeds up to 7,450MB/s, so games load fast, big files copy quickly, and it carries the steady, reliable reputation that makes it an easy pick for a boot drive or a main library drive. One honest note so you buy clear eyed: this is the bare version without a heatsink, so if your motherboard does not already have its own M.2 heat spreader you will want to add a cheap one or choose the heatsink model, and while SSD prices sit high across the board right now thanks to the memory crunch, this is a strong price in today's market rather than the bargain these were a couple of years ago. For a fast, dependable drive though, it is a lot of storage for the money.",
     category: "Electronics",
     posted: "Sep 9, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Sennheiser Momentum 4 Wireless noise-cancelling headphones",
@@ -56,6 +58,8 @@ export const DEALS: Deal[] = [
       "If your desk has room for something bigger, a 32 inch QHD screen makes both a work day and a game night feel roomier, and Newegg has the ViewSonic VX3218C-2K down to $271.99 from $399.99, a clean 32 percent off, sold and shipped by Newegg. You get a sharp 2560x1440 resolution across a large 31.5 inch panel, a quick 165Hz refresh that runs up to 180Hz over DisplayPort, a gentle 1500R curve that wraps the picture a little toward you, and FreeSync Premium to keep games from tearing. One honest note so you buy clear eyed: this is a VA panel, which gives lovely deep blacks and contrast but trades away a touch of the wide angle colour consistency you would get from IPS, and Newegg gives you a short 15 day return window, so if you want to try it, decide inside that window. For a big, immersive everyday screen though, this is a lot of monitor for the money.",
     category: "Electronics",
     posted: "Sep 5, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "ASUS ProArt PA278QV 27-inch WQHD IPS monitor",
@@ -67,6 +71,8 @@ export const DEALS: Deal[] = [
       "A colour accurate monitor is a different kind of tool than a fast gaming panel, and Newegg has the ASUS ProArt PA278QV down to $259.99 from $349.99, sold and shipped by Newegg. This is the screen for anyone who edits photos, works in design, or just wants text and colour that stay honest all day: a sharp 27 inch QHD IPS panel that ASUS calibrates at the factory to cover the sRGB and Rec. 709 colour spaces, plus a proper stand that raises, tilts, pivots, and swivels so you can set it exactly where your neck wants it. One honest note so you buy clear eyed: this is a 75Hz panel tuned for accuracy rather than the high refresh rates gamers chase, so if fast motion in shooters is your priority a gaming monitor suits you better, but for creative work and everyday clarity this is a lot of monitor for the money.",
     category: "Electronics",
     posted: "Sep 2, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "MONTECH HyperFlow ARGB 360 white all-in-one liquid CPU cooler",
@@ -78,6 +84,8 @@ export const DEALS: Deal[] = [
       "If your desktop runs hot and loud when it works hard, a big 360mm liquid cooler is one of the nicer quality of life upgrades, and Newegg has the MONTECH HyperFlow ARGB 360 in white down to $56.09 from $129.99, a striking 56 percent off. The large radiator pulls heat off the processor far better than a small stock cooler, which keeps the chip running fast under load and lets the fans settle to a hush instead of roaring through a game or a big export, and the three ARGB fans give a bright build a bit of glow. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop and your case has room for a 360mm radiator, so check your clearance and socket support first. It is a part for a build, not a plug and play gadget for a laptop or a non PC household. If you are putting a machine together though, this is a lot of cooler for very little money.",
     category: "Electronics",
     posted: "Sep 2, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "TP-Link Archer TXE72E AXE5400 Wi-Fi 6E PCIe adapter (open box)",
@@ -89,6 +97,8 @@ export const DEALS: Deal[] = [
       "If your desktop still leans on an old wireless card or a slow USB dongle, this is a cheap and genuinely useful upgrade, with Newegg listing the TP-Link Archer TXE72E down to $31.99 from $69.99. It is a Wi-Fi 6E PCIe card that adds the newer, less crowded 6GHz band for faster and steadier wireless on a modern router, plus Bluetooth 5.3 for your headset and controller, and it slots into a spare PCIe lane inside the case. Two honest notes so you buy clear eyed: this one is an open box item marked final sale, so it cannot be returned, which is the trade for the low price, so test it the day it lands. And to actually reach those 6GHz speeds you need a Wi-Fi 6E router, though it still works fine on older routers at their own speeds. For a wired feeling wireless upgrade on a desktop though, it is real value.",
     category: "Electronics",
     posted: "Sep 2, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Gigabyte 27-inch QHD 240Hz QD-OLED gaming monitor (GO27Q24A)",
@@ -100,6 +110,8 @@ export const DEALS: Deal[] = [
       "A good QD-OLED is the kind of screen you notice the second it lights up, and Gigabyte has this 27 inch one down to $439.99 from $649.99, sold and shipped by Newegg. The GO27Q24A is a sharp QHD panel with the perfect inky blacks and vivid colour that make games and movies look special, a very quick 240Hz refresh with a near instant response time, and both HDMI 2.1 and DisplayPort inputs so it plays nicely with a console or a PC. One honest note so you buy clear eyed: OLED panels can be prone to burn in over years if you leave the same taskbar or logo parked on screen all day, so it is happiest as a gaming and media screen rather than a static spreadsheet workhorse, though Gigabyte builds in screen care features to help with exactly that. For the right desk, this is a lot of premium panel for the money.",
     category: "Electronics",
     posted: "Aug 29, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "ASRock Phantom Gaming PG-750G 750W ATX 3.1 fully modular power supply",
@@ -122,6 +134,8 @@ export const DEALS: Deal[] = [
       "A good headset makes games and calls alike feel clearer, and Logitech has its G PRO X down to $119.99 from $159.99, sold and shipped by Newegg with free 30 day returns. It is a well built over ear set with soft memory foam earpads, a detachable boom mic tuned for clear voice chat, and the kind of comfortable fit you can wear through a long session, which is why it sits at the top of Newegg's headset best sellers. One honest note so you buy for the right reason: this is the wired version, so you plug in rather than roam free, which most people at a desk never mind and which is exactly why it costs less than the wireless model. For clear sound on a PC or a console though, it is a lot of headset for the money.",
     category: "Electronics",
     posted: "Aug 29, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "MSI FORGE GK600 TKL wireless hot-swap mechanical keyboard",
@@ -133,6 +147,8 @@ export const DEALS: Deal[] = [
       "A proper mechanical keyboard is one of those upgrades you feel under your fingers every day, and MSI has its FORGE GK600 tenkeyless down to $84.99 from $139.99, a clean 39 percent off, sold and shipped by Newegg. It packs a lot for the price with smooth linear switches, a hot swap design so you can change the feel later without any soldering, durable PBT keycaps that will not go shiny in a year, and three ways to connect over a low lag 2.4GHz dongle, Bluetooth, or USB-C. One honest note so you buy for the right reason: a tenkeyless layout drops the dedicated number pad to save desk space, which most people never miss but which matters if you punch in numbers all day, so a full size board may suit you better there. For a wireless everyday and gaming keyboard though, this is a lot of keyboard for the money.",
     category: "Electronics",
     posted: "Aug 29, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "MSI MAG274UPDF 27-inch 4K 160Hz Mini-LED gaming monitor",
@@ -144,6 +160,8 @@ export const DEALS: Deal[] = [
       "A proper 4K gaming monitor with real local dimming is a treat, and Newegg has the MSI MAG274UPDF down to $474.99 from $649.99, sold and shipped by Newegg. This is a genuinely premium 27 inch panel with a sharp 4K screen, Mini LED backlighting and over a thousand dimming zones for deep contrast and bright HDR, a clever dual mode that runs 4K at 160Hz for detail or drops to 1080p at a blistering 320Hz for fast shooters, and both FreeSync Premium and G-Sync support so it plays nicely with either graphics card. It has USB-C and a fully adjustable stand too. One honest note so you buy clear eyed: to actually push 4K at high frame rates you want a strong graphics card behind it, so this shines most on a capable gaming PC or a PS5 and Xbox rather than an older machine. For the right setup though, this is a lot of premium screen for the money.",
     category: "Electronics",
     posted: "Aug 26, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "ASUS TUF Gaming 32-inch QHD 180Hz curved monitor (VG32WQ3B)",
@@ -155,6 +173,8 @@ export const DEALS: Deal[] = [
       "If your desk has room for something bigger, a 32 inch QHD screen makes both a work day and a game night feel roomier, and Newegg has the ASUS TUF Gaming VG32WQ3B down to $249.99 from $349.99, sold and shipped by Newegg with free 15 day returns. You get a sharp 2560x1440 resolution across a large 31.5 inch panel, a quick 180Hz refresh for smooth motion, a gentle 1500R curve that wraps the picture a little toward you, and FreeSync to keep games from tearing. One honest note so you buy clear eyed: this is a VA panel, which gives lovely deep blacks and contrast but trades away a touch of the wide angle colour consistency you would get from IPS, and a curve is a matter of taste, so if you do detailed colour work a flat IPS screen may suit you better. For a big, immersive everyday monitor though, this is a lot of screen for the money.",
     category: "Electronics",
     posted: "Aug 26, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "AMD Ryzen 9 7900X 12-core desktop processor (open box)",
@@ -179,6 +199,8 @@ export const DEALS: Deal[] = [
       "A good wireless controller earns its keep whether you game on a PC, a handheld, or the couch, and Newegg has the MSI Force GC300 down to $54.99 from $89.99, sold and shipped by Newegg with free 30 day returns. It connects three ways over a low lag 2.4GHz dongle, Bluetooth, or USB-C, runs about twenty hours on a charge, and uses Hall effect triggers that resist the drift cheaper pads develop over time, plus a pair of rear buttons you can map to shortcuts. One honest note so you buy for the right reason: MSI is a newer name in controllers rather than an established Xbox or PlayStation pad, so if you want guaranteed plug and play with a specific console the first party controller is the safer pick. For PC and everyday play though, this is a well built controller at a friendly price.",
     category: "Electronics",
     posted: "Aug 26, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "MSI MAG 272QP QD-OLED X24 27-inch QHD 240Hz OLED gaming monitor",
@@ -190,6 +212,8 @@ export const DEALS: Deal[] = [
       "A good QD-OLED is the kind of screen you notice the second it lights up, and this MSI is a genuinely strong price on one at $459.99, down from $579.99. The MAG 272QP is a 27 inch QHD panel with the perfect inky blacks and vivid colour that make games and movies look special, a very fast 240Hz refresh with a near instant response time, and both FreeSync Premium Pro and G-Sync support so it plays nicely with either graphics card. It is sold and shipped by Newegg. One honest note so you buy clear eyed: OLED panels can be prone to burn in over years if you leave the same taskbar or logo parked on screen all day, so it is happiest as a gaming and media screen rather than a static spreadsheet workhorse, though MSI builds in screen care features to help with exactly that. For the right desk, this is a lot of premium panel for the money.",
     category: "Electronics",
     posted: "Aug 22, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "AMD Ryzen 7 9800X3D 8-core desktop processor",
@@ -212,6 +236,8 @@ export const DEALS: Deal[] = [
       "A good power supply is the quiet foundation a build sits on for a decade, so paying a little less for a better one is money well spent, and Newegg has the MSI MAG A850GL down to $149.99 from $194.99, sold and shipped by Newegg. It is a proper modern unit with 80 Plus Gold efficiency, fully modular cabling, the newer ATX 3.1 standard and a native 12V-2x6 cable for a current graphics card, plus a long ten year warranty that tells you MSI expects it to last. One honest note so nobody buys wrong: this only makes sense if you are building or upgrading a desktop, and 850W is a sensible amount of headroom for most mid to high end builds but more than a modest system needs, so a smaller unit may suit you for less. If you are putting a machine together though, this is a lot of power supply for the money.",
     category: "Electronics",
     posted: "Aug 22, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "NZXT Kraken Plus 360mm all-in-one liquid CPU cooler with LCD",
@@ -223,6 +249,8 @@ export const DEALS: Deal[] = [
       "If your desktop runs hot and loud when it works hard, a big 360mm liquid cooler is one of the nicer quality of life upgrades, and Newegg has the NZXT Kraken Plus 360 down to $159.99 from $259.99, a clean 38 percent off. The large radiator pulls heat off the processor far better than a small stock cooler, which keeps the chip running fast under load and lets the fans settle to a hush instead of roaring through a game or a big export, and NZXT adds a little 1.54 inch LCD on the pump for temperatures or whatever you like to show. Two honest notes so nobody buys wrong: this only makes sense if you are building or upgrading a desktop with room for a 360mm radiator, so check your case clearance and socket support first, and while it is sold and shipped by Newegg this one ships from the United States, so give it a little longer to arrive. If you are putting a machine together though, it is a lot of cooler for the money.",
     category: "Electronics",
     posted: "Aug 22, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "ASUS VY249HGR 24-inch Full HD 120Hz IPS monitor",
@@ -234,6 +262,8 @@ export const DEALS: Deal[] = [
       "If you are setting up a first desk, kitting out a student, or replacing a tired old screen on the cheap, a fast 24 inch monitor for under a hundred dollars is genuinely good value. Newegg has the ASUS VY249HGR down to $94.99 from $159.99, sold and shipped by Newegg. It keeps the things that matter at this price with a 24 inch Full HD screen, a quick 120Hz refresh that makes scrolling and motion feel smooth, an IPS panel so colours stay honest from any angle, and Adaptive Sync to keep games from tearing. One honest note so you buy clear eyed: this is 1080p rather than the sharper QHD, and the stand only tilts rather than raising and lowering, which is the sensible trade at this price and plenty for everyday work, browsing, and casual gaming. Newegg also gives you a short 15 day return window, so if you want to try it, decide inside that window.",
     category: "Electronics",
     posted: "Aug 19, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "AMD Ryzen 5 5500 6-core desktop processor with Wraith Stealth cooler",
@@ -256,6 +286,8 @@ export const DEALS: Deal[] = [
       "If your desk is ready for something roomier than a standard screen, a 34 inch ultrawide changes how a work day and a game night both feel, and Newegg has the ASUS TUF Gaming VG34VQ3B down to $349.99 from $449.99, which is ASUS's own list price. The extra width lets you park two documents side by side without squinting, or wrap a racing or strategy game around your view, and it keeps the specs that matter with a sharp 3440x1440 resolution, a quick 180Hz refresh, a gentle 1500R curve, and FreeSync Premium so motion stays smooth. It is sold and shipped by Newegg with free 15 day returns. One honest note so you buy clear eyed: this is a VA panel, which gives lovely deep blacks and contrast but trades away a little of the wide angle colour consistency you would get from IPS, and an ultrawide wants real desk depth to sit back from, so measure your space first. For a big, immersive everyday screen though, this is a lot of monitor for the money.",
     category: "Electronics",
     posted: "Aug 15, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "ASUS ROG Strix 27-inch QHD 240Hz OLED gaming monitor (XG27AQDMGR)",
@@ -267,6 +299,8 @@ export const DEALS: Deal[] = [
       "A good OLED is the kind of screen you notice the moment it lights up, and this is a genuinely strong price on a premium one. Newegg has the ASUS ROG Strix XG27AQDMGR down to $569.99, which undercuts the $649.99 that ASUS's own store and other Canadian shops are asking and sits well below its $799 list. You get a 27 inch QHD OLED with the perfect inky blacks and rich colour that make games and movies look special, a very fast 240Hz refresh for crisp motion, and both FreeSync Premium Pro and G-Sync support so it plays nicely with either graphics card. It is sold and shipped by Newegg. One honest note so you buy clear eyed: OLED panels can be prone to burn in over years if you leave the same taskbar or logo parked on screen all day, so it is happiest as a gaming and media screen rather than a static spreadsheet workhorse, though ASUS does build in screen care features to help with exactly that. For the right desk, this is a lot of premium panel for the money.",
     category: "Electronics",
     posted: "Aug 15, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Samsung 32-inch Odyssey G8 4K 240Hz OLED gaming monitor",
@@ -278,6 +312,7 @@ export const DEALS: Deal[] = [
       "A big 4K OLED is the kind of screen you notice the moment you sit down, and Samsung has its 32 inch Odyssey G8 down to $899.99 from $1,699.99, a clean $800 off. OLED gives you the perfect inky blacks and rich colour that make games and movies look genuinely special, and this one pairs that with a roomy 4K panel, a very quick 240Hz refresh, and both FreeSync Premium Pro and G-Sync support so it plays nicely with either graphics card. It is sold and shipped by Newegg with free 15 day returns. Two honest notes so you buy clear eyed: $900 is still real money and this is squarely a want rather than a need, and OLED panels can be prone to burn in over years if you leave the same taskbar or logo parked on screen all day, so it is happiest as a gaming and media screen rather than a static spreadsheet workhorse. For the right desk though, this is a lot of premium panel for the money.",
     category: "Electronics",
     posted: "Aug 12, 2026",
+    expires: "ended Sep 9",
     expiresAt: "2026-09-09",
   },
   {
@@ -290,6 +325,8 @@ export const DEALS: Deal[] = [
       "If you are still stuck with the grainy camera built into an old laptop, or working off a desktop with none at all, this is an easy and cheap fix at $34.99, down from $59.99. The Logitech Brio 100 is a straightforward 1080p webcam with auto light correction that softens a dim home office, a built in mic, and true plug and play over USB, so it just works the moment you clip it on. It is sold and shipped by Newegg. One honest note so you buy for the right reason: this is the entry level Brio, so it is a solid, sharp camera for video calls and meetings rather than a 4K studio piece for serious streaming. For looking clear and professional on a work call though, it is genuine value at this price.",
     category: "Electronics",
     posted: "Aug 12, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Logitech G413 SE full-size wired mechanical keyboard",
@@ -301,6 +338,8 @@ export const DEALS: Deal[] = [
       "A proper mechanical keyboard is one of those upgrades you feel under your fingers every day, and this Logitech is down to $79.99 from $119.99, a third off. The G413 SE is a full size board with real tactile mechanical switches, durable PBT keycaps that will not go shiny in a year, and a brushed aluminum top that keeps it solid on the desk instead of flexing like cheap plastic. It is sold and shipped by Newegg. One honest note so you buy clear eyed: this is a wired board with a simple white backlight rather than the fancy per key RGB, which is exactly why it costs less, and tactile switches have a firm bump that most people love but a few who prefer a smooth linear feel do not. For a well built everyday and gaming keyboard though, this is a lot of keyboard for the money.",
     category: "Electronics",
     posted: "Aug 12, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "MONTECH HyperFlow ARGB 240 all-in-one liquid CPU cooler",
@@ -323,6 +362,8 @@ export const DEALS: Deal[] = [
       "If you have been eyeing a proper mechanical keyboard, this Corsair is down to $179.99 from $239.99, a clean 25 percent off. The K65 PLUS is a compact 75 percent board with pre lubricated MLX Red linear switches, so it types smooth and quiet out of the box, and it runs wireless over both a low lag 2.4GHz dongle and Bluetooth, which tidies up the desk and travels well. It is sold and shipped by Newegg. One honest note so you buy for the right reason: a 75 percent layout drops the dedicated number pad to save space, which most people never miss but which matters if you punch in numbers all day, so a full size board may suit you better there. For everyday typing and gaming though, this is a lot of keyboard for the money.",
     category: "Electronics",
     posted: "Aug 8, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "ASRock Phantom Gaming 27-inch FHD 180Hz IPS monitor (PG27FFT1A)",
@@ -347,6 +388,8 @@ export const DEALS: Deal[] = [
       "This one is for the PC builders, but if you are putting together an AMD system it is a genuinely strong price on a popular board. Newegg has the ASRock B650M Pro RS WiFi down to $149.99 from $214.99, sold and shipped by Newegg. It is a well rounded micro ATX board for AMD's current AM5 socket with built in WiFi, so it pairs naturally with a chip like the Ryzen 5 7600X and gives a fresh build room to grow with DDR5 memory and a modern layout. One honest note so nobody buys wrong: a motherboard is a part for a build or an upgrade, not a plug and play gadget, and it only makes sense if you are on or moving to AM5, since you will also need a compatible AMD chip and DDR5 memory. If that is the machine you are planning though, this is a lot of board for the money.",
     category: "Electronics",
     posted: "Aug 5, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Lian Li V100 ATX case with four ARGB fans and tempered glass",
@@ -358,6 +401,8 @@ export const DEALS: Deal[] = [
       "A good case is the quiet foundation a PC build sits in for years, and this Lian Li is down to $79.99 from $114.99, sold and shipped by Newegg. Lian Li is a name builders trust, and this V100 arrives with four 120mm ARGB fans already installed plus a tempered glass side, so a big chunk of the airflow and the lighting is handled before you spend a dollar on extras. It has the room a modern build needs too, with clearance for a long graphics card and a 360mm radiator. One honest note so this fits your plans: a case only makes sense if you are actually building or rebuilding a desktop, so this is one for the builders rather than a gift for a non PC household. If you are putting a machine together though, getting the fans and glass bundled in at this price is real value.",
     category: "Electronics",
     posted: "Aug 5, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "HP ZBook Firefly 14 G8 laptop, refurbished (i5, 16GB, 256GB, Win 11 Pro)",
@@ -382,6 +427,8 @@ export const DEALS: Deal[] = [
       "If you spend your days at a desk, a proper ergonomic chair is one of those buys your back quietly thanks you for, and this SIHOO is down to $199.99 from $249.99. SIHOO is a well regarded name in affordable ergonomic seating, and this one has the bits that actually matter: adjustable lumbar support, a breathable mesh back that keeps you cool, an adjustable headrest, a 300 pound weight rating, and BIFMA certification for durability. There is also a code, CBTSF95, that takes another $20 off at checkout for $179.99 if it is still live, so it is worth a try. Two honest notes before you buy: it ships from SIHOO's own store on Newegg rather than from Newegg directly, and it arrives flat, so plan on about twenty minutes of assembly with the included tools. For a chair you will sit in every day, it is genuine value.",
     category: "Home",
     posted: "Aug 1, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Super Flower Leadex VII XG 1000W ATX 3.1 power supply",
@@ -393,6 +440,8 @@ export const DEALS: Deal[] = [
       "This one is squarely for the PC builders, but if that is you it is a genuinely strong price on a premium part. Newegg has the Super Flower Leadex VII XG 1000W down to $159.99 from $279.99, about 42 percent off, and this is a proper high end unit: 80 Plus Gold and Cybenetics Platinum efficiency, fully modular cabling, and the newer ATX 3.1 standard with a native 12VHPWR cable for a current graphics card. A good power supply is the quiet foundation a build sits on for a decade, so paying less for a better one is money well spent. Two honest notes before you grab it. It only makes sense if you are building or upgrading a desktop, and 1000W is more headroom than most builds actually need, so a smaller unit may suit you for less. And it is sold through Super Flower's own store and shipped by Newegg, with free 30 day returns.",
     category: "Electronics",
     posted: "Jul 29, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Intel Core Ultra 5 245K 14-core desktop processor",
@@ -404,6 +453,8 @@ export const DEALS: Deal[] = [
       "If you are planning a fresh desktop build, Newegg has Intel's Core Ultra 5 245K down to $299.99 from $449.99, a clean $150 off a current generation chip. You get fourteen cores split into six fast performance cores and eight efficient ones, which is plenty of muscle for gaming and for the everyday multitasking and light content work most people actually do, and it is sold and shipped by Newegg. One honest note so nobody buys wrong: this is an LGA1851 processor, so unless you are already on that platform you will also need a compatible motherboard and DDR5 memory, which adds to the real cost. It is a part for a build or an upgrade, not a plug and play gadget, and while it has basic built in graphics you will still want a separate graphics card for real gaming. If you are putting together a new machine though, this is a solid amount of processor for the money.",
     category: "Electronics",
     posted: "Jul 25, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "AMD Ryzen 5 7600X 6-core desktop processor",
@@ -415,6 +466,8 @@ export const DEALS: Deal[] = [
       "If you are building or upgrading a gaming PC, this is a genuinely low price on a very capable chip. Newegg has the AMD Ryzen 5 7600X at $209.99, sold and shipped by Newegg with free 30 day returns. You get six fast Zen 4 cores that handle modern games and everyday work without breaking a sweat, and paired with a decent graphics card this is the kind of processor a build stays happy on for years. One honest note so you buy clear eyed: this is an AM5 chip, so unless you are already on that platform you will also need an AM5 motherboard and DDR5 memory, which adds to the real cost. It is a part for a build or an upgrade, not a plug and play gadget. If you are already on AM5 or planning a fresh build though, this is a lot of processor for the money.",
     category: "Electronics",
     posted: "Jul 18, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Verbatim 8-in-1 USB-C hub with 4K HDMI and 100W passthrough",
@@ -437,6 +490,8 @@ export const DEALS: Deal[] = [
       "Here is the curved option if that is your thing, and it is genuinely cheap for what you get. Newegg has this Gigabyte 27 inch QHD monitor down to $179.99 from $269.99, a third off. It pairs the same sharp 2560x1440 resolution and quick 180Hz refresh as the flat panels with a gentle 1500R curve and a VA screen, which gives you deeper blacks and more contrast that a lot of people love for movies and darker games. One honest note so you go in knowing: VA panels trade a little of the wide viewing angle and pixel response speed you would get from IPS, and a curve is a personal taste, so if you do detailed colour work or share the screen sideways, the flat IPS option may suit you better.",
     category: "Electronics",
     posted: "Jul 16, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "MSI Versa 300 wireless gaming mouse",
@@ -459,6 +514,8 @@ export const DEALS: Deal[] = [
       "The Ninja DualZone is the air fryer that actually earns its counter space in a busy house, and it is down to $149.99 from $229.99, a clean 35 percent off. The trick is the two separate baskets, so you can run fries in one zone and chicken in the other and have them finish at the same time instead of cooking one thing and then the other. Eight quarts total is plenty for a weeknight family dinner, and the reviews back it up with a 4.7 star average across more than sixteen thousand ratings. One honest note so nobody is surprised: with both baskets going it is a chunky unit that takes up real room on the counter, and if you only ever cook for one or two people a smaller single basket fryer will do the job for less. For feeding a family though, this is the one people keep reaching for.",
     category: "Appliances",
     posted: "Jul 16, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "X-Sense Wi-Fi water leak detector kit, 4 sensors and base",
@@ -470,6 +527,8 @@ export const DEALS: Deal[] = [
       "This is the kind of boring buy that saves you a five figure headache. A burst supply line or a slow drip under the water heater can wreck a finished basement before you ever smell it, and this X-Sense kit puts four Wi-Fi sensors around the house with a base station that pings your phone the second one gets wet. It is down to $58.99 from $69.99 and holds a 4.5 star rating across nearly two thousand reviews. Set the sensors by the washer, the dishwasher, the sump, the water heater, and under a bathroom sink, and you get a loud 100 dB alarm plus a phone alert even when you are out of the house. One honest note so you buy clear eyed: it leans on your 2.4 GHz Wi-Fi to send the away from home alerts, and it warns you about water, it does not shut the water off. For the price it is cheap insurance.",
     category: "Home",
     posted: "Jul 16, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Ricardo Beverly Hills Huntington 2-piece hardside luggage set",
@@ -494,6 +553,8 @@ export const DEALS: Deal[] = [
       "If there is an F1 fan in the house, this one is a treat at $79.99, down from $119.99. It is the LEGO Icons build of Michael Schumacher's 2004 Ferrari, the car from his championship run, aimed at adults and meant to sit on a desk or a shelf once it is done. A third off a display piece like this does not come around often, and it carries a 4.8 star rating. One honest note so you buy it for the right reason: this is a grown up build to enjoy putting together and then look at, not a toy to hand a small kid, and eighty dollars is a want and not a need. But if that is your era of racing, it is a lovely thing to have on the shelf.",
     category: "Toys",
     posted: "Jul 16, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "LEGO Sonic the Hedgehog: Sonic's Campfire Clash (77001)",
@@ -505,6 +566,8 @@ export const DEALS: Deal[] = [
       "Here is an easy one for the birthday gift drawer. The LEGO Sonic Campfire Clash set is down to $15 from $24.99, its lowest price in a month, and it comes with four Sonic characters and a little launcher, aimed at ages seven and up. At fifteen bucks it is the kind of thing you keep one or two of on hand for the next kid party invite without thinking about it, and Sonic is a safe bet with most kids that age. One honest note: it is a small set, so it is a stocking stuffer sized gift rather than a big centrepiece build, but for the price that is exactly the point.",
     category: "Toys",
     posted: "Jul 16, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Dyson V15 Detect cordless stick vacuum, refurbished",
@@ -516,6 +579,8 @@ export const DEALS: Deal[] = [
       "The V15 Detect is the Dyson a lot of people quietly want and never quite justify at full price, so a certified refurbished one at $499.99 down from $799.99 is the moment to look. It is Dyson's flagship cordless: strong suction, the laser head that lights up the fine dust you did not know was on the floor, and a runtime that gets a whole house done on one charge. It ships from Dyson's own official outlet through Walmart, so it is not some random reseller. One honest note so you buy clear eyed: refurbished means it was returned and reconditioned, the colour may vary, and these are final sale with no returns, only warranty service. If a scuff or a mystery colour would bug you, pay more for new. If you just want a Dyson that works, this is a real chunk off.",
     category: "Home",
     posted: "Jul 7, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Savino 10x12 hardtop gazebo with netting",
@@ -527,6 +592,8 @@ export const DEALS: Deal[] = [
       "If you have been pricing out a permanent shade structure for the deck or backyard, this one is hard to ignore: Costco has the Savino 10x12 hardtop gazebo down to $849.97 from $1,699.99, a clean half off. It is the proper kind with an 8mm polycarbonate roof and built in netting, so you get real shade that stands up to sun and rain and a screen to keep the bugs out on summer evenings, and at this price it undercuts most of what you will find elsewhere by a wide margin. Two honest notes before you commit. This is a last chance clearance item, which means once the stock is gone it is gone and there is no set end date, so it can disappear quietly. And it is a big build that needs a flat spot and proper anchoring, so plan for an afternoon of assembly and a helper or two.",
     category: "Home & Garden",
     posted: "Jun 29, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
   {
     title: "Roborock Q7 M5+ robot vacuum and mop",
@@ -549,6 +616,8 @@ export const DEALS: Deal[] = [
       "Sony's flagship over-ear headphones are down to $298, a long way from their usual $449 and change. The noise cancelling is the kind that makes a noisy house or a long flight feel calm, and the battery stretches for days between charges. If you have been telling yourself you will get a proper pair eventually, this is a comfortable price to finally do it.",
     category: "Electronics",
     posted: "Jun 20, 2026",
+    expires: "ended by Nov 13",
+    expiresAt: "2026-11-12",
   },
 ];
 

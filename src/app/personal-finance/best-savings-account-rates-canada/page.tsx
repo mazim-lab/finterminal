@@ -13,7 +13,7 @@ export const metadata = {
   alternates: { canonical: "/personal-finance/best-savings-account-rates-canada" },
   title: "Best high-interest savings account (HISA) rates in Canada | FinTerminal",
   description:
-    "A clear, honest look at the best everyday high-interest savings account rates in Canada, from EQ Bank and Wealthsimple to Neo, Saven, and Oaken. Rates as of September 2026, with the CDIC coverage you actually get and the promo-rate traps to watch.",
+    "A clear, honest look at the best everyday high-interest savings account rates in Canada, from EQ Bank and Wealthsimple to Neo, Saven, and Oaken. Rates as of November 2026, with the CDIC coverage you actually get and the promo-rate traps to watch.",
   ...ogMeta("Best high-interest savings account (HISA) rates in Canada", "Personal finance", "/personal-finance/best-savings-account-rates-canada", "article"),
 };
 
@@ -30,11 +30,11 @@ const TOC = [
 const FAQ = [
   {
     q: "What is the best high-interest savings account rate in Canada right now?",
-    a: "As of September 2026, the best everyday (non-promotional) rates from mainstream providers sit roughly in the 2.75 to 2.85 percent range, from names like Saven Financial, Oaken, and Neo, or from EQ Bank if you set up a qualifying direct deposit. Short-term promotional offers for new clients run higher, around 4.5 to 4.6 percent at Simplii and Tangerine, but those drop back to a much lower rate after a few months. Rates change often, so always confirm the current number on the provider's own page before you move money.",
+    a: "As of November 2026, the best everyday (non-promotional) rates from mainstream providers sit at about 3.00 percent, from Saven Financial and Oaken, from EQ Bank if you set up a qualifying direct deposit, and from Neo on its top paid membership. Short-term promotional offers for new clients run higher, around 4.5 to 5.0 percent at Tangerine and Simplii, but those drop back to a much lower rate after a few months. Rates change often, so always confirm the current number on the provider's own page before you move money.",
   },
   {
     q: "Are promotional savings rates worth chasing?",
-    a: "They can be, but read the fine print. A promo like 4.60 percent usually applies only to new clients, only for about five months, and often only up to a stated balance cap. After the window closes the rate drops to the everyday rate, which at a big-bank-owned account is often well under one percent. Promos are great for a lump sum you can move in and out. For money that just sits, a steady everyday rate near 2.8 percent often beats a promo that expires.",
+    a: "They can be, but read the fine print. A promo like 5.00 percent usually applies only to new clients, only for about five months, and often only up to a stated balance cap. After the window closes the rate drops to the everyday rate, which at a big-bank-owned account is often well under one percent. Promos are great for a lump sum you can move in and out. For money that just sits, a steady everyday rate near 3 percent often beats a promo that expires.",
   },
   {
     q: "Is my money safe in an online savings account?",
@@ -59,14 +59,14 @@ const FAQ = [
 // Sorted everyday rates first, then tiered, then promos, so a promo never
 // reads as the "best" ongoing rate.
 const GLANCE: GlanceRow[] = [
-  { name: "Saven Financial", sub: "HISA", cells: { rate: "2.85%", kind: { text: "Everyday", sub: "No minimum balance" }, ins: "FSRA (Ontario CU)" } },
-  { name: "Oaken Financial", sub: "Savings Account", cells: { rate: "2.80%", kind: { text: "Everyday", sub: "Same 2.80% on TFSA, RSP and spousal RSP savings" }, ins: "CDIC" } },
-  { name: "EQ Bank", sub: "Personal Account", cells: { rate: { text: "2.75%", sub: "1.00% base" }, kind: { text: "Everyday, with a condition", sub: "Recurring direct deposit of at least $2,000 a month" }, ins: "CDIC" } },
-  { name: "Neo Financial", sub: "Neo Savings", cells: { rate: "2.75%", kind: { text: "Everyday, with a condition", sub: "Minimum combined balance across Neo accounts" }, ins: "CDIC partners (in trust)" } },
-  { name: "Achieva Financial", sub: "Daily Interest Savings", cells: { rate: "1.80%", kind: "Everyday", ins: "DGCM (Manitoba CU)" } },
+  { name: "Saven Financial", sub: "HISA", cells: { rate: "3.00%", kind: { text: "Everyday", sub: "No minimum balance" }, ins: "FSRA (Ontario CU)" } },
+  { name: "Oaken Financial", sub: "Savings Account", cells: { rate: "3.00%", kind: { text: "Everyday", sub: "Same 3.00% on TFSA, RSP and spousal RSP savings" }, ins: "CDIC" } },
+  { name: "EQ Bank", sub: "Personal Account", cells: { rate: { text: "3.00%", sub: "1.50% base" }, kind: { text: "Everyday, with a condition", sub: "Recurring direct deposit of at least $2,000 a month" }, ins: "CDIC" } },
+  { name: "Neo Financial", sub: "Neo Savings", cells: { rate: { text: "Up to 3.00%", sub: "2.25% to 3.00% by membership" }, kind: { text: "Everyday, with a condition", sub: "Rate depends on your Neo membership; fees run $0 to $14.99 a month" }, ins: "CDIC partners (in trust)" } },
+  { name: "Achieva Financial", sub: "Daily Interest Savings", cells: { rate: "2.05%", kind: "Everyday", ins: "DGCM (Manitoba CU)" } },
   { name: "Wealthsimple", sub: "Cash", cells: { rate: { text: "1.25%", sub: "1.75% over $100k, 2.25% at $500k+" }, kind: { text: "Tiered by balance", sub: "Extra boost with a $2,000 direct deposit" }, ins: "CDIC partners (in trust)" } },
-  { name: "Simplii Financial", sub: "High Interest Savings", cells: { rate: { text: "4.60%", ended: isPastDate("2026-10-31") }, kind: { text: "Promo, new clients", sub: "153 days, up to $200,000; window Aug 1 to Oct 31, 2026" }, ins: "CDIC" } },
-  { name: "Tangerine", sub: "Savings Account", cells: { rate: { text: "4.50%", sub: "confirmed Aug 2026" }, kind: { text: "Promo, new clients", sub: "153 days; check the current window in the fine print" }, ins: "CDIC" } },
+  { name: "Simplii Financial", sub: "High Interest Savings", cells: { rate: { text: "5.00%", ended: isPastDate("2027-01-31") }, kind: { text: "Promo, new clients", sub: "153 days, up to $100,000; window Nov 1, 2026 to Jan 31, 2027" }, ins: "CDIC" } },
+  { name: "Tangerine", sub: "Savings Account", cells: { rate: { text: "4.50%", ended: isPastDate("2026-11-30") }, kind: { text: "Promo, new clients", sub: "153 days; Client Number created Jul 28 to Nov 30, 2026" }, ins: "CDIC" } },
   { name: "motusbank", sub: "No longer available", cells: { rate: { text: "Closed", check: true }, kind: "Winding down", ins: null } },
 ];
 
@@ -121,18 +121,18 @@ export default function BestSavingsAccountRatesPage() {
           <div className="cd-note short">
             <div className="cap">The short answer</div>
             <p className="sub">
-              As of September 2026, the best everyday high-interest savings rates from mainstream Canadian providers
-              land roughly in the 2.75 to 2.85 percent range, from names like Saven Financial, Oaken, and Neo, or
-              from EQ Bank if you add a qualifying direct deposit. New-client promotional rates run higher, around
-              4.5 to 4.6 percent at Simplii and Tangerine, but they expire after a few months and then fall well
+              As of November 2026, the best everyday high-interest savings rates from mainstream Canadian providers
+              land at about 3.00 percent, from Saven Financial and Oaken, from EQ Bank if you add a qualifying direct
+              deposit, and from Neo on its top paid membership. New-client promotional rates run higher, around
+              4.5 to 5.0 percent at Tangerine and Simplii, but they expire after a few months and then fall well
               below the everyday leaders. Savings rates change often and promos have hard end dates, so confirm
               the current rate on the provider&apos;s own page before you move money.
             </p>
           </div>
 
           <RateGlance
-            caption="High-interest savings rates by provider, as of September 2026"
-            intro={<>Rates as of September 2026, from each provider&apos;s own rate page. Everyday rates are the ongoing rate; promos are temporary and revert. Details are in <a href="#table">the full rundown</a> below.</>}
+            caption="High-interest savings rates by provider, as of November 2026"
+            intro={<>Rates as of November 2026, from each provider&apos;s own rate page. Everyday rates are the ongoing rate; promos are temporary and revert. Details are in <a href="#table">the full rundown</a> below.</>}
             columns={[
               { key: "rate", label: "Rate", numeric: true },
               { key: "kind", label: "Type and condition" },
@@ -140,7 +140,7 @@ export default function BestSavingsAccountRatesPage() {
             ]}
             rows={GLANCE}
             notes={[
-              <>Promo rates drop to a much lower everyday rate when the window ends. The Tangerine promo was confirmed live in August 2026; its page hid the start and end dates.</>,
+              <>Promo rates drop to a much lower everyday rate when the window ends. Tangerine also pays 5.00% for 153 days on new registered savings accounts under the same offer.</>,
             ]}
           />
 
@@ -156,12 +156,12 @@ export default function BestSavingsAccountRatesPage() {
           <p>
             There is no single winner, because the right account depends on whether you want a steady rate you can
             forget about or a short burst of a high promotional rate. For money that just sits, the everyday rate
-            is what matters, and today the leaders cluster in the high two-percent range. For a lump sum you are
+            is what matters, and today the leaders cluster at about three percent. For a lump sum you are
             willing to move around, a five-month promo can beat everyone for a while, then hand you back to a much
             lower rate. Both are valid, and knowing which game you are playing is most of the decision.
           </p>
           <p>
-            The figures below come from each provider&apos;s own rate pages, checked in September 2026. Where a
+            The figures below come from each provider&apos;s own rate pages, checked on November 13, 2026. Where a
             provider loads its everyday rate dynamically and we could not confirm an exact number, we say so
             plainly rather than guess. A savings site that prints a wrong rate is worse than useless, so we would
             rather describe something qualitatively than invent a digit.
@@ -170,7 +170,7 @@ export default function BestSavingsAccountRatesPage() {
           {/* TABLE */}
           <h2 id="table" className="cd-sec">The rates, side by side</h2>
           <p>
-            Here is where the mainstream options stand as of September 2026. Everyday means the ongoing rate with no
+            Here is where the mainstream options stand as of November 2026. Everyday means the ongoing rate with no
             strings, unless a condition is noted. Promotional means a temporary rate, usually for new clients
             only, that reverts afterward.
           </p>
@@ -178,21 +178,21 @@ export default function BestSavingsAccountRatesPage() {
             <div className="kvrow">
               <div className="kvk">EQ Bank, Personal Account</div>
               <div className="kvv">
-                1.00% everyday base, rising to <strong>2.75%</strong> if you add a qualifying recurring direct
-                deposit of at least $2,000 a month. CDIC member. A strong pick if your payroll can land here.
+                1.50% everyday base, rising to <strong>3.00%</strong> if you add a qualifying recurring direct
+                deposit of at least $2,000 a month, both effective November 6, 2026. CDIC member. A strong pick if your payroll can land here.
               </div>
             </div>
             <div className="kvrow">
               <div className="kvk">Saven Financial, HISA</div>
               <div className="kvv">
-                <strong>2.85%</strong> everyday, no promo games and no minimum balance. A division of FirstOntario
+                <strong>3.00%</strong> everyday, no promo games and no minimum balance. A division of FirstOntario
                 Credit Union, so deposits are covered by Ontario credit union insurance (FSRA), not CDIC.
               </div>
             </div>
             <div className="kvrow">
               <div className="kvk">Oaken Financial, Savings Account</div>
               <div className="kvv">
-                <strong>2.80%</strong> everyday, and the same 2.80% on the TFSA, RSP, and spousal RSP savings
+                <strong>3.00%</strong> everyday, and the same 3.00% on the TFSA, RSP, and spousal RSP savings
                 accounts. Deposits are held with Home Bank and Home Trust, both CDIC members. Oaken&apos;s own
                 rate page is the place to confirm the live figure before you move money.
               </div>
@@ -200,16 +200,17 @@ export default function BestSavingsAccountRatesPage() {
             <div className="kvrow">
               <div className="kvk">Neo Financial, Neo Savings</div>
               <div className="kvv">
-                <strong>2.75%</strong> on the Neo Savings account (effective late June 2026), which requires
-                keeping a minimum combined balance across your Neo accounts. Neo&apos;s separate
-                High-Interest Savings account was listed at 1.25%. Neo is not a bank itself, so cash is held in
+                <strong>2.25% to 3.00%</strong> on the Neo Savings account (rates as of October 29, 2026), depending
+                on your Neo membership. Memberships cost $0 to $14.99 a month, and the top 3.00% needs the Grow
+                membership, so subtract the fee before you compare. Neo&apos;s older High-Interest Savings account
+                (1.25%) is closed to new accounts. Neo is not a bank itself, so cash is held in
                 trust with CDIC-member partner banks.
               </div>
             </div>
             <div className="kvrow">
               <div className="kvk">Achieva Financial, Daily Interest Savings</div>
               <div className="kvv">
-                <strong>1.80%</strong> everyday, no promo games, on Achieva&apos;s Daily Interest Savings Account.
+                <strong>2.05%</strong> everyday, no promo games, on Achieva&apos;s Daily Interest Savings Account, effective October 29, 2026.
                 Deposits are guaranteed without limit by the Deposit Guarantee Corporation of Manitoba. Confirm the
                 current figure before you move money.
               </div>
@@ -226,9 +227,10 @@ export default function BestSavingsAccountRatesPage() {
             <div className="kvrow">
               <div className="kvk">Simplii Financial, High Interest Savings</div>
               <div className="kvv">
-                Running a new-client promotional rate of <strong>4.60%</strong> for 153 days, roughly five months,
-                on balances up to $200,000. The current window runs August 1 to October 31, 2026, and you have to
-                open your first Simplii HISA inside it to qualify. The everyday rate afterward is much lower, in
+                Running a new-client promotional rate of <strong>5.00%</strong> (regular plus promotional interest
+                combined) for 153 days, roughly five months, on balances up to $100,000. The current window runs
+                November 1, 2026 to January 31, 2027, and you have to open your first Simplii HISA inside it, within
+                60 days of becoming a Simplii client, to qualify. The everyday rate afterward is much lower, in
                 the usual big-bank range. CDIC member (Simplii is a division of CIBC).
               </div>
             </div>
@@ -236,9 +238,9 @@ export default function BestSavingsAccountRatesPage() {
               <div className="kvk">Tangerine, Savings Account</div>
               <div className="kvv">
                 Still offering a new-client promotional rate of <strong>4.50%</strong> for 153 days, five months,
-                on non-registered savings, confirmed live in August 2026. Tangerine renders the offer&apos;s start
-                and end dates dynamically and its page did not show them to us, so check the current window in the
-                fine print before you count on it. The ongoing everyday rate is much lower once the promo ends.
+                on non-registered savings (and 5.00% on new registered savings accounts), confirmed live on
+                November 13, 2026. It applies to new clients whose Client Number is created between July 28 and
+                November 30, 2026, so this window closes soon. The ongoing everyday rate is much lower once the promo ends.
                 CDIC member (Tangerine is owned by Scotiabank).
               </div>
             </div>
@@ -255,9 +257,8 @@ export default function BestSavingsAccountRatesPage() {
           <div className="cd-note">
             <div className="cap">Rates change; this is a snapshot</div>
             <p className="sub">
-              Every number above was re-checked in September 2026 against the provider&apos;s own materials, with the
-              single exception of the Tangerine promotional rate, whose page still hides its figures behind
-              placeholders. Everyday rates move with the Bank of Canada and promotional rates expire on fixed
+              Every number above was re-checked on November 13, 2026 against the provider&apos;s own materials.
+              Everyday rates move with the Bank of Canada and promotional rates expire on fixed
               dates, so treat this as a map of the landscape, not a live quote. Before you move a dollar, open the provider&apos;s own rate page
               and confirm the current figure.
             </p>
@@ -268,14 +269,14 @@ export default function BestSavingsAccountRatesPage() {
           <p>
             This is the single most important distinction in Canadian savings accounts, and it trips up a lot of
             people. The big, bank-owned accounts like Simplii and Tangerine tend to advertise an eye-catching rate
-            such as 4.50 or 4.60 percent. Read the asterisk and you will find it is a promotional rate: new
+            such as 4.50 or 5.00 percent. Read the asterisk and you will find it is a promotional rate: new
             clients only, for about five months, and usually capped at a stated balance. When the window closes,
             the rate falls to the everyday rate, which at those accounts is frequently well under one percent.
           </p>
           <p>
             The everyday leaders work differently. Saven, Oaken, Achieva, and EQ Bank (with its direct-deposit
-            bonus) do not dangle a teaser. They pay a steady rate all year, which is why a boring 2.8 percent that
-            never expires often beats a flashy 4.6 percent that lasts five months and then collapses. If your
+            bonus) do not dangle a teaser. They pay a steady rate all year, which is why a boring 3 percent that
+            never expires often beats a flashy 5 percent that lasts five months and then collapses. If your
             money is going to sit for a year or more, the everyday rate is the number that decides your outcome.
           </p>
           <div className="cd-note">
@@ -336,14 +337,14 @@ export default function BestSavingsAccountRatesPage() {
           <ul>
             <li>
               <strong>Will this money just sit?</strong> If yes, chase the best everyday rate and ignore promos.
-              Something near 2.8 percent that never expires beats a promo you will forget to move out of.
+              Something near 3 percent that never expires beats a promo you will forget to move out of.
             </li>
             <li>
               <strong>Is this a lump sum you can move?</strong> If yes, a five-month new-client promo at 4.5 to
-              4.6 percent can be worth opening, as long as you note the end date and plan your exit.
+              5.0 percent can be worth opening, as long as you note the end date and plan your exit.
             </li>
             <li>
-              <strong>Can your payroll direct-deposit somewhere?</strong> If yes, EQ Bank&apos;s jump to 2.75
+              <strong>Can your payroll direct-deposit somewhere?</strong> If yes, EQ Bank&apos;s jump to 3.00
               percent with a $2,000 monthly deposit turns an everyday account into a top-tier one.
             </li>
             <li>

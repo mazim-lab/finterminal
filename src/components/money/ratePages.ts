@@ -20,9 +20,9 @@ export interface RateStamp {
 }
 
 export const RATE_STAMPS = {
-  savings: { verified: "2026-09-16", asOf: "Rates as of September 2026" },
-  gic: { verified: "2026-09-16", asOf: "Rates as of September 2026" },
-  chequing: { verified: "2026-09-16", asOf: "Offers as of September 2026" },
+  savings: { verified: "2026-11-13", asOf: "Rates as of November 2026" },
+  gic: { verified: "2026-11-13", asOf: "Rates as of November 2026" },
+  chequing: { verified: "2026-11-13", asOf: "Offers as of November 2026" },
 } as const satisfies Record<string, RateStamp>;
 
 /** Stamp cadence for all three rate pages and their hub listings. */
