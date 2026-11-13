@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/costco-membership-worth-it-canada" },
   title: "Does a Costco membership pay for itself? | FinTerminal",
   description:
     "A clear, no-hype look at Costco Canada's fees, the 2% Executive reward, and where the savings really come from, so you can run the breakeven math for your own household.",
@@ -52,7 +53,7 @@ const FAQ = [
 
 export default function CostcoMembershipPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -69,10 +70,10 @@ export default function CostcoMembershipPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">costco-membership-worth-it-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Does a Costco Membership Pay for Itself?</span>
           </nav>
           <ArticleSchema headline="Does a Costco membership pay for itself?" path="/personal-finance/costco-membership-worth-it-canada" kicker="Personal finance" />
 
@@ -96,7 +97,7 @@ export default function CostcoMembershipPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               A Costco membership pays for itself when your real savings beat the fee, which is about $65 a year for
               Gold Star and about $130 for Executive. Regular commuters can cover Gold Star on gas savings alone
               (roughly $140 a year on 2,000 litres), and one big appliance or TV can justify it through the doubled
@@ -113,7 +114,7 @@ export default function CostcoMembershipPage() {
             </div>
           </div>
 
-          <div id="cost" className="cd-sec" style={{ scrollMarginTop: 70 }}>What does a Costco membership actually cost?</div>
+          <h2 id="cost" className="cd-sec">What does a Costco membership actually cost?</h2>
           <p>Costco Canada has two main membership tiers, and the gap between them is the first thing to understand.</p>
           <p>
             The basic tier is <strong>Gold Star</strong>, which runs about $65 a year. The upgraded tier is{" "}
@@ -130,7 +131,7 @@ export default function CostcoMembershipPage() {
             because it tells you exactly when the upgrade is worth it.
           </p>
 
-          <div id="executive" className="cd-sec" style={{ scrollMarginTop: 70 }}>Is the Executive upgrade worth it, and when does 2% pay for itself?</div>
+          <h2 id="executive" className="cd-sec">Is the Executive upgrade worth it, and when does 2% pay for itself?</h2>
           <p>
             Here is the clean version. The Executive tier costs about $65 more than Gold Star. It pays you back 2%
             of your qualifying purchases. So you break even on the upgrade once 2% of your annual Costco spend
@@ -139,7 +140,7 @@ export default function CostcoMembershipPage() {
           <p>The arithmetic: $65 divided by 0.02 equals $3,250.</p>
           <div className="cd-note">
             <div className="cap">The Executive breakeven</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               If you spend more than about $3,250 a year at Costco on qualifying purchases, the 2% reward more than
               covers the $65 upgrade cost. Below that, stick with Gold Star. Confirm the current fee gap on
               Costco.ca, since it changes the number.
@@ -160,13 +161,13 @@ export default function CostcoMembershipPage() {
             upgrade returns about $40, which does not cover the $65 gap, so Gold Star is the smarter pick.
           </p>
 
-          <div id="savings" className="cd-sec" style={{ scrollMarginTop: 70 }}>Where does Costco genuinely save you money?</div>
+          <h2 id="savings" className="cd-sec">Where does Costco genuinely save you money?</h2>
           <p>
             The membership fee is the easy part. The savings are where it gets interesting, and they are very real
             in some categories and oversold in others.
           </p>
 
-          <h4>Large-ticket items</h4>
+          <h3 className="faq-q">Large-ticket items</h3>
           <p>
             This is where Costco quietly shines, and it is the category most people forget when they do the math.
             Appliances, TVs, electronics, mattresses, furniture, and tires are often priced competitively, but the
@@ -182,7 +183,7 @@ export default function CostcoMembershipPage() {
             alone, before you have bought a single rotisserie chicken.
           </p>
 
-          <h4>Gas</h4>
+          <h3 className="faq-q">Gas</h3>
           <p>
             For a regular commuter, gas alone can cover the whole membership. Costco fuel is typically priced a few
             cents per litre below nearby stations. The exact gap moves around, so confirm it at your local
@@ -196,7 +197,7 @@ export default function CostcoMembershipPage() {
             real mileage.
           </p>
 
-          <h4>Everyday categories and the small stuff</h4>
+          <h3 className="faq-q">Everyday categories and the small stuff</h3>
           <ul>
             <li><strong>Kirkland Signature</strong> is Costco’s house brand, and it is usually where the everyday value lives. On staples like paper products, batteries, olive oil, and pantry basics, the per-unit price is often well below name brands of similar quality.</li>
             <li><strong>Pharmacy and optical</strong> can offer competitive prices on prescriptions, glasses, and contacts, and these are open to members.</li>
@@ -204,11 +205,11 @@ export default function CostcoMembershipPage() {
             <li><strong>The food court combo</strong> still sells a hot dog and drink for about $1.50, the same price it has held for decades. It will not pay for your membership, but it is a genuinely nice perk. Even this can change, so confirm the current price.</li>
           </ul>
 
-          <div id="scenarios" className="cd-sec" style={{ scrollMarginTop: 70 }}>Three quick breakeven scenarios</div>
+          <h2 id="scenarios" className="cd-sec">Three quick breakeven scenarios</h2>
           <p>Let me put it together with three honest household pictures.</p>
           <div className="cd-note">
             <div className="cap">The one formula to remember</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Add up your real expected savings: gas, big purchases, grocery savings, and the 2% reward if you go
               Executive. If that total beats the fee, you are ahead. If you have to squint to make it work, it
               probably is not.
@@ -232,7 +233,7 @@ export default function CostcoMembershipPage() {
             </div>
           </div>
 
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest caveats</div>
+          <h2 id="caveats" className="cd-sec">The honest caveats</h2>
           <p>This is the part most write-ups rush past, so let me give it real weight.</p>
           <p>A membership only saves money if you actually shop there enough. The fee is fixed whether you visit twice or fifty times.</p>
           <p>
@@ -251,7 +252,7 @@ export default function CostcoMembershipPage() {
             completely fine. It just means the membership is not built for your situation right now.
           </p>
 
-          <div id="verdict" className="cd-sec" style={{ scrollMarginTop: 70 }}>So, is it worth it for you?</div>
+          <h2 id="verdict" className="cd-sec">So, is it worth it for you?</h2>
           <p>
             Run your own numbers, because your spending is the only thing that matters here. Estimate your
             realistic gas savings, any big purchases you actually plan to make, and your monthly grocery and
@@ -262,7 +263,7 @@ export default function CostcoMembershipPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you think it through, not personalized financial advice, and all
               of these figures, the fees, the 2% cap, gas savings, and prices, change over time, so confirm the
               current numbers with Costco before you decide. The membership is a tool. Whether it is the right one
@@ -270,7 +271,7 @@ export default function CostcoMembershipPage() {
             </p>
           </div>
 
-          <div id="gold" className="cd-sec" style={{ scrollMarginTop: 70 }}>A bonus move for the points crowd</div>
+          <h2 id="gold" className="cd-sec">A bonus move for the points crowd</h2>
           <p>
             If you have ever wondered whether your Costco run could quietly earn credit card rewards, here is one
             that churners talk about: Costco sells one ounce gold bars, you put the purchase on a rewards card, and
@@ -291,7 +292,7 @@ export default function CostcoMembershipPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A worked example</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Say gold is around $4,000 an ounce, illustrative only. You pay Costco about spot plus two percent, so
               roughly $4,080. A dealer pays you maybe three percent under spot, about $3,880. That round trip costs
               you around $200. On a plain 1.5 percent card you earn about $61 in rewards, so you are down roughly
@@ -307,19 +308,19 @@ export default function CostcoMembershipPage() {
             attention. This is an advanced move for a specific situation, not financial advice.
           </p>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>If you go Executive, a flat-rate cash-back card you can use at Costco squeezes a little more out of every run.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
-            <Link href="/cards?q=cashback" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Cash-back cards →</Link>
+            <Link href="/cards?q=cashback" className="cd-apply">Cash-back cards →</Link>
           </div>
           <Comments path="/personal-finance/costco-membership-worth-it-canada" />
         </div>

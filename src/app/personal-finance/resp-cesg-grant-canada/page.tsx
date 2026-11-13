@@ -11,6 +11,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/resp-cesg-grant-canada" },
   title: "RESP and the 20% CESG grant: the easiest guaranteed return in Canada | FinTerminal",
   description:
     "The government adds 20 percent to what you put in an RESP, up to $500 a year per child, through the Canada Education Savings Grant. Here is how the grant works, how not to leave money on the table, and how to invest it wisely.",
@@ -61,7 +62,7 @@ export default function RespCesgGrantPage() {
   const meta = pfArticleBySlug("resp-cesg-grant-canada");
 
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -73,10 +74,10 @@ export default function RespCesgGrantPage() {
               acceptedAnswer: { "@type": "Answer", text: f.a },
             })),
           }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">resp-cesg-grant-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">RESP and the 20% CESG grant: the easiest guaranteed return in Canada</span>
           </nav>
           <ArticleSchema headline="RESP and the 20% CESG grant: the easiest guaranteed return in Canada" path="/personal-finance/resp-cesg-grant-canada" kicker="Personal finance" />
 
@@ -98,7 +99,7 @@ export default function RespCesgGrantPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               An RESP is a registered account for a child&apos;s education, and the Canada Education Savings Grant
               (CESG) tops up your contributions by 20 percent. The grant applies to the first $2,500 you put in per
               child each year, so contributing $2,500 captures the full $500 annual grant, up to a lifetime cap of
@@ -115,7 +116,7 @@ export default function RespCesgGrantPage() {
           </div>
 
           {/* HEADLINE */}
-          <div id="headline" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does the CESG grant actually work?</div>
+          <h2 id="headline" className="cd-sec">How does the CESG grant actually work?</h2>
           <p>
             An RESP is a registered account built for one purpose, saving for a child&apos;s education after high
             school. What makes it special is the grant that comes with it. The Canada Education Savings Grant, or
@@ -148,7 +149,7 @@ export default function RespCesgGrantPage() {
           </p>
 
           {/* LIMITS */}
-          <div id="limits" className="cd-sec" style={{ scrollMarginTop: 70 }}>How much can you put in, and how much grant can you get?</div>
+          <h2 id="limits" className="cd-sec">How much can you put in, and how much grant can you get?</h2>
           <p>Two separate ceilings are at play here, and keeping them straight saves a lot of confusion.</p>
           <ul>
             <li><strong>The lifetime CESG cap is $7,200 per child.</strong> That is the most grant money one child can ever receive. At $500 a year, it takes about 14 or 15 years of full contributions to reach it, which is roughly why steady annual contributing from early on works so neatly.</li>
@@ -161,7 +162,7 @@ export default function RespCesgGrantPage() {
           </p>
 
           {/* CATCHUP */}
-          <div id="catchup" className="cd-sec" style={{ scrollMarginTop: 70 }}>Can you catch up on missed years?</div>
+          <h2 id="catchup" className="cd-sec">Can you catch up on missed years?</h2>
           <p>
             Life happens, and plenty of parents cannot manage $2,500 every single year, especially in the busy,
             expensive early years. The good news is that unused grant room carries forward, so a lean year is not
@@ -175,7 +176,7 @@ export default function RespCesgGrantPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The catch-up ceiling</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Maximum grant in any one year is $1,000, on a $5,000 contribution. If you have several years of unused
               room, you chip away at it a year at a time, catching up one back year annually until you are current.
               This is why starting early, even with small amounts, beats scrambling later.
@@ -183,13 +184,13 @@ export default function RespCesgGrantPage() {
           </div>
 
           {/* EXTRAS */}
-          <div id="extras" className="cd-sec" style={{ scrollMarginTop: 70 }}>Extra help for lower-income families</div>
+          <h2 id="extras" className="cd-sec">Extra help for lower-income families</h2>
           <p>
             The 20 percent basic grant is available to everyone, but there are two additional programs aimed at
             families with lower income, and they are genuinely generous. If your household might qualify, these are
             well worth chasing.
           </p>
-          <h4>Additional CESG</h4>
+          <h3 className="faq-q">Additional CESG</h3>
           <p>
             On top of the basic 20 percent, families below certain income thresholds receive an extra amount of
             CESG on the first $500 they contribute each year. Depending on your adjusted family net income, that
@@ -197,7 +198,7 @@ export default function RespCesgGrantPage() {
             exact cut-offs shift each year, but the principle holds: lower-income families get a bigger match on
             their first dollars in.
           </p>
-          <h4>The Canada Learning Bond</h4>
+          <h3 className="faq-q">The Canada Learning Bond</h3>
           <p>
             The Canada Learning Bond, or CLB, is the standout, because it requires <strong>no contribution at
             all</strong>. For eligible children from lower-income families, the government deposits money directly
@@ -213,7 +214,7 @@ export default function RespCesgGrantPage() {
           </p>
 
           {/* PLANS */}
-          <div id="plans" className="cd-sec" style={{ scrollMarginTop: 70 }}>Should you pick a family plan or an individual plan?</div>
+          <h2 id="plans" className="cd-sec">Should you pick a family plan or an individual plan?</h2>
           <p>
             When you open an RESP you choose between an individual plan and a family plan, and for most households
             with more than one child, the family plan is the friendlier choice.
@@ -229,7 +230,7 @@ export default function RespCesgGrantPage() {
           </p>
 
           {/* INVEST */}
-          <div id="invest" className="cd-sec" style={{ scrollMarginTop: 70 }}>How should you invest the money?</div>
+          <h2 id="invest" className="cd-sec">How should you invest the money?</h2>
           <p>
             Here is a mistake I see often. A parent diligently contributes, captures every dollar of grant, and
             then leaves the whole balance sitting in cash or a low-interest savings option inside the RESP. The
@@ -244,7 +245,7 @@ export default function RespCesgGrantPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Glide toward safer holdings near the finish line</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               As your child approaches 18 and the first tuition bill, gradually shift the money out of stocks and
               into safer, more stable holdings like high-interest savings, GICs, or short-term bonds. You do not
               want a market drop the year before college to erase gains you cannot wait to recover. The idea is
@@ -253,7 +254,7 @@ export default function RespCesgGrantPage() {
           </div>
 
           {/* WITHDRAWALS */}
-          <div id="withdrawals" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you get the money out, and is it taxed?</div>
+          <h2 id="withdrawals" className="cd-sec">How do you get the money out, and is it taxed?</h2>
           <p>
             When your child enrols in an eligible program after high school, the RESP splits into two kinds of
             money on the way out, and they are treated very differently.
@@ -275,7 +276,7 @@ export default function RespCesgGrantPage() {
           </p>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest caveats</div>
+          <h2 id="caveats" className="cd-sec">The honest caveats</h2>
           <p>None of these should scare you off, but you deserve the full picture before you commit.</p>
           <ul>
             <li><strong>The grant has an age deadline.</strong> A child can receive CESG only up to the end of the calendar year they turn 17, and the last couple of years have their own rules for teens who are just starting. Starting late means you may not have enough years left to collect the full $7,200, so earlier is genuinely better.</li>
@@ -286,7 +287,7 @@ export default function RespCesgGrantPage() {
           </ul>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you understand how the RESP and CESG work, not personalized
               financial advice. The grant rates, contribution limits, income thresholds, and tax rules can change,
               so confirm the current figures with Canada.ca or your RESP provider before you decide. Every family&apos;s
@@ -299,19 +300,19 @@ export default function RespCesgGrantPage() {
             and glide it to safety near the end. Future-you and future-them will both be glad you started.
           </p>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>Once the RESP is humming, it helps to know where your next dollar should go across all your accounts, and how to put any rewards you earn to work too.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse cards &amp; bonuses →</Link>
+            <Link href="/cards" className="cd-apply">Browse cards &amp; bonuses →</Link>
           </div>
           <Comments path="/personal-finance/resp-cesg-grant-canada" />
         </div>

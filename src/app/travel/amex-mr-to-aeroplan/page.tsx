@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/travel/amex-mr-to-aeroplan" },
   title: "How to convert Amex Membership Rewards to Aeroplan | FinTerminal",
   description:
     "Step-by-step guide for transferring Amex Membership Rewards points to Air Canada Aeroplan at 1 to 1, including timing, transfer bonuses, and the mistakes to avoid.",
@@ -51,7 +52,7 @@ const FAQ = [
 
 export default function MrToAeroplanPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-travel">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -59,10 +60,10 @@ export default function MrToAeroplanPage() {
             "@type": "FAQPage",
             mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
           }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/travel">travel</Link><span className="sep">/</span>
-            <span className="cur">amex-mr-to-aeroplan</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/travel">Travel</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Amex MR to Aeroplan</span>
           </nav>
           <ArticleSchema headline="How to convert Amex Membership Rewards to Aeroplan" path="/travel/amex-mr-to-aeroplan" kicker="Travel & points" />
 
@@ -85,7 +86,7 @@ export default function MrToAeroplanPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Amex Membership Rewards points transfer to Air Canada Aeroplan at a 1 to 1 ratio, so 30,000 MR
               points become 30,000 Aeroplan points, usually within minutes. The transfer only goes one way and
               cannot be reversed, so confirm your award seat first and move only what you need. The best time to
@@ -102,7 +103,7 @@ export default function MrToAeroplanPage() {
           </div>
 
           {/* BASICS */}
-          <div id="basics" className="cd-sec" style={{ scrollMarginTop: 70 }}>What ratio does MR transfer to Aeroplan?</div>
+          <h2 id="basics" className="cd-sec">What ratio does MR transfer to Aeroplan?</h2>
           <p>
             Membership Rewards points transfer to Aeroplan at a 1 to 1 ratio, so 30,000 Amex points become
             30,000 Aeroplan points. Transfers are usually quick, often instant and occasionally up to a day, and
@@ -115,7 +116,7 @@ export default function MrToAeroplanPage() {
           </p>
 
           {/* CARDS */}
-          <div id="cards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Which cards qualify?</div>
+          <h2 id="cards" className="cd-sec">Which cards qualify?</h2>
           <p>
             You need an Amex card that earns full Membership Rewards points and includes airline transfer
             partners. In Canada the common ones are below.
@@ -135,7 +136,7 @@ export default function MrToAeroplanPage() {
           </div>
 
           {/* STEPS */}
-          <div id="steps" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you transfer, step by step?</div>
+          <h2 id="steps" className="cd-sec">How do you transfer, step by step?</h2>
           <div className="steps">
             <div className="step">
               <div className="num">1</div>
@@ -170,7 +171,7 @@ export default function MrToAeroplanPage() {
           </div>
 
           {/* TIMING */}
-          <div id="timing" className="cd-sec" style={{ scrollMarginTop: 70 }}>When should you transfer?</div>
+          <h2 id="timing" className="cd-sec">When should you transfer?</h2>
           <p>
             The best transfer is one that happens right before you book, against a confirmed award seat. The
             second-best moment is during a transfer bonus.
@@ -189,7 +190,7 @@ export default function MrToAeroplanPage() {
           </div>
 
           {/* MISTAKES */}
-          <div id="mistakes" className="cd-sec" style={{ scrollMarginTop: 70 }}>What mistakes should you avoid?</div>
+          <h2 id="mistakes" className="cd-sec">What mistakes should you avoid?</h2>
           <ul>
             <li><strong>Transferring before confirming award space.</strong> Always find the seat first. Moving points and then discovering the flight is gone is the classic regret.</li>
             <li><strong>Over-transferring.</strong> Send what you need. Stranded points sitting in Aeroplan with no plan are points you can no longer use elsewhere.</li>
@@ -197,19 +198,19 @@ export default function MrToAeroplanPage() {
             <li><strong>Chasing a bonus with no plan.</strong> A transfer bonus is only a deal if you were going to use the points. Otherwise it is just locking points into one program early.</li>
           </ul>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Next</div>
+          <h2 className="cd-sec">Next</h2>
           <p>Now that your points are in Aeroplan, here is how to spend them well.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/travel/aeroplan-sweet-spots" className="cd-apply">Aeroplan sweet spots →</Link>
-            <Link href="/cards?q=membership%20rewards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Cards that earn MR →</Link>
+            <Link href="/cards?q=membership%20rewards" className="cd-apply">Cards that earn MR →</Link>
           </div>
           <Comments path="/travel/amex-mr-to-aeroplan" />
         </div>

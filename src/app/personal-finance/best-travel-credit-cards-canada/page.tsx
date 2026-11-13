@@ -8,6 +8,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/best-travel-credit-cards-canada" },
   title: "The best travel and rewards credit cards in Canada | FinTerminal",
   description:
     "Our pick of the best travel and rewards credit cards in Canada, organized by how you actually travel: best premium card, best no-annual-fee, best for Aeroplan, best for flexible transferable points, best for lounge access, and best for no foreign transaction fees. Every fee, earn rate, and value figure comes straight from our own card data. Our view as of July 2026, not advice.",
@@ -241,7 +242,7 @@ function feeText(c: Card): string {
 
 export default function BestTravelCardsPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -258,10 +259,10 @@ export default function BestTravelCardsPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">best-travel-credit-cards-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">The Best Travel and Rewards Credit Cards in Canada</span>
           </nav>
           <ArticleSchema headline="The best travel and rewards credit cards in Canada" path="/personal-finance/best-travel-credit-cards-canada" kicker="Personal finance" />
 
@@ -289,7 +290,7 @@ export default function BestTravelCardsPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               If you fly a lot and will use the perks, a premium card earning flexible Membership Rewards or Aeroplan
               points returns the most once its fee is covered. If Air Canada is your airline, a dedicated Aeroplan card
               is hard to beat. If you want flexibility, collect a transferable currency like Amex Membership Rewards or
@@ -313,7 +314,7 @@ export default function BestTravelCardsPage() {
           </div>
 
           {/* HOW WE PICKED */}
-          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How we picked, and points vs cash back</div>
+          <h2 id="how" className="cd-sec">How we picked, and points vs cash back</h2>
           <p>
             These rankings are our own view, drawn entirely from the Canadian travel and rewards cards in our data. For
             every pick we show, from our data, the annual fee, the standout earn rate or two, the welcome bonus if the
@@ -336,7 +337,7 @@ export default function BestTravelCardsPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Flexible points keep your options open</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The most valuable points are the ones you are not locked into. Amex Membership Rewards and RBC Avion (on
               eligible RBC cards) both transfer to airline and travel partners, so you can chase the best redemption
               instead of taking whatever a single co-brand card gives you. A co-brand card like an Aeroplan card is great if you always fly Air
@@ -351,7 +352,7 @@ export default function BestTravelCardsPage() {
           {/* CATEGORY SECTIONS */}
           {CATEGORIES.map((cat) => (
             <div key={cat.id}>
-              <div id={cat.id} className="cd-sec" style={{ scrollMarginTop: 70 }}>{cat.label}</div>
+              <h2 id={cat.id} className="cd-sec">{cat.label}</h2>
               <p>{cat.intro}</p>
               <div className="kv" style={{ marginTop: 10 }}>
                 {cat.picks.map((pick) => {
@@ -416,7 +417,7 @@ export default function BestTravelCardsPage() {
 
           <div className="cd-note">
             <div className="cap">Every number here comes from our own data</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               We built this roundup entirely from the {FEATURED_SLUGS.length} travel and rewards cards we feature in our
               own card data, not from any aggregator or competitor list. The fees, earn rates, welcome bonuses, travel
               perks, and first-year values are read directly from the data, and each card links to its full page. Point
@@ -426,22 +427,22 @@ export default function BestTravelCardsPage() {
           </div>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             Picking a travel card is really about matching how you travel to what a card rewards. Once you know whether
             you want flexible points, an Aeroplan earner, lounge access, or no foreign transaction fees, the field
             narrows fast. Explore the full lineup, stack cards side by side, see where each points currency can transfer,
             and read our valuation method below.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/cards" className="cd-apply">
               Explore all cards &rarr;
             </Link>
@@ -460,7 +461,7 @@ export default function BestTravelCardsPage() {
             <Link href="/how-we-value-points" className="cd-apply">
               How we value points &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

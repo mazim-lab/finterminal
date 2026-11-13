@@ -8,6 +8,7 @@ import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/best-chequing-account-bonuses-canada" },
   title: "Best chequing account welcome bonuses in Canada | FinTerminal",
   description:
     "An honest look at the best chequing account welcome bonuses in Canada, from Scotiabank, CIBC, and TD to National Bank, Simplii, RBC, and Tangerine. Offers as of September 2026, with the direct-deposit conditions you actually have to meet, the monthly fees to watch, and how switching for a bonus really works.",
@@ -53,7 +54,7 @@ const FAQ = [
 
 export default function BestChequingBonusesPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -70,10 +71,10 @@ export default function BestChequingBonusesPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">best-chequing-account-bonuses-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Best Chequing Account Welcome Bonuses in Canada</span>
           </nav>
           <ArticleSchema headline="Best chequing account welcome bonuses in Canada" path="/personal-finance/best-chequing-account-bonuses-canada" kicker="Personal finance" />
 
@@ -100,7 +101,7 @@ export default function BestChequingBonusesPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               As of September 2026, the biggest verified chequing offers come from the big banks and need bundling:
               Scotiabank advertises up to $1,000, CIBC up to $850 in value, and TD up to $750, each when you pair a
               chequing account with a savings account or credit card and meet direct-deposit and activity
@@ -118,7 +119,7 @@ export default function BestChequingBonusesPage() {
           </div>
 
           {/* SHORT */}
-          <div id="short" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the best bonus right now?</div>
+          <h2 id="short" className="cd-sec">What is the best bonus right now?</h2>
           <p>
             There is no single winner, because the biggest dollar figures come attached to the most conditions. The
             largest offers, from Scotiabank, CIBC, and TD, only reach their headline number when you bundle a
@@ -136,7 +137,7 @@ export default function BestChequingBonusesPage() {
           </p>
 
           {/* TABLE */}
-          <div id="table" className="cd-sec" style={{ scrollMarginTop: 70 }}>The offers, bank by bank</div>
+          <h2 id="table" className="cd-sec">The offers, bank by bank</h2>
           <p>
             Here is where the mainstream chequing offers stand as of September 2026. Amounts shown in bold were verified
             on the bank&apos;s own offer page in September 2026. Most are the maximum possible value, reached only if you
@@ -252,7 +253,7 @@ export default function BestChequingBonusesPage() {
 
           <div className="cd-note">
             <div className="cap">Offers change; this is a snapshot</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The bold figures above were verified in September 2026 against each bank&apos;s own materials, but bank
               account promos change and expire often. Confirm the current offer and its conditions on the
               bank&apos;s own page before you open an account. Treat this as a map of the landscape, not a live
@@ -261,7 +262,7 @@ export default function BestChequingBonusesPage() {
           </div>
 
           {/* HOW */}
-          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How these bonuses actually work</div>
+          <h2 id="how" className="cd-sec">How these bonuses actually work</h2>
           <p>
             The mechanics are similar from bank to bank. You open an eligible chequing account during the promotion
             window, then complete a short list of qualifying activities inside a set number of days. The most common
@@ -279,7 +280,7 @@ export default function BestChequingBonusesPage() {
           </p>
 
           {/* FEES */}
-          <div id="fees" className="cd-sec" style={{ scrollMarginTop: 70 }}>Watch the monthly fee</div>
+          <h2 id="fees" className="cd-sec">Watch the monthly fee</h2>
           <p>
             The biggest bonuses tend to sit on full-service accounts that carry a monthly fee, often somewhere in
             the roughly $16 to $30 range at the big banks. That fee is usually waived if you keep a minimum balance
@@ -296,7 +297,7 @@ export default function BestChequingBonusesPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A simple way to compare</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Take the bonus you would actually qualify for, then subtract any monthly fees you cannot waive over
               the time you plan to keep the account. The result is your real reward. A $250 no-fee bonus can quietly
               beat a $500 bonus that comes with a fee you keep paying.
@@ -304,7 +305,7 @@ export default function BestChequingBonusesPage() {
           </div>
 
           {/* SWITCHING */}
-          <div id="switching" className="cd-sec" style={{ scrollMarginTop: 70 }}>Is switching for a bonus worth it?</div>
+          <h2 id="switching" className="cd-sec">Is switching for a bonus worth it?</h2>
           <p>
             Switching your everyday banking to chase a welcome bonus is a real and legitimate tactic, and plenty of
             organized people do it every year. A few hundred dollars for moving a direct deposit and setting up a
@@ -322,7 +323,7 @@ export default function BestChequingBonusesPage() {
           </p>
 
           {/* CARDS */}
-          <div id="cards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Not the same as a credit-card bonus</div>
+          <h2 id="cards" className="cd-sec">Not the same as a credit-card bonus</h2>
           <p>
             It is worth being clear that a chequing account bonus and a credit-card welcome bonus are two different
             rewards. A chequing bonus is cash (or, at RBC right now, a device) for opening a bank account and meeting
@@ -338,22 +339,22 @@ export default function BestChequingBonusesPage() {
           </p>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             A chequing bonus is a nice one-time boost, but the account it lives in usually pays little on your
             balance. The money you are not spending belongs somewhere that actually earns, so it pairs naturally
             with a good high-interest savings account, a laddered set of GICs, and the right credit card for your
             spending.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance/best-savings-account-rates-canada" className="cd-apply">
               Best high-interest savings rates in Canada &rarr;
             </Link>
@@ -363,10 +364,10 @@ export default function BestChequingBonusesPage() {
             <Link href="/personal-finance/where-to-hold-cash-canada" className="cd-apply">
               Where to hold your cash in Canada &rarr;
             </Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/cards" className="cd-apply">
               Browse cards &amp; bonuses &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

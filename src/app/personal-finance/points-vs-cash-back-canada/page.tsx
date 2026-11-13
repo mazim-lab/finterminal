@@ -9,6 +9,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/points-vs-cash-back-canada" },
   title: "Points vs cash back: which actually wins for your household | FinTerminal",
   description:
     "Travel points can be worth more per dollar, but only if you redeem them well. Here is the honest cents-per-point threshold where simple, frictionless cash back is the smarter, lower-effort choice for a Canadian household.",
@@ -56,7 +57,7 @@ export default function PointsVsCashBackPage() {
   if (!isPFPublished("points-vs-cash-back-canada")) notFound();
 
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,10 +69,10 @@ export default function PointsVsCashBackPage() {
               acceptedAnswer: { "@type": "Answer", text: f.a },
             })),
           }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">points-vs-cash-back-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Points vs Cash Back: Which Actually Wins for Your Household</span>
           </nav>
           <ArticleSchema headline="Points vs cash back: which actually wins for your household" path="/personal-finance/points-vs-cash-back-canada" kicker="Personal finance" />
 
@@ -97,7 +98,7 @@ export default function PointsVsCashBackPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Points beat cash back only if you redeem them above the breakeven value, which for a
               2-points-per-dollar card versus a 2 percent cash-back card is exactly 1 cent per point. Redeem above
               that and points win, sometimes by a wide margin on premium flights worth 3 to 5 plus cents each.
@@ -114,7 +115,7 @@ export default function PointsVsCashBackPage() {
           </div>
 
           {/* TRADEOFF */}
-          <div id="tradeoff" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the real tradeoff between points and cash back?</div>
+          <h2 id="tradeoff" className="cd-sec">What is the real tradeoff between points and cash back?</h2>
           <p>
             Start with what each reward really is. Cash back is money. It lands in your account or on your
             statement, it is worth exactly one cent per cent, and you can spend it on anything. A good Canadian
@@ -140,7 +141,7 @@ export default function PointsVsCashBackPage() {
           </p>
 
           {/* CPP */}
-          <div id="cpp" className="cd-sec" style={{ scrollMarginTop: 70 }}>What cents-per-point math settles the debate?</div>
+          <h2 id="cpp" className="cd-sec">What cents-per-point math settles the debate?</h2>
           <p>
             Here is the framing that cuts through all the noise. A card that earns some number of points per dollar
             only beats a straightforward cash-back card if you actually redeem those points above a certain value
@@ -164,7 +165,7 @@ export default function PointsVsCashBackPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The breakeven, stated plainly</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               To find the cents per point where a points card ties a cash-back card, divide the cash-back rate by
               the points earn rate. A 2-points-per-dollar card ties a 2 percent cash-back card at exactly 1 cent
               per point <span className="fld">2% ÷ 2 pts = 1.0¢</span>. Beat that redemption value and points win.
@@ -173,7 +174,7 @@ export default function PointsVsCashBackPage() {
           </div>
 
           {/* EXAMPLE */}
-          <div id="example" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does it play out in real dollars?</div>
+          <h2 id="example" className="cd-sec">How does it play out in real dollars?</h2>
           <p>
             Let me make it concrete with round numbers. Picture two cards for the same $20,000 of annual household
             spending. Card A is a flat 2 percent cash-back card. Card B earns 2 points per dollar in a travel
@@ -181,14 +182,14 @@ export default function PointsVsCashBackPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Card A, the cash-back card</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               $20,000 spent at 2 percent returns a flat $400. It is guaranteed, it arrives without any effort, and
               it is worth $400 whether you redeem it today or in two years. No thinking required.
             </p>
           </div>
           <div className="cd-note">
             <div className="cap">Card B, the points card</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               $20,000 at 2 points per dollar earns 40,000 points. Redeem them at 0.7 cents each, a lazy
               gift-card-style redemption, and they are worth about $280, so cash back wins by $120. Redeem the same
               40,000 points at 2 cents each on a good flight and they are worth about $800, double the cash-back
@@ -203,7 +204,7 @@ export default function PointsVsCashBackPage() {
           </p>
 
           {/* LEAK */}
-          <div id="leak" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why do points often return less than the brochure suggests?</div>
+          <h2 id="leak" className="cd-sec">Why do points often return less than the brochure suggests?</h2>
           <p>
             The cents-per-point math assumes you actually redeem your points, and redeem them well. In real life,
             this is where the biggest value quietly drains away, and it is the most important part of this whole
@@ -231,7 +232,7 @@ export default function PointsVsCashBackPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The reliability premium</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               A guaranteed 2 percent you always collect can easily beat a theoretical 4 percent you collect only
               half the time. When you compare the two rewards, compare what you will realistically capture, not the
               best case on a perfect day.
@@ -239,7 +240,7 @@ export default function PointsVsCashBackPage() {
           </div>
 
           {/* CASHBACK */}
-          <div id="cashback" className="cd-sec" style={{ scrollMarginTop: 70 }}>Should you lean cash back?</div>
+          <h2 id="cashback" className="cd-sec">Should you lean cash back?</h2>
           <p>
             Cash back is the right default for more households than the points crowd likes to admit, and choosing it
             is not settling. It is matching the reward to your actual life.
@@ -253,7 +254,7 @@ export default function PointsVsCashBackPage() {
           </ul>
 
           {/* POINTS */}
-          <div id="points" className="cd-sec" style={{ scrollMarginTop: 70 }}>Should you lean points?</div>
+          <h2 id="points" className="cd-sec">Should you lean points?</h2>
           <p>
             Points can be the far richer choice, sometimes dramatically so, when you are the kind of person who will
             actually do the work and enjoy it. The upside is real, and for the right household it dwarfs cash back.
@@ -271,7 +272,7 @@ export default function PointsVsCashBackPage() {
           </p>
 
           {/* VERDICT */}
-          <div id="verdict" className="cd-sec" style={{ scrollMarginTop: 70 }}>Which card should you actually pick?</div>
+          <h2 id="verdict" className="cd-sec">Which card should you actually pick?</h2>
           <p>
             After all the math, the answer is less about spreadsheets than about self-knowledge. The best rewards
             card is not the one with the highest theoretical value. It is the one whose rewards you will genuinely
@@ -287,7 +288,7 @@ export default function PointsVsCashBackPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you think it through, not personalized financial advice, and the
               point valuations here move over time as programs change their charts. Redemption values are estimates,
               not promises, so check the current numbers before you count on them, and always pay your statement in
@@ -295,19 +296,19 @@ export default function PointsVsCashBackPage() {
             </p>
           </div>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>Once you know which camp you are in, the next step is finding a card that fits it, whether that is a flat cash-back rate or a travel currency with real sweet spots.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/cards" className="cd-apply">Browse cards →</Link>
-            <Link href="/how-we-value-points" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>How we value points →</Link>
+            <Link href="/how-we-value-points" className="cd-apply">How we value points →</Link>
           </div>
           <Comments path="/personal-finance/points-vs-cash-back-canada" />
         </div>

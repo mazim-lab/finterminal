@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/smith-manoeuvre" },
   title: "The Smith Manoeuvre, explained properly | FinTerminal",
   description:
     "A clear, honest, step-by-step guide to the Smith Manoeuvre for Canadian homeowners: how it works, every variation, the CRA rules that keep it valid, and the risks worth respecting.",
@@ -53,7 +54,7 @@ const FAQ = [
 
 export default function SmithManoeuvrePage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -65,10 +66,10 @@ export default function SmithManoeuvrePage() {
               acceptedAnswer: { "@type": "Answer", text: f.a },
             })),
           }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">smith-manoeuvre</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">The Smith Manoeuvre</span>
           </nav>
           <ArticleSchema headline="The Smith Manoeuvre, explained properly" path="/personal-finance/smith-manoeuvre" kicker="Personal finance" />
 
@@ -93,7 +94,7 @@ export default function SmithManoeuvrePage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">The Smith Manoeuvre is a way for Canadian homeowners to make their mortgage interest tax-deductible. Using a readvanceable mortgage, every dollar of principal you pay down frees an equal dollar of line-of-credit room, which you borrow and invest in income-producing assets so its interest becomes deductible. You reinvest each tax refund into the mortgage to speed things up, and over the years your non-deductible mortgage is replaced by a deductible investment loan plus a portfolio. It is genuine leverage though, so it needs at least 20 percent home equity, stable cash flow, a long horizon, and clean records to work.</p>
+            <p className="sub">The Smith Manoeuvre is a way for Canadian homeowners to make their mortgage interest tax-deductible. Using a readvanceable mortgage, every dollar of principal you pay down frees an equal dollar of line-of-credit room, which you borrow and invest in income-producing assets so its interest becomes deductible. You reinvest each tax refund into the mortgage to speed things up, and over the years your non-deductible mortgage is replaced by a deductible investment loan plus a portfolio. It is genuine leverage though, so it needs at least 20 percent home equity, stable cash flow, a long horizon, and clean records to work.</p>
           </div>
 
           <div className="toc">
@@ -104,7 +105,7 @@ export default function SmithManoeuvrePage() {
           </div>
 
           {/* WHAT */}
-          <div id="what" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the Smith Manoeuvre, actually?</div>
+          <h2 id="what" className="cd-sec">What is the Smith Manoeuvre, actually?</h2>
           <p>
             In Canada, the interest you pay on your home mortgage is not tax-deductible. The interest you pay
             on money you borrow to earn investment income is. The Smith Manoeuvre, named after Canadian
@@ -126,7 +127,7 @@ export default function SmithManoeuvrePage() {
           </p>
 
           {/* WHY */}
-          <div id="why" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why does it work?</div>
+          <h2 id="why" className="cd-sec">Why does it work?</h2>
           <p>
             The strategy leans on one long-standing rule in the Income Tax Act. Interest is deductible when the
             borrowed money is used for the purpose of earning income from a business or property. A regular
@@ -142,7 +143,7 @@ export default function SmithManoeuvrePage() {
           </p>
 
           {/* NEED */}
-          <div id="need" className="cd-sec" style={{ scrollMarginTop: 70 }}>What do you need before you start?</div>
+          <h2 id="need" className="cd-sec">What do you need before you start?</h2>
           <ul>
             <li><strong>A readvanceable mortgage.</strong> This is the non-negotiable tool. Common ones in Canada include the Scotia STEP, the National Bank All-in-One, Manulife One, the RBC Homeline Plan, and MCAP Fusion. They combine a mortgage with a line of credit that grows automatically as you pay principal.</li>
             <li><strong>Home equity.</strong> You generally need at least 20 percent equity, because a readvanceable line of credit cannot push your total borrowing above 80 percent of the home&apos;s value.</li>
@@ -152,13 +153,13 @@ export default function SmithManoeuvrePage() {
           </ul>
           <div className="cd-note">
             <div className="cap">A sensible order of operations</div>
-            <p style={{ margin: 0 }} className="sub">For most families, it is worth filling your TFSA and RRSP room first, since those give you tax
+            <p className="sub">For most families, it is worth filling your TFSA and RRSP room first, since those give you tax
             advantages without leverage. The Smith Manoeuvre tends to make the most sense once the easy,
             unleveraged tax shelters are already working for you.</p>
           </div>
 
           {/* LOOP */}
-          <div id="loop" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does the loop work, step by step?</div>
+          <h2 id="loop" className="cd-sec">How does the loop work, step by step?</h2>
           <div className="steps">
             <div className="step">
               <div className="num">1</div>
@@ -193,7 +194,7 @@ export default function SmithManoeuvrePage() {
           </div>
 
           {/* VARIATIONS */}
-          <div id="variations" className="cd-sec" style={{ scrollMarginTop: 70 }}>The variations, and when each one fits</div>
+          <h2 id="variations" className="cd-sec">The variations, and when each one fits</h2>
           <p>The core loop is the foundation. Most people then choose one or more of these accelerators depending on their cash flow and goals.</p>
 
           <details className="acc" open>
@@ -225,7 +226,7 @@ export default function SmithManoeuvrePage() {
           </details>
 
           {/* CLEAN */}
-          <div id="clean" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you keep the CRA happy?</div>
+          <h2 id="clean" className="cd-sec">How do you keep the CRA happy?</h2>
           <p>
             The deduction is the engine, so protecting it matters more than any clever optimization. The CRA
             cares about traceability, meaning a clean, unbroken line from borrowed dollars to income-producing
@@ -240,7 +241,7 @@ export default function SmithManoeuvrePage() {
           </ul>
 
           {/* RISKS */}
-          <div id="risks" className="cd-sec" style={{ scrollMarginTop: 70 }}>What are the risks, honestly?</div>
+          <h2 id="risks" className="cd-sec">What are the risks, honestly?</h2>
           <p>
             This part deserves your full attention, because the Smith Manoeuvre is leverage, and leverage is a
             tool that works in both directions. None of the following should scare you off if the strategy fits
@@ -256,7 +257,7 @@ export default function SmithManoeuvrePage() {
           </ul>
 
           {/* WHO */}
-          <div id="who" className="cd-sec" style={{ scrollMarginTop: 70 }}>Is it for you?</div>
+          <h2 id="who" className="cd-sec">Is it for you?</h2>
           <p>
             The Smith Manoeuvre tends to suit homeowners with stable income, a long time horizon, a healthy
             emergency fund, a genuine tolerance for risk, and the patience to keep clean records year after
@@ -271,24 +272,24 @@ export default function SmithManoeuvrePage() {
           </p>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">This guide is educational and is written to help you understand the strategy, not to recommend it for
+            <p className="sub">This guide is educational and is written to help you understand the strategy, not to recommend it for
             your specific situation. Before you set anything up, talk it through with a fee-for-service planner or
             an accountant who knows the Smith Manoeuvre well. An hour of good advice here pays for itself many
             times over.</p>
           </div>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>If you are thinking about the investment side, our card and points guides can help you put any rewards you earn to work too.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>More personal finance →</Link>
+          <div className="cta-row">
+            <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
             <Link href="/travel" className="cd-apply">Travel &amp; points →</Link>
           </div>
           <Comments path="/personal-finance/smith-manoeuvre" />

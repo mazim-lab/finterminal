@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/travel/aadvantage-sweet-spots" },
   title: "AAdvantage sweet spots: redeeming American Airlines miles | FinTerminal",
   description:
     "How a Canadian redeems American Airlines AAdvantage miles, why partner awards beat AA's own dynamic pricing, the genuine sweet spots (Qatar Qsuite, Etihad, JAL, business to Europe), and the surcharge and devaluation catches to watch.",
@@ -52,7 +53,7 @@ const FAQ = [
 
 export default function AAdvantageSweetSpotsPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-travel">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -60,10 +61,10 @@ export default function AAdvantageSweetSpotsPage() {
             "@type": "FAQPage",
             mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
           }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/travel">travel</Link><span className="sep">/</span>
-            <span className="cur">aadvantage-sweet-spots</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/travel">Travel</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">AAdvantage Sweet Spots</span>
           </nav>
           <ArticleSchema headline="AAdvantage sweet spots: redeeming American Airlines miles" path="/travel/aadvantage-sweet-spots" kicker="Travel & points" />
 
@@ -89,7 +90,7 @@ export default function AAdvantageSweetSpotsPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               AAdvantage miles are best spent on partner airlines, not American&apos;s own flights. American metal is
               priced dynamically and floats with the cash fare, while partners follow a fixed award chart that has barely
               moved in years. The standout redemptions are business class to Europe around 57,500 miles, Japan Airlines
@@ -106,7 +107,7 @@ export default function AAdvantageSweetSpotsPage() {
           </div>
 
           {/* HOW */}
-          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does AAdvantage price flights?</div>
+          <h2 id="how" className="cd-sec">How does AAdvantage price flights?</h2>
           <p>
             AAdvantage runs two completely different pricing systems, and knowing which one you are looking at decides
             whether a redemption is brilliant or terrible. Flights operated by American Airlines itself are priced
@@ -123,16 +124,16 @@ export default function AAdvantageSweetSpotsPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The one rule to remember</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               On American metal, miles behave like cash and the price floats. On partner airlines, miles follow a fixed
               chart and behave like a coupon. The partner chart is where the value lives, so that is where to hunt.
             </p>
           </div>
 
           {/* SPOTS */}
-          <div id="spots" className="cd-sec" style={{ scrollMarginTop: 70 }}>Where are the sweet spots?</div>
+          <h2 id="spots" className="cd-sec">Where are the sweet spots?</h2>
 
-          <h4>Short hops within North America</h4>
+          <h3 className="faq-q">Short hops within North America</h3>
           <p>
             For partner flights wholly within North America, economy on the AAdvantage chart starts around 7,500 miles
             one-way off-peak, stepping up to about 12,500 on peak dates. On a short, expensive route that often beats
@@ -140,7 +141,7 @@ export default function AAdvantageSweetSpotsPage() {
             can sometimes price even lower as a Web Special, so it is worth checking both before you book.
           </p>
 
-          <h4>Business class to Europe on a partner</h4>
+          <h3 className="faq-q">Business class to Europe on a partner</h3>
           <p>
             This is the redemption AAdvantage is quietly famous for. A one-way business class seat between North America
             and Europe on a partner runs about 57,500 miles, for a lie-flat cabin that routinely sells for several
@@ -149,7 +150,7 @@ export default function AAdvantageSweetSpotsPage() {
             first class, where it exists, is about 85,000.
           </p>
 
-          <h4>Japan on Japan Airlines</h4>
+          <h3 className="faq-q">Japan on Japan Airlines</h3>
           <p>
             Japan Airlines is one of the best uses of AAdvantage miles going. Business class between North America and
             Japan is about 60,000 miles one-way, and first class, when you can find it, is roughly 80,000. JAL&apos;s
@@ -158,7 +159,7 @@ export default function AAdvantageSweetSpotsPage() {
             patience help a lot.
           </p>
 
-          <h4>Etihad and Qatar to the Middle East</h4>
+          <h3 className="faq-q">Etihad and Qatar to the Middle East</h3>
           <p>
             For the Middle East and the Indian subcontinent, business class on partners like Etihad or Qatar Airways is
             about 70,000 miles one-way, with first class around 100,000. Qatar&apos;s Qsuite, booked this way, is one of
@@ -170,7 +171,7 @@ export default function AAdvantageSweetSpotsPage() {
             in an Etihad seat further ahead, that usually means booking with Etihad Guest miles rather than AAdvantage.
           </p>
 
-          <h4>Other premium-cabin partners</h4>
+          <h3 className="faq-q">Other premium-cabin partners</h3>
           <p>
             The same logic extends to other oneworld partners that go easy on surcharges, including Cathay Pacific to
             Hong Kong and Royal Air Maroc through Casablanca. The exact mile level depends on which region the chart
@@ -180,7 +181,7 @@ export default function AAdvantageSweetSpotsPage() {
           </p>
 
           {/* SEARCH */}
-          <div id="search" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you find and book partner space?</div>
+          <h2 id="search" className="cd-sec">How do you find and book partner space?</h2>
           <p>
             Most oneworld partner awards can be searched and booked right on aa.com, which is a big part of what makes
             AAdvantage pleasant to use. British Airways, Iberia, Finnair, Qatar Airways, Cathay Pacific, Japan Airlines,
@@ -198,7 +199,7 @@ export default function AAdvantageSweetSpotsPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Check the price tag, not just the seat</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               When a partner award appears, confirm the miles match the fixed chart and glance at the cash line beside
               them. A low, steady mile count with small taxes is the partner chart doing its job. A high, fare-linked
               number means you are looking at American&apos;s own dynamic pricing instead.
@@ -206,7 +207,7 @@ export default function AAdvantageSweetSpotsPage() {
           </div>
 
           {/* FEES */}
-          <div id="fees" className="cd-sec" style={{ scrollMarginTop: 70 }}>What will taxes and surcharges cost?</div>
+          <h2 id="fees" className="cd-sec">What will taxes and surcharges cost?</h2>
           <p>
             One of the best things about AAdvantage is that it does not pass along carrier-imposed fuel surcharges on
             most partner awards. On programs that do, those surcharges can add hundreds of dollars each way and quietly
@@ -222,7 +223,7 @@ export default function AAdvantageSweetSpotsPage() {
           </p>
 
           {/* EXAMPLE */}
-          <div id="example" className="cd-sec" style={{ scrollMarginTop: 70 }}>A worked example, tying it back to Avion</div>
+          <h2 id="example" className="cd-sec">A worked example, tying it back to Avion</h2>
           <p>
             Here is why the transfer from the companion guide can be worth it, despite the haircut. RBC Avion moves to
             AAdvantage at roughly 1 Avion to 0.7 miles, so it takes about 100,000 Avion points to land 70,000 AAdvantage
@@ -231,7 +232,7 @@ export default function AAdvantageSweetSpotsPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The math on a Qsuite</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Those 70,000 miles book one-way Qatar Qsuite business class from the US toward Doha, a cabin that often
               sells for three to four thousand dollars or more in cash, with taxes frequently under fifty dollars. So
               roughly 100,000 Avion points, after the haircut, turn into a flight worth several thousand dollars. That is
@@ -246,7 +247,7 @@ export default function AAdvantageSweetSpotsPage() {
           </p>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>Honest caveats</div>
+          <h2 id="caveats" className="cd-sec">Honest caveats</h2>
           <ul>
             <li><strong>Partner space can be genuinely tough.</strong> The chart prices are wonderful, but the seats are limited and the best ones get taken. Flexibility on dates and routing is the difference between booking and waiting.</li>
             <li><strong>American metal is dynamically priced.</strong> Awards on American&apos;s own flights float with the cash fare and can be poor value. The fixed-chart magic only applies to partners.</li>
@@ -255,7 +256,7 @@ export default function AAdvantageSweetSpotsPage() {
             <li><strong>Transfers are one-way.</strong> Once Avion points become AAdvantage miles they cannot be reversed, so only move what you have a real plan to use, ideally after you have already found the seat.</li>
           </ul>
 
-          <div className="cd-sec">The short version</div>
+          <h2 className="cd-sec">The short version</h2>
           <p>
             AAdvantage rewards you for ignoring American&apos;s own dynamic prices and pointing your miles at the fixed
             partner chart instead. Business class to Europe around 57,500, Japan Airlines around 60,000, and Qatar Qsuite
@@ -264,20 +265,20 @@ export default function AAdvantageSweetSpotsPage() {
             your sights, confirm the live price every time, and these miles do real work.
           </p>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>If you have not topped up your balance yet, start with the transfer guide, then come back here to spend.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/travel/rbc-avion-to-aadvantage" className="cd-apply">Transfer Avion to AAdvantage →</Link>
             <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
-            <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Avios sweet spots →</Link>
+            <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply">Avios sweet spots →</Link>
           </div>
           <Comments path="/travel/aadvantage-sweet-spots" />
         </div>

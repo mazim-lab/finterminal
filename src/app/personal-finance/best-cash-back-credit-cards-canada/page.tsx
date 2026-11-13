@@ -8,6 +8,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/best-cash-back-credit-cards-canada" },
   title: "The best cash-back credit cards in Canada | FinTerminal",
   description:
     "Our pick of the best cash-back credit cards in Canada, organized by how you actually spend: best no-annual-fee, best for groceries, best flat-rate everyday, and best premium. Every fee, earn rate, and value figure comes straight from our own card data. Our view as of July 2026, not advice.",
@@ -191,7 +192,7 @@ function feeText(c: Card): string {
 
 export default function BestCashBackCardsPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -208,10 +209,10 @@ export default function BestCashBackCardsPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">best-cash-back-credit-cards-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">The Best Cash-Back Credit Cards in Canada</span>
           </nav>
           <ArticleSchema headline="The best cash-back credit cards in Canada" path="/personal-finance/best-cash-back-credit-cards-canada" kicker="Personal finance" />
 
@@ -238,7 +239,7 @@ export default function BestCashBackCardsPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               If you want one no-fee card and no fuss, a flat 2 percent card with no annual fee and no foreign
               transaction fee is the best all-rounder in our data. If your grocery and everyday spending is high, a
               premium card that pays 4 to 5 percent on groceries can return far more, once its fee is covered. Match the
@@ -260,7 +261,7 @@ export default function BestCashBackCardsPage() {
           </div>
 
           {/* HOW WE PICKED */}
-          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How we picked, and cash back vs points</div>
+          <h2 id="how" className="cd-sec">How we picked, and cash back vs points</h2>
           <p>
             These rankings are our own view, drawn entirely from the Canadian cash-back cards in our data. For every
             pick we show, from our data, the annual fee, the standout earn rate or two, the welcome bonus if the card has
@@ -280,7 +281,7 @@ export default function BestCashBackCardsPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The best card is the one that fits your spending</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               A 5 percent grocery card is only the best card if you actually spend a lot on groceries. A flat 2 percent
               card can quietly beat a flashy tiered card for someone whose spending is spread out. Look at your last few
               months of statements, find your two or three biggest categories, and pick the card that pays the most
@@ -293,7 +294,7 @@ export default function BestCashBackCardsPage() {
           {/* CATEGORY SECTIONS */}
           {CATEGORIES.map((cat) => (
             <div key={cat.id}>
-              <div id={cat.id} className="cd-sec" style={{ scrollMarginTop: 70 }}>{cat.label}</div>
+              <h2 id={cat.id} className="cd-sec">{cat.label}</h2>
               <p>{cat.intro}</p>
               <div className="kv" style={{ marginTop: 10 }}>
                 {cat.picks.map((pick) => {
@@ -349,7 +350,7 @@ export default function BestCashBackCardsPage() {
 
           <div className="cd-note">
             <div className="cap">Every number here comes from our own data</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               We built this roundup entirely from the {FEATURED_SLUGS.length} cash-back cards we feature in our own card
               data, not from any aggregator or competitor list. The fees, earn rates, welcome bonuses, and first-year
               values are read directly from the data, and each card links to its full page. Card offers and earn rates
@@ -358,21 +359,21 @@ export default function BestCashBackCardsPage() {
           </div>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             Picking a cash-back card is really about matching a rate to the categories you already spend on. Once you
             know your top two or three, the field narrows fast. Explore the full lineup, stack cards side by side, and
             read our valuation method below.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/cards" className="cd-apply">
               Explore all cards &rarr;
             </Link>
@@ -385,7 +386,7 @@ export default function BestCashBackCardsPage() {
             <Link href="/how-we-value-points" className="cd-apply">
               How we value points &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

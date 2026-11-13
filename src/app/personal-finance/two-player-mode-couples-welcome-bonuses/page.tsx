@@ -9,6 +9,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/two-player-mode-couples-welcome-bonuses" },
   title: "Two-player mode: how Canadian couples double their welcome bonuses | FinTerminal",
   description:
     "Two people means two credit profiles, so two full sets of welcome bonuses over time, plus referral points for pointing each other to cards. Here is how a household runs it together without wrecking anyone's credit.",
@@ -29,7 +30,7 @@ export default function TwoPlayerModePage() {
   if (!isPFPublished("two-player-mode-couples-welcome-bonuses")) notFound();
 
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
@@ -40,10 +41,10 @@ export default function TwoPlayerModePage() {
             { "@type": "Question", name: "Can we combine our points to book one trip?", acceptedAnswer: { "@type": "Answer", text: "Often, yes. Many Canadian programs let a household share or transfer points. Aeroplan Family Sharing lets verified family members combine their points into a shared balance that any member with redemption privileges can spend. Check whether a program allows pooling before you chase its bonus, and read the current eligibility and timing rules." } },
             { "@type": "Question", name: "Is two-player mode right for every couple?", acceptedAnswer: { "@type": "Answer", text: "No. It relies on an organised, trusting household where both people pay every statement in full, keep notes, and are honest about spending and scores. It also doubles the admin and is never a licence to overspend. If money is a source of tension, keeping things simple is a perfectly fair choice." } }
           ] }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">two-player-mode-couples-welcome-bonuses</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Two-Player Mode: How Canadian Couples Double Their Welcome Bonuses</span>
           </nav>
           <ArticleSchema headline="Two-player mode: how Canadian couples double their welcome bonuses" path="/personal-finance/two-player-mode-couples-welcome-bonuses" kicker="Personal finance" />
 
@@ -69,7 +70,7 @@ export default function TwoPlayerModePage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Two people means two separate credit profiles, so a couple can earn the same welcome bonus on the same
               card over time, roughly doubling their points for the same everyday spending. Take turns rather than
               applying at once, stack an Amex-style referral so one partner earns referral points while the other
@@ -86,7 +87,7 @@ export default function TwoPlayerModePage() {
           </div>
 
           {/* IDEA */}
-          <div id="idea" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does two-player mode double your bonuses?</div>
+          <h2 id="idea" className="cd-sec">How does two-player mode double your bonuses?</h2>
           <p>
             A welcome bonus is tied to a person, not to a household. Each of you has your own credit file, your own
             application history, and your own eligibility for any given card. So when a card offers a bonus for a
@@ -102,7 +103,7 @@ export default function TwoPlayerModePage() {
           </p>
           <div className="cd-note">
             <div className="cap">Why it roughly doubles your haul</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Over a year, a single person can responsibly open only so many cards before their credit needs a
               rest. A household of two has two of those capacities running in parallel. You are not doing anything
               unusual, you are simply letting each person&apos;s eligibility do its normal work instead of leaving
@@ -111,7 +112,7 @@ export default function TwoPlayerModePage() {
           </div>
 
           {/* REFERRAL */}
-          <div id="referral" className="cd-sec" style={{ scrollMarginTop: 70 }}>Can you stack a referral on top of a bonus?</div>
+          <h2 id="referral" className="cd-sec">Can you stack a referral on top of a bonus?</h2>
           <p>
             Here is the move that turns doubling into something even better. Several issuers, and American Express
             in Canada is the standout, run a refer-a-friend program. When one cardholder refers another person to a
@@ -150,7 +151,7 @@ export default function TwoPlayerModePage() {
           </p>
 
           {/* COORDINATE */}
-          <div id="coordinate" className="cd-sec" style={{ scrollMarginTop: 70 }}>How should you coordinate your turns?</div>
+          <h2 id="coordinate" className="cd-sec">How should you coordinate your turns?</h2>
           <p>
             The single biggest mistake households make is treating two-player mode as a race where you both sprint
             at once. That is how you end up with two large minimum spends due in the same month and a tight cash
@@ -166,7 +167,7 @@ export default function TwoPlayerModePage() {
           </ul>
           <div className="cd-note">
             <div className="cap">A gentle cadence beats a sprint</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               A relaxed rhythm of one bonus at a time, handed back and forth between the two of you, earns just as
               many points over a year as trying to do everything at once, and it does so without cash-flow stress
               or a bruised credit score. Slower here really is richer.
@@ -174,7 +175,7 @@ export default function TwoPlayerModePage() {
           </div>
 
           {/* AUTHORIZED */}
-          <div id="authorized" className="cd-sec" style={{ scrollMarginTop: 70 }}>Do authorized users earn a welcome bonus?</div>
+          <h2 id="authorized" className="cd-sec">Do authorized users earn a welcome bonus?</h2>
           <p>
             This is the part where people most often get their hopes up, so let me be clear and save you the
             disappointment. Adding your partner as an authorized user, sometimes called a supplementary
@@ -198,7 +199,7 @@ export default function TwoPlayerModePage() {
           </p>
 
           {/* POOLING */}
-          <div id="pooling" className="cd-sec" style={{ scrollMarginTop: 70 }}>Can you pool your points for one trip?</div>
+          <h2 id="pooling" className="cd-sec">Can you pool your points for one trip?</h2>
           <p>
             Earning two sets of points is only half the fun. The other half is bringing them together so they can
             fund a single trip for the family. Plenty of Canadian programs let members of a household share or
@@ -223,7 +224,7 @@ export default function TwoPlayerModePage() {
           </p>
 
           {/* HEALTHY */}
-          <div id="healthy" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you keep it healthy for both of you?</div>
+          <h2 id="healthy" className="cd-sec">How do you keep it healthy for both of you?</h2>
           <p>
             Two-player mode works beautifully when it is built on the same habits that make any points strategy
             safe. Here is what keeps it a joy rather than a source of friction.
@@ -236,7 +237,7 @@ export default function TwoPlayerModePage() {
           </ul>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>What are the honest caveats?</div>
+          <h2 id="caveats" className="cd-sec">What are the honest caveats?</h2>
           <p>
             Two-player mode is powerful, but it is not for everyone, and it deserves a few straight words before
             you dive in.
@@ -261,7 +262,7 @@ export default function TwoPlayerModePage() {
           </p>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help two people think through playing as a team, not personalized
               financial advice, and all of the specifics, the referral amounts, the bonus offers, and the program
               rules for sharing points, change over time. Confirm the current terms with each issuer and program
@@ -270,25 +271,25 @@ export default function TwoPlayerModePage() {
             </p>
           </div>
 
-          <div className="cd-sec">Frequently asked questions</div>
-          <h4>Can a couple earn the same welcome bonus on the same card?</h4>
+          <h2 className="cd-sec">Frequently asked questions</h2>
+          <h3 className="faq-q">Can a couple earn the same welcome bonus on the same card?</h3>
           <p>Yes, over time. A welcome bonus is tied to a person&apos;s credit file, not to a household, so each partner has their own eligibility for a given card. One partner opens the card and clears the bonus, then months or a year later the other opens the same card and clears the same bonus. Same product, twice the points.</p>
-          <h4>Does adding my partner as an authorized user earn them a welcome bonus?</h4>
+          <h3 className="faq-q">Does adding my partner as an authorized user earn them a welcome bonus?</h3>
           <p>No. An authorized user or supplementary cardholder does not normally earn a separate welcome bonus, because the bonus belongs to the primary applicant who opened the account. A supplementary card is a second card on the same account, not a new account. To earn a bonus, the other person needs to open their own card as a primary applicant.</p>
-          <h4>Can I refer my partner to a card and still let them keep the welcome bonus?</h4>
+          <h3 className="faq-q">Can I refer my partner to a card and still let them keep the welcome bonus?</h3>
           <p>Yes. Several issuers, and American Express in Canada is the standout, run a refer-a-friend program where the referrer earns referral points and the person referred still receives the card&apos;s welcome bonus. Nothing is taken from the newcomer, so you stack a referral reward on top of a full bonus. Compare the referral offer against the best public offer first, since they can differ.</p>
-          <h4>How should couples time their applications?</h4>
+          <h3 className="faq-q">How should couples time their applications?</h3>
           <p>Take turns rather than sprinting at once. Stagger the minimum spends so you are not floating two large first-few-months spends in the same month, and alternate who applies so each person&apos;s credit can settle between cards. A relaxed one-bonus-at-a-time rhythm earns just as many points over a year without cash-flow stress or a bruised score.</p>
-          <h4>Can we combine our points to book one trip?</h4>
+          <h3 className="faq-q">Can we combine our points to book one trip?</h3>
           <p>Often, yes. Many Canadian programs let a household share or transfer points. Aeroplan Family Sharing lets verified family members combine their points into a shared balance that any member with redemption privileges can spend. Check whether a program allows pooling before you chase its bonus, and read the current eligibility and timing rules.</p>
-          <h4>Is two-player mode right for every couple?</h4>
+          <h3 className="faq-q">Is two-player mode right for every couple?</h3>
           <p>No. It relies on an organised, trusting household where both people pay every statement in full, keep notes, and are honest about spending and scores. It also doubles the admin and is never a licence to overspend. If money is a source of tension, keeping things simple is a perfectly fair choice.</p>
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>The natural next step is picking which cards to pass back and forth between the two of you, and lining up their welcome bonuses.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/cards" className="cd-apply">Browse cards &amp; bonuses →</Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>More personal finance →</Link>
+            <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
           </div>
           <Comments path="/personal-finance/two-player-mode-couples-welcome-bonuses" />
         </div>

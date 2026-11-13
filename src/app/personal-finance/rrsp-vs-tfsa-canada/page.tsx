@@ -8,6 +8,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/rrsp-vs-tfsa-canada" },
   title: "RRSP vs TFSA: the honest decision for Canadians | FinTerminal",
   description:
     "RRSP or TFSA? The real answer comes down to your marginal tax rate now versus in retirement. A plain-language head-to-head on how each account works, who each one favours, the refund trap, withdrawal and room mechanics, and why 'both' is usually right. General info as of July 2026, not advice.",
@@ -64,7 +65,7 @@ const FAQ = [
 
 export default function RrspVsTfsaPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -81,10 +82,10 @@ export default function RrspVsTfsaPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">rrsp-vs-tfsa-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">RRSP vs TFSA: the Honest Decision for Canadians</span>
           </nav>
           <ArticleSchema headline="RRSP vs TFSA: the honest decision for Canadians" path="/personal-finance/rrsp-vs-tfsa-canada" kicker="Personal finance" />
 
@@ -118,7 +119,7 @@ export default function RrspVsTfsaPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               An RRSP gives you a tax deduction now and taxes you when you withdraw, so it is tax-deferred. A TFSA gives
               you no deduction but is tax-free forever. The RRSP wins when your marginal tax rate today is higher than
               the rate you expect at withdrawal, which usually means higher earners deferring into a lower-income
@@ -138,7 +139,7 @@ export default function RrspVsTfsaPage() {
           </div>
 
           {/* MECHANIC */}
-          <div id="mechanic" className="cd-sec" style={{ scrollMarginTop: 70 }}>The core mechanic</div>
+          <h2 id="mechanic" className="cd-sec">The core mechanic</h2>
           <p>
             Before you can choose, you need to be clear on what each account actually does, because the two work in
             opposite directions. They are both tax shelters, but they shelter you at different moments.
@@ -171,13 +172,13 @@ export default function RrspVsTfsaPage() {
           </p>
 
           {/* RULE */}
-          <div id="rule" className="cd-sec" style={{ scrollMarginTop: 70 }}>The one rule that decides it</div>
+          <h2 id="rule" className="cd-sec">The one rule that decides it</h2>
           <p>
             Here is the rule that actually settles most RRSP versus TFSA debates, and it is worth reading twice:
           </p>
           <div className="cd-note">
             <div className="cap">The marginal-rate rule</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The RRSP wins when your marginal tax rate <strong>today</strong> is higher than your expected marginal rate
               at <strong>withdrawal</strong>. The TFSA wins when your rate today is lower than, or roughly equal to, your
               rate at withdrawal. If the two rates are identical, the accounts produce the same after-tax result, and you
@@ -200,7 +201,7 @@ export default function RrspVsTfsaPage() {
           </p>
 
           {/* SCENARIOS */}
-          <div id="scenarios" className="cd-sec" style={{ scrollMarginTop: 70 }}>Four realistic scenarios</div>
+          <h2 id="scenarios" className="cd-sec">Four realistic scenarios</h2>
           <p>
             Rather than invent exact tax brackets, which vary by province and change every year, here is the directional
             logic for four common situations. The point is not a precise number, it is which way the marginal-rate rule
@@ -255,7 +256,7 @@ export default function RrspVsTfsaPage() {
           </div>
 
           {/* REFUND */}
-          <div id="refund" className="cd-sec" style={{ scrollMarginTop: 70 }}>The refund is not free money</div>
+          <h2 id="refund" className="cd-sec">The refund is not free money</h2>
           <p>
             This is the single most misunderstood part of the RRSP, and getting it wrong quietly erases the account's
             whole advantage. When you contribute to an RRSP, the deduction generates a tax refund. That refund feels like
@@ -271,7 +272,7 @@ export default function RrspVsTfsaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The practical takeaway</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Treat the RRSP refund as part of the contribution, not as a windfall. A simple habit is to earmark it for
               your TFSA or next year's RRSP the moment it lands. If you know you will spend any refund, the TFSA is often
               the more honest choice for you, because it removes the temptation entirely.
@@ -279,7 +280,7 @@ export default function RrspVsTfsaPage() {
           </div>
 
           {/* WITHDRAWALS */}
-          <div id="withdrawals" className="cd-sec" style={{ scrollMarginTop: 70 }}>Withdrawals and room</div>
+          <h2 id="withdrawals" className="cd-sec">Withdrawals and room</h2>
           <p>
             How each account behaves when you take money out is a big part of the real-world difference, and it is where
             the TFSA's flexibility becomes concrete.
@@ -320,7 +321,7 @@ export default function RrspVsTfsaPage() {
           </p>
 
           {/* RETIREMENT */}
-          <div id="retirement" className="cd-sec" style={{ scrollMarginTop: 70 }}>The retirement angle: RRIF and OAS</div>
+          <h2 id="retirement" className="cd-sec">The retirement angle: RRIF and OAS</h2>
           <p>
             The RRSP does not stay an RRSP forever. By the end of the year you turn 71, you generally have to convert it
             into a Registered Retirement Income Fund (RRIF) or an annuity. A RRIF forces a minimum taxable withdrawal
@@ -337,7 +338,7 @@ export default function RrspVsTfsaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Why this pushes people toward balance</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               None of this makes the RRSP bad. It just means a giant RRSP and nothing else can be less efficient in
               retirement than a mix. Holding some TFSA alongside your RRSP gives you a source of income you can draw on
               without triggering tax or clawbacks, which is exactly the flexibility retirees value. Confirm the current
@@ -346,7 +347,7 @@ export default function RrspVsTfsaPage() {
           </div>
 
           {/* BOTH */}
-          <div id="both" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why "both" is the common answer</div>
+          <h2 id="both" className="cd-sec">Why "both" is the common answer</h2>
           <p>
             After all the head-to-head framing, the honest real-world answer for a large share of Canadians is: use both.
             The two accounts are not rivals so much as tools for different jobs, and having both gives you options that
@@ -378,7 +379,7 @@ export default function RrspVsTfsaPage() {
           </p>
 
           {/* MISTAKES */}
-          <div id="mistakes" className="cd-sec" style={{ scrollMarginTop: 70 }}>Common mistakes</div>
+          <h2 id="mistakes" className="cd-sec">Common mistakes</h2>
           <p>
             A few errors show up again and again. None of them are hard to avoid once you know to watch for them.
           </p>
@@ -420,21 +421,21 @@ export default function RrspVsTfsaPage() {
           </p>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             RRSP versus TFSA is really one decision inside a bigger picture. Once you have the marginal-rate logic down,
             the natural next steps are figuring out the order you fill your accounts and, if a first home is on the
             horizon, whether the FHSA should come first.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             {isPFPublished("canadian-account-order-of-operations") && (
               <Link href="/personal-finance/canadian-account-order-of-operations" className="cd-apply">
                 The Canadian account order of operations &rarr;
@@ -445,7 +446,7 @@ export default function RrspVsTfsaPage() {
                 The FHSA playbook for Canadians &rarr;
               </Link>
             )}
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

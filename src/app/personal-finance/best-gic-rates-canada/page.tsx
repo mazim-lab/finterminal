@@ -8,6 +8,7 @@ import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/best-gic-rates-canada" },
   title: "Best GIC rates in Canada | FinTerminal",
   description:
     "An honest look at the best GIC rates in Canada across terms, from Oaken and Achieva to EQ Bank, Wealthsimple, and the big banks. Rates as of September 2026, with cashable vs non-redeemable, the ladder strategy, registered GICs, and the CDIC vs credit-union coverage you really get.",
@@ -53,7 +54,7 @@ const FAQ = [
 
 export default function BestGicRatesPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -70,10 +71,10 @@ export default function BestGicRatesPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">best-gic-rates-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Best GIC Rates in Canada</span>
           </nav>
           <ArticleSchema headline="Best GIC rates in Canada" path="/personal-finance/best-gic-rates-canada" kicker="Personal finance" />
 
@@ -101,7 +102,7 @@ export default function BestGicRatesPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               As of September 2026, the strongest verified non-redeemable GIC rates from mainstream providers land
               around 3.55 to 3.70 percent for one year and around 4.10 to 4.25 percent for five years, from names like
               Oaken, Achieva, and Saven. Cashable GICs pay less, often in the low-two-percent range, because you are paying for
@@ -119,7 +120,7 @@ export default function BestGicRatesPage() {
           </div>
 
           {/* SHORT */}
-          <div id="short" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the best GIC rate right now?</div>
+          <h2 id="short" className="cd-sec">What is the best GIC rate right now?</h2>
           <p>
             There is no single winner, because the best GIC depends on your term and on whether you need the option
             to cash out early. For a locked, non-redeemable GIC, the online banks and credit unions consistently
@@ -137,7 +138,7 @@ export default function BestGicRatesPage() {
           </p>
 
           {/* TABLE */}
-          <div id="table" className="cd-sec" style={{ scrollMarginTop: 70 }}>The rates, term by term</div>
+          <h2 id="table" className="cd-sec">The rates, term by term</h2>
           <p>
             Here is where the mainstream options stand as of September 2026. Rates shown in bold were verified live on
             the provider&apos;s own rate page in September 2026. Where a provider does not expose its rates to a simple
@@ -243,7 +244,7 @@ export default function BestGicRatesPage() {
 
           <div className="cd-note">
             <div className="cap">Rates change; this is a snapshot</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The bold figures above were verified in September 2026 against each provider&apos;s own materials, but GIC
               rates move with the Bank of Canada and with each provider&apos;s funding needs. Once you buy, your
               rate is locked for the term, which is the whole point, but the rate on offer for new purchases keeps
@@ -253,7 +254,7 @@ export default function BestGicRatesPage() {
           </div>
 
           {/* CASHABLE */}
-          <div id="cashable" className="cd-sec" style={{ scrollMarginTop: 70 }}>Cashable vs non-redeemable</div>
+          <h2 id="cashable" className="cd-sec">Cashable vs non-redeemable</h2>
           <p>
             This is the first fork in the road, and it decides both your rate and your flexibility. A non-redeemable
             GIC (sometimes called non-cashable) locks your money in for the entire term. You cannot pull it out
@@ -270,7 +271,7 @@ export default function BestGicRatesPage() {
           </p>
 
           {/* LADDER */}
-          <div id="ladder" className="cd-sec" style={{ scrollMarginTop: 70 }}>The GIC ladder strategy</div>
+          <h2 id="ladder" className="cd-sec">The GIC ladder strategy</h2>
           <p>
             A GIC ladder is the simplest way to stop guessing which term will win. Instead of putting your whole
             balance into one term, you split it into equal pieces across several terms. A classic five-year ladder
@@ -312,7 +313,7 @@ export default function BestGicRatesPage() {
           </p>
 
           {/* REGISTERED */}
-          <div id="registered" className="cd-sec" style={{ scrollMarginTop: 70 }}>Registered GICs (TFSA, RRSP, FHSA)</div>
+          <h2 id="registered" className="cd-sec">Registered GICs (TFSA, RRSP, FHSA)</h2>
           <p>
             A GIC does not have to sit in a plain taxable account. Most providers offer registered versions that
             live inside your TFSA, RRSP, and often your FHSA or RRIF. The GIC itself works the same way, a fixed
@@ -341,7 +342,7 @@ export default function BestGicRatesPage() {
           </p>
 
           {/* CDIC */}
-          <div id="cdic" className="cd-sec" style={{ scrollMarginTop: 70 }}>Is your money actually insured?</div>
+          <h2 id="cdic" className="cd-sec">Is your money actually insured?</h2>
           <p>
             Deposit insurance is a big part of why a GIC feels so safe, but not every provider is insured the same
             way. The differences matter most when your balance climbs past the coverage limit.
@@ -384,21 +385,21 @@ export default function BestGicRatesPage() {
           </p>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             A GIC is the locked-in cousin of a good savings account, and the two work best as a pair: liquid cash in
             savings, longer-term money laddered in GICs. It also fits alongside picking the right card and the rest
             of our plain-language personal-finance guides.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance/best-savings-account-rates-canada" className="cd-apply">
               Best high-interest savings rates in Canada &rarr;
             </Link>
@@ -408,10 +409,10 @@ export default function BestGicRatesPage() {
             <Link href="/personal-finance/where-to-hold-cash-canada" className="cd-apply">
               Where to hold your cash in Canada &rarr;
             </Link>
-            <Link href="/personal-finance/pay-bills-with-credit-card-canada" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance/pay-bills-with-credit-card-canada" className="cd-apply">
               Paying bills with a credit card &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

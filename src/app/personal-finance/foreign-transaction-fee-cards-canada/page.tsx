@@ -9,6 +9,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/foreign-transaction-fee-cards-canada" },
   title: "The 2.5% foreign transaction fee, and the cards that kill it | FinTerminal",
   description:
     "Most Canadian cards quietly add about 2.5 percent on every foreign-currency purchase, including online shopping. Here is what it costs, the cards that skip or rebate it (Scotia Passport, Wealthsimple, Rogers, Home Trust), and the dynamic currency conversion trap to avoid.",
@@ -57,7 +58,7 @@ export default function ForeignTransactionFeePage() {
   if (!isPFPublished("foreign-transaction-fee-cards-canada")) notFound();
 
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -69,10 +70,10 @@ export default function ForeignTransactionFeePage() {
               acceptedAnswer: { "@type": "Answer", text: f.a },
             })),
           }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">foreign-transaction-fee-cards-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">The 2.5% Foreign Transaction Fee, and the Cards That Kill It</span>
           </nav>
           <ArticleSchema headline="The 2.5% foreign transaction fee, and the cards that kill it" path="/personal-finance/foreign-transaction-fee-cards-canada" kicker="Personal finance" />
 
@@ -99,7 +100,7 @@ export default function ForeignTransactionFeePage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Most Canadian cards add about a 2.5 percent foreign transaction fee on any purchase made in a
               currency other than Canadian dollars, including online shopping billed in USD from your kitchen
               table. To skip it, carry a no-FX card: the Home Trust Preferred Visa (no annual fee), the Scotiabank
@@ -118,7 +119,7 @@ export default function ForeignTransactionFeePage() {
           </div>
 
           {/* WHAT */}
-          <div id="what" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the foreign transaction fee, exactly?</div>
+          <h2 id="what" className="cd-sec">What is the foreign transaction fee, exactly?</h2>
           <p>
             When you buy something in a currency other than Canadian dollars, two things happen. First, the card
             network, Visa or Mastercard, converts the amount to Canadian dollars at its own wholesale exchange
@@ -135,7 +136,7 @@ export default function ForeignTransactionFeePage() {
           </p>
 
           {/* ONLINE */}
-          <div id="online" className="cd-sec" style={{ scrollMarginTop: 70 }}>Do I pay it on online shopping too, not just travel?</div>
+          <h2 id="online" className="cd-sec">Do I pay it on online shopping too, not just travel?</h2>
           <p>
             Almost everyone assumes this fee is a travel thing, something you only pay on a trip. That is the part
             worth stopping on, because it is only half true. The fee is triggered by the currency of the purchase,
@@ -150,7 +151,7 @@ export default function ForeignTransactionFeePage() {
           </p>
           <div className="cd-note">
             <div className="cap">One quick way to check</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               A purchase is foreign if it settles in a foreign currency, not by the merchant&apos;s country. Some
               international sellers bill Canadians in Canadian dollars, in which case no fee applies. Others show
               you prices in USD even though they ship from within Canada. When in doubt, look at the currency at
@@ -159,7 +160,7 @@ export default function ForeignTransactionFeePage() {
           </div>
 
           {/* COST */}
-          <div id="cost" className="cd-sec" style={{ scrollMarginTop: 70 }}>What does the fee actually cost in dollars?</div>
+          <h2 id="cost" className="cd-sec">What does the fee actually cost in dollars?</h2>
           <p>
             The percentage sounds tiny, so let me turn it into dollars, because that is where it stops feeling like
             a rounding error.
@@ -173,7 +174,7 @@ export default function ForeignTransactionFeePage() {
           </p>
           <div className="cd-note">
             <div className="cap">The simple rule of thumb</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               For every $1,000 you spend in a foreign currency, the 2.5 percent fee costs you about $25. Add up
               your realistic yearly foreign spend, travel plus foreign online shopping, and multiply by 0.025.
               That single number tells you whether chasing a no-FX card is worth any effort at all for you.
@@ -181,7 +182,7 @@ export default function ForeignTransactionFeePage() {
           </div>
 
           {/* CARDS */}
-          <div id="cards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Which Canadian cards skip or offset the fee?</div>
+          <h2 id="cards" className="cd-sec">Which Canadian cards skip or offset the fee?</h2>
           <p>
             There are two ways to beat this fee. Most no-FX cards simply do not charge it, so you pay only the
             network&apos;s fair conversion rate. One card takes a different route: it still charges the fee but
@@ -189,7 +190,7 @@ export default function ForeignTransactionFeePage() {
             card terms move, so confirm the details on each issuer&apos;s own page before you apply.
           </p>
 
-          <h4>Scotiabank Passport Visa Infinite (and its siblings)</h4>
+          <h3 className="faq-q">Scotiabank Passport Visa Infinite (and its siblings)</h3>
           <p>
             The <Link href="/cards/scotiabank-passport-visa-infinite-card">Scotiabank Passport Visa Infinite</Link>{" "}
             line is the best-known no-FX travel card in Canada, and it genuinely charges no
@@ -202,7 +203,7 @@ export default function ForeignTransactionFeePage() {
             options below.
           </p>
 
-          <h4>Wealthsimple Cash Back Visa</h4>
+          <h3 className="faq-q">Wealthsimple Cash Back Visa</h3>
           <p>
             The <Link href="/cards/wealthsimple-cash-back-visa">Wealthsimple Cash Back Visa</Link> is a strong
             modern pick: no foreign transaction fee on foreign-currency purchases, plus a flat cash-back rate on
@@ -213,7 +214,7 @@ export default function ForeignTransactionFeePage() {
             combination. If you do not, weigh the tier requirement honestly before assuming it is free.
           </p>
 
-          <h4>Home Trust Preferred Visa</h4>
+          <h3 className="faq-q">Home Trust Preferred Visa</h3>
           <p>
             This is the quiet workhorse of the no-FX world. The Home Trust Preferred Visa charges{" "}
             <strong>no annual fee and no foreign transaction fee</strong>, and it earns a small flat cash-back
@@ -232,7 +233,7 @@ export default function ForeignTransactionFeePage() {
             both of which charge no foreign transaction fee.
           </p>
 
-          <h4>Rogers Red World Elite Mastercard (the offset card)</h4>
+          <h3 className="faq-q">Rogers Red World Elite Mastercard (the offset card)</h3>
           <p>
             This one works differently, and the mechanics matter, so let me be precise. The Rogers Red World Elite{" "}
             <strong>does charge the 2.5 percent foreign transaction fee</strong>. It has no annual fee. What makes
@@ -252,7 +253,7 @@ export default function ForeignTransactionFeePage() {
 
           <div className="cd-note">
             <div className="cap">Two flavours of beating the fee</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Scotia Passport, Wealthsimple, and Home Trust simply do not charge the fee, so they work anywhere in
               any currency. Rogers still charges it but rebates it through cash back, which works best on US-dollar
               spending specifically. Match the card to where your foreign spending actually goes. You can compare
@@ -262,7 +263,7 @@ export default function ForeignTransactionFeePage() {
           </div>
 
           {/* DCC */}
-          <div id="dcc" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the dynamic currency conversion trap?</div>
+          <h2 id="dcc" className="cd-sec">What is the dynamic currency conversion trap?</h2>
           <p>
             Even with the perfect card, there is one moment abroad where you can quietly hand your money away, and
             it is worth learning to spot. It is called dynamic currency conversion, or DCC.
@@ -277,7 +278,7 @@ export default function ForeignTransactionFeePage() {
           </p>
           <div className="cd-note">
             <div className="cap">The rule that never changes</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Always choose to be charged in the <strong>local currency</strong>. Never accept &ldquo;pay in
               Canadian dollars.&rdquo; Let your card network do the conversion at its fair rate. This is true even
               on a no-FX card, and it is doubly important on one, because accepting DCC throws away the very saving
@@ -291,7 +292,7 @@ export default function ForeignTransactionFeePage() {
           </p>
 
           {/* WORTH */}
-          <div id="worth" className="cd-sec" style={{ scrollMarginTop: 70 }}>When is a no-FX card worth it, and when is it not?</div>
+          <h2 id="worth" className="cd-sec">When is a no-FX card worth it, and when is it not?</h2>
           <p>
             Not everyone needs one of these cards, and it is worth being honest about that rather than talking you
             into a new account you will barely use.
@@ -313,7 +314,7 @@ export default function ForeignTransactionFeePage() {
           </p>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest caveats</div>
+          <h2 id="caveats" className="cd-sec">The honest caveats</h2>
           <ul>
             <li><strong>Some no-FX cards carry an annual or tiered fee.</strong> The Scotia Passport has a real annual fee, and the Wealthsimple card can carry a monthly cost tied to your account tier unless you meet the waiver. Only count a card as free after you have confirmed you actually qualify for the waiver or the perks justify the fee.</li>
             <li><strong>Rogers offsets, it does not waive.</strong> The Rogers card still charges the 2.5 percent, then reimburses it through cash back. That works well on US dollars and only partly on other currencies, so it is not a true no-FX card for a trip through Europe or Asia. Read the mechanics for your own spending mix.</li>
@@ -323,7 +324,7 @@ export default function ForeignTransactionFeePage() {
           </ul>
 
           {/* VERDICT */}
-          <div id="verdict" className="cd-sec" style={{ scrollMarginTop: 70 }}>So, is it worth it for you?</div>
+          <h2 id="verdict" className="cd-sec">So, is it worth it for you?</h2>
           <p>
             Add up how much you realistically spend in foreign currencies each year, travel and foreign online
             shopping together, and multiply by 2.5 percent. If that number is meaningful to you, a no-FX card is
@@ -339,7 +340,7 @@ export default function ForeignTransactionFeePage() {
           </p>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you think it through, not personalized financial advice, and all
               of these figures, the fees, the annual and tiered costs, the cash-back rates, and which cards charge
               FX at all, change over time. Confirm the current terms with each issuer before you decide, and pay
@@ -347,19 +348,19 @@ export default function ForeignTransactionFeePage() {
             </p>
           </div>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>Once you have picked a card for foreign spending, it is worth comparing it against your everyday earner too.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/cards" className="cd-apply">Compare cards →</Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>More personal finance →</Link>
+            <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
           </div>
           <Comments path="/personal-finance/foreign-transaction-fee-cards-canada" />
         </div>

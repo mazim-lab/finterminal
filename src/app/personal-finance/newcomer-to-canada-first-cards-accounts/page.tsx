@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/newcomer-to-canada-first-cards-accounts" },
   title: "Newcomer to Canada: Your First Credit Cards and Bank Accounts | FinTerminal",
   description:
     "A plain-language playbook for newcomers to Canada: get a SIN, open a chequing and savings account, get a first credit card to start a Canadian credit file, and build credit from scratch. Your foreign credit history does not transfer. General info as of July 2026, not immigration, financial, or tax advice.",
@@ -47,7 +48,7 @@ const FAQ = [
 
 export default function NewcomerFirstCardsAccountsPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -64,10 +65,10 @@ export default function NewcomerFirstCardsAccountsPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">newcomer-to-canada-first-cards-accounts</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Newcomer to Canada: Your First Credit Cards and Bank Accounts</span>
           </nav>
           <ArticleSchema headline="Newcomer to Canada: Your First Credit Cards and Bank Accounts" path="/personal-finance/newcomer-to-canada-first-cards-accounts" kicker="Personal finance" />
 
@@ -94,7 +95,7 @@ export default function NewcomerFirstCardsAccountsPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Get a Social Insurance Number (free, through the Government of Canada). Open a chequing account for
               day-to-day money and a savings account for the cash you are not spending yet. The big banks run newcomer
               packages that often waive the monthly chequing fee for a period, and you can also use a no-fee online bank.
@@ -115,7 +116,7 @@ export default function NewcomerFirstCardsAccountsPage() {
           </div>
 
           {/* FRESH */}
-          <div id="fresh" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why you start fresh in Canada</div>
+          <h2 id="fresh" className="cd-sec">Why you start fresh in Canada</h2>
           <p>
             This is the part worth internalising early, because it shapes everything else. Canada has two credit bureaus,
             Equifax Canada and TransUnion Canada, and they build your credit report from information that Canadian lenders
@@ -134,7 +135,7 @@ export default function NewcomerFirstCardsAccountsPage() {
           </p>
 
           {/* PACKAGES */}
-          <div id="packages" className="cd-sec" style={{ scrollMarginTop: 70 }}>Newcomer packages, and their fine print</div>
+          <h2 id="packages" className="cd-sec">Newcomer packages, and their fine print</h2>
           <p>
             Most of the big Canadian banks run newcomer packages aimed squarely at people who have recently arrived. These
             typically bundle a chequing account with the monthly fee waived for a period, sometimes a savings account, and
@@ -156,7 +157,7 @@ export default function NewcomerFirstCardsAccountsPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Reading the eligibility rules</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Newcomer packages usually restrict who qualifies. Banks commonly ask that you arrived in Canada within a
               certain window and that you hold a permanent-resident card, a work permit, or a study permit, and the exact
               window and rules can differ by bank and by whether you are a permanent resident, a foreign worker, or an
@@ -178,7 +179,7 @@ export default function NewcomerFirstCardsAccountsPage() {
           </p>
 
           {/* PLAYBOOK */}
-          <div id="playbook" className="cd-sec" style={{ scrollMarginTop: 70 }}>The step-by-step playbook</div>
+          <h2 id="playbook" className="cd-sec">The step-by-step playbook</h2>
           <p>
             The order below is roughly the order to do things in, though a few steps can happen in parallel. The heart of
             it is steps three and four, done consistently over your first year.
@@ -248,7 +249,7 @@ export default function NewcomerFirstCardsAccountsPage() {
           </div>
 
           {/* CAUTIONS */}
-          <div id="cautions" className="cd-sec" style={{ scrollMarginTop: 70 }}>Honest cautions</div>
+          <h2 id="cautions" className="cd-sec">Honest cautions</h2>
           <p>
             A few things are worth saying plainly, because they are the ones that quietly cost newcomers money or slow
             them down.
@@ -279,15 +280,15 @@ export default function NewcomerFirstCardsAccountsPage() {
           </ul>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             Getting your first accounts and card sorted is the hard part, and after that it is mostly patience and steady
             habits. The single most valuable thing you can do as a newcomer is start your Canadian credit file early and
@@ -296,14 +297,14 @@ export default function NewcomerFirstCardsAccountsPage() {
             including secured and no-fee cards. This is general information as of July 2026, not immigration, financial,
             or tax advice; newcomer offers and eligibility change, so confirm on the bank's own newcomer page.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance/how-to-build-credit-canada" className="cd-apply">
               How to build (or rebuild) credit in Canada &rarr;
             </Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/cards" className="cd-apply">
               Browse cards, including secured and no-fee options &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

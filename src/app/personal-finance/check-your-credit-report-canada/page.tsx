@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/check-your-credit-report-canada" },
   title: "Check Your Credit Report and Score in Canada, Free | FinTerminal",
   description:
     "How to read your Canadian credit report, check both your report and score for free from Equifax Canada and TransUnion Canada, understand why your number moves, spot and dispute errors, and see through common credit myths. General info as of July 2026, not credit advice.",
@@ -53,7 +54,7 @@ const FAQ = [
 
 export default function CheckYourCreditReportPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -70,10 +71,10 @@ export default function CheckYourCreditReportPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">check-your-credit-report-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">How to Check and Understand Your Credit Report and Score in Canada</span>
           </nav>
           <ArticleSchema headline="Check Your Credit Report and Score in Canada, Free" path="/personal-finance/check-your-credit-report-canada" kicker="Personal finance" />
 
@@ -100,7 +101,7 @@ export default function CheckYourCreditReportPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Your credit <em>report</em> is the detailed file (your accounts, payment history, inquiries, and any
               collections or public records), while your credit <em>score</em> is a single number, running roughly from
               300 to 900, that summarises that report. In Canada, two bureaus, Equifax Canada and TransUnion Canada, each
@@ -122,7 +123,7 @@ export default function CheckYourCreditReportPage() {
           </div>
 
           {/* REPORT VS SCORE */}
-          <div id="report-vs-score" className="cd-sec" style={{ scrollMarginTop: 70 }}>Report versus score, and what is on your report</div>
+          <h2 id="report-vs-score" className="cd-sec">Report versus score, and what is on your report</h2>
           <p>
             People use the phrases interchangeably, but a credit report and a credit score are not the same thing, and
             knowing the difference is the whole foundation for reading either one. Your credit report is the actual file:
@@ -162,7 +163,7 @@ export default function CheckYourCreditReportPage() {
           </ul>
           <div className="cd-note">
             <div className="cap">Why the free score in your app may not match a lender&rsquo;s</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The educational score your bank or a free app shows you is real and useful for tracking your trend, but it
               can be built on a different scoring model than the one a particular lender pulls when you apply. So do not
               be alarmed if the number a lender quotes differs from the one in your app by a bit. Treat your free score as
@@ -172,7 +173,7 @@ export default function CheckYourCreditReportPage() {
           </div>
 
           {/* CHECK */}
-          <div id="check" className="cd-sec" style={{ scrollMarginTop: 70 }}>How to check both, for free</div>
+          <h2 id="check" className="cd-sec">How to check both, for free</h2>
           <p>
             You do not have to pay to see your own credit. The most direct route is to go to the two bureaus themselves,
             and separately you can track a free educational score through many banks and apps. Here is how to do it, step
@@ -225,7 +226,7 @@ export default function CheckYourCreditReportPage() {
           </div>
 
           {/* UPDATES */}
-          <div id="updates" className="cd-sec" style={{ scrollMarginTop: 70 }}>How often it updates, and why your number moves</div>
+          <h2 id="updates" className="cd-sec">How often it updates, and why your number moves</h2>
           <p>
             Your credit report is not a static snapshot; it is updated as new information flows in. Lenders and creditors
             generally report to the bureaus on their own cycles, often around once a month, so your report is really a
@@ -242,7 +243,7 @@ export default function CheckYourCreditReportPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Small wobble versus a real signal</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               A few points up or down between checks is background noise and not worth worrying about. What is worth a
               closer look is a large, unexplained drop, or a change you cannot tie to anything you did, because that is
               exactly the kind of thing that reading your actual report can explain, whether it is a reporting quirk, an
@@ -251,7 +252,7 @@ export default function CheckYourCreditReportPage() {
           </div>
 
           {/* READ */}
-          <div id="read" className="cd-sec" style={{ scrollMarginTop: 70 }}>How to read your report and spot errors</div>
+          <h2 id="read" className="cd-sec">How to read your report and spot errors</h2>
           <p>
             When you open your report, resist the urge to jump straight to the score and instead read the file itself.
             Go section by section and check that everything genuinely belongs to you and looks right. A calm, methodical
@@ -285,7 +286,7 @@ export default function CheckYourCreditReportPage() {
           </p>
 
           {/* DISPUTE */}
-          <div id="dispute" className="cd-sec" style={{ scrollMarginTop: 70 }}>How to dispute an error</div>
+          <h2 id="dispute" className="cd-sec">How to dispute an error</h2>
           <p>
             If you find something inaccurate, you have the right to dispute it, and the process is free. You do not need a
             paid service to do this for you. Here is the honest, accurate version of how it works.
@@ -333,7 +334,7 @@ export default function CheckYourCreditReportPage() {
           </div>
           <div className="cd-note">
             <div className="cap">A dispute fixes errors, not accurate history</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The dispute process exists to correct information that is genuinely wrong. It is not a way to erase accurate
               negative marks, and no legitimate service can wish away truthful history. If the information is correct, the
               honest path is time and good habits, not a dispute. That distinction is exactly what the myths below are
@@ -342,7 +343,7 @@ export default function CheckYourCreditReportPage() {
           </div>
 
           {/* MYTHS */}
-          <div id="myths" className="cd-sec" style={{ scrollMarginTop: 70 }}>Myths worth clearing up</div>
+          <h2 id="myths" className="cd-sec">Myths worth clearing up</h2>
           <p>
             A lot of folklore surrounds credit in Canada, and some of it quietly costs people money or steers them wrong.
             Here are the ones worth setting straight.
@@ -384,15 +385,15 @@ export default function CheckYourCreditReportPage() {
           </ul>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             Reading and monitoring your credit is a quietly powerful habit: it costs nothing, it does not touch your
             score, and it lets you catch problems while they are still small. Once you understand what is on your report
@@ -401,14 +402,14 @@ export default function CheckYourCreditReportPage() {
             keeping balances low, and building or rebuilding a file from any starting point. This is general information
             as of July 2026, not financial or credit advice; confirm the details with the bureau.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance/how-to-build-credit-canada" className="cd-apply">
               How to build (or rebuild) credit in Canada &rarr;
             </Link>
             <Link href="/personal-finance/newcomer-to-canada-first-cards-accounts" className="cd-apply">
               Newcomer to Canada: your first cards and accounts &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/how-to-build-credit-canada" },
   title: "How to Build (or Rebuild) Credit in Canada: A Plain-Language Guide | FinTerminal",
   description:
     "How credit scores work in Canada, who tracks them (Equifax and TransUnion, roughly 300 to 900), the factors that move them, and a practical playbook to build credit from scratch, from thin credit, or after missed payments. General info as of July 2026, not credit advice.",
@@ -52,7 +53,7 @@ const FAQ = [
 
 export default function HowToBuildCreditPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -69,10 +70,10 @@ export default function HowToBuildCreditPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">how-to-build-credit-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">How to Build (or Rebuild) Credit in Canada</span>
           </nav>
           <ArticleSchema headline="How to Build (or Rebuild) Credit in Canada: A Plain-Language Guide" path="/personal-finance/how-to-build-credit-canada" kicker="Personal finance" />
 
@@ -99,7 +100,7 @@ export default function HowToBuildCreditPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               In Canada, two credit bureaus, Equifax and TransUnion, keep a record of how you borrow and repay, and boil
               it down to a score that runs roughly from 300 to 900. The biggest levers you control are paying every bill
               on time and keeping your credit-card balances low relative to your limits (a common rule of thumb is under
@@ -120,7 +121,7 @@ export default function HowToBuildCreditPage() {
           </div>
 
           {/* SCORE */}
-          <div id="score" className="cd-sec" style={{ scrollMarginTop: 70 }}>What a credit score is, and who tracks it</div>
+          <h2 id="score" className="cd-sec">What a credit score is, and who tracks it</h2>
           <p>
             A credit score is a number that summarises how you have handled borrowed money, so a lender can quickly gauge
             how likely you are to pay them back. In Canada, that record is kept by two credit bureaus, Equifax Canada and
@@ -137,7 +138,7 @@ export default function HowToBuildCreditPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A quick note on how scoring works in Canada</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Unlike the way some US figures are published, the Canadian bureaus do not release exact, official
               percentage weights for each factor, so be wary of any source that quotes precise Canadian weightings as if
               they were gospel. What is well established is the relative importance of the factors below: your payment
@@ -148,7 +149,7 @@ export default function HowToBuildCreditPage() {
           </div>
 
           {/* FACTORS */}
-          <div id="factors" className="cd-sec" style={{ scrollMarginTop: 70 }}>The factors that move your score</div>
+          <h2 id="factors" className="cd-sec">The factors that move your score</h2>
           <p>
             A handful of factors do most of the work. You do not need to obsess over each one, but it helps to know which
             levers matter most so you can spend your effort where it counts.
@@ -183,7 +184,7 @@ export default function HowToBuildCreditPage() {
           </ul>
           <div className="cd-note">
             <div className="cap">Hard versus soft inquiries</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               A hard inquiry happens when you apply for new credit and a lender checks your file to decide, and it can
               lower your score a little. A soft inquiry, such as checking your own report or a pre-approval check that does
               not lead to an application, does not affect your score. So checking your own credit as often as you like is
@@ -192,7 +193,7 @@ export default function HowToBuildCreditPage() {
           </div>
 
           {/* STARTS */}
-          <div id="starts" className="cd-sec" style={{ scrollMarginTop: 70 }}>Three starting points</div>
+          <h2 id="starts" className="cd-sec">Three starting points</h2>
           <p>
             Where you begin changes the first move, even though the habits that follow are the same. Find yourself in one
             of these three, then follow the shared playbook in the next section.
@@ -221,7 +222,7 @@ export default function HowToBuildCreditPage() {
           </ul>
 
           {/* PLAYBOOK */}
-          <div id="playbook" className="cd-sec" style={{ scrollMarginTop: 70 }}>The practical playbook</div>
+          <h2 id="playbook" className="cd-sec">The practical playbook</h2>
           <p>
             These steps work from any of the three starting points. The order is roughly the order to do them in, but the
             heart of it is steps two and three, done consistently over months.
@@ -301,7 +302,7 @@ export default function HowToBuildCreditPage() {
           </div>
           <div className="cd-note">
             <div className="cap">Where to check your report</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               You can request your credit report directly from{" "}
               <a href="https://www.equifax.ca/personal/" target="_blank" rel="noopener noreferrer">Equifax Canada</a>{" "}
               and{" "}
@@ -314,7 +315,7 @@ export default function HowToBuildCreditPage() {
           </div>
 
           {/* CAUTIONS */}
-          <div id="cautions" className="cd-sec" style={{ scrollMarginTop: 70 }}>Honest cautions</div>
+          <h2 id="cautions" className="cd-sec">Honest cautions</h2>
           <p>
             A few things are worth saying plainly, because they trip people up or cost them money they did not need to
             spend.
@@ -346,15 +347,15 @@ export default function HowToBuildCreditPage() {
           </ul>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             Building credit is a slow, steady win, and the habits that get you there, paying on time and keeping balances
             low, are the same habits that keep your finances healthy overall. When you are ready to open that first or next
@@ -362,7 +363,7 @@ export default function HowToBuildCreditPage() {
             more plain-language guides for Canadians. This is general information as of July 2026, not financial or credit
             advice; confirm the details with the bureau or lender.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/cards" className="cd-apply">
               Browse cards, including secured and no-fee options &rarr;
             </Link>
@@ -372,7 +373,7 @@ export default function HowToBuildCreditPage() {
             <Link href="/personal-finance/newcomer-to-canada-first-cards-accounts" className="cd-apply">
               Newcomer to Canada: your first cards and accounts &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

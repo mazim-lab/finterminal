@@ -9,6 +9,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/how-to-hit-minimum-spend-canada" },
   title: "How to hit a credit card minimum spend without wasting a dollar | FinTerminal",
   description:
     "A calm, practical guide to clearing a credit card welcome-bonus minimum spend in Canada using money you were already going to spend, so you earn the bonus without wasting a cent on things you do not need.",
@@ -29,7 +30,7 @@ export default function HowToHitMinimumSpendPage() {
   if (!isPFPublished("how-to-hit-minimum-spend-canada")) notFound();
 
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -86,10 +87,10 @@ export default function HowToHitMinimumSpendPage() {
               },
             ],
           }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">how-to-hit-minimum-spend-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">How to Hit a Credit Card Minimum Spend Without Wasting a Dollar</span>
           </nav>
           <ArticleSchema headline="How to hit a credit card minimum spend without wasting a dollar" path="/personal-finance/how-to-hit-minimum-spend-canada" kicker="Personal finance" />
 
@@ -115,7 +116,7 @@ export default function HowToHitMinimumSpendPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Hit a minimum spend by routing money you were already going to spend through the new card, never by
               buying things you do not need. Put all your routine spending on it, time any big planned purchases
               into the window, and only if you still have a gap, prepay bills, buy gift cards for places you truly
@@ -133,7 +134,7 @@ export default function HowToHitMinimumSpendPage() {
           </div>
 
           {/* WHAT */}
-          <div id="what" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is a minimum spend, actually?</div>
+          <h2 id="what" className="cd-sec">What is a minimum spend, actually?</h2>
           <p>
             When a card advertises a welcome bonus, that bonus almost always comes with a condition attached. It
             reads something like &quot;earn 60,000 points after you spend $3,000 in the first three months.&quot;
@@ -157,14 +158,14 @@ export default function HowToHitMinimumSpendPage() {
           </p>
 
           {/* RULE */}
-          <div id="rule" className="cd-sec" style={{ scrollMarginTop: 70 }}>The cardinal rule, before anything else</div>
+          <h2 id="rule" className="cd-sec">The cardinal rule, before anything else</h2>
           <p>
             Everything else in this guide sits underneath one rule, and it matters more than any clever tactic, so
             I want to say it plainly before we get to the methods.
           </p>
           <div className="cd-note">
             <div className="cap">Never buy something just to hit the spend</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Never buy something you would not otherwise have bought simply to reach a minimum spend. The moment
               you spend real money on things you do not need, you are handing back the very bonus you are chasing.
               A $200 impulse buy to reach a threshold does not cost you $200 of points, it costs you $200 of cash,
@@ -179,7 +180,7 @@ export default function HowToHitMinimumSpendPage() {
           </p>
 
           {/* METHODS */}
-          <div id="methods" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you hit it without wasting money?</div>
+          <h2 id="methods" className="cd-sec">How do you hit it without wasting money?</h2>
           <p>
             Here are the ways to clear a minimum spend, ordered from the cleanest and cheapest to the ones that
             carry a real cost. Start at the top and only move down the list if you still have a gap to close.
@@ -218,7 +219,7 @@ export default function HowToHitMinimumSpendPage() {
           </div>
           <div className="cd-note">
             <div className="cap">Why the order matters</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The methods near the top cost you nothing, because they only move spending you were already doing. As
               you go down the list, the cost and the risk creep in, from tying up money in gift cards to paying an
               outright fee. Reach for the lower methods only after the free ones have run out and you still have a
@@ -227,14 +228,14 @@ export default function HowToHitMinimumSpendPage() {
           </div>
 
           {/* EXAMPLE */}
-          <div id="example" className="cd-sec" style={{ scrollMarginTop: 70 }}>Does it actually pay off? A worked example</div>
+          <h2 id="example" className="cd-sec">Does it actually pay off? A worked example</h2>
           <p>
             Let me make the cardinal rule concrete, because seeing it in numbers is what makes it stick. Picture a
             card offering a welcome bonus worth about $500 once you spend $3,000 in three months.
           </p>
           <div className="cd-note">
             <div className="cap">The wrong way: chasing the number</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Your normal spending over three months comes to $2,600, leaving you $400 short with a week to go. In
               a panic, you buy $400 of things you did not really need, an extra gadget and some clothes on sale, to
               cross the line. You get the $500 bonus, but you also spent $400 of real cash you would not otherwise
@@ -244,7 +245,7 @@ export default function HowToHitMinimumSpendPage() {
           </div>
           <div className="cd-note">
             <div className="cap">The right way: redirecting real spending</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Same $2,600 of normal spending, same $400 gap. This time you notice your $500 car insurance renewal
               is due next month, so you pay it now on the card, which alone clears the threshold with room to
               spare. You spent zero extra dollars, because that insurance bill was always coming. You collect the
@@ -258,7 +259,7 @@ export default function HowToHitMinimumSpendPage() {
           </p>
 
           {/* TRACK */}
-          <div id="track" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you track progress and the deadline?</div>
+          <h2 id="track" className="cd-sec">How do you track progress and the deadline?</h2>
           <p>
             Because the whole reward hinges on two numbers, the safest thing you can do is write them down the day
             you are approved. Note your exact required spend and the exact date it is due, and set a calendar
@@ -273,7 +274,7 @@ export default function HowToHitMinimumSpendPage() {
           </ul>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest caveats</div>
+          <h2 id="caveats" className="cd-sec">The honest caveats</h2>
           <p>These are the ways a smart plan can turn into a costly one, so give them real weight before you start.</p>
           <ul>
             <li><strong>Never carry a balance, ever.</strong> This is the one that undoes everything. Credit card interest runs around 20 percent or more, and it compounds fast enough to erase a welcome bonus in a matter of months. If clearing the minimum spend means putting charges on the card that you cannot pay off in full when the statement is due, the interest will cost you more than the bonus is worth. Pay every statement in full, without exception.</li>
@@ -284,7 +285,7 @@ export default function HowToHitMinimumSpendPage() {
           </ul>
 
           {/* VERDICT */}
-          <div id="verdict" className="cd-sec" style={{ scrollMarginTop: 70 }}>So, is this for you?</div>
+          <h2 id="verdict" className="cd-sec">So, is this for you?</h2>
           <p>
             If you already pay your card in full every month and you have a welcome bonus in front of you, hitting
             the minimum spend the right way is one of the highest-value, lowest-effort moves in personal finance.
@@ -301,7 +302,7 @@ export default function HowToHitMinimumSpendPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you think it through, not personalized financial advice, and all
               of these offers, thresholds, fees, and exclusions change over time. Confirm your exact required spend
               and deadline with your card issuer, always pay your statement in full, and only reach for a bonus
@@ -309,25 +310,25 @@ export default function HowToHitMinimumSpendPage() {
             </p>
           </div>
 
-          <div className="cd-sec">Frequently asked questions</div>
-          <h4>When does the minimum spend clock start?</h4>
+          <h2 className="cd-sec">Frequently asked questions</h2>
+          <h3 className="faq-q">When does the minimum spend clock start?</h3>
           <p>It almost always starts on your account approval or account opening date, not the day the card arrives or when you activate it. That means the clock can already be ticking before the card is in your wallet. Confirm the exact deadline from your approval details the day you are approved.</p>
-          <h4>Do gift card purchases count toward a minimum spend?</h4>
+          <h3 className="faq-q">Do gift card purchases count toward a minimum spend?</h3>
           <p>Yes, buying a gift card counts as spending today, so it qualifies. The catch is that it ties up your cash, so only buy gift cards for places you reliably use, like your regular grocery chain, gas station, or pharmacy. A gift card for a store you never shop at is money you may never get back.</p>
-          <h4>What purchases do not count toward the minimum spend?</h4>
+          <h3 className="faq-q">What purchases do not count toward the minimum spend?</h3>
           <p>Some charges commonly do not qualify, including cash advances, balance transfers, interest, annual fees, and sometimes gambling or certain cash-like transactions. Focus your spend on ordinary purchases and confirm the exclusions in your card&apos;s terms before you rely on anything unusual.</p>
-          <h4>Can I pay rent or taxes to hit a minimum spend?</h4>
+          <h3 className="faq-q">Can I pay rent or taxes to hit a minimum spend?</h3>
           <p>You can push a bill that does not normally take a card, such as rent or taxes, through a third-party service like Chexy or PaySimply, but they charge a fee of roughly 1.75 to 2.5 percent. This costs real money, so only do it as a last resort when the bonus you are unlocking clearly dwarfs the fee.</p>
-          <h4>What happens if I miss the minimum spend deadline?</h4>
+          <h3 className="faq-q">What happens if I miss the minimum spend deadline?</h3>
           <p>In most cases the bonus is simply gone, even if you fall short by a few days or a few dollars. Issuers rarely extend the window, and you generally cannot re-qualify on the same card. That is why it helps to clear the requirement a couple of weeks early with a small cushion above the number.</p>
-          <h4>Is hitting a minimum spend worth it?</h4>
+          <h3 className="faq-q">Is hitting a minimum spend worth it?</h3>
           <p>If you already pay your card in full every month and can meet the threshold with spending you were always going to do, it is one of the highest-value, lowest-effort moves in personal finance. If meeting it would tempt you into buying things you do not need or carrying a balance you cannot clear, the honest answer is to skip the bonus for now.</p>
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>This move starts with picking the right card and its bonus, and it pairs closely with knowing when a fee service is worth it.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/cards" className="cd-apply">Browse cards &amp; bonuses →</Link>
-            <Link href="/personal-finance/pay-bills-with-credit-card-canada" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Pay bills with a credit card →</Link>
+            <Link href="/personal-finance/pay-bills-with-credit-card-canada" className="cd-apply">Pay bills with a credit card →</Link>
           </div>
           <Comments path="/personal-finance/how-to-hit-minimum-spend-canada" />
         </div>

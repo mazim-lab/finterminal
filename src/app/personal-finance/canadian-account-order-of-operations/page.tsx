@@ -9,6 +9,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/canadian-account-order-of-operations" },
   title: "Where your next dollar should go: the Canadian account order | FinTerminal",
   description:
     "Employer match, RESP, FHSA, TFSA, RRSP, or taxable? A clear order of operations for where a Canadian should put the next dollar, with the marginal-rate logic that decides when an RRSP beats a TFSA.",
@@ -55,7 +56,7 @@ export default function AccountOrderOfOperationsPage() {
   if (!isPFPublished("canadian-account-order-of-operations")) notFound();
 
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -67,10 +68,10 @@ export default function AccountOrderOfOperationsPage() {
               acceptedAnswer: { "@type": "Answer", text: f.a },
             })),
           }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">canadian-account-order-of-operations</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Where Your Next Dollar Should Go: The Canadian Account Order</span>
           </nav>
           <ArticleSchema headline="Where your next dollar should go: the Canadian account order" path="/personal-finance/canadian-account-order-of-operations" kicker="Personal finance" />
 
@@ -97,7 +98,7 @@ export default function AccountOrderOfOperationsPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               For most Canadian households, send your next dollar down this waterfall in order: clear high-interest
               debt (around 20 percent), then grab any employer match, then the RESP if you have kids, then the FHSA
               if a first home is coming, then the TFSA, then the RRSP, and finally a taxable account once the
@@ -115,7 +116,7 @@ export default function AccountOrderOfOperationsPage() {
           </div>
 
           {/* WHY */}
-          <div id="why" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why does the order matter at all?</div>
+          <h2 id="why" className="cd-sec">Why does the order matter at all?</h2>
           <p>
             Every place you can put a dollar comes with a return, and those returns are not equal. Paying off a
             credit card charging 20 percent is worth far more than earning a few percent in a savings account.
@@ -131,7 +132,7 @@ export default function AccountOrderOfOperationsPage() {
           </p>
 
           {/* WATERFALL */}
-          <div id="waterfall" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the waterfall, step by step?</div>
+          <h2 id="waterfall" className="cd-sec">What is the waterfall, step by step?</h2>
           <p>
             Here is the default sequence. Work down it. When one bucket is full, or does not apply to you, move
             to the next.
@@ -175,7 +176,7 @@ export default function AccountOrderOfOperationsPage() {
           </div>
           <div className="cd-note">
             <div className="cap">The one idea to hold onto</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Guaranteed returns come first: clearing 20 percent debt, grabbing an employer match, collecting a
               20 percent RESP grant. Only after those are captured do you move into the tax shelters, and even
               there you fill the highest-value account for your situation before the next. Contribution limits and
@@ -184,7 +185,7 @@ export default function AccountOrderOfOperationsPage() {
           </div>
 
           {/* TFSA VS RRSP */}
-          <div id="tfsa-rrsp" className="cd-sec" style={{ scrollMarginTop: 70 }}>TFSA or RRSP: which one wins?</div>
+          <h2 id="tfsa-rrsp" className="cd-sec">TFSA or RRSP: which one wins?</h2>
           <p>
             This is the part that trips people up, so let me make it as plain as I can. Both accounts shelter your
             growth from tax. The difference is when you pay the tax on the money itself. With an RRSP you skip tax
@@ -196,7 +197,7 @@ export default function AccountOrderOfOperationsPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The rule of thumb</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The RRSP tends to win when your tax rate now is higher than it will be in retirement, because you
               deduct at a high rate and withdraw at a low one. The TFSA tends to win when your rate is lower now
               than it will be later, or when you simply value the flexibility of tax-free, penalty-free access.
@@ -221,7 +222,7 @@ export default function AccountOrderOfOperationsPage() {
           </p>
 
           {/* REORDER */}
-          <div id="reorder" className="cd-sec" style={{ scrollMarginTop: 70 }}>When should your life reorder the list?</div>
+          <h2 id="reorder" className="cd-sec">When should your life reorder the list?</h2>
           <p>
             Here is the honest truth about the waterfall: it is a default, not a law. It is a strong starting
             point for a typical household, and then real life rearranges it. A few common situations that
@@ -242,7 +243,7 @@ export default function AccountOrderOfOperationsPage() {
           </p>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest caveats</div>
+          <h2 id="caveats" className="cd-sec">The honest caveats</h2>
           <p>A few things deserve real weight before you treat any list as gospel.</p>
           <ul>
             <li><strong>The numbers change.</strong> Contribution limits, grant amounts, and thresholds are updated regularly. The figures here are current for 2026, but confirm the latest before you act on them.</li>
@@ -253,7 +254,7 @@ export default function AccountOrderOfOperationsPage() {
           </ul>
 
           {/* VERDICT */}
-          <div id="verdict" className="cd-sec" style={{ scrollMarginTop: 70 }}>So, is this order for you?</div>
+          <h2 id="verdict" className="cd-sec">So, is this order for you?</h2>
           <p>
             For most Canadian households, following the waterfall in order will put nearly every dollar to good
             use: clear the expensive debt, grab the free match, collect the grants, then fill the tax shelter that
@@ -268,7 +269,7 @@ export default function AccountOrderOfOperationsPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you think it through, not personalized financial advice, and the
               limits, grants, and thresholds mentioned here change over time. Confirm the current numbers and, if
               your situation is at all complicated, talk it through with a planner or accountant before you decide.
@@ -276,19 +277,19 @@ export default function AccountOrderOfOperationsPage() {
             </p>
           </div>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>Once you know where your dollars should go, the right card can help the everyday spending along the way earn a little something too.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse cards →</Link>
+            <Link href="/cards" className="cd-apply">Browse cards →</Link>
           </div>
           <Comments path="/personal-finance/canadian-account-order-of-operations" />
         </div>

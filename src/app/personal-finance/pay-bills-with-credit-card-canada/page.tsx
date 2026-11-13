@@ -9,6 +9,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/pay-bills-with-credit-card-canada" },
   title: "Paying rent, taxes, and your mortgage with a credit card in Canada | FinTerminal",
   description:
     "Third-party services will charge your credit card and send the money onward for a fee of roughly 1.75 to 2.99 percent. Here is a clear, honest look at Chexy, PaySimply, and Plastiq, and the exact cases where it is actually worth it.",
@@ -56,14 +57,14 @@ export default function PayBillsWithCreditCardPage() {
   if (!isPFPublished("pay-bills-with-credit-card-canada")) notFound();
 
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">pay-bills-with-credit-card-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Paying Your Rent, Taxes, and Mortgage With a Credit Card in Canada</span>
           </nav>
           <ArticleSchema headline="Paying rent, taxes, and your mortgage with a credit card in Canada" path="/personal-finance/pay-bills-with-credit-card-canada" kicker="Personal finance" />
 
@@ -90,7 +91,7 @@ export default function PayBillsWithCreditCardPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               You can pay rent, taxes, and your mortgage with a credit card in Canada through services like
               Chexy, PaySimply, and Plastiq, which charge your card a fee of roughly 1.75 to 2.99 percent and
               forward the money onward. For everyday points it loses money, because the fee is bigger than a
@@ -108,7 +109,7 @@ export default function PayBillsWithCreditCardPage() {
           </div>
 
           {/* PREMISE */}
-          <div id="premise" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why won&apos;t these bills take a credit card?</div>
+          <h2 id="premise" className="cd-sec">Why won&apos;t these bills take a credit card?</h2>
           <p>
             Landlords, municipalities, mortgage lenders, universities, and the Canada Revenue Agency mostly do
             not accept credit cards directly, and the reason is simple. Card networks charge the merchant a
@@ -126,14 +127,14 @@ export default function PayBillsWithCreditCardPage() {
           </p>
 
           {/* SERVICES */}
-          <div id="services" className="cd-sec" style={{ scrollMarginTop: 70 }}>Which Canadian services can pay these bills?</div>
+          <h2 id="services" className="cd-sec">Which Canadian services can pay these bills?</h2>
           <p>
             Three services cover almost everything a Canadian household would want to pay this way. Fees and card
             acceptance change often, so treat these as current figures to confirm on each provider&apos;s own
             site before you rely on them.
           </p>
 
-          <h4>Chexy (rent, and a growing list of bills)</h4>
+          <h3 className="faq-q">Chexy (rent, and a growing list of bills)</h3>
           <p>
             Chexy is the one most people reach for, because it is built around rent, the bill that is hard to pay
             any other way. It charges roughly <strong>1.75 percent</strong> on domestic Canadian cards and about
@@ -144,7 +145,7 @@ export default function PayBillsWithCreditCardPage() {
             lowest of the bunch, which changes the math in a few cases we will get to.
           </p>
 
-          <h4>PaySimply (CRA taxes, property tax, tuition, utilities)</h4>
+          <h3 className="faq-q">PaySimply (CRA taxes, property tax, tuition, utilities)</h3>
           <p>
             PaySimply is a Canadian service that the CRA itself lists among its third-party payment providers. It
             charges about <strong>2.5 percent</strong> for credit or debit card payments and accepts{" "}
@@ -156,7 +157,7 @@ export default function PayBillsWithCreditCardPage() {
             though those do not run through a credit card and so earn no points.
           </p>
 
-          <h4>Plastiq (broader bills, but check card and bill type)</h4>
+          <h3 className="faq-q">Plastiq (broader bills, but check card and bill type)</h3>
           <p>
             Plastiq is available in Canada and can pay a wide range of vendors, including rent, mortgage, and
             tuition, by charging your card and then sending the recipient a bank transfer or cheque. As of early
@@ -169,7 +170,7 @@ export default function PayBillsWithCreditCardPage() {
 
           <div className="cd-note">
             <div className="cap">The Amex quirk worth remembering</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               American Express usually carries the largest welcome bonuses in Canada, so whether a service takes
               Amex often decides whether it is useful to you. Chexy and PaySimply both accept Amex. Plastiq is
               the odd one out here: in Canada, Plastiq works with Visa and Mastercard (Amex is not supported
@@ -181,7 +182,7 @@ export default function PayBillsWithCreditCardPage() {
           </div>
 
           {/* MATH */}
-          <div id="math" className="cd-sec" style={{ scrollMarginTop: 70 }}>Does it actually pay off?</div>
+          <h2 id="math" className="cd-sec">Does it actually pay off?</h2>
           <p>
             Here is the whole thing in one sentence. You are paying a fee of somewhere between about 1.75 and
             2.99 percent to earn credit card rewards, so the question is always whether what you earn beats what
@@ -196,7 +197,7 @@ export default function PayBillsWithCreditCardPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The one rule to remember</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Routine bill-paying just to collect everyday points loses money, because the fee is bigger than a
               normal earn rate. This trick is worth it only when something other than the ordinary earn rate is
               on the table. There are three of those, and they are the whole reason the strategy exists.
@@ -204,7 +205,7 @@ export default function PayBillsWithCreditCardPage() {
           </div>
 
           {/* WORTH */}
-          <div id="worth" className="cd-sec" style={{ scrollMarginTop: 70 }}>When is it actually worth it?</div>
+          <h2 id="worth" className="cd-sec">When is it actually worth it?</h2>
           <p>
             Every genuinely smart use of these services falls into one of three buckets. If your situation does
             not fit one of them, the honest answer is usually to skip it.
@@ -228,14 +229,14 @@ export default function PayBillsWithCreditCardPage() {
           </div>
 
           {/* EXAMPLE */}
-          <div id="example" className="cd-sec" style={{ scrollMarginTop: 70 }}>A worked example, both ways</div>
+          <h2 id="example" className="cd-sec">A worked example, both ways</h2>
           <p>
             Numbers make this concrete, so let me run the losing case and the winning case side by side using
             round figures.
           </p>
           <div className="cd-note">
             <div className="cap">The loss: everyday points</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               You pay $2,000 of rent through a service charging 2.5 percent. That fee is $50. Your card earns the
               equivalent of 1.5 percent, or $30 in rewards. You are down $20 on that single payment, and if you
               do it every month you have quietly given up about $240 over the year to collect points worth less
@@ -244,7 +245,7 @@ export default function PayBillsWithCreditCardPage() {
           </div>
           <div className="cd-note">
             <div className="cap">The win: a welcome bonus</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Same $2,000 rent, same 2.5 percent fee of $50. But this month that $2,000 is exactly what pushes
               you over a card&apos;s $3,000 minimum spend, unlocking a welcome bonus worth around $500. Even
               after paying the $50 fee, and even ignoring the ordinary points you also earned, you are roughly
@@ -259,7 +260,7 @@ export default function PayBillsWithCreditCardPage() {
           </p>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>What should you watch out for?</div>
+          <h2 id="caveats" className="cd-sec">What should you watch out for?</h2>
           <p>Before you try this, a few things deserve real weight, because getting them wrong can turn a clever move into an expensive mistake.</p>
           <ul>
             <li><strong>Fees change, so confirm before every use.</strong> The rates in this guide are current at writing, but providers adjust them and shuffle which cards they accept. Check the live fee on the service&apos;s own page before you commit to a large payment.</li>
@@ -271,7 +272,7 @@ export default function PayBillsWithCreditCardPage() {
           </ul>
 
           {/* VERDICT */}
-          <div id="verdict" className="cd-sec" style={{ scrollMarginTop: 70 }}>So, is it worth it for you?</div>
+          <h2 id="verdict" className="cd-sec">So, is it worth it for you?</h2>
           <p>
             Ask yourself one question before you pay a cent in fees. Is there a bonus, a threshold, or an unusual
             earn rate on the other side of this payment that is worth more than the fee? If yes, this can be one
@@ -286,7 +287,7 @@ export default function PayBillsWithCreditCardPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you think it through, not personalized financial advice, and all
               of these figures, the fees, the card acceptance, and the bonus offers, change over time. Confirm the
               current numbers with each provider and your card issuer before you decide, always pay your statement
@@ -294,19 +295,19 @@ export default function PayBillsWithCreditCardPage() {
             </p>
           </div>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>This move pairs naturally with picking the right card for a welcome bonus, and with the rest of our points and personal-finance guides.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/cards" className="cd-apply">Browse cards &amp; bonuses →</Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>More personal finance →</Link>
+            <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
           </div>
           <Comments path="/personal-finance/pay-bills-with-credit-card-canada" />
         </div>

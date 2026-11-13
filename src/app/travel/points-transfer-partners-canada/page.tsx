@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/travel/points-transfer-partners-canada" },
   title: "The Canadian points-transfer map: which points actually transfer, and where | FinTerminal",
   description:
     "A plain-English map of Canadian rewards currencies: which points genuinely transfer to airline and hotel loyalty programs (essentially Amex Membership Rewards and RBC Avion) and which big-bank programs are fixed-value or portal programs instead. Verified partners and ratios as of July 2026.",
@@ -53,7 +54,7 @@ const FAQ = [
 
 export default function PointsTransferPartnersCanadaPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-travel">
       <main>
         <div className="doc">
           <script
@@ -66,10 +67,10 @@ export default function PointsTransferPartnersCanadaPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/travel">travel</Link><span className="sep">/</span>
-            <span className="cur">points-transfer-partners-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/travel">Travel</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">The Canadian Points-Transfer Map</span>
           </nav>
           <ArticleSchema headline="The Canadian points-transfer map: which points actually transfer, and where" path="/travel/points-transfer-partners-canada" kicker="Travel & points" />
 
@@ -95,7 +96,7 @@ export default function PointsTransferPartnersCanadaPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               In Canada, the points that actually transfer to airline and hotel loyalty programs are essentially Amex
               Membership Rewards and RBC Avion Rewards (on Avion Elite cards). Amex MR moves to Air Canada Aeroplan and
               British Airways Avios at 1 to 1, among others. RBC Avion moves to British Airways Avios at a base 1 to 1
@@ -116,7 +117,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </div>
 
           {/* TRAP */}
-          <div id="trap" className="cd-sec" style={{ scrollMarginTop: 70 }}>The trap: transfer means two different things</div>
+          <h2 id="trap" className="cd-sec">The trap: transfer means two different things</h2>
           <p>
             The word &ldquo;transfer&rdquo; gets used loosely in Canadian points, and the looseness is exactly what
             trips people up. In the classic, valuable sense, a transfer means moving your bank or card points into a
@@ -133,7 +134,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The test to apply</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Ask one question of any program: can I move these points into a separate airline or hotel program and book
               under that program&apos;s award chart? If yes, you hold a transferable currency (Amex MR or RBC Avion in
               Canada). If the only option is to spend the points against a travel booking at a set value, you hold a
@@ -142,7 +143,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </div>
 
           {/* MAP */}
-          <div id="map" className="cd-sec" style={{ scrollMarginTop: 70 }}>The transfer map at a glance</div>
+          <h2 id="map" className="cd-sec">The transfer map at a glance</h2>
           <p>
             Here is the whole Canadian landscape in one table. The verified ratios are the ones each program publishes
             on its own site as of July 2026; where a ratio moves around or I could not cleanly confirm the current
@@ -201,7 +202,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </div>
           <div className="cd-note">
             <div className="cap">Why only two transfer to loyalty programs</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               It is easy to assume every bank program works like the big American transferable currencies. In Canada it
               does not shake out that way. Amex Membership Rewards and RBC Avion are the two that maintain airline and
               hotel transfer partnerships. Everyone else built a fixed-value or portal model instead, which is simpler
@@ -210,7 +211,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </div>
 
           {/* AMEX */}
-          <div id="amex" className="cd-sec" style={{ scrollMarginTop: 70 }}>Amex Membership Rewards partners</div>
+          <h2 id="amex" className="cd-sec">Amex Membership Rewards partners</h2>
           <p>
             American Express Membership Rewards is the most flexible transferable currency a Canadian can hold. You earn
             it on cards like the Amex Cobalt, the Gold Rewards Card, and the Platinum Card, and from a full-MR card you
@@ -227,7 +228,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Partner lists change, so check the source</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Amex Canada adjusts its Membership Rewards partner roster from time to time (partners get added and dropped,
               and one example is that Etihad Guest stopped being a Canadian MR transfer partner in 2026). Aeroplan and
               British Airways Avios at 1 to 1 are the anchors verified here as of July 2026. For any other partner or
@@ -237,7 +238,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </div>
 
           {/* AVION */}
-          <div id="avion" className="cd-sec" style={{ scrollMarginTop: 70 }}>RBC Avion Rewards partners</div>
+          <h2 id="avion" className="cd-sec">RBC Avion Rewards partners</h2>
           <p>
             RBC Avion Rewards is the other genuinely transferable Canadian currency, with one big asterisk: only Avion
             Elite points can transfer to airline partners. Those are the points earned on the premium Avion-branded
@@ -257,7 +258,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Watch for the transfer bonus</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               RBC runs periodic transfer bonuses that meaningfully improve a partner ratio for a limited window. Recent
               examples include bonuses to British Airways Avios and to American Airlines AAdvantage. A bonus turns a
               rough ratio like Avion to AAdvantage into something closer to fair, so if your trip is flexible it is worth
@@ -266,7 +267,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </div>
 
           {/* FIXED */}
-          <div id="fixed" className="cd-sec" style={{ scrollMarginTop: 70 }}>TD, Scene+, Aventura and BMO: what they really are</div>
+          <h2 id="fixed" className="cd-sec">TD, Scene+, Aventura and BMO: what they really are</h2>
           <p>
             None of these four are airline-transfer currencies, and it would be misleading to invent airline
             &ldquo;transfer partners&rdquo; for them, so here is an honest description of what each one actually does.
@@ -287,7 +288,7 @@ export default function PointsTransferPartnersCanadaPage() {
           </p>
 
           {/* CAUTIONS */}
-          <div id="cautions" className="cd-sec" style={{ scrollMarginTop: 70 }}>Universal cautions before any transfer</div>
+          <h2 id="cautions" className="cd-sec">Universal cautions before any transfer</h2>
           <p>
             Whichever transferable currency you hold, the same handful of rules keep you out of trouble. They are boring,
             and they are also the difference between a great redemption and a pile of stranded points.
@@ -300,7 +301,7 @@ export default function PointsTransferPartnersCanadaPage() {
             <li><strong>Mind minimums and increments.</strong> Each partner has a minimum transfer and moves in set blocks. Avion to Avios starts at 10,000 and Avion to AAdvantage at 5,000, for example. Make sure your balance clears the floor before you plan the redemption.</li>
           </ul>
 
-          <div className="cd-sec">The short version</div>
+          <h2 className="cd-sec">The short version</h2>
           <p>
             The Canadian transfer map is smaller than it looks. Two currencies, Amex Membership Rewards and RBC Avion
             Rewards, genuinely move into airline and hotel loyalty programs, and those are the ones that reach the
@@ -313,21 +314,21 @@ export default function PointsTransferPartnersCanadaPage() {
           </p>
 
           {/* FAQ */}
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
           {/* KEEP GOING */}
-          <div id="deep" className="cd-sec" style={{ scrollMarginTop: 70 }}>Deep dives by program</div>
+          <h2 id="deep" className="cd-sec">Deep dives by program</h2>
           <p>
             Once you know which points transfer where, the next step is the specific redemption. These walk through the
             exact mechanics and the sweet spots on each currency.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/travel/amex-mr-to-aeroplan" className="cd-apply">Amex MR to Aeroplan →</Link>
             <Link href="/travel/rbc-avion-to-aadvantage" className="cd-apply">RBC Avion to AAdvantage →</Link>
             <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply">Avios sweet spots &amp; Avion transfer →</Link>
@@ -335,7 +336,7 @@ export default function PointsTransferPartnersCanadaPage() {
             <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/travel/how-to-book-award-flights-canada" className="cd-apply">How to search for and book award flights →</Link>
             <Link href="/travel/airline-alliances-guide-canada" className="cd-apply">The airline alliance guide for Canadians →</Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards →</Link>
+            <Link href="/cards" className="cd-apply">Browse the cards →</Link>
           </div>
           <Comments path="/travel/points-transfer-partners-canada" />
         </div>

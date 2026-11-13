@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/credit-card-interest-canada" },
   title: "How Credit Card Interest Works in Canada (and How to Never Pay It) | FinTerminal",
   description:
     "A plain-language guide to credit card interest in Canada: what the purchase APR really is, how the grace period works, why carrying a balance costs you the interest-free window, how cash advances differ, and why paying the statement balance in full every month means zero interest. General info as of July 2026, not advice.",
@@ -63,7 +64,7 @@ const FAQ = [
 
 export default function CreditCardInterestPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -80,10 +81,10 @@ export default function CreditCardInterestPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">credit-card-interest-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">How Credit Card Interest Works in Canada (and How to Never Pay It)</span>
           </nav>
           <ArticleSchema headline="How Credit Card Interest Works in Canada (and How to Never Pay It)" path="/personal-finance/credit-card-interest-canada" kicker="Personal finance" />
 
@@ -110,7 +111,7 @@ export default function CreditCardInterestPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Pay your full statement balance by the due date every single month and you pay no interest on purchases.
               Federally regulated issuers must give you a grace period of at least 21 days on new purchases, but that
               interest-free window only holds while you pay in full. The moment you carry a balance, you usually lose the
@@ -129,7 +130,7 @@ export default function CreditCardInterestPage() {
           </div>
 
           {/* APR */}
-          <div id="apr" className="cd-sec" style={{ scrollMarginTop: 70 }}>What the purchase APR actually is</div>
+          <h2 id="apr" className="cd-sec">What the purchase APR actually is</h2>
           <p>
             The purchase APR is the annual interest rate your issuer charges on purchases when you are not covered by the
             grace period. Canadian cards cluster in a fairly narrow band, and knowing the rough shape of it helps you spot
@@ -158,7 +159,7 @@ export default function CreditCardInterestPage() {
           </ul>
           <div className="cd-note">
             <div className="cap">These are ranges, not your number</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Issuers set their own rates and can offer different rates to different applicants, and rates can change. The
               only rate that applies to you is the one printed in your cardholder agreement and on your monthly statement.
               If you are not sure what yours is, that document is the place to look.
@@ -166,7 +167,7 @@ export default function CreditCardInterestPage() {
           </div>
 
           {/* GRACE */}
-          <div id="grace" className="cd-sec" style={{ scrollMarginTop: 70 }}>The grace period, and the one rule that matters</div>
+          <h2 id="grace" className="cd-sec">The grace period, and the one rule that matters</h2>
           <p>
             The grace period is the stretch of time between the end of your billing cycle and your payment due date during
             which new purchases do not accrue interest. In Canada, federally regulated issuers must give you a grace period
@@ -178,7 +179,7 @@ export default function CreditCardInterestPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The one rule</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Pay your full <strong>statement balance</strong> by the <strong>payment due date</strong>, every month,
               without exception. Do that and you pay zero interest on purchases. Not the minimum, not most of it, the full
               statement balance. Set an automatic payment for the full statement amount if you can, so a busy month never
@@ -193,7 +194,7 @@ export default function CreditCardInterestPage() {
           </p>
 
           {/* CARRY */}
-          <div id="carry" className="cd-sec" style={{ scrollMarginTop: 70 }}>The trap: carrying a balance kills the grace period</div>
+          <h2 id="carry" className="cd-sec">The trap: carrying a balance kills the grace period</h2>
           <p>
             This is the part that surprises people, and it is where a small slip turns expensive. The interest-free grace
             period on new purchases generally applies only when you paid your previous statement balance in full. The
@@ -207,7 +208,7 @@ export default function CreditCardInterestPage() {
           </p>
           <div className="cd-note">
             <div className="cap">How you get the grace period back</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               You generally have to pay your balance in full and keep it at zero for a full cycle. Once you have a clean
               statement that you paid off completely, the grace period on new purchases typically resumes. The exact wording
               lives in your cardholder agreement, so if you are digging out of a balance, confirm with your issuer exactly
@@ -216,7 +217,7 @@ export default function CreditCardInterestPage() {
           </div>
 
           {/* HOWCALC */}
-          <div id="howcalc" className="cd-sec" style={{ scrollMarginTop: 70 }}>How the interest is actually calculated</div>
+          <h2 id="howcalc" className="cd-sec">How the interest is actually calculated</h2>
           <p>
             When the grace period does not apply, interest is not a single monthly charge tacked on at the end. It accrues
             daily. Understanding this is what lets you shave the cost when you do carry a balance.
@@ -251,7 +252,7 @@ export default function CreditCardInterestPage() {
           </div>
 
           {/* CASH ADVANCE */}
-          <div id="cashadvance" className="cd-sec" style={{ scrollMarginTop: 70 }}>Cash advances are different, and worse</div>
+          <h2 id="cashadvance" className="cd-sec">Cash advances are different, and worse</h2>
           <p>
             A cash advance is when you use your credit card to get actual cash, or something the issuer treats like cash.
             Everything about it is set up to cost you more than a normal purchase, and there are two reasons why.
@@ -289,7 +290,7 @@ export default function CreditCardInterestPage() {
           </div>
           <div className="cd-note">
             <div className="cap">Practical takeaway</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Avoid cash advances unless it is a genuine emergency, and if you must take one, repay it immediately rather
               than at the due date, because it is charging interest from the first day. If you routinely need to reach cash
               through your card, that is usually a sign to look at a lower-cost form of borrowing instead.
@@ -297,7 +298,7 @@ export default function CreditCardInterestPage() {
           </div>
 
           {/* MINIMUM */}
-          <div id="minimum" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why the minimum payment is a trap</div>
+          <h2 id="minimum" className="cd-sec">Why the minimum payment is a trap</h2>
           <p>
             The minimum payment is the smallest amount you can pay to keep your account in good standing. It is usually the
             greater of a small dollar amount, often around $10, or a small percentage of your balance, often around 3%. It
@@ -312,7 +313,7 @@ export default function CreditCardInterestPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Example: the cost of paying only the minimum (illustration, not a quote)</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Assume a $2,000 balance at a 20% annual purchase rate, no new spending, and a minimum payment set at 3% of
               the balance (with a $10 floor). Because the required payment shrinks as the balance falls, the early payments
               are dominated by interest, and clearing the balance this way stretches out for many years and costs you
@@ -324,7 +325,7 @@ export default function CreditCardInterestPage() {
           </div>
 
           {/* ALREADY */}
-          <div id="already" className="cd-sec" style={{ scrollMarginTop: 70 }}>What to do if you already carry a balance</div>
+          <h2 id="already" className="cd-sec">What to do if you already carry a balance</h2>
           <p>
             If you are already carrying a balance, do not spiral about it. Interest is just a number you can attack
             methodically. Here is a sensible order of operations.
@@ -375,7 +376,7 @@ export default function CreditCardInterestPage() {
           </p>
 
           {/* REWARDS */}
-          <div id="rewards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Interest versus rewards: the honest math</div>
+          <h2 id="rewards" className="cd-sec">Interest versus rewards: the honest math</h2>
           <p>
             Rewards cards are great, but only for people who pay in full. Here is the part the points blogs tend to skate
             past. A typical rewards card earns you somewhere around 1% to 2% back. A typical purchase interest rate is
@@ -396,28 +397,28 @@ export default function CreditCardInterestPage() {
           </p>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             Credit card interest comes down to one habit: pay the full statement balance by the due date, every month, and
             the rate stops mattering. Protect your grace period, steer clear of cash advances, and if you carry a balance,
             clear it before you chase a single point. These guides carry the next steps.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance/how-to-build-credit-canada" className="cd-apply">
               How to build credit in Canada &rarr;
             </Link>
             <Link href="/personal-finance/pay-bills-with-credit-card-canada" className="cd-apply">
               Paying bills with a credit card in Canada &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

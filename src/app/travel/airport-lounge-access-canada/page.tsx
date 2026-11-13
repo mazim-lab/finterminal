@@ -8,6 +8,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/travel/airport-lounge-access-canada" },
   title: "Airport lounge access for Canadians: how it actually works | FinTerminal",
   description:
     "A plain-English guide to airport lounge access for Canadians: how a card-bundled network like Priority Pass or DragonPass works, how airline lounges such as Air Canada Maple Leaf Lounges are reached through status or fare or a card, and the paid day-pass options when you have neither. Which of our Canadian cards include lounge access, and the fine print that actually matters. As of July 2026.",
@@ -72,7 +73,7 @@ const FAQ = [
 
 export default function AirportLoungeAccessCanadaPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-travel">
       <main>
         <div className="doc">
           <script
@@ -85,10 +86,10 @@ export default function AirportLoungeAccessCanadaPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/travel">travel</Link><span className="sep">/</span>
-            <span className="cur">airport-lounge-access-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/travel">Travel</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Airport Lounge Access for Canadians: How It Actually Works</span>
           </nav>
           <ArticleSchema headline="Airport lounge access for Canadians: how it actually works" path="/travel/airport-lounge-access-canada" kicker="Travel & points" />
 
@@ -115,7 +116,7 @@ export default function AirportLoungeAccessCanadaPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               There are three ways into a lounge. One, a credit card can include a membership in a lounge network like
               Priority Pass or DragonPass, which typically gives you either a set number of free visits a year or
               unlimited, with guests usually costing extra, though the exact terms vary by card. Two, airline lounges like
@@ -137,7 +138,7 @@ export default function AirportLoungeAccessCanadaPage() {
           </div>
 
           {/* ROUTES */}
-          <div id="routes" className="cd-sec" style={{ scrollMarginTop: 70 }}>The three ways into a lounge</div>
+          <h2 id="routes" className="cd-sec">The three ways into a lounge</h2>
           <p>
             Almost every lounge visit a Canadian makes comes down to one of three routes, and the useful trick is knowing
             which one you are using, because each has its own rules and its own fine print. The first route is a lounge
@@ -148,7 +149,7 @@ export default function AirportLoungeAccessCanadaPage() {
           </p>
 
           {/* NETWORKS */}
-          <div id="networks" className="cd-sec" style={{ scrollMarginTop: 70 }}>Route 1: a lounge network bundled with a card</div>
+          <h2 id="networks" className="cd-sec">Route 1: a lounge network bundled with a card</h2>
           <p>
             The most common way Canadians get into lounges is through a membership that comes attached to a credit card.
             The big lounge networks here are{" "}
@@ -169,7 +170,7 @@ export default function AirportLoungeAccessCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A network membership is not the same as unlimited free lounging</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               A Priority Pass or DragonPass membership on a card is generous, but it comes with a cap and a guest policy
               nearly every time. Some cards give unlimited visits for the cardholder, some give a handful per year, and
               guests are usually an extra charge whichever way it goes. Check the card&apos;s own benefit guide and the
@@ -179,7 +180,7 @@ export default function AirportLoungeAccessCanadaPage() {
           </div>
 
           {/* AIRLINE */}
-          <div id="airline" className="cd-sec" style={{ scrollMarginTop: 70 }}>Route 2: airline lounges via status, fare, or a card</div>
+          <h2 id="airline" className="cd-sec">Route 2: airline lounges via status, fare, or a card</h2>
           <p>
             The second route is the airline&apos;s own lounge, and for most Canadians that means Air Canada&apos;s{" "}
             <a href="https://www.aircanada.com/ca/en/aco/home/fly/airport/maple-leaf-lounge.html" target="_blank" rel="noopener noreferrer">Maple Leaf Lounges</a>.
@@ -200,7 +201,7 @@ export default function AirportLoungeAccessCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Status and fare access can change under you</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Airline-lounge access that comes from status or a fare is only as stable as that status or fare. Requalify at
               a lower tier, or fly a cheaper fare class next time, and the lounge door can close. Treat status-based access
               as a benefit of your current situation, not a permanent membership, and confirm your eligibility with the
@@ -209,7 +210,7 @@ export default function AirportLoungeAccessCanadaPage() {
           </div>
 
           {/* PAID */}
-          <div id="paid" className="cd-sec" style={{ scrollMarginTop: 70 }}>Route 3: paid day passes and lounge apps</div>
+          <h2 id="paid" className="cd-sec">Route 3: paid day passes and lounge apps</h2>
           <p>
             The third route is the simplest: pay for a single visit. Plenty of lounges sell a day pass at the door or
             online, and lounge booking apps let you reserve and pay for one visit at participating lounges before you even
@@ -225,7 +226,7 @@ export default function AirportLoungeAccessCanadaPage() {
           </p>
 
           {/* CARDS */}
-          <div id="cards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Canadian cards that include lounge access</div>
+          <h2 id="cards" className="cd-sec">Canadian cards that include lounge access</h2>
           <p>
             If the card route is the one you want, here are Canadian cards from our own data that include lounge access as
             a benefit, grouped roughly by annual fee so you can see the tiers. We are deliberately not stating how many
@@ -275,7 +276,7 @@ export default function AirportLoungeAccessCanadaPage() {
           )}
           <div className="cd-note">
             <div className="cap">Read the benefit guide, do not assume the numbers</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               &quot;Lounge access&quot; on a card can mean unlimited visits or just a couple a year, with guests free or
               paid, on Priority Pass or DragonPass or an airline&apos;s own lounges. Those differences are the whole game,
               so the card page and its benefit guide are where you confirm what you actually get. For the ranked pick, our{" "}
@@ -285,7 +286,7 @@ export default function AirportLoungeAccessCanadaPage() {
           </div>
 
           {/* FINE PRINT */}
-          <div id="fineprint" className="cd-sec" style={{ scrollMarginTop: 70 }}>The fine print that actually matters</div>
+          <h2 id="fineprint" className="cd-sec">The fine print that actually matters</h2>
           <p>
             Lounge access reads like a simple yes-or-no perk, but the value lives almost entirely in the fine print. A few
             honest notes worth internalising before you lean on it.
@@ -298,7 +299,7 @@ export default function AirportLoungeAccessCanadaPage() {
             <li><strong>Everything here is general and dated.</strong> Lounge programs, card benefits, and access rules change. Everything in this guide is as of July 2026, so confirm the current terms with the card issuer and the lounge program before you rely on access.</li>
           </ul>
 
-          <div className="cd-sec">The short version</div>
+          <h2 className="cd-sec">The short version</h2>
           <p>
             Getting into a lounge as a Canadian comes down to three routes. A card can bundle a Priority Pass or
             DragonPass network membership, which usually means a set number of free visits or unlimited, with guests
@@ -311,26 +312,26 @@ export default function AirportLoungeAccessCanadaPage() {
           </p>
 
           {/* FAQ */}
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
           {/* KEEP GOING */}
-          <div id="deep" className="cd-sec" style={{ scrollMarginTop: 70 }}>Keep going</div>
+          <h2 id="deep" className="cd-sec">Keep going</h2>
           <p>
             Once you know how the lounge routes work, the natural next steps are picking a card and understanding the
             alliances that govern partner-lounge access.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance/best-travel-credit-cards-canada" className="cd-apply">Best travel credit cards in Canada (ranked) &rarr;</Link>
             <Link href="/travel/airline-alliances-guide-canada" className="cd-apply">The airline alliance guide for Canadians &rarr;</Link>
             <Link href="/travel/how-to-book-award-flights-canada" className="cd-apply">How to book award flights from Canada &rarr;</Link>
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map &rarr;</Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards &rarr;</Link>
+            <Link href="/cards" className="cd-apply">Browse the cards &rarr;</Link>
           </div>
           <Comments path="/travel/airport-lounge-access-canada" />
         </div>

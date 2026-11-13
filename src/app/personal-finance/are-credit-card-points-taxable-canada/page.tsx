@@ -9,6 +9,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/are-credit-card-points-taxable-canada" },
   title: "Are credit card points and cash back taxable in Canada? | FinTerminal",
   description:
     "For everyday personal spending, the CRA treats credit card points and cash back as a discount, not income, so they are not taxable. Here is the clear version, plus the real nuances around business, employment, and referral rewards.",
@@ -56,7 +57,7 @@ export default function CreditCardPointsTaxablePage() {
   if (!isPFPublished("are-credit-card-points-taxable-canada")) notFound();
 
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,10 +69,10 @@ export default function CreditCardPointsTaxablePage() {
               acceptedAnswer: { "@type": "Answer", text: f.a },
             })),
           }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">are-credit-card-points-taxable-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Are Credit Card Points and Cash Back Taxable in Canada?</span>
           </nav>
           <ArticleSchema headline="Are credit card points and cash back taxable in Canada?" path="/personal-finance/are-credit-card-points-taxable-canada" kicker="Personal finance" />
 
@@ -98,7 +99,7 @@ export default function CreditCardPointsTaxablePage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               No, credit card points and cash back you earn on ordinary personal spending are not taxable in
               Canada. The CRA treats them as a discount on what you bought, not income, so there is nothing to
               report and no slip to expect. The narrow exceptions all involve something other than plain personal
@@ -115,7 +116,7 @@ export default function CreditCardPointsTaxablePage() {
           </div>
 
           {/* SHORT */}
-          <div id="short" className="cd-sec" style={{ scrollMarginTop: 70 }}>Are credit card points and cash back taxable?</div>
+          <h2 id="short" className="cd-sec">Are credit card points and cash back taxable?</h2>
           <p>
             If you earn points, miles, or cash back on your own personal credit card, for your own personal
             purchases, the CRA generally treats those rewards as a rebate or discount rather than income. That
@@ -129,7 +130,7 @@ export default function CreditCardPointsTaxablePage() {
           </p>
           <div className="cd-note">
             <div className="cap">The one line to remember</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Rewards earned on ordinary personal spending are treated as a discount, not income, and are not
               taxable. The nuances that follow all involve something other than plain personal spending:
               business or employment, or rewards not tied to spending at all.
@@ -137,7 +138,7 @@ export default function CreditCardPointsTaxablePage() {
           </div>
 
           {/* WHY */}
-          <div id="why" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why does the CRA call it a rebate, not income?</div>
+          <h2 id="why" className="cd-sec">Why does the CRA call it a rebate, not income?</h2>
           <p>
             This is a long-standing administrative position, not a new interpretation. The CRA has for years
             taken the view that rewards earned as a result of an amount you spend are a discount on the purchase
@@ -154,14 +155,14 @@ export default function CreditCardPointsTaxablePage() {
           </p>
 
           {/* BUSINESS */}
-          <div id="business" className="cd-sec" style={{ scrollMarginTop: 70 }}>What about business spending, employer cards, and deducted expenses?</div>
+          <h2 id="business" className="cd-sec">What about business spending, employer cards, and deducted expenses?</h2>
           <p>
             This is the most important nuance, and the one worth reading slowly if you are self-employed, run a
             business, or use a card for work. None of it should alarm a normal personal churner, but if any of
             these describe you, the picture can genuinely differ.
           </p>
 
-          <h4>Rewards earned on business purchases</h4>
+          <h3 className="faq-q">Rewards earned on business purchases</h3>
           <p>
             When you charge business expenses to a card and earn rewards on them, and you also claim those
             expenses as deductions, the reward value can matter. The general principle is that a deduction should
@@ -172,7 +173,7 @@ export default function CreditCardPointsTaxablePage() {
             confirm with an accountant rather than assume.
           </p>
 
-          <h4>Employer-owned points and cards</h4>
+          <h3 className="faq-q">Employer-owned points and cards</h3>
           <p>
             If the card and the points belong to your employer and you get to keep or redeem those points for
             personal use, that can be a taxable benefit to you. The CRA&apos;s guidance for employers is that a
@@ -183,7 +184,7 @@ export default function CreditCardPointsTaxablePage() {
             employer-and-employee situation, not something that touches your own personal rewards card.
           </p>
 
-          <h4>Converting points to cash in a business or work context</h4>
+          <h3 className="faq-q">Converting points to cash in a business or work context</h3>
           <p>
             The CRA draws a softer line between keeping points as points and turning them into cash. Redeeming
             miles for a flight looks like using a discount. Converting rewards to cash, especially in connection
@@ -193,7 +194,7 @@ export default function CreditCardPointsTaxablePage() {
           </p>
           <div className="cd-note">
             <div className="cap">A careful word on the business nuances</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Everything in this section is framed as <em>may</em> on purpose. The treatment of business and
               employment rewards depends on the specific arrangement, who owns the points, and how they are
               redeemed, and the CRA&apos;s administrative positions here are not always black and white. If you
@@ -203,7 +204,7 @@ export default function CreditCardPointsTaxablePage() {
           </div>
 
           {/* SIGNUP */}
-          <div id="signup" className="cd-sec" style={{ scrollMarginTop: 70 }}>Sign-up bonuses and referral rewards</div>
+          <h2 id="signup" className="cd-sec">Sign-up bonuses and referral rewards</h2>
           <p>
             Most welcome bonuses are earned by hitting a minimum spend, which keeps them firmly in rebate
             territory. You spent, and the bonus came as a result of that spending, so the usual discount logic
@@ -234,7 +235,7 @@ export default function CreditCardPointsTaxablePage() {
           </p>
 
           {/* BANK */}
-          <div id="bank" className="cd-sec" style={{ scrollMarginTop: 70 }}>Bank account bonuses and interest are a different animal</div>
+          <h2 id="bank" className="cd-sec">Bank account bonuses and interest are a different animal</h2>
           <p>
             It is easy to lump every reward together, but bank rewards and card rewards are not treated the same,
             so this distinction is worth getting right.
@@ -256,7 +257,7 @@ export default function CreditCardPointsTaxablePage() {
           </p>
           <div className="cd-note">
             <div className="cap">The clean mental model</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Card points and cash back on personal spending: a discount, not taxable. Bank interest: income,
               taxable, usually on a T5. Bank sign-up cash bonuses: usually treated like a rebate, but follow any
               slip you receive. When a slip shows up in your mailbox, that number belongs on your return.
@@ -264,7 +265,7 @@ export default function CreditCardPointsTaxablePage() {
           </div>
 
           {/* CHURNER */}
-          <div id="churner" className="cd-sec" style={{ scrollMarginTop: 70 }}>What does this mean for a normal personal churner?</div>
+          <h2 id="churner" className="cd-sec">What does this mean for a normal personal churner?</h2>
           <p>
             If you are a regular person who opens personal cards, chases welcome bonuses through everyday
             spending, earns points and cash back, and redeems them for travel or statement credits, the honest
@@ -285,7 +286,7 @@ export default function CreditCardPointsTaxablePage() {
           </p>
 
           {/* ACCOUNTANT */}
-          <div id="accountant" className="cd-sec" style={{ scrollMarginTop: 70 }}>When is it worth talking to an accountant?</div>
+          <h2 id="accountant" className="cd-sec">When is it worth talking to an accountant?</h2>
           <p>
             A short, honest checklist. Consider getting professional advice if you can say yes to any of these:
           </p>
@@ -303,7 +304,7 @@ export default function CreditCardPointsTaxablePage() {
           </p>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you understand how rewards are usually treated, not personalized
               tax advice, and it is not a ruling on your situation. Tax rules and the CRA&apos;s administrative
               positions can change, and the business, employment, and non-spend cases in particular can turn on
@@ -312,19 +313,19 @@ export default function CreditCardPointsTaxablePage() {
             </p>
           </div>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>Now that you know the tax side is simple, the fun part is earning and using the rewards well.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse cards &amp; bonuses →</Link>
+            <Link href="/cards" className="cd-apply">Browse cards &amp; bonuses →</Link>
           </div>
           <Comments path="/personal-finance/are-credit-card-points-taxable-canada" />
         </div>

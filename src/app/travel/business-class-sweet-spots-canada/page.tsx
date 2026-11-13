@@ -6,6 +6,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/travel/business-class-sweet-spots-canada" },
   title: "Business-class sweet spots from Canada: where your points go furthest | FinTerminal",
   description:
     "A hub for the best business-class redemptions Canadians can actually reach with points. What a sweet spot is, the honest reality of availability and surcharges, and links to our deep-dives on Aeroplan, AAdvantage, and Avios, with the Canadian currency that feeds each. As of July 2026.",
@@ -47,7 +48,7 @@ const FAQ = [
 
 export default function BusinessClassSweetSpotsCanadaPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-travel">
       <main>
         <div className="doc">
           <script
@@ -60,10 +61,10 @@ export default function BusinessClassSweetSpotsCanadaPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/travel">travel</Link><span className="sep">/</span>
-            <span className="cur">business-class-sweet-spots-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/travel">Travel</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Business-Class Sweet Spots From Canada</span>
           </nav>
           <ArticleSchema headline="Business-class sweet spots from Canada: where your points go furthest" path="/travel/business-class-sweet-spots-canada" kicker="Travel & points" />
 
@@ -95,7 +96,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               A business-class sweet spot is a redemption where the miles price is low relative to the cash fare of a
               lie-flat seat. For Canadians the reachable ones run through three programs. Aeroplan books Star Alliance
               business and is fed by Amex Membership Rewards at 1 to 1. American AAdvantage books oneworld business
@@ -115,7 +116,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </div>
 
           {/* WHAT */}
-          <div id="what" className="cd-sec" style={{ scrollMarginTop: 70 }}>What a business-class sweet spot is</div>
+          <h2 id="what" className="cd-sec">What a business-class sweet spot is</h2>
           <p>
             A sweet spot is simply a redemption where the miles price is low relative to the cash fare. You can find them
             in economy, but they are most striking in business class, because that is where the gap between what a seat
@@ -132,7 +133,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The quick test for a sweet spot</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Work out the cents-per-point value: take the cash price of the seat, subtract the taxes and fees on the
               award, divide by the miles, and multiply by 100. In business class a strong redemption often lands well
               past 4 or 5 cents per point, far above the 1.5 to 2 cents that already counts as a decent use. If the math
@@ -141,7 +142,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </div>
 
           {/* REALITY */}
-          <div id="reality" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest reality before you get excited</div>
+          <h2 id="reality" className="cd-sec">The honest reality before you get excited</h2>
           <p>
             Sweet spots are real, but they are not a vending machine, and it is worth being honest about the friction
             before you plan a trip around one. Three things separate the dreamy screenshot from a booked seat, and all
@@ -154,7 +155,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </ul>
           <div className="cd-note">
             <div className="cap">Why we do not lead with the mileage prices</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Award-chart numbers are time-sensitive, and programs adjust them without much warning. So this hub keeps the
               specific mileage prices in our deep-dives, where we maintain them, and treats any figure it does mention as
               an illustrative example rather than a quote for your dates. Whenever you see a number, confirm the live
@@ -163,7 +164,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </div>
 
           {/* MAP */}
-          <div id="map" className="cd-sec" style={{ scrollMarginTop: 70 }}>The sweet spots we cover, and what feeds them</div>
+          <h2 id="map" className="cd-sec">The sweet spots we cover, and what feeds them</h2>
           <p>
             Here is the curated map: each business-class sweet spot we have written up, one honest line on why it is good
             value, and the Canadian currency that feeds it. The transfer paths match our own{" "}
@@ -210,7 +211,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </div>
           <div className="cd-note">
             <div className="cap">SkyTeam business class is the honest gap</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               You will notice Air France, KLM, and Delta are missing above. That is deliberate. Their programs are not
               standard transfer partners of the mainstream Canadian currencies, so there is no clean points route into
               SkyTeam business class from a typical Canadian card the way there is for Star and oneworld. Our{" "}
@@ -220,7 +221,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </div>
 
           {/* EXAMPLES */}
-          <div id="examples" className="cd-sec" style={{ scrollMarginTop: 70 }}>A couple of illustrative example redemptions</div>
+          <h2 id="examples" className="cd-sec">A couple of illustrative example redemptions</h2>
           <p>
             To make this concrete, here are two examples drawn straight from our own sweet-spot write-ups. Treat both as
             an illustration of how the charts work, not a quote for any given date, and always confirm the live price
@@ -252,7 +253,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </div>
 
           {/* BOOK */}
-          <div id="book" className="cd-sec" style={{ scrollMarginTop: 70 }}>How to actually book one</div>
+          <h2 id="book" className="cd-sec">How to actually book one</h2>
           <p>
             The mechanics are the same for every sweet spot on this page, and the order matters more than anything else.
             The short version is: find the seat, then transfer, and never the other way around. Our full{" "}
@@ -266,7 +267,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </ul>
           <div className="cd-note">
             <div className="cap">The one habit that protects your points</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Find and confirm the specific business-class seat before you transfer a single point. Almost every
               expensive mistake in Canadian points comes from doing it backwards. For the full step-by-step method,
               including where to search each program and how to handle partner space that will not book online, see{" "}
@@ -274,7 +275,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
             </p>
           </div>
 
-          <div className="cd-sec">The short version</div>
+          <h2 className="cd-sec">The short version</h2>
           <p>
             A business-class sweet spot is a lie-flat seat that costs far less in miles than in cash, and for Canadians
             the reachable ones run through three programs: Aeroplan for Star Alliance, fed by Amex Membership Rewards;
@@ -286,21 +287,21 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           </p>
 
           {/* FAQ */}
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
           {/* KEEP GOING */}
-          <div id="deep" className="cd-sec" style={{ scrollMarginTop: 70 }}>Keep going</div>
+          <h2 id="deep" className="cd-sec">Keep going</h2>
           <p>
             Pick the program that matches your points and your destination, then go deeper on the specific transfer and
             redemption. These walk through the exact mechanics and the live numbers on each Canadian-friendly path.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/travel/aeroplan-sweet-spots" className="cd-apply">Aeroplan sweet spots →</Link>
             <Link href="/travel/aadvantage-sweet-spots" className="cd-apply">AAdvantage sweet spots →</Link>
             <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply">Avios sweet spots &amp; Avion transfer →</Link>
@@ -309,7 +310,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
             <Link href="/travel/how-to-book-award-flights-canada" className="cd-apply">How to search for and book award flights →</Link>
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map →</Link>
             <Link href="/travel/airline-alliances-guide-canada" className="cd-apply">The airline alliance guide for Canadians →</Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards →</Link>
+            <Link href="/cards" className="cd-apply">Browse the cards →</Link>
           </div>
           <Comments path="/travel/business-class-sweet-spots-canada" />
         </div>

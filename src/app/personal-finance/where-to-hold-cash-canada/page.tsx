@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/where-to-hold-cash-canada" },
   title: "Where to hold your cash in Canada: HISA vs GIC vs high-interest chequing vs cash ETFs | FinTerminal",
   description:
     "A plain-language decision guide for where to park your cash in Canada, matched to your goal and time horizon. High-interest savings, GICs, high-interest chequing, and cash or HISA ETFs compared on liquidity, yield, insurance, and best use. General info as of July 2026, not advice.",
@@ -52,7 +53,7 @@ const FAQ = [
 
 export default function WhereToHoldCashPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -69,10 +70,10 @@ export default function WhereToHoldCashPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">where-to-hold-cash-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Where to Hold Your Cash in Canada: HISA vs GIC vs High-Interest Chequing vs Cash ETFs</span>
           </nav>
           <ArticleSchema headline="Where to hold your cash in Canada: HISA vs GIC vs chequing vs cash ETFs" path="/personal-finance/where-to-hold-cash-canada" kicker="Personal finance" />
 
@@ -99,7 +100,7 @@ export default function WhereToHoldCashPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Match the vehicle to the job. For an emergency fund or any money you might need on short notice (0 to 12
               months), a high-interest savings account keeps you liquid and insured, with everyday rates broadly in the
               mid-2 percent range as of July 2026. For a goal with a known date, like a down payment in a set number of
@@ -119,7 +120,7 @@ export default function WhereToHoldCashPage() {
           </div>
 
           {/* HORIZON */}
-          <div id="horizon" className="cd-sec" style={{ scrollMarginTop: 70 }}>Start with your goal and time horizon</div>
+          <h2 id="horizon" className="cd-sec">Start with your goal and time horizon</h2>
           <p>
             The single most useful question is not which product pays the most, it is when you will need the money. That
             one answer narrows the field quickly, because liquidity and yield trade off against each other. The longer you
@@ -158,7 +159,7 @@ export default function WhereToHoldCashPage() {
           </div>
           <div className="cd-note">
             <div className="cap">A simple rule of thumb</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The sooner or less predictably you might need the money, the more you should favour liquidity and insurance
               over yield. The more certain you are that you can leave it alone until a known date, the more it makes sense
               to lock in a guaranteed rate. Most people end up using more than one of these at once for different pots of
@@ -167,7 +168,7 @@ export default function WhereToHoldCashPage() {
           </div>
 
           {/* OPTIONS */}
-          <div id="options" className="cd-sec" style={{ scrollMarginTop: 70 }}>The four main options</div>
+          <h2 id="options" className="cd-sec">The four main options</h2>
           <p>
             Here is an honest look at each home for your cash, what it does well, and where it falls short. None of them is
             best in every situation, which is exactly why the goal comes first.
@@ -208,7 +209,7 @@ export default function WhereToHoldCashPage() {
           </ul>
 
           {/* TABLE */}
-          <div id="table" className="cd-sec" style={{ scrollMarginTop: 70 }}>The options, side by side</div>
+          <h2 id="table" className="cd-sec">The options, side by side</h2>
           <p>
             A quick comparison across the four homes for cash. Yields move constantly, so we describe them in current
             ranges rather than pinning a number, and link out to our rate pages for the live figures.
@@ -258,7 +259,7 @@ export default function WhereToHoldCashPage() {
 
           <div className="cd-note">
             <div className="cap">Yields change; this is a framework, not a quote</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The ranges above describe the landscape as of July 2026, but savings and GIC rates move with the Bank of
               Canada and cash-ETF yields track the overnight rate minus a fee, so all of them shift over time. Use this
               guide to decide which vehicle fits your goal, then open our{" "}
@@ -269,7 +270,7 @@ export default function WhereToHoldCashPage() {
           </div>
 
           {/* REGISTERED */}
-          <div id="registered" className="cd-sec" style={{ scrollMarginTop: 70 }}>Holding cash inside a TFSA, FHSA, or RRSP</div>
+          <h2 id="registered" className="cd-sec">Holding cash inside a TFSA, FHSA, or RRSP</h2>
           <p>
             A registered account is a tax wrapper, not a product, so you can hold cash-like things inside it just as you
             can hold stocks or funds. That is useful, because sheltering the interest or yield can meaningfully improve
@@ -299,7 +300,7 @@ export default function WhereToHoldCashPage() {
           </p>
 
           {/* TAX */}
-          <div id="tax" className="cd-sec" style={{ scrollMarginTop: 70 }}>A quick word on tax</div>
+          <h2 id="tax" className="cd-sec">A quick word on tax</h2>
           <p>
             This part is general information rather than tax advice, and everyone's situation is different, so treat it as
             background and confirm the details for your own circumstances. In a non-registered (taxable) account, interest
@@ -317,21 +318,21 @@ export default function WhereToHoldCashPage() {
           </p>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             Where to hold your cash is really a set of small decisions, one per pot of money, and the three rate pages
             below carry the live numbers you need to act on this framework. Liquid money in a good savings account,
             known-date money laddered in GICs, and a chequing account that pays you to open it all fit together.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance/best-savings-account-rates-canada" className="cd-apply">
               Best high-interest savings rates in Canada &rarr;
             </Link>
@@ -341,7 +342,7 @@ export default function WhereToHoldCashPage() {
             <Link href="/personal-finance/best-chequing-account-bonuses-canada" className="cd-apply">
               Best chequing account welcome bonuses in Canada &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

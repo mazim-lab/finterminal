@@ -8,6 +8,7 @@ import { VerifiedStamp } from "@/components/VerifiedStamp";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/best-savings-account-rates-canada" },
   title: "Best high-interest savings account (HISA) rates in Canada | FinTerminal",
   description:
     "A clear, honest look at the best everyday high-interest savings account rates in Canada, from EQ Bank and Wealthsimple to Neo, Saven, and Oaken. Rates as of September 2026, with the CDIC coverage you actually get and the promo-rate traps to watch.",
@@ -52,7 +53,7 @@ const FAQ = [
 
 export default function BestSavingsAccountRatesPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -69,10 +70,10 @@ export default function BestSavingsAccountRatesPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">best-savings-account-rates-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Best High-Interest Savings Account (HISA) Rates in Canada</span>
           </nav>
           <ArticleSchema headline="Best high-interest savings account (HISA) rates in Canada" path="/personal-finance/best-savings-account-rates-canada" kicker="Personal finance" />
 
@@ -99,7 +100,7 @@ export default function BestSavingsAccountRatesPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               As of September 2026, the best everyday high-interest savings rates from mainstream Canadian providers
               land roughly in the 2.75 to 2.85 percent range, from names like Saven Financial, Oaken, and Neo, or
               from EQ Bank if you add a qualifying direct deposit. New-client promotional rates run higher, around
@@ -117,7 +118,7 @@ export default function BestSavingsAccountRatesPage() {
           </div>
 
           {/* SHORT */}
-          <div id="short" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the best rate right now?</div>
+          <h2 id="short" className="cd-sec">What is the best rate right now?</h2>
           <p>
             There is no single winner, because the right account depends on whether you want a steady rate you can
             forget about or a short burst of a high promotional rate. For money that just sits, the everyday rate
@@ -133,7 +134,7 @@ export default function BestSavingsAccountRatesPage() {
           </p>
 
           {/* TABLE */}
-          <div id="table" className="cd-sec" style={{ scrollMarginTop: 70 }}>The rates, side by side</div>
+          <h2 id="table" className="cd-sec">The rates, side by side</h2>
           <p>
             Here is where the mainstream options stand as of September 2026. Everyday means the ongoing rate with no
             strings, unless a condition is noted. Promotional means a temporary rate, usually for new clients
@@ -219,7 +220,7 @@ export default function BestSavingsAccountRatesPage() {
 
           <div className="cd-note">
             <div className="cap">Rates change; this is a snapshot</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Every number above was re-checked in September 2026 against the provider&apos;s own materials, with the
               single exception of the Tangerine promotional rate, whose page still hides its figures behind
               placeholders. Everyday rates move with the Bank of Canada and promotional rates expire on fixed
@@ -229,7 +230,7 @@ export default function BestSavingsAccountRatesPage() {
           </div>
 
           {/* EVERYDAY */}
-          <div id="everyday" className="cd-sec" style={{ scrollMarginTop: 70 }}>Everyday vs promotional rates</div>
+          <h2 id="everyday" className="cd-sec">Everyday vs promotional rates</h2>
           <p>
             This is the single most important distinction in Canadian savings accounts, and it trips up a lot of
             people. The big, bank-owned accounts like Simplii and Tangerine tend to advertise an eye-catching rate
@@ -245,7 +246,7 @@ export default function BestSavingsAccountRatesPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A simple way to think about it</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Use promos for a lump sum you can actively move in and grab the high rate for its window, then move
               on. Use a steady everyday account for money that just needs a good home and your attention
               elsewhere. Chasing promos with a balance you never touch usually earns less than picking one solid
@@ -254,7 +255,7 @@ export default function BestSavingsAccountRatesPage() {
           </div>
 
           {/* CDIC */}
-          <div id="cdic" className="cd-sec" style={{ scrollMarginTop: 70 }}>Is your money actually insured?</div>
+          <h2 id="cdic" className="cd-sec">Is your money actually insured?</h2>
           <p>
             Deposit insurance is the reason a savings account is boring in the best possible way. But not every
             provider is insured the same way, and the differences are worth understanding before you park a large
@@ -293,7 +294,7 @@ export default function BestSavingsAccountRatesPage() {
           </div>
 
           {/* CHOOSE */}
-          <div id="choose" className="cd-sec" style={{ scrollMarginTop: 70 }}>How to pick one</div>
+          <h2 id="choose" className="cd-sec">How to pick one</h2>
           <p>
             You do not need the mathematically perfect account. You need a good one that fits how you actually
             behave with money. A few honest questions get you most of the way there.
@@ -322,7 +323,7 @@ export default function BestSavingsAccountRatesPage() {
           </ul>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you compare, not personalized financial advice, and every rate
               here changes over time. Confirm the current number and the coverage details on each provider&apos;s
               own site before you decide, and remember that a slightly lower rate on an account you will actually
@@ -331,20 +332,20 @@ export default function BestSavingsAccountRatesPage() {
           </div>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             A savings account is one piece of a healthy money setup. It pairs naturally with picking the right
             card for your spending and with the rest of our plain-language personal-finance guides.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance/best-gic-rates-canada" className="cd-apply">
               Best GIC rates in Canada &rarr;
             </Link>
@@ -357,10 +358,10 @@ export default function BestSavingsAccountRatesPage() {
             <Link href="/personal-finance/pay-bills-with-credit-card-canada" className="cd-apply">
               Paying bills with a credit card &rarr;
             </Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/cards" className="cd-apply">
               Browse cards &amp; bonuses &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

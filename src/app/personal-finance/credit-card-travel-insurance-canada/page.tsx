@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/credit-card-travel-insurance-canada" },
   title: "What Your Credit Card's Travel Insurance Actually Covers in Canada | FinTerminal",
   description:
     "What credit-card travel insurance in Canada actually covers: emergency medical, trip cancellation, delays and rental cars, plus the age caps and day limits that catch people out. General info as of July 2026, not insurance advice.",
@@ -53,7 +54,7 @@ const FAQ = [
 
 export default function CreditCardTravelInsurancePage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -70,10 +71,10 @@ export default function CreditCardTravelInsurancePage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">credit-card-travel-insurance-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">What Your Credit Card's Travel Insurance Actually Covers in Canada</span>
           </nav>
           <ArticleSchema headline="What Your Credit Card's Travel Insurance Actually Covers in Canada" path="/personal-finance/credit-card-travel-insurance-canada" kicker="Personal finance" />
 
@@ -102,7 +103,7 @@ export default function CreditCardTravelInsurancePage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Credit-card travel insurance can cover emergency medical care abroad, a cancelled or interrupted trip, flight
               and baggage delays, and damage to a rental car, but only some cards carry each of these, and every one comes
               with conditions. The amounts and day limits vary hugely by card, emergency medical usually has an age cap
@@ -122,7 +123,7 @@ export default function CreditCardTravelInsurancePage() {
           </div>
 
           {/* HOW */}
-          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How card travel insurance works</div>
+          <h2 id="how" className="cd-sec">How card travel insurance works</h2>
           <p>
             Card travel insurance is a group policy the issuer buys from an insurer and extends to cardholders as a perk.
             That structure explains most of the quirks. You are covered under someone else's master policy, on their terms,
@@ -141,14 +142,14 @@ export default function CreditCardTravelInsurancePage() {
           </p>
 
           {/* TYPES */}
-          <div id="types" className="cd-sec" style={{ scrollMarginTop: 70 }}>The main coverage types, one by one</div>
+          <h2 id="types" className="cd-sec">The main coverage types, one by one</h2>
           <p>
             Here is what each of the common coverage types is for, and the honest catches to watch, described in general
             terms. Which of these your card carries, and the exact amounts, differ by card, so treat this as the concept and
             the certificate as the source of truth.
           </p>
 
-          <h4>Emergency medical (out of province or out of country)</h4>
+          <h3 className="faq-q">Emergency medical (out of province or out of country)</h3>
           <p>
             This is the big one, and the coverage most worth having. It helps pay for emergency medical care while you are
             travelling outside your home province or outside Canada, the kind of care your provincial health plan barely
@@ -162,7 +163,7 @@ export default function CreditCardTravelInsurancePage() {
             limits seriously.
           </p>
 
-          <h4>Trip cancellation and trip interruption</h4>
+          <h3 className="faq-q">Trip cancellation and trip interruption</h3>
           <p>
             Trip cancellation helps recover non-refundable costs when a covered reason forces you to cancel before you
             leave, and trip interruption helps with the extra costs and lost portions when a covered reason cuts a trip
@@ -173,7 +174,7 @@ export default function CreditCardTravelInsurancePage() {
             reasons and the dollar cap vary by card.
           </p>
 
-          <h4>Flight delay and travel delay</h4>
+          <h3 className="faq-q">Flight delay and travel delay</h3>
           <p>
             When your flight is delayed beyond a set number of hours, this can reimburse reasonable out-of-pocket costs like
             a meal, a night in a hotel, or essentials while you wait. It is a smaller benefit than medical, but it is the
@@ -182,7 +183,7 @@ export default function CreditCardTravelInsurancePage() {
             for the travel with the card is usually part of the trigger, and the delay threshold and caps vary by card.
           </p>
 
-          <h4>Baggage delay and lost or damaged baggage</h4>
+          <h3 className="faq-q">Baggage delay and lost or damaged baggage</h3>
           <p>
             Baggage delay helps cover essentials you need to buy when your checked bag is delayed beyond a set number of
             hours, and lost or damaged baggage coverage helps with the value of belongings that never arrive or arrive
@@ -192,7 +193,7 @@ export default function CreditCardTravelInsurancePage() {
             to claim. Limits and thresholds vary by card.
           </p>
 
-          <h4>Rental car collision and loss damage (CDW / LDW)</h4>
+          <h3 className="faq-q">Rental car collision and loss damage (CDW / LDW)</h3>
           <p>
             This covers damage to, or loss of, a rental vehicle from collision or theft, often called a collision damage
             waiver (CDW) or loss damage waiver (LDW), and it is the benefit that lets you confidently decline the rental
@@ -206,7 +207,7 @@ export default function CreditCardTravelInsurancePage() {
             primary or secondary.
           </p>
 
-          <h4>Common extras (hotel burglary, common carrier accident)</h4>
+          <h3 className="faq-q">Common extras (hotel burglary, common carrier accident)</h3>
           <p>
             Beyond the core five, cards often bundle smaller extras. Hotel or motel burglary coverage can help with
             belongings stolen from your room during a trip. Common carrier travel accident coverage is a form of accidental
@@ -217,7 +218,7 @@ export default function CreditCardTravelInsurancePage() {
 
           <div className="cd-note">
             <div className="cap">The certificate is the contract</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Everything above describes the general concepts. The actual dollar limits, day limits, age caps, delay
               thresholds, covered reasons, and exclusions live in your card's certificate of insurance, and that document is
               what governs a real claim. Coverage varies by card and changes, so always read your card's certificate of
@@ -226,7 +227,7 @@ export default function CreditCardTravelInsurancePage() {
           </div>
 
           {/* TABLE */}
-          <div id="table" className="cd-sec" style={{ scrollMarginTop: 70 }}>The coverage types, side by side</div>
+          <h2 id="table" className="cd-sec">The coverage types, side by side</h2>
           <p>
             A quick reference to the main coverage types, what each one does, and the catch to check. Amounts, day limits,
             and age caps are deliberately left out here because they vary so much by card. Get those from the certificate.
@@ -285,7 +286,7 @@ export default function CreditCardTravelInsurancePage() {
           </div>
 
           {/* CATCHES */}
-          <div id="catches" className="cd-sec" style={{ scrollMarginTop: 70 }}>The honest catches to check first</div>
+          <h2 id="catches" className="cd-sec">The honest catches to check first</h2>
           <p>
             If you read nothing else, read this. These are the things that most often surprise people, and checking them
             before you travel is the difference between coverage you can count on and a denied claim.
@@ -334,7 +335,7 @@ export default function CreditCardTravelInsurancePage() {
           </ul>
 
           {/* CARDS */}
-          <div id="cards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Cards in our data that carry travel insurance</div>
+          <h2 id="cards" className="cd-sec">Cards in our data that carry travel insurance</h2>
           <p>
             Plenty of Canadian cards in our data carry one or more of these coverage types. Below are a few real examples by
             fee tier, so you can see the range. For each, we list which coverage benefits our data flags, then link the card
@@ -345,7 +346,7 @@ export default function CreditCardTravelInsurancePage() {
 
           <div className="cd-note">
             <div className="cap">No-annual-fee options that still flag travel insurance</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               A couple of no-fee cards in our data flag all four core coverage types (emergency medical, trip cancellation,
               flight or baggage delay, and rental car), which is unusual at $0. See{" "}
               <Link href="/cards/rogers-red-world-elite-mastercard">Rogers Red World Elite Mastercard</Link> and{" "}
@@ -403,7 +404,7 @@ export default function CreditCardTravelInsurancePage() {
           </p>
 
           {/* STANDALONE */}
-          <div id="standalone" className="cd-sec" style={{ scrollMarginTop: 70 }}>When to price standalone insurance instead</div>
+          <h2 id="standalone" className="cd-sec">When to price standalone insurance instead</h2>
           <p>
             Card travel insurance is a real benefit, and for a lot of trips it is genuinely enough. The point of this
             section is not to talk you out of using it, it is to help you spot the situations where it tends to fall short
@@ -432,22 +433,22 @@ export default function CreditCardTravelInsurancePage() {
           </p>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             Travel insurance is one perk among several that make a good travel card worth carrying. If you are choosing a
             card, our travel roundup weighs coverage alongside earn rates and welcome bonuses, the cards directory lets you
             filter by the exact benefits you want, and the pages below cover the rest of the picture. Whatever you pick, the
             certificate of insurance is where the real coverage numbers live, so read it before you rely on any of it.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance/best-travel-credit-cards-canada" className="cd-apply">
               The best travel and rewards credit cards in Canada &rarr;
             </Link>
@@ -457,7 +458,7 @@ export default function CreditCardTravelInsurancePage() {
             <Link href="/personal-finance/best-cash-back-credit-cards-canada" className="cd-apply">
               The best cash-back credit cards in Canada &rarr;
             </Link>
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>

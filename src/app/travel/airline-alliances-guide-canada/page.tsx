@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/travel/airline-alliances-guide-canada" },
   title: "The airline alliance guide for Canadians: Star Alliance, oneworld, and SkyTeam | FinTerminal",
   description:
     "A plain-English guide to the three global airline alliances (Star Alliance, oneworld, and SkyTeam), the notable member airlines, and exactly how a Canadian reaches each one with points. Star is strongest via Aeroplan, oneworld via Avios and AAdvantage, and SkyTeam the thinnest. As of July 2026.",
@@ -53,7 +54,7 @@ const FAQ = [
 
 export default function AirlineAlliancesGuideCanadaPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-travel">
       <main>
         <div className="doc">
           <script
@@ -66,10 +67,10 @@ export default function AirlineAlliancesGuideCanadaPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/travel">travel</Link><span className="sep">/</span>
-            <span className="cur">airline-alliances-guide-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/travel">Travel</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">The Airline Alliance Guide for Canadians</span>
           </nav>
           <ArticleSchema headline="The airline alliance guide for Canadians" path="/travel/airline-alliances-guide-canada" kicker="Travel & points" />
 
@@ -96,7 +97,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               There are three global airline alliances. Star Alliance (Air Canada, United, Lufthansa, ANA, Singapore,
               Turkish, and more) is the strongest for Canadians, reached through Aeroplan, which Amex Membership Rewards
               feeds at 1 to 1. oneworld (American, British Airways, Cathay Pacific, Qatar, Japan Airlines, Qantas, Alaska,
@@ -117,7 +118,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </div>
 
           {/* WHAT */}
-          <div id="what" className="cd-sec" style={{ scrollMarginTop: 70 }}>What an alliance is, and why it matters for points</div>
+          <h2 id="what" className="cd-sec">What an alliance is, and why it matters for points</h2>
           <p>
             An airline alliance is a formal partnership between a group of airlines. They agree to recognize each
             other&apos;s loyalty status, share lounges, coordinate schedules so connections work, and, crucially for us,
@@ -134,7 +135,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Alliance membership is not the same as a points partnership</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Two airlines being in the same alliance means you can generally book one using the other&apos;s miles. A
               points partnership is separate: it is whether a specific loyalty program (like Avios) can book a given
               airline, alliance or not. Aer Lingus, for instance, is in no alliance but is an Avios partner, so you can
@@ -143,7 +144,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </div>
 
           {/* MAP */}
-          <div id="map" className="cd-sec" style={{ scrollMarginTop: 70 }}>The three alliances at a glance</div>
+          <h2 id="map" className="cd-sec">The three alliances at a glance</h2>
           <p>
             Here is the whole picture in one table: each alliance, a few of its notable member airlines, and the
             Canadian currency or program that gets you in. The transfer paths below match our own{" "}
@@ -182,7 +183,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </div>
           <div className="cd-note">
             <div className="cap">Check membership at the source</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Alliance rosters shift over time, so verify who belongs where on the first-party sites before you plan:{" "}
               <a href="https://www.staralliance.com/en/member-airlines" target="_blank" rel="noopener noreferrer">Star Alliance members</a>,{" "}
               <a href="https://www.oneworld.com/members" target="_blank" rel="noopener noreferrer">oneworld members</a>, and{" "}
@@ -192,7 +193,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </div>
 
           {/* STAR */}
-          <div id="star" className="cd-sec" style={{ scrollMarginTop: 70 }}>Star Alliance: the Canadian workhorse</div>
+          <h2 id="star" className="cd-sec">Star Alliance: the Canadian workhorse</h2>
           <p>
             Star Alliance is the biggest of the three and, for a Canadian, by far the easiest to reach. Its members
             include Air Canada, United, Lufthansa, Swiss, Austrian, Brussels Airlines, ANA, Singapore Airlines, Turkish
@@ -210,7 +211,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The Canadian path into Star Alliance</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Earn Amex Membership Rewards, transfer to Aeroplan at 1 to 1 once you have found an award seat, and book
               your Star Alliance partner flight through Aeroplan. Aeroplan also earns directly on Air Canada co-branded
               cards. For the specific mechanics and the best redemptions, see our{" "}
@@ -221,7 +222,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </div>
 
           {/* ONEWORLD */}
-          <div id="oneworld" className="cd-sec" style={{ scrollMarginTop: 70 }}>oneworld: reachable, with a bit of work</div>
+          <h2 id="oneworld" className="cd-sec">oneworld: reachable, with a bit of work</h2>
           <p>
             oneworld is the second alliance a Canadian can reach without too much trouble, though it takes a little more
             planning than Star. Its members include American Airlines, British Airways, Cathay Pacific, Qatar Airways,
@@ -239,7 +240,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The Canadian paths into oneworld</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Via Avios: transfer Amex Membership Rewards or RBC Avion to British Airways Avios (base 1 to 1), then book a
               oneworld partner. Via AAdvantage: transfer RBC Avion (Avion Elite cards only) to American AAdvantage at a
               base 10 points for 7 miles. See our{" "}
@@ -250,7 +251,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </div>
 
           {/* SKYTEAM */}
-          <div id="skyteam" className="cd-sec" style={{ scrollMarginTop: 70 }}>SkyTeam: the honest thin spot</div>
+          <h2 id="skyteam" className="cd-sec">SkyTeam: the honest thin spot</h2>
           <p>
             SkyTeam is the third global alliance, and for Canadians it is genuinely the hardest to reach with points, so
             it is worth being honest about that rather than inventing a path that does not exist. SkyTeam&apos;s members
@@ -269,7 +270,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Being honest about SkyTeam</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               We only claim transfer routes we can verify on our own{" "}
               <Link href="/travel/points-transfer-partners-canada">points-transfer map</Link>, and SkyTeam is not on it
               from the mainstream Canadian currencies. So rather than quote a path that might not hold, the honest guidance
@@ -280,7 +281,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </div>
 
           {/* NOTES */}
-          <div id="notes" className="cd-sec" style={{ scrollMarginTop: 70 }}>Universal notes before you transfer</div>
+          <h2 id="notes" className="cd-sec">Universal notes before you transfer</h2>
           <p>
             Whichever alliance you are aiming for, a few rules keep you out of trouble. They apply across every program
             and every transfer, and they are the difference between a great redemption and a pile of stranded points.
@@ -293,7 +294,7 @@ export default function AirlineAlliancesGuideCanadaPage() {
             <li><strong>Alliances, partners, and ratios change.</strong> Airlines join and leave alliances, and programs adjust partners and transfer ratios. Everything here is as of July 2026, so confirm the live details on the airline or program site before you book or transfer.</li>
           </ul>
 
-          <div className="cd-sec">The short version</div>
+          <h2 className="cd-sec">The short version</h2>
           <p>
             Three global alliances, three very different stories for a Canadian. Star Alliance is the easy one, reached
             through Aeroplan and fed by Amex Membership Rewards at 1 to 1, and it covers Air Canada, United, Lufthansa,
@@ -307,28 +308,28 @@ export default function AirlineAlliancesGuideCanadaPage() {
           </p>
 
           {/* FAQ */}
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
           {/* KEEP GOING */}
-          <div id="deep" className="cd-sec" style={{ scrollMarginTop: 70 }}>Deep dives and next steps</div>
+          <h2 id="deep" className="cd-sec">Deep dives and next steps</h2>
           <p>
             Once you know which alliance your target airline sits in, the next step is the specific transfer and
             redemption. These walk through the exact mechanics on each Canadian-friendly path.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map →</Link>
             <Link href="/travel/how-to-book-award-flights-canada" className="cd-apply">How to search for and book award flights →</Link>
             <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/travel/aeroplan-sweet-spots" className="cd-apply">Aeroplan sweet spots →</Link>
             <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply">Avios sweet spots &amp; Avion transfer →</Link>
             <Link href="/travel/amex-mr-to-aeroplan" className="cd-apply">Amex MR to Aeroplan →</Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards →</Link>
+            <Link href="/cards" className="cd-apply">Browse the cards →</Link>
           </div>
           <Comments path="/travel/airline-alliances-guide-canada" />
         </div>

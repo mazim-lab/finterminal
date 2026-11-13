@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/travel/aeroplan-sweet-spots" },
   title: "Using Aeroplan points to get the most value | FinTerminal",
   description:
     "Where Aeroplan points deliver the best value for Canadians, from cheap short-haul hops to business class to Europe, plus the stopover trick and the cents-per-point math.",
@@ -52,14 +53,14 @@ const FAQ = [
 
 export default function AeroplanSweetSpotsPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-travel">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/travel">travel</Link><span className="sep">/</span>
-            <span className="cur">aeroplan-sweet-spots</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/travel">Travel</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">Aeroplan Sweet Spots</span>
           </nav>
           <ArticleSchema headline="Using Aeroplan points to get the most value" path="/travel/aeroplan-sweet-spots" kicker="Travel & points" />
 
@@ -83,7 +84,7 @@ export default function AeroplanSweetSpotsPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Aeroplan pays off best when you book partner flights off the predictable region-based chart rather
               than dynamically priced Air Canada seats. The standout redemptions are business class from Canada to
               Europe: about 60,000 points one-way for the shortest transatlantic band (for example Toronto to the UK
@@ -102,7 +103,7 @@ export default function AeroplanSweetSpotsPage() {
           </div>
 
           {/* HOW */}
-          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does Aeroplan price flights?</div>
+          <h2 id="how" className="cd-sec">How does Aeroplan price flights?</h2>
           <p>
             Aeroplan uses two different pricing approaches, and knowing which one you are looking at is half the
             game. Flights operated by Air Canada are priced dynamically, so the points cost rises and falls a bit
@@ -117,7 +118,7 @@ export default function AeroplanSweetSpotsPage() {
           </p>
 
           {/* CPP */}
-          <div id="cpp" className="cd-sec" style={{ scrollMarginTop: 70 }}>Is the redemption worth it?</div>
+          <h2 id="cpp" className="cd-sec">Is the redemption worth it?</h2>
           <p>
             Before any redemption, it helps to know what your points are worth on that specific booking. The
             formula is simple.
@@ -133,9 +134,9 @@ export default function AeroplanSweetSpotsPage() {
           </div>
 
           {/* SPOTS */}
-          <div id="spots" className="cd-sec" style={{ scrollMarginTop: 70 }}>Where are the sweet spots?</div>
+          <h2 id="spots" className="cd-sec">Where are the sweet spots?</h2>
 
-          <h4>Short hops within North America</h4>
+          <h3 className="faq-q">Short hops within North America</h3>
           <p>
             For partner flights wholly within North America, Aeroplan prices economy by distance band, starting
             around 6,000 points one-way for the shortest routes and stepping up from there. On a short, expensive
@@ -143,7 +144,7 @@ export default function AeroplanSweetSpotsPage() {
             spend a smaller points balance.
           </p>
 
-          <h4>Business class to Europe</h4>
+          <h3 className="faq-q">Business class to Europe</h3>
           <p>
             This is the redemption Aeroplan is famous for. Aeroplan prices partner awards on a distance-based chart,
             so the cost depends on how far you fly. The shortest transatlantic band (for example Toronto to the UK or
@@ -153,14 +154,14 @@ export default function AeroplanSweetSpotsPage() {
             which is hard to beat anywhere else.
           </p>
 
-          <h4>Premium cabins to Asia and beyond</h4>
+          <h3 className="faq-q">Premium cabins to Asia and beyond</h3>
           <p>
             Long-haul business and first class to Asia, the South Pacific, and other distant regions follow the
             same logic on a bigger scale. The point totals are higher, but so is the cash value you are avoiding,
             so the value per point stays strong. These are the trips worth saving toward.
           </p>
 
-          <h4>Air Canada flights for cardholders</h4>
+          <h3 className="faq-q">Air Canada flights for cardholders</h3>
           <p>
             If you hold an Aeroplan co-branded credit card, you get preferred pricing on Air Canada operated
             flights, which shaves points off many bookings and is a nice everyday perk on top of the partner
@@ -168,7 +169,7 @@ export default function AeroplanSweetSpotsPage() {
           </p>
 
           {/* STOPOVER */}
-          <div id="stopover" className="cd-sec" style={{ scrollMarginTop: 70 }}>How does the stopover work?</div>
+          <h2 id="stopover" className="cd-sec">How does the stopover work?</h2>
           <p>
             One of Aeroplan&apos;s most loved features is the stopover. On a one-way award you can add a stopover,
             meaning a stay of more than 24 hours in a connecting city, for a flat 5,000 points. In practice that
@@ -178,7 +179,7 @@ export default function AeroplanSweetSpotsPage() {
           </p>
 
           {/* FEES */}
-          <div id="fees" className="cd-sec" style={{ scrollMarginTop: 70 }}>Does Aeroplan skip fuel surcharges?</div>
+          <h2 id="fees" className="cd-sec">Does Aeroplan skip fuel surcharges?</h2>
           <p>
             Aeroplan does not pass along carrier-imposed fuel surcharges on its award tickets, which is a real
             and underrated benefit. On some other programs those surcharges can add hundreds of dollars to an
@@ -187,7 +188,7 @@ export default function AeroplanSweetSpotsPage() {
           </p>
 
           {/* TIPS */}
-          <div id="tips" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do I book the best value?</div>
+          <h2 id="tips" className="cd-sec">How do I book the best value?</h2>
           <ul>
             <li><strong>Search partner award space directly.</strong> The predictable chart applies to partner-operated flights, so that is where to hunt for the strong values.</li>
             <li><strong>Be flexible with dates.</strong> Better award availability often sits a day or two on either side of the date you first had in mind.</li>
@@ -196,21 +197,21 @@ export default function AeroplanSweetSpotsPage() {
             <li><strong>Some partners need a phone call.</strong> Most awards book online, but a few partner airlines are easier to reserve over the phone if you cannot find them on the site.</li>
           </ul>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
 
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Get the points first</div>
+          <h2 className="cd-sec">Get the points first</h2>
           <p>If you are still building your balance, the fastest route for most Canadians is earning Membership Rewards and transferring them over.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/travel/amex-mr-to-aeroplan" className="cd-apply">Transfer MR to Aeroplan →</Link>
             <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
-            <Link href="/cards?q=aeroplan" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Aeroplan cards →</Link>
+            <Link href="/cards?q=aeroplan" className="cd-apply">Aeroplan cards →</Link>
           </div>
           <Comments path="/travel/aeroplan-sweet-spots" />
         </div>

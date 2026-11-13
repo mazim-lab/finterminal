@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/travel/rbc-avion-to-aadvantage" },
   title: "How to transfer RBC Avion points to American Airlines AAdvantage | FinTerminal",
   description:
     "A plain-English walkthrough for Canadians: which RBC Avion cards can transfer to American Airlines, the real 1 to 0.7 ratio and 5,000 point minimum, how to do it in Avion Rewards, timing, and why to wait for a transfer bonus.",
@@ -53,7 +54,7 @@ const FAQ = [
 
 export default function AvionToAmericanAirlinesPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-travel">
       <main>
         <div className="doc">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -61,10 +62,10 @@ export default function AvionToAmericanAirlinesPage() {
             "@type": "FAQPage",
             mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
           }) }} />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/travel">travel</Link><span className="sep">/</span>
-            <span className="cur">rbc-avion-to-aadvantage</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/travel">Travel</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">RBC Avion to American Airlines AAdvantage</span>
           </nav>
           <ArticleSchema headline="How to transfer RBC Avion points to American Airlines AAdvantage" path="/travel/rbc-avion-to-aadvantage" kicker="Travel & points" />
 
@@ -90,7 +91,7 @@ export default function AvionToAmericanAirlinesPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               RBC Avion transfers to American Airlines AAdvantage at a base rate of 10 Avion points for 7 miles, a 1 to
               0.7 ratio, with a 5,000 point minimum, and only Avion Elite cards can do it. You lose 30 percent of your
               points count, so the move only pays off when the AAdvantage award on the far end is priced well and cheap
@@ -107,7 +108,7 @@ export default function AvionToAmericanAirlinesPage() {
           </div>
 
           {/* CARDS */}
-          <div id="cards" className="cd-sec" style={{ scrollMarginTop: 70 }}>Which Avion cards can transfer to airlines?</div>
+          <h2 id="cards" className="cd-sec">Which Avion cards can transfer to airlines?</h2>
           <p>
             This is the part that trips people up, so let us start here. Not every card in the Avion Rewards
             ecosystem can send points to airline partners. The ability to convert to American Airlines, British
@@ -128,7 +129,7 @@ export default function AvionToAmericanAirlinesPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Check your tier before you plan</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               If you are counting on an AAdvantage transfer, make sure the points you hold are Avion Elite points
               from a qualifying Avion credit card. Points earned on an ION, ION+, or no-fee RBC card will not make
               the trip, and finding that out after you have planned an itinerary is no fun.
@@ -136,7 +137,7 @@ export default function AvionToAmericanAirlinesPage() {
           </div>
 
           {/* RATIO */}
-          <div id="ratio" className="cd-sec" style={{ scrollMarginTop: 70 }}>What is the ratio and the minimum?</div>
+          <h2 id="ratio" className="cd-sec">What is the ratio and the minimum?</h2>
           <p>
             Here is the number that matters most. The base conversion rate is 10 Avion points for 7 AAdvantage
             miles, which works out to 1,000 Avion points becoming 700 miles, or a 1 to 0.7 ratio. There is no way to
@@ -159,7 +160,7 @@ export default function AvionToAmericanAirlinesPage() {
           </p>
 
           {/* HOW */}
-          <div id="how" className="cd-sec" style={{ scrollMarginTop: 70 }}>How do you actually do the transfer?</div>
+          <h2 id="how" className="cd-sec">How do you actually do the transfer?</h2>
           <p>
             The mechanics are straightforward once you know where to look. You do not need to pre-link your American
             Airlines account or jump through verification hoops ahead of time. You do, however, want your AAdvantage
@@ -195,7 +196,7 @@ export default function AvionToAmericanAirlinesPage() {
           </div>
 
           {/* TIMING */}
-          <div id="timing" className="cd-sec" style={{ scrollMarginTop: 70 }}>How long does it take to post?</div>
+          <h2 id="timing" className="cd-sec">How long does it take to post?</h2>
           <p>
             RBC officially asks you to allow up to four weeks for the miles to appear in your AAdvantage account.
             That is the number you should plan around. In practice many people report the miles landing far faster,
@@ -210,7 +211,7 @@ export default function AvionToAmericanAirlinesPage() {
           </p>
 
           {/* BONUS */}
-          <div id="bonus" className="cd-sec" style={{ scrollMarginTop: 70 }}>Should you wait for a transfer bonus?</div>
+          <h2 id="bonus" className="cd-sec">Should you wait for a transfer bonus?</h2>
           <p>
             Here is the single best way to soften that 1 to 0.7 rate. RBC periodically runs transfer bonuses to
             American Airlines, and when one is live it changes the math meaningfully. The most recent one I can point
@@ -227,7 +228,7 @@ export default function AvionToAmericanAirlinesPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A bonus only helps if the seat is still there</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Waiting for a bonus is smart when your travel is flexible. It is the wrong move when you have already
               found a great award seat that may not last. Booking the trip you want beats squeezing out a few extra
               miles you might never get to use.
@@ -235,7 +236,7 @@ export default function AvionToAmericanAirlinesPage() {
           </div>
 
           {/* EXAMPLE */}
-          <div id="example" className="cd-sec" style={{ scrollMarginTop: 70 }}>A worked example</div>
+          <h2 id="example" className="cd-sec">A worked example</h2>
           <p>
             Let us make the numbers concrete. This is purely illustrative, so treat it as a way to see the mechanics
             rather than a quote on any specific flight.
@@ -255,7 +256,7 @@ export default function AvionToAmericanAirlinesPage() {
           </p>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>What are the catches?</div>
+          <h2 id="caveats" className="cd-sec">What are the catches?</h2>
           <ul>
             <li><strong>The 1 to 0.7 rate is a real loss.</strong> You are giving up 30 percent of your points count off the top. That is only worth it if the AAdvantage award is priced well enough to win the trade. For a mediocre redemption, you are better off keeping your Avion in a program that transfers at 1 to 1.</li>
             <li><strong>It is one-way and final.</strong> Once Avion points become AAdvantage miles, they cannot be reversed or converted back. Only transfer what you have a concrete plan to use.</li>
@@ -264,7 +265,7 @@ export default function AvionToAmericanAirlinesPage() {
             <li><strong>Posting can be slow.</strong> Plan for up to four weeks even if it usually comes faster, and never transfer against a seat you are not confident will still be available.</li>
           </ul>
 
-          <div className="cd-sec">The short version</div>
+          <h2 className="cd-sec">The short version</h2>
           <p>
             Transferring RBC Avion to American Airlines AAdvantage is a useful tool with a clear cost. Only Avion
             Elite cards can do it, the rate is a real 1 to 0.7, the minimum is 5,000 points, and the miles can take
@@ -273,20 +274,20 @@ export default function AvionToAmericanAirlinesPage() {
             first, transfer second, and you will rarely regret it.
           </p>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>Getting the miles is only half the job. The next step is knowing where AAdvantage miles actually shine, so you transfer toward a redemption that earns its keep.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/travel/aadvantage-sweet-spots" className="cd-apply">AAdvantage sweet spots →</Link>
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map →</Link>
-            <Link href="/cards?q=avion" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>RBC Avion cards →</Link>
+            <Link href="/cards?q=avion" className="cd-apply">RBC Avion cards →</Link>
           </div>
           <Comments path="/travel/rbc-avion-to-aadvantage" />
         </div>

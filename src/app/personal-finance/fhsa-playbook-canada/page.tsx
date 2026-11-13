@@ -9,6 +9,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/fhsa-playbook-canada" },
   title: "The FHSA playbook: Canada's most underused account | FinTerminal",
   description:
     "The First Home Savings Account gives you an RRSP-style deduction and a TFSA-style tax-free withdrawal for a first home. Here is how the room works, how to invest it, and how to stack it with the RRSP Home Buyers' Plan.",
@@ -58,7 +59,7 @@ export default function FHSAPlaybookPage() {
   if (!isPFPublished("fhsa-playbook-canada")) notFound();
 
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -75,10 +76,10 @@ export default function FHSAPlaybookPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">fhsa-playbook-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">The FHSA Playbook: Canada&apos;s Most Underused Account</span>
           </nav>
           <ArticleSchema headline="The FHSA playbook: Canada's most underused account" path="/personal-finance/fhsa-playbook-canada" kicker="Personal finance" />
 
@@ -104,7 +105,7 @@ export default function FHSAPlaybookPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The First Home Savings Account is the only Canadian account that gives you an RRSP-style deduction going
               in and a TFSA-style tax-free withdrawal coming out for a first home. You can contribute up to $8,000 a
               year and $40,000 over your life, and room only starts once you open the account, so open one early even
@@ -121,7 +122,7 @@ export default function FHSAPlaybookPage() {
           </div>
 
           {/* SPECIAL */}
-          <div id="special" className="cd-sec" style={{ scrollMarginTop: 70 }}>What makes the FHSA special?</div>
+          <h2 id="special" className="cd-sec">What makes the FHSA special?</h2>
           <p>
             Every registered account in Canada asks you to pick your tax break. With an RRSP, your contribution is
             deductible now, so you get a refund today, but the money is taxed when you eventually pull it out. With
@@ -136,7 +137,7 @@ export default function FHSAPlaybookPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The one-line summary</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Deduct it like an RRSP going in, withdraw it tax-free like a TFSA coming out. That double benefit is
               the whole reason the FHSA deserves to sit near the top of your savings list if you are anywhere near
               buying a first home.
@@ -151,7 +152,7 @@ export default function FHSAPlaybookPage() {
           </p>
 
           {/* ROOM */}
-          <div id="room" className="cd-sec" style={{ scrollMarginTop: 70 }}>How much can you contribute?</div>
+          <h2 id="room" className="cd-sec">How much can you contribute?</h2>
           <p>
             The contribution rules are straightforward once you see them laid out. There are two numbers that
             matter, and one habit that trips people up.
@@ -177,7 +178,7 @@ export default function FHSAPlaybookPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A quick carry-forward example</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Say you open your FHSA and contribute $3,000 in the first year. You have $5,000 of unused room. The
               next year you get a fresh $8,000, plus that $5,000 carried over, so you could put in up to $13,000.
               But because only $8,000 of unused room can ever carry into a single year, you cannot bank room
@@ -186,7 +187,7 @@ export default function FHSAPlaybookPage() {
           </div>
 
           {/* ELIGIBILITY */}
-          <div id="eligibility" className="cd-sec" style={{ scrollMarginTop: 70 }}>Who can open one?</div>
+          <h2 id="eligibility" className="cd-sec">Who can open one?</h2>
           <p>To open an FHSA, you need to check a few boxes. They are simple, but each one matters.</p>
           <ul>
             <li><strong>You are a resident of Canada</strong> with a valid Social Insurance Number.</li>
@@ -201,7 +202,7 @@ export default function FHSAPlaybookPage() {
           </p>
 
           {/* CLOCK */}
-          <div id="clock" className="cd-sec" style={{ scrollMarginTop: 70 }}>How long can you keep an FHSA open?</div>
+          <h2 id="clock" className="cd-sec">How long can you keep an FHSA open?</h2>
           <p>
             The FHSA is not meant to run forever. It has a maximum lifespan, and understanding it keeps you from
             being caught out later.
@@ -222,7 +223,7 @@ export default function FHSAPlaybookPage() {
           </p>
 
           {/* INVEST */}
-          <div id="invest" className="cd-sec" style={{ scrollMarginTop: 70 }}>Should you invest it or leave it in cash?</div>
+          <h2 id="invest" className="cd-sec">Should you invest it or leave it in cash?</h2>
           <p>
             This is the most common and most costly FHSA mistake, so it gets its own section. The name has the word
             savings in it, and a great many people take that literally, open an FHSA at their bank, and leave the
@@ -238,7 +239,7 @@ export default function FHSAPlaybookPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Match the investment to the timeline</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The honest caveat is that your time horizon should guide how you invest. If your home purchase is many
               years away, broad low-cost equity exposure has room to grow. If you plan to buy in the next year or
               two, most people rightly get more conservative, because you do not want a market dip right before you
@@ -248,7 +249,7 @@ export default function FHSAPlaybookPage() {
           </div>
 
           {/* DEDUCTION */}
-          <div id="deduction" className="cd-sec" style={{ scrollMarginTop: 70 }}>When should you claim the deduction?</div>
+          <h2 id="deduction" className="cd-sec">When should you claim the deduction?</h2>
           <p>
             Here is a piece of flexibility that a lot of FHSA holders miss. Contributing and deducting are two
             separate steps, and they do not have to happen in the same year. Just like with an RRSP, you can
@@ -264,7 +265,7 @@ export default function FHSAPlaybookPage() {
           </p>
           <div className="cd-note">
             <div className="cap">A simple way to think about it</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Get the money into the account early so it can grow. Save the deduction for the year it is worth the
               most. You do not have to do this, and for many people claiming it right away is perfectly fine, but
               knowing the option exists can be worth real money if your income is about to jump.
@@ -272,7 +273,7 @@ export default function FHSAPlaybookPage() {
           </div>
 
           {/* HBP */}
-          <div id="hbp" className="cd-sec" style={{ scrollMarginTop: 70 }}>Can you stack it with the RRSP Home Buyers&apos; Plan?</div>
+          <h2 id="hbp" className="cd-sec">Can you stack it with the RRSP Home Buyers&apos; Plan?</h2>
           <p>
             The FHSA does not replace the RRSP Home Buyers&apos; Plan. You can use both for the same purchase, and
             stacking them is how you assemble a genuinely large down payment from registered money.
@@ -286,7 +287,7 @@ export default function FHSAPlaybookPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Two accounts, one down payment</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The FHSA gives you a tax-free withdrawal with no repayment. The HBP gives you access to RRSP money now
               in exchange for repaying it over 15 years. Because they are separate programs, you can use both for
               the same first home, which is the closest thing to a down-payment cheat code the tax system offers.
@@ -296,7 +297,7 @@ export default function FHSAPlaybookPage() {
           </div>
 
           {/* NOHOME */}
-          <div id="nohome" className="cd-sec" style={{ scrollMarginTop: 70 }}>What if you never buy a home?</div>
+          <h2 id="nohome" className="cd-sec">What if you never buy a home?</h2>
           <p>
             A fair worry stops some people from opening an FHSA at all: what if my plans change and I never actually
             buy? It is a reasonable question, and the answer is reassuring enough that it should not hold you back.
@@ -316,7 +317,7 @@ export default function FHSAPlaybookPage() {
           </p>
 
           {/* CAVEATS */}
-          <div id="caveats" className="cd-sec" style={{ scrollMarginTop: 70 }}>Who is the FHSA not for?</div>
+          <h2 id="caveats" className="cd-sec">Who is the FHSA not for?</h2>
           <p>
             The FHSA is excellent, but it is not for absolutely everyone, and pretending otherwise would not be
             honest. A few things to weigh.
@@ -330,7 +331,7 @@ export default function FHSAPlaybookPage() {
           </ul>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you understand the account, not personalized financial advice, and
               the contribution limits, eligibility rules, and Home Buyers&apos; Plan figures do change over time.
               Confirm the current numbers with the CRA or your financial institution before you act, and if your
@@ -338,19 +339,19 @@ export default function FHSAPlaybookPage() {
             </p>
           </div>
 
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>The FHSA is one piece of a bigger question: where your next saved dollar should actually go.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/personal-finance" className="cd-apply">More personal finance →</Link>
-            <Link href="/personal-finance/smith-manoeuvre" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>The Smith Manoeuvre →</Link>
+            <Link href="/personal-finance/smith-manoeuvre" className="cd-apply">The Smith Manoeuvre →</Link>
           </div>
           <Comments path="/personal-finance/fhsa-playbook-canada" />
         </div>

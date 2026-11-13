@@ -7,6 +7,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/travel/how-to-book-award-flights-canada" },
   title: "How to search for and book award flights from Canada: the method | FinTerminal",
   description:
     "A plain-English method for booking award flights from Canada: decide the trip, search award availability at the source (the airline or program site) and with award-search tools, treat availability as the real constraint, hold the seat, then transfer points in only once you can book. Aeroplan for Star, Avios and AAdvantage for oneworld. As of July 2026.",
@@ -53,7 +54,7 @@ const FAQ = [
 
 export default function HowToBookAwardFlightsCanadaPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-travel">
       <main>
         <div className="doc">
           <script
@@ -66,10 +67,10 @@ export default function HowToBookAwardFlightsCanadaPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/travel">travel</Link><span className="sep">/</span>
-            <span className="cur">how-to-book-award-flights-canada</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/travel">Travel</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">How to Search For and Book Award Flights From Canada</span>
           </nav>
           <ArticleSchema headline="How to search for and book award flights from Canada: the method" path="/travel/how-to-book-award-flights-canada" kicker="Travel & points" />
 
@@ -96,7 +97,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Do it in order. Decide the trip and check which points you have and in which currency. Search award
               availability at the source, the airline or program&apos;s own site, and optionally use an award-search tool
               to scan several programs at once. Treat availability as the real constraint, so be flexible on dates and
@@ -116,7 +117,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </div>
 
           {/* IDEA */}
-          <div id="idea" className="cd-sec" style={{ scrollMarginTop: 70 }}>The one habit that makes award booking work</div>
+          <h2 id="idea" className="cd-sec">The one habit that makes award booking work</h2>
           <p>
             If you remember one thing from this whole guide, make it this: find and hold the award seat before you
             transfer any points. Almost every expensive mistake in Canadian points comes from doing it backwards, moving
@@ -135,7 +136,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </p>
 
           {/* METHOD */}
-          <div id="method" className="cd-sec" style={{ scrollMarginTop: 70 }}>The method, step by step</div>
+          <h2 id="method" className="cd-sec">The method, step by step</h2>
           <p>
             Here is the whole process, start to finish. It is deliberately linear, because the order is what protects
             your points.
@@ -216,7 +217,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </div>
 
           {/* WHERE */}
-          <div id="where" className="cd-sec" style={{ scrollMarginTop: 70 }}>Where to search for the main Canadian programs</div>
+          <h2 id="where" className="cd-sec">Where to search for the main Canadian programs</h2>
           <p>
             The right place to search depends on which program you are booking with, and for a Canadian a handful cover
             most trips. In each case the program&apos;s own site is where you confirm and book, and the alliance a program
@@ -232,7 +233,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </ul>
           <div className="cd-note">
             <div className="cap">The program site is where a seat becomes real</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               You can spot availability in a lot of places, but the seat only counts when the program you plan to book
               with can price it and hold or ticket it. So scout wherever is convenient, then always confirm on the
               airline or program&apos;s own site before you transfer a single point. As of July 2026; availability and the
@@ -241,7 +242,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </div>
 
           {/* TOOLS */}
-          <div id="tools" className="cd-sec" style={{ scrollMarginTop: 70 }}>How award-search tools help (and their limits)</div>
+          <h2 id="tools" className="cd-sec">How award-search tools help (and their limits)</h2>
           <p>
             Searching program by program is slow, and this is where award-search tools earn their keep. Tools such as
             seats.aero and point.me scan many loyalty programs at once and show you where saver or partner award space
@@ -259,7 +260,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Use tools to scout, use the program to book</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Award-search tools scan many programs and can alert you when space opens, which is a real time-saver. But the
               airline or program site is the source of truth, and some tools are paid, so confirm current pricing and then
               confirm the seat itself on the program&apos;s own site. As of July 2026; tools, coverage, and pricing change.
@@ -267,7 +268,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </div>
 
           {/* GOTCHAS */}
-          <div id="gotchas" className="cd-sec" style={{ scrollMarginTop: 70 }}>Phone bookings and carrier surcharges</div>
+          <h2 id="gotchas" className="cd-sec">Phone bookings and carrier surcharges</h2>
           <p>
             Two honest gotchas catch people, and both are worth knowing before you plan. The first is that not all partner
             award space books online. A lot of it does, but some partner segments simply do not show up in a
@@ -284,7 +285,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </p>
           <div className="cd-note">
             <div className="cap">Check the full cash cost before you commit</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Before you transfer or book, look at the total cash cost the program shows, not just the points price. If the
               surcharges are heavy, it is often worth switching to a different program or partner for the same route. Our{" "}
               <Link href="/travel/aeroplan-sweet-spots">Aeroplan sweet spots</Link> and{" "}
@@ -294,7 +295,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </div>
 
           {/* NOTES */}
-          <div id="notes" className="cd-sec" style={{ scrollMarginTop: 70 }}>Universal notes before you transfer</div>
+          <h2 id="notes" className="cd-sec">Universal notes before you transfer</h2>
           <p>
             Whichever program you are booking with, the same handful of rules keep you out of trouble. They are the
             difference between a great redemption and a pile of stranded points.
@@ -308,7 +309,7 @@ export default function HowToBookAwardFlightsCanadaPage() {
             <li><strong>Everything changes, so confirm live.</strong> Availability, tools, fees, ratios, and partners all shift. Everything here is as of July 2026, so confirm on the program&apos;s own site before you transfer or book.</li>
           </ul>
 
-          <div className="cd-sec">The short version</div>
+          <h2 className="cd-sec">The short version</h2>
           <p>
             Award booking from Canada is a method, not a gamble. Decide the trip and know your points and currency. Search
             for the seat at the source, using an award-search tool to scan quickly but the airline or program site to
@@ -319,27 +320,27 @@ export default function HowToBookAwardFlightsCanadaPage() {
           </p>
 
           {/* FAQ */}
-          <div className="cd-sec">Frequently asked questions</div>
+          <h2 className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
           {/* KEEP GOING */}
-          <div id="deep" className="cd-sec" style={{ scrollMarginTop: 70 }}>Deep dives and next steps</div>
+          <h2 id="deep" className="cd-sec">Deep dives and next steps</h2>
           <p>
             Once you have the method down, the next step is the specific transfer and redemption. These walk through the
             exact mechanics and the sweet spots on each Canadian-friendly path.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             <Link href="/travel/points-transfer-partners-canada" className="cd-apply">The Canadian points-transfer map →</Link>
             <Link href="/travel/airline-alliances-guide-canada" className="cd-apply">The airline alliance guide for Canadians →</Link>
             <Link href="/travel/business-class-sweet-spots-canada" className="cd-apply">Business-class sweet spots from Canada →</Link>
             <Link href="/travel/aeroplan-sweet-spots" className="cd-apply">Aeroplan sweet spots →</Link>
             <Link href="/travel/avios-sweet-spots-rbc-avion-transfer" className="cd-apply">Avios sweet spots &amp; Avion transfer →</Link>
-            <Link href="/cards" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>Browse the cards →</Link>
+            <Link href="/cards" className="cd-apply">Browse the cards →</Link>
           </div>
           <Comments path="/travel/how-to-book-award-flights-canada" />
         </div>

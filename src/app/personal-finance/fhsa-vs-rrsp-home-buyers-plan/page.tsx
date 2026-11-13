@@ -8,6 +8,7 @@ import { ArticleSchema } from "@/components/ArticleSchema";
 import { Comments } from "@/components/Comments";
 
 export const metadata = {
+  alternates: { canonical: "/personal-finance/fhsa-vs-rrsp-home-buyers-plan" },
   title: "FHSA vs the RRSP Home Buyers' Plan: which to use for a first home | FinTerminal",
   description:
     "A plain-language head-to-head on funding a first home in Canada. The FHSA gives a tax-free withdrawal you never repay; the Home Buyers' Plan is a loan from your own RRSP you repay over 15 years. Which to prioritize, and how to use both. General info as of July 2026, not advice.",
@@ -60,7 +61,7 @@ const FAQ = [
 
 export default function FHSAvsHBPPage() {
   return (
-    <div className="app norail">
+    <div className="app norail tone-money">
       <main>
         <div className="doc">
           <script
@@ -77,10 +78,10 @@ export default function FHSAvsHBPPage() {
               }),
             }}
           />
-          <nav className="crumb">
-            <Link href="/">home</Link><span className="sep">/</span>
-            <Link href="/personal-finance">personal-finance</Link><span className="sep">/</span>
-            <span className="cur">fhsa-vs-rrsp-home-buyers-plan</span>
+          <nav className="crumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link><span className="sep">/</span>
+            <Link href="/personal-finance">Personal finance</Link><span className="sep">/</span>
+            <span className="cur" aria-current="page">FHSA vs the RRSP Home Buyers&apos; Plan: Which to Use for a First Home</span>
           </nav>
           <ArticleSchema headline="FHSA vs the RRSP Home Buyers' Plan: which to use for a first home" path="/personal-finance/fhsa-vs-rrsp-home-buyers-plan" kicker="Personal finance" />
 
@@ -113,7 +114,7 @@ export default function FHSAvsHBPPage() {
 
           <div className="cd-note short">
             <div className="cap">The short answer</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Use the FHSA first. A qualifying FHSA withdrawal for a first home is tax-free and you never repay it, on
               top of the deduction you got going in, so nothing else touches your down payment as kindly. The Home
               Buyers&apos; Plan is a loan from your own RRSP: you can pull out up to $60,000, but you must repay it into
@@ -132,7 +133,7 @@ export default function FHSAvsHBPPage() {
           </div>
 
           {/* DIFFERENCE */}
-          <div id="difference" className="cd-sec" style={{ scrollMarginTop: 70 }}>The one difference that decides it</div>
+          <h2 id="difference" className="cd-sec">The one difference that decides it</h2>
           <p>
             Almost everything that matters here comes down to one line: the FHSA withdrawal is a gift, and the Home
             Buyers&apos; Plan withdrawal is a loan. Get that straight and the rest follows.
@@ -153,7 +154,7 @@ export default function FHSAvsHBPPage() {
           </ul>
           <div className="cd-note">
             <div className="cap">Say it plainly</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               The FHSA gives you money you keep. The HBP gives you access to money you already had, on the condition you
               give it back to yourself on schedule. Both are useful, but they are not equal, and that is why the FHSA is
               almost always the first dollar you spend and the HBP is the second.
@@ -161,7 +162,7 @@ export default function FHSAvsHBPPage() {
           </div>
 
           {/* NUMBERS */}
-          <div id="numbers" className="cd-sec" style={{ scrollMarginTop: 70 }}>The limits, side by side</div>
+          <h2 id="numbers" className="cd-sec">The limits, side by side</h2>
           <p>
             Here are the numbers that matter for each program, verified against the CRA as of July 2026. Limits change,
             so treat these as the current figures and confirm before you plan around them.
@@ -195,7 +196,7 @@ export default function FHSAvsHBPPage() {
           </div>
           <div className="cd-note">
             <div className="cap">Per person, so a couple doubles up</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Both limits are per individual. If you and a partner are each eligible first-time buyers, each of you can
               run your own FHSA and each of you can make your own HBP withdrawal, which is how two people assemble a
               genuinely large down payment from registered money. What you can actually pull depends on what you have
@@ -204,7 +205,7 @@ export default function FHSAvsHBPPage() {
           </div>
 
           {/* DEDUCTION */}
-          <div id="deduction" className="cd-sec" style={{ scrollMarginTop: 70 }}>The deduction angle</div>
+          <h2 id="deduction" className="cd-sec">The deduction angle</h2>
           <p>
             People often assume the two accounts are a wash on tax because both involve a deduction somewhere. They are
             not, and this is the second reason the FHSA wins on the merits.
@@ -224,7 +225,7 @@ export default function FHSAvsHBPPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The tidy way to think about it</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               FHSA: deduction going in, tax-free coming out, no repayment. HBP: you already used your deduction years
               ago, and now you are borrowing tax-deferred money that you have to repay. Same idea of funding a home with
               registered money, very different value.
@@ -232,7 +233,7 @@ export default function FHSAvsHBPPage() {
           </div>
 
           {/* REPAYMENT */}
-          <div id="repayment" className="cd-sec" style={{ scrollMarginTop: 70 }}>How HBP repayment actually works</div>
+          <h2 id="repayment" className="cd-sec">How HBP repayment actually works</h2>
           <p>
             The repayment obligation is the part of the Home Buyers&apos; Plan that catches people off guard, so it is
             worth walking through carefully. This is where the loan nature of the HBP becomes real.
@@ -270,7 +271,7 @@ export default function FHSAvsHBPPage() {
           </div>
           <div className="cd-note">
             <div className="cap">Why this matters for your budget</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               An HBP withdrawal quietly adds a small annual commitment to your finances for years after you buy, right
               when a new mortgage and the costs of a home are already stretching you. It is manageable and plenty of
               people use it well, but it is not free, and pretending it is would not be honest. Plan the repayment into
@@ -279,7 +280,7 @@ export default function FHSAvsHBPPage() {
           </div>
 
           {/* PRIORITY */}
-          <div id="priority" className="cd-sec" style={{ scrollMarginTop: 70 }}>Why the FHSA usually goes first</div>
+          <h2 id="priority" className="cd-sec">Why the FHSA usually goes first</h2>
           <p>
             Put the two side by side and the priority order almost writes itself for a typical first-time buyer. The FHSA
             gives you a deduction and a tax-free withdrawal and asks nothing in return. The HBP gives you access to money
@@ -305,7 +306,7 @@ export default function FHSAvsHBPPage() {
           </p>
 
           {/* BOTH */}
-          <div id="both" className="cd-sec" style={{ scrollMarginTop: 70 }}>Stacking both for a bigger down payment</div>
+          <h2 id="both" className="cd-sec">Stacking both for a bigger down payment</h2>
           <p>
             You do not have to choose. The FHSA and the Home Buyers&apos; Plan are separate programs with separate rules,
             so you can use both on the same first home. That is how you assemble a large down payment out of registered
@@ -321,7 +322,7 @@ export default function FHSAvsHBPPage() {
           </p>
           <div className="cd-note">
             <div className="cap">The sensible stacking order</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               Spend the FHSA first because it is tax-free with no repayment, then add an HBP withdrawal only for the
               amount you still need. That keeps your repayment obligation as small as it can be while still getting you to
               the down payment you are aiming for. If you are also weighing this against other savings goals, our{" "}
@@ -336,7 +337,7 @@ export default function FHSAvsHBPPage() {
           </div>
 
           {/* QUALIFY */}
-          <div id="qualify" className="cd-sec" style={{ scrollMarginTop: 70 }}>First-time buyer and the qualifying withdrawal</div>
+          <h2 id="qualify" className="cd-sec">First-time buyer and the qualifying withdrawal</h2>
           <p>
             Both programs are built for first-time buyers, and both use a similar test that hinges on not having owned and
             lived in your own home recently. This is a high-level view, so check the precise CRA wording for your
@@ -365,7 +366,7 @@ export default function FHSAvsHBPPage() {
           </p>
 
           {/* WHO */}
-          <div id="who" className="cd-sec" style={{ scrollMarginTop: 70 }}>Who each one suits</div>
+          <h2 id="who" className="cd-sec">Who each one suits</h2>
           <p>
             The order is not identical for everyone. Here is a quick read on who leans which way, keeping in mind that for
             most people the answer is simply both, FHSA first.
@@ -397,7 +398,7 @@ export default function FHSAvsHBPPage() {
           </div>
           <div className="cd-note">
             <div className="cap">A friendly reminder</div>
-            <p style={{ margin: 0 }} className="sub">
+            <p className="sub">
               This is general information to help you compare the two programs, not personalized financial or tax advice,
               and the limits, eligibility rules, and repayment terms do change. Confirm the current numbers with the CRA
               or your financial institution before you act, and if your situation is complicated, an hour with a
@@ -406,21 +407,21 @@ export default function FHSAvsHBPPage() {
           </div>
 
           {/* FAQ */}
-          <div id="faq" className="cd-sec" style={{ scrollMarginTop: 70 }}>Frequently asked questions</div>
+          <h2 id="faq" className="cd-sec">Frequently asked questions</h2>
           {FAQ.map((f) => (
             <div key={f.q}>
-              <h4>{f.q}</h4>
+              <h3 className="faq-q">{f.q}</h3>
               <p>{f.a}</p>
             </div>
           ))}
 
-          <div className="cd-sec">Keep going</div>
+          <h2 className="cd-sec">Keep going</h2>
           <p>
             The FHSA versus HBP question is really one piece of a bigger plan: how you fund a first home, and where every
             saved dollar should go before then. The guides below carry the deeper mechanics and the broader order of
             operations.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          <div className="cta-row">
             {isPFPublished("fhsa-playbook-canada") && (
               <Link href="/personal-finance/fhsa-playbook-canada" className="cd-apply">
                 The FHSA playbook &rarr;
@@ -431,7 +432,7 @@ export default function FHSAvsHBPPage() {
                 What order to fund your accounts &rarr;
               </Link>
             )}
-            <Link href="/personal-finance" className="cd-apply" style={{ borderColor: "var(--line-strong)", color: "var(--ink)" }}>
+            <Link href="/personal-finance" className="cd-apply">
               More personal finance &rarr;
             </Link>
           </div>
