@@ -140,7 +140,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* ── layout primitives ─────────────────────────────────────────────────── */
 .wrap{width:100%;max-width:var(--w-page);margin:0 auto;padding:0 var(--gutter)}
-.page{padding:var(--s6) 0 var(--s7)}
+.page{padding-top:var(--s6);padding-bottom:var(--s7)}
 .read{max-width:var(--w-read)}
 .stack>*+*{margin-top:var(--s4)}
 .section{margin-top:var(--s7)}
@@ -761,7 +761,7 @@ select.finput,.fselect{cursor:pointer;appearance:none;-webkit-appearance:none;pa
 /* ── responsive gutters ───────────────────────────────────────────────── */
 @media (max-width:768px){
   :root{--gutter:16px}
-  .page{padding:var(--s5) 0 var(--s6)}
+  .page{padding-top:var(--s5);padding-bottom:var(--s6)}
   .app>main,.app.norail>main{padding-top:var(--s5)}
   .cd-sec{margin-top:var(--s6)}
   .doc .lede{font-size:17.5px}
