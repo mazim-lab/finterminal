@@ -1229,6 +1229,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "delta", "points", "award-booking", "business-class", "alliances", "transfers"],
   },
+
+  {
+    path: "/travel/sweet-spots/alaska-finnair-business-new-york-helsinki-55k",
+    title: "Alaska sweet spot: Finnair lie-flat A350 business class from New York to Helsinki for about 55,000 Atmos points, with no fuel surcharge",
+    dek: "Alaska's Mileage Plan is now Atmos Rewards, but it still prices airline partners off a fixed distance chart and passes no fuel surcharge, so a fresh European sweet spot is a lie-flat Finnair A350 business seat from New York to Helsinki for about 55,000 points one-way, with economy around 27,500 and Helsinki opening onward to the Nordics, the Baltics, and even Asia.",
+    section: "Sweet spot",
+    tags: ["travel", "alaska", "points", "award-booking", "business-class", "alliances"],
+  },
 ];
 
 export function listTags(): Tag[] {
