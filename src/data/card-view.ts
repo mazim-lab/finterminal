@@ -29,6 +29,9 @@ export interface SlimCard {
   categories: string[];
   benefits: Benefits;
   earn_rates: EarnRate[];
+  /** isTextOnlyBonus(), worked out on the server (the slim payload carries no
+   *  bonus text). Optional so older callers stay valid. */
+  bonus_text_only?: boolean;
 }
 
 /** A points welcome bonus in a currency we don't value (cpp_cad null: VIPorter
@@ -36,6 +39,19 @@ export interface SlimCard {
  *  valued": never as a $0 or negative first-year value. */
 export function isUnvalued(c: { welcome_bonus_points: number | null; cpp_cad: number | null }): boolean {
   return !!c.welcome_bonus_points && c.welcome_bonus_points > 0 && c.cpp_cad == null;
+}
+
+/** Bonus text that says there is no offer ("No welcome offer.", "No points or
+ *  cash welcome bonus...", "Not open to new applicants..."). */
+const NO_OFFER_TEXT = /^\s*(no\b|not open\b)/i;
+
+/** Welcome-bonus text that describes a real offer with no points count and no
+ *  dollar value (free nights, a device, a companion pass, an intro rate). These
+ *  surfaces say "See offer" instead of "None listed"; the offer text is already
+ *  on the page. Text that says there is no offer does not count. */
+export function isTextOnlyBonus(c: { welcome_bonus?: string | null; welcome_bonus_points: number | null; welcome_bonus_value: number }): boolean {
+  const t = (c.welcome_bonus || '').trim();
+  return !!t && !NO_OFFER_TEXT.test(t) && !c.welcome_bonus_points && !(c.welcome_bonus_value > 0);
 }
 
 /** Sort helper: unvalued cards go after every valued card, whatever the sort

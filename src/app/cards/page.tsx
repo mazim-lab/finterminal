@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { allCards, CARDS_VERIFIED } from '@/data/cards';
-import type { SlimCard } from '@/data/card-view';
+import { isTextOnlyBonus, type SlimCard } from '@/data/card-view';
 import { VerifiedStamp } from '@/components/VerifiedStamp';
 import { ogMeta } from '@/lib/og';
 import Explorer from './Explorer';
@@ -36,6 +36,7 @@ export default function CardsPage() {
     categories: c.categories,
     benefits: c.benefits,
     earn_rates: c.earn_rates.slice(0, 4),
+    bonus_text_only: isTextOnlyBonus(c),
   }));
   const networks = [...new Set(allCards.map((c) => c.network))].filter((n) => n !== 'Unknown').sort();
   const caCount = allCards.filter((c) => c.country === 'CA').length;

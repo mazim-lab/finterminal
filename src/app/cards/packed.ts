@@ -35,6 +35,7 @@ export type PackedCard = [
   categories: string,       // comma separated
   benefits: number,         // bitmask over BENEFIT_BITS
   earn: string[],           // flat [category, rate, category, rate, ...]
+  bonusTextOnly: 0 | 1,     // 1 = bonus text with no points or value ("See offer")
 ];
 
 export function packCard(c: SlimCard): PackedCard {
@@ -45,11 +46,12 @@ export function packCard(c: SlimCard): PackedCard {
     c.annual_fee, c.welcome_bonus_value, c.welcome_bonus_points ?? 0, c.first_year_value,
     c.cpp_cad ?? 0, c.country === 'US' ? 1 : 0, c.network, c.categories.join(','), mask,
     c.earn_rates.flatMap((e) => [e.category, e.rate]),
+    c.bonus_text_only ? 1 : 0,
   ];
 }
 
 export function unpackCard(p: PackedCard): SlimCard {
-  const [slug, name, issuer, program, cardType, fee, bonusValue, bonusPoints, fyv, cpp, country, network, cats, mask, earn] = p;
+  const [slug, name, issuer, program, cardType, fee, bonusValue, bonusPoints, fyv, cpp, country, network, cats, mask, earn, textOnly] = p;
   const benefits = Object.fromEntries(BENEFIT_BITS.map((k, i) => [k, (mask & (1 << i)) !== 0])) as unknown as Benefits;
   const earn_rates = [];
   for (let i = 0; i + 1 < earn.length; i += 2) earn_rates.push({ category: earn[i], rate: earn[i + 1] });
@@ -58,5 +60,6 @@ export function unpackCard(p: PackedCard): SlimCard {
     annual_fee: fee, welcome_bonus_value: bonusValue, welcome_bonus_points: bonusPoints || null,
     first_year_value: fyv, cpp_cad: cpp || null, country: country === 1 ? 'US' : 'CA',
     network, categories: cats ? cats.split(',') : [], benefits, earn_rates,
+    bonus_text_only: textOnly === 1,
   };
 }

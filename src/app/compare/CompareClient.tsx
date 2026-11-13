@@ -4,7 +4,7 @@ import { Fragment, Suspense, useCallback, useEffect, useMemo, useRef, useState }
 import type { ReactNode } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { Benefits, EarnRate } from '@/data/cards';
-import { formatCurrency, programName, isUnvalued } from '@/data/card-view';
+import { formatCurrency, programName, isUnvalued, isTextOnlyBonus } from '@/data/card-view';
 import s from './compare.module.css';
 
 export interface CompareCard {
@@ -147,7 +147,8 @@ export default function CompareClient({
     { label: 'Welcome bonus', cells: (c) => (
       <span className={s.num}>
         {c.welcome_bonus_points ? `${c.welcome_bonus_points.toLocaleString('en-CA')} pts`
-          : c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country) : <span className={s.none}>None listed</span>}
+          : c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country)
+            : isTextOnlyBonus(c) ? <span className={s.none}>See offer</span> : <span className={s.none}>None listed</span>}
         {c.welcome_bonus_points && c.welcome_bonus_value > 0 ? <span className={s.sub}>worth about {formatCurrency(c.welcome_bonus_value, c.country)}</span> : null}
       </span>
     ) },

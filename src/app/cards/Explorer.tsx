@@ -333,7 +333,8 @@ export default function Explorer({
                         <td className="B">
                           {c.welcome_bonus_points
                             ? <>{num(c.welcome_bonus_points)}<small> pts</small></>
-                            : c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country) : <span className="no">none listed</span>}
+                            : c.welcome_bonus_value > 0 ? formatCurrency(c.welcome_bonus_value, c.country)
+                              : c.bonus_text_only ? <span className="no">See offer</span> : <span className="no">none listed</span>}
                         </td>
                         <td className="P col-cpp">{c.cpp_cad != null ? cppFor(c).toFixed(2) : 'n/a'}</td>
                         <td className="V">

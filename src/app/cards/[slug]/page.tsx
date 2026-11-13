@@ -1,5 +1,5 @@
 import { allCards, Card, BENEFIT_LABELS, Benefits, formatCurrency } from '@/data/cards';
-import { receiptLines, programName, isUnvalued, compareByValue } from '@/data/card-view';
+import { receiptLines, programName, isUnvalued, isTextOnlyBonus, compareByValue } from '@/data/card-view';
 import { valuationFor } from '@/data/point-valuations';
 import { ogMeta } from '@/lib/og';
 import { formatBonusText } from '@/lib/bonusText';
@@ -163,7 +163,7 @@ function buildBottomLine(card: Card): string {
   let s4 = '';
   if (card.cons.length > 0) {
     s4 = `One thing to weigh: ${stripTrailingPunct(card.cons[0])}.`;
-  } else if (card.annual_fee > 0 && !hasBonus) {
+  } else if (card.annual_fee > 0 && !hasBonus && !isTextOnlyBonus(card)) {
     s4 = `Just note it charges an annual fee without a listed welcome bonus, so the everyday earn rates need to carry their weight.`;
   } else if (card.foreign_transaction_fee === true) {
     const pct = card.foreign_transaction_fee_pct != null ? `${card.foreign_transaction_fee_pct}%` : 'the standard';
@@ -386,11 +386,12 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
                 <dd className={s.vv}>
                   {card.welcome_bonus_points
                     ? card.welcome_bonus_points.toLocaleString('en-CA')
-                    : card.welcome_bonus_value > 0 ? formatCurrency(card.welcome_bonus_value, cur) : 'None listed'}
+                    : card.welcome_bonus_value > 0 ? formatCurrency(card.welcome_bonus_value, cur)
+                      : isTextOnlyBonus(card) ? 'See offer' : 'None listed'}
                 </dd>
                 <dd className={s.vs}>{card.welcome_bonus_points ? 'points' : card.welcome_bonus_value > 0 ? 'estimated value' : ' '}</dd>
               </div>
-              {card.cpp_cad != null && (
+              {card.cpp_cad != null && !!card.welcome_bonus_points && (
                 <div className={s.vital}>
                   <dt>Base value per point</dt>
                   <dd className={s.vv}>{cpp.toFixed(2)}¢</dd>
