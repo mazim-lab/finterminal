@@ -27,7 +27,7 @@ const TOC = [
 const FAQ = [
   {
     q: "Where should I keep my emergency fund in Canada?",
-    a: "For an emergency fund, liquidity matters more than squeezing out the last fraction of a percent, so a high-interest savings account is usually the right home. You can withdraw any time, the balance is insured if the provider is a CDIC member (or covered by provincial deposit insurance at a credit union), and everyday rates are broadly in the mid-2 percent range as of July 2026. A locked GIC is a poor fit for emergency money because you cannot get at it without breaking the term. See our savings-rate page for the current live numbers before you choose a provider.",
+    a: "For an emergency fund, liquidity matters more than squeezing out the last fraction of a percent, so a high-interest savings account is usually the right home. You can withdraw any time, the balance is insured if the provider is a CDIC member (or covered by provincial deposit insurance at a credit union), and everyday rates are broadly in the mid-2 percent range as of July 2026. A locked GIC is a poor fit for emergency money because you cannot get at it without breaking the term. See our savings-rate page for the latest rates we have checked, each with the date we checked it, and confirm on the provider's own site before you choose.",
   },
   {
     q: "Is a GIC or a savings account better for a down payment?",
@@ -89,7 +89,7 @@ export default function WhereToHoldCashPage() {
             decision around your goal and your time horizon, the choice between a high-interest savings account, a GIC,
             a high-interest chequing account, and a cash or HISA ETF gets a lot simpler. Below is an honest, plain-language
             walk through each option, what it is genuinely good for, and how the insurance and tax angles differ, with
-            links to our own rate pages whenever you need the live numbers.
+            links to our own rate pages whenever you need current numbers, each dated with when we last checked it.
           </p>
           <div className="docmeta">
             <span className="gd">PERSONAL FINANCE</span><span className="sep">·</span>
@@ -178,8 +178,8 @@ export default function WhereToHoldCashPage() {
               <strong>High-interest savings account (HISA):</strong> fully liquid, so you can move money in and out any
               time. Deposits are insured if the provider is a CDIC member, or covered by provincial deposit insurance at a
               credit union. The rate is variable and broadly tracks the Bank of Canada's overnight rate, so it can drift up
-              or down over time. This is the default home for an emergency fund and most short-term cash. For the current
-              live everyday rates, see our{" "}
+              or down over time. This is the default home for an emergency fund and most short-term cash. For the latest
+              everyday rates we have checked, see our{" "}
               <Link href="/personal-finance/best-savings-account-rates-canada">best savings account rates page</Link>.
             </li>
             <li>
@@ -188,7 +188,7 @@ export default function WhereToHoldCashPage() {
               terms) lets you keep some money maturing regularly while the rest earns the longer rate. Eligible GICs from
               CDIC members are insured up to the usual limit. Our{" "}
               <Link href="/personal-finance/best-gic-rates-canada">best GIC rates page</Link> covers cashable versus
-              non-redeemable, laddering, and the live term-by-term rates.
+              non-redeemable, laddering, and the term-by-term rates we last checked.
             </li>
             <li>
               <strong>High-interest or hybrid chequing:</strong> an account that gives you everyday spending access and
@@ -212,7 +212,7 @@ export default function WhereToHoldCashPage() {
           <h2 id="table" className="cd-sec">The options, side by side</h2>
           <p>
             A quick comparison across the four homes for cash. Yields move constantly, so we describe them in current
-            ranges rather than pinning a number, and link out to our rate pages for the live figures.
+            ranges rather than pinning a number, and link out to our rate pages for dated figures.
           </p>
           <div className="kv" style={{ marginTop: 10 }}>
             <div className="kvrow">
@@ -222,7 +222,7 @@ export default function WhereToHoldCashPage() {
                 rates broadly mid-2 percent range as of July 2026, tracking the Bank of Canada.{" "}
                 <strong>Insurance:</strong> CDIC up to $100,000 per category per member (or provincial coverage at a credit
                 union). <strong>Best for:</strong> emergency funds and short-term cash you may need soon.{" "}
-                <Link href="/personal-finance/best-savings-account-rates-canada">Live savings rates</Link>.
+                <Link href="/personal-finance/best-savings-account-rates-canada">Savings rates we track</Link>.
               </div>
             </div>
             <div className="kvrow">
@@ -233,7 +233,7 @@ export default function WhereToHoldCashPage() {
                 eligible GICs from CDIC members insured up to $100,000 per category per member (credit unions use
                 provincial coverage).{" "}
                 <strong>Best for:</strong> a known-date goal like a down payment; ladder to smooth timing.{" "}
-                <Link href="/personal-finance/best-gic-rates-canada">Live GIC rates</Link>.
+                <Link href="/personal-finance/best-gic-rates-canada">GIC rates we track</Link>.
               </div>
             </div>
             <div className="kvrow">
@@ -264,7 +264,7 @@ export default function WhereToHoldCashPage() {
               Canada and cash-ETF yields track the overnight rate minus a fee, so all of them shift over time. Use this
               guide to decide which vehicle fits your goal, then open our{" "}
               <Link href="/personal-finance/best-savings-account-rates-canada">savings</Link> and{" "}
-              <Link href="/personal-finance/best-gic-rates-canada">GIC</Link> rate pages for the current live numbers
+              <Link href="/personal-finance/best-gic-rates-canada">GIC</Link> rate pages for the latest dated numbers
               before you move money. Rates and product details change; confirm before you act.
             </p>
           </div>
@@ -329,7 +329,7 @@ export default function WhereToHoldCashPage() {
           <h2 className="cd-sec">Keep going</h2>
           <p>
             Where to hold your cash is really a set of small decisions, one per pot of money, and the three rate pages
-            below carry the live numbers you need to act on this framework. Liquid money in a good savings account,
+            below carry the dated numbers you need to act on this framework. Liquid money in a good savings account,
             known-date money laddered in GICs, and a chequing account that pays you to open it all fit together.
           </p>
           <div className="cta-row">

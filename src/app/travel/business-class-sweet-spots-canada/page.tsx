@@ -82,7 +82,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
             same cabin that sells for several thousand dollars in cash can book for a fixed, often modest number of
             miles. Those bargains have a name in the hobby, sweet spots, and this page is the hub that points you to the
             ones a Canadian can actually reach. We are not going to restate every mileage number here, because those move
-            around and we keep the live figures in our own deep-dives. Instead this maps the landscape: what a sweet spot
+            around and we keep the detailed, dated figures in our own deep-dives. Instead this maps the landscape: what a sweet spot
             is, the honest reality of availability and surcharges, which Canadian currency feeds each one, and where to
             read the full worked example. Follow the links and you will always land on numbers we maintain rather than a
             price we invented.
@@ -282,7 +282,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
             AAdvantage for oneworld, reached from RBC Avion Elite; and Avios for surcharge-light partners like Aer
             Lingus, fed by both. The honest catch is that availability is limited, surcharges vary a lot, and every
             transfer is one-way, so you find the seat first and move points second. Use this hub to pick the right
-            program, then follow the deep-dive for the live numbers, and confirm every figure on the program&apos;s own
+            program, then follow the deep-dive for the detailed numbers, and confirm every figure on the program&apos;s own
             site before you book. Do that and one balance of points turns into a seat you would never have paid cash for.
           </p>
 
@@ -299,7 +299,7 @@ export default function BusinessClassSweetSpotsCanadaPage() {
           <h2 id="deep" className="cd-sec">Keep going</h2>
           <p>
             Pick the program that matches your points and your destination, then go deeper on the specific transfer and
-            redemption. These walk through the exact mechanics and the live numbers on each Canadian-friendly path.
+            redemption. These walk through the exact mechanics and the numbers on each Canadian-friendly path.
           </p>
           <div className="cta-row">
             <Link href="/travel/aeroplan-sweet-spots" className="cd-apply">Aeroplan sweet spots →</Link>
