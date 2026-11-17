@@ -1237,6 +1237,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "alaska", "points", "award-booking", "business-class", "alliances"],
   },
+
+  {
+    path: "/travel/sweet-spots/flying-blue-air-europa-business-madrid-south-america-53k",
+    title: "Flying Blue sweet spot: lie-flat Air Europa business class from Madrid to South America from about 53,000 miles one-way, with no fuel surcharge and only around 50 euros in taxes",
+    dek: "Flying Blue prices awards dynamically and raised the surcharges on its own Air France and KLM metal in 2026, but a durable corner runs through partner Air Europa, a SkyTeam carrier that passes no fuel surcharge, so a lie-flat Air Europa 787 business seat from Madrid to South America has been pricing from roughly 53,000 miles one-way with only about 40 to 60 euros in taxes, and Amex Canada now moves Membership Rewards to Flying Blue at a full 1 to 1.",
+    section: "Sweet spot",
+    tags: ["travel", "flying-blue", "amex", "points", "award-booking", "business-class", "alliances"],
+  },
 ];
 
 export function listTags(): Tag[] {
