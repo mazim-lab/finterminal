@@ -576,6 +576,12 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/wealthsimple-credit-cards-award-ticket-travel-insurance-november-16",
+    title: "Wealthsimple has quietly extended the travel insurance on its Visa Infinite and Visa Infinite Privilege cards to cover award tickets, so a flight booked with points is now protected as long as you put the taxes and fees on the card",
+    section: "News",
+    tags: ["news", "cards", "travel-insurance", "travel-cards", "travel"],
+  },
+  {
     path: "/news/marriott-bonvoy-amex-canada-new-bright-card-gold-status-november-10",
     title: "American Express and Marriott Bonvoy are reshaping their Canadian card lineup on February 9, adding a no-annual-fee Marriott Bonvoy Bright card, upgrading the two existing cards from Silver to Gold elite status, and tying their annual free night to a new 3,000 dollar spend",
     section: "News",
