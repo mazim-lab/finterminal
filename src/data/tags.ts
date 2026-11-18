@@ -576,6 +576,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/air-canada-basic-fares-premium-economy-business-class-north-america-november-17",
+    title: "Following up on our July note, Air Canada has extended its Premium Economy Basic and Business Class Basic fares to North America, so the cheaper premium cabins now show up on flights within Canada and across the border to the United States",
+    dek: "Air Canada has widened its stripped-down Premium Economy Basic and Business Class Basic fares to flights within Canada and to the United States, keeping the seat and meal but dropping free seat selection, a second bag, refunds, and eUpgrade eligibility.",
+    section: "News",
+    tags: ["news", "aeroplan", "business-class", "travel"],
+  },
+  {
     path: "/news/wealthsimple-credit-cards-award-ticket-travel-insurance-november-16",
     title: "Wealthsimple has quietly extended the travel insurance on its Visa Infinite and Visa Infinite Privilege cards to cover award tickets, so a flight booked with points is now protected as long as you put the taxes and fees on the card",
     section: "News",
