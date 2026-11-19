@@ -576,6 +576,20 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/world-of-hyatt-2027-milestone-rewards-enhancements-november-18",
+    title: "World of Hyatt is rebuilding its Milestone Rewards for 2027, handing out perks far earlier in the year with a reward as soon as 10 nights, richer free-night and parking choices at the top, and the ability to stack more awards on a single stay",
+    dek: "World of Hyatt is rebuilding its Milestone Rewards for 2027, with a new reward at just 10 nights, more free-night and credit choices at the top, awards good for 365 days and combinable on one stay, and Globalist free parking moving into the milestone ladder.",
+    section: "News",
+    tags: ["news", "travel", "points"],
+  },
+  {
+    path: "/news/delta-skymiles-world-of-hyatt-partnership-live-november-17",
+    title: "The Delta SkyMiles and World of Hyatt partnership is now live, so linking the two accounts lets you earn in both currencies on the same spending and, with enough Hyatt nights, pull Delta credits and even Medallion status out of Milestone Rewards",
+    dek: "The Delta SkyMiles and World of Hyatt partnership went live on November 17, letting linked members earn in both programs at once, grab small sign-up bonuses, and reach Delta certificates and even Medallion status through Hyatt's Milestone Rewards, though for most Canadians the Aeroplan and Hyatt link is still the better pairing.",
+    section: "News",
+    tags: ["news", "travel", "points", "delta"],
+  },
+  {
     path: "/news/air-canada-basic-fares-premium-economy-business-class-north-america-november-17",
     title: "Following up on our July note, Air Canada has extended its Premium Economy Basic and Business Class Basic fares to North America, so the cheaper premium cabins now show up on flights within Canada and across the border to the United States",
     dek: "Air Canada has widened its stripped-down Premium Economy Basic and Business Class Basic fares to flights within Canada and to the United States, keeping the seat and meal but dropping free seat selection, a second bag, refunds, and eUpgrade eligibility.",
