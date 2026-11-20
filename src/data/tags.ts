@@ -1279,6 +1279,14 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "flying-blue", "amex", "points", "award-booking", "business-class", "alliances"],
   },
+
+  {
+    path: "/travel/sweet-spots/aeroplan-air-new-zealand-business-vancouver-auckland-85k",
+    title: "Aeroplan sweet spot: lie-flat Air New Zealand Business Premier nonstop from Vancouver to Auckland for about 85,000 points one-way, surcharge-free",
+    dek: "Air Canada prices its own flights dynamically, but Aeroplan still prices Star Alliance partners off a fixed distance chart and passes no fuel surcharge, so a lie-flat Air New Zealand Business Premier seat nonstop from Vancouver to Auckland sits in the 5,001 to 7,500 mile band at about 85,000 points one-way, with only modest taxes of well under 100 dollars on top.",
+    section: "Sweet spot",
+    tags: ["travel", "aeroplan", "amex", "points", "award-booking", "business-class", "alliances"],
+  },
 ];
 
 export function listTags(): Tag[] {
