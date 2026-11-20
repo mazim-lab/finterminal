@@ -576,6 +576,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-rewards-bonus-non-stop-domestic-routes-return-november-18",
+    title: "WestJet is bringing back a batch of non-stop domestic routes for spring 2027, from Winnipeg and Edmonton to Montreal and Ottawa and from Kelowna to Toronto, and it is dangling a WestJet Rewards bonus for anyone who books them before the end of the year",
+    dek: "WestJet is restoring non-stop flights from Winnipeg and Edmonton to Montreal and Ottawa and from Kelowna to Toronto for spring 2027, and bookings of those routes made before December 31, 2026 earn a WestJet Rewards bonus: 100 percent extra Tier Qualifying Spend for top-tier members and triple WestJet Points for entry-level Teal members.",
+    section: "News",
+    tags: ["news", "westjet", "travel", "points"],
+  },
+  {
     path: "/news/world-of-hyatt-2027-milestone-rewards-enhancements-november-18",
     title: "World of Hyatt is rebuilding its Milestone Rewards for 2027, handing out perks far earlier in the year with a reward as soon as 10 nights, richer free-night and parking choices at the top, and the ability to stack more awards on a single stay",
     dek: "World of Hyatt is rebuilding its Milestone Rewards for 2027, with a new reward at just 10 nights, more free-night and credit choices at the top, awards good for 365 days and combinable on one stay, and Globalist free parking moving into the milestone ladder.",
