@@ -576,6 +576,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/wealthsimple-flight-delay-cash-back-up-to-300-november-19",
+    title: "Wealthsimple has launched Flight Delay Cash Back on its Visa Infinite cards, paying you a flat 100 or 300 dollars straight to your cash back balance when a flight you registered leaves at least three hours late, though for now it is locked behind the high-net-worth Generation tier",
+    dek: "Wealthsimple's new Flight Delay Cash Back pays a fixed, automatic 100 dollars for a departure delay of three to under six hours and 300 dollars at six hours or more, credited to your card balance with no receipts, but it is currently limited to top-tier Generation clients.",
+    section: "News",
+    tags: ["news", "cash-back", "travel"],
+  },
+  {
     path: "/news/westjet-rewards-bonus-non-stop-domestic-routes-return-november-18",
     title: "WestJet is bringing back a batch of non-stop domestic routes for spring 2027, from Winnipeg and Edmonton to Montreal and Ottawa and from Kelowna to Toronto, and it is dangling a WestJet Rewards bonus for anyone who books them before the end of the year",
     dek: "WestJet is restoring non-stop flights from Winnipeg and Edmonton to Montreal and Ottawa and from Kelowna to Toronto for spring 2027, and bookings of those routes made before December 31, 2026 earn a WestJet Rewards bonus: 100 percent extra Tier Qualifying Spend for top-tier members and triple WestJet Points for entry-level Teal members.",
