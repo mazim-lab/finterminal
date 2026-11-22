@@ -576,6 +576,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/aeroplan-black-friday-100-million-bonus-points-share-november-22",
+    title: "Aeroplan's Black Friday headline offer opens today, a shared pool of 100 million bonus points that you earn by registering your Aeroplan number and then booking a paid Air Canada flight or Vacations package, with every registered member guaranteed at least 1,000 points",
+    dek: "Aeroplan's Black Friday flight bonus opened November 22, 2026: register your Aeroplan number first, then book a cash Air Canada flight or Vacations package by November 29 for travel through September 30, 2027, to earn a share of a 100 million point pool, with every registered member guaranteed at least 1,000 bonus points.",
+    section: "News",
+    tags: ["news", "aeroplan", "travel", "points"],
+  },
+  {
     path: "/news/wealthsimple-flight-delay-cash-back-up-to-300-november-19",
     title: "Wealthsimple has launched Flight Delay Cash Back on its Visa Infinite cards, paying you a flat 100 or 300 dollars straight to your cash back balance when a flight you registered leaves at least three hours late, though for now it is locked behind the high-net-worth Generation tier",
     dek: "Wealthsimple's new Flight Delay Cash Back pays a fixed, automatic 100 dollars for a departure delay of three to under six hours and 300 dollars at six hours or more, credited to your card balance with no receipts, but it is currently limited to top-tier Generation clients.",
