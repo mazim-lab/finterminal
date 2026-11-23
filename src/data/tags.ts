@@ -576,6 +576,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-ordered-pay-flight-delay-bc-tribunal-appr-november-21",
+    title: "A B.C. tribunal has ordered WestJet to pay a family about 2,227 dollars over a nearly 16-hour delay, rejecting the airline's safety-maintenance excuse because its own paperwork blamed a damaged cargo net rather than the weather it pointed to",
+    dek: "The B.C. Civil Resolution Tribunal ordered WestJet to pay about 2,226.92 dollars, including 1,000 dollars per traveller under the Air Passenger Protection Regulations, after finding the airline's own defect report blamed a belt loader rather than the weather it cited, so the nearly 16-hour delay was within its control and not required for safety.",
+    section: "News",
+    tags: ["news", "westjet", "travel"],
+  },
+  {
     path: "/news/aeroplan-black-friday-100-million-bonus-points-share-november-22",
     title: "Aeroplan's Black Friday headline offer opens today, a shared pool of 100 million bonus points that you earn by registering your Aeroplan number and then booking a paid Air Canada flight or Vacations package, with every registered member guaranteed at least 1,000 points",
     dek: "Aeroplan's Black Friday flight bonus opened November 22, 2026: register your Aeroplan number first, then book a cash Air Canada flight or Vacations package by November 29 for travel through September 30, 2027, to earn a share of a 100 million point pool, with every registered member guaranteed at least 1,000 bonus points.",
