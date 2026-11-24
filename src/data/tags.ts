@@ -1315,6 +1315,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "aeroplan", "amex", "points", "award-booking", "business-class", "alliances"],
   },
+  {
+    path: "/travel/sweet-spots/avios-west-coast-hawaii-qatar-16000",
+    title: "Avios sweet spot: a West Coast to Hawaii economy seat on American or Alaska for about 16,000 Qatar Avios one-way, with no fuel surcharge and just a few dollars of tax",
+    dek: "Avios is one currency shared across the British Airways family, and Qatar Airways Privilege Club prices American and Alaska flights off its own distance chart, so a nonstop from any US West Coast gateway to Hawaii lands in the 2,001 to 3,000 mile band at about 16,000 Avios one-way in economy, surcharge-free, with only the roughly 5.60 US dollars in security fee on top.",
+    section: "Sweet spot",
+    tags: ["travel", "avios", "rbc-avion", "amex", "points", "award-booking", "transfers"],
+  },
 ];
 
 export function listTags(): Tag[] {
