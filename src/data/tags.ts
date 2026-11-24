@@ -576,6 +576,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/marriott-bonvoy-cyber-week-sale-25-percent-app-november-24",
+    title: "Marriott Bonvoy has opened its Cyber Week sale, discounting standard room rates at participating hotels and resorts worldwide, with the deepest cut, 25 percent off, reserved for members who book inside the Marriott Bonvoy app and a 15 percent public rate for everyone else",
+    dek: "Marriott Bonvoy's Cyber Week sale opened November 24, 2026: book by December 1 for 25 percent off standard rates in the Marriott Bonvoy app, or 15 percent off for anyone on Marriott.com, for prepaid stays running from November 29, 2026 through May 2, 2027.",
+    section: "News",
+    tags: ["news", "travel", "points"],
+  },
+  {
     path: "/news/westjet-ordered-pay-flight-delay-bc-tribunal-appr-november-21",
     title: "A B.C. tribunal has ordered WestJet to pay a family about 2,227 dollars over a nearly 16-hour delay, rejecting the airline's safety-maintenance excuse because its own paperwork blamed a damaged cargo net rather than the weather it pointed to",
     dek: "The B.C. Civil Resolution Tribunal ordered WestJet to pay about 2,226.92 dollars, including 1,000 dollars per traveller under the Air Passenger Protection Regulations, after finding the airline's own defect report blamed a belt loader rather than the weather it cited, so the nearly 16-hour delay was within its control and not required for safety.",
