@@ -576,6 +576,20 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/porter-airlines-first-western-canada-only-route-edmonton-victoria-november-26",
+    title: "Porter Airlines is adding its first route flown entirely within Western Canada, a daily summer link between Edmonton and Victoria that starts May 21, 2027, part of a broader Edmonton build-up that will push the airline past 700 flights a month in and out of the city",
+    dek: "Porter Airlines said on November 26, 2026 that it will fly a daily, summer-seasonal Edmonton to Victoria route from May 21, 2027, its first route entirely within Western Canada, as part of an Edmonton expansion it expects to top 700 flights a month by next summer.",
+    section: "News",
+    tags: ["news", "travel"],
+  },
+  {
+    path: "/news/wealthsimple-credit-cards-ending-cash-back-foreign-currency-no-fx-fees-november-25",
+    title: "Wealthsimple is removing the cash back its credit cards earn on foreign-currency purchases while keeping the no-foreign-transaction-fee benefit intact, a change that takes effect December 11, 2026 for most of Canada and January 25, 2027 in Quebec",
+    dek: "Wealthsimple announced on November 25, 2026 that its credit cards will stop earning cash back on foreign-currency purchases, effective December 11, 2026 across most of Canada and January 25, 2027 in Quebec, though the Visa Infinite+, Visa Infinite Privilege, and invitation-only Visa Infinite all keep their no-foreign-transaction-fee benefit.",
+    section: "News",
+    tags: ["news", "cards", "cash-back", "no-fx-fees"],
+  },
+  {
     path: "/news/marriott-bonvoy-cyber-week-sale-25-percent-app-november-24",
     title: "Marriott Bonvoy has opened its Cyber Week sale, discounting standard room rates at participating hotels and resorts worldwide, with the deepest cut, 25 percent off, reserved for members who book inside the Marriott Bonvoy app and a 15 percent public rate for everyone else",
     dek: "Marriott Bonvoy's Cyber Week sale opened November 24, 2026: book by December 1 for 25 percent off standard rates in the Marriott Bonvoy app, or 15 percent off for anyone on Marriott.com, for prepaid stays running from November 29, 2026 through May 2, 2027.",
