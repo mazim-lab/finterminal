@@ -1322,6 +1322,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
     section: "Sweet spot",
     tags: ["travel", "avios", "rbc-avion", "amex", "points", "award-booking", "transfers"],
   },
+  {
+    path: "/travel/sweet-spots/westjet-member-exclusive-fares-points-above-a-cent",
+    title: "WestJet sweet spot: Member Exclusive fares are the one place the flat-cent points stretch past a cent, covering a discounted base fare in Economy, Premium, or Business",
+    dek: "WestJet points are a flat cent each with no award chart, so a normal redemption just hands back a cent per point, but Member Exclusive fares set a member-only base fare below the public price and let you pay that whole base fare in points with taxes in cash, which lifts the effective value to roughly 1.1 to 1.2 cents each across Economy, Premium, and Business once you are signed in.",
+    section: "Sweet spot",
+    tags: ["travel", "westjet", "points", "award-booking", "cards"],
+  },
 ];
 
 export function listTags(): Tag[] {
