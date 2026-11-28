@@ -576,6 +576,13 @@ export const TAGGED_ARTICLES: TaggedArticle[] = [
 
   // News items
   {
+    path: "/news/westjet-black-friday-cyber-monday-sale-20-percent-base-fares-november-27",
+    title: "WestJet has opened its Black Friday and Cyber Monday sale, taking up to 20 percent off select base fares across its network with promo code 3Q9M2GZ, with the deepest cut reserved for midweek travel and a short booking window that closes November 29",
+    dek: "WestJet opened a Black Friday and Cyber Monday sale over the weekend offering up to 20 percent off select base fares with promo code 3Q9M2GZ, 20 percent on midweek travel and 15 percent on weekends and the December 12 to January 4 holiday window, bookable through November 29, 2026 for travel from November 28, 2026 to April 24, 2027.",
+    section: "News",
+    tags: ["news", "travel", "westjet"],
+  },
+  {
     path: "/news/porter-airlines-first-western-canada-only-route-edmonton-victoria-november-26",
     title: "Porter Airlines is adding its first route flown entirely within Western Canada, a daily summer link between Edmonton and Victoria that starts May 21, 2027, part of a broader Edmonton build-up that will push the airline past 700 flights a month in and out of the city",
     dek: "Porter Airlines said on November 26, 2026 that it will fly a daily, summer-seasonal Edmonton to Victoria route from May 21, 2027, its first route entirely within Western Canada, as part of an Edmonton expansion it expects to top 700 flights a month by next summer.",
